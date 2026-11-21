@@ -27,6 +27,10 @@ Things a human should review. The builder never merges two different ids on its 
 | dos3.facts.jsonl | 9 | 0 |
 | dos3.issues.jsonl | 4 | 0 |
 | dos3.sources.jsonl | 15 | 0 |
+| dos4.entities.jsonl | 8 | 0 |
+| dos4.events.jsonl | 21 | 0 |
+| dos4.facts.jsonl | 8 | 0 |
+| dos4.sources.jsonl | 21 | 0 |
 | edit.corrections.jsonl | 126 | 0 |
 | edit.entity_merges.jsonl | 6 | 0 |
 | edit.verified.jsonl | 360 | 0 |
@@ -74,7 +78,7 @@ Every correction could be applied.
 - verified: 344 rows true, 16 rows false, unknown rows: none
 - hidden: `press:role:0024`, `press:role:0025`, `press:role:0026`, `rec:flow:0075`, `rec:flow:0076`
 - src:dossier-2026-11-20: kind 'company' replaced by 'dossier'
-- editorial labels (source `src:spec-id-list`) given to: `auth:fgd`, `auth:superintendencia-de-valores`, `org:cadiem`, `person:carlos-carvallo`, `person:holger-insfran`
+- editorial labels (source `src:spec-id-list`) given to: `auth:superintendencia-de-valores`, `org:cadiem`, `person:carlos-carvallo`, `person:holger-insfran`
 
 ## Same-operation groups (sameOperationKey)
 
@@ -264,10 +268,18 @@ None.
 ## Things in the raw data that look wrong or need a second look
 
 - src:dossier-v2-2026-11-21: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:faro-2026-11-21-fgd-88: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:faro-2026-11-21-rolon-onu: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:hoy-2026-11-21-fiscales-rolon: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-21-afd-ips: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-21-itaipu-bancos: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-21-schreiner: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:latribuna-2026-11-21-marcha-extrabajadores: source date 2026-11-21 is after the 2026-11-20 cutoff
 - press:loan:0034: status 'cancelled' but outstanding is 6321573.22
 - rec:loan:0025: outstanding 25024500 exceeds principal 24900000
 - rec:loan:0027: outstanding 10645965 exceeds principal 10593000
 - rec:loan:0028: outstanding 15413120 exceeds principal 15336437.83
+- dos4:event:0013: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - press:fact:0170: date 2027 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - press:fact:0171: date 2028 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - press:fact:0172: date 2030 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
