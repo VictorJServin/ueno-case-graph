@@ -1,0 +1,8 @@
+# Optional: a Fuseki SPARQL endpoint over the same file. NOT tested in the build environment (no container runtime there).
+#   docker compose -f store/docker-compose.yml up     ->  http://localhost:3030/ueno/sparql
+services:
+  fuseki:
+    image: stain/jena-fuseki:5.1.0
+    command: ["/jena-fuseki/fuseki-server", "--file=/data/graph.trig", "--file=/data/ontology.ttl", "/ueno"]
+    ports: ["3030:3030"]
+    volumes: ["../site/data:/data:ro"]

@@ -1,0 +1,22 @@
+# Q3. People holding roles in two or more borrowers
+PREFIX uc:   <https://w3id.org/ueno-case/ont#>
+PREFIX ucr:  <https://w3id.org/ueno-case/id/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?person (COUNT(DISTINCT ?borrower) AS ?nBorrowers)
+       (GROUP_CONCAT(DISTINCT STR(?borrower); separator=" | ") AS ?borrowers)
+       (GROUP_CONCAT(DISTINCT STR(?role); separator=" | ") AS ?roles)
+WHERE {
+  ?loan a uc:Loan ; uc:nominalBorrower ?borrower .
+  ?rh a uc:RoleHolding ;
+      uc:holder ?person ;
+      uc:organisation ?borrower ;
+      uc:roleType ?role .
+  ?person a uc:Person .
+  FILTER (?role NOT IN (uc:role_relative_of, uc:role_charged_person))
+}
+GROUP BY ?person
+HAVING (COUNT(DISTINCT ?borrower) >= 2)
+ORDER BY DESC(?nBorrowers)

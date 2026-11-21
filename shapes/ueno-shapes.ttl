@@ -1,0 +1,106 @@
+# SHACL shapes for the Ueno Bank case graph.
+# Rule zero: no claim enters the graph without a source, an asserter and a confidence level.
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix uc:   <https://w3id.org/ueno-case/ont#> .
+@prefix ucs:  <https://w3id.org/ueno-case/shapes#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+ucs:AssertionShape a sh:NodeShape ;
+    rdfs:label "Every assertion carries provenance"@en , "Toda afirmación lleva procedencia"@es ;
+    sh:targetClass uc:Loan , uc:Overdraft , uc:Flow , uc:CaseEvent , uc:RoleHolding , uc:FinancialFact ,
+                   uc:Charge , uc:Issue , uc:PartyDescription , uc:AnalystOpinion ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:class uc:Source ;
+                  sh:message "Assertion has no source, or its source is not a uc:Source." ] ;
+    sh:property [ sh:path uc:assertedBy ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( uc:Prosecution uc:Rey uc:Defence uc:Regulator uc:Press uc:RatingAgency uc:Company uc:Analyst ) ;
+                  sh:message "Assertion needs exactly one asserter from the allowed list." ] ;
+    sh:property [ sh:path uc:confidence ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "high" "medium" "low" ) ;
+                  sh:message "Assertion needs exactly one confidence: high, medium or low." ] ;
+    sh:property [ sh:path uc:sourceTier ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( "record" "press_linked" "rating_or_official" "dossier" "editorial" "analysis" "unlinked" ) ] ;
+    sh:property [ sh:path dct:identifier ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ucs:RecordGraphShape a sh:NodeShape ;
+    rdfs:label "Prosecution and Rey assertions come only from record pages"@en ;
+    sh:targetClass uc:Loan , uc:Overdraft , uc:Flow , uc:CaseEvent , uc:RoleHolding , uc:Issue ;
+    sh:sparql [
+        sh:message "An assertion in the record tier is asserted by a voice other than the prosecution or Rey." ;
+        sh:prefixes ucs: ;
+        sh:select """
+            PREFIX uc: <https://w3id.org/ueno-case/ont#>
+            SELECT $this WHERE {
+                $this uc:sourceTier "record" ; uc:assertedBy ?who .
+                FILTER (?who NOT IN (uc:Prosecution, uc:Rey))
+            }""" ] .
+
+ucs:AnalystShape a sh:NodeShape ;
+    rdfs:label "Analyst estimates are labelled and grounded"@en ;
+    sh:targetClass uc:AnalystOpinion ;
+    sh:property [ sh:path uc:assertedBy ; sh:hasValue uc:Analyst ] ;
+    sh:property [ sh:path uc:sourceTier ; sh:hasValue "analysis" ] ;
+    sh:property [ sh:path uc:basedOn ; sh:minCount 1 ;
+                  sh:message "An analyst estimate must rest on at least one sourced assertion." ] ;
+    sh:property [ sh:path uc:estimateCentral ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ucs:LoanShape a sh:NodeShape ;
+    sh:targetClass uc:Loan , uc:Overdraft ;
+    sh:property [ sh:path uc:lender ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uc:nominalBorrower ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uc:principal ; sh:maxCount 1 ; sh:minExclusive 0 ] .
+
+ucs:FlowShape a sh:NodeShape ;
+    sh:targetClass uc:Flow ;
+    sh:property [ sh:path uc:fromParty ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uc:toParty ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uc:instrument ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path uc:amount ; sh:maxCount 1 ; sh:minExclusive 0 ] .
+
+ucs:RoleShape a sh:NodeShape ;
+    sh:targetClass uc:RoleHolding ;
+    sh:property [ sh:path uc:holder ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uc:organisation ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path uc:roleType ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path uc:percentage ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 100 ] .
+
+ucs:EventShape a sh:NodeShape ;
+    sh:targetClass uc:CaseEvent ;
+    sh:property [ sh:path dct:title ; sh:minCount 1 ; sh:uniqueLang true ] ;
+    sh:property [ sh:path uc:eventCategory ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ucs:ChargeShape a sh:NodeShape ;
+    rdfs:label "A charge names the person, the offence and its source, never a finding"@en ;
+    sh:targetClass uc:Charge ;
+    sh:property [ sh:path uc:chargedPerson ; sh:minCount 1 ; sh:maxCount 1 ; sh:class uc:Person ] ;
+    sh:property [ sh:path uc:allegedOffence ; sh:minCount 1 ] .
+
+ucs:PartyShape a sh:NodeShape ;
+    sh:targetClass uc:Person , uc:Organisation , uc:Authority ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ] ;
+    sh:property [ sh:path dct:identifier ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ucs:SourceShape a sh:NodeShape ;
+    sh:targetClass uc:Source ;
+    sh:property [ sh:path uc:sourceKind ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( "record" "press" "rating" "official" "company" "dossier" "project" ) ] ;
+    sh:property [ sh:path schema:name ; sh:minCount 1 ] ;
+    sh:property [ sh:path uc:outlet ; sh:minCount 1 ] .
+
+ucs:LinkedPressShape a sh:NodeShape ;
+    rdfs:label "A linked-press assertion rests on a source with a web address"@en ;
+    sh:targetClass uc:Loan , uc:Overdraft , uc:Flow , uc:CaseEvent , uc:RoleHolding , uc:FinancialFact , uc:Charge ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        sh:message "Tier is press_linked but no source of this assertion has a link." ;
+        sh:prefixes ucs: ;
+        sh:select """
+            PREFIX uc: <https://w3id.org/ueno-case/ont#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX schema: <https://schema.org/>
+            SELECT $this WHERE {
+                $this uc:sourceTier "press_linked" .
+                FILTER NOT EXISTS { $this prov:wasDerivedFrom ?s . ?s schema:url ?u }
+            }""" ] .

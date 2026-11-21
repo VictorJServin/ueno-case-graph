@@ -1,0 +1,1367 @@
+{
+ "analyst": "hole_sizing",
+ "disclaimer_en": "Analysis by an AI bank-resolution and financial-loss analyst, not a licensed professional. Every figure is a reported fact, a computation from reported facts or an estimate with stated assumptions; none is a finding. Conduct is described as alleged and everyone named is presumed innocent. The prosecution record states what the prosecution alleges and what Julio Rey told prosecutors; Rey's statements are his own claims. Cut-off: 20 November 2026.",
+ "disclaimer_es": "Análisis de un analista de IA en resolución bancaria y pérdidas financieras, no de un profesional matriculado. Cada cifra es un dato publicado, un cálculo a partir de datos publicados o una estimación con supuestos explícitos; ninguna es una conclusión firme. Las conductas se describen como presuntas y toda persona nombrada goza de la presunción de inocencia. El acta fiscal expresa lo que sostiene la Fiscalía y lo que Julio Rey declaró ante ella; lo dicho por Rey son afirmaciones suyas. Fecha de corte: 20 de noviembre de 2026.",
+ "fx": {
+  "rate": 6500,
+  "basis_en": "Rate printed in the prosecution record, page 7: Gs. 253,000,000,000 is given as about USD 38,923,077, which is exactly Gs. 6,500 per dollar. Sensitivity uses two other printed rates: Gs. 6,358.5 (wholesale, 5 November 2026) and Gs. 6,585.55 (rating report, December 2025). The central shortfall is USD 738 million at 6,500, USD 755 million at 6,358.5 and USD 729 million at 6,585.55.",
+  "basis_es": "Tipo de cambio que surge del acta fiscal, página 7: Gs. 253.000.000.000 figuran como unos USD 38.923.077, exactamente Gs. 6.500 por dólar. La sensibilidad usa otros dos tipos publicados: Gs. 6.358,5 (mayorista, 5 de noviembre de 2026) y Gs. 6.585,55 (informe de calificación, diciembre de 2025). El faltante central es de USD 738 millones a 6.500, USD 755 millones a 6.358,5 y USD 729 millones a 6.585,55.",
+  "refs": [
+   "src:acta-p07",
+   "press:fact:0114",
+   "chrono:event:0122",
+   "press:fact:0219"
+  ]
+ },
+ "definitions": [
+  {
+   "id": "capital_hole_supervisor",
+   "title_en": "Capital hole as stated by the supervisor",
+   "title_es": "Faltante de capital según el supervisor",
+   "what_en": "The provisions shortfall the Central Bank found, and the capital needed to return to the 12% legal minimum. It measures regulatory capital, not cash that left the bank.",
+   "what_es": "El déficit de previsiones que constató el BCP y el capital necesario para volver al mínimo legal del 12%. Mide capital regulatorio, no dinero que haya salido del banco.",
+   "low": 167000000.0,
+   "central": 249500000.0,
+   "high": 319500000.0,
+   "currency": "USD",
+   "as_of": "2026-11",
+   "method_en": "Central: provisions deficit of Gs. 1,621.9 billion at Gs. 6,500. Low: capital needed to reach 12% once the deficit is taken from capital and from risk-weighted assets (solving 13.85% and 5.56% gives effective equity of about Gs. 2,559 billion and risk-weighted assets of about Gs. 18,476 billion). High: deficit plus the USD 70 million also claimed in the Central Bank's civil embargo.",
+   "method_es": "Central: déficit de previsiones de Gs. 1,62 billones a Gs. 6.500. Bajo: capital necesario para llegar al 12% deduciendo el déficit del patrimonio y de los activos ponderados (al resolver 13,85% y 5,56% resultan un patrimonio efectivo de unos Gs. 2,56 billones y activos ponderados de unos Gs. 18,48 billones). Alto: déficit más los USD 70 millones que el BCP también reclamó en el embargo civil.",
+   "inputs": [
+    {
+     "label_en": "Provisions deficit",
+     "label_es": "Déficit de previsiones",
+     "value": 1621853458972,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0070",
+      "press:fact:0105"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Solvency ratio reported / after adjustments / minimum (13.85 / 5.56 / 12)",
+     "label_es": "Índice de solvencia informado / ajustado / mínimo (13,85 / 5,56 / 12)",
+     "value": 5.56,
+     "currency": "PCT",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0070"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Implied effective equity before adjustment",
+     "label_es": "Patrimonio efectivo implícito antes del ajuste",
+     "value": 2558956083492,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "chrono:event:0070"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Capital needed to restore 12%",
+     "label_es": "Capital necesario para restituir el 12%",
+     "value": 1085400000000.0,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "chrono:event:0070"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Civil embargo: USD 70 million plus Gs. 1.6 trillion",
+     "label_es": "Embargo civil: USD 70 millones más Gs. 1,6 billones",
+     "value": 70000000,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0084",
+      "chrono:event:0085"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "capital_hole_questioned_assets",
+    "questioned_credit",
+    "rey_figure"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "capital_hole_questioned_assets",
+   "title_en": "Capital hole adding the assets analysts question",
+   "title_es": "Faltante de capital sumando los activos cuestionados",
+   "what_en": "The supervisor's shortfall plus balance-sheet items with little or no value in a wind-down: placements in REDISA and REDIPRO, the merger-expenses trust and intangible assets.",
+   "what_es": "El déficit del supervisor más partidas del balance con poco o ningún valor en una liquidación: colocaciones en REDISA y REDIPRO, el fideicomiso de gastos de fusión y los intangibles.",
+   "low": 384400000.0,
+   "central": 708300000.0,
+   "high": 847000000.0,
+   "currency": "USD",
+   "as_of": "2025-12 / 2026-11",
+   "method_en": "Low: provisions deficit plus placements in REDISA and REDIPRO. Central: plus the merger-expenses trust. High: plus intangible assets as measured by FIX at December 2025. The published 5.56% is reproduced by the provisions deficit alone, so these items do not appear to be in it. Against implied effective equity of about Gs. 2,559 billion the central case leaves capital of about minus Gs. 2,045 billion; restoring 12% would take about Gs. 3,710 billion (USD 571 million).",
+   "method_es": "Bajo: déficit de previsiones más colocaciones en REDISA y REDIPRO. Central: más el fideicomiso de gastos de fusión. Alto: más los intangibles medidos por FIX a diciembre de 2025. El 5,56% publicado se reproduce solo con el déficit de previsiones, por lo que estas partidas no parecen estar incluidas. Frente a un patrimonio efectivo implícito de unos Gs. 2,56 billones, el caso central deja un capital de unos Gs. 2,05 billones negativos; restituir el 12% exigiría unos Gs. 3,71 billones (USD 571 millones).",
+   "inputs": [
+    {
+     "label_en": "Provisions deficit",
+     "label_es": "Déficit de previsiones",
+     "value": 1621853458972,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0070"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Placements in REDISA and REDIPRO, December 2025",
+     "label_es": "Colocaciones en REDISA y REDIPRO, diciembre de 2025",
+     "value": 876640000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0126",
+      "press:event:0041",
+      "press:event:0026"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Merger-expenses trust, December 2025",
+     "label_es": "Fideicomiso de gastos de fusión, diciembre de 2025",
+     "value": 2105744000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0265",
+      "chrono:event:0017"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Other intangible assets, December 2025 (FIX SCR)",
+     "label_es": "Otros activos intangibles, diciembre de 2025 (FIX SCR)",
+     "value": 900995000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/04/UENO-Bank-S.A.-_FIX.pdf"
+    },
+    {
+     "label_en": "Deferred charges and intangibles, June 2026 (published balance sheet)",
+     "label_es": "Cargos diferidos e intangibles, junio de 2026 (balance publicado)",
+     "value": 825160884847,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Book equity, December 2025",
+     "label_es": "Patrimonio neto contable, diciembre de 2025",
+     "value": 2117665000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0254"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "capital_hole_supervisor",
+    "rey_figure",
+    "reconciliation_shortfall"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "capital_hole_rey",
+   "title_en": "The hole on Julio Rey's account",
+   "title_es": "El faltante según el relato de Julio Rey",
+   "what_en": "Rey told prosecutors that expenses of about USD 900 million were deferred by moving them into loans to related and unrelated companies. This is his claim; no schedule supports it.",
+   "what_es": "Rey declaró ante la Fiscalía que gastos por unos USD 900 millones se difirieron pasándolos a créditos a empresas vinculadas y no vinculadas. Es su afirmación; no hay planilla que la respalde.",
+   "low": 600000000.0,
+   "central": 900000000.0,
+   "high": 1224000000.0,
+   "currency": "USD",
+   "as_of": "2026-11",
+   "method_en": "Low: the two components he itemises (about 300 cashback and about 300 technology and other). Central: his total. High: his total plus the merger-expenses trust, on the reading that the trust authorised in 2024 is separate from the later transfer of expenses into loans; the overlap between the two is not known.",
+   "method_es": "Bajo: los dos componentes que detalla (unos 300 de reintegros y unos 300 de tecnología y otros). Central: su total. Alto: su total más el fideicomiso de gastos de fusión, bajo la lectura de que el fideicomiso autorizado en 2024 es distinto del posterior traspaso de gastos a créditos; no se conoce el solapamiento entre ambos.",
+   "inputs": [
+    {
+     "label_en": "Rey: loans used to defer expenses",
+     "label_es": "Rey: créditos usados para diferir gastos",
+     "value": 900000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "rec:flow:0075",
+      "src:acta-p22"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Rey: cashback component",
+     "label_es": "Rey: componente de reintegros",
+     "value": 300000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "rec:flow:0075"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Rey: technology and other",
+     "label_es": "Rey: tecnología y otros",
+     "value": 300000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "rec:flow:0075",
+      "rec:flow:0074"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Merger-expenses trust",
+     "label_es": "Fideicomiso de gastos de fusión",
+     "value": 2105744000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0265"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "questioned_credit",
+    "capital_hole_questioned_assets",
+    "capital_hole_supervisor"
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "questioned_credit",
+   "title_en": "Questioned credit outstanding",
+   "title_es": "Créditos cuestionados, saldo vigente",
+   "what_en": "Loans and overdrafts to the six record borrowers, the five June 2026 borrowers and the second ring of press-reported borrowers, counted once. It is exposure, not loss.",
+   "what_es": "Préstamos y sobregiros a las seis prestatarias del acta, las cinco de junio de 2026 y el segundo anillo de prestatarias según la prensa, contados una sola vez. Es exposición, no pérdida.",
+   "low": 593600000.0,
+   "central": 878900000.0,
+   "high": 946200000.0,
+   "currency": "USD",
+   "as_of": "2026-06 to 2026-11",
+   "method_en": "109 loan rows collapse to 73 operations by the sameOperation rule (same operation number, or same borrower, date and amount) and to about 60 after the editor's manual matches. Six record borrowers: record balances of USD 166.98 million plus Gs. 395.5 billion, less the nine loans sold on 15 June 2026 and the three overdrafts cancelled that day, leaving USD 88.97 million plus Gs. 195.4 billion. Low: that, plus the five June loans (USD 81.84 million plus Gs. 194.4 billion) and eight shell-type borrowers on the unofficial debtor list. Central: the debtor-list balance for the five June borrowers and 15 listed borrowers including overt group companies. High: plus La Tropa SAE, Dobrestec, TSV and Infocenter.",
+   "method_es": "Las 109 filas de préstamos se reducen a 73 operaciones con la regla sameOperation (mismo número de operación, o misma prestataria, fecha y monto) y a unas 60 con las coincidencias manuales del editor. Seis prestatarias del acta: saldos del acta de USD 166,98 millones más Gs. 395.500 millones, menos los nueve créditos vendidos el 15 de junio de 2026 y los tres sobregiros cancelados ese día, lo que deja USD 88,97 millones más Gs. 195.400 millones. Bajo: eso, más los cinco préstamos de junio (USD 81,84 millones más Gs. 194.400 millones) y ocho prestatarias tipo fachada de la nómina oficiosa. Central: el saldo de la nómina para las cinco de junio y 15 deudoras de la nómina, incluidas empresas abiertamente del grupo. Alto: más La Tropa SAE, Dobrestec, TSV e Infocenter.",
+   "inputs": [
+    {
+     "label_en": "Six record borrowers, outstanding per record tables (USD part)",
+     "label_es": "Seis prestatarias del acta, saldo según tablas (parte USD)",
+     "value": 166984879.33,
+     "currency": "USD",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "press:fact:0103"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Six record borrowers, outstanding per record tables (PYG part)",
+     "label_es": "Seis prestatarias del acta, saldo según tablas (parte Gs.)",
+     "value": 395521558926,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Six, still on the balance sheet after 15 June 2026 (USD part)",
+     "label_es": "Seis, aún en balance tras el 15 de junio de 2026 (parte USD)",
+     "value": 88966335.0,
+     "currency": "USD",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "rec:flow:0060",
+      "press:loan:0029",
+      "press:loan:0030",
+      "press:loan:0034"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Six, still on the balance sheet after 15 June 2026 (PYG part)",
+     "label_es": "Seis, aún en balance tras el 15 de junio de 2026 (parte Gs.)",
+     "value": 195434326959,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "press:loan:0029",
+      "press:loan:0030"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Five June 2026 loans (USD part)",
+     "label_es": "Cinco préstamos de junio de 2026 (parte USD)",
+     "value": 81841000,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "rec:loan:0036",
+      "rec:loan:0037",
+      "rec:loan:0038",
+      "rec:loan:0039",
+      "rec:loan:0040"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Five June 2026 borrowers, guaraní loans the same day",
+     "label_es": "Cinco prestatarias de junio de 2026, préstamos en guaraníes del mismo día",
+     "value": 194400000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:loan:0004",
+      "press:loan:0007",
+      "press:loan:0008"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Five June 2026 borrowers, unofficial debtor-list balance",
+     "label_es": "Cinco prestatarias de junio de 2026, saldo en la nómina oficiosa",
+     "value": 1337464000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0007",
+      "press:fact:0012",
+      "press:fact:0013",
+      "press:fact:0014",
+      "press:fact:0015"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Second ring, 15 borrowers on the unofficial debtor list",
+     "label_es": "Segundo anillo, 15 deudoras de la nómina oficiosa",
+     "value": 3601383000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0001",
+      "press:fact:0002",
+      "press:fact:0003",
+      "press:fact:0004",
+      "press:fact:0005",
+      "press:fact:0006",
+      "press:fact:0007",
+      "press:fact:0008",
+      "press:fact:0009",
+      "press:fact:0010",
+      "press:fact:0011",
+      "press:fact:0012",
+      "press:fact:0013",
+      "press:fact:0014",
+      "press:fact:0015",
+      "press:fact:0016",
+      "press:fact:0017",
+      "press:fact:0018",
+      "press:fact:0019",
+      "press:fact:0020",
+      "press:fact:0021"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Further borrowers outside the list (La Tropa SAE, Dobrestec, TSV, Infocenter)",
+     "label_es": "Otras deudoras fuera de la nómina (La Tropa SAE, Dobrestec, TSV, Infocenter)",
+     "value": 438015000000.0,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "press:fact:0090",
+      "press:fact:0050",
+      "press:fact:0052",
+      "press:loan:0047"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Share of the six's balance explicitly on sole signature",
+     "label_es": "Parte del saldo de las seis expresamente a sola firma",
+     "value": 80.0,
+     "currency": "PCT",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Share of everything granted to the six shown as repaid, all with group or bank-funded money as alleged",
+     "label_es": "Parte de lo otorgado a las seis que figura como pagado, todo con dinero del grupo o fondeado por el banco según se alega",
+     "value": 66.5,
+     "currency": "PCT",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "rec:flow:0009",
+      "rec:flow:0020",
+      "rec:flow:0024",
+      "rec:flow:0031",
+      "rec:flow:0034",
+      "rec:flow:0061"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "rey_figure",
+    "capital_hole_supervisor",
+    "reconciliation_shortfall"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "rey_figure",
+   "title_en": "Rey's USD 900 million tested",
+   "title_es": "Los USD 900 millones de Rey, puestos a prueba",
+   "what_en": "How much of Rey's figure can be tied to identified loans. The low value is what matches the companies he names; the central value is his figure; the high value is the whole questioned book.",
+   "what_es": "Qué parte de la cifra de Rey puede vincularse con créditos identificados. El valor bajo es lo que coincide con las empresas que él nombra; el central es su cifra; el alto es toda la cartera cuestionada.",
+   "low": 382100000.0,
+   "central": 900000000.0,
+   "high": 946200000.0,
+   "currency": "USD",
+   "as_of": "2026-11",
+   "method_en": "Named companies with a figure (the six, Office Design, Henrici, Model): Gs. 2,483 billion, 42% of USD 900 million; Data Force has no figure. The whole de-duplicated questioned book is USD 879 to 946 million, the same order as his total. Money traced by amount from borrowers to ITTI, REDISA, REDIPRO, Vinanzas and Grupo Vázquez is about USD 325 million (36%). ITTI billed related parties USD 168 million in 2025, so USD 300 million of technology spending is under two years of that billing. USD 300 million of cashback is about USD 164 per funded account. Rey leaves about USD 300 million unexplained.",
+   "method_es": "Empresas nombradas con cifra (las seis, Office Design, Henrici, Model): Gs. 2,48 billones, 42% de USD 900 millones; Data Force no tiene cifra. Toda la cartera cuestionada depurada suma entre USD 879 y 946 millones, del mismo orden que su total. El dinero rastreado con monto desde las prestatarias hacia ITTI, REDISA, REDIPRO, Vinanzas y Grupo Vázquez es de unos USD 325 millones (36%). ITTI facturó a vinculadas USD 168 millones en 2025, de modo que USD 300 millones de tecnología equivalen a menos de dos años de esa facturación. USD 300 millones de reintegros son unos USD 164 por cuenta con saldo. Rey deja unos USD 300 millones sin explicar.",
+   "inputs": [
+    {
+     "label_en": "Rey's total",
+     "label_es": "Total de Rey",
+     "value": 900000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "rec:flow:0075"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Exposure to companies Rey names",
+     "label_es": "Exposición a las empresas que Rey nombra",
+     "value": 2483345274571.0,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "press:fact:0003",
+      "press:fact:0016",
+      "press:fact:0009"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "ITTI revenue from related parties, 2025",
+     "label_es": "Ingresos de ITTI por servicios a vinculadas, 2025",
+     "value": 168000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0299",
+      "press:fact:0308"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Funded accounts",
+     "label_es": "Cuentas con saldo",
+     "value": 1824994,
+     "currency": "COUNT",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0165"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Clients claimed, December 2025",
+     "label_es": "Clientes declarados, diciembre de 2025",
+     "value": 2700000,
+     "currency": "COUNT",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0267"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Bank revenue, 2025",
+     "label_es": "Ingresos del banco, 2025",
+     "value": 221000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0293"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Cashback per funded account implied by USD 300 million",
+     "label_es": "Reintegro por cuenta con saldo implícito en USD 300 millones",
+     "value": 164,
+     "currency": "USD",
+     "kind": "computed",
+     "refs": [
+      "rec:flow:0075",
+      "chrono:event:0165"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Merger-expenses trust",
+     "label_es": "Fideicomiso de gastos de fusión",
+     "value": 2105744000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "press:fact:0265"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "questioned_credit",
+    "capital_hole_rey",
+    "capital_hole_questioned_assets"
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "cash_outside_system",
+   "title_en": "Cash outside the banking system",
+   "title_es": "Efectivo fuera del sistema",
+   "what_en": "Cash that Rey says was brought to the bank at night and later used to buy certificates of deposit, plus other cash reported by the press. Small against the hole; relevant to the origin of capital.",
+   "what_es": "Efectivo que, según Rey, se llevó de noche al banco y luego se usó para comprar CDA, más otros movimientos de efectivo publicados. Es poco frente al faltante; importa para el origen del capital.",
+   "low": 0,
+   "central": 19600000.0,
+   "high": 20800000.0,
+   "currency": "USD",
+   "as_of": "2025 to 2026-11",
+   "method_en": "Central: USD 17 million plus Gs. 17,000 million at Gs. 6,500 (hearsay through a colleague, dated about May 2025). High: adds cash orders reported by ABC (Gs. 4,537 million) and the shortfall found at GSR Security (Gs. 3,090 million). Low: zero, because none of it is corroborated.",
+   "method_es": "Central: USD 17 millones más Gs. 17.000 millones a Gs. 6.500 (de oídas, por un colega, hacia mayo de 2025). Alto: suma los pedidos de efectivo publicados por ABC (Gs. 4.537 millones) y el faltante hallado en GSR Security (Gs. 3.090 millones). Bajo: cero, porque nada está corroborado.",
+   "inputs": [
+    {
+     "label_en": "Rey: cash in dollars",
+     "label_es": "Rey: efectivo en dólares",
+     "value": 17000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "rec:flow:0071",
+      "rec:event:0047"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Rey: cash in guaraníes",
+     "label_es": "Rey: efectivo en guaraníes",
+     "value": 17000000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "rec:flow:0072"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "ABC: internal cash orders, January and October 2026",
+     "label_es": "ABC: pedidos internos de efectivo, enero y octubre de 2026",
+     "value": 4537000000.0,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "chrono:event:0031",
+      "chrono:event:0053",
+      "chrono:event:0058",
+      "chrono:event:0064"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "GSR Security: preliminary shortfall",
+     "label_es": "GSR Security: faltante preliminar",
+     "value": 3090000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0216"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Reserve requirement the bank said it could not replenish",
+     "label_es": "Encaje legal que el banco dijo no poder reponer",
+     "value": 70000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0067"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "capital_hole_rey"
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "reconciliation_shortfall",
+   "title_en": "Shortfall of assets against all liabilities",
+   "title_es": "Faltante de activos frente a todo el pasivo",
+   "what_en": "June 2026 book assets, less items with no realisable value and a loss on the questioned book, compared with book liabilities. This is the estimate of what creditors as a whole stand to lose after shareholders are wiped out.",
+   "what_es": "Activos contables a junio de 2026, menos las partidas sin valor realizable y una pérdida sobre la cartera cuestionada, comparados con el pasivo contable. Es la estimación de lo que el conjunto de acreedores puede perder una vez absorbido el patrimonio de los accionistas.",
+   "low": 393000000.0,
+   "central": 738200000.0,
+   "high": 1262500000.0,
+   "currency": "USD",
+   "as_of": "2026-06 balance, losses as known at 2026-11",
+   "method_en": "Low: trust and intangibles at zero, half the REDISA and REDIPRO placements, credit loss equal to the supervisor's provisions deficit (28% of the questioned book). Central: placements at zero and 60% loss on a questioned book of Gs. 5,713 billion. High: 90% loss on Gs. 6,151 billion and half of the Gs. 2.6 trillion past-due facility inherited from Visión.",
+   "method_es": "Bajo: fideicomiso e intangibles en cero, mitad de las colocaciones en REDISA y REDIPRO, pérdida crediticia igual al déficit de previsiones del supervisor (28% de la cartera cuestionada). Central: colocaciones en cero y pérdida del 60% sobre una cartera cuestionada de Gs. 5,71 billones. Alto: pérdida del 90% sobre Gs. 6,15 billones y la mitad de la facilidad de cartera vencida de Gs. 2,6 billones heredada de Visión.",
+   "inputs": [
+    {
+     "label_en": "Total assets, 30 June 2026",
+     "label_es": "Activo total, 30 de junio de 2026",
+     "value": 25641756262733,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Total liabilities, 30 June 2026",
+     "label_es": "Pasivo total, 30 de junio de 2026",
+     "value": 23205211051347,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Equity, 30 June 2026",
+     "label_es": "Patrimonio neto, 30 de junio de 2026",
+     "value": 2436545211386,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Deposits at end-June 2026 (government deposits of Gs. 5 trillion were 29%)",
+     "label_es": "Depósitos a fines de junio de 2026 (los depósitos públicos de Gs. 5 billones eran el 29%)",
+     "value": 17241379310345,
+     "currency": "PYG",
+     "kind": "computed",
+     "refs": [
+      "chrono:event:0035"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Loss given default on the questioned book: 28% / 60% / 90%",
+     "label_es": "Pérdida en caso de incumplimiento sobre la cartera cuestionada: 28% / 60% / 90%",
+     "value": 60,
+     "currency": "PCT",
+     "kind": "assumption",
+     "refs": [],
+     "url": ""
+    },
+    {
+     "label_en": "Past-due facility authorised for the Visión merger",
+     "label_es": "Facilidad de cartera vencida autorizada para la fusión con Visión",
+     "value": 2600000000000.0,
+     "currency": "PYG",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0017",
+      "press:event:0026"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Central Bank: about USD 600 million of healthy assets",
+     "label_es": "BCP: unos USD 600 millones de activos sanos",
+     "value": 600000000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0187"
+     ],
+     "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+    },
+    {
+     "label_en": "Prosecution: total damage",
+     "label_es": "Fiscalía: perjuicio total",
+     "value": 809500000.0,
+     "currency": "USD",
+     "kind": "reported",
+     "refs": [
+      "chrono:event:0148"
+     ],
+     "url": ""
+    }
+   ],
+   "overlaps_with": [
+    "capital_hole_supervisor",
+    "capital_hole_questioned_assets",
+    "questioned_credit",
+    "rey_figure"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "waterfall": [
+  {
+   "step_en": "Total assets at book, 30 June 2026 (Gs. 25,641.8 billion)",
+   "step_es": "Activo total contable, 30 de junio de 2026 (Gs. 25,64 billones)",
+   "value": 3944900000.0,
+   "currency": "USD",
+   "kind": "reported",
+   "refs": []
+  },
+  {
+   "step_en": "Less merger-expenses trust (Gs. 2,105.7 billion, December 2025 value)",
+   "step_es": "Menos fideicomiso de gastos de fusión (Gs. 2,11 billones, valor a diciembre de 2025)",
+   "value": -324000000.0,
+   "currency": "USD",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0265"
+   ]
+  },
+  {
+   "step_en": "Less deferred charges and intangibles (Gs. 825.2 billion)",
+   "step_es": "Menos cargos diferidos e intangibles (Gs. 825.200 millones)",
+   "value": -126900000.0,
+   "currency": "USD",
+   "kind": "reported",
+   "refs": []
+  },
+  {
+   "step_en": "Less placements in REDISA and REDIPRO (Gs. 876.6 billion; low case takes half)",
+   "step_es": "Menos colocaciones en REDISA y REDIPRO (Gs. 876.600 millones; el caso bajo toma la mitad)",
+   "value": -134900000.0,
+   "currency": "USD",
+   "kind": "assumption",
+   "refs": [
+    "press:fact:0126"
+   ]
+  },
+  {
+   "step_en": "Less loss on the questioned book, central 60% of Gs. 5,712.6 billion (low: Gs. 1,621.9 billion; high: 90% of Gs. 6,150.6 billion)",
+   "step_es": "Menos pérdida sobre la cartera cuestionada, central 60% de Gs. 5,71 billones (bajo: Gs. 1,62 billones; alto: 90% de Gs. 6,15 billones)",
+   "value": -527300000.0,
+   "currency": "USD",
+   "kind": "assumption",
+   "refs": [
+    "chrono:event:0070",
+    "press:fact:0001",
+    "press:fact:0002",
+    "press:fact:0003"
+   ]
+  },
+  {
+   "step_en": "Less Visión past-due facility (central: nil; high: half of Gs. 2.6 trillion)",
+   "step_es": "Menos facilidad de cartera vencida de Visión (central: cero; alto: mitad de Gs. 2,6 billones)",
+   "value": 0,
+   "currency": "USD",
+   "kind": "assumption",
+   "refs": [
+    "chrono:event:0017"
+   ]
+  },
+  {
+   "step_en": "Equals assets left to cover deposits and creditors (low USD 3,177 million; high USD 2,307 million)",
+   "step_es": "Igual a activos que quedan para cubrir depósitos y acreedores (bajo USD 3.177 millones; alto USD 2.307 millones)",
+   "value": 2831800000.0,
+   "currency": "USD",
+   "kind": "computed",
+   "refs": []
+  },
+  {
+   "step_en": "Less deposits, end-June 2026 (Gs. 17,241 billion)",
+   "step_es": "Menos depósitos, fines de junio de 2026 (Gs. 17,24 billones)",
+   "value": -2652500000.0,
+   "currency": "USD",
+   "kind": "computed",
+   "refs": [
+    "chrono:event:0035"
+   ]
+  },
+  {
+   "step_en": "Equals what is left for other creditors (low USD 525 million; high: deposits short by USD 345 million)",
+   "step_es": "Igual a lo que queda para los demás acreedores (bajo USD 525 millones; alto: faltan USD 345 millones para los depósitos)",
+   "value": 179300000.0,
+   "currency": "USD",
+   "kind": "computed",
+   "refs": []
+  },
+  {
+   "step_en": "Less other liabilities (Gs. 5,963.8 billion)",
+   "step_es": "Menos otros pasivos (Gs. 5,96 billones)",
+   "value": -917500000.0,
+   "currency": "USD",
+   "kind": "computed",
+   "refs": []
+  },
+  {
+   "step_en": "Equals shortfall against all liabilities (low USD 393 million; high USD 1,263 million)",
+   "step_es": "Igual a faltante frente a todo el pasivo (bajo USD 393 millones; alto USD 1.263 millones)",
+   "value": -738200000.0,
+   "currency": "USD",
+   "kind": "computed",
+   "refs": []
+  }
+ ],
+ "stakeholders": [
+  {
+   "who_en": "Deposit Guarantee Fund",
+   "who_es": "Fondo de Garantía de Depósitos",
+   "exposure_low": 740000000.0,
+   "exposure_high": 928000000.0,
+   "expected_loss_low": 0,
+   "expected_loss_high": 845000000.0,
+   "currency": "USD",
+   "assumption_en": "Exposure is the expected payout. Low loss: the fund recovers in full through subrogation, as in the low and central cases where adjusted assets exceed deposits. High loss: only the Central Bank's USD 600 million of healthy assets exists and pension deposits of USD 517 million are paid first.",
+   "assumption_es": "La exposición es el desembolso previsto. Pérdida baja: el Fondo recupera todo por subrogación, como en los casos bajo y central, en los que el activo ajustado supera los depósitos. Pérdida alta: solo existen los USD 600 millones de activos sanos del BCP y antes se pagan depósitos previsionales por USD 517 millones.",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0181",
+    "chrono:event:0138",
+    "chrono:event:0179",
+    "chrono:event:0187"
+   ]
+  },
+  {
+   "who_en": "Uninsured private depositors",
+   "who_es": "Depositantes privados no cubiertos por la garantía",
+   "exposure_low": 1060000000.0,
+   "exposure_high": 1248000000.0,
+   "expected_loss_low": 0,
+   "expected_loss_high": 387000000.0,
+   "currency": "USD",
+   "assumption_en": "Exposure: 71% of USD 2.8 billion of deposits less the guaranteed part. Loss nil in the low and central cases; 31% in the high case, where first-order claims are paid in full and the rest share what is left.",
+   "assumption_es": "Exposición: 71% de USD 2.800 millones de depósitos menos la parte garantizada. Pérdida nula en los casos bajo y central; 31% en el caso alto, en el que los créditos de primer orden se pagan íntegramente y el resto se reparte lo que queda.",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0181",
+    "chrono:event:0226"
+   ]
+  },
+  {
+   "who_en": "IPS (social security institute)",
+   "who_es": "IPS (Instituto de Previsión Social)",
+   "exposure_low": 345000000.0,
+   "exposure_high": 517000000.0,
+   "expected_loss_low": 17000000.0,
+   "expected_loss_high": 87000000.0,
+   "currency": "USD",
+   "assumption_en": "Pension deposits rank in the first order of payment. Low loss: 43% on Gs. 250 billion of bonds, if they are the bank's paper. High loss: all of those bonds plus 31% of USD 157.7 million of operating funds if these are not given pension priority.",
+   "assumption_es": "Los depósitos previsionales están en el primer orden de pago. Pérdida baja: 43% sobre Gs. 250.000 millones en bonos, si son papeles del banco. Pérdida alta: la totalidad de esos bonos más el 31% de USD 157,7 millones de fondos operativos si no se les reconoce la prelación previsional.",
+   "refs": [
+    "chrono:event:0091",
+    "chrono:event:0163",
+    "chrono:event:0198",
+    "press:fact:0106",
+    "press:fact:0033"
+   ]
+  },
+  {
+   "who_en": "All public entities, IPS included",
+   "who_es": "Todas las entidades públicas, incluido el IPS",
+   "exposure_low": 787000000.0,
+   "exposure_high": 888000000.0,
+   "expected_loss_low": 17000000.0,
+   "expected_loss_high": 255000000.0,
+   "currency": "USD",
+   "assumption_en": "Exposure: Gs. 3.6 trillion plus USD 233.4 million at 30 September 2026 (USD 787 million at Gs. 6,500) up to the Ministry of Economy's USD 888 million. Non-pension public deposits above the guarantee are treated like uninsured private deposits: nil to 31%.",
+   "assumption_es": "Exposición: Gs. 3,6 billones más USD 233,4 millones al 30 de setiembre de 2026 (USD 787 millones a Gs. 6.500) hasta los USD 888 millones del MEF. Los depósitos públicos no previsionales por encima de la garantía se tratan como los privados no cubiertos: de cero a 31%.",
+   "refs": [
+    "chrono:event:0052",
+    "chrono:event:0035",
+    "dos:fact:0002",
+    "dos:fact:0003",
+    "press:fact:0113"
+   ]
+  },
+  {
+   "who_en": "Holders of the international senior notes",
+   "who_es": "Tenedores de los bonos internacionales senior",
+   "exposure_low": 350000000.0,
+   "exposure_high": 350000000.0,
+   "expected_loss_low": 150000000.0,
+   "expected_loss_high": 350000000.0,
+   "currency": "USD",
+   "assumption_en": "Low loss: 57% recovery for non-deposit creditors in the low case. High: nothing. The market price of about 5 cents implies a loss of about USD 332 million.",
+   "assumption_es": "Pérdida baja: recupero del 57% para los acreedores no depositantes en el caso bajo. Alta: nada. El precio de mercado de unos 5 centavos implica una pérdida de unos USD 332 millones.",
+   "refs": [
+    "chrono:event:0032",
+    "chrono:event:0200",
+    "press:fact:0298"
+   ]
+  },
+  {
+   "who_en": "Holders of the bank's local bonds, subordinated included",
+   "who_es": "Tenedores de bonos locales del banco, incluidos los subordinados",
+   "exposure_low": 103000000.0,
+   "exposure_high": 103000000.0,
+   "expected_loss_low": 44000000.0,
+   "expected_loss_high": 103000000.0,
+   "currency": "USD",
+   "assumption_en": "Exposure: Gs. 668.5 billion of securities issued at December 2025. Same recovery range as other non-deposit creditors; subordinated paper (USD 25 million) nil. The regulator has ordered funds to value the bank's instruments at zero. Part is held by IPS.",
+   "assumption_es": "Exposición: Gs. 668.500 millones en valores emitidos a diciembre de 2025. Mismo rango de recupero que los demás acreedores no depositantes; los subordinados (USD 25 millones), cero. El regulador ordenó a los fondos valuar en cero los instrumentos del banco. Una parte está en poder del IPS.",
+   "refs": [
+    "press:fact:0260",
+    "chrono:event:0086",
+    "chrono:event:0114"
+   ]
+  },
+  {
+   "who_en": "Development lenders (IDB Invest, Triodos, GAWA)",
+   "who_es": "Financiadores de desarrollo (BID Invest, Triodos, GAWA)",
+   "exposure_low": 41000000.0,
+   "exposure_high": 41000000.0,
+   "expected_loss_low": 17000000.0,
+   "expected_loss_high": 41000000.0,
+   "currency": "USD",
+   "assumption_en": "Original amounts; balances outstanding are not published. Ranked with other non-deposit creditors.",
+   "assumption_es": "Montos originales; no se publican los saldos vigentes. Se ubican con los demás acreedores no depositantes.",
+   "refs": [
+    "chrono:event:0020",
+    "chrono:event:0048"
+   ]
+  },
+  {
+   "who_en": "OTP Bank",
+   "who_es": "OTP Bank",
+   "exposure_low": 47000000.0,
+   "exposure_high": 47000000.0,
+   "expected_loss_low": 32000000.0,
+   "expected_loss_high": 47000000.0,
+   "currency": "USD",
+   "assumption_en": "Low: the fair-value charge already booked. High: the whole investment, since the bank's equity is exhausted in every case.",
+   "assumption_es": "Bajo: el ajuste a valor razonable ya registrado. Alto: toda la inversión, porque el patrimonio del banco se agota en todos los casos.",
+   "refs": [
+    "chrono:event:0036",
+    "chrono:event:0177",
+    "chrono:event:0089"
+   ]
+  },
+  {
+   "who_en": "Shareholders of the bank (book equity, June 2026)",
+   "who_es": "Accionistas del banco (patrimonio contable, junio de 2026)",
+   "exposure_low": 375000000.0,
+   "exposure_high": 375000000.0,
+   "expected_loss_low": 375000000.0,
+   "expected_loss_high": 375000000.0,
+   "currency": "USD",
+   "assumption_en": "Equity of Gs. 2,436.5 billion is lost in all three cases. OTP's stake is inside this figure through U Holdings.",
+   "assumption_es": "El patrimonio de Gs. 2,44 billones se pierde en los tres casos. La participación de OTP está dentro de esta cifra a través de U Holdings.",
+   "refs": [
+    "press:fact:0254",
+    "chrono:event:0037"
+   ]
+  },
+  {
+   "who_en": "Bondholders of Grupo Vázquez S.A.E.",
+   "who_es": "Tenedores de bonos de Grupo Vázquez S.A.E.",
+   "exposure_low": 204000000.0,
+   "exposure_high": 204000000.0,
+   "expected_loss_low": 122000000.0,
+   "expected_loss_high": 184000000.0,
+   "currency": "USD",
+   "assumption_en": "Recovery of 10% to 40%: cash of about USD 71 million against debt of USD 341 million; the main asset was the stake in the bank's parent.",
+   "assumption_es": "Recupero de 10% a 40%: caja de unos USD 71 millones frente a deuda de USD 341 millones; el principal activo era la participación en la controlante del banco.",
+   "refs": [
+    "press:fact:0303",
+    "press:fact:0304",
+    "press:fact:0302",
+    "press:fact:0156",
+    "chrono:event:0087"
+   ]
+  },
+  {
+   "who_en": "Bondholders of ITTI S.A.E.",
+   "who_es": "Tenedores de bonos de ITTI S.A.E.",
+   "exposure_low": 40000000.0,
+   "exposure_high": 40000000.0,
+   "expected_loss_low": 16000000.0,
+   "expected_loss_high": 32000000.0,
+   "currency": "USD",
+   "assumption_en": "Recovery of 20% to 60%: cash of about USD 35 million against debt of USD 66 million; 59% of revenue came from the bank, but the core-banking business serves other entities.",
+   "assumption_es": "Recupero de 20% a 60%: caja de unos USD 35 millones frente a deuda de USD 66 millones; el 59% de los ingresos venía del banco, pero el negocio de core bancario atiende a otras entidades.",
+   "refs": [
+    "press:fact:0310",
+    "press:fact:0311",
+    "press:fact:0309",
+    "press:fact:0308",
+    "chrono:event:0088"
+   ]
+  },
+  {
+   "who_en": "Local mutual funds holding bank and group paper (Cadiem and others)",
+   "who_es": "Fondos mutuos locales con papeles del banco y del grupo (Cadiem y otros)",
+   "exposure_low": 0,
+   "exposure_high": 47000000.0,
+   "expected_loss_low": 0,
+   "expected_loss_high": 47000000.0,
+   "currency": "USD",
+   "assumption_en": "Not published. The upper bound applies the 11.73% reported for one Cadiem fund to all USD 400 million under management, which overstates it. Bondholders of Kasas, Model and La Tropa SAE cannot be sized. Ueno AFPISA investors have about USD 46 million blocked; that is access, not a measured loss.",
+   "assumption_es": "No publicado. El tope aplica el 11,73% informado para un fondo de Cadiem a los USD 400 millones administrados, lo que lo sobrestima. No es posible dimensionar a los tenedores de bonos de Kasas, Model y La Tropa SAE. Los inversores de Ueno AFPISA tienen bloqueados unos USD 46 millones; es un problema de acceso, no una pérdida medida.",
+   "refs": [
+    "chrono:event:0114",
+    "chrono:event:0142",
+    "chrono:event:0167",
+    "press:fact:0058"
+   ]
+  }
+ ],
+ "headline": {
+  "low": 393000000.0,
+  "central": 738200000.0,
+  "high": 1262500000.0,
+  "currency": "USD",
+  "statement_en": "On published numbers, the bank's realisable assets fall short of its liabilities by about USD 740 million, within a range of USD 390 million to USD 1.26 billion. That is after shareholders lose their USD 375 million of book equity. The range is driven by how much of a questioned loan book of about USD 880 million is recovered. This is an estimate, not a finding.",
+  "statement_es": "Con las cifras publicadas, los activos realizables del banco no alcanzan a cubrir su pasivo por unos USD 740 millones, dentro de un rango de USD 390 millones a USD 1.260 millones. Eso es después de que los accionistas pierdan sus USD 375 millones de patrimonio contable. El rango depende de cuánto se recupere de una cartera cuestionada de unos USD 880 millones. Es una estimación, no una conclusión firme."
+ },
+ "cannot_determine_en": [
+  "Which items the Central Bank deducted to reach 5.56%, and whether the Gs. 1.62 trillion already covers the related-company loans, the Visión past-due facility or both.",
+  "The bank's balance sheet at the resolution date and the exclusion balance; the latest published balance sheet is June 2026.",
+  "What the Central Bank's 'about USD 600 million of healthy assets' covers; it is about 15% of June 2026 book assets.",
+  "The balance of the merger-expenses trust after December 2025 and the unamortised balance of the Visión past-due facility.",
+  "Whether Rey's USD 900 million overlaps the trust, and what the unexplained USD 300 million was.",
+  "The cut-off date of the unofficial debtor list and whether it prints balances or cumulative disbursements.",
+  "The total cashback paid; no published figure was found.",
+  "Per-fund holdings of bank and group paper at Cadiem and other managers, and bonds outstanding of Kasas, Model and La Tropa SAE.",
+  "The split of public deposits between pension funds and other entities, and whether IPS's Gs. 250 billion of bonds are the bank's own paper.",
+  "The value of 2,331 properties and assets abroad identified by authorities.",
+  "The origin of the cash Rey describes and whether the certificates of deposit were ever booked as capital."
+ ],
+ "cannot_determine_es": [
+  "Qué partidas dedujo el BCP para llegar al 5,56%, y si los Gs. 1,62 billones ya cubren los créditos a vinculadas, la facilidad de cartera vencida de Visión o ambas cosas.",
+  "El balance del banco a la fecha de la resolución y el balance de exclusión; el último balance publicado es el de junio de 2026.",
+  "Qué abarcan los 'unos USD 600 millones de activos sanos' del BCP; equivalen a cerca del 15% del activo contable de junio de 2026.",
+  "El saldo del fideicomiso de gastos de fusión después de diciembre de 2025 y el saldo sin amortizar de la facilidad de cartera vencida de Visión.",
+  "Si los USD 900 millones de Rey se solapan con el fideicomiso, y a qué corresponden los USD 300 millones sin explicar.",
+  "La fecha de corte de la nómina oficiosa de deudores y si refleja saldos o desembolsos acumulados.",
+  "El total pagado en reintegros; no se halló cifra publicada.",
+  "Las tenencias por fondo de papeles del banco y del grupo en Cadiem y otras administradoras, y los bonos en circulación de Kasas, Model y La Tropa SAE.",
+  "La división de los depósitos públicos entre cajas previsionales y demás entidades, y si los Gs. 250.000 millones en bonos del IPS son papeles del propio banco.",
+  "El valor de los 2.331 inmuebles y de los activos en el exterior identificados por las autoridades.",
+  "El origen del efectivo que describe Rey y si los CDA llegaron a registrarse como capital."
+ ],
+ "new_sources": [
+  {
+   "outlet": "ueno bank S.A.",
+   "title": "Aviso de balance al 30 de junio de 2026 (estados financieros publicados)",
+   "date": "2026-07",
+   "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+  },
+  {
+   "outlet": "FIX SCR",
+   "title": "UENO Bank S.A., informe de revisión integral (cifras a diciembre de 2025)",
+   "date": "2026-03-31",
+   "url": "https://www.ueno.com.py/wp-content/uploads/2026/04/UENO-Bank-S.A.-_FIX.pdf"
+  },
+  {
+   "outlet": "Perfil (Argentina)",
+   "title": "El Banco Central de Paraguay informó que encontró activos de Ueno Bank y detalló a quiénes se les devolverá ese dinero",
+   "date": "2026-11-13",
+   "url": "https://www.perfil.com/noticias/amp/internacional/el-banco-central-de-paraguay-informo-que-encontro-activos-de-ueno-bank-y-detallo-a-quienes-se-le-devolvera-ese-dinero-aYk6R4M1Ioff.phtml"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "Jorge Schreiner: analizando las carteras de clientes y sin incluir activos, el monto supera el conjunto de la deuda de ueno con el sistema previsional",
+   "date": "2026-11-13",
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "outlet": "Diario El Sol (Mendoza)",
+   "title": "Nota sobre los activos de Ueno Bank informados por el BCP",
+   "date": "2026-11-13",
+   "url": "https://www.elsol.com.ar/?p=2281912"
+  },
+  {
+   "outlet": "AFP (via CR Hoy)",
+   "title": "¿Qué pasó con el dinero de Ueno Bank en Paraguay y cuánto falta recuperar?",
+   "date": "2026-11-10",
+   "url": "https://crhoy.com/mundo/que-paso-con-el-dinero-de-ueno-bank-en-paraguay-y-cuanto-falta-recuperar/"
+  },
+  {
+   "outlet": "EFE (via La Prensa, Honduras)",
+   "title": "Fondos públicos: el gran desafío tras la intervención del Ueno bank",
+   "date": "2026-11-09",
+   "url": "https://www.laprensa.hn/mundo/ueno-bank-paraguay-fondos-publicos-gran-desafio-intervencion-GM32584570"
+  },
+  {
+   "outlet": "Forbes Argentina",
+   "title": "El escándalo Ueno Bank sacude Paraguay: fondos públicos en juego y una crisis que amenaza su reputación",
+   "date": "2026-11-10",
+   "url": "https://www.forbesargentina.com/today/el-escandalo-ueno-bank-sacude-paraguay-fondos-publicos-juego-una-crisis-amenaza-su-reputacion-n102136"
+  }
+ ]
+}

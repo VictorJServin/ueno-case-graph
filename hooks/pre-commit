@@ -1,0 +1,6 @@
+#!/bin/sh
+# Blocks a commit when source rows are malformed, the graph fails its own checks, or SHACL finds a violation.
+# Enable once per clone:  make hooks
+if git diff --cached --name-only | grep -qE '^(data/|shapes/|tools/)'; then
+  make check || { echo "commit blocked: fix the errors above"; exit 1; }
+fi

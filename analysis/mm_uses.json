@@ -1,0 +1,1282 @@
+{
+ "analyst": "uses_of_funds",
+ "disclaimer_en": "Analysis and labelled hypothesis by an AI forensic accountant and corporate-finance analyst, not a licensed professional. It is not a finding. Sizes are estimates; the allocation is a structured guess constrained by the few figures the sources give. All conduct is alleged; every person and company named is presumed innocent. Statements by Julio Rey are his own claims. Guaraní converted at G. 6,500 per USD.",
+ "disclaimer_es": "Análisis e hipótesis rotuladas como tales, elaboradas por una IA en función de contador forense y analista de finanzas corporativas, no por un profesional matriculado. No constituye una conclusión. Los montos son estimaciones; la asignación es una conjetura estructurada, acotada por las pocas cifras que dan las fuentes. Toda conducta es presunta; toda persona y empresa mencionada goza de presunción de inocencia. Las afirmaciones de Julio Rey son suyas. Guaraníes convertidos a G. 6.500 por dólar.",
+ "total_explained": {
+  "value": 915000000,
+  "currency": "USD",
+  "basis_en": "Outstanding questioned credit, de-duplicated: six record borrowers before the June 2026 sale (USD 166.98 million plus G. 395.5 billion = USD 227.8 million) plus the unofficial debtor list excluding the social-security institute and an outside broker (G. 4,938.8 billion = USD 759.8 million) less the 11-15 June 2026 loans that refinanced the six (USD 125.0 million) plus La Tropa SAE (USD 33.9 million) and Infocenter (USD 18 million) = USD 914.6 million, rounded to 915. Range USD 620 million (record borrowers plus the cases described by the regulator) to USD 990 million (no de-duplication). Gross disbursements are larger than this stock because loans were repaid with new loans.",
+  "basis_es": "Crédito cuestionado vigente, sin duplicar: seis prestatarias del acta antes de la venta de junio de 2026 (USD 166,98 millones más G. 395,5 mil millones = USD 227,8 millones) más la lista oficiosa de deudores sin el instituto de previsión social ni una casa de bolsa ajena (G. 4.938,8 mil millones = USD 759,8 millones) menos los préstamos del 11 al 15 de junio de 2026 que refinanciaron a las seis (USD 125,0 millones) más La Tropa SAE (USD 33,9 millones) e Infocenter (USD 18 millones) = USD 914,6 millones, redondeado a 915. Rango de USD 620 millones (prestatarias del acta más los casos descritos por el regulador) a USD 990 millones (sin depurar duplicados). Los desembolsos brutos superan este saldo porque los préstamos se pagaban con nuevos préstamos.",
+  "refs": [
+   "rec:loan:0001",
+   "rec:loan:0035",
+   "rec:loan:0036",
+   "rec:loan:0040",
+   "press:fact:0001",
+   "press:fact:0021",
+   "press:fact:0103",
+   "press:fact:0055",
+   "press:loan:0047",
+   "press:loan:0002",
+   "press:loan:0004",
+   "press:loan:0007",
+   "press:loan:0008",
+   "rec:flow:0075"
+  ]
+ },
+ "hypotheses": [
+  {
+   "id": "operating_burn",
+   "rank": 1,
+   "title_en": "Operating burn of the digital-bank model booked outside the bank",
+   "title_es": "Gasto operativo del modelo de banco digital registrado fuera del banco",
+   "summary_en": "Hypothesis: about half of the questioned credit ended up paying running costs that the bank's own income statement did not carry: technology and product work at ITTI, payroll and branch network at REDISA, card-acquiring costs at REDIPRO, and customer cashback. Rey puts cashback at about USD 300 million and technology and other at about USD 300 million; rating data make the technology half plausible in scale, while no document sizes cashback.",
+   "summary_es": "Hipótesis: cerca de la mitad del crédito cuestionado terminó pagando gastos corrientes que el estado de resultados del banco no reflejaba: tecnología y desarrollo de productos en ITTI, personal y red de sucursales en REDISA, costos de adquirencia en REDIPRO y reintegros a clientes. Rey habla de unos USD 300 millones en reintegros y unos USD 300 millones en tecnología y otros; los datos de las calificadoras hacen verosímil la escala de la parte tecnológica, pero ningún documento cuantifica los reintegros.",
+   "size_low": 250000000,
+   "size_central": 440000000,
+   "size_high": 600000000,
+   "currency": "USD",
+   "share_central_pct": 48.1,
+   "missing_or_circulated": "spent",
+   "evidence_for": [
+    {
+     "text_en": "Rey states that expenses on technology, products and cashback were deferred first through asset sales and then moved into related and unrelated loans worth about USD 900 million, of which about 300 cashback and 300 technology and other.",
+     "text_es": "Rey afirma que los gastos en tecnología, productos y reintegros se difirieron primero con ventas de activos y luego se trasladaron a créditos vinculados y no vinculados por unos USD 900 millones, de los cuales unos 300 en reintegros y 300 en tecnología y otros.",
+     "refs": [
+      "rec:flow:0074",
+      "rec:flow:0075",
+      "src:acta-p22"
+     ],
+     "url": "",
+     "asserted_by": "rey"
+    },
+    {
+     "text_en": "The prosecution alleges that all six borrowers forwarded their loans at once to ITTI, REDISA, REDIPRO, Vinanzas or Grupo Vázquez to cover overdrafts, invoices and cheques.",
+     "text_es": "La fiscalía sostiene que las seis prestatarias habrían remitido de inmediato sus préstamos a ITTI, REDISA, REDIPRO, Vinanzas o Grupo Vázquez para cubrir sobregiros, facturas y cheques.",
+     "refs": [
+      "rec:flow:0001",
+      "rec:flow:0004",
+      "rec:flow:0014",
+      "rec:flow:0021",
+      "rec:flow:0029",
+      "rec:flow:0033",
+      "src:acta-p07"
+     ],
+     "url": "",
+     "asserted_by": "prosecution"
+    },
+    {
+     "text_en": "ITTI billed related parties about USD 168 million in 2025 (59% of revenue). Its cost base (cost of sales, selling, administrative and financial expenses) rose from G. 710 billion in 2024 to G. 1,511 billion in 2025, about USD 342 million over two years; selling and administrative expenses alone rose by about USD 101 million.",
+     "text_es": "ITTI facturó a partes relacionadas unos USD 168 millones en 2025 (59% de sus ingresos). Su base de costos (costo de ventas, gastos de ventas, administrativos y financieros) pasó de G. 710 mil millones en 2024 a G. 1.511 mil millones en 2025, unos USD 342 millones en dos años; solo los gastos de ventas y administrativos subieron unos USD 101 millones.",
+     "refs": [
+      "press:fact:0299",
+      "press:fact:0178",
+      "press:fact:0179",
+      "src:solventa-2026-05-12-itti-peg-g1"
+     ],
+     "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf",
+     "asserted_by": "rating_agency"
+    },
+    {
+     "text_en": "Amount-traced first hops: USD 5.4 million from Mowi to REDISA and USD 5.1 million, 5.5 million and 5.3 million from Hendy and Grupo M to ITTI to cover overdrafts; G. 33,500 million from Mowi to REDIPRO labelled as a Upay credit.",
+     "text_es": "Primeros tramos con monto: USD 5,4 millones de Mowi a REDISA y USD 5,1, 5,5 y 5,3 millones de Hendy y Grupo M a ITTI para cubrir sobregiros; G. 33.500 millones de Mowi a REDIPRO con el concepto de acreditación Upay.",
+     "refs": [
+      "press:flow:0121",
+      "press:flow:0122",
+      "press:flow:0124",
+      "press:flow:0125",
+      "press:flow:0123"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    },
+    {
+     "text_en": "Nubicom, with G. 200,000 of paid-in capital, paid ITTI G. 415,000 million under a services contract the day after receiving a G. 417,075 million loan; that single payment equals 23% of ITTI's 2025 revenue.",
+     "text_es": "Nubicom, con G. 200.000 de capital integrado, pagó a ITTI G. 415.000 millones por un contrato de servicios al día siguiente de recibir un préstamo de G. 417.075 millones; ese solo pago equivale al 23% de los ingresos de ITTI en 2025.",
+     "refs": [
+      "press:flow:0091",
+      "press:loan:0045",
+      "press:fact:0097"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    },
+    {
+     "text_en": "Grupo M's proceeds were passed to ITTI, Red Digital and Kaitel; Kaitel's Argentine branch employed 800 to 900 developers working for the bank, half of whose pay was sent by ITTI from Paraguay.",
+     "text_es": "Los fondos de Grupo M pasaron a ITTI, Red Digital y Kaitel; la sucursal argentina de Kaitel empleaba entre 800 y 900 desarrolladores que trabajaban para el banco, y la mitad de sus sueldos la giraba ITTI desde Paraguay.",
+     "refs": [
+      "press:flow:0017",
+      "rec:flow:0016",
+      "chrono:event:0123"
+     ],
+     "url": "https://chequeado.com/el-explicador/del-ueno-bank-a-buenos-aires-asi-operaba-el-grupo-vazquez-con-sus-trabajadores-en-argentina/",
+     "asserted_by": "press"
+    },
+    {
+     "text_en": "84% of Mowi's assets were intangible developments, which is what a borrower buying software work from the group would show.",
+     "text_es": "El 84% de los activos de Mowi eran desarrollos intangibles, lo que mostraría una prestataria que compra desarrollo de software al grupo.",
+     "refs": [
+      "press:fact:0322"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "The bank's own promotion rules say the bank credits the cashback to the customer's account, so at least the first booking of cashback was inside the bank; no source shows it being re-invoiced to a group company.",
+     "text_es": "Las bases de las promociones dicen que el propio banco acredita el reintegro en la cuenta del cliente, de modo que al menos el primer registro del reintegro estaba en el banco; ninguna fuente muestra que se refacturara a una empresa del grupo.",
+     "refs": [],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2025/12/Promocion-Reintegro-30-de-reintegro-en-comercios-adheridos_-DIC-2025v3.docx-1.pdf"
+    },
+    {
+     "text_en": "ITTI reported a profit of G. 170 billion in 2025 and positive EBITDA; if it was absorbing losses for the bank, its accounts do not show it. The money may have been ITTI's revenue, not ITTI's deficit.",
+     "text_es": "ITTI declaró una utilidad de G. 170 mil millones en 2025 y EBITDA positivo; si absorbía pérdidas del banco, sus balances no lo muestran. El dinero pudo ser ingreso de ITTI y no un déficit de ITTI.",
+     "refs": [
+      "press:fact:0185",
+      "press:fact:0183"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "Risk of double counting: a merger-expenses trust of G. 2.1 trillion (about USD 324 million) already holds deferred costs on the bank's balance sheet, with ITTI and Ueno Holding among its suppliers. Rey's USD 900 million may include it.",
+     "text_es": "Riesgo de doble conteo: un fideicomiso de gastos de fusión de G. 2,1 billones (unos USD 324 millones) ya contiene costos diferidos en el balance del banco, con ITTI y Ueno Holding entre sus proveedores. Los USD 900 millones de Rey podrían incluirlo.",
+     "refs": [
+      "press:fact:0265",
+      "chrono:event:0044",
+      "chrono:event:0017"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "Amounts exist for only 16% of the six borrowers' dollar principal and 9.5% of their guaraní principal; the record gives no forwarding amounts.",
+     "text_es": "Solo hay montos para el 16% del capital en dólares y el 9,5% del capital en guaraníes de las seis prestatarias; el acta no da montos de las remisiones.",
+     "refs": [
+      "rec:flow:0001",
+      "rec:flow:0040"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "Rey is a charged person seeking a cooperation agreement and his split is approximate and unaudited.",
+     "text_es": "Rey es un imputado que busca un acuerdo de colaboración, y su desglose es aproximado y no auditado.",
+     "refs": [
+      "chrono:event:0223",
+      "rec:event:0068"
+     ],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "General ledgers and bank statements of ITTI, REDISA and REDIPRO for 2024 to 2026 matched to payroll, supplier and settlement payments; the bank's cashback ledger with the account that bore the cost; the 'Delirio Colectivo' attachment. Refuted if those ledgers show the receipts leaving for non-operating uses.",
+   "would_confirm_es": "Libros mayores y extractos bancarios de ITTI, REDISA y REDIPRO de 2024 a 2026 cruzados con pagos de salarios, proveedores y liquidaciones; el mayor de reintegros del banco con la cuenta que soportó el costo; el anexo de «Delirio Colectivo». Se refutaría si esos libros mostraran que lo recibido salió hacia usos no operativos.",
+   "confidence": "medium"
+  },
+  {
+   "id": "debt_service",
+   "rank": 2,
+   "title_en": "Servicing the group's own debt, including interest on the questioned loans",
+   "title_es": "Servicio de la deuda del propio grupo, incluidos los intereses de los créditos cuestionados",
+   "summary_en": "Hypothesis: a meaningful slice paid bond coupons and maturities of Grupo Vázquez and ITTI, bank debt and 72-hour cheques at other banks (about USD 75 million central), plus interest on the questioned loans themselves, which was paid with further loans or capitalised (about USD 65 million central). The second part went back to the bank as income.",
+   "summary_es": "Hipótesis: una parte relevante pagó cupones y vencimientos de bonos de Grupo Vázquez e ITTI, deuda bancaria y cheques a 72 horas en otros bancos (unos USD 75 millones en el escenario central), además de los intereses de los propios créditos cuestionados, pagados con nuevos créditos o capitalizados (unos USD 65 millones). Esta segunda parte volvió al banco como ingreso.",
+   "size_low": 70000000,
+   "size_central": 140000000,
+   "size_high": 220000000,
+   "currency": "USD",
+   "share_central_pct": 15.3,
+   "missing_or_circulated": "spent",
+   "evidence_for": [
+    {
+     "text_en": "FIX reports gross financial interest for the group outside the bank of about G. 251 billion in 2025 (about USD 39 million) and G. 67 billion in the first quarter of 2026, against dividends received by the holding of G. 12 billion.",
+     "text_es": "FIX informa intereses financieros brutos del grupo fuera del banco por unos G. 251 mil millones en 2025 (unos USD 39 millones) y G. 67 mil millones en el primer trimestre de 2026, frente a dividendos cobrados por la holding de G. 12 mil millones.",
+     "refs": [
+      "press:fact:0158",
+      "press:fact:0140",
+      "src:fixscr-2026-07-02-grupo-vazquez"
+     ],
+     "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf",
+     "asserted_by": "rating_agency"
+    },
+    {
+     "text_en": "At June 2026 Grupo Vázquez had USD 54 million and ITTI USD 22 million of short-term maturities; ITTI cut its bank debt by G. 140 billion during 2025.",
+     "text_es": "A junio de 2026 Grupo Vázquez tenía USD 54 millones e ITTI USD 22 millones de vencimientos de corto plazo; ITTI redujo su deuda bancaria en G. 140 mil millones durante 2025.",
+     "refs": [
+      "press:fact:0305",
+      "press:fact:0312",
+      "press:fact:0194",
+      "press:fact:0195"
+     ],
+     "url": "",
+     "asserted_by": "rating_agency"
+    },
+    {
+     "text_en": "USD 26.8 million of the June 2026 loans bought bonds of ITTI, Grupo Vázquez, Kasas and Model through the group's broker, so bank credit funded demand for group paper.",
+     "text_es": "USD 26,8 millones de los préstamos de junio de 2026 compraron bonos de ITTI, Grupo Vázquez, Kasas y Model a través de la casa de bolsa del grupo, es decir, crédito del banco financió la demanda de papeles del grupo.",
+     "refs": [
+      "rec:flow:0048",
+      "rec:flow:0049",
+      "rec:flow:0050",
+      "rec:flow:0052",
+      "rec:flow:0053",
+      "press:fact:0062"
+     ],
+     "url": "",
+     "asserted_by": "prosecution"
+    },
+    {
+     "text_en": "ITTI passed G. 329,500 million to Red Digital to cover 72-hour cheques; Aime funds ended in cheques deposited at another bank; Vinanzas was fed with 72-hour cheques of REDISA, REDIPRO and ITTI.",
+     "text_es": "ITTI pasó G. 329.500 millones a Red Digital para cubrir cheques a 72 horas; fondos de Aime terminaron en cheques depositados en otro banco; Vinanzas se habría fondeado con cheques a 72 horas de REDISA, REDIPRO e ITTI.",
+     "refs": [
+      "press:flow:0092",
+      "press:flow:0029",
+      "rec:flow:0026",
+      "rec:flow:0027",
+      "rec:flow:0028"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    },
+    {
+     "text_en": "Computed: interest accrued on the six borrowers' outstanding balances from grant to 2 November 2026 is about USD 23 million at contract rates (weighted 12.6%). No source shows any interest paid from a borrower's own revenue; one instalment was paid by ITTI.",
+     "text_es": "Cálculo propio: los intereses devengados sobre los saldos vigentes de las seis prestatarias desde el otorgamiento hasta el 2 de noviembre de 2026 rondan USD 23 millones a las tasas contractuales (ponderada 12,6%). Ninguna fuente muestra intereses pagados con ingresos propios; una cuota la pagó ITTI.",
+     "refs": [
+      "rec:loan:0006",
+      "rec:loan:0010",
+      "rec:loan:0022",
+      "rec:flow:0020",
+      "rec:event:0063"
+     ],
+     "url": "",
+     "asserted_by": "analyst"
+    },
+    {
+     "text_en": "Roll-over arithmetic: Franede's USD 10,593,000 loan equals its cancelled USD 10 million loan plus 5.93%, about 270 days of interest at 8%.",
+     "text_es": "Aritmética de renovación: el préstamo de USD 10.593.000 de Franede equivale a su préstamo cancelado de USD 10 millones más 5,93%, unos 270 días de interés al 8%.",
+     "refs": [
+      "rec:loan:0023",
+      "rec:loan:0027"
+     ],
+     "url": "",
+     "asserted_by": "analyst"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "Group debt outside the bank grew in 2025 (net new debt about G. 262 billion), so part of the debt service was refinanced in the bond market and not with bank loans.",
+     "text_es": "La deuda del grupo fuera del banco creció en 2025 (deuda neta nueva de unos G. 262 mil millones), de modo que parte del servicio se refinanció en el mercado de bonos y no con créditos del banco.",
+     "refs": [
+      "press:fact:0277",
+      "press:fact:0278"
+     ],
+     "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+    },
+    {
+     "text_en": "No source traces a specific loan to a specific coupon or maturity payment.",
+     "text_es": "Ninguna fuente rastrea un préstamo concreto hasta el pago de un cupón o vencimiento concreto.",
+     "refs": [],
+     "url": ""
+    },
+    {
+     "text_en": "Cheque cover is partly circulation with a lag: the cheques first funded repayments at the bank, so counting both would double count.",
+     "text_es": "La cobertura de cheques es en parte circulación con rezago: los cheques primero financiaron pagos al banco, por lo que sumar ambos duplicaría.",
+     "refs": [
+      "rec:flow:0024",
+      "rec:event:0061"
+     ],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "Paying-agent and depository records for every coupon and maturity of Grupo Vázquez, ITTI, Kasas and Model from 2025, matched to the funding credit in the issuer's account; the bank's interest-income ledger for the questioned loans showing the paying account; clearing records of 72-hour cheques.",
+   "would_confirm_es": "Registros del agente de pago y de la caja de valores de cada cupón y vencimiento de Grupo Vázquez, ITTI, Kasas y Model desde 2025, cruzados con el crédito que los fondeó en la cuenta del emisor; el mayor de intereses cobrados por el banco en los créditos cuestionados con la cuenta pagadora; registros de compensación de los cheques a 72 horas.",
+   "confidence": "medium"
+  },
+  {
+   "id": "circular_support",
+   "rank": 3,
+   "title_en": "Circular support of the bank's own numbers",
+   "title_es": "Sostén circular de las cifras del propio banco",
+   "summary_en": "Hypothesis: part of the money never left the system and came back to the bank as capital, certificates of deposit, bond purchases or sale proceeds. In the outstanding stock this is about USD 65 million central. In gross flows it is far larger: about USD 291 million of USD 749 million of amount-traced disbursements (39%) returned to the bank as principal repayments or as the price of the portfolio sale. That 39% is not 'missing'; it is the same exposure renamed.",
+   "summary_es": "Hipótesis: parte del dinero nunca salió del circuito y volvió al banco como capital, certificados de depósito, compra de bonos o precio de venta. En el saldo vigente son unos USD 65 millones en el escenario central. En flujos brutos es mucho mayor: unos USD 291 millones de los USD 749 millones de desembolsos con monto rastreado (39%) volvieron al banco como pagos de capital o como precio de la venta de cartera. Ese 39% no «falta»: es la misma exposición con otro nombre.",
+   "size_low": 25000000,
+   "size_central": 65000000,
+   "size_high": 135000000,
+   "currency": "USD",
+   "share_central_pct": 7.1,
+   "missing_or_circulated": "circulated",
+   "evidence_for": [
+    {
+     "text_en": "On 11 and 15 June 2026 the bank lent USD 81.841 million plus G. 280,500 million and the same days received USD 74,418,418.12 as sale price, USD 6.32 million on a Grupo M overdraft and G. 227,912 million on Hendy and Mowi overdrafts: about USD 116 million returned out of USD 125 million lent.",
+     "text_es": "El 11 y el 15 de junio de 2026 el banco prestó USD 81,841 millones más G. 280.500 millones y esos mismos días recibió USD 74.418.418,12 como precio de venta, USD 6,32 millones de un sobregiro de Grupo M y G. 227.912 millones de sobregiros de Hendy y Mowi: unos USD 116 millones de retorno sobre USD 125 millones prestados.",
+     "refs": [
+      "rec:flow:0041",
+      "rec:flow:0042",
+      "rec:flow:0043",
+      "rec:flow:0044",
+      "rec:flow:0045",
+      "rec:flow:0061",
+      "rec:flow:0055",
+      "press:loan:0029",
+      "press:loan:0030",
+      "rec:event:0064"
+     ],
+     "url": "",
+     "asserted_by": "prosecution"
+    },
+    {
+     "text_en": "Of USD 354.8 million granted to the six borrowers, USD 127.2 million (36%) had been cancelled, in every case with a named source through group companies.",
+     "text_es": "De USD 354,8 millones otorgados a las seis prestatarias, USD 127,2 millones (36%) estaban cancelados, en todos los casos con fuente identificada a través de empresas del grupo.",
+     "refs": [
+      "rec:loan:0003",
+      "rec:loan:0005",
+      "rec:loan:0007",
+      "rec:loan:0021",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0026",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:flow:0009",
+      "rec:flow:0024",
+      "rec:flow:0031",
+      "rec:flow:0034"
+     ],
+     "url": "",
+     "asserted_by": "prosecution"
+    },
+    {
+     "text_en": "Rey says cash of about USD 17 million and G. 17,000 million was booked as collections of dead loans, used to buy certificates of deposit in 2025, several endorsed to the principal shareholder, and that in 2026 the certificates were meant to capitalise the bank.",
+     "text_es": "Rey dice que efectivo por unos USD 17 millones y G. 17.000 millones se registró como cobro de cartera muerta, se usó para comprar certificados de depósito en 2025, varios endosados al accionista principal, y que en 2026 se pretendía capitalizar el banco con esos certificados.",
+     "refs": [
+      "rec:flow:0071",
+      "rec:flow:0072",
+      "rec:flow:0073",
+      "rec:event:0047",
+      "src:acta-p22"
+     ],
+     "url": "",
+     "asserted_by": "rey"
+    },
+    {
+     "text_en": "FIX reports capital contributions to the bank of USD 77 million in 2025, USD 50 million of it paid in, while the holding received G. 12 billion of dividends and had individual EBITDA of USD 27 million.",
+     "text_es": "FIX informa aportes de capital al banco por USD 77 millones en 2025, de los cuales USD 50 millones integrados, mientras la holding cobró G. 12 mil millones de dividendos y tuvo un EBITDA individual de USD 27 millones.",
+     "refs": [
+      "press:fact:0158",
+      "press:fact:0289",
+      "press:fact:0255",
+      "press:fact:0256"
+     ],
+     "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf",
+     "asserted_by": "rating_agency"
+    },
+    {
+     "text_en": "Nubicom's G. 285,600 million repayment on 31 July 2026 was made by ITTI with money from new loans to Galadriel and Infocenter; the portfolio was sold at principal plus accrued interest, so about USD 2.7 million of interest was collected with the bank's own money.",
+     "text_es": "El pago de G. 285.600 millones de Nubicom del 31 de julio de 2026 lo hizo ITTI con dinero de nuevos préstamos a Galadriel e Infocenter; la cartera se vendió a capital más intereses devengados, de modo que unos USD 2,7 millones de intereses se cobraron con dinero del propio banco.",
+     "refs": [
+      "press:flow:0093",
+      "press:flow:0094",
+      "press:flow:0095",
+      "rec:flow:0060",
+      "rec:flow:0061"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    },
+    {
+     "text_en": "A cattle company of the group held G. 89,321 million of 'temporary investments' in the group's holding while owing the bank USD 33.9 million.",
+     "text_es": "Una ganadera del grupo tenía G. 89.321 millones de «inversiones temporales» en la holding del grupo mientras debía al banco USD 33,9 millones.",
+     "refs": [
+      "press:fact:0055",
+      "press:fact:0056"
+     ],
+     "url": "",
+     "asserted_by": "press"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "The capital-through-certificates account is single-source hearsay with a date that conflicts with its context, and the direction of the cash is into the bank; its origin is unknown.",
+     "text_es": "El relato de la capitalización con certificados es de fuente única y de oídas, con una fecha que no encaja en su contexto, y el efectivo entra al banco; su origen se desconoce.",
+     "refs": [
+      "rec:issue:0009",
+      "rec:event:0047"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "OTP put in USD 30 million in December 2025, so part of the 2025 capital paid in was outside money.",
+     "text_es": "OTP aportó USD 30 millones en diciembre de 2025, por lo que parte del capital integrado en 2025 fue dinero externo.",
+     "refs": [
+      "chrono:event:0029",
+      "press:flow:0073"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "A former director denied indirect financing of the Vinanzas purchase.",
+     "text_es": "Un exdirector negó la financiación indirecta de la compra de Vinanzas.",
+     "refs": [
+      "chrono:event:0063"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "Repayments of questioned loans with new questioned loans do not add to the outstanding stock; only returns booked as capital, deposits, fees or interest belong in this bucket.",
+     "text_es": "Los pagos de créditos cuestionados con nuevos créditos cuestionados no aumentan el saldo vigente; a este rubro solo corresponden los retornos registrados como capital, depósitos, comisiones o intereses.",
+     "refs": [],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "The certificate-of-deposit register (holder, funding entry, endorsements), the bank's capital account entries with the origin of each payment, SIPAP logs for U Paraguay and Grupo Vázquez on capital-payment dates, and time-stamped statements of Vinanzas for 10 to 16 June 2026.",
+   "would_confirm_es": "El registro de certificados de depósito (titular, asiento de fondeo, endosos), los asientos de la cuenta de capital del banco con el origen de cada integración, los registros SIPAP de U Paraguay y Grupo Vázquez en las fechas de integración y los extractos con hora de Vinanzas del 10 al 16 de junio de 2026.",
+   "confidence": "medium"
+  },
+  {
+   "id": "asset_acquisition",
+   "rank": 4,
+   "title_en": "Acquisition of assets",
+   "title_es": "Adquisición de activos",
+   "summary_en": "Hypothesis: a small share became assets that still exist: property, hotels, land, a telecom licence and equipment, stakes in companies. Documented payments are modest (about USD 9 to 16 million of property payments over 2024 to 2026) and the regulator says the hotel and real-estate loans did not go to the works. The Visión Banco purchase price is not public.",
+   "summary_es": "Hipótesis: una parte menor se convirtió en activos que aún existen: inmuebles, hoteles, terrenos, una licencia de telecomunicaciones y equipos, participaciones en empresas. Los pagos documentados son modestos (unos USD 9 a 16 millones en inmuebles entre 2024 y 2026) y el regulador sostiene que los créditos hoteleros e inmobiliarios no fueron a las obras. El precio de compra de Visión Banco no es público.",
+   "size_low": 20000000,
+   "size_central": 50000000,
+   "size_high": 120000000,
+   "currency": "USD",
+   "share_central_pct": 5.5,
+   "missing_or_circulated": "held_as_assets",
+   "evidence_for": [
+    {
+     "text_en": "Internal documents cited by ABC list 71 payments for property totalling G. 61,140 million and 15 dollar payments totalling USD 6,233,023 between April 2024 and August 2026, including USD 1 million labelled 'Hotel Chaco' and land for a Nubicom antenna.",
+     "text_es": "Documentos internos citados por ABC registran 71 pagos por inmuebles por G. 61.140 millones y 15 pagos en dólares por USD 6.233.023 entre abril de 2024 y agosto de 2026, entre ellos USD 1 millón con el concepto «Hotel Chaco» y un terreno para una antena de Nubicom.",
+     "refs": [
+      "press:fact:0076",
+      "press:fact:0077",
+      "press:fact:0071",
+      "press:fact:0078",
+      "press:fact:0079",
+      "press:flow:0079",
+      "press:flow:0080",
+      "press:flow:0081"
+     ],
+     "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/",
+     "asserted_by": "press"
+    },
+    {
+     "text_en": "Franede operates a hotel and borrowed G. 314,001 million for hotel projects; Grupo Berilo's first loan was for land, licences and civil works; Nubicom paid Nokia USD 1.2 million.",
+     "text_es": "Franede opera un hotel y tomó G. 314.001 millones para proyectos hoteleros; el primer préstamo de Grupo Berilo era para terreno, licencias y obras civiles; Nubicom pagó USD 1,2 millones a Nokia.",
+     "refs": [
+      "press:fact:0070",
+      "press:loan:0048",
+      "press:flow:0135"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    },
+    {
+     "text_en": "ITTI's intangible assets rose from G. 426 billion to G. 632 billion in 2025 and fixed assets from G. 64 billion to G. 115 billion.",
+     "text_es": "Los activos intangibles de ITTI subieron de G. 426 mil millones a G. 632 mil millones en 2025 y los bienes de uso de G. 64 mil millones a G. 115 mil millones.",
+     "refs": [
+      "src:solventa-2026-05-12-itti-peg-g1"
+     ],
+     "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf",
+     "asserted_by": "rating_agency"
+    },
+    {
+     "text_en": "Seizures: three ranches valued at USD 15.95 million, nine vehicles valued by local media at about USD 1.4 million, a yacht and aircraft; 2,331 properties identified.",
+     "text_es": "Incautaciones: tres estancias valuadas en USD 15,95 millones, nueve vehículos valuados por la prensa local en unos USD 1,4 millones, un yate y aeronaves; 2.331 inmuebles identificados.",
+     "refs": [
+      "press:fact:0063",
+      "press:fact:0064",
+      "press:fact:0065",
+      "press:fact:0080",
+      "chrono:event:0150",
+      "chrono:event:0121"
+     ],
+     "url": "https://www.elmostrador.cl/noticias/2026/11/08/autos-de-lujo-avionetas-un-yate-y-documentos-las-incautaciones-en-caso-ueno-en-paraguay/",
+     "asserted_by": "prosecution"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "The regulator, as relayed, says the Hotel Chaco loan went the same day to Vinanzas and then to ITTI to cover debits, and that Puerto Madero disbursements covered debits, overdrafts and cheques; no plans or progress certificates were on file.",
+     "text_es": "Según lo difundido, el regulador sostiene que el préstamo del Hotel Chaco pasó el mismo día a Vinanzas y luego a ITTI para cubrir débitos, y que los desembolsos de Puerto Madero cubrieron débitos, sobregiros y cheques; no había planos ni certificados de avance.",
+     "refs": [
+      "press:flow:0074",
+      "press:flow:0075",
+      "press:flow:0076",
+      "press:fact:0074"
+     ],
+     "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/"
+    },
+    {
+     "text_en": "No source dates the purchase of the ranches, vehicles, yacht or aircraft inside the lending period or ties any of them to a loan.",
+     "text_es": "Ninguna fuente sitúa la compra de las estancias, vehículos, yate o aeronaves dentro del período de los créditos ni vincula alguno de ellos con un préstamo.",
+     "refs": [
+      "chrono:event:0205",
+      "chrono:event:0212"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "ITTI's capitalised development is the same spending as the technology burn; counting it here and there would double count.",
+     "text_es": "El desarrollo activado por ITTI es el mismo gasto que el de tecnología; contarlo en ambos rubros duplicaría.",
+     "refs": [],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "Fixed-asset and intangible registers of ITTI, Franede, Grupo Berilo, Nuevo Mundo and Nubicom with supplier invoices and payment proofs; property-registry entries with dates and prices; the Visión Banco share-purchase agreement.",
+   "would_confirm_es": "Registros de bienes de uso e intangibles de ITTI, Franede, Grupo Berilo, Nuevo Mundo y Nubicom con facturas de proveedores y comprobantes de pago; asientos del registro inmobiliario con fechas y precios; el contrato de compraventa de acciones de Visión Banco.",
+   "confidence": "low"
+  },
+  {
+   "id": "sponsorship_marketing",
+   "rank": 5,
+   "title_en": "Sponsorship, marketing and sports and entertainment units",
+   "title_es": "Patrocinios, marketing y unidades de deporte y entretenimiento",
+   "summary_en": "Hypothesis: brand spending explains a few per cent. The only priced contracts are a football-association deal of USD 12 million over four years, USD 1 million for a rally and USD 300,000 for the Olympic committee; club and stadium deals are unpriced. ITTI's selling expenses rose from G. 38 billion to G. 268 billion in 2025, which may include promotion.",
+   "summary_es": "Hipótesis: el gasto de marca explica un porcentaje bajo. Los únicos contratos con precio son el de la asociación de fútbol por USD 12 millones en cuatro años, USD 1 millón para un rally y USD 300.000 para el comité olímpico; los contratos con clubes y de estadio no tienen precio publicado. Los gastos de ventas de ITTI pasaron de G. 38 mil millones a G. 268 mil millones en 2025, lo que podría incluir promoción.",
+   "size_low": 15000000,
+   "size_central": 35000000,
+   "size_high": 70000000,
+   "currency": "USD",
+   "share_central_pct": 3.8,
+   "missing_or_circulated": "spent",
+   "evidence_for": [
+    {
+     "text_en": "Reported contracts: football association USD 12 million (four years), rally USD 1 million, Olympic committee USD 300,000, plus shirt and stadium-naming deals with the two largest clubs through 2030.",
+     "text_es": "Contratos informados: asociación de fútbol USD 12 millones (cuatro años), rally USD 1 millón, comité olímpico USD 300.000, además de camisetas y derechos de nombre de estadio con los dos clubes mayores hasta 2030.",
+     "refs": [],
+     "url": "https://infonegocios.com.py/default/que-compromisos-estan-en-juego-y-quienes-podrian-verse-afectados",
+     "asserted_by": "press"
+    },
+    {
+     "text_en": "ITTI's selling expenses were G. 268 billion in 2025 against G. 38 billion in 2024.",
+     "text_es": "Los gastos de ventas de ITTI fueron de G. 268 mil millones en 2025 frente a G. 38 mil millones en 2024.",
+     "refs": [
+      "src:solventa-2026-05-12-itti-peg-g1"
+     ],
+     "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf",
+     "asserted_by": "rating_agency"
+    },
+    {
+     "text_en": "Nuevo Mundo Entertainment, promoter of a port redevelopment, owed G. 198,962 million and its disbursements were routed to ITTI, Grupo Vázquez and Vinanzas; ITTI passed G. 74,071 million to a company called Match S.A.",
+     "text_es": "Nuevo Mundo Entertainment, promotora de una reconversión portuaria, debía G. 198.962 millones y sus desembolsos se derivaron a ITTI, Grupo Vázquez y Vinanzas; ITTI pasó G. 74.071 millones a una empresa llamada Match S.A.",
+     "refs": [
+      "press:fact:0030",
+      "press:flow:0076",
+      "press:flow:0103"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "No source says which company paid the sponsorships; if the bank paid them from its own income statement they are not part of the questioned credit.",
+     "text_es": "Ninguna fuente dice qué empresa pagaba los patrocinios; si los pagaba el banco con cargo a sus resultados, no forman parte del crédito cuestionado.",
+     "refs": [],
+     "url": ""
+    },
+    {
+     "text_en": "The business of Match S.A. is not described in any source, so its link to marketing is unverified.",
+     "text_es": "Ninguna fuente describe el negocio de Match S.A., por lo que su relación con marketing no está verificada.",
+     "refs": [
+      "press:flow:0103"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "The priced contracts add up to under USD 14 million.",
+     "text_es": "Los contratos con precio suman menos de USD 14 millones.",
+     "refs": [],
+     "url": "https://www.primicias.ec/deportes/futbol/crisis-financiera-paraguay-ueno-bank-deporte-bancos-136872/"
+    }
+   ],
+   "would_confirm_en": "The sponsorship contracts and the payer's bank records; marketing and selling-expense ledgers of ITTI and the bank by supplier.",
+   "would_confirm_es": "Los contratos de patrocinio y los registros bancarios del pagador; los mayores de gastos de marketing y ventas de ITTI y del banco por proveedor.",
+   "confidence": "low"
+  },
+  {
+   "id": "transfers_abroad",
+   "rank": 6,
+   "title_en": "Transfers abroad",
+   "title_es": "Transferencias al exterior",
+   "summary_en": "Hypothesis: little of the questioned money is shown leaving the country. The traced amounts are USD 4.6 million to an Argentine company's account and USD 1.2 million to an equipment supplier. The Luxembourg holding was built with contributions in kind and reported about USD 50,000 of cash. Argentine payroll is operating burn and is counted there.",
+   "summary_es": "Hipótesis: poco del dinero cuestionado aparece saliendo del país. Los montos rastreados son USD 4,6 millones a la cuenta de una empresa argentina y USD 1,2 millones a un proveedor de equipos. La holding luxemburguesa se constituyó con aportes en especie y declaró unos USD 50.000 en caja. La nómina argentina es gasto operativo y se cuenta en ese rubro.",
+   "size_low": 6000000,
+   "size_central": 8000000,
+   "size_high": 40000000,
+   "currency": "USD",
+   "share_central_pct": 0.9,
+   "missing_or_circulated": "unknown",
+   "evidence_for": [
+    {
+     "text_en": "Out of a USD 7.5 million loan, Nubicom sent USD 4.6 million to an account of Nubicom SRL in Argentina and USD 1.2 million to Nokia.",
+     "text_es": "De un préstamo de USD 7,5 millones, Nubicom envió USD 4,6 millones a una cuenta de Nubicom SRL en Argentina y USD 1,2 millones a Nokia.",
+     "refs": [
+      "press:flow:0090",
+      "press:flow:0134",
+      "press:flow:0135",
+      "press:loan:0044"
+     ],
+     "url": "",
+     "asserted_by": "regulator"
+    },
+    {
+     "text_en": "Prosecutors announced cooperation with Luxembourg, Argentina and the United States and asked to freeze crypto-assets in Luxembourg.",
+     "text_es": "La fiscalía anunció cooperación con Luxemburgo, Argentina y Estados Unidos y pidió congelar criptoactivos en Luxemburgo.",
+     "refs": [
+      "chrono:event:0158",
+      "chrono:event:0189"
+     ],
+     "url": "",
+     "asserted_by": "prosecution"
+    },
+    {
+     "text_en": "Grupo M proceeds reached Kaitel, whose Argentine branch had 800 to 900 workers partly paid from Paraguay.",
+     "text_es": "Fondos de Grupo M llegaron a Kaitel, cuya sucursal argentina tenía entre 800 y 900 trabajadores pagados en parte desde Paraguay.",
+     "refs": [
+      "rec:flow:0016",
+      "press:flow:0017",
+      "chrono:event:0123"
+     ],
+     "url": "https://chequeado.com/el-explicador/del-ueno-bank-a-buenos-aires-asi-operaba-el-grupo-vazquez-con-sus-trabajadores-en-argentina/",
+     "asserted_by": "press"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "The Luxembourg company was capitalised with shares of U Paraguay, not cash, and the only outside cash reported there is OTP's USD 47 million coming in.",
+     "text_es": "La sociedad luxemburguesa se capitalizó con acciones de U Paraguay, no con efectivo, y el único efectivo externo informado allí son los USD 47 millones de OTP que entraron.",
+     "refs": [
+      "chrono:event:0010",
+      "chrono:event:0036",
+      "press:event:0020"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "Nubicom SRL says it sold its shares months earlier and never managed the Paraguayan company's funds.",
+     "text_es": "Nubicom SRL afirma que vendió sus acciones meses antes y que nunca administró fondos de la empresa paraguaya.",
+     "refs": [
+      "press:event:0030"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "No foreign authority has confirmed a freeze or an amount.",
+     "text_es": "Ninguna autoridad extranjera ha confirmado un congelamiento ni un monto.",
+     "refs": [
+      "chrono:event:0158"
+     ],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "The bank's SWIFT log and foreign-exchange deal tickets for all questioned borrowers and for ITTI, Vinanzas and Grupo Vázquez; Luxembourg bank statements of U Holdings; Deel and Kaitel payroll remittance records.",
+   "would_confirm_es": "El registro SWIFT del banco y las boletas de cambio de todas las prestatarias cuestionadas y de ITTI, Vinanzas y Grupo Vázquez; los extractos bancarios de U Holdings en Luxemburgo; los registros de remesas salariales de Deel y Kaitel.",
+   "confidence": "low"
+  },
+  {
+   "id": "bank_fees",
+   "rank": 7,
+   "title_en": "Fees and charges kept inside the bank",
+   "title_es": "Comisiones y cargos retenidos en el banco",
+   "summary_en": "Hypothesis: a uniform 0.5% up-front charge was financed inside the loans and booked as bank income. It is visible in ten record loans, three Franede balances and three second-ring loans. Applied to all questioned disbursements it is worth about USD 4 to 6 million: small, but it means the borrowers did not fund even their origination cost.",
+   "summary_es": "Hipótesis: un cargo inicial uniforme de 0,5% se financió dentro de los préstamos y se registró como ingreso del banco. Se observa en diez préstamos del acta, tres saldos de Franede y tres préstamos del segundo anillo. Aplicado a todos los desembolsos cuestionados equivale a unos USD 4 a 6 millones: poco, pero implica que las prestatarias no fondearon ni su costo de originación.",
+   "size_low": 1000000,
+   "size_central": 5000000,
+   "size_high": 9000000,
+   "currency": "USD",
+   "share_central_pct": 0.5,
+   "missing_or_circulated": "circulated",
+   "evidence_for": [
+    {
+     "text_en": "Ten record loans equal a round amount times 1.005 (for example USD 10,050,000 and G. 133,665 million); three Franede balances exceed principal by exactly 0.5%. The uplift on these rows sums to about USD 0.70 million.",
+     "text_es": "Diez préstamos del acta equivalen a un monto redondo por 1,005 (por ejemplo USD 10.050.000 y G. 133.665 millones); tres saldos de Franede superan el capital exactamente en 0,5%. El recargo de estas filas suma unos USD 0,70 millones.",
+     "refs": [
+      "rec:loan:0006",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0031",
+      "rec:loan:0025",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:issue:0007"
+     ],
+     "url": "",
+     "asserted_by": "analyst"
+    },
+    {
+     "text_en": "The same arithmetic appears outside the record: Nubicom G. 417,075 million against G. 415,000 million paid on; Grupo Berilo USD 30.15 million against USD 30 million sent on; Office Design USD 15,766,440.",
+     "text_es": "La misma aritmética aparece fuera del acta: Nubicom G. 417.075 millones frente a G. 415.000 millones remitidos; Grupo Berilo USD 30,15 millones frente a USD 30 millones remitidos; Office Design USD 15.766.440.",
+     "refs": [
+      "press:loan:0045",
+      "press:flow:0091",
+      "press:loan:0048",
+      "press:flow:0097",
+      "press:loan:0050"
+     ],
+     "url": "",
+     "asserted_by": "analyst"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "No source names the 0.5% item; it could be a tax, stamp or insurance charge passed to a third party and not bank income.",
+     "text_es": "Ninguna fuente identifica el concepto del 0,5%; podría ser un impuesto, sellado o seguro trasladado a un tercero y no un ingreso del banco.",
+     "refs": [
+      "rec:issue:0007"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "The pattern is absent from several loans, including the overdrafts and the April 2026 roll-overs.",
+     "text_es": "El patrón no aparece en varios préstamos, entre ellos los sobregiros y las renovaciones de abril de 2026.",
+     "refs": [
+      "rec:loan:0004",
+      "rec:loan:0011"
+     ],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "Loan settlement sheets showing the 0.5% line and the income account credited; the bank's fee-income ledger by borrower.",
+   "would_confirm_es": "Las liquidaciones de desembolso con la línea del 0,5% y la cuenta de ingresos acreditada; el mayor de comisiones cobradas por prestataria.",
+   "confidence": "medium"
+  },
+  {
+   "id": "cash_extraction",
+   "rank": 8,
+   "title_en": "Cash extraction and off-book payments",
+   "title_es": "Retiro de efectivo y pagos fuera de libros",
+   "summary_en": "Hypothesis: cash withdrawals explain well under 1% on what sources state. Press reports cash prepared at the bank for the group totalling G. 4,767 million (about USD 0.7 million) in January and October 2026. Rey's much larger cash figure describes money coming into the bank, not leaving it. The high case assumes that inbound cash had first been withdrawn from the circuit, which no source says.",
+   "summary_es": "Hipótesis: los retiros de efectivo explican bastante menos del 1% según lo que afirman las fuentes. La prensa informa de efectivo preparado en el banco para el grupo por G. 4.767 millones (unos USD 0,7 millones) en enero y octubre de 2026. La cifra de Rey, mucho mayor, describe dinero que entra al banco, no que sale. El escenario alto supone que ese efectivo había sido retirado antes del circuito, algo que ninguna fuente afirma.",
+   "size_low": 1000000,
+   "size_central": 2000000,
+   "size_high": 25000000,
+   "currency": "USD",
+   "share_central_pct": 0.2,
+   "missing_or_circulated": "extracted",
+   "evidence_for": [
+    {
+     "text_en": "ABC, from internal emails and spreadsheets, reports seven cash requests prepared at the bank on the group's instructions: G. 1,176 million in January 2026 and G. 3,591 million in October 2026, some packaged in bags and envelopes.",
+     "text_es": "ABC, con base en correos y planillas internas, informa de siete pedidos de efectivo preparados en el banco por instrucción del grupo: G. 1.176 millones en enero de 2026 y G. 3.591 millones en octubre de 2026, algunos empaquetados en bolsos y sobres.",
+     "refs": [
+      "press:flow:0140",
+      "press:flow:0141",
+      "press:flow:0142",
+      "press:flow:0143",
+      "press:flow:0144",
+      "press:flow:0145",
+      "press:flow:0146",
+      "chrono:event:0031",
+      "chrono:event:0053",
+      "chrono:event:0058",
+      "chrono:event:0064"
+     ],
+     "url": "",
+     "asserted_by": "press"
+    },
+    {
+     "text_en": "Rey says about USD 17 million and G. 17,000 million in cash was brought to the bank at night and justified with consecutively numbered receipts of three 'dead portfolio' firms; he filed three receipts.",
+     "text_es": "Rey dice que unos USD 17 millones y G. 17.000 millones en efectivo se llevaron al banco de noche y se justificaron con recibos de numeración consecutiva de tres empresas de «cartera muerta»; entregó tres recibos.",
+     "refs": [
+      "rec:flow:0071",
+      "rec:flow:0072",
+      "rec:event:0047",
+      "rec:event:0068"
+     ],
+     "url": "",
+     "asserted_by": "rey"
+    },
+    {
+     "text_en": "Rey says instalments on a property sale were assumed by the group through a supposed fodder payment to its ranch; the press holds one invoice of USD 739,000.",
+     "text_es": "Rey dice que las cuotas de una venta de inmueble las asumía el grupo mediante un supuesto pago de forraje a su estancia; la prensa tiene una factura de USD 739.000.",
+     "refs": [
+      "rec:flow:0076",
+      "rec:flow:0077",
+      "src:acta-p23"
+     ],
+     "url": "https://www.abc.com.py/politica/2026/11/20/grupo-vazquez-habria-simulado-creditos-por-venta-de-tierra-a-empresa-de-hermano-de-santiago-pena/",
+     "asserted_by": "rey"
+    }
+   ],
+   "evidence_against": [
+    {
+     "text_en": "The reported outbound cash is about 0.08% of the questioned total; the largest single request is G. 1,500 million.",
+     "text_es": "El efectivo saliente informado es alrededor del 0,08% del total cuestionado; el mayor pedido individual es de G. 1.500 millones.",
+     "refs": [
+      "press:flow:0145"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "No source states who received the cash or for what; no response from those named is reported.",
+     "text_es": "Ninguna fuente dice quién recibió el efectivo ni para qué; no consta respuesta de los mencionados.",
+     "refs": [
+      "press:flow:0140"
+     ],
+     "url": ""
+    },
+    {
+     "text_en": "Rey's cash figures are hearsay from a colleague and unreported elsewhere; the origin of that cash is unknown.",
+     "text_es": "Las cifras de efectivo de Rey son de oídas, por un colega, y no aparecen en otra fuente; se desconoce el origen de ese efectivo.",
+     "refs": [
+      "rec:issue:0009"
+     ],
+     "url": ""
+    }
+   ],
+   "would_confirm_en": "The bank's vault log, cash-count sheets and cash-withdrawal vouchers by account for 2025 and 2026; cash transaction reports filed with the financial intelligence unit; the receipt book and confirmations from the three firms.",
+   "would_confirm_es": "El libro de bóveda del banco, las planillas de arqueo y los comprobantes de retiro de efectivo por cuenta de 2025 y 2026; los reportes de operaciones en efectivo ante la unidad de inteligencia financiera; el talonario de recibos y la confirmación de las tres empresas.",
+   "confidence": "low"
+  }
+ ],
+ "unexplained": {
+  "low": 0,
+  "central": 170000000,
+  "high": 527000000,
+  "currency": "USD",
+  "note_en": "Central: USD 170 million (18.6%) has no evidenced destination. It sits mainly in second-ring borrowers with no traced first hop (Henrici, Technoma, Kasas, Model, most of GSR and Office Design) and in whatever lies behind Rey's undivided third of USD 300 million, about which he says he had no information. The high bounds of the eight buckets add to more than the total, so they cannot all hold at once; the low bounds leave USD 527 million unexplained.",
+  "note_es": "Central: USD 170 millones (18,6%) no tienen destino acreditado. Están sobre todo en prestatarias del segundo anillo sin primer tramo rastreado (Henrici, Technoma, Kasas, Model, la mayor parte de GSR y Office Design) y en lo que haya detrás del tercio no desglosado por Rey, de USD 300 millones, sobre el que dice no haber tenido información. Los máximos de los ocho rubros suman más que el total, por lo que no pueden darse todos a la vez; los mínimos dejan USD 527 millones sin explicar."
+ },
+ "sources_and_uses": [
+  {
+   "side": "source",
+   "label_en": "Questioned credit outstanding at Ueno Bank (six record borrowers plus second ring, de-duplicated)",
+   "label_es": "Crédito cuestionado vigente en Ueno Bank (seis prestatarias del acta más segundo anillo, sin duplicar)",
+   "value": 914582119,
+   "currency": "USD",
+   "period": "2025-2026",
+   "kind": "computed",
+   "refs": [
+    "rec:loan:0001",
+    "rec:loan:0035",
+    "press:fact:0001",
+    "press:fact:0021",
+    "press:fact:0055",
+    "press:loan:0047"
+   ],
+   "url": ""
+  },
+  {
+   "side": "source",
+   "label_en": "Bank funds placed in REDISA and REDIPRO (G. 876,640 million)",
+   "label_es": "Fondos del banco colocados en REDISA y REDIPRO (G. 876.640 millones)",
+   "value": 134867692,
+   "currency": "USD",
+   "period": "2025-12-31",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0126",
+    "press:event:0041"
+   ],
+   "url": ""
+  },
+  {
+   "side": "source",
+   "label_en": "Merger-expenses trust on the bank's balance sheet (G. 2,105,744 million); share paid to group suppliers unknown",
+   "label_es": "Fideicomiso de gastos de fusión en el balance del banco (G. 2.105.744 millones); se desconoce la parte pagada a proveedores del grupo",
+   "value": 323960615,
+   "currency": "USD",
+   "period": "2024-2025",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0265",
+    "chrono:event:0044"
+   ],
+   "url": ""
+  },
+  {
+   "side": "source",
+   "label_en": "OTP Bank equity paid into U Holdings",
+   "label_es": "Aporte de capital de OTP Bank a U Holdings",
+   "value": 47000000,
+   "currency": "USD",
+   "period": "2025-12/2026-06",
+   "kind": "reported",
+   "refs": [
+    "chrono:event:0036",
+    "press:flow:0073"
+   ],
+   "url": ""
+  },
+  {
+   "side": "source",
+   "label_en": "Net new debt of the group outside the bank (G. 262 billion in 2025 plus G. 34 billion in Q1 2026, FIX annex)",
+   "label_es": "Deuda neta nueva del grupo fuera del banco (G. 262 mil millones en 2025 más G. 34 mil millones en el 1T 2026, anexo de FIX)",
+   "value": 45492154,
+   "currency": "USD",
+   "period": "2025/2026-Q1",
+   "kind": "reported",
+   "refs": [
+    "src:fixscr-2026-07-02-grupo-vazquez"
+   ],
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "side": "source",
+   "label_en": "ITTI revenue from clients outside the group (41% of 2025 revenue)",
+   "label_es": "Ingresos de ITTI de clientes ajenos al grupo (41% de los ingresos de 2025)",
+   "value": 115177705,
+   "currency": "USD",
+   "period": "2025",
+   "kind": "computed",
+   "refs": [
+    "press:fact:0179",
+    "press:fact:0299"
+   ],
+   "url": ""
+  },
+  {
+   "side": "source",
+   "label_en": "Cash said by Rey to have been brought into the bank (USD 17 million plus G. 17,000 million); origin unknown",
+   "label_es": "Efectivo que según Rey se llevó al banco (USD 17 millones más G. 17.000 millones); origen desconocido",
+   "value": 19615385,
+   "currency": "USD",
+   "period": "2025",
+   "kind": "reported",
+   "refs": [
+    "rec:flow:0071",
+    "rec:flow:0072"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "ITTI cost base: cost of sales, selling, administrative and financial expenses (G. 710 billion in 2024, G. 1,511 billion in 2025)",
+   "label_es": "Base de costos de ITTI: costo de ventas, gastos de ventas, administrativos y financieros (G. 710 mil millones en 2024, G. 1.511 mil millones en 2025)",
+   "value": 341627538,
+   "currency": "USD",
+   "period": "2024-2025",
+   "kind": "reported",
+   "refs": [
+    "src:solventa-2026-05-12-itti-peg-g1"
+   ],
+   "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf"
+  },
+  {
+   "side": "use",
+   "label_en": "of which ITTI services billed to related parties in 2025",
+   "label_es": "de lo cual, servicios de ITTI facturados a partes relacionadas en 2025",
+   "value": 168000000,
+   "currency": "USD",
+   "period": "2025",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0299"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Increase in ITTI intangible and fixed assets in 2025 (G. 206 billion plus G. 51 billion)",
+   "label_es": "Aumento de intangibles y bienes de uso de ITTI en 2025 (G. 206 mil millones más G. 51 mil millones)",
+   "value": 39583385,
+   "currency": "USD",
+   "period": "2025",
+   "kind": "reported",
+   "refs": [
+    "src:solventa-2026-05-12-itti-peg-g1"
+   ],
+   "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf"
+  },
+  {
+   "side": "use",
+   "label_en": "Gross financial interest of the group outside the bank (G. 119 billion 2024, G. 251 billion 2025, G. 67 billion Q1 2026; units as printed in the FIX annex)",
+   "label_es": "Intereses financieros brutos del grupo fuera del banco (G. 119 mil millones 2024, G. 251 mil millones 2025, G. 67 mil millones 1T 2026; unidades según el anexo de FIX)",
+   "value": 67297692,
+   "currency": "USD",
+   "period": "2024/2026-Q1",
+   "kind": "reported",
+   "refs": [
+    "src:fixscr-2026-07-02-grupo-vazquez"
+   ],
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "side": "use",
+   "label_en": "Short-term maturities at June 2026: Grupo Vázquez USD 54 million, ITTI USD 22 million",
+   "label_es": "Vencimientos de corto plazo a junio de 2026: Grupo Vázquez USD 54 millones, ITTI USD 22 millones",
+   "value": 76000000,
+   "currency": "USD",
+   "period": "2026-06",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0305",
+    "press:fact:0312"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Reduction of ITTI bank debt in 2025 (G. 140 billion)",
+   "label_es": "Reducción de la deuda bancaria de ITTI en 2025 (G. 140 mil millones)",
+   "value": 21594308,
+   "currency": "USD",
+   "period": "2025",
+   "kind": "computed",
+   "refs": [
+    "press:fact:0194",
+    "press:fact:0195"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Capital paid into Ueno Bank in 2025 per FIX (USD 77 million committed)",
+   "label_es": "Capital integrado en Ueno Bank en 2025 según FIX (USD 77 millones comprometidos)",
+   "value": 50000000,
+   "currency": "USD",
+   "period": "2025",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0255",
+    "press:fact:0256"
+   ],
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "side": "use",
+   "label_en": "Returns to the bank on 11-15 June 2026: sale price, Grupo M overdraft, Hendy and Mowi overdrafts",
+   "label_es": "Retornos al banco del 11 al 15 de junio de 2026: precio de venta, sobregiro de Grupo M, sobregiros de Hendy y Mowi",
+   "value": 115803377,
+   "currency": "USD",
+   "period": "2026-06",
+   "kind": "computed",
+   "refs": [
+    "rec:flow:0061",
+    "rec:flow:0055",
+    "press:loan:0029",
+    "press:loan:0030"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Record loans of the six borrowers already cancelled, by group-company funds as alleged",
+   "label_es": "Préstamos del acta de las seis prestatarias ya cancelados, con fondos de empresas del grupo según lo alegado",
+   "value": 127201523,
+   "currency": "USD",
+   "period": "2025-2026",
+   "kind": "computed",
+   "refs": [
+    "rec:loan:0003",
+    "rec:loan:0005",
+    "rec:loan:0007",
+    "rec:loan:0021",
+    "rec:loan:0023",
+    "rec:loan:0024",
+    "rec:loan:0026",
+    "rec:loan:0030",
+    "rec:loan:0031",
+    "rec:loan:0032",
+    "rec:loan:0033"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Cover of 72-hour cheques: ITTI to Red Digital, July 2026 (G. 329,500 million)",
+   "label_es": "Cobertura de cheques a 72 horas: de ITTI a Red Digital, julio de 2026 (G. 329.500 millones)",
+   "value": 50692308,
+   "currency": "USD",
+   "period": "2026-07",
+   "kind": "reported",
+   "refs": [
+    "press:flow:0092"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Interest accrued on the six borrowers' outstanding balances to 2 November 2026 at contract rates",
+   "label_es": "Intereses devengados sobre los saldos vigentes de las seis prestatarias al 2 de noviembre de 2026 a tasas contractuales",
+   "value": 22711798,
+   "currency": "USD",
+   "period": "2025-2026",
+   "kind": "assumption",
+   "refs": [
+    "rec:loan:0001",
+    "rec:loan:0035"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Property payments per internal documents (G. 61,140 million; USD 6,233,023 may be included)",
+   "label_es": "Pagos por inmuebles según documentos internos (G. 61.140 millones; los USD 6.233.023 podrían estar incluidos)",
+   "value": 9406154,
+   "currency": "USD",
+   "period": "2024-04/2026-08",
+   "kind": "reported",
+   "refs": [
+    "press:fact:0076",
+    "press:fact:0077"
+   ],
+   "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/"
+  },
+  {
+   "side": "use",
+   "label_en": "Transfers abroad with amounts: Nubicom SRL (Argentina) and Nokia",
+   "label_es": "Transferencias al exterior con monto: Nubicom SRL (Argentina) y Nokia",
+   "value": 5800000,
+   "currency": "USD",
+   "period": "2026-06",
+   "kind": "reported",
+   "refs": [
+    "press:flow:0090",
+    "press:flow:0135"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Football-association sponsorship contract (four years)",
+   "label_es": "Contrato de patrocinio con la asociación de fútbol (cuatro años)",
+   "value": 12000000,
+   "currency": "USD",
+   "period": "2023-2027",
+   "kind": "reported",
+   "refs": [],
+   "url": "https://infonegocios.com.py/default/que-compromisos-estan-en-juego-y-quienes-podrian-verse-afectados"
+  },
+  {
+   "side": "use",
+   "label_en": "0.5% uplift identified on record loans",
+   "label_es": "Recargo de 0,5% identificado en préstamos del acta",
+   "value": 704378,
+   "currency": "USD",
+   "period": "2025-2026",
+   "kind": "computed",
+   "refs": [
+    "rec:loan:0017",
+    "rec:issue:0007"
+   ],
+   "url": ""
+  },
+  {
+   "side": "use",
+   "label_en": "Cash prepared at the bank for the group (G. 4,767 million)",
+   "label_es": "Efectivo preparado en el banco para el grupo (G. 4.767 millones)",
+   "value": 733385,
+   "currency": "USD",
+   "period": "2026-01/2026-10",
+   "kind": "reported",
+   "refs": [
+    "press:flow:0140",
+    "press:flow:0146"
+   ],
+   "url": ""
+  }
+ ],
+ "not_shown_en": [
+  "No source shows any questioned loan repaid, or any interest paid, from a borrower's own revenue.",
+  "No source traces a questioned loan to a bank account abroad beyond USD 5.8 million; no foreign freeze or amount has been confirmed.",
+  "No source shows questioned money reaching a public official. Allegations about third parties in the related case rest on other facts and are not sized here.",
+  "No source ties the seized vehicles, aircraft, yacht or ranches to a specific loan or dates their purchase inside the lending period.",
+  "No document quantifies cashback or shows which company bore its cost; the bank's promotion rules say the bank credited it.",
+  "No source shows the origin of the cash Rey describes, or that capital was in fact paid with certificates of deposit.",
+  "The record gives no amounts for the forwarding and repayment legs of the six borrowers; amounts come from the press relaying the regulator.",
+  "No audited accounts exist in the sources for REDISA, REDIPRO, Vinanzas, Kasas, Model or any shell borrower, so their own uses of cash cannot be read.",
+  "No source shows large personal spending funded by the loans; the documented property payments are about USD 9 to 16 million over 29 months, and Rey says he had no information on family expenses.",
+  "Nothing shows what the first-generation overdrafts of ITTI, REDISA and REDIPRO, which the loans repaid, were originally drawn for."
+ ],
+ "not_shown_es": [
+  "Ninguna fuente muestra un crédito cuestionado pagado, ni intereses pagados, con ingresos propios de una prestataria.",
+  "Ninguna fuente rastrea un crédito cuestionado hasta una cuenta en el exterior más allá de USD 5,8 millones; no se ha confirmado ningún congelamiento ni monto en el extranjero.",
+  "Ninguna fuente muestra dinero cuestionado llegando a un funcionario público. Las imputaciones a terceros en la causa conexa se apoyan en otros hechos y no se dimensionan aquí.",
+  "Ninguna fuente vincula los vehículos, aeronaves, yate o estancias incautados con un préstamo concreto ni sitúa su compra dentro del período de los créditos.",
+  "Ningún documento cuantifica los reintegros ni muestra qué empresa soportó su costo; las bases de las promociones dicen que los acreditaba el banco.",
+  "Ninguna fuente muestra el origen del efectivo que describe Rey, ni que el capital se haya integrado efectivamente con certificados de depósito.",
+  "El acta no da montos de las remisiones ni de los pagos de las seis prestatarias; los montos provienen de la prensa que reproduce al regulador.",
+  "Las fuentes no contienen balances auditados de REDISA, REDIPRO, Vinanzas, Kasas, Model ni de ninguna prestataria de fachada, por lo que no puede leerse en qué usaron el dinero.",
+  "Ninguna fuente muestra grandes gastos personales financiados con los créditos; los pagos por inmuebles documentados rondan USD 9 a 16 millones en 29 meses, y Rey dice que no tenía información sobre gastos de la familia.",
+  "Nada muestra para qué se giraron originalmente los sobregiros de primera generación de ITTI, REDISA y REDIPRO que los créditos cancelaron."
+ ],
+ "key_documents_en": [
+  "Account statements with time stamps of ITTI, REDISA, REDIPRO, Vinanzas and Grupo Vázquez at Ueno Bank and at other banks, January 2024 to November 2026, with the SIPAP log.",
+  "General ledgers and audited or management accounts of REDISA, REDIPRO and Vinanzas for 2024 to 2026 (none is public).",
+  "ITTI's related-party revenue schedule by customer and contract, and its payroll and supplier payment files, including remittances to Kaitel and through the payroll platform.",
+  "The bank's cashback ledger: monthly amounts credited to customers, the expense or asset account debited, and any re-invoicing to group companies.",
+  "The 'Delirio Colectivo' email of 13 October 2025 and its 20-page attachment on the bank's real liquidity channels.",
+  "The merger-expenses trust ledger with supplier invoices, and BCP Resolution 32 of 27 May 2024 with the feasibility plan.",
+  "The certificate-of-deposit register and the bank's capital account, with the origin of every capital payment in 2024 to 2026 and the three receipts and schedules filed by Rey.",
+  "Ueno Casa de Bolsa trade tickets and depository records for group bonds, and paying-agent records of every coupon and maturity of Grupo Vázquez, ITTI, Kasas and Model.",
+  "The bank's SWIFT log, foreign-exchange deal tickets, vault log and cash-withdrawal vouchers for the group and all questioned borrowers.",
+  "Credit files and settlement sheets of every questioned loan (stated purpose, the 0.5% line, approval minutes) and the Superintendency's reports 006, 007 and 011 of 2026 with annexes."
+ ],
+ "key_documents_es": [
+  "Extractos con hora de las cuentas de ITTI, REDISA, REDIPRO, Vinanzas y Grupo Vázquez en Ueno Bank y en otros bancos, de enero de 2024 a noviembre de 2026, con el registro SIPAP.",
+  "Libros mayores y estados contables auditados o de gestión de REDISA, REDIPRO y Vinanzas de 2024 a 2026 (ninguno es público).",
+  "El detalle de ingresos de ITTI con partes relacionadas por cliente y contrato, y sus archivos de pago de salarios y proveedores, incluidas las remesas a Kaitel y por la plataforma de nómina.",
+  "El mayor de reintegros del banco: montos mensuales acreditados a clientes, cuenta de gasto o de activo debitada y cualquier refacturación a empresas del grupo.",
+  "El correo «Delirio Colectivo» del 13 de octubre de 2025 y su anexo de 20 páginas sobre los canales reales de liquidez del banco.",
+  "El mayor del fideicomiso de gastos de fusión con las facturas de proveedores, y la Resolución 32 del BCP del 27 de mayo de 2024 con el plan de factibilidad.",
+  "El registro de certificados de depósito y la cuenta de capital del banco, con el origen de cada integración de 2024 a 2026 y los tres recibos y planillas presentados por Rey.",
+  "Las boletas de operación de Ueno Casa de Bolsa y los registros de la caja de valores sobre bonos del grupo, y los registros del agente de pago de cada cupón y vencimiento de Grupo Vázquez, ITTI, Kasas y Model.",
+  "El registro SWIFT del banco, las boletas de cambio, el libro de bóveda y los comprobantes de retiro de efectivo del grupo y de todas las prestatarias cuestionadas.",
+  "Las carpetas de crédito y liquidaciones de cada préstamo cuestionado (destino declarado, la línea del 0,5%, actas de aprobación) y los informes 006, 007 y 011 de 2026 de la Superintendencia con sus anexos."
+ ],
+ "new_sources": [
+  {
+   "outlet": "FIX SCR (rating report, read for cash-flow annex)",
+   "title": "Grupo Vázquez S.A.E. rating report",
+   "date": "2026-07-02",
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "outlet": "Solventa&Riskmétrica (rating report, read for expense and balance-sheet lines)",
+   "title": "Informe de calificación PEG G1 ITTI, corte diciembre 2025",
+   "date": "2026-05-12",
+   "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf"
+  },
+  {
+   "outlet": "FIX SCR",
+   "title": "ueno bank rating report, December 2024",
+   "date": "2025-04",
+   "url": "https://ueno.com.py/wp-content/uploads/2025/04/Fix-Scr-Fitch-Ratings_Diciembre-2024.pdf"
+  },
+  {
+   "outlet": "ueno bank (company document)",
+   "title": "Bases y condiciones: promoción 30% de reintegro en comercios adheridos, diciembre 2025",
+   "date": "2025-12",
+   "url": "https://www.ueno.com.py/wp-content/uploads/2025/12/Promocion-Reintegro-30-de-reintegro-en-comercios-adheridos_-DIC-2025v3.docx-1.pdf"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Costosos inmuebles, parte del esquema de triangulación de Ueno",
+   "date": "2026-11-19",
+   "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/"
+  },
+  {
+   "outlet": "Chequeado",
+   "title": "Del Ueno Bank a Buenos Aires: así operaba el Grupo Vázquez con sus trabajadores en Argentina",
+   "date": "2026-11-11",
+   "url": "https://chequeado.com/el-explicador/del-ueno-bank-a-buenos-aires-asi-operaba-el-grupo-vazquez-con-sus-trabajadores-en-argentina/"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "¿Qué compromisos están en juego y quiénes podrían verse afectados?",
+   "date": "2026-11-04",
+   "url": "https://infonegocios.com.py/default/que-compromisos-estan-en-juego-y-quienes-podrian-verse-afectados"
+  },
+  {
+   "outlet": "EFE via Primicias",
+   "title": "La caída de Ueno Bank en Paraguay deja al descubierto la fragilidad financiera del deporte",
+   "date": "2026-11-11",
+   "url": "https://www.primicias.ec/deportes/futbol/crisis-financiera-paraguay-ueno-bank-deporte-bancos-136872/"
+  },
+  {
+   "outlet": "EFE via El Mostrador",
+   "title": "Autos de lujo, avionetas, un yate y documentos: las incautaciones en caso Ueno en Paraguay",
+   "date": "2026-11-08",
+   "url": "https://www.elmostrador.cl/noticias/2026/11/08/autos-de-lujo-avionetas-un-yate-y-documentos-las-incautaciones-en-caso-ueno-en-paraguay/"
+  }
+ ]
+}

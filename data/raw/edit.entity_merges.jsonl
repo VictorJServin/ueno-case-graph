@@ -1,0 +1,6 @@
+{"from": "auth:diputados", "to": "auth:camara-de-diputados", "reason": "Same body (Cámara de Diputados); dossier contributor minted a second id."}
+{"from": "person:luis-pinanez", "to": "person:luis-lionel-pinanez", "reason": "Same prosecutor: record p1 \"Luis Lionel Piñanez\" (stamp \"Abg. Luis L. Piñanez\"); chrono label \"Luis Piñánez\". Canonical label per the record: Luis Lionel Piñanez."}
+{"from": "org:credicentro", "to": "org:ueno-holding", "reason": "Credicentro was renamed ueno Holding in 2022 (chrono:event:0005); press and chrono already carry \"Credicentro\" as an alias of org:ueno-holding. Keep \"Credicentro\" as alias and as the name valid before 2022."}
+{"from": "org:muv", "to": "org:click-sa-muv", "reason": "Rey's \"MUV\" is the brand of Click S.A. (press entity \"Click S.A. (MUV)\")."}
+{"from": "org:wepa", "to": "org:redisa", "reason": "Press and Solventa give Wepa as the brand of Red Digital S.A. (REDISA); Rey says WEPA ran the former Visión Banco branches. Caveat: ABC (12 Oct) pairs the brands the other way round (\"Redipro (Wepa)\"); medium confidence."}
+{"from": "org:bankitti", "to": "org:itti", "reason": "\"Bankitti\" is ITTI's banking-software product/brand (press:fact:0218 files Bankitti metrics under org:itti); the record says L. F. Ríos is an \"employee\" at Bankitti. Medium confidence; if kept separate, add a brand_of link."}

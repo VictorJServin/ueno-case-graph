@@ -1,0 +1,380 @@
+{
+ "org:mowi": {
+  "in_usd": 0,
+  "out_usd": 5400000,
+  "in_pyg": 214668000000,
+  "out_pyg": 33500000000,
+  "counterparties": 4,
+  "rows_with_amount": 5,
+  "rows_without_amount": 9
+ },
+ "org:itti": {
+  "in_usd": 69520744.21,
+  "out_usd": 15320244,
+  "in_pyg": 511767000000,
+  "out_pyg": 720371000000,
+  "counterparties": 21,
+  "rows_with_amount": 26,
+  "rows_without_amount": 42
+ },
+ "org:redisa": {
+  "in_usd": 35400000,
+  "out_usd": 0,
+  "in_pyg": 440440000000,
+  "out_pyg": 209142000000,
+  "counterparties": 8,
+  "rows_with_amount": 6,
+  "rows_without_amount": 18
+ },
+ "org:redipro": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 52270000000,
+  "out_pyg": 18770000000,
+  "counterparties": 7,
+  "rows_with_amount": 4,
+  "rows_without_amount": 18
+ },
+ "org:grupo-hendy": {
+  "in_usd": 0,
+  "out_usd": 10627500,
+  "in_pyg": 118244000000,
+  "out_pyg": 0,
+  "counterparties": 4,
+  "rows_with_amount": 5,
+  "rows_without_amount": 20
+ },
+ "org:vinanzas": {
+  "in_usd": 158454601,
+  "out_usd": 115011418.12,
+  "in_pyg": 219200000000,
+  "out_pyg": 187210000000,
+  "counterparties": 17,
+  "rows_with_amount": 53,
+  "rows_without_amount": 19
+ },
+ "org:grupo-m": {
+  "in_usd": 10641574,
+  "out_usd": 5300000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 4,
+  "rows_with_amount": 5,
+  "rows_without_amount": 21
+ },
+ "org:kaitel": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 0,
+  "rows_without_amount": 5
+ },
+ "org:tuiu": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 57500000000,
+  "out_pyg": 0,
+  "counterparties": 4,
+  "rows_with_amount": 1,
+  "rows_without_amount": 7
+ },
+ "org:franede": {
+  "in_usd": 0,
+  "out_usd": 10593000,
+  "in_pyg": 0,
+  "out_pyg": 65000000000,
+  "counterparties": 3,
+  "rows_with_amount": 2,
+  "rows_without_amount": 7
+ },
+ "org:grupo-vazquez": {
+  "in_usd": 15922283.79,
+  "out_usd": 10719568,
+  "in_pyg": 4767000000,
+  "out_pyg": 1687000000,
+  "counterparties": 13,
+  "rows_with_amount": 20,
+  "rows_without_amount": 12
+ },
+ "org:aime": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 5,
+  "rows_with_amount": 0,
+  "rows_without_amount": 12
+ },
+ "org:ueno-bank": {
+  "in_usd": 91418418.12,
+  "out_usd": 81841000,
+  "in_pyg": 17000000000,
+  "out_pyg": 4767000000,
+  "counterparties": 10,
+  "rows_with_amount": 31,
+  "rows_without_amount": 3
+ },
+ "org:satec": {
+  "in_usd": 20000000,
+  "out_usd": 20000000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 2,
+  "rows_with_amount": 6,
+  "rows_without_amount": 0
+ },
+ "org:hd-invest": {
+  "in_usd": 35000000,
+  "out_usd": 35000000,
+  "in_pyg": 0,
+  "out_pyg": 36900000000,
+  "counterparties": 2,
+  "rows_with_amount": 6,
+  "rows_without_amount": 0
+ },
+ "org:technoma": {
+  "in_usd": 10000000,
+  "out_usd": 10000244.21,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 4,
+  "rows_with_amount": 7,
+  "rows_without_amount": 0
+ },
+ "org:la-tropa-fletes": {
+  "in_usd": 10000000,
+  "out_usd": 6333364.17,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 5,
+  "rows_with_amount": 5,
+  "rows_without_amount": 1
+ },
+ "org:factopar": {
+  "in_usd": 6841000,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 2,
+  "rows_with_amount": 2,
+  "rows_without_amount": 1
+ },
+ "org:kasas-propiedades": {
+  "in_usd": 10049628.97,
+  "out_usd": 10049628,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 5,
+  "rows_with_amount": 4,
+  "rows_without_amount": 5
+ },
+ "org:model": {
+  "in_usd": 2117596.26,
+  "out_usd": 2117596,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 3,
+  "rows_with_amount": 5,
+  "rows_without_amount": 1
+ },
+ "person:miguel-vazquez": {
+  "in_usd": 0,
+  "out_usd": 17000000,
+  "in_pyg": 0,
+  "out_pyg": 17000000000,
+  "counterparties": 1,
+  "rows_with_amount": 2,
+  "rows_without_amount": 0
+ },
+ "org:pear-srl": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 2,
+  "rows_with_amount": 1,
+  "rows_without_amount": 1
+ },
+ "org:comitia": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 0,
+  "rows_without_amount": 1
+ },
+ "org:sagas": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 86100000000,
+  "counterparties": 2,
+  "rows_with_amount": 2,
+  "rows_without_amount": 1
+ },
+ "org:henrici": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 0
+ },
+ "org:office-design": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 96767000000,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 2
+ },
+ "org:gsr": {
+  "in_usd": 0,
+  "out_usd": 15500000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 2,
+  "rows_with_amount": 2,
+  "rows_without_amount": 2
+ },
+ "org:zeta-banco": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 0,
+  "rows_without_amount": 1
+ },
+ "org:grupo-berilo": {
+  "in_usd": 0,
+  "out_usd": 56300000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 2,
+  "rows_without_amount": 0
+ },
+ "org:nuevo-mundo-entertainment": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 3,
+  "rows_with_amount": 0,
+  "rows_without_amount": 6
+ },
+ "org:la-tropa-sae": {
+  "in_usd": 0,
+  "out_usd": 5936654.88,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 2,
+  "rows_with_amount": 1,
+  "rows_without_amount": 1
+ },
+ "org:ueno-casa-de-bolsa": {
+  "in_usd": 10000000,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 5,
+  "rows_with_amount": 1,
+  "rows_without_amount": 4
+ },
+ "org:otp-bank": {
+  "in_usd": 0,
+  "out_usd": 30000000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 2,
+  "rows_without_amount": 0
+ },
+ "org:u-holdings": {
+  "in_usd": 30000000,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 2,
+  "rows_without_amount": 0
+ },
+ "org:criscatt": {
+  "in_usd": 734000,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 2,
+  "rows_without_amount": 0
+ },
+ "org:bau-sa": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 1687000000,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 0
+ },
+ "org:nubicom": {
+  "in_usd": 0,
+  "out_usd": 5800000,
+  "in_pyg": 300412000000,
+  "out_pyg": 415000000000,
+  "counterparties": 3,
+  "rows_with_amount": 6,
+  "rows_without_amount": 1
+ },
+ "org:nubicom-srl": {
+  "in_usd": 4600000,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 14812000000,
+  "counterparties": 1,
+  "rows_with_amount": 3,
+  "rows_without_amount": 0
+ },
+ "org:infocenter": {
+  "in_usd": 0,
+  "out_usd": 18000000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 0
+ },
+ "org:galadriel": {
+  "in_usd": 0,
+  "out_usd": 15000000,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 1
+ },
+ "org:match-sa": {
+  "in_usd": 0,
+  "out_usd": 0,
+  "in_pyg": 74071000000,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 0
+ },
+ "org:nokia": {
+  "in_usd": 1200000,
+  "out_usd": 0,
+  "in_pyg": 0,
+  "out_pyg": 0,
+  "counterparties": 1,
+  "rows_with_amount": 1,
+  "rows_without_amount": 0
+ }
+}

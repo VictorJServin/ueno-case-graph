@@ -1,0 +1,21 @@
+# Q1. Loans whose nominal borrower differs from the alleged ultimate recipients
+PREFIX uc:   <https://w3id.org/ueno-case/ont#>
+PREFIX ucr:  <https://w3id.org/ueno-case/id/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?loan ?op ?borrower ?recipient ?principal ?cur ?who ?src ?conf
+WHERE {
+  ?loan a uc:Loan ;
+        uc:nominalBorrower   ?borrower ;
+        uc:ultimateRecipient ?recipient ;
+        uc:assertedBy        ?who ;
+        prov:wasDerivedFrom  ?src ;
+        uc:confidence        ?conf .
+  OPTIONAL { ?loan uc:operationNumber ?op }
+  OPTIONAL { ?loan uc:principal ?principal }
+  OPTIONAL { ?loan uc:currency ?cur }
+  FILTER (?recipient != ?borrower)
+}
+ORDER BY DESC(?principal)

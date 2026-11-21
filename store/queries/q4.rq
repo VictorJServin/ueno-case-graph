@@ -1,0 +1,27 @@
+# Q4. Assertions made only by the suspect
+PREFIX uc:   <https://w3id.org/ueno-case/ont#>
+PREFIX ucr:  <https://w3id.org/ueno-case/id/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?a ?type ?from ?to ?amount ?src ?locator
+WHERE {
+  GRAPH <https://w3id.org/ueno-case/id/graph/rey> {
+    ?a uc:assertedBy uc:Rey ; a ?type ; prov:wasDerivedFrom ?src .
+    OPTIONAL { ?a uc:locator ?locator }
+    OPTIONAL { ?a uc:fromParty ?from ; uc:toParty ?to }
+    OPTIONAL { ?a uc:amount ?amount }
+  }
+  FILTER (?type IN (uc:Flow, uc:Loan, uc:RoleHolding, uc:CaseEvent, uc:FinancialFact, uc:PortfolioSale))
+  FILTER NOT EXISTS {
+    ?a (uc:sameSubjectAs|^uc:sameSubjectAs) ?other .
+    ?other uc:assertedBy ?v . FILTER (?v != uc:Rey)
+  }
+  FILTER NOT EXISTS {
+    ?a uc:fromParty ?p1 ; uc:toParty ?p2 .
+    ?o a uc:Flow ; uc:fromParty ?p1 ; uc:toParty ?p2 ; uc:assertedBy ?v2 .
+    FILTER (?v2 != uc:Rey)
+  }
+}
+ORDER BY ?src

@@ -1,0 +1,2231 @@
+{
+ "analyst": "credit_prudential",
+ "disclaimer_en": "Analysis and labelled opinion by an AI bank-credit and prudential-regulation analyst, not a licensed professional and not advice. Everything about wrongdoing is alleged; presumption of innocence applies to every person and company named. The prosecution record (Case 89/2026) is treated as the authoritative source for what the prosecution alleges and for what Julio Rey told prosecutors; Rey's statements remain his own claims. USD amounts are converted, where stated, at Gs. 6,500 per USD, the rate implied by the record (p. 7). Cut-off 20 November 2026.",
+ "disclaimer_es": "Análisis y opinión rotulada como tal, elaborados por un analista de IA especializado en crédito bancario y regulación prudencial; no es un profesional matriculado ni constituye asesoramiento. Todo lo referido a irregularidades es una afirmación de parte; rige la presunción de inocencia para todas las personas y empresas nombradas. El acta fiscal (Causa 89/2026) se toma como fuente autorizada de lo que sostiene la Fiscalía y de lo que Julio Rey declaró; las afirmaciones de Rey son propias de él. Los importes en USD se convierten, cuando se indica, a Gs. 6.500 por dólar, tipo de cambio implícito en el acta (pág. 7). Fecha de corte: 20 de noviembre de 2026.",
+ "sections": [
+  {
+   "id": "underwriting",
+   "title_en": "Underwriting quality",
+   "title_es": "Calidad del otorgamiento de créditos",
+   "summary_en": "On the record's own figures the six borrowers owed about USD 167.0 million plus Gs. 395.5 billion (about Gs. 1,481 billion at Gs. 6,500), on sole signature, for 7 to 10 years, with 37% in revolving overdrafts. Where income or equity is printed, debt is 22 to 288 times annual income and 45 times equity. The alleged pattern is that proceeds went to group companies and repayments came from them. Second-ring borrowers in the press show the same shape with even thinner capital.",
+   "summary_es": "Con las cifras del acta, las seis prestatarias debían unos USD 167,0 millones más Gs. 395.500 millones (cerca de Gs. 1,48 billones a Gs. 6.500), a sola firma, a plazos de 7 a 10 años y con 37% en sobregiros. Donde el acta trae ingresos o patrimonio, la deuda equivale a entre 22 y 288 veces el ingreso anual y a 45 veces el patrimonio. Según la imputación, los fondos iban a empresas del grupo y los repagos provenían de ellas. Las prestatarias del segundo anillo que publica la prensa repiten el esquema con capitales aún más exiguos.",
+   "findings": [
+    {
+     "text_en": "Grupo Hendy: record total Gs. 252,521,261,384 against average monthly income of Gs. 73,000,000 in 2025 and negative equity at end-2024; three 2025 loans of up to ten years, sole signature.",
+     "text_es": "Grupo Hendy: total del acta Gs. 252.521.261.384 frente a un ingreso mensual promedio de Gs. 73.000.000 en 2025 y patrimonio neto negativo al cierre de 2024; tres créditos de 2025 de hasta diez años, a sola firma.",
+     "refs": [
+      "src:acta-p04",
+      "src:acta-p05",
+      "press:fact:0107",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Hendy's credit equals 288.3 times annual income (Gs. 252,521,261,384 / Gs. 876,000,000). Annual interest at printed rates is about Gs. 37.0 billion, 42 times annual income (USD part at Gs. 6,500).",
+     "text_es": "El crédito a Hendy equivale a 288,3 veces su ingreso anual (Gs. 252.521.261.384 / Gs. 876.000.000). Los intereses anuales a las tasas impresas rondan Gs. 37.000 millones, 42 veces el ingreso anual (parte en USD a Gs. 6.500).",
+     "refs": [
+      "src:acta-p04",
+      "src:acta-p05",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Grupo M: record total Gs. 237,105,585,238; liabilities Gs. 126,776 million (96.0% of assets); equity Gs. 5,327 million; income Gs. 10,576 million. The record itself computes long-term debt at 23.5 times equity and 11.85 times income.",
+     "text_es": "Grupo M: total del acta Gs. 237.105.585.238; pasivo Gs. 126.776 millones (96,0% del activo); patrimonio neto Gs. 5.327 millones; ingresos Gs. 10.576 millones. El propio acta calcula la deuda de largo plazo en 23,5 veces el patrimonio y 11,85 veces los ingresos.",
+     "refs": [
+      "src:acta-p07",
+      "src:acta-p08",
+      "press:fact:0331",
+      "press:fact:0332",
+      "press:fact:0333",
+      "press:fact:0334"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Grupo M's exposure at the bank equals 22.4 times income and 44.5 times equity, and 1.9 times the long-term debt shown in the statements the record analyses; interest on the three USD term loans alone (USD 1,830,608 a year) is 113% of income at Gs. 6,500.",
+     "text_es": "La exposición de Grupo M en el banco equivale a 22,4 veces sus ingresos y 44,5 veces su patrimonio, y a 1,9 veces la deuda de largo plazo del balance analizado en el acta; solo los intereses de los tres préstamos en USD (USD 1.830.608 al año) representan 113% de los ingresos a Gs. 6.500.",
+     "refs": [
+      "src:acta-p07",
+      "src:acta-p08",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "MOWI: record total Gs. 254,157,320,385; the record states the company lacked capacity to generate ordinary income. Press relaying the BCP file: debt 12.5 times equity, long-term debt 154 times 2025 revenue, 84% of assets intangible, four years of losses.",
+     "text_es": "MOWI: total del acta Gs. 254.157.320.385; el acta sostiene que la empresa no tenía capacidad de generación ordinaria de ingresos. Prensa que cita el expediente del BCP: deuda de 12,5 veces el patrimonio, deuda de largo plazo de 154 veces los ingresos de 2025, 84% del activo intangible y cuatro años de pérdidas.",
+     "refs": [
+      "src:acta-p03",
+      "src:acta-p04",
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "press:fact:0322",
+      "press:fact:0323"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "FRANEDE: registered debt Gs. 314,001,127,279; average monthly income Gs. 872,000,000 in 2025; a loss in 2024; terms of 7 to 10 years. The bank reported mortgages but the commitment letter was not enforceable and the bank later excluded it.",
+     "text_es": "FRANEDE: deuda registrada Gs. 314.001.127.279; ingreso mensual promedio de Gs. 872.000.000 en 2025; resultado negativo en 2024; plazos de 7 a 10 años. El banco informó garantías hipotecarias, pero la carta de compromiso no era oponible y luego fue excluida del cómputo.",
+     "refs": [
+      "src:acta-p12",
+      "src:acta-p13",
+      "src:acta-p14",
+      "press:fact:0314",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "FRANEDE's debt equals 30.0 times annualised 2025 income (Gs. 314,001,127,279 / Gs. 10,464,000,000). Total granted, USD 60.83 million plus Gs. 160 billion, is about 53 times that income at Gs. 6,500.",
+     "text_es": "La deuda de FRANEDE equivale a 30,0 veces su ingreso anualizado de 2025 (Gs. 314.001.127.279 / Gs. 10.464.000.000). El total otorgado, USD 60,83 millones más Gs. 160.000 millones, ronda 53 veces ese ingreso a Gs. 6.500.",
+     "refs": [
+      "src:acta-p12",
+      "src:acta-p13",
+      "press:fact:0314",
+      "src:acta-p07",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "TUIU (incorporated 28 Nov 2024) received its first loan, USD 10.05 million for ten years on sole signature, on 29 Aug 2025, the day after 50% of its shares changed hands. Outstanding per the record: USD 30,652,750 plus Gs. 87.1 billion. No income or equity figure is printed.",
+     "text_es": "TUIU (constituida el 28/11/2024) recibió su primer préstamo, USD 10,05 millones a diez años y a sola firma, el 29/08/2025, un día después del cambio de titularidad del 50% de sus acciones. Saldo vigente según el acta: USD 30.652.750 más Gs. 87.100 millones. El acta no trae ingresos ni patrimonio.",
+     "refs": [
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:event:0052",
+      "src:acta-p10",
+      "src:acta-p11"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "AIME (insurance broker): 30-day and 90-day bullet loans of Gs. 133,665 million, USD 6,815,000 and Gs. 64,923 million, all cancelled, followed by overdrafts; outstanding USD 7.23 million plus Gs. 52,364 million, all overdraft. The record says its debts were only at Ueno.",
+     "text_es": "AIME (corredora de seguros): préstamos a 30 y 90 días con pago al vencimiento por Gs. 133.665 millones, USD 6.815.000 y Gs. 64.923 millones, todos cancelados, seguidos de sobregiros; saldo vigente USD 7,23 millones más Gs. 52.364 millones, íntegramente en sobregiro. El acta indica que solo registraba deudas en Ueno.",
+     "refs": [
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "src:acta-p15"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Outstanding balance of the six from the record tables: USD 166,984,879 plus Gs. 395,521,558,926, about Gs. 1,480.9 billion (USD 227.8 million) at Gs. 6,500. The USD total matches the supervisor figure in the press (USD 166.98 million); the press guaraní figure (Gs. 343,157 million) equals this total less AIME's guaraní overdraft.",
+     "text_es": "Saldo vigente de las seis según las tablas del acta: USD 166.984.879 más Gs. 395.521.558.926, unos Gs. 1,48 billones (USD 227,8 millones) a Gs. 6.500. El total en USD coincide con la cifra del supervisor publicada (USD 166,98 millones); la cifra en guaraníes de la prensa (Gs. 343.157 millones) es este total menos el sobregiro en guaraníes de AIME.",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "press:fact:0103",
+      "press:fact:0104",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Revolving overdrafts are 37% of the six borrowers' outstanding balance (40% MOWI, 38% Hendy, 39% Grupo M, 53% TUIU, 100% AIME); every guaraní balance still outstanding is an overdraft.",
+     "text_es": "Los sobregiros representan 37% del saldo vigente de las seis prestatarias (40% MOWI, 38% Hendy, 39% Grupo M, 53% TUIU, 100% AIME); todo saldo vigente en guaraníes es sobregiro.",
+     "refs": [
+      "rec:loan:0006",
+      "rec:loan:0010",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0020",
+      "rec:loan:0022",
+      "rec:loan:0034",
+      "rec:loan:0035"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Pricing in the record: USD term loans at 7.5% to 8.5%, guaraní term loans at 12% to 12.5%, guaraní overdrafts at 24.15%, one USD overdraft at 10.51%. Benchmarks in the sources: the bank's own five-year senior notes at 6.70% (March 2026) and an ITTI-to-Vinanzas framework loan at 13% a year.",
+     "text_es": "Tasas en el acta: préstamos en USD de 7,5% a 8,5%, préstamos en guaraníes de 12% a 12,5%, sobregiros en guaraníes a 24,15% y un sobregiro en USD a 10,51%. Referencias disponibles en las fuentes: los bonos sénior a cinco años del propio banco a 6,70% (marzo de 2026) y un préstamo marco de ITTI a Vinanzas al 13% anual.",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "chrono:event:0032",
+      "press:flow:0053"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "An 8% ten-year unsecured USD loan earned about 130 basis points over the bank's own five-year wholesale cost; in my view that does not price the risk of a borrower with negative equity.",
+     "text_es": "Un préstamo en USD al 8% a diez años y sin garantía dejaba unos 130 puntos básicos sobre el costo de fondeo mayorista a cinco años del propio banco; a mi juicio ese margen no remunera el riesgo de un deudor con patrimonio negativo.",
+     "refs": [
+      "rec:loan:0008",
+      "chrono:event:0032"
+     ],
+     "kind": "opinion"
+    },
+    {
+     "text_en": "The record alleges that disbursements to all six were forwarded almost immediately to ITTI, REDISA, REDIPRO, Vinanzas, Kaitel or Grupo Vázquez, and that repayments were funded by those companies (examples: TUIU overdraft repaid 30 Jan 2026 with REDIPRO money from Vinanzas; Grupo M's first instalment on 29 Apr 2026 paid with ITTI money; the only Hendy loan with an amortisation repaid with REDIPRO funds originating at ITTI).",
+     "text_es": "El acta sostiene que los desembolsos a las seis fueron transferidos casi de inmediato a ITTI, REDISA, REDIPRO, Vinanzas, Kaitel o Grupo Vázquez, y que los repagos se hicieron con fondos de esas empresas (ejemplos: sobregiro de TUIU cancelado el 30/01/2026 con dinero de REDIPRO proveniente de Vinanzas; primera cuota de Grupo M del 29/04/2026 pagada con fondos de ITTI; el único préstamo de Hendy con amortización, pagado con fondos de REDIPRO originados en ITTI).",
+     "refs": [
+      "rec:flow:0001",
+      "rec:flow:0002",
+      "rec:flow:0003",
+      "rec:flow:0004",
+      "rec:flow:0005",
+      "rec:flow:0006",
+      "rec:flow:0007",
+      "rec:flow:0008",
+      "rec:flow:0009",
+      "rec:flow:0010",
+      "rec:flow:0011",
+      "rec:flow:0012",
+      "rec:flow:0013",
+      "rec:flow:0014",
+      "rec:flow:0015",
+      "rec:flow:0016",
+      "rec:flow:0017",
+      "rec:flow:0018",
+      "rec:flow:0019",
+      "rec:flow:0020",
+      "rec:flow:0021",
+      "rec:flow:0022",
+      "rec:flow:0023",
+      "rec:flow:0024",
+      "rec:flow:0025",
+      "rec:flow:0026",
+      "rec:flow:0027",
+      "rec:flow:0028",
+      "rec:flow:0029",
+      "rec:flow:0030",
+      "rec:flow:0031",
+      "rec:flow:0032",
+      "rec:flow:0033",
+      "rec:flow:0034",
+      "rec:flow:0035",
+      "rec:flow:0036",
+      "rec:flow:0037",
+      "rec:flow:0038",
+      "rec:flow:0039",
+      "rec:flow:0040",
+      "rec:event:0061",
+      "rec:event:0063"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "First loans sit within days of ownership changes: FRANEDE same day (30 Jun 2025), TUIU 1 day after, AIME 3 days after, MOWI 7 days after; Hendy and Grupo M were lent to 4 days before ITTI and Grupo Vázquez left the share register.",
+     "text_es": "Los primeros préstamos se dan a días de los cambios accionarios: FRANEDE el mismo día (30/06/2025), TUIU 1 día después, AIME 3 días después, MOWI 7 días después; a Hendy y Grupo M se les prestó 4 días antes de que ITTI y Grupo Vázquez dejaran de figurar como accionistas.",
+     "refs": [
+      "rec:event:0050",
+      "rec:event:0052",
+      "rec:event:0053",
+      "rec:event:0054",
+      "rec:event:0060",
+      "rec:loan:0001",
+      "rec:loan:0017",
+      "rec:loan:0023",
+      "rec:loan:0030"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "In 12 of the 39 record operations with amounts, principal equals a round sum plus exactly 0.5%, and three FRANEDE balances equal principal plus exactly 0.5%. Inference: a 0.5% up-front charge was financed inside the loan. No source states this.",
+     "text_es": "En 12 de las 39 operaciones del acta con importes, el capital equivale a una suma redonda más exactamente 0,5%, y tres saldos de FRANEDE equivalen al capital más exactamente 0,5%. Inferencia: un cargo inicial de 0,5% se financió dentro del propio préstamo. Ninguna fuente lo afirma.",
+     "refs": [
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0025",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:issue:0007"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Second ring, as relayed from the supervisor: GSR owed Gs. 453,828 million with paid-in capital of Gs. 100 million (4,538 times), on ten-year sole-signature terms; Nubicom owed Gs. 228,431 million with Gs. 200,000 paid in, and took a 180-day sole-signature loan of Gs. 417,075 million, of which Gs. 415,000 million was paid to ITTI.",
+     "text_es": "Segundo anillo, según lo atribuido al supervisor: GSR debía Gs. 453.828 millones con capital integrado de Gs. 100 millones (4.538 veces), a diez años y a sola firma; Nubicom debía Gs. 228.431 millones con Gs. 200.000 integrados y tomó un préstamo a 180 días, a sola firma, por Gs. 417.075 millones, de los cuales Gs. 415.000 millones se pagaron a ITTI.",
+     "refs": [
+      "press:fact:0001",
+      "press:fact:0002",
+      "press:fact:0047",
+      "press:fact:0097",
+      "press:loan:0032",
+      "press:loan:0045",
+      "press:flow:0091"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Other second-ring data: Sagas owed Ueno Gs. 268,363 million against Gs. 84.3 million elsewhere (3,183 times); Nuevo Mundo's budget rose from USD 5.16 million to USD 33 million without supporting quotes and its balance was Gs. 198,962 million; Galadriel received USD 15.07 million for 720 days with no project or risk analysis on file; Berilo's shareholder commitment was USD 3.8 million against USD 69 million of loans.",
+     "text_es": "Otros datos del segundo anillo: Sagas debía a Ueno Gs. 268.363 millones frente a Gs. 84,3 millones en otras entidades (3.183 veces); el presupuesto de Nuevo Mundo pasó de USD 5,16 millones a USD 33 millones sin cotizaciones de respaldo y su saldo era de Gs. 198.962 millones; Galadriel recibió USD 15,07 millones a 720 días sin proyecto ni análisis de riesgo en la carpeta; el compromiso de los accionistas de Berilo era de USD 3,8 millones frente a USD 69 millones de préstamos.",
+     "refs": [
+      "press:fact:0030",
+      "press:fact:0073",
+      "press:fact:0074",
+      "press:fact:0086",
+      "press:fact:0087",
+      "press:fact:0326",
+      "press:fact:0327",
+      "press:loan:0058"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "The five borrowers of 11-15 June 2026 (SATEC USD 20 million, HD Invest USD 35 million, Technoma USD 10 million, La Tropa Fletes USD 10 million, Factopar USD 6,841,000) have no terms in the record; La Tropa Fletes had capital of Gs. 250 million and system-wide deposits of Gs. 2,238 million.",
+     "text_es": "Las cinco prestatarias del 11 al 15 de junio de 2026 (SATEC USD 20 millones, HD Invest USD 35 millones, Technoma USD 10 millones, La Tropa Fletes USD 10 millones, Factopar USD 6.841.000) no tienen condiciones informadas en el acta; La Tropa Fletes tenía un capital de Gs. 250 millones y depósitos en todo el sistema por Gs. 2.238 millones.",
+     "refs": [
+      "rec:loan:0036",
+      "rec:loan:0037",
+      "rec:loan:0038",
+      "rec:loan:0039",
+      "rec:loan:0040",
+      "press:fact:0060",
+      "press:fact:0061"
+     ],
+     "kind": "fact"
+    }
+   ]
+  },
+  {
+   "id": "related_exposure",
+   "title_en": "Related-party and single-risk-unit exposure",
+   "title_es": "Exposición con vinculadas y unidad de riesgo",
+   "summary_en": "At 30 April 2026 three declared-related borrowers stood at 30% of effective equity against a 20% cap. Treating the six record borrowers as one unit gives about 60% (3.0 times the cap). De-listing would have split one breach into three exposures of about 10% each; the June 2026 sale cut reported related exposure by about Gs. 753 billion while total credit exposure rose by about Gs. 60 billion.",
+   "summary_es": "Al 30 de abril de 2026 tres prestatarias declaradas vinculadas sumaban 30% del patrimonio efectivo frente a un tope de 20%. Tratando a las seis prestatarias del acta como una sola unidad se llega a cerca de 60% (3,0 veces el tope). La desvinculación habría convertido un exceso en tres exposiciones de alrededor de 10% cada una; la venta de junio de 2026 redujo la exposición informada con vinculadas en unos Gs. 753.000 millones mientras la exposición crediticia total subió unos Gs. 60.000 millones.",
+   "findings": [
+    {
+     "text_en": "Record: the bank had classified MOWI, Grupo Hendy and Grupo M as related by common ownership; in October 2025 it asked to de-list them without supporting documents and kept lending from September 2025 to May 2026 without a formal reply; the Superintendency considers the de-linking merely documentary.",
+     "text_es": "Acta: el banco tenía clasificadas a MOWI, Grupo Hendy y Grupo M como vinculadas por propiedad; en octubre de 2025 pidió su baja sin remitir documentación y siguió otorgando créditos entre setiembre de 2025 y mayo de 2026 sin respuesta formal; la Superintendencia considera que la desvinculación es meramente documental.",
+     "refs": [
+      "src:acta-p02",
+      "rec:event:0055"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Press relaying the supervisor: combined exposure of the three of Gs. 743,784 million at 30 Apr 2026, 30% of effective equity, against a cap of Gs. 493,447 million; excess Gs. 250,337 million for more than ten consecutive days. The charges against the Superintendent cite 31.9%.",
+     "text_es": "Prensa que cita al supervisor: exposición conjunta de las tres por Gs. 743.784 millones al 30/04/2026, 30% del patrimonio efectivo, frente a un tope de Gs. 493.447 millones; exceso de Gs. 250.337 millones por más de diez días consecutivos. La imputación al Superintendente menciona 31,9%.",
+     "refs": [
+      "press:fact:0081",
+      "press:fact:0082",
+      "press:fact:0083",
+      "press:fact:0085",
+      "chrono:event:0034"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Six record borrowers together: about Gs. 1,480.9 billion at Gs. 6,500, which is 3.0 times the cap and 60% of effective equity (cap / 20% = Gs. 2,467 billion). The supervisor as relayed puts related exposure above USD 300 million, 73% of the USD 410 million effective equity printed in the same coverage.",
+     "text_es": "Las seis prestatarias del acta en conjunto: unos Gs. 1,48 billones a Gs. 6.500, es decir 3,0 veces el tope y 60% del patrimonio efectivo (tope / 20% = Gs. 2,467 billones). El supervisor, según la prensa, ubica la exposición con vinculadas por encima de USD 300 millones, 73% del patrimonio efectivo de USD 410 millones publicado en la misma cobertura.",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0007",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0010",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:loan:0015",
+      "rec:loan:0016",
+      "rec:loan:0017",
+      "rec:loan:0018",
+      "rec:loan:0019",
+      "rec:loan:0020",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:loan:0025",
+      "rec:loan:0026",
+      "rec:loan:0027",
+      "rec:loan:0028",
+      "rec:loan:0029",
+      "rec:loan:0030",
+      "rec:loan:0031",
+      "rec:loan:0032",
+      "rec:loan:0033",
+      "rec:loan:0034",
+      "rec:loan:0035",
+      "press:fact:0083",
+      "press:fact:0118",
+      "press:fact:0321",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "One unit of risk (Ley 861/96, arts. 46-47): debtors are aggregated when credit to one is presumed to benefit another or when repayment capacity depends on another. The record invokes this concept for Grupo M after describing proceeds passed in full to related companies.",
+     "text_es": "Una sola unidad de riesgo (Ley 861/96, arts. 46 y 47): los deudores se agregan cuando se presume que el crédito a uno beneficia a otro o cuando la capacidad de pago depende de otro. El acta invoca este concepto respecto de Grupo M luego de describir que los fondos pasaron íntegramente a empresas vinculadas.",
+     "refs": [
+      "src:acta-p07",
+      "src:acta-p08"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "If de-listed, the three would leave the shared 20% bucket: Gs. 254.2 billion, Gs. 252.5 billion and Gs. 237.1 billion are each about 10% of effective equity. One 30% breach becomes three exposures of about 10% without any change in risk.",
+     "text_es": "De prosperar la baja, las tres saldrían del cupo conjunto de 20%: Gs. 254.200 millones, Gs. 252.500 millones y Gs. 237.100 millones equivalen cada una a cerca de 10% del patrimonio efectivo. Un exceso de 30% se transforma en tres exposiciones de alrededor de 10% sin que cambie el riesgo.",
+     "refs": [
+      "src:acta-p03",
+      "src:acta-p04",
+      "src:acta-p07",
+      "press:fact:0083"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "On 15 June 2026 the nine term loans (USD 74,418,418.12) were sold; the same day REDISA and REDIPRO paid off the Hendy and MOWI overdrafts (Gs. 118,244 million and Gs. 109,668 million) and ITTI cleared Grupo M's USD overdraft of about USD 6.32 million. The BCP later said the excess was corrected on 15 June.",
+     "text_es": "El 15 de junio de 2026 se vendieron los nueve préstamos (USD 74.418.418,12); el mismo día REDISA y REDIPRO cancelaron los sobregiros de Hendy y MOWI (Gs. 118.244 millones y Gs. 109.668 millones) e ITTI canceló el sobregiro en USD de Grupo M por unos USD 6,32 millones. El BCP señaló luego que el exceso quedó corregido el 15 de junio.",
+     "refs": [
+      "rec:flow:0060",
+      "rec:flow:0055",
+      "press:loan:0029",
+      "press:loan:0030",
+      "press:flow:0055",
+      "press:flow:0056",
+      "press:flow:0057",
+      "press:flow:0058",
+      "chrono:event:0038"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Exposure removed on 11-15 June: about Gs. 752.7 billion. New loans to the funding companies: USD 81,841,000 plus Gs. 280.5 billion, about Gs. 812.5 billion. Net increase in the bank's credit exposure: about Gs. 59.7 billion (USD 9.2 million), all at Gs. 6,500.",
+     "text_es": "Exposición dada de baja entre el 11 y el 15 de junio: unos Gs. 752.700 millones. Préstamos nuevos a las empresas que aportaron los fondos: USD 81.841.000 más Gs. 280.500 millones, unos Gs. 812.500 millones. Aumento neto de la exposición crediticia del banco: cerca de Gs. 59.700 millones (USD 9,2 millones), todo a Gs. 6.500.",
+     "refs": [
+      "rec:event:0065",
+      "rec:flow:0060",
+      "press:loan:0002",
+      "press:loan:0004",
+      "press:loan:0007",
+      "press:loan:0008",
+      "press:loan:0029",
+      "press:loan:0030",
+      "press:loan:0034",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "The nine loans were sold as client category 1a at 103.8% of original principal (USD 74,418,417 against USD 71,712,884), which matches principal plus accrued contractual interest for six of the nine within 0.1%. No loss was recognised and about USD 2.7 million of interest was collected.",
+     "text_es": "Los nueve créditos se vendieron con categoría de cliente 1a al 103,8% del capital original (USD 74.418.417 frente a USD 71.712.884), lo que coincide con capital más intereses devengados a la tasa pactada en seis de los nueve, con diferencia menor a 0,1%. No se reconoció pérdida alguna y se cobraron unos USD 2,7 millones de intereses.",
+     "refs": [
+      "rec:flow:0062",
+      "rec:flow:0063",
+      "rec:flow:0064",
+      "rec:flow:0065",
+      "rec:flow:0066",
+      "rec:flow:0067",
+      "rec:flow:0068",
+      "rec:flow:0069",
+      "rec:flow:0070",
+      "rec:loan:0001",
+      "rec:loan:0002",
+      "rec:loan:0004",
+      "rec:loan:0008",
+      "rec:loan:0009",
+      "rec:loan:0011",
+      "rec:loan:0012",
+      "rec:loan:0013",
+      "rec:loan:0014",
+      "rec:issue:0004"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "The 20% cap is a BCP regulatory limit as reported by the press and FIX; the statutory 20% of art. 59 of Ley 861/96 was repealed in 2016 and the current BCP resolution was not retrieved for this project.",
+     "text_es": "El tope de 20% es un límite reglamentario del BCP según la prensa y FIX; el 20% legal del art. 59 de la Ley 861/96 fue derogado en 2016 y la resolución vigente del BCP no fue obtenida para este proyecto.",
+     "refs": [
+      "press:fact:0083",
+      "press:fact:0296"
+     ],
+     "kind": "fact"
+    }
+   ]
+  },
+  {
+   "id": "capital",
+   "title_en": "Capital and solvency",
+   "title_es": "Capital y solvencia",
+   "summary_en": "The fall from 13.85% to 5.56% is roughly what the Gs. 1,622 billion provisions shortfall alone produces (5.2% on my arithmetic). Book equity at December 2025 was almost entirely matched by a deferred-expense trust (99.4%). If the REDISA/REDIPRO placements were also deducted the ratio would be about zero. Rey's USD 900 million, if accurate, is 2.8 times book equity; a 25% loss on it is enough to reach the resolution trigger.",
+   "summary_es": "La caída de 13,85% a 5,56% es aproximadamente lo que produce por sí solo el déficit de previsiones de Gs. 1,62 billones (5,2% según mi cálculo). El patrimonio contable a diciembre de 2025 estaba casi íntegramente calzado con un fideicomiso de gastos diferidos (99,4%). Si además se dedujeran las colocaciones en REDISA y REDIPRO, el índice quedaría en torno a cero. Los USD 900 millones de Rey, de ser exactos, equivalen a 2,8 veces el patrimonio contable; una pérdida de 25% sobre ese monto basta para llegar a la causal de resolución.",
+   "findings": [
+    {
+     "text_en": "Reported ratio 13.85% against a 12% minimum; 5.56% after supervisory adjustments; provisions shortfall Gs. 1,621,853,458,972. The BCP ordered resolution on 2 Nov 2026 for solvency below 50% of the legal minimum.",
+     "text_es": "Índice informado de 13,85% frente a un mínimo de 12%; 5,56% tras los ajustes del supervisor; déficit de previsiones de Gs. 1.621.853.458.972. El BCP dispuso la resolución el 02/11/2026 por solvencia inferior al 50% del mínimo legal.",
+     "refs": [
+      "chrono:event:0070",
+      "rec:event:0067",
+      "src:acta-p01"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "With effective equity of Gs. 2,467 billion, 13.85% implies risk-weighted assets of about Gs. 17,814 billion. Deducting the provisions shortfall from capital and RWA gives 5.2% (4.7% on unchanged RWA; 5.3% with equity of Gs. 2,500 billion). The published 5.56% is therefore close to a provisions-only adjustment.",
+     "text_es": "Con un patrimonio efectivo de Gs. 2,467 billones, el 13,85% implica activos ponderados por riesgo de unos Gs. 17,8 billones. Deduciendo el déficit de previsiones del capital y de los APR se obtiene 5,2% (4,7% con APR sin cambios; 5,3% con patrimonio de Gs. 2,5 billones). El 5,56% publicado se aproxima entonces a un ajuste solo por previsiones.",
+     "refs": [
+      "press:fact:0083",
+      "press:fact:0084",
+      "press:fact:0094",
+      "chrono:event:0070"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "BCP board minutes of 19 June 2026, as reported: a contribution of about Gs. 876,300 million not deducted (placements in REDISA and REDIPRO, Gs. 876,640 million per a director's memo), non-enabled expenses in the Gs. 2.5 trillion merger trust, and misclassification of a Gs. 2.6 trillion past-due portfolio.",
+     "text_es": "Acta del Directorio del BCP del 19/06/2026, según la prensa: un aporte de unos Gs. 876.300 millones no deducido (colocaciones en REDISA y REDIPRO, Gs. 876.640 millones según memorando de una directora), gastos no habilitados en el fideicomiso de fusión de Gs. 2,5 billones y clasificación incorrecta de una cartera vencida de Gs. 2,6 billones.",
+     "refs": [
+      "press:event:0026",
+      "press:event:0041",
+      "chrono:event:0042",
+      "press:fact:0123",
+      "press:fact:0125",
+      "press:fact:0126"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Scenario on unchanged RWA: after the provisions shortfall capital is about Gs. 845 billion (4.7%); deducting the REDISA/REDIPRO placements gives about -Gs. 31 billion (-0.2%); deducting the merger trust as well gives about -Gs. 2,137 billion (-12.0%). These are scenarios, not supervisory findings.",
+     "text_es": "Escenario con APR sin cambios: tras el déficit de previsiones el capital ronda Gs. 845.000 millones (4,7%); deduciendo las colocaciones en REDISA y REDIPRO queda en unos -Gs. 31.000 millones (-0,2%); deduciendo además el fideicomiso de fusión, en unos -Gs. 2,137 billones (-12,0%). Son escenarios, no determinaciones del supervisor.",
+     "refs": [
+      "press:fact:0083",
+      "press:fact:0126",
+      "press:fact:0265",
+      "chrono:event:0070"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "At December 2025: book equity Gs. 2,117,665 million; merger-expenses trust Gs. 2,105,744 million (managed by Zeta Banco, to be amortised by 2035); other assets Gs. 2,514,476 million including an undisclosed amount of deferred losses of the absorbed bank; NPL ratio 0.44% against 2.10% for the system.",
+     "text_es": "A diciembre de 2025: patrimonio contable de Gs. 2.117.665 millones; fideicomiso de gastos de fusión por Gs. 2.105.744 millones (administrado por Zeta Banco, a amortizar hasta 2035); otros activos por Gs. 2.514.476 millones, que incluyen un monto no revelado de pérdidas diferidas de la entidad absorbida; morosidad de 0,44% frente a 2,10% del sistema.",
+     "refs": [
+      "press:fact:0254",
+      "press:fact:0262",
+      "press:fact:0265",
+      "press:fact:0266"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "The trust equals 99.4% of book equity; equity less the trust is Gs. 11,921 million (0.06% of assets). Trust plus other assets are 2.2 times equity. The Gs. 5.1 trillion of facilities authorised on 27 May 2024 were 3.5 times end-2024 equity. The provisions shortfall equals 5.2 years of 2025 profit and 14.6% of net loans.",
+     "text_es": "El fideicomiso equivale al 99,4% del patrimonio contable; el patrimonio menos el fideicomiso es de Gs. 11.921 millones (0,06% del activo). Fideicomiso más otros activos representan 2,2 veces el patrimonio. Las facilidades por Gs. 5,1 billones autorizadas el 27/05/2024 equivalían a 3,5 veces el patrimonio de cierre de 2024. El déficit de previsiones equivale a 5,2 años de la utilidad de 2025 y al 14,6% de la cartera neta.",
+     "refs": [
+      "press:fact:0246",
+      "press:fact:0248",
+      "press:fact:0253",
+      "press:fact:0254",
+      "press:fact:0258",
+      "press:fact:0265",
+      "press:fact:0266",
+      "chrono:event:0017",
+      "chrono:event:0070"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Rey states that the business model required deferring spending on technology, products and cashback; that this was first done through asset sales between the bank and related companies (real estate, software) and then moved into loans to related and unrelated firms worth about USD 900 million (about USD 300 million cashback, USD 300 million technology and other); and that the 2024 feasibility plan with its facilities was approved by the BCP. These are his claims.",
+     "text_es": "Rey afirma que el modelo de negocios exigía diferir gastos de tecnología, productos y reintegros; que primero se hizo mediante compraventa de activos entre el banco y las vinculadas (inmuebles, software) y que luego se trasladó a créditos a vinculadas y no vinculadas por unos USD 900 millones (unos USD 300 millones de reintegros y USD 300 millones de tecnología y otros); y que el plan de factibilidad de 2024, con sus facilidades, fue aprobado por el BCP. Son sus afirmaciones.",
+     "refs": [
+      "rec:flow:0074",
+      "rec:flow:0075",
+      "rec:event:0044",
+      "src:acta-p20",
+      "src:acta-p22"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "If accurate, USD 900 million is Gs. 5,850 billion at Gs. 6,500: 2.8 times book equity and 53% of end-2025 net loans. A loss of 25% on that amount brings the ratio to 6%; 42% exhausts effective equity. The supervisor's shortfall is 28% of Rey's figure.",
+     "text_es": "De ser exactos, USD 900 millones son Gs. 5,85 billones a Gs. 6.500: 2,8 veces el patrimonio contable y 53% de la cartera neta de cierre de 2025. Una pérdida de 25% sobre ese monto lleva el índice a 6%; con 42% se agota el patrimonio efectivo. El déficit del supervisor equivale a 28% de la cifra de Rey.",
+     "refs": [
+      "rec:flow:0075",
+      "src:acta-p07",
+      "chrono:event:0070",
+      "press:fact:0083",
+      "press:fact:0248",
+      "press:fact:0254"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Order-of-magnitude check: the unofficial debtor list (excluding IPS and Valores Casa de Bolsa) sums to Gs. 4,938.8 billion, about USD 760 million; adding the six record borrowers gives about USD 988 million, with overlap. Rey's figure is not out of scale with independently reported exposures.",
+     "text_es": "Control de orden de magnitud: el listado oficioso de deudores (sin IPS ni Valores Casa de Bolsa) suma Gs. 4,94 billones, unos USD 760 millones; sumando las seis prestatarias del acta se llega a unos USD 988 millones, con superposiciones. La cifra de Rey no está fuera de escala respecto de exposiciones publicadas por otras vías.",
+     "refs": [
+      "press:fact:0001",
+      "press:fact:0002",
+      "press:fact:0003",
+      "press:fact:0004",
+      "press:fact:0005",
+      "press:fact:0006",
+      "press:fact:0007",
+      "press:fact:0008",
+      "press:fact:0009",
+      "press:fact:0010",
+      "press:fact:0011",
+      "press:fact:0012",
+      "press:fact:0013",
+      "press:fact:0014",
+      "press:fact:0015",
+      "press:fact:0016",
+      "press:fact:0017",
+      "press:fact:0018",
+      "press:fact:0019",
+      "press:fact:0020",
+      "press:fact:0021",
+      "rec:flow:0075",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Rey says (hearsay through a colleague) that about USD 17 million and Gs. 17,000 million in cash entered the bank, was booked through a Grupo Vázquez company as collections of unpaid loans and used to buy certificates of deposit that were to capitalise the bank in 2026. At Gs. 6,500 that is Gs. 127.5 billion, about 5% of effective equity.",
+     "text_es": "Rey dice (por referencia de un colega) que ingresaron al banco en efectivo unos USD 17 millones y Gs. 17.000 millones, contabilizados a través de una empresa del Grupo Vázquez como cobro de créditos impagos y aplicados a la compra de CDA con los que se pretendía capitalizar el banco en 2026. A Gs. 6.500 son Gs. 127.500 millones, cerca de 5% del patrimonio efectivo.",
+     "refs": [
+      "rec:flow:0071",
+      "rec:flow:0072",
+      "rec:flow:0073",
+      "rec:event:0047",
+      "src:acta-p22"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "A deferred charge authorised by the regulator is still not loss-absorbing: it is spending already made. Regulatory permission affects legality and the reported ratio, not the economic capital available to depositors.",
+     "text_es": "Un cargo diferido autorizado por el regulador sigue sin absorber pérdidas: es gasto ya realizado. La autorización incide en la legalidad y en el índice informado, no en el capital económico disponible para los depositantes.",
+     "refs": [
+      "chrono:event:0017",
+      "press:fact:0265"
+     ],
+     "kind": "opinion"
+    }
+   ]
+  },
+  {
+   "id": "vinanzas",
+   "title_en": "The Vinanzas transaction as a prudential matter",
+   "title_es": "La operación con Vinanzas desde la óptica prudencial",
+   "summary_en": "The bank documented a cash sale of nine loans for USD 74.4 million to a related company that held about USD 93,628 the day before. In the preceding four days the bank lent USD 81.8 million to five companies whose funds reached the buyer. Risk did not leave the bank; it was relabelled and enlarged.",
+   "summary_es": "El banco instrumentó como venta al contado la cesión de nueve créditos por USD 74,4 millones a una vinculada que el día anterior tenía unos USD 93.628. En los cuatro días previos el banco prestó USD 81,8 millones a cinco empresas cuyos fondos llegaron a la compradora. El riesgo no salió del banco: cambió de nombre y aumentó.",
+   "findings": [
+    {
+     "text_en": "Record: sale on 15 June 2026 of nine loans of MOWI, Grupo Hendy and Grupo M to Vinanzas (related, GPV-1535) for USD 74,418,418.12, documented as a cash sale; the Superintendency found Vinanzas lacked genuine own funds on 14 June; the record states the applicable rule prohibits financed portfolio sales to related parties.",
+     "text_es": "Acta: venta el 15/06/2026 de nueve créditos de MOWI, Grupo Hendy y Grupo M a Vinanzas (vinculada, GPV-1535) por USD 74.418.418,12, instrumentada como venta al contado; la Superintendencia constató que Vinanzas no contaba con recursos genuinos propios al 14 de junio; el acta señala que la normativa prohíbe la venta financiada de cartera a vinculadas.",
+     "refs": [
+      "src:acta-p17",
+      "src:acta-p18",
+      "src:acta-p19",
+      "rec:event:0064",
+      "rec:event:0065",
+      "rec:flow:0060",
+      "rec:flow:0061"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Record diagram: Ueno lent USD 20 million to SATEC and USD 35 million to HD Invest (15 June) and USD 10 million each to Technoma and La Tropa Fletes (11 June) and USD 6,841,000 to Factopar (15 June); SATEC and HD Invest sent their loans to Vinanzas; the others bought bonds of ITTI, Grupo Vázquez, Kasas and Model, whose issuers funded Vinanzas.",
+     "text_es": "Diagrama del acta: Ueno prestó USD 20 millones a SATEC y USD 35 millones a HD Invest (15 de junio), USD 10 millones a Technoma y a La Tropa Fletes (11 de junio) y USD 6.841.000 a Factopar (15 de junio); SATEC y HD Invest remitieron sus préstamos a Vinanzas; las demás compraron bonos de ITTI, Grupo Vázquez, Kasas y Model, cuyas emisoras fondearon a Vinanzas.",
+     "refs": [
+      "rec:loan:0036",
+      "rec:loan:0037",
+      "rec:loan:0038",
+      "rec:loan:0039",
+      "rec:loan:0040",
+      "rec:flow:0041",
+      "rec:flow:0042",
+      "rec:flow:0043",
+      "rec:flow:0044",
+      "rec:flow:0045",
+      "rec:flow:0046",
+      "rec:flow:0047",
+      "rec:flow:0048",
+      "rec:flow:0049",
+      "rec:flow:0050",
+      "rec:flow:0051",
+      "rec:flow:0052",
+      "rec:flow:0053",
+      "rec:flow:0054",
+      "rec:flow:0055",
+      "rec:flow:0056",
+      "rec:flow:0057",
+      "rec:flow:0058",
+      "rec:flow:0059"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Vinanzas's balance the day before (USD 93,628) was 0.13% of the price; it received USD 76,061,604.13 on the day. The bank's five USD loans (USD 81,841,000) were 110% of the price; USD 55 million (74% of the price) went directly from SATEC and HD Invest.",
+     "text_es": "El saldo de Vinanzas el día previo (USD 93.628) equivalía al 0,13% del precio; ese día recibió USD 76.061.604,13. Los cinco préstamos en USD del banco (USD 81.841.000) representaban 110% del precio; USD 55 millones (74% del precio) llegaron directamente de SATEC y HD Invest.",
+     "refs": [
+      "rec:event:0064",
+      "rec:event:0065",
+      "rec:flow:0046",
+      "rec:flow:0047",
+      "rec:flow:0061",
+      "press:fact:0037"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Before: USD 71.7 million of original principal on nine category-1a loans to three related borrowers. After: USD 74.4 million booked as cash, USD 81.8 million (plus guaraní loans) of new sole-signature exposure to five companies whose repayment depends on Vinanzas collecting from the same three borrowers.",
+     "text_es": "Antes: USD 71,7 millones de capital original en nueve créditos categoría 1a a tres vinculadas. Después: USD 74,4 millones contabilizados como efectivo y USD 81,8 millones (más préstamos en guaraníes) de nueva exposición a sola firma con cinco empresas cuyo repago depende de que Vinanzas cobre a las mismas tres deudoras.",
+     "refs": [
+      "rec:loan:0036",
+      "rec:loan:0037",
+      "rec:loan:0038",
+      "rec:loan:0039",
+      "rec:loan:0040",
+      "rec:flow:0062",
+      "rec:flow:0063",
+      "rec:flow:0064",
+      "rec:flow:0065",
+      "rec:flow:0066",
+      "rec:flow:0067",
+      "rec:flow:0068",
+      "rec:flow:0069",
+      "rec:flow:0070"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "A sale funded by the seller to a buyer without resources does not transfer risk; in substance the asset should have stayed on the balance sheet with its related-party classification and provisioning.",
+     "text_es": "Una venta financiada por el propio vendedor a un comprador sin recursos no transfiere el riesgo; en sustancia el activo debió permanecer en el balance con su clasificación de vinculada y sus previsiones.",
+     "refs": [
+      "src:acta-p19",
+      "rec:event:0064"
+     ],
+     "kind": "opinion"
+    },
+    {
+     "text_en": "What an examiner needed: the buyer's account statements for 1-15 June; the bank's disbursements of the preceding week matched to credits at the buyer; proof of the buyer's own or third-party funds; the credit files of the five new borrowers; the broker's trades of 11-15 June; a valuation supporting par plus interest. The supervisor's reports of 10 July, 28 July and 5 August 2026 did establish the circuit.",
+     "text_es": "Lo que un inspector necesitaba: extractos de la compradora del 1 al 15 de junio; los desembolsos del banco de la semana previa cruzados con las acreditaciones en la compradora; prueba de fondos propios o de terceros; las carpetas de las cinco nuevas prestatarias; las operaciones de la casa de bolsa del 11 al 15 de junio; una valuación que justifique el precio a la par más intereses. Los informes del supervisor del 10 y 28 de julio y del 5 de agosto de 2026 reconstruyeron el circuito.",
+     "refs": [
+      "press:event:0008",
+      "press:event:0009",
+      "press:event:0010"
+     ],
+     "kind": "opinion"
+    }
+   ]
+  },
+  {
+   "id": "group_dependence",
+   "title_en": "Group dependence",
+   "title_es": "Dependencia del grupo",
+   "summary_en": "ITTI drew about 59% of revenue from related parties and is the main alleged recipient of loan proceeds. The holding's income was half valuation gains, its dividends covered 1.1% of financial debt and its stake in the bank's parent was carried at 147% of its equity. Recoverability of the bank's loans and the value of group bonds depend on each other.",
+   "summary_es": "ITTI obtenía cerca de 59% de sus ingresos de partes relacionadas y es, según la imputación, la principal receptora de los fondos de los préstamos. Los ingresos del holding eran en su mitad resultados por valuación, sus dividendos cubrían 1,1% de la deuda financiera y su participación en la matriz del banco figuraba por 147% de su patrimonio. La recuperabilidad de los créditos del banco y el valor de los bonos del grupo dependen mutuamente.",
+   "findings": [
+    {
+     "text_en": "ITTI 2025 (standalone, rating report): revenue Gs. 1,825,988 million (Gs. 1,012,487 million in 2024), EBITDA Gs. 418,812 million, equity Gs. 460,276 million, liabilities Gs. 1,793,370 million, intercompany sundry debtors Gs. 341,330 million (Gs. 163,103 million in 2024). FIX: about 59% of revenue (USD 168 million) from related parties.",
+     "text_es": "ITTI 2025 (individual, informe de calificación): ingresos por Gs. 1.825.988 millones (Gs. 1.012.487 millones en 2024), EBITDA de Gs. 418.812 millones, patrimonio de Gs. 460.276 millones, pasivo de Gs. 1.793.370 millones, deudores varios intercompañía por Gs. 341.330 millones (Gs. 163.103 millones en 2024). FIX: cerca de 59% de los ingresos (USD 168 millones) proviene de partes relacionadas.",
+     "refs": [
+      "press:fact:0178",
+      "press:fact:0179",
+      "press:fact:0183",
+      "press:fact:0189",
+      "press:fact:0191",
+      "press:fact:0198",
+      "press:fact:0199",
+      "press:fact:0299"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "ITTI revenue grew 80% in 2025; liabilities are 3.9 times equity; intercompany receivables are 74% of equity. One Nubicom payment of Gs. 415,000 million in July 2026, funded by a Ueno loan, equals 23% of ITTI's 2025 revenue.",
+     "text_es": "Los ingresos de ITTI crecieron 80% en 2025; el pasivo es 3,9 veces el patrimonio; las cuentas intercompañía equivalen al 74% del patrimonio. Un solo pago de Nubicom por Gs. 415.000 millones en julio de 2026, financiado con un préstamo de Ueno, equivale al 23% de los ingresos de ITTI de 2025.",
+     "refs": [
+      "press:fact:0178",
+      "press:fact:0179",
+      "press:fact:0189",
+      "press:fact:0191",
+      "press:fact:0199",
+      "press:flow:0091",
+      "press:loan:0045"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Grupo Vázquez 2025 (individual): revenue Gs. 769,073 million including Gs. 379,256 million of valuation of investments; dividends received Gs. 12,116 million; financial debt Gs. 1,067,176 million; equity Gs. 2,103,239 million; stake in U Holdings carried at Gs. 3,083,405 million; FIX individual EBITDA USD 27 million, leverage 9.5 times.",
+     "text_es": "Grupo Vázquez 2025 (individual): ingresos por Gs. 769.073 millones, incluidos Gs. 379.256 millones de valuación de inversiones; dividendos cobrados por Gs. 12.116 millones; deuda financiera de Gs. 1.067.176 millones; patrimonio de Gs. 2.103.239 millones; participación en U Holdings contabilizada en Gs. 3.083.405 millones; FIX: EBITDA individual de USD 27 millones y apalancamiento de 9,5 veces.",
+     "refs": [
+      "press:fact:0128",
+      "press:fact:0138",
+      "press:fact:0140",
+      "press:fact:0156",
+      "press:fact:0157",
+      "press:fact:0158",
+      "press:fact:0289"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Valuation gains were 49% of the holding's 2025 revenue (70% in 2024); dividends were 1.6% of revenue and 1.1% of financial debt; the U Holdings stake is 67% of assets and 147% of equity, so writing it to zero leaves equity of about -Gs. 980 billion.",
+     "text_es": "Los resultados por valuación fueron 49% de los ingresos del holding en 2025 (70% en 2024); los dividendos, 1,6% de los ingresos y 1,1% de la deuda financiera; la participación en U Holdings representa 67% del activo y 147% del patrimonio, de modo que llevarla a cero deja un patrimonio de unos -Gs. 980.000 millones.",
+     "refs": [
+      "press:fact:0127",
+      "press:fact:0128",
+      "press:fact:0134",
+      "press:fact:0138",
+      "press:fact:0140",
+      "press:fact:0156",
+      "press:fact:0157",
+      "press:fact:0158"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "At June 2026 (FIX, as relayed): Grupo Vázquez debt excluding the bank USD 341 million, of which bonds USD 204 million, short-term maturities USD 54 million, cash about USD 71 million; ITTI debt USD 66 million, bonds USD 40 million, short-term maturities USD 22 million, cash about USD 35 million. Both were cut to Cpy on 3 Nov 2026; bond interest fell due from 19 Nov.",
+     "text_es": "A junio de 2026 (FIX, según la prensa): deuda de Grupo Vázquez sin el banco USD 341 millones, de los cuales USD 204 millones en bonos, vencimientos de corto plazo USD 54 millones, caja de unos USD 71 millones; deuda de ITTI USD 66 millones, bonos USD 40 millones, vencimientos de corto plazo USD 22 millones, caja de unos USD 35 millones. Ambas bajaron a Cpy el 03/11/2026; los intereses de bonos vencen desde el 19 de noviembre.",
+     "refs": [
+      "press:fact:0302",
+      "press:fact:0303",
+      "press:fact:0304",
+      "press:fact:0305",
+      "press:fact:0309",
+      "press:fact:0310",
+      "press:fact:0311",
+      "press:fact:0312",
+      "chrono:event:0087",
+      "chrono:event:0088",
+      "press:event:0057"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "About USD 26.8 million of bank loans of 11-15 June 2026 (Technoma, La Tropa Fletes, Factopar) financed purchases of bonds of ITTI, Grupo Vázquez, Kasas and Model, partly through Ueno Casa de Bolsa.",
+     "text_es": "Unos USD 26,8 millones de préstamos del banco del 11 al 15 de junio de 2026 (Technoma, La Tropa Fletes, Factopar) financiaron compras de bonos de ITTI, Grupo Vázquez, Kasas y Model, en parte a través de Ueno Casa de Bolsa.",
+     "refs": [
+      "rec:loan:0038",
+      "rec:loan:0039",
+      "rec:loan:0040",
+      "rec:flow:0048",
+      "rec:flow:0049",
+      "rec:flow:0050",
+      "rec:flow:0051",
+      "rec:flow:0052",
+      "rec:flow:0053",
+      "press:fact:0062"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Funds: redemptions were suspended in five Cadiem funds holding instruments of the bank and two group companies, with bank instruments valued at zero during the resolution; Ueno AFPISA's two funds stayed suspended (about 30,000 investors and USD 46 million per an investors' group).",
+     "text_es": "Fondos: se suspendieron los rescates en cinco fondos de Cadiem con instrumentos del banco y de dos empresas del grupo, valuándose en cero los instrumentos del banco durante la resolución; los dos fondos de Ueno AFPISA siguieron suspendidos (unos 30.000 inversores y USD 46 millones según un grupo de afectados).",
+     "refs": [
+      "chrono:event:0114",
+      "chrono:event:0140",
+      "chrono:event:0167"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "If bank loans to shells financed payments to ITTI, part of ITTI's reported revenue and part of the holding's valuation gains were supported by the bank's own lending; the rating reports of March to July 2026 would then have rated a closed loop.",
+     "text_es": "Si los préstamos del banco a sociedades sin actividad financiaron pagos a ITTI, parte de los ingresos informados de ITTI y parte de las ganancias por valuación del holding se sostenían con el crédito del propio banco; los informes de calificación de marzo a julio de 2026 habrían evaluado entonces un circuito cerrado.",
+     "refs": [
+      "press:event:0047",
+      "press:event:0048",
+      "press:event:0052",
+      "press:event:0054",
+      "rec:flow:0074"
+     ],
+     "kind": "opinion"
+    }
+   ]
+  },
+  {
+   "id": "supervisory_flags",
+   "title_en": "Supervisory red flags and when they were visible",
+   "title_es": "Señales de alerta para la supervisión y cuándo fueron visibles",
+   "summary_en": "The limit breach was formally known by late April 2026 (187 days before resolution, per the charges), capital-quality issues were minuted on 19 June (136 days), and the indirect financing was established on 5 August (89 days). The supervisor's own reports escalated quickly after the June sale, but loans of the same pattern were still granted in July 2026.",
+   "summary_es": "El exceso de límites se conoció formalmente a fines de abril de 2026 (187 días antes de la resolución, según la imputación), las observaciones sobre la calidad del capital constan en acta del 19 de junio (136 días) y el financiamiento indirecto quedó determinado el 5 de agosto (89 días). Los informes del propio supervisor escalaron con rapidez tras la venta de junio, pero en julio de 2026 todavía se otorgaron créditos con el mismo patrón.",
+   "findings": [
+    {
+     "text_en": "27 May 2024: BCP Resolution 32 authorises two merger facilities totalling Gs. 5.1 trillion (expenses trust Gs. 2.5 trillion, past-due portfolio facility Gs. 2.6 trillion). 13 Mar 2025: addendum of Gs. 155,698 million. 29 Aug 2025: Superintendency report notes the past-due portfolio was not adequately separated in the accounts.",
+     "text_es": "27/05/2024: la Resolución 32 del BCP autoriza dos facilidades de fusión por Gs. 5,1 billones (fideicomiso de gastos por Gs. 2,5 billones y facilidad de cartera vencida por Gs. 2,6 billones). 13/03/2025: adenda de Gs. 155.698 millones. 29/08/2025: informe de la Superintendencia señala que la cartera vencida no estaba adecuadamente separada en la contabilidad.",
+     "refs": [
+      "chrono:event:0017",
+      "chrono:event:0024",
+      "chrono:event:0026"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "October 2025: de-listing request without documents. The record says there was no formal reply; one outlet says the regulator refused the request for MOWI (Nota SG 298/2025); documents were sent only in May 2026.",
+     "text_es": "Octubre de 2025: pedido de baja de vinculadas sin documentación. El acta dice que no hubo respuesta formal; un medio afirma que el regulador rechazó el pedido respecto de MOWI (Nota SG 298/2025); la documentación recién se remitió en mayo de 2026.",
+     "refs": [
+      "rec:event:0055",
+      "press:event:0004",
+      "press:event:0046"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "29-30 April 2026: exposure of the three at 30% to 31.9% of effective equity against 20%, for more than ten consecutive days; the charges say the Superintendent was formally informed on 29 April and did not require a regularisation plan (allegation).",
+     "text_es": "29 y 30 de abril de 2026: exposición de las tres de 30% a 31,9% del patrimonio efectivo frente a 20%, por más de diez días consecutivos; la imputación sostiene que el Superintendente fue informado formalmente el 29 de abril y no exigió un plan de regularización (afirmación de la Fiscalía).",
+     "refs": [
+      "chrono:event:0034",
+      "press:fact:0081",
+      "press:fact:0082",
+      "press:fact:0085"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "5 June 2026: Superintendency confirms relatedness and orders recalculation. 8 June: report 006/2026. 15 June: sale to Vinanzas. 19 June: BCP board minute 27. 29 June: director's memo asking for exhaustive review. 10 July: report 007/2026 and supervision manager's memo recommending rejection of the sale and a regularisation plan; he was reassigned the same day. 28 July: report 010/2026. 5 August: findings report 011/2026. 24 September: Resolution 42 opens proceedings. October: note ordering reclassification to category 3.",
+     "text_es": "05/06/2026: la Superintendencia confirma la vinculación y ordena recalcular. 08/06: informe 006/2026. 15/06: venta a Vinanzas. 19/06: Acta 27 del Directorio del BCP. 29/06: memorando de una directora que pide control exhaustivo. 10/07: informe 007/2026 y memorando del gerente de supervisión que recomienda rechazar la venta y exigir un plan de regularización; el mismo día fue trasladado. 28/07: informe 010/2026. 05/08: informe de hallazgos 011/2026. 24/09: la Resolución 42 abre sumario. Octubre: nota que ordena reclasificar a categoría 3.",
+     "refs": [
+      "press:event:0005",
+      "press:event:0006",
+      "rec:event:0065",
+      "press:event:0026",
+      "press:event:0041",
+      "press:event:0008",
+      "press:event:0024",
+      "press:event:0009",
+      "press:event:0010",
+      "press:event:0011",
+      "press:event:0012",
+      "chrono:event:0046"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Days before the resolution of 2 Nov 2026: merger facilities 889; August 2025 report 430; formal knowledge of the breach 187; 19 June minute 136; 10 July report 115; findings report 89. From the sale to the findings report: 51 days.",
+     "text_es": "Días previos a la resolución del 02/11/2026: facilidades de fusión 889; informe de agosto de 2025, 430; conocimiento formal del exceso, 187; acta del 19 de junio, 136; informe del 10 de julio, 115; informe de hallazgos, 89. De la venta al informe de hallazgos: 51 días.",
+     "refs": [
+      "chrono:event:0017",
+      "chrono:event:0026",
+      "chrono:event:0034",
+      "press:event:0026",
+      "press:event:0008",
+      "press:event:0010",
+      "rec:event:0065",
+      "rec:event:0067"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "After reports 006 and 007: Nubicom received Gs. 417,075 million for 180 days on sole signature on 1 July 2026 and Galadriel USD 15.07 million for 720 days on 31 July 2026, per the press relaying the BCP.",
+     "text_es": "Después de los informes 006 y 007: Nubicom recibió Gs. 417.075 millones a 180 días y a sola firma el 01/07/2026 y Galadriel USD 15,07 millones a 720 días el 31/07/2026, según prensa que cita al BCP.",
+     "refs": [
+      "press:loan:0045",
+      "press:loan:0058",
+      "press:event:0006",
+      "press:event:0008"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "In the same period outside parties passed the same balance sheet: Solventa kept AA-py with a stronger trend (16 Mar 2026), the bank placed USD 350 million of five-year notes (3 Mar 2026), FIX assigned A+py to the holding (2 Jul 2026), and Fitch affirmed BB on 16 Oct 2026 while citing high intangibles (core capital 10.3% net of intangibles).",
+     "text_es": "En el mismo período terceros convalidaron el mismo balance: Solventa mantuvo AA-py con tendencia fortalecida (16/03/2026), el banco colocó USD 350 millones en bonos a cinco años (03/03/2026), FIX asignó A+py al holding (02/07/2026) y Fitch ratificó BB el 16/10/2026 aun señalando el alto nivel de intangibles (capital básico de 10,3% neto de intangibles).",
+     "refs": [
+      "press:event:0052",
+      "chrono:event:0032",
+      "press:event:0054",
+      "chrono:event:0060"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "In the supervisor's favour: relatedness had to be settled before the breach could be measured, the bank's late documentation delayed that, and the June circuit was traced in 51 days. Against: a ten-day limit breach is a statutory regularisation trigger, the capital issues were minuted in June, and lending of the same pattern continued in July. Whether the delay was justified is for the proceedings to decide; the officials' defence is not in the sources read.",
+     "text_es": "A favor del supervisor: había que definir la vinculación antes de medir el exceso, la documentación tardía del banco lo demoró y el circuito de junio se reconstruyó en 51 días. En contra: un exceso de límites por diez días es causal legal de regularización, las observaciones sobre el capital constan en acta de junio y los créditos con el mismo patrón continuaron en julio. Si la demora estuvo justificada lo dirán los procesos; la defensa de los funcionarios no figura en las fuentes consultadas.",
+     "refs": [
+      "chrono:event:0034",
+      "press:event:0026",
+      "press:loan:0045",
+      "press:event:0010"
+     ],
+     "kind": "opinion"
+    }
+   ]
+  },
+  {
+   "id": "recovery",
+   "title_en": "Recovery outlook and loss drivers (scenarios)",
+   "title_es": "Perspectivas de recupero y factores de pérdida (escenarios)",
+   "summary_en": "Small depositors have largely been paid by the guarantee fund. For large private and public depositors, illustrative coverage of deposits by hard assets ranges from 88% (supervisor's shortfall only) to 62% (all of Rey's USD 900 million lost), on a ten-month-old balance sheet. Bank bondholders rank behind and the international notes trade near 5 cents.",
+   "summary_es": "Los pequeños ahorristas ya cobraron en su mayoría del Fondo de Garantía. Para los grandes depositantes privados y públicos, la cobertura ilustrativa de depósitos con activos duros va de 88% (solo el déficit del supervisor) a 62% (pérdida total de los USD 900 millones de Rey), sobre un balance de hace diez meses. Los bonistas del banco cobran después y los bonos internacionales cotizan cerca de 5 centavos.",
+   "findings": [
+    {
+     "text_en": "Deposits about USD 2.8 billion; the guarantee fund is expected to cover USD 740 million (AFP) to USD 928 million (Global Finance); fund liquidity USD 1.6 billion (Moody's); by 11 Nov 2026 Gs. 3.9 trillion had been paid to 1,812,348 people; about 97% of depositors are fully covered.",
+     "text_es": "Depósitos por unos USD 2.800 millones; se espera que el Fondo de Garantía cubra entre USD 740 millones (AFP) y USD 928 millones (Global Finance); liquidez del fondo USD 1.600 millones (Moody's); al 11/11/2026 se habían pagado Gs. 3,9 billones a 1.812.348 personas; cerca de 97% de los depositantes queda cubierto en su totalidad.",
+     "refs": [
+      "chrono:event:0138",
+      "chrono:event:0166",
+      "chrono:event:0179",
+      "chrono:event:0181",
+      "chrono:event:0073"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Public funds at 30 Sept 2026: Gs. 3.6 trillion plus USD 233.4 million (MEF data in an opposition filing). IPS: USD 348.5 million at September per a supervision report, USD 517 million 'committed' per IPS on 13 Nov. The sources do not reconcile these.",
+     "text_es": "Fondos públicos al 30/09/2026: Gs. 3,6 billones más USD 233,4 millones (datos del MEF citados en una denuncia opositora). IPS: USD 348,5 millones a setiembre según informe de supervisión y USD 517 millones 'comprometidos' según el IPS el 13 de noviembre. Las fuentes no concilian estas cifras.",
+     "refs": [
+      "chrono:event:0052",
+      "chrono:event:0198",
+      "press:fact:0106"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "The guarantee covers 26% to 33% of deposits and would use 46% to 58% of the fund; the remainder outside the guarantee is USD 1.87 billion to USD 2.06 billion; public funds are about USD 787 million at Gs. 6,500.",
+     "text_es": "La garantía cubre entre 26% y 33% de los depósitos y utilizaría entre 46% y 58% del fondo; el remanente fuera de la garantía es de USD 1.870 millones a USD 2.060 millones; los fondos públicos rondan USD 787 millones a Gs. 6.500.",
+     "refs": [
+      "chrono:event:0138",
+      "chrono:event:0166",
+      "chrono:event:0181",
+      "chrono:event:0052",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "BCP statements: about USD 600 million of healthy assets (12 Nov, preliminary) and assets sufficient to cover deposits (18 Nov), with the exclusion balance postponed 15 days. No transfer had taken place by 19 Nov.",
+     "text_es": "Declaraciones del BCP: unos USD 600 millones de activos sanos (12 de noviembre, preliminar) y activos suficientes para cubrir los depósitos (18 de noviembre), con el balance de exclusión postergado 15 días. Al 19 de noviembre no se había concretado ningún traspaso.",
+     "refs": [
+      "chrono:event:0187",
+      "chrono:event:0226",
+      "chrono:event:0232"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Illustrative test on the December 2025 balance sheet: total assets Gs. 21,095.5 billion less trust, other assets and REDISA/REDIPRO placements (Gs. 5,496.9 billion, 26% of assets) and less a credit loss, against deposits of Gs. 15,830.8 billion: 88% with the supervisor's shortfall, 80% if half of Rey's USD 900 million is lost, 62% if all of it is lost.",
+     "text_es": "Prueba ilustrativa sobre el balance de diciembre de 2025: activo total de Gs. 21,1 billones menos fideicomiso, otros activos y colocaciones en REDISA/REDIPRO (Gs. 5,5 billones, 26% del activo) y menos una pérdida crediticia, frente a depósitos de Gs. 15,8 billones: 88% con el déficit del supervisor, 80% si se pierde la mitad de los USD 900 millones de Rey y 62% si se pierde la totalidad.",
+     "refs": [
+      "press:fact:0126",
+      "press:fact:0246",
+      "press:fact:0250",
+      "press:fact:0265",
+      "press:fact:0266",
+      "chrono:event:0070",
+      "rec:flow:0075",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "Collateral is essentially absent (sole signature). Three seized ranches are valued at USD 15.95 million, 7% of the six-borrower exposure of about USD 227.8 million; 2,331 properties were identified without values.",
+     "text_es": "Prácticamente no hay garantías (a sola firma). Tres estancias incautadas están valuadas en USD 15,95 millones, 7% de la exposición de las seis prestatarias de unos USD 227,8 millones; se identificaron 2.331 inmuebles sin valuación.",
+     "refs": [
+      "press:fact:0063",
+      "press:fact:0064",
+      "press:fact:0065",
+      "press:fact:0080",
+      "src:acta-p07"
+     ],
+     "kind": "computation"
+    },
+    {
+     "text_en": "The bank's international notes (USD 350 million, due 2031) fell from above 85 cents to about 5 cents; trading in all bank securities was suspended locally; OTP booked a USD 32 million negative fair-value adjustment.",
+     "text_es": "Los bonos internacionales del banco (USD 350 millones, vencimiento 2031) cayeron de más de 85 centavos a unos 5 centavos; se suspendió la negociación local de todos los valores del banco; OTP registró un ajuste negativo de valor razonable de USD 32 millones.",
+     "refs": [
+      "chrono:event:0200",
+      "chrono:event:0086",
+      "chrono:event:0177"
+     ],
+     "kind": "fact"
+    },
+    {
+     "text_en": "Main loss drivers: unsecured loans whose only repayment source is the group; deferred charges with no liquidation value; placements in group payment companies that depended on the bank; time taken to tender assets; and ranking, where bonds sit behind deposits.",
+     "text_es": "Principales factores de pérdida: créditos sin garantía cuya única fuente de repago es el grupo; cargos diferidos sin valor de realización; colocaciones en procesadoras del grupo que dependían del banco; el tiempo que lleve licitar los activos; y el orden de prelación, en el que los bonos van detrás de los depósitos.",
+     "refs": [
+      "press:fact:0265",
+      "press:fact:0126",
+      "chrono:event:0232"
+     ],
+     "kind": "opinion"
+    }
+   ]
+  }
+ ],
+ "metrics": [
+  {
+   "entity": "org:grupo-hendy",
+   "label_en": "Credit granted to annual income",
+   "label_es": "Crédito otorgado sobre ingreso anual",
+   "value": 288.2663,
+   "unit": "x annual income",
+   "inputs": [
+    {
+     "what": "credit total (record)",
+     "value": 252521261384,
+     "currency": "PYG",
+     "ref": "src:acta-p04"
+    },
+    {
+     "what": "annual income = 12 x average monthly income 2025 (Gs. 73,000,000)",
+     "value": 876000000,
+     "currency": "PYG",
+     "ref": "src:acta-p05"
+    }
+   ],
+   "note_en": "Net equity negative at end-2024, so debt to equity is not meaningful.",
+   "note_es": "Patrimonio neto negativo al cierre de 2024; la relación deuda/patrimonio no es calculable."
+  },
+  {
+   "entity": "org:grupo-hendy",
+   "label_en": "Annual interest burden to annual income",
+   "label_es": "Carga anual de intereses sobre ingreso anual",
+   "value": 42.2268,
+   "unit": "x annual income",
+   "inputs": [
+    {
+     "what": "overdraft outstanding at 24.15%",
+     "value": 99587231967,
+     "currency": "PYG",
+     "ref": "rec:loan:0010"
+    },
+    {
+     "what": "USD loan at 8%",
+     "value": 5075250,
+     "currency": "USD",
+     "ref": "rec:loan:0008"
+    },
+    {
+     "what": "USD loan at 7.5%",
+     "value": 5527500,
+     "currency": "USD",
+     "ref": "rec:loan:0009"
+    },
+    {
+     "what": "USD loan at 8%",
+     "value": 14627989.28,
+     "currency": "USD",
+     "ref": "rec:loan:0011"
+    },
+    {
+     "what": "annual income",
+     "value": 876000000,
+     "currency": "PYG",
+     "ref": "src:acta-p05"
+    }
+   ],
+   "note_en": "Simple interest on outstanding balances at printed rates. USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "Interés simple sobre saldos vigentes a las tasas impresas. USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:grupo-m",
+   "label_en": "Credit granted to income of the period",
+   "label_es": "Crédito otorgado sobre ingresos del período",
+   "value": 22.4192,
+   "unit": "x income",
+   "inputs": [
+    {
+     "what": "credit total (record)",
+     "value": 237105585238,
+     "currency": "PYG",
+     "ref": "src:acta-p07"
+    },
+    {
+     "what": "income of the analysed period",
+     "value": 10576000000.0,
+     "currency": "PYG",
+     "ref": "src:acta-p08"
+    }
+   ],
+   "note_en": "The record's own ratio (11.85x) uses long-term debt in the borrower's statements, Gs. 125,356 million.",
+   "note_es": "El ratio del acta (11,85 veces) usa la deuda de largo plazo del balance de la empresa, Gs. 125.356 millones."
+  },
+  {
+   "entity": "org:grupo-m",
+   "label_en": "Credit granted to net equity",
+   "label_es": "Crédito otorgado sobre patrimonio neto",
+   "value": 44.5102,
+   "unit": "x equity",
+   "inputs": [
+    {
+     "what": "credit total (record)",
+     "value": 237105585238,
+     "currency": "PYG",
+     "ref": "src:acta-p07"
+    },
+    {
+     "what": "net equity",
+     "value": 5327000000.0,
+     "currency": "PYG",
+     "ref": "src:acta-p08"
+    }
+   ],
+   "note_en": "The record's own ratio is 23.5x on long-term debt of Gs. 125,356 million.",
+   "note_es": "El ratio del acta es 23,5 veces sobre la deuda de largo plazo de Gs. 125.356 millones."
+  },
+  {
+   "entity": "org:grupo-m",
+   "label_en": "Project financing (Phase I + Phase II) to net equity",
+   "label_es": "Financiamiento del proyecto (Fase I + Fase II) sobre patrimonio neto",
+   "value": 75.6805,
+   "unit": "x equity",
+   "inputs": [
+    {
+     "what": "Phase I",
+     "value": 23100000,
+     "currency": "USD",
+     "ref": "src:acta-p07"
+    },
+    {
+     "what": "Phase II (USD equivalent printed in the record)",
+     "value": 38923077,
+     "currency": "USD",
+     "ref": "src:acta-p07"
+    },
+    {
+     "what": "net equity",
+     "value": 5327000000.0,
+     "currency": "PYG",
+     "ref": "src:acta-p08"
+    }
+   ],
+   "note_en": "USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:grupo-m",
+   "label_en": "Annual interest on the three USD term loans to income",
+   "label_es": "Interés anual de los tres préstamos en USD sobre ingresos",
+   "value": 1.1251,
+   "unit": "x income",
+   "inputs": [
+    {
+     "what": "loan at 8%",
+     "value": 13567500,
+     "currency": "USD",
+     "ref": "rec:loan:0012"
+    },
+    {
+     "what": "loan at 8%",
+     "value": 4321500,
+     "currency": "USD",
+     "ref": "rec:loan:0013"
+    },
+    {
+     "what": "loan at 7.5%",
+     "value": 5326500,
+     "currency": "USD",
+     "ref": "rec:loan:0014"
+    },
+    {
+     "what": "income of the analysed period",
+     "value": 10576000000.0,
+     "currency": "PYG",
+     "ref": "src:acta-p08"
+    }
+   ],
+   "note_en": "Overdraft interest excluded (rates not printed). USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "No incluye intereses de sobregiros (tasas no impresas). USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:franede",
+   "label_en": "Registered debt to annualised income",
+   "label_es": "Deuda registrada sobre ingreso anualizado",
+   "value": 30.0078,
+   "unit": "x annual income",
+   "inputs": [
+    {
+     "what": "registered debt",
+     "value": 314001127279,
+     "currency": "PYG",
+     "ref": "press:fact:0314"
+    },
+    {
+     "what": "annual income = 12 x average monthly income 2025 (Gs. 872,000,000)",
+     "value": 10464000000.0,
+     "currency": "PYG",
+     "ref": "src:acta-p13"
+    }
+   ],
+   "note_en": "The debt total also appears on the upside-down page 12 of the record (src:acta-p12). Capital printed in the record (Gs. 2.628 trillion) is implausible and not used (rec:issue:0006).",
+   "note_es": "El total de deuda figura también en la página 12 del acta, escaneada al revés (src:acta-p12). El capital impreso en el acta (Gs. 2,628 billones) es inverosímil y no se utiliza (rec:issue:0006)."
+  },
+  {
+   "entity": "org:mowi",
+   "label_en": "Debt to equity as relayed from the BCP file",
+   "label_es": "Deuda sobre patrimonio según el expediente del BCP citado por la prensa",
+   "value": 12.5,
+   "unit": "x equity (reported, not recomputed)",
+   "inputs": [
+    {
+     "what": "reported ratio; underlying balances not published",
+     "value": 12.5,
+     "currency": null,
+     "ref": "press:fact:0323"
+    }
+   ],
+   "note_en": "Same source: long-term debt 154x 2025 revenue; 84% of assets intangible. The record gives no income or equity figure for MOWI.",
+   "note_es": "Misma fuente: deuda de largo plazo 154 veces los ingresos de 2025; 84% del activo es intangible. El acta no trae ingresos ni patrimonio de MOWI."
+  },
+  {
+   "entity": "org:gsr",
+   "label_en": "Debt at Ueno to paid-in capital",
+   "label_es": "Deuda con Ueno sobre capital integrado",
+   "value": 4538.28,
+   "unit": "x paid-in capital",
+   "inputs": [
+    {
+     "what": "debt per unofficial debtor list",
+     "value": 453828000000,
+     "currency": "PYG",
+     "ref": "press:fact:0002"
+    },
+    {
+     "what": "paid-in capital",
+     "value": 100000000,
+     "currency": "PYG",
+     "ref": "press:fact:0047"
+    }
+   ],
+   "note_en": "Debtor list is unofficial and undated.",
+   "note_es": "El listado de deudores es oficioso y sin fecha de corte."
+  },
+  {
+   "entity": "org:nubicom",
+   "label_en": "Debt at Ueno to paid-in capital",
+   "label_es": "Deuda con Ueno sobre capital integrado",
+   "value": 1142155.0,
+   "unit": "x paid-in capital",
+   "inputs": [
+    {
+     "what": "debt per unofficial debtor list",
+     "value": 228431000000,
+     "currency": "PYG",
+     "ref": "press:fact:0001"
+    },
+    {
+     "what": "paid-in capital",
+     "value": 200000,
+     "currency": "PYG",
+     "ref": "press:fact:0097"
+    }
+   ],
+   "note_en": "Authorised capital was Gs. 162,800 million; only Gs. 200,000 was paid in.",
+   "note_es": "El capital autorizado era de Gs. 162.800 millones; solo se integraron Gs. 200.000."
+  },
+  {
+   "entity": "org:sagas",
+   "label_en": "Debt at Ueno to debt at the rest of the system",
+   "label_es": "Deuda con Ueno sobre deuda en el resto del sistema",
+   "value": 3182.6958,
+   "unit": "x",
+   "inputs": [
+    {
+     "what": "debt at Ueno",
+     "value": 268363000000,
+     "currency": "PYG",
+     "ref": "press:fact:0086"
+    },
+    {
+     "what": "debt at two other entities",
+     "value": 84319401,
+     "currency": "PYG",
+     "ref": "press:fact:0087"
+    }
+   ],
+   "note_en": "",
+   "note_es": ""
+  },
+  {
+   "entity": "org:la-tropa-fletes",
+   "label_en": "Debt at Ueno (list) to founding capital",
+   "label_es": "Deuda con Ueno (listado) sobre capital de constitución",
+   "value": 985.992,
+   "unit": "x capital",
+   "inputs": [
+    {
+     "what": "debt per unofficial debtor list",
+     "value": 246498000000,
+     "currency": "PYG",
+     "ref": "press:fact:0013"
+    },
+    {
+     "what": "capital at creation (2021)",
+     "value": 250000000,
+     "currency": "PYG",
+     "ref": "press:fact:0060"
+    }
+   ],
+   "note_en": "",
+   "note_es": ""
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Six record borrowers: outstanding balance to related-party cap",
+   "label_es": "Seis prestatarias del acta: saldo vigente sobre el tope de vinculadas",
+   "value": 3.0012,
+   "unit": "x cap",
+   "inputs": [
+    {
+     "what": "outstanding USD (sum of record tables)",
+     "value": 166984879.33,
+     "currency": "USD",
+     "ref": "src:acta-p03"
+    },
+    {
+     "what": "outstanding PYG (sum of record tables)",
+     "value": 395521558926,
+     "currency": "PYG",
+     "ref": "src:acta-p03"
+    },
+    {
+     "what": "cap = 20% of effective equity, 30 Apr 2026",
+     "value": 493447000000,
+     "currency": "PYG",
+     "ref": "press:fact:0083"
+    }
+   ],
+   "note_en": "Balances are those printed in the record tables (pp. 3-15), dated up to May 2026; cap is at 30 April 2026. Equals 60% of effective equity. USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "Saldos impresos en las tablas del acta (págs. 3-15), con fechas hasta mayo de 2026; el tope es al 30/04/2026. Equivale al 60% del patrimonio efectivo. USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "MOWI + Hendy + Grupo M exposure to cap, 30 Apr 2026",
+   "label_es": "Exposición MOWI + Hendy + Grupo M sobre el tope, 30/04/2026",
+   "value": 1.5073,
+   "unit": "x cap",
+   "inputs": [
+    {
+     "what": "combined exposure",
+     "value": 743784000000,
+     "currency": "PYG",
+     "ref": "press:fact:0081"
+    },
+    {
+     "what": "cap",
+     "value": 493447000000,
+     "currency": "PYG",
+     "ref": "press:fact:0083"
+    }
+   ],
+   "note_en": "Reported as 30% of effective equity (31.9% in the charges against the Superintendent).",
+   "note_es": "Informado como 30% del patrimonio efectivo (31,9% en la imputación al Superintendente)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Overdraft share of the six borrowers' outstanding balance",
+   "label_es": "Participación de sobregiros en el saldo vigente de las seis prestatarias",
+   "value": 37.0379,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "outstanding overdrafts PYG",
+     "value": 395521558926,
+     "currency": "PYG",
+     "ref": "src:acta-p03"
+    },
+    {
+     "what": "outstanding overdrafts USD",
+     "value": 23535659.87,
+     "currency": "USD",
+     "ref": "src:acta-p07"
+    },
+    {
+     "what": "total outstanding at Gs. 6,500",
+     "value": 1480923274571,
+     "currency": "PYG",
+     "ref": "src:acta-p03"
+    }
+   ],
+   "note_en": "USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:vinanzas",
+   "label_en": "Portfolio sale price to original principal of the nine loans",
+   "label_es": "Precio de venta de la cartera sobre capital original de los nueve créditos",
+   "value": 1.0377,
+   "unit": "x principal",
+   "inputs": [
+    {
+     "what": "sale price",
+     "value": 74418418.12,
+     "currency": "USD",
+     "ref": "rec:flow:0061"
+    },
+    {
+     "what": "sum of original principal of the nine loans",
+     "value": 71712884.46,
+     "currency": "USD",
+     "ref": "src:acta-p18"
+    }
+   ],
+   "note_en": "Consistent with principal plus accrued contractual interest; no credit discount.",
+   "note_es": "Compatible con capital más intereses devengados a la tasa pactada; sin descuento por riesgo."
+  },
+  {
+   "entity": "org:vinanzas",
+   "label_en": "Own funds the day before to purchase price",
+   "label_es": "Fondos propios el día previo sobre precio de compra",
+   "value": 0.1258,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "account balance 14 Jun 2026 (diagram reading)",
+     "value": 93628,
+     "currency": "USD",
+     "ref": "rec:event:0064"
+    },
+    {
+     "what": "purchase price",
+     "value": 74418418.12,
+     "currency": "USD",
+     "ref": "rec:flow:0061"
+    }
+   ],
+   "note_en": "Press prints USD 93,828 (press:fact:0036); ratio unchanged at two decimals.",
+   "note_es": "La prensa publica USD 93.828 (press:fact:0036); el ratio no cambia a dos decimales."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "New USD loans of 11-15 Jun 2026 to sale price received",
+   "label_es": "Préstamos nuevos en USD del 11 al 15/06/2026 sobre precio de venta cobrado",
+   "value": 109.9741,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "five loans (SATEC, HD Invest, Technoma, La Tropa Fletes, Factopar)",
+     "value": 81841000,
+     "currency": "USD",
+     "ref": "rec:event:0065"
+    },
+    {
+     "what": "sale price",
+     "value": 74418418.12,
+     "currency": "USD",
+     "ref": "rec:flow:0061"
+    }
+   ],
+   "note_en": "",
+   "note_es": ""
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Net change in credit exposure from the June 2026 circuit",
+   "label_es": "Variación neta de la exposición crediticia por el circuito de junio de 2026",
+   "value": 59744556290.0,
+   "unit": "PYG",
+   "inputs": [
+    {
+     "what": "new USD loans",
+     "value": 81841000,
+     "currency": "USD",
+     "ref": "rec:event:0065"
+    },
+    {
+     "what": "new PYG loans (Sagas, HD Invest, Factopar x2)",
+     "value": 280500000000,
+     "currency": "PYG",
+     "ref": "press:loan:0002"
+    },
+    {
+     "what": "portfolio sold",
+     "value": 74418418.12,
+     "currency": "USD",
+     "ref": "rec:flow:0060"
+    },
+    {
+     "what": "Hendy overdraft cancelled",
+     "value": 118244000000,
+     "currency": "PYG",
+     "ref": "press:loan:0029"
+    },
+    {
+     "what": "MOWI overdraft cancelled",
+     "value": 109668000000,
+     "currency": "PYG",
+     "ref": "press:loan:0030"
+    },
+    {
+     "what": "Grupo M USD overdraft cancelled",
+     "value": 6321573.22,
+     "currency": "USD",
+     "ref": "press:loan:0034"
+    }
+   ],
+   "note_en": "Positive = exposure increased. Guaraní loans from press rows (press:loan:0002, 0004, 0007, 0008). USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "Positivo = la exposición aumentó. Préstamos en guaraníes según filas de prensa (press:loan:0002, 0004, 0007, 0008). USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Solvency ratio after deducting only the provisions shortfall",
+   "label_es": "Índice de solvencia deduciendo solo el déficit de previsiones",
+   "value": 5.2209,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "effective equity = cap / 20%",
+     "value": 2467235000000,
+     "currency": "PYG",
+     "ref": "press:fact:0083"
+    },
+    {
+     "what": "reported ratio 13.85% (implies RWA of about Gs. 17.8 trillion)",
+     "value": 13.85,
+     "currency": null,
+     "ref": "chrono:event:0070"
+    },
+    {
+     "what": "provisions shortfall",
+     "value": 1621853458972,
+     "currency": "PYG",
+     "ref": "chrono:event:0070"
+    }
+   ],
+   "note_en": "Shortfall deducted from capital and from risk-weighted assets; 4.7% if RWA is left unchanged. Published adjusted ratio: 5.56%. Dates differ (equity April 2026, shortfall November 2026).",
+   "note_es": "Déficit deducido del capital y de los activos ponderados por riesgo; 4,7% si los APR no se ajustan. Índice ajustado publicado: 5,56%. Las fechas difieren (patrimonio de abril de 2026, déficit de noviembre de 2026)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Scenario: ratio after also deducting REDISA/REDIPRO placements",
+   "label_es": "Escenario: índice deduciendo además las colocaciones en REDISA/REDIPRO",
+   "value": -0.1755,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "capital after provisions shortfall",
+     "value": 845381541028,
+     "currency": "PYG",
+     "ref": "chrono:event:0070"
+    },
+    {
+     "what": "placements in REDISA and REDIPRO, Dec 2025",
+     "value": 876640000000,
+     "currency": "PYG",
+     "ref": "press:fact:0126"
+    }
+   ],
+   "note_en": "Scenario on unchanged RWA, not a supervisory finding.",
+   "note_es": "Escenario con APR sin cambios; no es una determinación del supervisor."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Scenario: ratio after also deducting the merger-expenses trust",
+   "label_es": "Escenario: índice deduciendo además el fideicomiso de gastos de fusión",
+   "value": -11.9962,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "merger-expenses trust, Dec 2025",
+     "value": 2105744000000,
+     "currency": "PYG",
+     "ref": "press:fact:0265"
+    }
+   ],
+   "note_en": "Scenario on unchanged RWA, not a supervisory finding.",
+   "note_es": "Escenario con APR sin cambios; no es una determinación del supervisor."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Merger-expenses trust to book equity, Dec 2025",
+   "label_es": "Fideicomiso de gastos de fusión sobre patrimonio contable, dic. 2025",
+   "value": 99.4371,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "trust (deferred charges, amortised to 2035)",
+     "value": 2105744000000,
+     "currency": "PYG",
+     "ref": "press:fact:0265"
+    },
+    {
+     "what": "book equity",
+     "value": 2117665000000,
+     "currency": "PYG",
+     "ref": "press:fact:0254"
+    }
+   ],
+   "note_en": "",
+   "note_es": ""
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Rey's USD 900 million to book equity, Dec 2025",
+   "label_es": "Los USD 900 millones de Rey sobre patrimonio contable, dic. 2025",
+   "value": 2.7625,
+   "unit": "x equity",
+   "inputs": [
+    {
+     "what": "loans used to defer expenses, per Rey",
+     "value": 900000000,
+     "currency": "USD",
+     "ref": "rec:flow:0075"
+    },
+    {
+     "what": "book equity",
+     "value": 2117665000000,
+     "currency": "PYG",
+     "ref": "press:fact:0254"
+    }
+   ],
+   "note_en": "Rey's own claim, unverified. USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "Afirmación de Rey, no verificada. USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Loss rate on Rey's USD 900 million that brings solvency to 6%",
+   "label_es": "Tasa de pérdida sobre los USD 900 millones de Rey que lleva la solvencia al 6%",
+   "value": 25.43,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "effective equity",
+     "value": 2467235000000,
+     "currency": "PYG",
+     "ref": "press:fact:0083"
+    },
+    {
+     "what": "loans per Rey",
+     "value": 900000000,
+     "currency": "USD",
+     "ref": "rec:flow:0075"
+    },
+    {
+     "what": "reported ratio",
+     "value": 13.85,
+     "currency": null,
+     "ref": "chrono:event:0070"
+    }
+   ],
+   "note_en": "Loss deducted from capital and RWA. Effective equity is exhausted at 42%. USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "Pérdida deducida del capital y de los APR. El patrimonio efectivo se agota con 42%. USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Identified exposures (debtor list + six record borrowers) to Rey's USD 900 million",
+   "label_es": "Exposiciones identificadas (listado de deudores + seis prestatarias del acta) sobre los USD 900 millones de Rey",
+   "value": 109.7397,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "unofficial debtor list excluding IPS and Valores Casa de Bolsa",
+     "value": 4938847000000,
+     "currency": "PYG",
+     "ref": "press:fact:0001"
+    },
+    {
+     "what": "six record borrowers, outstanding at Gs. 6,500",
+     "value": 1480923274571,
+     "currency": "PYG",
+     "ref": "src:acta-p03"
+    },
+    {
+     "what": "loans per Rey",
+     "value": 900000000,
+     "currency": "USD",
+     "ref": "rec:flow:0075"
+    }
+   ],
+   "note_en": "Order-of-magnitude check only: overlap exists (sold portfolio, funds recycled through Vinanzas) and list membership is not Rey's list. USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "Solo control de orden de magnitud: hay superposición (cartera vendida, fondos reciclados vía Vinanzas) y el listado no es la nómina de Rey. USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:grupo-vazquez",
+   "label_en": "Valuation gains to individual revenue, 2025",
+   "label_es": "Resultado por valuación de inversiones sobre ingresos individuales, 2025",
+   "value": 49.3134,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "income from valuation of investments",
+     "value": 379256000000,
+     "currency": "PYG",
+     "ref": "press:fact:0157"
+    },
+    {
+     "what": "revenue (individual)",
+     "value": 769073000000,
+     "currency": "PYG",
+     "ref": "press:fact:0128"
+    }
+   ],
+   "note_en": "69.6% in 2024 (Gs. 1,708,614 million of Gs. 2,454,213 million).",
+   "note_es": "69,6% en 2024 (Gs. 1.708.614 millones sobre Gs. 2.454.213 millones)."
+  },
+  {
+   "entity": "org:grupo-vazquez",
+   "label_en": "Carrying value of U Holdings stake to equity, Dec 2025",
+   "label_es": "Valor contable de la participación en U Holdings sobre patrimonio, dic. 2025",
+   "value": 146.6027,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "U Holdings carrying value",
+     "value": 3083405000000,
+     "currency": "PYG",
+     "ref": "press:fact:0156"
+    },
+    {
+     "what": "equity (individual)",
+     "value": 2103239000000,
+     "currency": "PYG",
+     "ref": "press:fact:0138"
+    }
+   ],
+   "note_en": "Writing the stake to zero leaves equity of about -Gs. 980,166 million.",
+   "note_es": "Llevar la participación a cero deja un patrimonio de aproximadamente -Gs. 980.166 millones."
+  },
+  {
+   "entity": "org:grupo-vazquez",
+   "label_en": "Dividends received to financial debt, 2025",
+   "label_es": "Dividendos cobrados sobre deuda financiera, 2025",
+   "value": 1.1353,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "dividends received",
+     "value": 12116000000,
+     "currency": "PYG",
+     "ref": "press:fact:0158"
+    },
+    {
+     "what": "financial debt (individual)",
+     "value": 1067176000000,
+     "currency": "PYG",
+     "ref": "press:fact:0140"
+    }
+   ],
+   "note_en": "",
+   "note_es": ""
+  },
+  {
+   "entity": "org:itti",
+   "label_en": "Intercompany sundry debtors to equity, Dec 2025",
+   "label_es": "Deudores varios intercompañía sobre patrimonio, dic. 2025",
+   "value": 74.1577,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "sundry debtors, mainly intercompany",
+     "value": 341330000000,
+     "currency": "PYG",
+     "ref": "press:fact:0199"
+    },
+    {
+     "what": "equity (standalone)",
+     "value": 460276000000,
+     "currency": "PYG",
+     "ref": "press:fact:0191"
+    }
+   ],
+   "note_en": "Balance doubled from Gs. 163,103 million in 2024.",
+   "note_es": "El saldo se duplicó desde Gs. 163.103 millones en 2024."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Scenario A: hard assets to deposits (supervisor's shortfall only)",
+   "label_es": "Escenario A: activos duros sobre depósitos (solo déficit del supervisor)",
+   "value": 88.2887,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "total assets Dec 2025",
+     "value": 21095542000000,
+     "currency": "PYG",
+     "ref": "press:fact:0246"
+    },
+    {
+     "what": "trust",
+     "value": 2105744000000,
+     "currency": "PYG",
+     "ref": "press:fact:0265"
+    },
+    {
+     "what": "other assets incl. deferred losses",
+     "value": 2514476000000,
+     "currency": "PYG",
+     "ref": "press:fact:0266"
+    },
+    {
+     "what": "REDISA/REDIPRO placements",
+     "value": 876640000000,
+     "currency": "PYG",
+     "ref": "press:fact:0126"
+    },
+    {
+     "what": "credit loss assumed",
+     "value": 1621853458972,
+     "currency": "PYG",
+     "ref": "chrono:event:0070"
+    },
+    {
+     "what": "deposits Dec 2025",
+     "value": 15830815000000,
+     "currency": "PYG",
+     "ref": "press:fact:0250"
+    }
+   ],
+   "note_en": "Illustrative; balance sheet is ten months old and soft assets are valued at zero.",
+   "note_es": "Ilustrativo; el balance tiene diez meses de antigüedad y los activos blandos se valúan en cero."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Scenario B: hard assets to deposits (half of Rey's USD 900 million lost)",
+   "label_es": "Escenario B: activos duros sobre depósitos (se pierde la mitad de los USD 900 millones de Rey)",
+   "value": 80.057,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "credit loss assumed",
+     "value": 2925000000000.0,
+     "currency": "PYG",
+     "ref": "rec:flow:0075"
+    },
+    {
+     "what": "deposits Dec 2025",
+     "value": 15830815000000,
+     "currency": "PYG",
+     "ref": "press:fact:0250"
+    }
+   ],
+   "note_en": "USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "label_en": "Scenario C: hard assets to deposits (all of Rey's USD 900 million lost)",
+   "label_es": "Escenario C: activos duros sobre depósitos (se pierde la totalidad de los USD 900 millones de Rey)",
+   "value": 61.5804,
+   "unit": "%",
+   "inputs": [
+    {
+     "what": "credit loss assumed",
+     "value": 5850000000000.0,
+     "currency": "PYG",
+     "ref": "rec:flow:0075"
+    },
+    {
+     "what": "deposits Dec 2025",
+     "value": 15830815000000,
+     "currency": "PYG",
+     "ref": "press:fact:0250"
+    }
+   ],
+   "note_en": "USD converted at Gs. 6500 per USD, the rate implied by the record (p. 7: Gs. 253,000,000,000 = USD 38,923,077).",
+   "note_es": "USD convertidos a Gs. 6500 por dólar, tipo de cambio implícito en el acta (pág. 7: Gs. 253.000.000.000 = USD 38.923.077)."
+  },
+  {
+   "entity": "auth:superintendencia-de-bancos",
+   "label_en": "Days from formal knowledge of the limit breach (alleged) to resolution",
+   "label_es": "Días desde el conocimiento formal del exceso (según la imputación) hasta la resolución",
+   "value": 187,
+   "unit": "days",
+   "inputs": [
+    {
+     "what": "date of formal knowledge, as YYYYMMDD",
+     "value": 20260429,
+     "currency": null,
+     "ref": "chrono:event:0034"
+    },
+    {
+     "what": "date of resolution, as YYYYMMDD",
+     "value": 20261102,
+     "currency": null,
+     "ref": "rec:event:0067"
+    }
+   ],
+   "note_en": "Allegation in the charges against the Superintendent.",
+   "note_es": "Afirmación de la imputación al Superintendente."
+  }
+ ],
+ "opinions": [
+  {
+   "text_en": "Opinion: these were not credit decisions in the ordinary sense. Debt of 288 times income (Hendy), 22 times income and 45 times equity (Grupo M), 4,538 times paid-in capital (GSR) and more than a million times paid-in capital (Nubicom), on sole signature for up to ten years, cannot be explained by optimistic underwriting.",
+   "text_es": "Opinión: no fueron decisiones de crédito en sentido ordinario. Deudas de 288 veces el ingreso (Hendy), 22 veces el ingreso y 45 veces el patrimonio (Grupo M), 4.538 veces el capital integrado (GSR) y más de un millón de veces el capital integrado (Nubicom), a sola firma y hasta diez años, no se explican por un análisis optimista.",
+   "basis_refs": [
+    "src:acta-p05",
+    "src:acta-p07",
+    "src:acta-p08",
+    "press:fact:0002",
+    "press:fact:0047",
+    "press:fact:0001",
+    "press:fact:0097"
+   ]
+  },
+  {
+   "text_en": "Opinion: the loans functioned as group funding booked through shells, and performing status was manufactured by circular repayment. It rests on the alleged forwarding and repayment flows, the 37% overdraft share and the 0.44% reported NPL ratio.",
+   "text_es": "Opinión: los préstamos operaron como fondeo del grupo canalizado a través de sociedades sin actividad propia, y la condición de cartera al día se fabricó con repagos circulares. Se apoya en los flujos de transferencia y repago descritos en la imputación, en el 37% de sobregiros y en la morosidad informada de 0,44%.",
+   "basis_refs": [
+    "rec:flow:0001",
+    "rec:flow:0002",
+    "rec:flow:0003",
+    "rec:flow:0004",
+    "rec:flow:0005",
+    "rec:flow:0006",
+    "rec:flow:0007",
+    "rec:flow:0008",
+    "rec:flow:0009",
+    "rec:flow:0010",
+    "rec:flow:0011",
+    "rec:flow:0012",
+    "rec:flow:0013",
+    "rec:flow:0014",
+    "rec:flow:0015",
+    "rec:flow:0016",
+    "rec:flow:0017",
+    "rec:flow:0018",
+    "rec:flow:0019",
+    "rec:flow:0020",
+    "rec:flow:0021",
+    "rec:flow:0022",
+    "rec:flow:0023",
+    "rec:flow:0024",
+    "rec:flow:0025",
+    "rec:flow:0026",
+    "rec:flow:0027",
+    "rec:flow:0028",
+    "rec:flow:0029",
+    "rec:flow:0030",
+    "rec:flow:0031",
+    "rec:flow:0032",
+    "rec:flow:0033",
+    "rec:flow:0034",
+    "rec:flow:0035",
+    "rec:flow:0036",
+    "rec:flow:0037",
+    "rec:flow:0038",
+    "rec:flow:0039",
+    "rec:flow:0040",
+    "press:fact:0262"
+   ]
+  },
+  {
+   "text_en": "Opinion: the six borrowers, and probably much of the second ring, formed one unit of risk whose true obligor was the ITTI / Grupo Vázquez complex; on that basis exposure was about three times the related-party cap before the June sale.",
+   "text_es": "Opinión: las seis prestatarias, y probablemente buena parte del segundo anillo, constituían una sola unidad de riesgo cuyo obligado real era el conjunto ITTI / Grupo Vázquez; sobre esa base la exposición rondaba tres veces el tope de vinculadas antes de la venta de junio.",
+   "basis_refs": [
+    "rec:loan:0001",
+    "rec:loan:0002",
+    "rec:loan:0003",
+    "rec:loan:0004",
+    "rec:loan:0005",
+    "rec:loan:0006",
+    "rec:loan:0007",
+    "rec:loan:0008",
+    "rec:loan:0009",
+    "rec:loan:0010",
+    "rec:loan:0011",
+    "rec:loan:0012",
+    "rec:loan:0013",
+    "rec:loan:0014",
+    "rec:loan:0015",
+    "rec:loan:0016",
+    "rec:loan:0017",
+    "rec:loan:0018",
+    "rec:loan:0019",
+    "rec:loan:0020",
+    "rec:loan:0021",
+    "rec:loan:0022",
+    "rec:loan:0023",
+    "rec:loan:0024",
+    "rec:loan:0025",
+    "rec:loan:0026",
+    "rec:loan:0027",
+    "rec:loan:0028",
+    "rec:loan:0029",
+    "rec:loan:0030",
+    "rec:loan:0031",
+    "rec:loan:0032",
+    "rec:loan:0033",
+    "rec:loan:0034",
+    "rec:loan:0035",
+    "press:fact:0083",
+    "src:acta-p07"
+   ]
+  },
+  {
+   "text_en": "Opinion: the 15 June 2026 sale changed labels, not risk, and should not have been derecognised: the bank lent 110% of the price it received and its total exposure rose by about Gs. 60 billion.",
+   "text_es": "Opinión: la venta del 15 de junio de 2026 cambió rótulos y no riesgo, y no debió darse de baja del balance: el banco prestó 110% del precio que cobró y su exposición total aumentó en unos Gs. 60.000 millones.",
+   "basis_refs": [
+    "rec:flow:0041",
+    "rec:flow:0042",
+    "rec:flow:0043",
+    "rec:flow:0044",
+    "rec:flow:0045",
+    "rec:flow:0046",
+    "rec:flow:0047",
+    "rec:flow:0048",
+    "rec:flow:0049",
+    "rec:flow:0050",
+    "rec:flow:0051",
+    "rec:flow:0052",
+    "rec:flow:0053",
+    "rec:flow:0054",
+    "rec:flow:0055",
+    "rec:flow:0056",
+    "rec:flow:0057",
+    "rec:flow:0058",
+    "rec:flow:0059",
+    "rec:flow:0060",
+    "rec:flow:0061",
+    "rec:event:0064",
+    "rec:event:0065"
+   ]
+  },
+  {
+   "text_en": "Opinion: reported capital was overstated well before November 2026. With a deferred-expense trust equal to 99.4% of book equity, loss-absorbing capital at December 2025 was close to nil on a conservative reading, whether or not the facility was lawfully authorised.",
+   "text_es": "Opinión: el capital informado estaba sobrevaluado mucho antes de noviembre de 2026. Con un fideicomiso de gastos diferidos equivalente al 99,4% del patrimonio contable, el capital capaz de absorber pérdidas a diciembre de 2025 era casi nulo en una lectura conservadora, haya sido o no legalmente autorizada la facilidad.",
+   "basis_refs": [
+    "press:fact:0254",
+    "press:fact:0265",
+    "chrono:event:0017"
+   ]
+  },
+  {
+   "text_en": "Opinion: Rey's USD 900 million is plausible in scale but unverified; if even a quarter of it is unrecoverable the bank was below the resolution trigger.",
+   "text_es": "Opinión: los USD 900 millones de Rey son verosímiles en escala pero no están verificados; si apenas una cuarta parte fuera irrecuperable, el banco ya estaba por debajo de la causal de resolución.",
+   "basis_refs": [
+    "rec:flow:0075",
+    "chrono:event:0070",
+    "press:fact:0083"
+   ]
+  },
+  {
+   "text_en": "Opinion: the supervisor had enough by late April 2026 (limit breach) and certainly by 19 June 2026 (board minute) to impose a regularisation plan and stop new lending of this pattern; whether the delay to November was justified is for the proceedings to decide.",
+   "text_es": "Opinión: el supervisor contaba con elementos suficientes a fines de abril de 2026 (exceso de límites) y con certeza al 19 de junio de 2026 (acta del Directorio) para imponer un plan de regularización y frenar nuevos créditos de este tipo; si la demora hasta noviembre estuvo justificada es materia de los procesos.",
+   "basis_refs": [
+    "chrono:event:0034",
+    "press:event:0026",
+    "press:loan:0045",
+    "press:loan:0058"
+   ]
+  },
+  {
+   "text_en": "Opinion: full recovery for depositors outside the guarantee is possible but is not the central case on the published numbers; holders of the bank's bonds should expect heavy losses.",
+   "text_es": "Opinión: el recupero total para los depositantes no cubiertos por la garantía es posible, pero no es el escenario central con las cifras publicadas; los tenedores de bonos del banco deben esperar pérdidas severas.",
+   "basis_refs": [
+    "chrono:event:0187",
+    "chrono:event:0226",
+    "chrono:event:0200",
+    "press:fact:0246",
+    "press:fact:0250"
+   ]
+  }
+ ],
+ "missing_data_en": [
+  "Monthly 2026 balance sheets and solvency worksheets of the bank, and the BCP schedule of adjustments behind the 5.56% ratio (which items were deducted).",
+  "The exclusion balance, and the definition of the USD 600 million of 'healthy assets'.",
+  "Text of the BCP resolutions on related-party limits, single-borrower limits and portfolio sales (reported as Res. 15/24), and of Resolution 32 of 27 May 2024 with the feasibility plan.",
+  "Credit files and audited statements of the borrowers; the record prints no income or equity for TUIU, AIME or MOWI, and no terms for the five June 2026 loans.",
+  "Evidence of real project spending by the borrowers (works, licences, equipment).",
+  "A loan-by-loan schedule supporting or refuting Rey's USD 900 million, and the expense ledger of the merger trust.",
+  "Audited 2025 statements of REDISA, REDIPRO and Vinanzas.",
+  "Independent valuations of seized group assets, and whether Grupo Vázquez and ITTI paid the bond service due from 19 November 2026.",
+  "The defence's account for each director and official.",
+  "Record pages 20-21 are incomplete in the OCR, so part of Rey's statement is missing from the data."
+ ],
+ "missing_data_es": [
+  "Balances mensuales de 2026 y planillas de solvencia del banco, y el detalle de los ajustes del BCP que llevan al índice de 5,56% (qué partidas se dedujeron).",
+  "El balance de exclusión y la definición de los USD 600 millones de 'activos sanos'.",
+  "Texto de las resoluciones del BCP sobre límites con vinculadas, límites por deudor y venta de cartera (citada como Res. 15/24), y de la Resolución 32 del 27/05/2024 con el plan de factibilidad.",
+  "Carpetas de crédito y estados contables auditados de las prestatarias; el acta no trae ingresos ni patrimonio de TUIU, AIME ni MOWI, ni las condiciones de los cinco préstamos de junio de 2026.",
+  "Evidencia de inversión real de las prestatarias en sus proyectos (obras, licencias, equipos).",
+  "Una planilla crédito por crédito que respalde o desmienta los USD 900 millones de Rey, y el mayor de gastos del fideicomiso de fusión.",
+  "Estados contables auditados de 2025 de REDISA, REDIPRO y Vinanzas.",
+  "Tasaciones independientes de los bienes incautados del grupo, y si Grupo Vázquez e ITTI pagaron los servicios de bonos exigibles desde el 19/11/2026.",
+  "La versión de la defensa de cada director y funcionario.",
+  "Las páginas 20 y 21 del acta están incompletas en el OCR, por lo que falta parte de la declaración de Rey en los datos."
+ ]
+}

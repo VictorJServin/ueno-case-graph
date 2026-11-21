@@ -1,0 +1,18 @@
+# Q5. Data points with low confidence, with their source (needs the ontology loaded for the class hierarchy)
+PREFIX uc:   <https://w3id.org/ueno-case/ont#>
+PREFIX ucr:  <https://w3id.org/ueno-case/id/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?a ?type ?who ?src ?locator ?note
+WHERE {
+  ?a uc:confidence "low" ;
+     a ?type ;
+     uc:assertedBy ?who ;
+     prov:wasDerivedFrom ?src .
+  ?type rdfs:subClassOf uc:Assertion .
+  OPTIONAL { ?a uc:locator ?locator }
+  OPTIONAL { ?a uc:provenanceNote ?note }
+}
+ORDER BY ?type ?src

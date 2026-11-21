@@ -1,0 +1,1421 @@
+{
+ "side": "prosecution",
+ "disclaimer_en": "Analysis by an AI legal analyst, not a licensed lawyer. It sets out the strongest good-faith prosecution case that could be built from facts alleged in the record; it is not legal advice and not a finding of guilt. Everyone named is presumed innocent. Statutes were read through a paraphrasing tool and no BCP resolution was read as primary text; verify before relying on any wording. 'Strength' rates how far the record as written supports an element, not the likelihood of conviction.",
+ "disclaimer_es": "Análisis elaborado por un analista jurídico de IA, no por un abogado matriculado. Expone la tesis acusatoria más sólida que podría construirse de buena fe con los hechos alegados en el acta; no constituye asesoramiento jurídico ni declaración de culpabilidad. Rige la presunción de inocencia para todas las personas nombradas. Las leyes fueron leídas mediante una herramienta que parafrasea y ninguna resolución del BCP fue leída en su texto original; debe verificarse antes de apoyarse en cualquier redacción. La 'solidez' indica en qué medida el acta, tal como está redactada, respalda un elemento, no la probabilidad de condena.",
+ "offences": [
+  {
+   "id": "art192",
+   "article": "Art. 192",
+   "name_en": "Breach of trust",
+   "name_es": "Lesión de confianza",
+   "penalty_en": "Prison of up to five years or a fine (inc. 1). In especially grave cases up to ten years (inc. 2). No attempt clause and no negligent form. The record cites inc. 1, 'modalidad causara', and does not cite inc. 2. Wording read through a paraphrasing tool; verify.",
+   "penalty_es": "Pena privativa de libertad de hasta cinco años o multa (inc. 1°). En casos especialmente graves, hasta diez años (inc. 2°). No prevé tentativa ni modalidad culposa. El acta cita el inc. 1°, 'modalidad causara', y no el inc. 2°. Texto leído mediante una herramienta que parafrasea; debe verificarse.",
+   "elements": [
+    {
+     "element_en": "A duty, based on law, administrative resolution or contract, to protect a relevant patrimonial interest of another",
+     "element_es": "Haber asumido, en base a una ley, una resolución administrativa o un contrato, el deber de proteger un interés patrimonial relevante para un tercero",
+     "alleged_facts": [
+      {
+       "text_en": "The record names seven board members and the síndico and alleges that between 2025 and 2026 they 'authorised and allowed' the operations.",
+       "text_es": "El acta individualiza a siete miembros del Directorio y al síndico, y sostiene que entre 2025 y 2026 'autorizaron y permitieron' las operaciones.",
+       "refs": [
+        "rec:role:0001",
+        "rec:role:0002",
+        "rec:role:0003",
+        "rec:role:0004",
+        "rec:role:0005",
+        "rec:role:0006",
+        "rec:role:0007",
+        "rec:role:0008",
+        "rec:role:0009",
+        "rec:role:0010",
+        "rec:role:0011",
+        "rec:role:0012",
+        "rec:role:0013",
+        "rec:role:0014",
+        "rec:role:0015",
+        "rec:role:0016",
+        "src:acta-p01"
+       ]
+      },
+      {
+       "text_en": "The record states that the bank's assets were made up mainly of third-party funds whose return the bank was bound to guarantee by law and contract.",
+       "text_es": "El acta señala que los activos del banco se componían principalmente de recursos de terceros, cuya restitución la entidad estaba obligada a garantizar conforme a la ley y a los actos jurídicos celebrados.",
+       "refs": [
+        "src:acta-p01"
+       ]
+      },
+      {
+       "text_en": "Rey says he sat on the bank's board from July 2024 to July 2026.",
+       "text_es": "Rey manifiesta que integró el Directorio del banco desde julio de 2024 hasta julio de 2026.",
+       "refs": [
+        "rec:role:0026",
+        "src:acta-p20",
+        "src:acta-p23"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Bylaws, appointment minutes and dates in office for each person; the síndico's appointment and statutory duties (Código Civil articles not retrieved); delegated credit powers.",
+     "evidence_needed_es": "Estatutos, actas de designación y vigencia en el cargo de cada persona; designación y deberes legales del síndico (artículos del Código Civil no obtenidos); facultades crediticias delegadas.",
+     "strength": "well_supported_in_record",
+     "strength_reason_en": "Office-holding is stated directly and Ley 861/96 Art. 38 supplies a statutory source of the duty for directors. Open only as to the síndico's duty and the exact post-2008 wording ('obligación' or 'responsabilidad').",
+     "strength_reason_es": "El ejercicio del cargo consta directamente y el Art. 38 de la Ley 861/96 aporta la fuente legal del deber para los directores. Queda abierto el deber del síndico y la redacción exacta posterior a 2008 ('obligación' o 'responsabilidad')."
+    },
+    {
+     "element_en": "Conduct in breach of that duty within the protected sphere (granting or allowing the operations)",
+     "element_es": "Conducta contraria a ese deber dentro del ámbito de protección confiado (otorgar o permitir las operaciones)",
+     "alleged_facts": [
+      {
+       "text_en": "The record itemises 35 loans and overdrafts to MOWI, Grupo Hendy, Grupo M, TUIU, FRANEDE and AIME, mostly on signature alone and for terms of 7 to 10 years.",
+       "text_es": "El acta detalla 35 préstamos y sobregiros a MOWI, Grupo Hendy, Grupo M, TUIU, FRANEDE y AIME, en su mayoría a sola firma y a plazos de 7 a 10 años.",
+       "refs": [
+        "rec:loan:0001",
+        "rec:loan:0002",
+        "rec:loan:0003",
+        "rec:loan:0004",
+        "rec:loan:0005",
+        "rec:loan:0006",
+        "rec:loan:0007",
+        "rec:loan:0008",
+        "rec:loan:0009",
+        "rec:loan:0010",
+        "rec:loan:0011",
+        "rec:loan:0012",
+        "rec:loan:0013",
+        "rec:loan:0014",
+        "rec:loan:0015",
+        "rec:loan:0016",
+        "rec:loan:0017",
+        "rec:loan:0018",
+        "rec:loan:0019",
+        "rec:loan:0020",
+        "rec:loan:0021",
+        "rec:loan:0022",
+        "rec:loan:0023",
+        "rec:loan:0024",
+        "rec:loan:0025",
+        "rec:loan:0026",
+        "rec:loan:0027",
+        "rec:loan:0028",
+        "rec:loan:0029",
+        "rec:loan:0030",
+        "rec:loan:0031",
+        "rec:loan:0032",
+        "rec:loan:0033",
+        "rec:loan:0034",
+        "rec:loan:0035",
+        "src:acta-p03",
+        "src:acta-p04",
+        "src:acta-p05",
+        "src:acta-p07",
+        "src:acta-p11",
+        "src:acta-p13",
+        "src:acta-p15"
+       ]
+      },
+      {
+       "text_en": "The record alleges weak credit analysis, amounts out of proportion to the borrowers' capacity, lax terms, no collateral and a mismatch between declared and real use of funds.",
+       "text_es": "El acta atribuye a las operaciones análisis de riesgo débiles, importes desproporcionados respecto de la capacidad de las empresas, condiciones laxas, ausencia de garantías e inconsistencia entre el destino declarado y el real.",
+       "refs": [
+        "src:acta-p02"
+       ]
+      },
+      {
+       "text_en": "Grupo Hendy is said to have had average monthly income of Gs. 73 million in 2025 and negative net equity at the end of 2024.",
+       "text_es": "Se afirma que Grupo Hendy registraba un ingreso mensual promedio de Gs. 73 millones en 2025 y patrimonio neto negativo al cierre de 2024.",
+       "refs": [
+        "src:acta-p05"
+       ]
+      },
+      {
+       "text_en": "Grupo M's long-term debt is said to equal 23.5 times its net equity and about 11.85 times its income for the period.",
+       "text_es": "La deuda de largo plazo de Grupo M equivaldría a 23,5 veces su patrimonio neto y a unas 11,85 veces sus ingresos del período.",
+       "refs": [
+        "src:acta-p08"
+       ]
+      },
+      {
+       "text_en": "The record alleges that disbursements were forwarded almost immediately to ITTI, REDISA, REDIPRO, Vinanzas, Kaitel and Grupo Vázquez, and used to cover overdrafts, invoices and cheques of those companies.",
+       "text_es": "El acta sostiene que los desembolsos fueron transferidos en forma casi inmediata a ITTI, REDISA, REDIPRO, Vinanzas, Kaitel y Grupo Vázquez, y aplicados a sobregiros, facturas y cheques de esas sociedades.",
+       "refs": [
+        "rec:flow:0001",
+        "rec:flow:0002",
+        "rec:flow:0003",
+        "rec:flow:0004",
+        "rec:flow:0005",
+        "rec:flow:0006",
+        "rec:flow:0007",
+        "rec:flow:0014",
+        "rec:flow:0015",
+        "rec:flow:0016",
+        "rec:flow:0017",
+        "rec:flow:0018",
+        "rec:flow:0019",
+        "rec:flow:0021",
+        "rec:flow:0022",
+        "rec:flow:0023",
+        "rec:flow:0029",
+        "rec:flow:0030",
+        "rec:flow:0033",
+        "rec:flow:0035",
+        "rec:flow:0037"
+       ]
+      },
+      {
+       "text_en": "For the six 'Group C' companies the record alleges the same pattern in a single paragraph, without figures.",
+       "text_es": "Respecto de las seis empresas del 'grupo C', el acta atribuye el mismo patrón en un solo párrafo, sin cifras.",
+       "refs": [
+        "src:acta-p16"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Board and credit-committee minutes with votes and dissents for each operation; complete credit files and risk reports; the bank's credit policy and approval limits; account statements and SIPAP records behind the tracing.",
+     "evidence_needed_es": "Actas de Directorio y de comité de créditos con votos y disidencias por operación; carpetas de crédito e informes de riesgo completos; política crediticia y niveles de aprobación; extractos de cuenta y registros SIPAP que sustentan la trazabilidad.",
+     "strength": "well_supported_in_record",
+     "strength_reason_en": "Operation numbers, dates, amounts, terms and fund destinations are set out in detail. What the record does not contain is who approved each one.",
+     "strength_reason_es": "Constan con detalle los números de operación, fechas, montos, plazos y destino de los fondos. Lo que el acta no contiene es quién aprobó cada una."
+    },
+    {
+     "element_en": "A resulting patrimonial loss to the bank",
+     "element_es": "Perjuicio patrimonial resultante para el banco",
+     "alleged_facts": [
+      {
+       "text_en": "Stated exposures per borrower: MOWI Gs. 254,157 million; Grupo Hendy Gs. 252,521 million; Grupo M Gs. 237,106 million; FRANEDE about Gs. 314,001 million (garbled page); AIME risk balance Gs. 65,546 million.",
+       "text_es": "Exposiciones consignadas por deudor: MOWI Gs. 254.157 millones; Grupo Hendy Gs. 252.521 millones; Grupo M Gs. 237.106 millones; FRANEDE unos Gs. 314.001 millones (página con lectura defectuosa); AIME saldo riesgo de Gs. 65.546 millones.",
+       "refs": [
+        "src:acta-p03",
+        "src:acta-p04",
+        "src:acta-p07",
+        "src:acta-p12",
+        "src:acta-p15",
+        "rec:issue:0010"
+       ]
+      },
+      {
+       "text_en": "The record alleges that the real source of repayment was not the borrowers' own capacity but transfers from other group companies, funded in part by overdrafts and 72-hour cheques.",
+       "text_es": "El acta sostiene que la fuente real de repago no fue la capacidad propia de los deudores, sino transferencias de otras empresas del grupo, fondeadas en parte con sobregiros y cheques a 72 horas.",
+       "refs": [
+        "rec:flow:0008",
+        "rec:flow:0009",
+        "rec:flow:0010",
+        "rec:flow:0011",
+        "rec:flow:0012",
+        "rec:flow:0013",
+        "rec:flow:0020",
+        "rec:flow:0024",
+        "rec:flow:0025",
+        "rec:flow:0031",
+        "rec:flow:0032",
+        "rec:event:0061",
+        "rec:event:0063"
+       ]
+      },
+      {
+       "text_en": "MOWI's financial statements are said to show no capacity to generate ordinary income to service the debt.",
+       "text_es": "De los estados financieros de MOWI surgiría que no contaba con capacidad de generación ordinaria de ingresos para atender la deuda.",
+       "refs": [
+        "src:acta-p04"
+       ]
+      },
+      {
+       "text_en": "On 2 November 2026 the BCP ordered resolution of the bank because its solvency ratio was below 50% of the legal minimum.",
+       "text_es": "El 2 de noviembre de 2026 el BCP dispuso la resolución de la entidad por insuficiencia del índice de solvencia por debajo del 50% del mínimo legal.",
+       "refs": [
+        "rec:event:0067",
+        "src:acta-p01"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Expert accounting opinion on recoverable value at the date of each loan and at resolution; provisions required; the intervenors' asset valuation; how much of the bank's capital shortfall is attributable to these operations.",
+     "evidence_needed_es": "Pericia contable sobre el valor recuperable a la fecha de cada crédito y a la resolución; previsiones exigibles; valuación de activos de los interventores; proporción del déficit patrimonial atribuible a estas operaciones.",
+     "strength": "partly_supported",
+     "strength_reason_en": "Exposure is documented; loss is asserted rather than quantified. Totals track outstanding balances at inconsistent exchange rates, several loans were cancelled and nine were sold at face value. The framework found no Paraguayan decision on when related-party lending becomes a 'perjuicio patrimonial'.",
+     "strength_reason_es": "La exposición está documentada; el perjuicio se afirma pero no se cuantifica. Los totales reflejan saldos a tipos de cambio dispares, varias operaciones fueron canceladas y nueve se vendieron a valor nominal. El marco legal no halló jurisprudencia paraguaya sobre cuándo el crédito a vinculadas configura 'perjuicio patrimonial'."
+    },
+    {
+     "element_en": "Intent (at least dolo eventual) of each person",
+     "element_es": "Dolo (al menos eventual) de cada interviniente",
+     "alleged_facts": [
+      {
+       "text_en": "The record alleges that shares in the borrowers passed to individuals days before or after the first loans (FRANEDE 30/06/2025; TUIU 28/08/2025; MOWI 19/09/2025; Hendy and Grupo M 30/09/2025; AIME 27/01/2026).",
+       "text_es": "El acta sostiene que las acciones de las deudoras pasaron a personas físicas días antes o después de los primeros créditos (FRANEDE 30/06/2025; TUIU 28/08/2025; MOWI 19/09/2025; Hendy y Grupo M 30/09/2025; AIME 27/01/2026).",
+       "refs": [
+        "rec:event:0050",
+        "rec:event:0052",
+        "rec:event:0053",
+        "rec:event:0054",
+        "rec:event:0060"
+       ]
+      },
+      {
+       "text_en": "In October 2025 the bank asked to de-list MOWI, Hendy and Grupo M as related parties without supporting documents and, the record says, kept lending to them without a formal reply.",
+       "text_es": "En octubre de 2025 el banco solicitó dar de baja la vinculación de MOWI, Hendy y Grupo M sin documentación respaldatoria y, según el acta, siguió otorgándoles créditos sin respuesta formal.",
+       "refs": [
+        "rec:event:0055",
+        "src:acta-p02"
+       ]
+      },
+      {
+       "text_en": "Diagram notes describe the same twelve home-banking operators, said to be ITTI employees, on the borrowers' accounts (low-confidence reading).",
+       "text_es": "Notas de los diagramas refieren los mismos doce operadores de home banking, que serían funcionarios de ITTI, en las cuentas de las deudoras (lectura de baja certeza).",
+       "refs": [
+        "rec:role:0115",
+        "rec:role:0116",
+        "rec:role:0117",
+        "rec:role:0118",
+        "rec:role:0119",
+        "rec:role:0120"
+       ]
+      },
+      {
+       "text_en": "Rey says he received the 'Delirio Colectivo' email on 13 October 2025 and was concerned about sustainability from then until March 2026.",
+       "text_es": "Rey declara que recibió el correo 'Delirio Colectivo' el 13 de octubre de 2025 y que desde entonces, hasta marzo de 2026, le preocupaba la sostenibilidad del negocio.",
+       "refs": [
+        "rec:event:0056",
+        "src:acta-p21",
+        "src:acta-p22"
+       ]
+      },
+      {
+       "text_en": "Rey says each director also held a group-wide post and that Miguel Vázquez was the top decision-maker in the board and the group.",
+       "text_es": "Rey afirma que cada director ejercía además un cargo corporativo en el grupo y que Miguel Vázquez era el máximo decisor en el Directorio y en el grupo.",
+       "refs": [
+        "rec:role:0018",
+        "rec:role:0019",
+        "rec:role:0020",
+        "rec:role:0021",
+        "rec:role:0022",
+        "rec:role:0023",
+        "rec:role:0024",
+        "rec:role:0025",
+        "rec:role:0026",
+        "rec:role:0027",
+        "src:acta-p21"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Emails, chats and internal reports showing what each director knew and when; the 'Delirio Colectivo' attachment with metadata; testimony of risk, treasury and compliance staff; supervisor notes received by the board.",
+     "evidence_needed_es": "Correos, mensajes e informes internos que muestren qué sabía cada director y desde cuándo; el adjunto 'Delirio Colectivo' con sus metadatos; testimonios de las áreas de riesgo, tesorería y cumplimiento; notas del supervisor recibidas por el Directorio.",
+     "strength": "partly_supported",
+     "strength_reason_en": "The pattern supports an inference of knowledge, but it is collective. Nothing in the record ties a named director to a named approval, and the strongest knowledge evidence comes from a co-accused.",
+     "strength_reason_es": "El patrón permite inferir conocimiento, pero en forma colectiva. Nada en el acta vincula a un director determinado con una aprobación determinada, y la prueba más fuerte de conocimiento proviene de un coimputado."
+    },
+    {
+     "element_en": "Especially grave case (inc. 2, aggravated frame)",
+     "element_es": "Caso especialmente grave (inc. 2°, marco agravado)",
+     "alleged_facts": [
+      {
+       "text_en": "The six itemised borrowers carry stated exposures of hundreds of thousands of millions of guaraníes each, built up over about a year.",
+       "text_es": "Las seis deudoras detalladas registran exposiciones de cientos de miles de millones de guaraníes cada una, acumuladas en alrededor de un año.",
+       "refs": [
+        "src:acta-p03",
+        "src:acta-p04",
+        "src:acta-p07",
+        "src:acta-p12",
+        "src:acta-p15"
+       ]
+      },
+      {
+       "text_en": "Rey puts the related and non-related loans used to defer expenses at about USD 900 million.",
+       "text_es": "Rey estima en unos USD 900 millones los créditos vinculados y no vinculados utilizados para diferir gastos.",
+       "refs": [
+        "rec:flow:0075",
+        "src:acta-p22"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Case law on what counts as 'especially grave' (the BNT judgments were located but not read); total loss figure from the resolution process.",
+     "evidence_needed_es": "Jurisprudencia sobre qué se entiende por 'especialmente grave' (los fallos del caso BNT fueron ubicados pero no leídos); cifra total del perjuicio según el proceso de resolución.",
+     "strength": "legally_uncertain",
+     "strength_reason_en": "Scale is alleged, but the record does not invoke inc. 2 and the framework has no primary authority on its criteria.",
+     "strength_reason_es": "La magnitud está alegada, pero el acta no invoca el inc. 2° y el marco legal carece de fuente primaria sobre sus criterios."
+    }
+   ],
+   "role_notes": [
+    {
+     "role_en": "Board member who approved",
+     "role_es": "Director que aprobó",
+     "note_en": "The natural author. Exposure turns on proof of the vote and of knowledge of the borrower's condition and the destination of funds. Co-authorship (Art. 29 inc. 2) needs a shared plan, not just a shared title.",
+     "note_es": "Autor natural. Su situación depende de probar el voto y el conocimiento de la condición del deudor y del destino de los fondos. La coautoría (Art. 29 inc. 2°) exige un plan común, no solo el cargo compartido."
+    },
+    {
+     "role_en": "Board member who did not vote or had left",
+     "role_es": "Director que no votó o ya había cesado",
+     "note_en": "The 'no evitara' form could apply, but the record charges 'causara'. Rey says he left in July 2026 and took no part in some loans; that is a matter of dates and minutes.",
+     "note_es": "Podría caber la modalidad 'no evitara', pero el acta imputa 'causara'. Rey afirma que salió en julio de 2026 y que no intervino en algunos créditos; es cuestión de fechas y actas."
+    },
+    {
+     "role_en": "Statutory auditor (síndico)",
+     "role_es": "Síndico",
+     "note_en": "An oversight role, so the natural theory is omission. The legal source of the duty was not retrieved. The diagrams also show him as síndico of two borrowers (low confidence), which needs confirming.",
+     "note_es": "Función de fiscalización, por lo que la hipótesis natural es la omisión. La fuente legal del deber no fue obtenida. Los diagramas lo muestran además como síndico de dos deudoras (baja certeza), lo que debe confirmarse."
+    },
+    {
+     "role_en": "Group executive with a dual role",
+     "role_es": "Ejecutivo del grupo con doble función",
+     "note_en": "The dual roles described by Rey support an inference of knowledge and a conflict of interest. So far they rest on his statement alone.",
+     "note_es": "Los dobles roles descritos por Rey permiten inferir conocimiento y conflicto de intereses. Por ahora se apoyan únicamente en su declaración."
+    },
+    {
+     "role_en": "Nominal shareholder or officer of a borrower",
+     "role_es": "Accionista nominal o directivo de una deudora",
+     "note_en": "Owes no duty to the bank, so cannot be author. Possible instigator or accomplice (Arts. 30-32) with a mitigated frame; requires proof of knowledge that the board was breaching its duty. The record says only that they 'would have participated'.",
+     "note_es": "No tiene deber frente al banco, por lo que no puede ser autor. Eventual instigador o cómplice (Arts. 30 a 32) con marco atenuado; exige probar que conocía la infracción del deber por el Directorio. El acta solo dice que 'habrían participado'."
+    },
+    {
+     "role_en": "Officer of a recipient company",
+     "role_es": "Directivo de una sociedad receptora",
+     "note_en": "Same accessory analysis; receipt of funds shows benefit, not by itself knowledge.",
+     "note_es": "Mismo análisis de participación; la recepción de fondos demuestra beneficio, no por sí sola conocimiento."
+    }
+   ],
+   "open_questions_en": [
+    "Who approved each operation, and are there recorded dissents?",
+    "Is an unpaid or doubtful loan already a 'perjuicio patrimonial', or only once written off?",
+    "Does BCP approval of the 2024 feasibility plan (per Rey) cover lending of this kind?",
+    "Which word does the post-2008 text of inc. 1 use: 'obligación' or 'responsabilidad'?"
+   ],
+   "open_questions_es": [
+    "¿Quién aprobó cada operación y existen disidencias asentadas?",
+    "¿Un crédito impago o dudoso ya constituye 'perjuicio patrimonial', o solo cuando se castiga?",
+    "¿La aprobación del plan de factibilidad de 2024 por el BCP (según Rey) alcanza a créditos de este tipo?",
+    "¿Qué término emplea el inc. 1° posterior a 2008: 'obligación' o 'responsabilidad'?"
+   ]
+  },
+  {
+   "id": "art179",
+   "article": "Art. 179 (with Art. 178 inc. 2)",
+   "name_en": "Improper conduct in situations of crisis",
+   "name_es": "Conducta indebida en situaciones de crisis",
+   "penalty_en": "Up to five years or a fine; negligent variants up to two years or a fine. Punishable only if the Art. 178 inc. 2 condition is met. The record relies on inc. 1 núm. 6 a). Press reports say Art. 178 (conduct leading to bankruptcy) was added for one defendant; not verified.",
+   "penalty_es": "Hasta cinco años de pena privativa de libertad o multa; variantes culposas, hasta dos años o multa. Solo es punible si se cumple la condición del Art. 178 inc. 2°. El acta invoca el inc. 1°, núm. 6, letra a). La prensa informa que se agregó el Art. 178 (conducta conducente a la quiebra) respecto de un imputado; no verificado.",
+   "elements": [
+    {
+     "element_en": "Insolvency or illiquidity, imminent or already occurred, at the time of the conduct",
+     "element_es": "Insolvencia o iliquidez inminente o acontecida al tiempo de la conducta",
+     "alleged_facts": [
+      {
+       "text_en": "The BCP ordered resolution on 2 November 2026 for solvency below 50% of the legal minimum.",
+       "text_es": "El BCP dispuso la resolución el 2 de noviembre de 2026 por índice de solvencia inferior al 50% del mínimo legal.",
+       "refs": [
+        "rec:event:0067",
+        "src:acta-p01"
+       ]
+      },
+      {
+       "text_en": "Rey says the attachment to the 13 October 2025 email showed the bank's 'real liquidity channels', and that large inflows were not retained.",
+       "text_es": "Rey afirma que el adjunto del correo del 13 de octubre de 2025 mostraba los 'verdaderos canales de liquidez' del banco y que ingresaba mucho flujo pero no se retenía.",
+       "refs": [
+        "rec:event:0056",
+        "src:acta-p21"
+       ]
+      },
+      {
+       "text_en": "The record's tracing shows repayments funded by overdrafts and 72-hour cheques drawn on other banks.",
+       "text_es": "La trazabilidad del acta muestra repagos fondeados con sobregiros y cheques a 72 horas con cargo a otros bancos.",
+       "refs": [
+        "rec:flow:0026",
+        "rec:flow:0027",
+        "rec:flow:0028",
+        "rec:flow:0031",
+        "rec:flow:0032",
+        "src:acta-p11",
+        "src:acta-p14"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Daily liquidity and solvency reports for 2025-2026; BCP inspection reports; the regularisation history; an expert opinion dating the onset of insolvency or illiquidity.",
+     "evidence_needed_es": "Informes diarios de liquidez y solvencia de 2025-2026; informes de inspección del BCP; antecedentes de regularización; pericia que fije el inicio de la insolvencia o iliquidez.",
+     "strength": "partly_supported",
+     "strength_reason_en": "The end state is documented. When the crisis became 'imminent' is not stated by the prosecution; the best dating evidence comes from Rey.",
+     "strength_reason_es": "El estado final está documentado. La parte fiscal no precisa desde cuándo la crisis era 'inminente'; el mejor indicio temporal proviene de Rey."
+    },
+    {
+     "element_en": "Drawing up or altering balance sheets, contrary to law, so that the real patrimonial position is hard to know (núm. 6 a)",
+     "element_es": "Elaborar o modificar balances, en contra de la ley, de modo que se dificulte conocer la situación patrimonial real (núm. 6, letra a)",
+     "alleged_facts": [
+      {
+       "text_en": "The record alleges that on 15 June 2026 the bank sold nine loans of MOWI, Grupo Hendy and Grupo M to Vinanzas for USD 74,418,418.12, documented as a cash sale.",
+       "text_es": "El acta sostiene que el 15 de junio de 2026 el banco vendió a Vinanzas nueve créditos de MOWI, Grupo Hendy y Grupo M por USD 74.418.418,12, operación instrumentada como venta al contado.",
+       "refs": [
+        "rec:flow:0060",
+        "rec:event:0065",
+        "src:acta-p17",
+        "src:acta-p18"
+       ]
+      },
+      {
+       "text_en": "The record alleges that the cash traced back to five new bank loans of 11 and 15 June 2026 totalling USD 81,841,000 (SATEC, HD Invest, Technoma, La Tropa Fletes, Factopar). Several links in the chain are diagram small print read with low confidence.",
+       "text_es": "El acta sostiene que el dinero provino de cinco nuevos préstamos del propio banco, del 11 y 15 de junio de 2026, por un total de USD 81.841.000 (SATEC, HD Invest, Technoma, La Tropa Fletes, Factopar). Varios eslabones del circuito surgen de la letra chica de un diagrama, leída con baja certeza.",
+       "refs": [
+        "rec:loan:0036",
+        "rec:loan:0037",
+        "rec:loan:0038",
+        "rec:loan:0039",
+        "rec:loan:0040",
+        "rec:flow:0041",
+        "rec:flow:0042",
+        "rec:flow:0043",
+        "rec:flow:0044",
+        "rec:flow:0045",
+        "rec:flow:0046",
+        "rec:flow:0047",
+        "src:acta-p17"
+       ]
+      },
+      {
+       "text_en": "The record cites a Superintendency finding that Vinanzas had no genuine funds of its own on 14 June 2026, the day before the purchase.",
+       "text_es": "El acta cita una constatación de la Superintendencia de Bancos según la cual Vinanzas no contaba con recursos genuinos propios el 14 de junio de 2026, día previo a la compra.",
+       "refs": [
+        "rec:event:0064",
+        "src:acta-p18"
+       ]
+      },
+      {
+       "text_en": "The record states that this 'would prevent knowing the real state' of the bank's patrimonial position, because the portfolio was in effect bought by the bank itself.",
+       "text_es": "El acta afirma que esta situación 'impediría conocer el estado real' de la situación patrimonial del banco, pues la cartera habría sido adquirida, en los hechos, por la propia entidad.",
+       "refs": [
+        "src:acta-p19"
+       ]
+      },
+      {
+       "text_en": "All nine loans sold appear in the record's table in client category 1a, with signature-only collateral.",
+       "text_es": "Los nueve créditos vendidos figuran en el cuadro del acta con categoría de cliente 1a y garantía a sola firma.",
+       "refs": [
+        "rec:flow:0062",
+        "rec:flow:0063",
+        "rec:flow:0064",
+        "rec:flow:0065",
+        "rec:flow:0066",
+        "rec:flow:0067",
+        "rec:flow:0068",
+        "rec:flow:0069",
+        "rec:flow:0070",
+        "src:acta-p18"
+       ]
+      },
+      {
+       "text_en": "The record alleges that the bank reported FRANEDE's loans as mortgage-backed on the basis of a commitment letter that was not validly instrumented; the bank later excluded those mortgages.",
+       "text_es": "El acta sostiene que el banco reportó los préstamos de FRANEDE como garantizados con hipoteca sobre la base de una carta de compromiso no instrumentada debidamente; la entidad luego excluyó esas hipotecas.",
+       "refs": [
+        "rec:loan:0023",
+        "rec:loan:0024",
+        "rec:loan:0025",
+        "rec:loan:0026",
+        "rec:loan:0027",
+        "rec:loan:0028",
+        "src:acta-p14"
+       ]
+      }
+     ],
+     "evidence_needed_en": "The balance sheets and regulatory returns for June 2026 onwards; who prepared, signed and approved them; the entries booking the sale; external auditor working papers; the BCP accounting and portfolio-sale rules said to be breached (not retrieved).",
+     "evidence_needed_es": "Balances e informes regulatorios desde junio de 2026; quién los elaboró, firmó y aprobó; asientos de registración de la venta; papeles de trabajo de la auditoría externa; normas contables y de venta de cartera del BCP supuestamente infringidas (no obtenidas).",
+     "strength": "partly_supported",
+     "strength_reason_en": "The underlying transaction is described in detail, but the record identifies no specific balance sheet, date or signatory, and the rule breached was not read as primary text.",
+     "strength_reason_es": "La operación subyacente se describe con detalle, pero el acta no individualiza ningún balance, fecha ni firmante, y la norma infringida no fue leída en su texto original."
+    },
+    {
+     "element_en": "Objective condition of punishability (Art. 178 inc. 2): cessation of payments or declared bankruptcy, with a link that cannot be excluded",
+     "element_es": "Condición objetiva de punibilidad (Art. 178 inc. 2°): cesación de pagos o quiebra declarada, con una conexión que no pueda excluirse",
+     "alleged_facts": [
+      {
+       "text_en": "The resolution ground cited in the record is Art. 13 b) of Ley 2334/03 (solvency), not Art. 13 a) (suspension of payments). The record mentions no bankruptcy.",
+       "text_es": "La causal de resolución citada en el acta es el Art. 13 inc. b) de la Ley 2334/03 (solvencia), no el inc. a) (suspensión de pagos). El acta no menciona quiebra alguna.",
+       "refs": [
+        "rec:event:0067",
+        "src:acta-p01"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Proof of obligations actually unpaid when due (clearing failures, unpaid deposits); the effects of the resolution order on liabilities; a reasoned legal position on whether resolution equals 'cesación de pagos'.",
+     "evidence_needed_es": "Prueba de obligaciones efectivamente impagas a su vencimiento (rechazos en compensación, depósitos no pagados); efectos de la resolución sobre los pasivos; postura jurídica fundada sobre si la resolución equivale a 'cesación de pagos'.",
+     "strength": "legally_uncertain",
+     "strength_reason_en": "The statute does not say whether a resolution process under Ley 2334/03 satisfies the condition, and under Ley 861/96 Art. 152 only the BCP may seek a bank's bankruptcy, after liquidation.",
+     "strength_reason_es": "La ley no establece si un proceso de resolución bajo la Ley 2334/03 satisface la condición y, según el Art. 152 de la Ley 861/96, solo el BCP puede pedir la quiebra de un banco, tras la liquidación."
+    }
+   ],
+   "role_notes": [
+    {
+     "role_en": "Board member who approved the accounts or the sale",
+     "role_es": "Director que aprobó los estados contables o la venta",
+     "note_en": "Authorship fits those who draw up or approve the balance sheet. Approving the transaction is not the same as drawing up the accounts; both acts need proof.",
+     "note_es": "La autoría corresponde a quienes elaboran o aprueban el balance. Aprobar la operación no equivale a elaborar los estados contables; ambos actos requieren prueba."
+    },
+    {
+     "role_en": "Statutory auditor (síndico)",
+     "role_es": "Síndico",
+     "note_en": "Reviewing the accounts is the core of the role, so this count is closer to him than Art. 192. The negligent variants (inc. 2) cover only some sub-numbers, not núm. 6.",
+     "note_es": "La revisión de los estados contables es el núcleo de su función, por lo que este hecho punible le resulta más próximo que el Art. 192. Las variantes culposas (inc. 2°) alcanzan solo a algunos numerales, no al núm. 6."
+    },
+    {
+     "role_en": "General manager and accountant",
+     "role_es": "Gerente general y contador",
+     "note_en": "Jointly responsible for the entries under Ley 1034/83 Art. 77. Neither is named in the record.",
+     "note_es": "Responsables solidarios de los asientos según el Art. 77 de la Ley 1034/83. Ninguno figura individualizado en el acta."
+    },
+    {
+     "role_en": "Officers of borrower or recipient companies",
+     "role_es": "Directivos de sociedades deudoras o receptoras",
+     "note_en": "Remote from this offence, which concerns the bank's own balance sheets; at most accessories if they knowingly supplied the circular funding.",
+     "note_es": "Ajenos a este tipo, referido a los balances del propio banco; a lo sumo partícipes si aportaron a sabiendas al financiamiento circular."
+    }
+   ],
+   "open_questions_en": [
+    "Does a resolution under Ley 2334/03 Art. 13 b) count as 'cesación de pagos'?",
+    "Which balance sheet, of what date, is said to be misleading?",
+    "From what date was insolvency or illiquidity 'imminent'?"
+   ],
+   "open_questions_es": [
+    "¿La resolución fundada en el Art. 13 inc. b) de la Ley 2334/03 equivale a 'cesación de pagos'?",
+    "¿Qué balance, de qué fecha, sería el que oscurece la situación?",
+    "¿Desde qué fecha la insolvencia o iliquidez era 'inminente'?"
+   ]
+  },
+  {
+   "id": "art187",
+   "article": "Art. 187",
+   "name_en": "Fraud (attempt; reportedly recast as aggravated)",
+   "name_es": "Estafa (tentativa; según la prensa, recalificada como agravada)",
+   "penalty_en": "Up to five years or a fine (inc. 1); attempt punishable (inc. 2); especially grave cases up to eight years (inc. 3). The record charges attempt under inc. 1 and 2. Press reports say the appeals court recast it as consummated aggravated fraud; that ruling was not read.",
+   "penalty_es": "Hasta cinco años o multa (inc. 1°); la tentativa es punible (inc. 2°); casos especialmente graves, hasta ocho años (inc. 3°). El acta imputa tentativa conforme a los incs. 1° y 2°. La prensa informa que el Tribunal de Apelación la recalificó como estafa agravada consumada; esa resolución no fue leída.",
+   "elements": [
+    {
+     "element_en": "A false statement about a fact",
+     "element_es": "Declaración falsa sobre un hecho",
+     "alleged_facts": [
+      {
+       "text_en": "The portfolio sale was documented as a cash sale although, the record alleges, the price was funded indirectly by the bank itself.",
+       "text_es": "La venta de cartera fue instrumentada como venta al contado aunque, según el acta, el precio fue financiado indirectamente por la propia entidad.",
+       "refs": [
+        "rec:flow:0060",
+        "rec:flow:0061",
+        "src:acta-p17",
+        "src:acta-p19"
+       ]
+      },
+      {
+       "text_en": "The bank asked to de-list three borrowers as related parties without supporting documents; the Superintendency considered the de-linking 'merely documentary'.",
+       "text_es": "El banco solicitó dar de baja la vinculación de tres deudoras sin documentación respaldatoria; la Superintendencia consideró la desvinculación 'meramente documental'.",
+       "refs": [
+        "rec:event:0055",
+        "src:acta-p02"
+       ]
+      },
+      {
+       "text_en": "The bank reported mortgage collateral for FRANEDE's loans that was not validly constituted.",
+       "text_es": "El banco reportó garantías hipotecarias de los préstamos de FRANEDE que no estaban válidamente constituidas.",
+       "refs": [
+        "src:acta-p14"
+       ]
+      },
+      {
+       "text_en": "The record alleges a mismatch between the declared and the real use of the loans.",
+       "text_es": "El acta señala inconsistencia entre el destino declarado y el destino real de los créditos.",
+       "refs": [
+        "src:acta-p02",
+        "src:acta-p14"
+       ]
+      },
+      {
+       "text_en": "Rey says consecutive-numbered receipts from three companies of a 'dead portfolio' were used to justify the cash with which Grupo Vázquez bought CDAs in 2025.",
+       "text_es": "Rey afirma que recibos de numeración consecutiva de tres empresas de una 'cartera muerta' se usaron para justificar el efectivo con que el Grupo Vázquez adquirió CDA en 2025.",
+       "refs": [
+        "rec:flow:0073",
+        "src:acta-p22"
+       ]
+      }
+     ],
+     "evidence_needed_en": "The actual documents carrying each statement: the sale contract and its notification to the BCP, notes to the SIB, credit-registry reports, loan applications, the receipts and compliance file for the CDAs.",
+     "evidence_needed_es": "Los documentos que contienen cada declaración: contrato de venta y su notificación al BCP, notas a la SIB, reportes a la Central de Información, solicitudes de crédito, los recibos y el legajo de cumplimiento de los CDA.",
+     "strength": "partly_supported",
+     "strength_reason_en": "Several candidate falsehoods are alleged, but the record does not say which one founds the fraud count.",
+     "strength_reason_es": "Se alegan varias falsedades posibles, pero el acta no indica cuál de ellas sustenta la imputación por estafa."
+    },
+    {
+     "element_en": "An error caused in another person (who is the deceived party?)",
+     "element_es": "Error producido en otra persona (¿quién es el engañado?)",
+     "alleged_facts": [
+      {
+       "text_en": "The record does not name a deceived party. It describes the supervisor as the addressee of the de-listing request and of the collateral reports.",
+       "text_es": "El acta no individualiza al engañado. Describe al supervisor como destinatario del pedido de desvinculación y de los reportes de garantías.",
+       "refs": [
+        "src:acta-p02",
+        "src:acta-p14",
+        "src:acta-p19"
+       ]
+      },
+      {
+       "text_en": "The record stresses that the bank's assets were mainly funds taken from the public, which points to depositors as a possible deceived group.",
+       "text_es": "El acta destaca que los activos del banco provenían principalmente de recursos captados del público, lo que apunta a los depositantes como posible grupo engañado.",
+       "refs": [
+        "src:acta-p01",
+        "src:acta-p10"
+       ]
+      },
+      {
+       "text_en": "Rey says a co-shareholder, OTP, was negotiating a larger stake in mid-2026, which makes an investor a further candidate.",
+       "text_es": "Rey refiere que un coaccionista, OTP, negociaba aumentar su participación a mediados de 2026, lo que suma a un inversor como otro posible engañado.",
+       "refs": [
+        "rec:role:0029",
+        "src:acta-p23"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Evidence of reliance: what the SIB, depositors, CDA holders or investors were told and what they did because of it; witness statements from each group.",
+     "evidence_needed_es": "Prueba de la confianza depositada: qué se informó a la SIB, a depositantes, tenedores de CDA o inversores y qué hicieron en consecuencia; testimoniales de cada grupo.",
+     "strength": "thin",
+     "strength_reason_en": "No deceived person is identified. On the record's own account the supervisor was not misled (it kept treating the companies as related), which weakens the supervisor theory.",
+     "strength_reason_es": "No se identifica a ningún engañado. Según el propio acta, el supervisor no fue inducido a error (siguió considerando vinculadas a las empresas), lo que debilita esa hipótesis."
+    },
+    {
+     "element_en": "A disposition of assets by the deceived person and a resulting patrimonial loss (or, for attempt, acts immediately preceding it)",
+     "element_es": "Disposición patrimonial del engañado y perjuicio consiguiente (o, en la tentativa, actos inmediatamente anteriores)",
+     "alleged_facts": [
+      {
+       "text_en": "Rey says that in 2026 it was intended ('se pretendía') to capitalise the bank with the CDAs; an uncompleted plan is consistent with a charge of attempt.",
+       "text_es": "Rey afirma que en 2026 'se pretendía' capitalizar el banco con esos CDA; un plan no concretado es compatible con la imputación por tentativa.",
+       "refs": [
+        "rec:flow:0073",
+        "src:acta-p22"
+       ]
+      },
+      {
+       "text_en": "The only disposition the prosecution's part of the record describes is the bank's own lending and the portfolio assignment.",
+       "text_es": "La única disposición que describe la parte fiscal del acta son los propios créditos del banco y la cesión de cartera.",
+       "refs": [
+        "rec:flow:0060",
+        "rec:loan:0036",
+        "rec:loan:0037",
+        "rec:loan:0038",
+        "rec:loan:0039",
+        "rec:loan:0040",
+        "src:acta-p17"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Identification of victims and amounts; for the supervisor theory, any BCP or deposit-fund outlay induced by the statements; for the capital theory, the capitalisation filings.",
+     "evidence_needed_es": "Identificación de víctimas y montos; en la hipótesis del supervisor, eventuales desembolsos del BCP o del fondo de garantía inducidos por las declaraciones; en la hipótesis del capital, las presentaciones de capitalización.",
+     "strength": "thin",
+     "strength_reason_en": "The record describes no disposition by a deceived third party. If the bank is the one who disposed, the theory clashes with Art. 192, because the board that allegedly knew cannot also have been in error.",
+     "strength_reason_es": "El acta no describe disposición alguna de un tercero engañado. Si quien dispuso fue el banco, la hipótesis colisiona con el Art. 192, pues el Directorio que supuestamente conocía no puede a la vez haber estado en error."
+    },
+    {
+     "element_en": "Consummated and especially grave form (inc. 3), as reportedly applied on appeal",
+     "element_es": "Forma consumada y especialmente grave (inc. 3°), según lo resuelto en apelación de acuerdo con la prensa",
+     "alleged_facts": [
+      {
+       "text_en": "The record itself classifies the conduct only as attempt.",
+       "text_es": "El propio acta califica la conducta únicamente como tentativa.",
+       "refs": [
+        "rec:event:0068",
+        "src:acta-p19"
+       ]
+      }
+     ],
+     "evidence_needed_en": "The appeals ruling; the facts it relied on for consummation; the outcome of defence challenges under CPP Arts. 456-457.",
+     "evidence_needed_es": "La resolución del Tribunal de Apelación; los hechos en que fundó la consumación; el resultado de las impugnaciones de las defensas al amparo de los Arts. 456 y 457 del CPP.",
+     "strength": "legally_uncertain",
+     "strength_reason_en": "Known from press only; the change reportedly came from the court and is contested.",
+     "strength_reason_es": "Solo se conoce por la prensa; el cambio habría provenido del tribunal y está controvertido."
+    }
+   ],
+   "role_notes": [
+    {
+     "role_en": "Whoever made or signed the representation",
+     "role_es": "Quien formuló o suscribió la declaración",
+     "note_en": "The natural author. The record does not say who signed the de-listing request, the sale contract or the collateral reports.",
+     "note_es": "Autor natural. El acta no indica quién suscribió el pedido de desvinculación, el contrato de venta ni los reportes de garantías."
+    },
+    {
+     "role_en": "Board member",
+     "role_es": "Director",
+     "note_en": "Co-authorship needs proof that the false statement was part of a shared plan; board membership alone does not show it.",
+     "note_es": "La coautoría exige probar que la declaración falsa formaba parte de un plan común; la sola integración del Directorio no lo demuestra."
+    },
+    {
+     "role_en": "Statutory auditor (síndico)",
+     "role_es": "Síndico",
+     "note_en": "Fraud has no negligent form; an auditor who failed to notice is outside it.",
+     "note_es": "La estafa no admite modalidad culposa; el síndico que no advirtió queda fuera del tipo."
+    },
+    {
+     "role_en": "Borrower-company officer or nominal shareholder",
+     "role_es": "Directivo o accionista nominal de una deudora",
+     "note_en": "Could be author only on the theory that the bank was deceived by a false stated purpose, which the prosecution's own case undermines; otherwise a possible accomplice.",
+     "note_es": "Solo podría ser autor en la hipótesis de que el banco fue engañado con un destino falso, que la propia tesis fiscal debilita; de lo contrario, eventual cómplice."
+    }
+   ],
+   "open_questions_en": [
+    "Who is the deceived party: supervisor, depositors, investors or the bank?",
+    "What act of 'attempt' does the record have in mind?",
+    "On what facts did the appeals court treat the fraud as consummated?"
+   ],
+   "open_questions_es": [
+    "¿Quién es el engañado: el supervisor, los depositantes, los inversores o el banco?",
+    "¿A qué acto de 'tentativa' se refiere el acta?",
+    "¿Sobre qué hechos el Tribunal de Apelación tuvo por consumada la estafa?"
+   ]
+  },
+  {
+   "id": "art181",
+   "article": "Art. 181",
+   "name_en": "Breach of the duty to keep commercial books",
+   "name_es": "Violación del deber de llevar libros de comercio",
+   "penalty_en": "Up to five years or a fine; negligent commission up to one year or a fine. The record relies on inc. 1 núm. 3 a). The cross-reference in inc. 3 (to Art. 178 inc. 2 or to inc. 1 núm. 3) is unresolved in the framework.",
+   "penalty_es": "Hasta cinco años o multa; comisión culposa, hasta un año o multa. El acta invoca el inc. 1°, núm. 3, letra a). La remisión del inc. 3° (al Art. 178 inc. 2° o al inc. 1° núm. 3) no quedó resuelta en el marco legal.",
+   "elements": [
+    {
+     "element_en": "A legal duty to keep books and draw up balance sheets",
+     "element_es": "Deber legal de llevar libros y elaborar balances",
+     "alleged_facts": [
+      {
+       "text_en": "The record describes Ueno Bank as a financial-system entity whose main business is taking funds from the public and lending them.",
+       "text_es": "El acta describe a Ueno Bank como entidad del sistema financiero cuya actividad principal es captar recursos del público y colocarlos en préstamos.",
+       "refs": [
+        "src:acta-p01"
+       ]
+      }
+     ],
+     "evidence_needed_en": "The bank's accounting manual and the SIB accounting rules in force; identification of the persons legally responsible for the books.",
+     "evidence_needed_es": "Manual contable del banco y normas contables de la SIB vigentes; individualización de los responsables legales de los libros.",
+     "strength": "well_supported_in_record",
+     "strength_reason_en": "A bank is plainly obliged to keep books (Ley 1034/83 Arts. 74-85 and supervisory rules). Who personally bore the duty is a separate question.",
+     "strength_reason_es": "Un banco está claramente obligado a llevar contabilidad (Arts. 74 a 85 de la Ley 1034/83 y normas del supervisor). Quién cargaba personalmente con el deber es cuestión aparte."
+    },
+    {
+     "element_en": "Balance sheets drawn up, contrary to law, in a way that hinders knowledge of the real patrimonial position (núm. 3 a)",
+     "element_es": "Balances elaborados, en contra de la ley, de manera que se dificulte conocer la situación patrimonial real (núm. 3, letra a)",
+     "alleged_facts": [
+      {
+       "text_en": "The record alleges that on 15 June 2026 the bank sold nine loans of MOWI, Grupo Hendy and Grupo M to Vinanzas for USD 74,418,418.12, documented as a cash sale.",
+       "text_es": "El acta sostiene que el 15 de junio de 2026 el banco vendió a Vinanzas nueve créditos de MOWI, Grupo Hendy y Grupo M por USD 74.418.418,12, operación instrumentada como venta al contado.",
+       "refs": [
+        "rec:flow:0060",
+        "rec:event:0065",
+        "src:acta-p17",
+        "src:acta-p18"
+       ]
+      },
+      {
+       "text_en": "The record alleges that the cash traced back to five new bank loans of 11 and 15 June 2026 totalling USD 81,841,000 (SATEC, HD Invest, Technoma, La Tropa Fletes, Factopar). Several links in the chain are diagram small print read with low confidence.",
+       "text_es": "El acta sostiene que el dinero provino de cinco nuevos préstamos del propio banco, del 11 y 15 de junio de 2026, por un total de USD 81.841.000 (SATEC, HD Invest, Technoma, La Tropa Fletes, Factopar). Varios eslabones del circuito surgen de la letra chica de un diagrama, leída con baja certeza.",
+       "refs": [
+        "rec:loan:0036",
+        "rec:loan:0037",
+        "rec:loan:0038",
+        "rec:loan:0039",
+        "rec:loan:0040",
+        "rec:flow:0041",
+        "rec:flow:0042",
+        "rec:flow:0043",
+        "rec:flow:0044",
+        "rec:flow:0045",
+        "rec:flow:0046",
+        "rec:flow:0047",
+        "src:acta-p17"
+       ]
+      },
+      {
+       "text_en": "The record cites a Superintendency finding that Vinanzas had no genuine funds of its own on 14 June 2026, the day before the purchase.",
+       "text_es": "El acta cita una constatación de la Superintendencia de Bancos según la cual Vinanzas no contaba con recursos genuinos propios el 14 de junio de 2026, día previo a la compra.",
+       "refs": [
+        "rec:event:0064",
+        "src:acta-p18"
+       ]
+      },
+      {
+       "text_en": "The record states that this 'would prevent knowing the real state' of the bank's patrimonial position, because the portfolio was in effect bought by the bank itself.",
+       "text_es": "El acta afirma que esta situación 'impediría conocer el estado real' de la situación patrimonial del banco, pues la cartera habría sido adquirida, en los hechos, por la propia entidad.",
+       "refs": [
+        "src:acta-p19"
+       ]
+      },
+      {
+       "text_en": "All nine loans sold appear in the record's table in client category 1a, with signature-only collateral.",
+       "text_es": "Los nueve créditos vendidos figuran en el cuadro del acta con categoría de cliente 1a y garantía a sola firma.",
+       "refs": [
+        "rec:flow:0062",
+        "rec:flow:0063",
+        "rec:flow:0064",
+        "rec:flow:0065",
+        "rec:flow:0066",
+        "rec:flow:0067",
+        "rec:flow:0068",
+        "rec:flow:0069",
+        "rec:flow:0070",
+        "src:acta-p18"
+       ]
+      },
+      {
+       "text_en": "The record alleges that the bank reported FRANEDE's loans as mortgage-backed on the basis of a commitment letter that was not validly instrumented; the bank later excluded those mortgages.",
+       "text_es": "El acta sostiene que el banco reportó los préstamos de FRANEDE como garantizados con hipoteca sobre la base de una carta de compromiso no instrumentada debidamente; la entidad luego excluyó esas hipotecas.",
+       "refs": [
+        "rec:loan:0023",
+        "rec:loan:0024",
+        "rec:loan:0025",
+        "rec:loan:0026",
+        "rec:loan:0027",
+        "rec:loan:0028",
+        "src:acta-p14"
+       ]
+      },
+      {
+       "text_en": "Three borrowers were never declared as related although the Superintendency found sufficient elements to conclude that they were.",
+       "text_es": "Tres deudoras nunca fueron declaradas vinculadas pese a que la Superintendencia halló elementos suficientes para concluir que lo eran.",
+       "refs": [
+        "src:acta-p10"
+       ]
+      },
+      {
+       "text_en": "Rey says group expenses were turned into related and non-related loans 'with the aim of deferring those expenses'.",
+       "text_es": "Rey afirma que gastos del grupo se convirtieron en créditos vinculados y no vinculados 'con el objetivo de diferir esos gastos'.",
+       "refs": [
+        "rec:flow:0075",
+        "src:acta-p22"
+       ]
+      }
+     ],
+     "evidence_needed_en": "The balance sheets themselves; classification and provisioning rules (not retrieved); expert restatement of the accounts with the sale reversed and the loans properly classified.",
+     "evidence_needed_es": "Los balances mismos; normas de clasificación y previsiones (no obtenidas); pericia que reexprese los estados contables con la venta revertida y los créditos correctamente clasificados.",
+     "strength": "partly_supported",
+     "strength_reason_en": "The facts that would distort the accounts are alleged in detail; the accounts are not in the record and the specific rule breached is unverified.",
+     "strength_reason_es": "Los hechos que distorsionarían los estados contables están alegados con detalle; los estados no obran en el acta y la norma concreta infringida no está verificada."
+    },
+    {
+     "element_en": "Intent, or negligence for the lesser form (inc. 2)",
+     "element_es": "Dolo, o culpa para la forma atenuada (inc. 2°)",
+     "alleged_facts": [
+      {
+       "text_en": "The record alleges the sale to Vinanzas was chosen after the supervisor persisted in treating the three borrowers as related.",
+       "text_es": "El acta sostiene que se optó por la venta a Vinanzas ante la persistencia del supervisor en considerar vinculadas a las tres deudoras.",
+       "refs": [
+        "src:acta-p17"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Internal communications on why the sale was structured as it was; who designed the funding chain.",
+     "evidence_needed_es": "Comunicaciones internas sobre por qué se estructuró así la venta; quién diseñó la cadena de financiamiento.",
+     "strength": "partly_supported",
+     "strength_reason_en": "The sequence suggests purpose, but no individual is linked to the design.",
+     "strength_reason_es": "La secuencia sugiere finalidad, pero no se vincula a ninguna persona con el diseño."
+    },
+    {
+     "element_en": "Possible Art. 178 inc. 2 condition (if inc. 3 cross-refers to it)",
+     "element_es": "Eventual condición del Art. 178 inc. 2° (si el inc. 3° remite a ella)",
+     "alleged_facts": [
+      {
+       "text_en": "The record cites resolution for insufficient solvency, not cessation of payments or bankruptcy.",
+       "text_es": "El acta cita la resolución por insuficiencia de solvencia, no cesación de pagos ni quiebra.",
+       "refs": [
+        "rec:event:0067",
+        "src:acta-p01"
+       ]
+      }
+     ],
+     "evidence_needed_en": "The official text of Art. 181 inc. 3 as amended by Ley 3440/08.",
+     "evidence_needed_es": "El texto oficial del Art. 181 inc. 3° según la Ley 3440/08.",
+     "strength": "legally_uncertain",
+     "strength_reason_en": "Two readings of the same source conflict; if the condition applies, this count shares the weakness of Art. 179.",
+     "strength_reason_es": "Dos lecturas de la misma fuente se contradicen; si la condición rige, este hecho punible comparte la debilidad del Art. 179."
+    }
+   ],
+   "role_notes": [
+    {
+     "role_en": "Board member",
+     "role_es": "Director",
+     "note_en": "Approval of the annual accounts is a board act; the negligent form matters for directors without accounting functions.",
+     "note_es": "La aprobación de los estados contables es un acto del Directorio; la forma culposa es relevante para directores sin funciones contables."
+    },
+    {
+     "role_en": "Statutory auditor (síndico)",
+     "role_es": "Síndico",
+     "note_en": "The count closest to the role; negligent liability (up to one year) is a realistic fallback.",
+     "note_es": "El hecho punible más próximo a su función; la responsabilidad culposa (hasta un año) es una alternativa realista."
+    },
+    {
+     "role_en": "Accountant and general manager",
+     "role_es": "Contador y gerente general",
+     "note_en": "Most directly responsible for how the sale was booked; not named in the record.",
+     "note_es": "Responsables más directos de cómo se registró la venta; no figuran en el acta."
+    },
+    {
+     "role_en": "Officers of borrower or recipient companies",
+     "role_es": "Directivos de sociedades deudoras o receptoras",
+     "note_en": "Outside the offence as regards the bank's books; their own companies' books would be a separate matter not raised in the record.",
+     "note_es": "Ajenos al tipo respecto de los libros del banco; los libros de sus propias sociedades serían un asunto distinto, no planteado en el acta."
+    }
+   ],
+   "open_questions_en": [
+    "Does inc. 3 make this offence depend on cessation of payments?",
+    "Which accounting rule made the booking of the sale unlawful?"
+   ],
+   "open_questions_es": [
+    "¿El inc. 3° supedita este hecho punible a la cesación de pagos?",
+    "¿Qué norma contable tornaba ilícita la registración de la venta?"
+   ]
+  },
+  {
+   "id": "art196",
+   "article": "Art. 196",
+   "name_en": "Money laundering (reportedly added on appeal)",
+   "name_es": "Lavado de activos (agregado en apelación, según la prensa)",
+   "penalty_en": "Up to five years or a fine; up to ten years when acting commercially or as member of a gang (inc. 4); gross negligence as to origin up to two years or a fine (inc. 5). Not charged in the record; press reports say the appeals court added it on 10 Nov 2026.",
+   "penalty_es": "Hasta cinco años o multa; hasta diez años si se actúa comercialmente o como miembro de una banda (inc. 4°); culpa grave respecto del origen, hasta dos años o multa (inc. 5°). No figura en el acta; la prensa informa que el Tribunal de Apelación lo agregó el 10 de noviembre de 2026.",
+   "elements": [
+    {
+     "element_en": "An object stemming from a listed predicate offence (Arts. 187 and 192 are listed; Arts. 179 and 181 are not)",
+     "element_es": "Un objeto proveniente de un hecho antijurídico del catálogo (los Arts. 187 y 192 figuran; los Arts. 179 y 181 no)",
+     "alleged_facts": [
+      {
+       "text_en": "The record alleges that loan and overdraft money disbursed by the bank reached group companies almost immediately.",
+       "text_es": "El acta sostiene que el dinero de préstamos y sobregiros desembolsado por el banco llegó casi de inmediato a sociedades del grupo.",
+       "refs": [
+        "rec:flow:0001",
+        "rec:flow:0002",
+        "rec:flow:0003",
+        "rec:flow:0004",
+        "rec:flow:0005",
+        "rec:flow:0006",
+        "rec:flow:0007",
+        "rec:flow:0021",
+        "rec:flow:0022",
+        "rec:flow:0023",
+        "src:acta-p03",
+        "src:acta-p05",
+        "src:acta-p11"
+       ]
+      },
+      {
+       "text_en": "Rey says about USD 17 million and Gs. 17,000 million in cash were brought to the bank at night and counted by Treasury; he reports this as told to him by others.",
+       "text_es": "Rey refiere que unos USD 17 millones y Gs. 17.000 millones en efectivo fueron llevados de noche al banco y contados por Tesorería; lo relata por dichos de terceros.",
+       "refs": [
+        "rec:flow:0071",
+        "rec:flow:0072",
+        "rec:event:0047",
+        "src:acta-p22"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Proof of the predicate (the Art. 192 or 187 case itself); for the cash, its origin, which is unknown; SEPRELAD reports.",
+     "evidence_needed_es": "Prueba del hecho antecedente (el propio caso del Art. 192 o 187); respecto del efectivo, su origen, que se desconoce; informes de la SEPRELAD.",
+     "strength": "legally_uncertain",
+     "strength_reason_en": "Whether loan proceeds are an 'object stemming from' a breach of trust when moving the money is itself the breach is not settled in the framework; no predicate is identified for the cash.",
+     "strength_reason_es": "No está resuelto en el marco legal si los fondos de los créditos son un 'objeto proveniente' de la lesión de confianza cuando mover el dinero es la propia infracción; respecto del efectivo no se identifica hecho antecedente."
+    },
+    {
+     "element_en": "Converting or concealing the object, or disguising its origin",
+     "element_es": "Convertir u ocultar el objeto, o disimular su procedencia",
+     "alleged_facts": [
+      {
+       "text_en": "Hendy's overdraft money is said to have gone to REDIPRO and ITTI and then to accounts at other financial institutions through SIPAP.",
+       "text_es": "El dinero de los sobregiros de Hendy habría pasado a REDIPRO e ITTI y luego a cuentas en otras entidades financieras vía SIPAP.",
+       "refs": [
+        "rec:flow:0004",
+        "rec:flow:0005",
+        "rec:flow:0006",
+        "rec:flow:0007",
+        "src:acta-p05"
+       ]
+      },
+      {
+       "text_en": "In June 2026 the new loans are shown reaching Vinanzas through group-bond purchases and 'contracts' with intermediate companies (diagram small print, low confidence).",
+       "text_es": "En junio de 2026 los nuevos préstamos aparecen llegando a Vinanzas a través de compras de bonos del grupo y 'contratos' con sociedades intermedias (letra chica del diagrama, baja certeza).",
+       "refs": [
+        "rec:flow:0048",
+        "rec:flow:0049",
+        "rec:flow:0050",
+        "rec:flow:0051",
+        "rec:flow:0052",
+        "rec:flow:0053",
+        "rec:flow:0054",
+        "rec:flow:0055",
+        "rec:flow:0056",
+        "rec:flow:0057",
+        "rec:flow:0058",
+        "rec:flow:0059",
+        "src:acta-p17"
+       ]
+      },
+      {
+       "text_en": "Part of AIME's overdraft money is said to have ended in bond purchases and 72-hour cheques at another bank.",
+       "text_es": "Parte del dinero de los sobregiros de AIME habría terminado en compras de bonos y cheques a 72 horas en otro banco.",
+       "refs": [
+        "rec:flow:0039",
+        "rec:flow:0040",
+        "src:acta-p16"
+       ]
+      },
+      {
+       "text_en": "Rey says the cash was booked in a Grupo Vázquez company as collections of unpaid loans, supported by consecutive-numbered receipts, and used to buy CDAs, several endorsed to Miguel Vázquez.",
+       "text_es": "Rey afirma que el efectivo se contabilizó en una empresa del Grupo Vázquez como cobro de créditos impagos, con recibos de numeración consecutiva, y se usó para adquirir CDA, varios endosados a nombre de Miguel Vázquez.",
+       "refs": [
+        "rec:flow:0073",
+        "src:acta-p22",
+        "src:acta-p23",
+        "src:acta-p24"
+       ]
+      }
+     ],
+     "evidence_needed_en": "A complete fund-flow expert report from primary bank records; the brokerage's records of the bond trades; treasury count sheets; statements of the persons shown as payers on the receipts; the CDA register and endorsements.",
+     "evidence_needed_es": "Pericia integral de flujo de fondos sobre registros bancarios primarios; registros de la casa de bolsa sobre las operaciones con bonos; planillas de conteo de Tesorería; declaraciones de quienes figuran como pagadores en los recibos; registro y endosos de los CDA.",
+     "strength": "partly_supported",
+     "strength_reason_en": "Layering-type movements are alleged, some in detail and some only from hard-to-read diagrams; the cash episode rests on one co-accused's hearsay.",
+     "strength_reason_es": "Se alegan movimientos de tipo estratificación, algunos con detalle y otros solo a partir de diagramas de difícil lectura; el episodio del efectivo descansa en dichos de oídas de un coimputado."
+    },
+    {
+     "element_en": "Knowledge of the origin (or gross negligence, inc. 5); commercial or gang form (inc. 4)",
+     "element_es": "Conocimiento del origen (o culpa grave, inc. 5°); forma comercial o en banda (inc. 4°)",
+     "alleged_facts": [
+      {
+       "text_en": "The borrowers' officers listed in the record are described as former bank managers, group employees or relatives of the bank's beneficial owner.",
+       "text_es": "Los directivos de las deudoras listados en el acta son descritos como exgerentes del banco, funcionarios del grupo o parientes del beneficiario final del banco.",
+       "refs": [
+        "rec:role:0035",
+        "rec:role:0057",
+        "rec:role:0095",
+        "rec:role:0097",
+        "rec:role:0102",
+        "src:acta-p04",
+        "src:acta-p06",
+        "src:acta-p14",
+        "src:acta-p16"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Who gave the transfer instructions on each account; communications between borrower officers and group treasury.",
+     "evidence_needed_es": "Quién impartió las instrucciones de transferencia en cada cuenta; comunicaciones entre directivos de las deudoras y la tesorería del grupo.",
+     "strength": "thin",
+     "strength_reason_en": "Ties to the group are alleged; knowledge of an unlawful origin is not addressed in the record.",
+     "strength_reason_es": "Se alegan vínculos con el grupo; el acta no aborda el conocimiento de un origen ilícito."
+    }
+   ],
+   "role_notes": [
+    {
+     "role_en": "Officer of a recipient or pass-through company",
+     "role_es": "Directivo de una sociedad receptora o de paso",
+     "note_en": "The role most exposed here: inc. 2 covers obtaining and passing on with knowledge, inc. 5 gross negligence. Still needs proof of personal involvement in the transfers.",
+     "note_es": "El rol más expuesto en este tipo: el inc. 2° abarca obtener y transferir con conocimiento, y el inc. 5°, la culpa grave. Igualmente exige probar intervención personal en las transferencias."
+    },
+    {
+     "role_en": "Nominal shareholder of a borrower",
+     "role_es": "Accionista nominal de una deudora",
+     "note_en": "If the accounts were in fact operated by others, as the diagram notes suggest, the nominal holder's knowledge is the issue; gross negligence is the realistic ceiling absent more.",
+     "note_es": "Si las cuentas eran operadas de hecho por terceros, como sugieren las notas del diagrama, la cuestión es el conocimiento del titular nominal; sin más prueba, la culpa grave sería el techo realista."
+    },
+    {
+     "role_en": "Board member",
+     "role_es": "Director",
+     "note_en": "For those already authors of the predicate, the self-laundering question arises and is not addressed in the framework.",
+     "note_es": "Para quienes ya serían autores del hecho antecedente se plantea la cuestión del autolavado, no tratada en el marco legal."
+    },
+    {
+     "role_en": "Statutory auditor (síndico)",
+     "role_es": "Síndico",
+     "note_en": "No facts in the record connect the role to the movement of funds.",
+     "note_es": "Ningún hecho del acta conecta su función con el movimiento de los fondos."
+    }
+   ],
+   "open_questions_en": [
+    "Can the appeals court add this offence of its own motion (CPP Arts. 456-457)?",
+    "Are loan proceeds an 'object stemming from' the breach of trust?",
+    "What was the origin of the cash Rey describes?"
+   ],
+   "open_questions_es": [
+    "¿Puede el Tribunal de Apelación agregar de oficio este hecho punible (Arts. 456 y 457 del CPP)?",
+    "¿Los fondos de los créditos son un 'objeto proveniente' de la lesión de confianza?",
+    "¿Cuál era el origen del efectivo que describe Rey?"
+   ]
+  },
+  {
+   "id": "art239",
+   "article": "Art. 239",
+   "name_en": "Criminal association (reportedly added on appeal)",
+   "name_es": "Asociación criminal (agregada en apelación, según la prensa)",
+   "penalty_en": "Up to five years; attempt punishable; the court may waive or mitigate for minor contributions or for those who help stop the association (inc. 3-4). Not charged in the record. Only the 1997 text was checked.",
+   "penalty_es": "Hasta cinco años; la tentativa es punible; el tribunal puede prescindir de la pena o atenuarla ante aportes secundarios o respecto de quien contribuya a impedir la continuación de la asociación (incs. 3° y 4°). No figura en el acta. Solo se verificó el texto de 1997.",
+   "elements": [
+    {
+     "element_en": "An association, hierarchical or otherwise organised, set up to commit punishable acts",
+     "element_es": "Una asociación estructurada jerárquicamente u organizada de algún modo para cometer hechos punibles",
+     "alleged_facts": [
+      {
+       "text_en": "Rey describes Miguel Vázquez as the main head and top decision-maker of the board and the group, with each bank director also holding a group-wide function.",
+       "text_es": "Rey describe a Miguel Vázquez como cabeza principal y máximo decisor del Directorio y del grupo, y a cada director del banco con una función corporativa en todo el grupo.",
+       "refs": [
+        "rec:role:0018",
+        "rec:role:0019",
+        "rec:role:0020",
+        "rec:role:0021",
+        "rec:role:0022",
+        "rec:role:0023",
+        "rec:role:0024",
+        "rec:role:0025",
+        "rec:role:0026",
+        "rec:role:0027",
+        "src:acta-p21"
+       ]
+      },
+      {
+       "text_en": "The record alleges the same lending pattern across twelve borrowers in three groups.",
+       "text_es": "El acta atribuye el mismo patrón crediticio a doce deudoras distribuidas en tres grupos.",
+       "refs": [
+        "src:acta-p02",
+        "src:acta-p10",
+        "src:acta-p16"
+       ]
+      },
+      {
+       "text_en": "Shares in the borrowers are said to have been placed with a former bank manager, group employees and relatives around the dates of the first loans.",
+       "text_es": "Las acciones de las deudoras habrían sido colocadas a nombre de un exgerente del banco, funcionarios del grupo y parientes en torno a las fechas de los primeros créditos.",
+       "refs": [
+        "rec:role:0033",
+        "rec:role:0049",
+        "rec:role:0074",
+        "rec:role:0093",
+        "rec:role:0101",
+        "rec:event:0053",
+        "rec:event:0054"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Evidence of an agreement to commit offences as distinct from running a business: instructions, planning documents, the 'Delirio Colectivo' attachment, testimony from inside the group.",
+     "evidence_needed_es": "Prueba de un acuerdo para cometer hechos punibles, distinto de la gestión de un negocio: instrucciones, documentos de planificación, el adjunto 'Delirio Colectivo', testimonios internos del grupo.",
+     "strength": "legally_uncertain",
+     "strength_reason_en": "A corporate group is a lawful organisation. The record, written before the appeal ruling, makes no allegation that it was organised to commit offences.",
+     "strength_reason_es": "Un grupo empresarial es una organización lícita. El acta, anterior a la resolución de apelación, no afirma que estuviera organizado para cometer hechos punibles."
+    },
+    {
+     "element_en": "Membership, participation, support or services by each person",
+     "element_es": "Pertenencia, participación, apoyo o prestación de servicios de cada persona",
+     "alleged_facts": [
+      {
+       "text_en": "The record lists, company by company, the persons who 'would have participated' in the operations and their ties to the bank or the group.",
+       "text_es": "El acta lista, empresa por empresa, a las personas que 'habrían participado' en las operaciones y sus vínculos con el banco o el grupo.",
+       "refs": [
+        "src:acta-p04",
+        "src:acta-p06",
+        "src:acta-p09",
+        "src:acta-p12",
+        "src:acta-p14",
+        "src:acta-p16"
+       ]
+      }
+     ],
+     "evidence_needed_en": "Individualised acts for each person: who signed, who instructed, who benefited.",
+     "evidence_needed_es": "Actos individualizados de cada persona: quién firmó, quién instruyó, quién se benefició.",
+     "strength": "thin",
+     "strength_reason_en": "Positions and ties are listed; individual acts are not.",
+     "strength_reason_es": "Se listan cargos y vínculos, no actos individuales."
+    }
+   ],
+   "role_notes": [
+    {
+     "role_en": "Top decision-maker",
+     "role_es": "Máximo decisor",
+     "note_en": "The 'creates' variant (inc. 1 núm. 1) would be aimed at whoever is shown to have directed the scheme; at present that characterisation comes from a co-accused.",
+     "note_es": "La variante de 'crear' (inc. 1°, núm. 1) apuntaría a quien se demuestre que dirigió el esquema; por ahora esa caracterización proviene de un coimputado."
+    },
+    {
+     "role_en": "Board member or group executive",
+     "role_es": "Director o ejecutivo del grupo",
+     "note_en": "Membership requires more than holding office in a lawful company.",
+     "note_es": "La pertenencia exige más que ocupar un cargo en una sociedad lícita."
+    },
+    {
+     "role_en": "Nominal shareholder or company officer",
+     "role_es": "Accionista nominal o directivo de sociedad",
+     "note_en": "Peripheral contributors are the group for whom inc. 3 (waiver for secondary contribution) and inc. 4 (mitigation for helping) are most relevant.",
+     "note_es": "Los aportantes periféricos son el grupo para el cual más interesan el inc. 3° (prescindencia por aporte secundario) y el inc. 4° (atenuación por colaborar)."
+    },
+    {
+     "role_en": "Statutory auditor (síndico)",
+     "role_es": "Síndico",
+     "note_en": "No facts in the record go to membership.",
+     "note_es": "Ningún hecho del acta apunta a su pertenencia."
+    }
+   ],
+   "open_questions_en": [
+    "Was Art. 239 amended after 1997?",
+    "Does the addition on appeal survive the defence challenges?",
+    "What distinguishes this alleged association from the corporate group itself?"
+   ],
+   "open_questions_es": [
+    "¿Fue modificado el Art. 239 después de 1997?",
+    "¿Subsiste el agregado en apelación frente a las impugnaciones de las defensas?",
+    "¿Qué distingue a la asociación alegada del grupo empresarial en sí?"
+   ]
+  }
+ ],
+ "rey_statement": {
+  "points": [
+   {
+    "text_en": "Formal validity: the record shows two defence lawyers present and the Art. 86 warnings given before he chose to declare, which is what CPP Arts. 84-86 and 96 require for the statement to be usable.",
+    "text_es": "Validez formal: el acta consigna la presencia de dos abogados defensores y las advertencias del Art. 86 antes de que optara por declarar, que es lo que exigen los Arts. 84 a 86 y 96 del CPP para que la declaración sea utilizable.",
+    "refs": [
+     "src:acta-p01",
+     "src:acta-p19"
+    ]
+   },
+   {
+    "text_en": "Admission of position: he says he was a bank director from July 2024 to July 2026, a period covering every itemised loan and the 15 June 2026 portfolio sale.",
+    "text_es": "Admisión del cargo: afirma que fue director del banco desde julio de 2024 hasta julio de 2026, período que abarca todos los créditos detallados y la venta de cartera del 15 de junio de 2026.",
+    "refs": [
+     "rec:role:0026",
+     "src:acta-p20",
+     "src:acta-p23"
+    ]
+   },
+   {
+    "text_en": "Admission on purpose of the loans: he says group expenses were turned into related and non-related loans to defer them, naming Hendy, Mowi, Grupo M, TUIU, Franede and others, for about USD 900 million. This supports the allegation that declared loan purposes were not the real ones.",
+    "text_es": "Admisión sobre la finalidad de los créditos: afirma que gastos del grupo se transformaron en créditos vinculados y no vinculados para diferirlos, y nombra a Hendy, Mowi, Grupo M, TUIU, Franede y otras, por unos USD 900 millones. Ello respalda la alegación de que el destino declarado no era el real.",
+    "refs": [
+     "rec:flow:0075",
+     "src:acta-p22"
+    ]
+   },
+   {
+    "text_en": "Knowledge: he says he received the 'Delirio Colectivo' email on 13 October 2025 and worried about sustainability until March 2026. Lending continued to May 2026 while he remained on the board; a prosecutor would use this for intent and for failure to prevent.",
+    "text_es": "Conocimiento: afirma que recibió el correo 'Delirio Colectivo' el 13 de octubre de 2025 y que le preocupó la sostenibilidad hasta marzo de 2026. Los créditos continuaron hasta mayo de 2026 mientras seguía en el Directorio; la Fiscalía lo utilizaría para el dolo y para la omisión de evitar.",
+    "refs": [
+     "rec:event:0056",
+     "src:acta-p21",
+     "src:acta-p22"
+    ]
+   },
+   {
+    "text_en": "Structure: he attributes top decision-making to one person and describes a dual bank and group role for each director. Useful for co-authorship and for the association count, but uncorroborated.",
+    "text_es": "Estructura: atribuye la máxima decisión a una persona y describe un doble rol, en el banco y en el grupo, para cada director. Útil para la coautoría y para la asociación criminal, pero sin corroboración.",
+    "refs": [
+     "rec:role:0018",
+     "rec:role:0019",
+     "rec:role:0020",
+     "rec:role:0021",
+     "rec:role:0022",
+     "rec:role:0023",
+     "rec:role:0024",
+     "rec:role:0025",
+     "rec:role:0026",
+     "rec:role:0027",
+     "src:acta-p21"
+    ]
+   },
+   {
+    "text_en": "Exculpatory points the prosecution must meet: he says the 2024 feasibility plan with these 'facilities' was approved by the BCP, that the regulator had permanent access, that he was not the bank's operations director, and that he had left before some loans.",
+    "text_es": "Puntos de descargo que la Fiscalía debe rebatir: afirma que el plan de factibilidad de 2024 con esas 'facilidades' fue aprobado por el BCP, que el regulador tenía acceso permanente, que no era director operativo del banco y que ya había salido antes de algunos créditos.",
+    "refs": [
+     "rec:event:0044",
+     "rec:event:0066",
+     "src:acta-p20",
+     "src:acta-p21",
+     "src:acta-p23"
+    ]
+   },
+   {
+    "text_en": "New lead, cash and capital: a night-time cash delivery of about USD 17 million and Gs. 17,000 million, booked as collections of unpaid loans and linked to CDAs that were to be used in 2026 to capitalise the bank. He handed over three receipts and CDA schedules.",
+    "text_es": "Nueva línea, efectivo y capital: una entrega nocturna de efectivo de unos USD 17 millones y Gs. 17.000 millones, contabilizada como cobro de créditos impagos y vinculada a CDA con los que en 2026 se pretendía capitalizar el banco. Entregó tres recibos y planillas de CDA.",
+    "refs": [
+     "rec:flow:0071",
+     "rec:flow:0072",
+     "rec:flow:0073",
+     "rec:event:0047",
+     "src:acta-p22",
+     "src:acta-p24"
+    ]
+   },
+   {
+    "text_en": "Other leads outside the charged facts: a property sale to 'PEARL S.R.L.' with instalments allegedly met by the group; payments to ITTI over voting machines; a lottery-related company.",
+    "text_es": "Otras líneas ajenas a los hechos imputados: la venta de un inmueble a 'PEARL S.R.L.' con cuotas supuestamente asumidas por el grupo; pagos a ITTI por máquinas de votación; una empresa vinculada a la quiniela.",
+    "refs": [
+     "rec:flow:0076",
+     "rec:flow:0077",
+     "rec:flow:0078",
+     "src:acta-p23"
+    ]
+   },
+   {
+    "text_en": "Corroboration needed: much of it is second-hand, and the cash date sits oddly in his own chronology. A co-accused's account needs independent support: email metadata, treasury records, access logs, the persons named on the receipts, the CDA register, and testimony from those he names.",
+    "text_es": "Corroboración necesaria: buena parte es de oídas y la fecha del efectivo no encaja bien en su propia cronología. El relato de un coimputado requiere respaldo independiente: metadatos del correo, registros de Tesorería, registros de acceso, las personas que figuran en los recibos, el registro de CDA y el testimonio de los nombrados.",
+    "refs": [
+     "rec:issue:0009",
+     "rec:event:0047",
+     "src:acta-p22"
+    ]
+   },
+   {
+    "text_en": "Date conflict: the record is dated 4 November 2026, while press reports place his statement on 18 November 2026. The prosecution file should clarify whether there were two acts.",
+    "text_es": "Conflicto de fechas: el acta está fechada el 4 de noviembre de 2026, mientras que la prensa ubica su declaración el 18 de noviembre de 2026. La carpeta fiscal debería aclarar si hubo dos actos.",
+    "refs": [
+     "rec:issue:0011",
+     "rec:event:0068"
+    ]
+   },
+   {
+    "text_en": "Cooperation routes: the defence offered 'unrestricted and unlimited' cooperation. The framework found no general cooperating-witness law; the available routes are mitigation or waiver under Art. 196 inc. 9 and Art. 239 inc. 4 (only if those offences are in play), the criterio de oportunidad (CPP Art. 19), the abbreviated procedure (CPP Arts. 420-421, threshold wording unresolved) and ordinary sentencing mitigation.",
+    "text_es": "Vías de colaboración: la defensa ofreció colaborar 'en forma irrestricta e ilimitada'. El marco legal no halló una ley general de colaborador eficaz; las vías disponibles son la atenuación o prescindencia de pena del Art. 196 inc. 9° y del Art. 239 inc. 4° (solo si esos hechos punibles están en juego), el criterio de oportunidad (Art. 19 del CPP), el procedimiento abreviado (Arts. 420 y 421 del CPP, con umbral de redacción no resuelta) y la atenuación ordinaria en la medición de la pena.",
+    "refs": [
+     "rec:event:0068",
+     "src:acta-p24"
+    ]
+   }
+  ]
+ },
+ "supervisor_questions": [
+  {
+   "text_en": "What exactly did the BCP approve in the 2024 feasibility plan, and did it extend to lending to group companies on these terms? (The claim is Rey's.)",
+   "text_es": "¿Qué aprobó exactamente el BCP en el plan de factibilidad de 2024? ¿Alcanzaba a créditos a sociedades del grupo en estas condiciones? (La afirmación es de Rey.)",
+   "refs": [
+    "rec:event:0044",
+    "src:acta-p20"
+   ]
+  },
+  {
+   "text_en": "If, as Rey says, the regulator had free, direct and permanent access to the bank's movements, what was seen, and when?",
+   "text_es": "Si, como afirma Rey, el regulador tenía acceso libre, directo y permanente a los movimientos del banco, ¿qué se observó y cuándo?",
+   "refs": [
+    "src:acta-p20"
+   ]
+  },
+  {
+   "text_en": "The record says the October 2025 de-listing request got no formal reply; a press chronology says the regulator refused it that month. Which is right, and why did lending to those companies continue until May 2026 without a recorded measure?",
+   "text_es": "El acta dice que el pedido de desvinculación de octubre de 2025 no tuvo respuesta formal; una cronología de prensa indica que el regulador lo rechazó ese mes. ¿Cuál es la versión correcta, y por qué continuaron los créditos a esas empresas hasta mayo de 2026 sin una medida registrada?",
+   "refs": [
+    "rec:event:0055",
+    "press:event:0004",
+    "src:acta-p02"
+   ]
+  },
+  {
+   "text_en": "Press reports place supervision reports recommending rejection of the Vinanzas sale and a regularisation plan in July 2026, a sumario in September and resolution in November. Were the triggers of Ley 2334/03 Arts. 6-7 and the 24-hour rule of Art. 14 engaged earlier?",
+   "text_es": "La prensa ubica en julio de 2026 informes de supervisión que recomendaban rechazar la venta a Vinanzas y exigir un plan de regularización, un sumario en septiembre y la resolución en noviembre. ¿Se configuraron antes los supuestos de los Arts. 6° y 7° de la Ley 2334/03 y el plazo de 24 horas del Art. 14?",
+   "refs": [
+    "press:event:0008",
+    "press:event:0024",
+    "press:event:0011",
+    "rec:event:0067"
+   ]
+  },
+  {
+   "text_en": "The supervisor's own analysis is the basis of the charges and, per press, its reports documented the indirect financing by August 2026. Does that show supervision working, albeit late, rather than failing?",
+   "text_es": "El análisis del propio supervisor es la base de la imputación y, según la prensa, sus informes documentaron el financiamiento indirecto para agosto de 2026. ¿Demuestra ello que la supervisión funcionó, aunque tarde, antes que una falla?",
+   "refs": [
+    "press:event:0010",
+    "src:acta-p02",
+    "src:acta-p18"
+   ]
+  },
+  {
+   "text_en": "The criminal referral is reported for 3 November 2026. The framework found no express duty in the banking laws to report to prosecutors, and CPP Art. 286 was not read. Did an earlier duty to report exist?",
+   "text_es": "La remisión a la Fiscalía se informa el 3 de noviembre de 2026. El marco legal no halló en las leyes bancarias un deber expreso de denunciar, y el Art. 286 del CPP no fue leído. ¿Existía un deber de denuncia anterior?",
+   "refs": [
+    "press:event:0014"
+   ]
+  },
+  {
+   "text_en": "How do the personal-liability rule for BCP directors (Ley 489/95 Art. 16) and the protection of officials in Ley 2334/03 Art. 27 apply to decisions taken, or not taken, before the resolution?",
+   "text_es": "¿Cómo se aplican la responsabilidad personal de los directores del BCP (Art. 16 de la Ley 489/95) y la protección de funcionarios del Art. 27 de la Ley 2334/03 a las decisiones adoptadas, u omitidas, antes de la resolución?",
+   "refs": [
+    "rec:event:0067"
+   ]
+  }
+ ]
+}

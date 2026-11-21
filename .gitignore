@@ -1,0 +1,18 @@
+# build outputs (regenerate with `make graph`)
+site/data/graph.jsonld
+site/data/graph.ttl
+site/data/graph.trig
+site/data/ontology.ttl
+site/data/stats.json
+site/data/verified.json
+site/data/README.md
+pub/
+store/db/
+__pycache__/
+*.pyc
+# never commit: scanned record pages, raw OCR (contain personal identifiers), uploads, scratch
+source/
+scratch/
+site_shots/
+*.pdf
+build.log

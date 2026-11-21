@@ -1,0 +1,1575 @@
+# =============================================================================
+# Ueno case extension ontology  (uc:)
+# Namespace  : https://w3id.org/ueno-case/ont#
+# Instances  : https://w3id.org/ueno-case/id/   (ucr:)
+#
+# Aligned to FIBO (EDM Council, github.com/edmcouncil/fibo master @ 33a92cd, 2026-10-27)
+# and to the OMG Commons Ontology Library (version IRIs 2022-2026, e.g.
+# https://www.omg.org/spec/Commons/20250801/PartiesAndSituations/), PROV-O and schema.org.
+# Every FIBO / Commons IRI used below was checked against the fetched source files;
+# see fibo_mapping.md for the file each one lives in.
+#
+# -----------------------------------------------------------------------------
+# DESIGN NOTE 1 - provenance pattern
+# -----------------------------------------------------------------------------
+# Nothing about the case is stated as a bare triple between two entities.
+# Every statement is an n-ary resource - uc:RoleHolding, uc:Loan, uc:Flow,
+# uc:PortfolioSale, uc:CaseEvent, uc:FinancialFact, uc:Charge (all subclasses of
+# uc:Assertion, itself a prov:Entity) - and that resource carries ITS OWN:
+#
+#     prov:wasDerivedFrom  -> the uc:Source (record page, article, rating report)
+#     uc:assertedBy        -> who makes the claim (uc:Prosecution, uc:Rey, uc:Defence,
+#                             uc:Regulator, uc:Press, uc:RatingAgency, uc:Company, uc:Analyst)
+#     uc:confidence        -> "high" | "medium" | "low"   (how well WE could read the source,
+#                             not how likely the claim is to be true)
+#     uc:locator, uc:quote -> where in the source; <= 12 words in the original language
+#
+# Consequences:
+#   * Two voices describing the same loan produce TWO uc:Loan resources (one asserted by
+#     uc:Prosecution, one by uc:Rey). They are never merged. Link them with uc:sameSubjectAs.
+#   * An instance of uc:Loan / uc:Flow is "a loan / a movement of money AS ASSERTED by X".
+#     The rdfs:subClassOf links to FIBO say what kind of thing is being described; they do
+#     not upgrade an allegation into a fact. Presumption of innocence applies to every person.
+#   * Shortcut binary properties (uc:relativeOf, uc:declaredRelatedTo, uc:assessedRelatedTo,
+#     uc:sharesAddressWith, uc:sharesOperatorWith) may be materialised for graph traversal,
+#     but ONLY inside the named graph of the asserter, and only when an n-ary resource
+#     with full provenance exists for the same claim.
+#
+# Named graphs (the default graph holds parties, sources, correction records and the dataset node):
+#     <https://w3id.org/ueno-case/id/graph/prosecution>  assertions by uc:Prosecution READ IN THE RECORD
+#                                                        (record pp. 1-19, summarising the bank supervisor)
+#     <https://w3id.org/ueno-case/id/graph/rey>          assertions by uc:Rey READ IN THE RECORD, the
+#                                                        suspect's own statement (record pp. 19-24)
+#     <https://w3id.org/ueno-case/id/graph/press>        every other assertion: uc:Press, uc:Regulator,
+#                                                        uc:RatingAgency, uc:Company, uc:Defence,
+#                                                        and prosecution or Rey claims that are reported
+#                                                        second-hand (press, dossier). uc:assertedBy always
+#                                                        names the exact voice.
+#     <https://w3id.org/ueno-case/id/graph/analysis>     uc:AnalystOpinion resources only: estimates and
+#                                                        interpretations by the project's analysts
+#                                                        (uc:assertedBy uc:Analyst), linked by uc:basedOn to
+#                                                        the sourced assertions they rest on. Never a finding
+#                                                        of the record.
+# The prosecution and rey graphs contain only assertions whose source is a record page (src:acta-pNN);
+# they must never be merged into one voice. uc:sourceTier says how close to the record an assertion is.
+#
+# -----------------------------------------------------------------------------
+# DESIGN NOTE 2 - how the FIBO alignment is expressed
+# -----------------------------------------------------------------------------
+#   * rdfs:subClassOf / rdfs:subPropertyOf are used only where the FIBO / Commons / PROV
+#     semantics really hold for every instance.
+#   * FIBO object properties such as fibo-fbc-dae-dbt:hasBorrower, hasLender, or
+#     fibo-fnd-pas-pas:hasBuyer have a party ROLE as range (Borrower, Lender, Buyer are
+#     subclasses of cmns-pts:PartyRole), not the person or company itself. The case graph
+#     points straight at the party, so uc: properties are NOT declared sub-properties of
+#     them (that would infer that a company IS a role). The nearest FIBO term is recorded
+#     with the annotation property uc:fiboAnalogue instead.
+#   * Amounts are plain xsd:decimal + a currency individual from FIBO's ISO 4217 module
+#     (fibo-fnd-acc-4217:PYG, fibo-fnd-acc-4217:USD) rather than a reified
+#     fibo-fnd-acc-cur:MonetaryAmount node; the mapping is one-to-one if needed later.
+#   * Dates are literals typed xsd:date, xsd:gYearMonth or xsd:gYear, with uc:datePrecision
+#     "day" | "month" | "year".
+#   * Enumerations are SKOS concepts whose skos:notation is exactly the string used in
+#     SPEC.md; the IRI is uc: + prefix + that string (uc:role_shareholder,
+#     uc:instr_loan_disbursement, uc:cat_corporate).
+# =============================================================================
+
+@prefix uc: <https://w3id.org/ueno-case/ont#> .
+@prefix ucr: <https://w3id.org/ueno-case/id/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <https://schema.org/> .
+@prefix cmns-pts: <https://www.omg.org/spec/Commons/PartiesAndSituations/> .
+@prefix cmns-org: <https://www.omg.org/spec/Commons/Organizations/> .
+@prefix cmns-doc: <https://www.omg.org/spec/Commons/Documents/> .
+@prefix cmns-ra: <https://www.omg.org/spec/Commons/RegulatoryAgencies/> .
+@prefix fibo-fnd-aap-ppl: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-acc-4217: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
+@prefix fibo-fnd-arr-asmt: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> .
+@prefix fibo-fnd-dt-oc: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/> .
+@prefix fibo-fnd-oac-ctl: <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/> .
+@prefix fibo-fnd-org-fm: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/> .
+@prefix fibo-fnd-pas-pas: <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+@prefix fibo-fnd-pas-psch: <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-be-oac-cctl: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/> .
+@prefix fibo-be-oac-cown: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/> .
+@prefix fibo-be-oac-exec: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/> .
+@prefix fibo-fbc-dae-dbt: <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/> .
+@prefix fibo-fbc-dae-crt: <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/CreditRatings/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-loan-ln-ln: <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/Loans/> .
+@prefix fibo-loan-ln-evt: <https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoanEvents/> .
+@prefix fibo-sec-dbt-bnd: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/> .
+
+<https://w3id.org/ueno-case/ont> a owl:Ontology ;
+    dcterms:title "Ueno case extension ontology"@en , "Ontología de extensión del caso Ueno"@es ;
+    dcterms:description "Provenance-first vocabulary for a knowledge graph of the Ueno Bank S.A. related-party lending case (Paraguay, Case 89/2026). Everything about wrongdoing is recorded as an allegation by a named asserter."@en ,
+        "Vocabulario centrado en la procedencia para un grafo de conocimiento del caso de préstamos a vinculados de Ueno Bank S.A. (Paraguay, Causa 89/2026). Todo lo relativo a hechos ilícitos se registra como alegación de un declarante identificado."@es ;
+    dcterms:created "2026-11-20"^^xsd:date ;
+    owl:versionInfo "0.3.0" .
+
+# -----------------------------------------------------------------------------
+# Annotation properties
+# -----------------------------------------------------------------------------
+
+uc:fiboAnalogue a owl:AnnotationProperty ;
+    rdfs:label "FIBO analogue"@en , "análogo en FIBO"@es ;
+    rdfs:comment "Nearest FIBO or Commons term. A documentation link, not a logical subsumption: used where FIBO models the same idea through a reified party role or quantity node."@en ,
+        "Término más cercano de FIBO o Commons. Es un enlace documental, no una subsunción lógica: se usa cuando FIBO modela la misma idea mediante un rol de parte o una cantidad reificados."@es ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# Classes
+# -----------------------------------------------------------------------------
+
+uc:Assertion a owl:Class ;
+    rdfs:label "assertion"@en , "aserción"@es ;
+    rdfs:comment "A sourced claim about the case: one statement made by one asserter in one source. Superclass of every n-ary statement resource. Carries prov:wasDerivedFrom, uc:assertedBy and uc:confidence."@en ,
+        "Afirmación con fuente sobre el caso: un enunciado hecho por un declarante en una fuente. Superclase de todo recurso n-ario. Lleva prov:wasDerivedFrom, uc:assertedBy y uc:confidence."@es ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Source a owl:Class ;
+    rdfs:label "source"@en , "fuente"@es ;
+    rdfs:comment "A document a data point was read from: a page of the prosecution record, a press article, a rating report, an official or company publication."@en ,
+        "Documento del que se leyó un dato: una página del acta fiscal, un artículo de prensa, un informe de calificación, una publicación oficial o de la empresa."@es ;
+    rdfs:subClassOf prov:Entity , cmns-doc:Document , schema:CreativeWork ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:RoleHolding a owl:Class ;
+    rdfs:label "role holding"@en , "ejercicio de rol"@es ;
+    rdfs:comment "N-ary relation: a holder (person or company) has a position or stake of a given role type in an organisation, optionally with a percentage, a start and an end."@en ,
+        "Relación n-aria: un titular (persona o empresa) tiene un cargo o participación de cierto tipo en una organización, opcionalmente con porcentaje, inicio y fin."@es ;
+    rdfs:subClassOf uc:Assertion , cmns-pts:Situation ;
+    uc:fiboAnalogue cmns-org:Membership , fibo-fnd-oac-ctl:Control , fibo-be-oac-cown:Shareholding , fibo-be-oac-exec:BoardMembership ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Loan a owl:Class ;
+    rdfs:label "loan (as asserted)"@en , "préstamo (según lo afirmado)"@es ;
+    rdfs:comment "A credit operation between a lender and a nominal borrower as described by one asserter: operation number, date, term, rate, principal, outstanding balance, collateral, status."@en ,
+        "Operación de crédito entre un prestamista y un prestatario nominal según la describe un declarante: número de operación, fecha, plazo, tasa, capital, saldo, garantía, estado."@es ;
+    rdfs:subClassOf uc:Assertion , fibo-loan-ln-ln:Loan ;
+    uc:fiboAnalogue fibo-loan-ln-ln:UnsecuredLoan , fibo-loan-ln-ln:SecuredLoan ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Overdraft a owl:Class ;
+    rdfs:label "overdraft (as asserted)"@en , "sobregiro (según lo afirmado)"@es ;
+    rdfs:comment "A loan record whose kind is an overdraft or current-account credit line. FIBO has no overdraft class; its open-end credit class names overdraft lines as an example."@en ,
+        "Registro de préstamo cuyo tipo es sobregiro o línea de crédito en cuenta corriente. FIBO no tiene clase de sobregiro; su clase de crédito abierto cita las líneas de sobregiro como ejemplo."@es ;
+    rdfs:subClassOf uc:Loan , fibo-loan-ln-ln:OpenEndCredit ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:RevolvingLineOfCredit , fibo-fbc-dae-dbt:CreditFacility ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Flow a owl:Class ;
+    rdfs:label "flow"@en , "flujo"@es ;
+    rdfs:comment "A movement of money or assets from one party to another as described by one asserter. The amount may be unknown."@en ,
+        "Movimiento de dinero o activos de una parte a otra según lo describe un declarante. El monto puede ser desconocido."@es ;
+    rdfs:subClassOf uc:Assertion , fibo-fnd-dt-oc:Occurrence ;
+    uc:fiboAnalogue fibo-fnd-pas-psch:Payment , fibo-loan-ln-ln:IndividualPaymentTransaction , schema:MoneyTransfer ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:PortfolioSale a owl:Class ;
+    rdfs:label "portfolio sale"@en , "venta de cartera"@es ;
+    rdfs:comment "A sale or assignment of a set of loans from one party to another, as asserted. The price paid and the assignment itself are recorded as uc:Flow resources linked to it."@en ,
+        "Venta o cesión de un conjunto de préstamos de una parte a otra, según lo afirmado. El precio pagado y la cesión misma se registran como recursos uc:Flow vinculados."@es ;
+    rdfs:subClassOf uc:Assertion , cmns-pts:Situation ;
+    uc:fiboAnalogue fibo-fnd-pas-pas:Sale ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:CaseEvent a owl:Class ;
+    rdfs:label "case event"@en , "evento del caso"@es ;
+    rdfs:comment "Anything with a date that belongs on a timeline: corporate, credit, supervisory, criminal, political, market, statement or depositor events."@en ,
+        "Todo hecho fechado que corresponde a una línea de tiempo: eventos societarios, crediticios, de supervisión, penales, políticos, de mercado, declaraciones o de depositantes."@es ;
+    rdfs:subClassOf uc:Assertion , fibo-fnd-dt-oc:Occurrence ;
+    uc:fiboAnalogue schema:Event , fibo-loan-ln-evt:LegalProceeding ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:FinancialFact a owl:Class ;
+    rdfs:label "financial fact"@en , "dato financiero"@es ;
+    rdfs:comment "A reported figure about a party at a date (for example equity, total related-party exposure, a rating grade), as stated by one asserter."@en ,
+        "Cifra informada sobre una parte en una fecha (por ejemplo patrimonio, exposición total a vinculados, una calificación), según la declara un declarante."@es ;
+    rdfs:subClassOf uc:Assertion ;
+    uc:fiboAnalogue fibo-fnd-acc-cur:MonetaryAmount , fibo-fbc-dae-crt:CreditRating ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Charge a owl:Class ;
+    rdfs:label "charge"@en , "imputación"@es ;
+    rdfs:comment "An offence alleged against a person by an authority, with any procedural measure requested or ordered. An allegation only; the person is presumed innocent."@en ,
+        "Hecho punible que una autoridad atribuye a una persona, con la medida procesal solicitada u ordenada. Es solo una alegación; la persona se presume inocente."@es ;
+    rdfs:subClassOf uc:Assertion ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Issue a owl:Class ;
+    rdfs:label "data issue"@en , "inconsistencia de datos"@es ;
+    rdfs:comment "A recorded inconsistency or quality problem in the data: two sources disagree, a figure does not add up, an OCR reading is doubtful."@en ,
+        "Inconsistencia o problema de calidad registrado en los datos: dos fuentes discrepan, una cifra no cuadra, una lectura de OCR es dudosa."@es ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:AnalystOpinion a owl:Class ;
+    rdfs:label "analyst opinion"@en , "opinión del analista"@es ;
+    rdfs:comment "An interpretation or inference added by the analysts who built the graph. Always asserted by uc:Analyst and never to be read as a finding of the record."@en ,
+        "Interpretación o inferencia añadida por los analistas que construyeron el grafo. Siempre afirmada por uc:Analyst; nunca debe leerse como una conclusión del acta."@es ;
+    rdfs:subClassOf uc:Assertion ;
+    uc:fiboAnalogue fibo-fnd-arr-asmt:Opinion ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Party a owl:Class ;
+    rdfs:label "party"@en , "parte"@es ;
+    rdfs:comment "A person, company or authority that appears in the case. Persons are also fibo-fnd-aap-ppl:Person; companies are uc:Organisation."@en ,
+        "Persona, empresa o autoridad que aparece en el caso. Las personas son además fibo-fnd-aap-ppl:Person; las empresas, uc:Organisation."@es ;
+    rdfs:subClassOf cmns-pts:Party , prov:Agent ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Person a owl:Class ;
+    rdfs:label "person"@en , "persona"@es ;
+    rdfs:comment "A natural person appearing in a publicly reported or record-stated role relevant to the case. No private data is recorded."@en ,
+        "Persona física que aparece en un rol públicamente informado o consignado en el acta y relevante para el caso. No se registran datos privados."@es ;
+    rdfs:subClassOf uc:Party , fibo-fnd-aap-ppl:Person , schema:Person ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Organisation a owl:Class ;
+    rdfs:label "company or group"@en , "empresa o grupo"@es ;
+    rdfs:comment "A company or business group appearing in the case (SPEC.md entity type Company). Named uc:Organisation because uc:Company is the asserter concept."@en ,
+        "Empresa o grupo empresarial que aparece en el caso (tipo de entidad Company en SPEC.md). Se llama uc:Organisation porque uc:Company es el concepto de declarante."@es ;
+    rdfs:subClassOf uc:Party , cmns-org:Organization , schema:Organization ;
+    uc:fiboAnalogue cmns-org:LegalEntity ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Authority a owl:Class ;
+    rdfs:label "authority"@en , "autoridad"@es ;
+    rdfs:comment "A public authority: central bank, bank or securities supervisor, public prosecutor, senate, deposit guarantee fund."@en ,
+        "Autoridad pública: banco central, superintendencia de bancos o de valores, ministerio público, senado, fondo de garantía de depósitos."@es ;
+    rdfs:subClassOf uc:Party , cmns-org:Organization , schema:Organization ;
+    uc:fiboAnalogue cmns-ra:RegulatoryAgency ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:AssertionGraph a owl:Class ;
+    rdfs:label "assertion graph"@en , "grafo de aserciones"@es ;
+    rdfs:comment "A named graph that holds the assertions of a single voice."@en ,
+        "Grafo con nombre que contiene las aserciones de una sola voz."@es ;
+    rdfs:subClassOf prov:Bundle ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# Provenance properties (domain uc:Assertion unless noted)
+# -----------------------------------------------------------------------------
+
+uc:assertedBy a owl:ObjectProperty ;
+    rdfs:label "asserted by"@en , "afirmado por"@es ;
+    rdfs:comment "The voice that makes the claim. One of uc:Prosecution, uc:Rey, uc:Defence, uc:Regulator, uc:Press, uc:RatingAgency, uc:Company, uc:Analyst."@en ,
+        "La voz que hace la afirmación. Una de uc:Prosecution, uc:Rey, uc:Defence, uc:Regulator, uc:Press, uc:RatingAgency, uc:Company, uc:Analyst."@es ;
+    rdfs:subPropertyOf prov:wasAttributedTo ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range uc:Asserter ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:confidence a owl:DatatypeProperty ;
+    rdfs:label "confidence"@en , "confianza"@es ;
+    rdfs:comment "How reliably the data point was read from its source: \"high\" (read directly and clearly), \"medium\" (second-hand or summarised), \"low\" (hard-to-read small print, single uncorroborated outlet, or inferred mapping). Not a judgement on whether the claim is true."@en ,
+        "Fiabilidad con que se leyó el dato en la fuente: \"high\" (lectura directa y clara), \"medium\" (de segunda mano o resumido), \"low\" (letra pequeña difícil de leer, un solo medio sin corroborar o correspondencia inferida). No juzga si la afirmación es cierta."@es ;
+    rdfs:domain prov:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:locator a owl:DatatypeProperty ;
+    rdfs:label "locator"@en , "localizador"@es ;
+    rdfs:comment "Where in the source the data point is found: page, table row, paragraph hint."@en ,
+        "Lugar de la fuente donde se encuentra el dato: página, fila de tabla, indicación de párrafo."@es ;
+    rdfs:domain prov:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:quote a owl:DatatypeProperty ;
+    rdfs:label "quote"@en , "cita"@es ;
+    rdfs:comment "A verbatim quotation of at most 12 words in the original language supporting the data point."@en ,
+        "Cita textual de hasta 12 palabras en el idioma original que respalda el dato."@es ;
+    rdfs:domain prov:Entity ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:provenanceNote a owl:DatatypeProperty ;
+    rdfs:label "provenance note"@en , "nota de procedencia"@es ;
+    rdfs:comment "Optional caveat: conflict with another source, OCR doubt, approximation."@en ,
+        "Advertencia opcional: conflicto con otra fuente, duda de OCR, aproximación."@es ;
+    rdfs:domain prov:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sameSubjectAs a owl:ObjectProperty ;
+    rdfs:label "same subject as"@en , "mismo objeto que"@es ;
+    rdfs:comment "Links two assertions by different voices that describe the same real-world loan, flow or event. They stay separate resources."@en ,
+        "Vincula dos aserciones de voces distintas que describen el mismo préstamo, flujo o evento real. Siguen siendo recursos separados."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range uc:Assertion ;
+    a owl:SymmetricProperty ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sourceKind a owl:DatatypeProperty ;
+    rdfs:label "source kind"@en , "tipo de fuente"@es ;
+    rdfs:comment "Kind of source: \"record\", \"press\", \"rating\", \"official\", \"company\", \"dossier\" (third-party compilation without links) or \"project\" (the project's own id list, used for editorial labels)."@en ,
+        "Tipo de fuente: \"record\" (acta), \"press\" (prensa), \"rating\" (calificadora), \"official\" (oficial), \"company\" (empresa), \"dossier\" (compilación de terceros sin enlaces) o \"project\" (lista de identificadores del proyecto, usada para etiquetas editoriales)."@es ;
+    rdfs:domain uc:Source ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:outlet a owl:DatatypeProperty ;
+    rdfs:label "outlet"@en , "medio"@es ;
+    rdfs:comment "Publisher of the source: newspaper, agency, authority or company."@en ,
+        "Editor de la fuente: diario, agencia, autoridad o empresa."@es ;
+    rdfs:domain uc:Source ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:page a owl:DatatypeProperty ;
+    rdfs:label "page"@en , "página"@es ;
+    rdfs:comment "Page number within the prosecution record (1-24)."@en ,
+        "Número de página dentro del acta fiscal (1-24)."@es ;
+    rdfs:domain uc:Source ;
+    rdfs:range xsd:integer ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# Party-to-party and role properties
+# -----------------------------------------------------------------------------
+
+uc:involvesParty a owl:ObjectProperty ;
+    rdfs:label "involves party"@en , "involucra a la parte"@es ;
+    rdfs:comment "A party mentioned as taking part in the asserted loan, flow, event, fact or charge. Superproperty of all specific participant properties."@en ,
+        "Parte mencionada como participante en el préstamo, flujo, evento, dato o imputación afirmados. Superpropiedad de todas las propiedades de participante."@es ;
+    rdfs:subPropertyOf cmns-pts:hasParty ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range uc:Party ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:holder a owl:ObjectProperty ;
+    rdfs:label "holder"@en , "titular"@es ;
+    rdfs:comment "The person or company that holds the role."@en ,
+        "La persona o empresa que ejerce el rol."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range uc:Party ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:organisation a owl:ObjectProperty ;
+    rdfs:label "organisation"@en , "organización"@es ;
+    rdfs:comment "The organisation in which the role is held (for uc:role_relative_of: the other person)."@en ,
+        "La organización en la que se ejerce el rol (para uc:role_relative_of: la otra persona)."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range uc:Party ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:roleType a owl:ObjectProperty ;
+    rdfs:label "role type"@en , "tipo de rol"@es ;
+    rdfs:comment "The kind of position or stake, a concept of uc:RoleTypeScheme."@en ,
+        "El tipo de cargo o participación, un concepto de uc:RoleTypeScheme."@es ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range uc:RoleType ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:percentage a owl:DatatypeProperty ;
+    rdfs:label "percentage"@en , "porcentaje"@es ;
+    rdfs:comment "Ownership percentage of the holder in the organisation (0-100)."@en ,
+        "Porcentaje de participación del titular en la organización (0-100)."@es ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range xsd:decimal ;
+    uc:fiboAnalogue fibo-be-le-lei:hasOwnershipPercentage ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:startDate a owl:DatatypeProperty ;
+    rdfs:label "start date"@en , "fecha de inicio"@es ;
+    rdfs:comment "Date the role or period starts (xsd:date, xsd:gYearMonth or xsd:gYear)."@en ,
+        "Fecha de inicio del rol o periodo (xsd:date, xsd:gYearMonth o xsd:gYear)."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:endDate a owl:DatatypeProperty ;
+    rdfs:label "end date"@en , "fecha de fin"@es ;
+    rdfs:comment "Date the role or period ends (xsd:date, xsd:gYearMonth or xsd:gYear)."@en ,
+        "Fecha de fin del rol o periodo (xsd:date, xsd:gYearMonth o xsd:gYear)."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:declaredRelatedTo a owl:ObjectProperty ;
+    rdfs:label "declared related to"@en , "declarado vinculado a"@es ;
+    rdfs:comment "Shortcut: the subject party was declared by the bank or company itself as a related party of the object. Only inside an asserter graph, backed by a uc:RoleHolding."@en ,
+        "Atajo: la parte sujeto fue declarada por el propio banco o empresa como vinculada al objeto. Solo dentro del grafo de un declarante y respaldado por un uc:RoleHolding."@es ;
+    rdfs:domain uc:Party ;
+    rdfs:range uc:Party ;
+    uc:fiboAnalogue fibo-be-oac-cctl:isAffiliateOf ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:assessedRelatedTo a owl:ObjectProperty ;
+    rdfs:label "assessed related to"@en , "considerado vinculado a"@es ;
+    rdfs:comment "Shortcut: a supervisor, prosecutor or analyst assesses the subject party to be a related party of the object, whether or not it was declared. An allegation."@en ,
+        "Atajo: un supervisor, fiscal o analista considera que la parte sujeto es vinculada al objeto, haya sido o no declarada. Es una alegación."@es ;
+    rdfs:domain uc:Party ;
+    rdfs:range uc:Party ;
+    uc:fiboAnalogue fibo-be-oac-cctl:isAffiliateOf , fibo-fnd-oac-ctl:isControlledPartyOf ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:relativeOf a owl:ObjectProperty ;
+    rdfs:label "relative of"@en , "pariente de"@es ;
+    rdfs:comment "Shortcut: a kinship stated by the record or an outlet as relevant to related-party status. Nothing beyond the stated kinship is recorded."@en ,
+        "Atajo: parentesco consignado en el acta o en un medio como relevante para la condición de vinculado. No se registra nada más allá del parentesco declarado."@es ;
+    rdfs:domain uc:Person ;
+    rdfs:range uc:Person ;
+    a owl:SymmetricProperty ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:kinshipDegree a owl:DatatypeProperty ;
+    rdfs:label "kinship degree"@en , "grado de parentesco"@es ;
+    rdfs:comment "The stated kinship on a uc:RoleHolding of type uc:role_relative_of, as worded by the source (for example \"hermano\", \"cónyuge\", \"2º grado de consanguinidad\")."@en ,
+        "El parentesco declarado en un uc:RoleHolding de tipo uc:role_relative_of, tal como lo expresa la fuente (por ejemplo \"hermano\", \"cónyuge\", \"2º grado de consanguinidad\")."@es ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sharesAddressWith a owl:ObjectProperty ;
+    rdfs:label "shares address with"@en , "comparte domicilio con"@es ;
+    rdfs:comment "Shortcut: a source states that two companies use the same business address. The address itself is not stored for persons."@en ,
+        "Atajo: una fuente afirma que dos empresas usan el mismo domicilio comercial. No se almacena el domicilio de personas."@es ;
+    rdfs:domain uc:Party ;
+    rdfs:range uc:Party ;
+    a owl:SymmetricProperty ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sharesOperatorWith a owl:ObjectProperty ;
+    rdfs:label "shares operator with"@en , "comparte operador con"@es ;
+    rdfs:comment "Shortcut: a source states that two companies are operated by the same person, accountant, registry agent or account signatory."@en ,
+        "Atajo: una fuente afirma que dos empresas son operadas por la misma persona, contador, gestor registral o firmante de cuentas."@es ;
+    rdfs:domain uc:Party ;
+    rdfs:range uc:Party ;
+    a owl:SymmetricProperty ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# Loan properties
+# -----------------------------------------------------------------------------
+
+uc:lender a owl:ObjectProperty ;
+    rdfs:label "lender"@en , "prestamista"@es ;
+    rdfs:comment "The party that grants the credit."@en ,
+        "La parte que otorga el crédito."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:Loan ;
+    rdfs:range uc:Party ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:hasLender , fibo-fbc-dae-dbt:Lender ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:nominalBorrower a owl:ObjectProperty ;
+    rdfs:label "nominal borrower"@en , "prestatario nominal"@es ;
+    rdfs:comment "The party named as borrower on the credit operation."@en ,
+        "La parte que figura como deudora en la operación de crédito."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:Loan ;
+    rdfs:range uc:Party ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:hasBorrower , fibo-fbc-dae-dbt:Borrower ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:ultimateRecipient a owl:ObjectProperty ;
+    rdfs:label "ultimate recipient"@en , "destinatario final"@es ;
+    rdfs:comment "A party alleged to have finally received the proceeds of the loan, when different from the nominal borrower. FIBO has no equivalent."@en ,
+        "Parte que, según se alega, recibió finalmente los fondos del préstamo, cuando difiere del prestatario nominal. FIBO no tiene equivalente."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:Loan ;
+    rdfs:range uc:Party ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:operationNumber a owl:DatatypeProperty ;
+    rdfs:label "operation number"@en , "número de operación"@es ;
+    rdfs:comment "The bank operation number of the loan."@en ,
+        "Número de operación bancaria del préstamo."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:principal a owl:DatatypeProperty ;
+    rdfs:label "principal"@en , "capital"@es ;
+    rdfs:comment "Principal amount granted, as a plain number in uc:currency."@en ,
+        "Capital otorgado, como número simple en uc:currency."@es ;
+    rdfs:subPropertyOf uc:amount ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:decimal ;
+    uc:fiboAnalogue fibo-loan-ln-ln:hasPrincipalAmount , fibo-fbc-dae-dbt:Principal ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:outstanding a owl:DatatypeProperty ;
+    rdfs:label "outstanding balance"@en , "saldo"@es ;
+    rdfs:comment "Outstanding balance at the date of the source."@en ,
+        "Saldo pendiente a la fecha de la fuente."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:decimal ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:hasOutstandingAmount , fibo-loan-ln-ln:hasLoanBalance ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:ratePct a owl:DatatypeProperty ;
+    rdfs:label "interest rate (percent)"@en , "tasa de interés (porcentaje)"@es ;
+    rdfs:comment "Annual interest rate in percent."@en ,
+        "Tasa de interés anual en porcentaje."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:decimal ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:hasInterestRate , fibo-fnd-acc-cur:InterestRate ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:termYears a owl:DatatypeProperty ;
+    rdfs:label "term (years)"@en , "plazo (años)"@es ;
+    rdfs:comment "Contractual term in years."@en ,
+        "Plazo contractual en años."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:decimal ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:hasOriginalTimeToMaturity , fibo-fbc-dae-dbt:hasMaturityDate ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:termDays a owl:DatatypeProperty ;
+    rdfs:label "term (days)"@en , "plazo (días)"@es ;
+    rdfs:comment "Contractual term in days."@en ,
+        "Plazo contractual en días."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:integer ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:hasOriginalTimeToMaturity ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:collateral a owl:DatatypeProperty ;
+    rdfs:label "collateral"@en , "garantía"@es ;
+    rdfs:comment "Collateral as stated: \"none\", \"mortgage_claimed\", or another short code."@en ,
+        "Garantía según lo declarado: \"none\", \"mortgage_claimed\" u otro código breve."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:string ;
+    uc:fiboAnalogue fibo-fbc-dae-dbt:isCollateralizedBy , fibo-fbc-dae-dbt:Collateral ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:amortisation a owl:DatatypeProperty ;
+    rdfs:label "amortisation"@en , "amortización"@es ;
+    rdfs:comment "Repayment scheme as stated by the source."@en ,
+        "Esquema de amortización según la fuente."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:loanStatus a owl:DatatypeProperty ;
+    rdfs:label "loan status"@en , "estado del préstamo"@es ;
+    rdfs:comment "\"outstanding\" or \"cancelled\"."@en ,
+        "\"outstanding\" (vigente) o \"cancelled\" (cancelado)."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# Flow, event, fact and charge properties
+# -----------------------------------------------------------------------------
+
+uc:fromParty a owl:ObjectProperty ;
+    rdfs:label "from party"@en , "parte de origen"@es ;
+    rdfs:comment "The party the money or asset moves from (payer, seller, assignor)."@en ,
+        "La parte de la que sale el dinero o activo (pagador, vendedor, cedente)."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range uc:Party ;
+    uc:fiboAnalogue fibo-fnd-pas-psch:Payer , fibo-fnd-pas-pas:hasSeller ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:toParty a owl:ObjectProperty ;
+    rdfs:label "to party"@en , "parte de destino"@es ;
+    rdfs:comment "The party the money or asset moves to (payee, buyer, assignee)."@en ,
+        "La parte a la que llega el dinero o activo (beneficiario, comprador, cesionario)."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range uc:Party ;
+    uc:fiboAnalogue fibo-fnd-pas-psch:Payee , fibo-fnd-pas-pas:hasBuyer ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:amount a owl:DatatypeProperty ;
+    rdfs:label "amount"@en , "monto"@es ;
+    rdfs:comment "Amount as a plain number without separators, in the unit of uc:currency. Omitted when the source gives no amount."@en ,
+        "Monto como número simple sin separadores, en la unidad de uc:currency. Se omite cuando la fuente no da monto."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range xsd:decimal ;
+    uc:fiboAnalogue fibo-fnd-acc-cur:hasAmount , fibo-fnd-pas-psch:hasPaymentAmount ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:amountIsApproximate a owl:DatatypeProperty ;
+    rdfs:label "amount is approximate"@en , "monto aproximado"@es ;
+    rdfs:comment "True when the source gives a rounded or approximate figure."@en ,
+        "Verdadero cuando la fuente da una cifra redondeada o aproximada."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:currency a owl:ObjectProperty ;
+    rdfs:label "currency"@en , "moneda"@es ;
+    rdfs:comment "Currency of the amount: fibo-fnd-acc-4217:PYG or fibo-fnd-acc-4217:USD."@en ,
+        "Moneda del monto: fibo-fnd-acc-4217:PYG o fibo-fnd-acc-4217:USD."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range fibo-fnd-acc-cur:Currency ;
+    uc:fiboAnalogue fibo-fnd-acc-cur:hasCurrency ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:onDate a owl:DatatypeProperty ;
+    rdfs:label "on date"@en , "en fecha"@es ;
+    rdfs:comment "Date of the loan, flow, event or fact, typed xsd:date, xsd:gYearMonth or xsd:gYear according to uc:datePrecision."@en ,
+        "Fecha del préstamo, flujo, evento o dato, con tipo xsd:date, xsd:gYearMonth o xsd:gYear según uc:datePrecision."@es ;
+    rdfs:domain uc:Assertion ;
+    uc:fiboAnalogue fibo-fnd-dt-oc:hasEventDateValue , fibo-fnd-dt-oc:hasEventDate ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:datePrecision a owl:DatatypeProperty ;
+    rdfs:label "date precision"@en , "precisión de la fecha"@es ;
+    rdfs:comment "\"day\", \"month\" or \"year\"."@en ,
+        "\"day\" (día), \"month\" (mes) o \"year\" (año)."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:instrument a owl:ObjectProperty ;
+    rdfs:label "instrument"@en , "instrumento"@es ;
+    rdfs:comment "How the money or asset moved, a concept of uc:FlowInstrumentScheme."@en ,
+        "Cómo se movió el dinero o activo, un concepto de uc:FlowInstrumentScheme."@es ;
+    rdfs:domain uc:Flow ;
+    rdfs:range uc:FlowInstrument ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:purpose a owl:DatatypeProperty ;
+    rdfs:label "purpose"@en , "finalidad"@es ;
+    rdfs:comment "Stated purpose of the flow."@en ,
+        "Finalidad declarada del flujo."@es ;
+    rdfs:domain uc:Flow ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:linkedLoan a owl:ObjectProperty ;
+    rdfs:label "linked loan"@en , "préstamo vinculado"@es ;
+    rdfs:comment "The loan record a flow, sale or event relates to (for example the loan whose disbursement it is)."@en ,
+        "El registro de préstamo al que se refiere un flujo, venta o evento (por ejemplo, el préstamo cuyo desembolso es)."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range uc:Loan ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:eventCategory a owl:ObjectProperty ;
+    rdfs:label "event category"@en , "categoría del evento"@es ;
+    rdfs:comment "Timeline category, a concept of uc:EventCategoryScheme."@en ,
+        "Categoría de línea de tiempo, un concepto de uc:EventCategoryScheme."@es ;
+    rdfs:domain uc:CaseEvent ;
+    rdfs:range uc:EventCategory ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:aboutParty a owl:ObjectProperty ;
+    rdfs:label "about party"@en , "sobre la parte"@es ;
+    rdfs:comment "The party a financial fact describes."@en ,
+        "La parte que describe un dato financiero."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:FinancialFact ;
+    rdfs:range uc:Party ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:metric a owl:DatatypeProperty ;
+    rdfs:label "metric"@en , "métrica"@es ;
+    rdfs:comment "Short name of the reported figure (for example \"equity\", \"related_party_exposure\", \"rating\")."@en ,
+        "Nombre breve de la cifra informada (por ejemplo \"equity\", \"related_party_exposure\", \"rating\")."@es ;
+    rdfs:domain uc:FinancialFact ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:textValue a owl:DatatypeProperty ;
+    rdfs:label "text value"@en , "valor textual"@es ;
+    rdfs:comment "Non-numeric value of a financial fact, such as a rating grade."@en ,
+        "Valor no numérico de un dato financiero, como una nota de calificación."@es ;
+    rdfs:domain uc:FinancialFact ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:chargedPerson a owl:ObjectProperty ;
+    rdfs:label "charged person"@en , "persona imputada"@es ;
+    rdfs:comment "The person against whom the offence is alleged. Presumed innocent."@en ,
+        "La persona a quien se atribuye el hecho punible. Se presume inocente."@es ;
+    rdfs:subPropertyOf uc:involvesParty ;
+    rdfs:domain uc:Charge ;
+    rdfs:range uc:Person ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:allegedOffence a owl:DatatypeProperty ;
+    rdfs:label "alleged offence"@en , "hecho punible atribuido"@es ;
+    rdfs:comment "The offence alleged, as named by the authority (for example \"lesión de confianza\"), with the legal provision if stated."@en ,
+        "El hecho punible atribuido, tal como lo nombra la autoridad (por ejemplo \"lesión de confianza\"), con la norma legal si se indica."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:proceduralMeasure a owl:DatatypeProperty ;
+    rdfs:label "procedural measure"@en , "medida procesal"@es ;
+    rdfs:comment "A procedural step or measure requested or ordered in relation to the charge (for example indictment, travel ban, asset freeze)."@en ,
+        "Acto o medida procesal solicitada u ordenada en relación con la imputación (por ejemplo imputación, prohibición de salida del país, inhibición de bienes)."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:concerns a owl:ObjectProperty ;
+    rdfs:label "concerns"@en , "se refiere a"@es ;
+    rdfs:comment "The assertion(s) or party a data issue or analyst opinion is about."@en ,
+        "La(s) aserción(es) o parte a la que se refiere una inconsistencia u opinión del analista."@es ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:issueKind a owl:DatatypeProperty ;
+    rdfs:label "issue kind"@en , "tipo de inconsistencia"@es ;
+    rdfs:comment "Short code: \"conflict\", \"arithmetic\", \"ocr\", \"identity\", \"date\", \"other\"."@en ,
+        "Código breve: \"conflict\", \"arithmetic\", \"ocr\", \"identity\", \"date\", \"other\"."@es ;
+    rdfs:domain uc:Issue ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# SKOS concept schemes (skos:notation = exact SPEC.md enumeration string)
+# -----------------------------------------------------------------------------
+
+uc:AsserterScheme a skos:ConceptScheme ;
+    skos:prefLabel "Asserters"@en , "Declarantes"@es ;
+    rdfs:label "Asserters"@en , "Declarantes"@es ;
+    rdfs:comment "Controlled vocabulary; each concept carries the SPEC.md enumeration string in skos:notation."@en ,
+        "Vocabulario controlado; cada concepto lleva en skos:notation la cadena de enumeración de SPEC.md."@es ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Asserter a owl:Class ;
+    rdfs:label "asserter"@en , "declarante"@es ;
+    rdfs:comment "Class of the concepts in uc:AsserterScheme."@en ,
+        "Clase de los conceptos de uc:AsserterScheme."@es ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Asserter rdfs:subClassOf prov:Agent .
+
+uc:Prosecution a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "prosecution" ;
+    skos:prefLabel "Prosecution"@en , "Ministerio Público"@es ;
+    rdfs:label "Prosecution"@en , "Ministerio Público"@es ;
+    skos:definition "The Public Prosecutor in the record (pages 1-19), summarising the bank supervisor."@en , "El Ministerio Público en el acta (páginas 1-19), que resume a la supervisión bancaria."@es ;
+    rdfs:comment "The Public Prosecutor in the record (pages 1-19), summarising the bank supervisor."@en , "El Ministerio Público en el acta (páginas 1-19), que resume a la supervisión bancaria."@es .
+
+uc:Rey a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "rey" ;
+    skos:prefLabel "Rey (suspect statement)"@en , "Rey (declaración del imputado)"@es ;
+    rdfs:label "Rey (suspect statement)"@en , "Rey (declaración del imputado)"@es ;
+    skos:definition "The suspect Julio Rey in his own statement (record pages 19-24). Never merged with the prosecution voice."@en , "El imputado Julio Rey en su propia declaración (páginas 19-24 del acta). Nunca se fusiona con la voz fiscal."@es ;
+    rdfs:comment "The suspect Julio Rey in his own statement (record pages 19-24). Never merged with the prosecution voice."@en , "El imputado Julio Rey en su propia declaración (páginas 19-24 del acta). Nunca se fusiona con la voz fiscal."@es .
+
+uc:Defence a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "defence" ;
+    skos:prefLabel "Defence"@en , "Defensa"@es ;
+    rdfs:label "Defence"@en , "Defensa"@es ;
+    skos:definition "Defence lawyers or other persons under investigation speaking in their own defence."@en , "Abogados defensores u otras personas investigadas que hablan en su propia defensa."@es ;
+    rdfs:comment "Defence lawyers or other persons under investigation speaking in their own defence."@en , "Abogados defensores u otras personas investigadas que hablan en su propia defensa."@es .
+
+uc:Regulator a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "regulator" ;
+    skos:prefLabel "Regulator"@en , "Regulador"@es ;
+    rdfs:label "Regulator"@en , "Regulador"@es ;
+    skos:definition "The central bank, a superintendency or another public authority speaking officially."@en , "El banco central, una superintendencia u otra autoridad pública en comunicación oficial."@es ;
+    rdfs:comment "The central bank, a superintendency or another public authority speaking officially."@en , "El banco central, una superintendencia u otra autoridad pública en comunicación oficial."@es .
+
+uc:Press a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "press" ;
+    skos:prefLabel "Press"@en , "Prensa"@es ;
+    rdfs:label "Press"@en , "Prensa"@es ;
+    skos:definition "A news outlet reporting on its own authority."@en , "Un medio de prensa que informa por cuenta propia."@es ;
+    rdfs:comment "A news outlet reporting on its own authority."@en , "Un medio de prensa que informa por cuenta propia."@es .
+
+uc:RatingAgency a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "rating_agency" ;
+    skos:prefLabel "Rating agency"@en , "Calificadora de riesgo"@es ;
+    rdfs:label "Rating agency"@en , "Calificadora de riesgo"@es ;
+    skos:definition "A credit rating agency in a rating report."@en , "Una calificadora de riesgo en un informe de calificación."@es ;
+    rdfs:comment "A credit rating agency in a rating report."@en , "Una calificadora de riesgo en un informe de calificación."@es .
+
+uc:Company a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "company" ;
+    skos:prefLabel "Company"@en , "Empresa"@es ;
+    rdfs:label "Company"@en , "Empresa"@es ;
+    skos:definition "The bank or another company in its own statements, filings or website."@en , "El banco u otra empresa en sus propios comunicados, presentaciones o sitio web."@es ;
+    rdfs:comment "The bank or another company in its own statements, filings or website."@en , "El banco u otra empresa en sus propios comunicados, presentaciones o sitio web."@es .
+
+uc:Analyst a skos:Concept, uc:Asserter, prov:Agent ;
+    skos:inScheme uc:AsserterScheme ; skos:topConceptOf uc:AsserterScheme ;
+    skos:notation "analyst" ;
+    skos:prefLabel "Analyst"@en , "Analista"@es ;
+    rdfs:label "Analyst"@en , "Analista"@es ;
+    skos:definition "The analysts who built this graph: inferred mappings, computed totals, opinions. Not in the SPEC.md prov enumeration; used for uc:AnalystOpinion and uc:Issue."@en , "Los analistas que construyeron este grafo: correspondencias inferidas, totales calculados, opiniones. No figura en la enumeración prov de SPEC.md; se usa para uc:AnalystOpinion y uc:Issue."@es ;
+    rdfs:comment "The analysts who built this graph: inferred mappings, computed totals, opinions. Not in the SPEC.md prov enumeration; used for uc:AnalystOpinion and uc:Issue."@en , "Los analistas que construyeron este grafo: correspondencias inferidas, totales calculados, opiniones. No figura en la enumeración prov de SPEC.md; se usa para uc:AnalystOpinion y uc:Issue."@es .
+
+uc:RoleTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "Role types"@en , "Tipos de rol"@es ;
+    rdfs:label "Role types"@en , "Tipos de rol"@es ;
+    rdfs:comment "Controlled vocabulary; each concept carries the SPEC.md enumeration string in skos:notation."@en ,
+        "Vocabulario controlado; cada concepto lleva en skos:notation la cadena de enumeración de SPEC.md."@es ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:RoleType a owl:Class ;
+    rdfs:label "role type"@en , "tipo de rol"@es ;
+    rdfs:comment "Class of the concepts in uc:RoleTypeScheme."@en ,
+        "Clase de los conceptos de uc:RoleTypeScheme."@es ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:role_shareholder a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "shareholder" ;
+    skos:prefLabel "Shareholder"@en , "Accionista"@es ;
+    rdfs:label "Shareholder"@en , "Accionista"@es ;
+    skos:definition "Holds shares in the organisation."@en , "Posee acciones de la organización."@es ;
+    rdfs:comment "Holds shares in the organisation."@en , "Posee acciones de la organización."@es ;
+    skos:closeMatch fibo-be-oac-cown:Shareholder .
+
+uc:role_beneficial_owner a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "beneficial_owner" ;
+    skos:prefLabel "Beneficial owner"@en , "Beneficiario final"@es ;
+    rdfs:label "Beneficial owner"@en , "Beneficiario final"@es ;
+    skos:definition "Stated to be the ultimate beneficial owner of the organisation."@en , "Señalado como beneficiario final de la organización."@es ;
+    rdfs:comment "Stated to be the ultimate beneficial owner of the organisation."@en , "Señalado como beneficiario final de la organización."@es ;
+    skos:closeMatch fibo-be-oac-cown:BeneficialOwner .
+
+uc:role_president a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "president" ;
+    skos:prefLabel "President"@en , "Presidente"@es ;
+    rdfs:label "President"@en , "Presidente"@es ;
+    skos:definition "Chairs the board of the organisation."@en , "Preside el directorio de la organización."@es ;
+    rdfs:comment "Chairs the board of the organisation."@en , "Preside el directorio de la organización."@es ;
+    skos:broadMatch fibo-be-oac-exec:BoardMember .
+
+uc:role_vice_president a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "vice_president" ;
+    skos:prefLabel "Vice-president"@en , "Vicepresidente"@es ;
+    rdfs:label "Vice-president"@en , "Vicepresidente"@es ;
+    skos:definition "Vice-chair of the board."@en , "Vicepresidente del directorio."@es ;
+    rdfs:comment "Vice-chair of the board."@en , "Vicepresidente del directorio."@es ;
+    skos:broadMatch fibo-be-oac-exec:BoardMember .
+
+uc:role_director a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "director" ;
+    skos:prefLabel "Director"@en , "Director"@es ;
+    rdfs:label "Director"@en , "Director"@es ;
+    skos:definition "Member of the board of directors."@en , "Miembro titular del directorio."@es ;
+    rdfs:comment "Member of the board of directors."@en , "Miembro titular del directorio."@es ;
+    skos:closeMatch fibo-be-oac-exec:BoardMember .
+
+uc:role_alternate_director a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "alternate_director" ;
+    skos:prefLabel "Alternate director"@en , "Director suplente"@es ;
+    rdfs:label "Alternate director"@en , "Director suplente"@es ;
+    skos:definition "Alternate member of the board."@en , "Miembro suplente del directorio."@es ;
+    rdfs:comment "Alternate member of the board."@en , "Miembro suplente del directorio."@es ;
+    skos:relatedMatch fibo-be-oac-exec:BoardMember .
+
+uc:role_statutory_auditor a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "statutory_auditor" ;
+    skos:prefLabel "Statutory auditor"@en , "Síndico titular"@es ;
+    rdfs:label "Statutory auditor"@en , "Síndico titular"@es ;
+    skos:definition "Statutory auditor (síndico) of the company."@en , "Síndico titular de la sociedad."@es ;
+    rdfs:comment "Statutory auditor (síndico) of the company."@en , "Síndico titular de la sociedad."@es ;
+    skos:relatedMatch fibo-be-oac-exec:Auditor .
+
+uc:role_alternate_statutory_auditor a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "alternate_statutory_auditor" ;
+    skos:prefLabel "Alternate statutory auditor"@en , "Síndico suplente"@es ;
+    rdfs:label "Alternate statutory auditor"@en , "Síndico suplente"@es ;
+    skos:definition "Alternate statutory auditor."@en , "Síndico suplente de la sociedad."@es ;
+    rdfs:comment "Alternate statutory auditor."@en , "Síndico suplente de la sociedad."@es ;
+    skos:relatedMatch fibo-be-oac-exec:Auditor .
+
+uc:role_officer a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "officer" ;
+    skos:prefLabel "Officer"@en , "Gerente o ejecutivo"@es ;
+    rdfs:label "Officer"@en , "Gerente o ejecutivo"@es ;
+    skos:definition "Manager or executive officer."@en , "Gerente o ejecutivo de la organización."@es ;
+    rdfs:comment "Manager or executive officer."@en , "Gerente o ejecutivo de la organización."@es ;
+    skos:closeMatch fibo-be-oac-exec:CorporateOfficer .
+
+uc:role_employee a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "employee" ;
+    skos:prefLabel "Employee"@en , "Empleado"@es ;
+    rdfs:label "Employee"@en , "Empleado"@es ;
+    skos:definition "Employee of the organisation."@en , "Empleado de la organización."@es ;
+    rdfs:comment "Employee of the organisation."@en , "Empleado de la organización."@es ;
+    skos:closeMatch fibo-fnd-org-fm:Employee .
+
+uc:role_founder a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "founder" ;
+    skos:prefLabel "Founder"@en , "Fundador"@es ;
+    rdfs:label "Founder"@en , "Fundador"@es ;
+    skos:definition "Founder or incorporator."@en , "Fundador o constituyente."@es ;
+    rdfs:comment "Founder or incorporator."@en , "Fundador o constituyente."@es .
+
+uc:role_legal_representative a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "legal_representative" ;
+    skos:prefLabel "Legal representative"@en , "Representante legal"@es ;
+    rdfs:label "Legal representative"@en , "Representante legal"@es ;
+    skos:definition "Legal representative or attorney-in-fact."@en , "Representante legal o apoderado."@es ;
+    rdfs:comment "Legal representative or attorney-in-fact."@en , "Representante legal o apoderado."@es ;
+    skos:relatedMatch fibo-be-oac-exec:Signatory .
+
+uc:role_registry_agent a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "registry_agent" ;
+    skos:prefLabel "Registry agent"@en , "Gestor registral"@es ;
+    rdfs:label "Registry agent"@en , "Gestor registral"@es ;
+    skos:definition "Person who handled registry filings for the company."@en , "Persona que gestionó las inscripciones registrales de la sociedad."@es ;
+    rdfs:comment "Person who handled registry filings for the company."@en , "Persona que gestionó las inscripciones registrales de la sociedad."@es ;
+    skos:relatedMatch fibo-fbc-pas-fpas:RegisteredAgent .
+
+uc:role_group_role a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "group_role" ;
+    skos:prefLabel "Group role"@en , "Rol en el grupo"@es ;
+    rdfs:label "Group role"@en , "Rol en el grupo"@es ;
+    skos:definition "A stated role in a business group that is not a formal corporate office."@en , "Rol declarado en un grupo empresarial que no es un cargo societario formal."@es ;
+    rdfs:comment "A stated role in a business group that is not a formal corporate office."@en , "Rol declarado en un grupo empresarial que no es un cargo societario formal."@es .
+
+uc:role_related_group_member a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "related_group_member" ;
+    skos:prefLabel "Related group member"@en , "Miembro de grupo vinculado"@es ;
+    rdfs:label "Related group member"@en , "Miembro de grupo vinculado"@es ;
+    skos:definition "Stated to belong to a group of related parties."@en , "Señalado como integrante de un grupo de partes vinculadas."@es ;
+    rdfs:comment "Stated to belong to a group of related parties."@en , "Señalado como integrante de un grupo de partes vinculadas."@es ;
+    skos:relatedMatch fibo-be-oac-cctl:Affiliate .
+
+uc:role_relative_of a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "relative_of" ;
+    skos:prefLabel "Relative of"@en , "Pariente de"@es ;
+    rdfs:label "Relative of"@en , "Pariente de"@es ;
+    skos:definition "Kinship stated as relevant to related-party status; uc:organisation points to the other person."@en , "Parentesco consignado como relevante para la vinculación; uc:organisation apunta a la otra persona."@es ;
+    rdfs:comment "Kinship stated as relevant to related-party status; uc:organisation points to the other person."@en , "Parentesco consignado como relevante para la vinculación; uc:organisation apunta a la otra persona."@es .
+
+uc:role_controlling_group a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "controlling_group" ;
+    skos:prefLabel "Controlling group"@en , "Grupo controlante"@es ;
+    rdfs:label "Controlling group"@en , "Grupo controlante"@es ;
+    skos:definition "Stated to control the organisation."@en , "Señalado como controlante de la organización."@es ;
+    rdfs:comment "Stated to control the organisation."@en , "Señalado como controlante de la organización."@es ;
+    skos:closeMatch fibo-fnd-oac-ctl:ControllingParty .
+
+uc:role_charged_person a skos:Concept, uc:RoleType ;
+    skos:inScheme uc:RoleTypeScheme ; skos:topConceptOf uc:RoleTypeScheme ;
+    skos:notation "charged_person" ;
+    skos:prefLabel "Charged person"@en , "Persona imputada"@es ;
+    rdfs:label "Charged person"@en , "Persona imputada"@es ;
+    skos:definition "Charged or named as a suspect in the case in connection with the organisation. Presumed innocent."@en , "Imputada o nombrada como sospechosa en la causa en relación con la organización. Se presume inocente."@es ;
+    rdfs:comment "Charged or named as a suspect in the case in connection with the organisation. Presumed innocent."@en , "Imputada o nombrada como sospechosa en la causa en relación con la organización. Se presume inocente."@es .
+
+uc:FlowInstrumentScheme a skos:ConceptScheme ;
+    skos:prefLabel "Flow instruments"@en , "Instrumentos de flujo"@es ;
+    rdfs:label "Flow instruments"@en , "Instrumentos de flujo"@es ;
+    rdfs:comment "Controlled vocabulary; each concept carries the SPEC.md enumeration string in skos:notation."@en ,
+        "Vocabulario controlado; cada concepto lleva en skos:notation la cadena de enumeración de SPEC.md."@es ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:FlowInstrument a owl:Class ;
+    rdfs:label "flow instrument"@en , "instrumento de flujo"@es ;
+    rdfs:comment "Class of the concepts in uc:FlowInstrumentScheme."@en ,
+        "Clase de los conceptos de uc:FlowInstrumentScheme."@es ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:instr_loan_disbursement a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "loan_disbursement" ;
+    skos:prefLabel "Loan disbursement"@en , "Desembolso de préstamo"@es ;
+    rdfs:label "Loan disbursement"@en , "Desembolso de préstamo"@es ;
+    skos:definition "Proceeds of a bank loan paid out to the borrower."@en , "Fondos de un préstamo bancario desembolsados al prestatario."@es ;
+    rdfs:comment "Proceeds of a bank loan paid out to the borrower."@en , "Fondos de un préstamo bancario desembolsados al prestatario."@es ;
+    skos:relatedMatch fibo-loan-ln-evt:hasDisbursementDate .
+
+uc:instr_transfer a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "transfer" ;
+    skos:prefLabel "Transfer"@en , "Transferencia"@es ;
+    rdfs:label "Transfer"@en , "Transferencia"@es ;
+    skos:definition "Bank transfer between accounts."@en , "Transferencia bancaria entre cuentas."@es ;
+    rdfs:comment "Bank transfer between accounts."@en , "Transferencia bancaria entre cuentas."@es ;
+    skos:broadMatch fibo-fnd-pas-psch:Payment .
+
+uc:instr_bond_purchase a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "bond_purchase" ;
+    skos:prefLabel "Bond purchase"@en , "Compra de bonos"@es ;
+    rdfs:label "Bond purchase"@en , "Compra de bonos"@es ;
+    skos:definition "Money paid to buy bonds or other debt securities."@en , "Dinero pagado para comprar bonos u otros títulos de deuda."@es ;
+    rdfs:comment "Money paid to buy bonds or other debt securities."@en , "Dinero pagado para comprar bonos u otros títulos de deuda."@es ;
+    skos:relatedMatch fibo-sec-dbt-bnd:Bond .
+
+uc:instr_loan a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "loan" ;
+    skos:prefLabel "Loan between parties"@en , "Préstamo entre partes"@es ;
+    rdfs:label "Loan between parties"@en , "Préstamo entre partes"@es ;
+    skos:definition "Money lent by one non-bank party to another."@en , "Dinero prestado por una parte no bancaria a otra."@es ;
+    rdfs:comment "Money lent by one non-bank party to another."@en , "Dinero prestado por una parte no bancaria a otra."@es ;
+    skos:relatedMatch fibo-loan-ln-ln:Loan .
+
+uc:instr_contract a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "contract" ;
+    skos:prefLabel "Contract payment"@en , "Pago por contrato"@es ;
+    rdfs:label "Contract payment"@en , "Pago por contrato"@es ;
+    skos:definition "Payment under a service, supply or other contract."@en , "Pago en virtud de un contrato de servicios, suministro u otro."@es ;
+    rdfs:comment "Payment under a service, supply or other contract."@en , "Pago en virtud de un contrato de servicios, suministro u otro."@es ;
+    skos:broadMatch fibo-fnd-pas-psch:Payment .
+
+uc:instr_repayment a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "repayment" ;
+    skos:prefLabel "Repayment"@en , "Amortización o cancelación"@es ;
+    rdfs:label "Repayment"@en , "Amortización o cancelación"@es ;
+    skos:definition "Repayment of a loan, in whole or in part."@en , "Pago total o parcial de un préstamo."@es ;
+    rdfs:comment "Repayment of a loan, in whole or in part."@en , "Pago total o parcial de un préstamo."@es ;
+    skos:broadMatch fibo-fnd-pas-psch:Payment .
+
+uc:instr_portfolio_sale_price a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "portfolio_sale_price" ;
+    skos:prefLabel "Portfolio sale price"@en , "Precio de venta de cartera"@es ;
+    rdfs:label "Portfolio sale price"@en , "Precio de venta de cartera"@es ;
+    skos:definition "Price paid for a loan portfolio."@en , "Precio pagado por una cartera de préstamos."@es ;
+    rdfs:comment "Price paid for a loan portfolio."@en , "Precio pagado por una cartera de préstamos."@es ;
+    skos:relatedMatch fibo-fnd-pas-pas:Sale .
+
+uc:instr_portfolio_assignment a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "portfolio_assignment" ;
+    skos:prefLabel "Portfolio assignment"@en , "Cesión de cartera"@es ;
+    rdfs:label "Portfolio assignment"@en , "Cesión de cartera"@es ;
+    skos:definition "Transfer of the loans themselves from seller to buyer."@en , "Traspaso de los propios préstamos del vendedor al comprador."@es ;
+    rdfs:comment "Transfer of the loans themselves from seller to buyer."@en , "Traspaso de los propios préstamos del vendedor al comprador."@es ;
+    skos:relatedMatch fibo-fnd-pas-pas:Sale .
+
+uc:instr_cash_delivery a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "cash_delivery" ;
+    skos:prefLabel "Cash delivery"@en , "Entrega de efectivo"@es ;
+    rdfs:label "Cash delivery"@en , "Entrega de efectivo"@es ;
+    skos:definition "Cash handed over in person."@en , "Efectivo entregado en mano."@es ;
+    rdfs:comment "Cash handed over in person."@en , "Efectivo entregado en mano."@es .
+
+uc:instr_cheque a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "cheque" ;
+    skos:prefLabel "Cheque"@en , "Cheque"@es ;
+    rdfs:label "Cheque"@en , "Cheque"@es ;
+    skos:definition "Payment by cheque."@en , "Pago mediante cheque."@es ;
+    rdfs:comment "Payment by cheque."@en , "Pago mediante cheque."@es .
+
+uc:instr_other a skos:Concept, uc:FlowInstrument ;
+    skos:inScheme uc:FlowInstrumentScheme ; skos:topConceptOf uc:FlowInstrumentScheme ;
+    skos:notation "other" ;
+    skos:prefLabel "Other"@en , "Otro"@es ;
+    rdfs:label "Other"@en , "Otro"@es ;
+    skos:definition "Any other or unspecified instrument."@en , "Cualquier otro instrumento o no especificado."@es ;
+    rdfs:comment "Any other or unspecified instrument."@en , "Cualquier otro instrumento o no especificado."@es .
+
+uc:EventCategoryScheme a skos:ConceptScheme ;
+    skos:prefLabel "Event categories"@en , "Categorías de evento"@es ;
+    rdfs:label "Event categories"@en , "Categorías de evento"@es ;
+    rdfs:comment "Controlled vocabulary; each concept carries the SPEC.md enumeration string in skos:notation."@en ,
+        "Vocabulario controlado; cada concepto lleva en skos:notation la cadena de enumeración de SPEC.md."@es ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:EventCategory a owl:Class ;
+    rdfs:label "event category"@en , "categoría de evento"@es ;
+    rdfs:comment "Class of the concepts in uc:EventCategoryScheme."@en ,
+        "Clase de los conceptos de uc:EventCategoryScheme."@es ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:cat_corporate a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "corporate" ;
+    skos:prefLabel "Corporate"@en , "Societario"@es ;
+    rdfs:label "Corporate"@en , "Societario"@es ;
+    skos:definition "Incorporations, share transfers, board changes, mergers."@en , "Constituciones, transferencias de acciones, cambios de directorio, fusiones."@es ;
+    rdfs:comment "Incorporations, share transfers, board changes, mergers."@en , "Constituciones, transferencias de acciones, cambios de directorio, fusiones."@es .
+
+uc:cat_credit a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "credit" ;
+    skos:prefLabel "Credit"@en , "Crediticio"@es ;
+    rdfs:label "Credit"@en , "Crediticio"@es ;
+    skos:definition "Loans granted, renewed, repaid or sold."@en , "Préstamos otorgados, renovados, cancelados o vendidos."@es ;
+    rdfs:comment "Loans granted, renewed, repaid or sold."@en , "Préstamos otorgados, renovados, cancelados o vendidos."@es .
+
+uc:cat_supervisory a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "supervisory" ;
+    skos:prefLabel "Supervisory"@en , "Supervisión"@es ;
+    rdfs:label "Supervisory"@en , "Supervisión"@es ;
+    skos:definition "Inspections, findings, sanctions and other acts of the financial supervisors."@en , "Inspecciones, hallazgos, sanciones y otros actos de los supervisores financieros."@es ;
+    rdfs:comment "Inspections, findings, sanctions and other acts of the financial supervisors."@en , "Inspecciones, hallazgos, sanciones y otros actos de los supervisores financieros."@es .
+
+uc:cat_criminal a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "criminal" ;
+    skos:prefLabel "Criminal proceedings"@en , "Proceso penal"@es ;
+    rdfs:label "Criminal proceedings"@en , "Proceso penal"@es ;
+    skos:definition "Complaints, charges, hearings and measures in the criminal case."@en , "Denuncias, imputaciones, audiencias y medidas en la causa penal."@es ;
+    rdfs:comment "Complaints, charges, hearings and measures in the criminal case."@en , "Denuncias, imputaciones, audiencias y medidas en la causa penal."@es .
+
+uc:cat_political a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "political" ;
+    skos:prefLabel "Political"@en , "Político"@es ;
+    rdfs:label "Political"@en , "Político"@es ;
+    skos:definition "Acts and statements of political bodies and office holders."@en , "Actos y declaraciones de órganos políticos y funcionarios."@es ;
+    rdfs:comment "Acts and statements of political bodies and office holders."@en , "Actos y declaraciones de órganos políticos y funcionarios."@es .
+
+uc:cat_market a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "market" ;
+    skos:prefLabel "Market"@en , "Mercado"@es ;
+    rdfs:label "Market"@en , "Mercado"@es ;
+    skos:definition "Ratings, bond issues, market reactions."@en , "Calificaciones, emisiones de bonos, reacciones del mercado."@es ;
+    rdfs:comment "Ratings, bond issues, market reactions."@en , "Calificaciones, emisiones de bonos, reacciones del mercado."@es .
+
+uc:cat_statement a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "statement" ;
+    skos:prefLabel "Statement"@en , "Declaración"@es ;
+    rdfs:label "Statement"@en , "Declaración"@es ;
+    skos:definition "Public statements by the parties."@en , "Declaraciones públicas de las partes."@es ;
+    rdfs:comment "Public statements by the parties."@en , "Declaraciones públicas de las partes."@es .
+
+uc:cat_depositor a skos:Concept, uc:EventCategory ;
+    skos:inScheme uc:EventCategoryScheme ; skos:topConceptOf uc:EventCategoryScheme ;
+    skos:notation "depositor" ;
+    skos:prefLabel "Depositor"@en , "Depositantes"@es ;
+    rdfs:label "Depositor"@en , "Depositantes"@es ;
+    skos:definition "Events affecting depositors: withdrawals, guarantees, communications."@en , "Hechos que afectan a los depositantes: retiros, garantías, comunicados."@es ;
+    rdfs:comment "Events affecting depositors: withdrawals, guarantees, communications."@en , "Hechos que afectan a los depositantes: retiros, garantías, comunicados."@es .
+
+# -----------------------------------------------------------------------------
+# Named graphs
+# -----------------------------------------------------------------------------
+
+<https://w3id.org/ueno-case/id/graph/prosecution> a uc:AssertionGraph ;
+    rdfs:label "Prosecution assertions graph"@en , "Grafo de aserciones del Ministerio Público"@es ;
+    rdfs:comment "Named graph holding the assertions by uc:Prosecution that were read in the prosecution record itself (source src:acta-pNN), together with their shortcut triples. Prosecution claims reported second-hand are in the press graph."@en ,
+        "Grafo con nombre que contiene las aserciones de uc:Prosecution leídas en la propia acta fiscal (fuente src:acta-pNN), junto con sus triples de atajo. Las afirmaciones de la Fiscalía conocidas de segunda mano están en el grafo de prensa."@es ;
+    prov:wasAttributedTo uc:Prosecution .
+
+<https://w3id.org/ueno-case/id/graph/rey> a uc:AssertionGraph ;
+    rdfs:label "Suspect (Rey) assertions graph"@en , "Grafo de aserciones del imputado (Rey)"@es ;
+    rdfs:comment "Named graph holding the assertions by uc:Rey that were read in the prosecution record itself (source src:acta-pNN), together with their shortcut triples. Statements by Rey reported second-hand are in the press graph."@en ,
+        "Grafo con nombre que contiene las aserciones de uc:Rey leídas en la propia acta fiscal (fuente src:acta-pNN), junto con sus triples de atajo. Las declaraciones de Rey conocidas de segunda mano están en el grafo de prensa."@es ;
+    prov:wasAttributedTo uc:Rey .
+
+<https://w3id.org/ueno-case/id/graph/press> a uc:AssertionGraph ;
+    rdfs:label "Press assertions graph"@en , "Grafo de aserciones de la prensa"@es ;
+    rdfs:comment "Named graph holding every assertion that was not read in the prosecution record: press, regulator, rating agency, company, defence and analyst voices, and prosecution or Rey claims reported second-hand. uc:assertedBy names the exact voice."@en ,
+        "Grafo con nombre que contiene toda aserción no leída en el acta fiscal: voces de prensa, regulador, calificadora, empresa, defensa y analista, y las afirmaciones de la Fiscalía o de Rey conocidas de segunda mano. uc:assertedBy indica la voz exacta."@es ;
+    prov:wasAttributedTo uc:Press .
+
+# -----------------------------------------------------------------------------
+# Terms added in v0.2.0 (20 Nov 2026): builder terms moved into the ontology, editor layer,
+# source tier, same-operation grouping, charge details
+# -----------------------------------------------------------------------------
+
+uc:PartyDescription a owl:Class ;
+    rdfs:label "party description"@en , "descripción de parte"@es ;
+    rdfs:comment "One contributor row describing a party (label, alternative names, description, business), with its own provenance. uc:involvesParty points at the party described."@en ,
+        "Fila de un colaborador que describe a una parte (nombre, nombres alternativos, descripción, actividad), con su propia procedencia. uc:involvesParty apunta a la parte descrita."@es ;
+    rdfs:subClassOf uc:Assertion ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:Correction a owl:Class ;
+    rdfs:label "correction"@en , "corrección"@es ;
+    rdfs:comment "A record of one editorial correction to a contributor row: field, value before, value after, reason and the source it relies on. Not a claim about the case."@en ,
+        "Registro de una corrección editorial a una fila de un colaborador: campo, valor anterior, valor nuevo, motivo y fuente en que se apoya. No es una afirmación sobre el caso."@es ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:business a owl:DatatypeProperty ;
+    rdfs:label "business"@en , "actividad"@es ;
+    rdfs:comment "What the party does (line of business), as described by a contributor."@en ,
+        "A qué se dedica la parte (giro), según la describe un colaborador."@es ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:isStub a owl:DatatypeProperty ;
+    rdfs:label "is stub"@en , "es marcador"@es ;
+    rdfs:comment "true on a party that assertions refer to but no contributor has described yet; its label is only a placeholder made from the id."@en ,
+        "true en una parte a la que se refieren aserciones pero que ningún colaborador ha descrito aún; su etiqueta es solo un marcador derivado del identificador."@es ;
+    rdfs:domain uc:Party ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:dateText a owl:DatatypeProperty ;
+    rdfs:label "date as written"@en , "fecha tal como se escribió"@es ;
+    rdfs:comment "The date or period string exactly as the contributor wrote it."@en ,
+        "La fecha o el periodo exactamente como lo escribió el colaborador."@es ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sortDate a owl:DatatypeProperty ;
+    rdfs:label "sort date"@en , "fecha de ordenación"@es ;
+    rdfs:comment "First day of the stated date or period, for sorting. Not a claim of day precision: see uc:datePrecision."@en ,
+        "Primer día de la fecha o periodo indicados, para ordenar. No implica precisión de día: véase uc:datePrecision."@es ;
+    rdfs:range xsd:date ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sortDateEnd a owl:DatatypeProperty ;
+    rdfs:label "sort date (end)"@en , "fecha de ordenación (fin)"@es ;
+    rdfs:comment "Last day of the end of a period or role, for sorting."@en ,
+        "Último día del fin de un periodo o rol, para ordenar."@es ;
+    rdfs:range xsd:date ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:startDateText a owl:DatatypeProperty ;
+    rdfs:label "start as written"@en , "inicio tal como se escribió"@es ;
+    rdfs:comment "Original start string of a role when it could not be normalised to a single date."@en ,
+        "Texto original del inicio de un rol cuando no pudo normalizarse a una fecha única."@es ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:endDateText a owl:DatatypeProperty ;
+    rdfs:label "end as written"@en , "fin tal como se escribió"@es ;
+    rdfs:comment "Original end string of a role when it could not be normalised to a single date."@en ,
+        "Texto original del fin de un rol cuando no pudo normalizarse a una fecha única."@es ;
+    rdfs:domain uc:RoleHolding ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:unitNote a owl:DatatypeProperty ;
+    rdfs:label "unit note"@en , "nota de unidad"@es ;
+    rdfs:comment "Unit or meaning of a financial fact's value, as noted by the contributor."@en ,
+        "Unidad o significado del valor de un dato financiero, según lo anotó el colaborador."@es ;
+    rdfs:domain uc:FinancialFact ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:issueLocation a owl:DatatypeProperty ;
+    rdfs:label "issue location"@en , "ubicación de la inconsistencia"@es ;
+    rdfs:comment "Where a data issue was found (page, table, pair of sources)."@en ,
+        "Dónde se encontró la inconsistencia (página, tabla, par de fuentes)."@es ;
+    rdfs:domain uc:Issue ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:recipientDerivedFrom a owl:ObjectProperty ;
+    rdfs:label "recipient derived from"@en , "destinatario derivado de"@es ;
+    rdfs:comment "The uc:Flow assertions from which a derived uc:ultimateRecipient link on this loan was computed."@en ,
+        "Las aserciones uc:Flow a partir de las cuales se calculó un vínculo derivado uc:ultimateRecipient de este préstamo."@es ;
+    rdfs:domain uc:Loan ;
+    rdfs:range uc:Flow ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:nameAsReported a owl:DatatypeProperty ;
+    rdfs:label "name as reported"@en , "nombre según la fuente"@es ;
+    rdfs:comment "Name of the charged person as printed by the source."@en ,
+        "Nombre de la persona imputada tal como lo publica la fuente."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:roleReported a owl:DatatypeProperty ;
+    rdfs:label "role as reported"@en , "rol según la fuente"@es ;
+    rdfs:comment "Role of the charged person as reported by the source."@en ,
+        "Rol de la persona imputada según la fuente."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:allegedOffenceAdded a owl:DatatypeProperty ;
+    rdfs:label "alleged offence added"@en , "hecho punible añadido"@es ;
+    rdfs:comment "An offence reported as added later to the original charge. An allegation only."@en ,
+        "Hecho punible que, según se informó, se añadió después a la imputación original. Es solo una alegación."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:defenceStatement a owl:DatatypeProperty ;
+    rdfs:label "defence statement"@en , "posición de la defensa"@es ;
+    rdfs:comment "Position of the defence as reported by the source of the charge row."@en ,
+        "Posición de la defensa según la fuente de la fila de imputación."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:caseReference a owl:DatatypeProperty ;
+    rdfs:label "case reference"@en , "número de causa"@es ;
+    rdfs:comment "Number of the criminal case the charge belongs to (for example 89/2026)."@en ,
+        "Número de la causa penal a la que pertenece la imputación (por ejemplo 89/2026)."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:detainedOn a owl:DatatypeProperty ;
+    rdfs:label "detained on"@en , "detenido el"@es ;
+    rdfs:comment "Date on which the person was reported detained."@en ,
+        "Fecha en que, según se informó, la persona fue detenida."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range xsd:date ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:measureRequested a owl:DatatypeProperty ;
+    rdfs:label "measure requested"@en , "medida solicitada"@es ;
+    rdfs:comment "Procedural measure requested by the prosecution, when it differs from the measure ordered (contributor code)."@en ,
+        "Medida procesal solicitada por la Fiscalía cuando difiere de la medida dictada (código del colaborador)."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:measureSource a owl:ObjectProperty ;
+    rdfs:label "measure source"@en , "fuente de la medida"@es ;
+    rdfs:comment "The source from which the procedural measure was taken, when it is not the row's main source."@en ,
+        "Fuente de la que se tomó la medida procesal cuando no es la fuente principal de la fila."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range uc:Source ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:statusSource a owl:ObjectProperty ;
+    rdfs:label "status source"@en , "fuente del estado"@es ;
+    rdfs:comment "The source from which the person's current procedural status was taken."@en ,
+        "Fuente de la que se tomó el estado procesal actual de la persona."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range uc:Source ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:nextHearing a owl:DatatypeProperty ;
+    rdfs:label "next hearing"@en , "próxima audiencia"@es ;
+    rdfs:comment "Next hearing or procedural step as reported (free text)."@en ,
+        "Próxima audiencia o acto procesal según se informó (texto libre)."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:placeReported a owl:DatatypeProperty ;
+    rdfs:label "place reported"@en , "lugar informado"@es ;
+    rdfs:comment "Place of detention or arrest as reported (free text; may record a conflict between outlets)."@en ,
+        "Lugar de reclusión o arresto según se informó (texto libre; puede consignar una discrepancia entre medios)."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:previousMeasure a owl:DatatypeProperty ;
+    rdfs:label "previous measure"@en , "medida anterior"@es ;
+    rdfs:comment "An earlier procedural measure that was later replaced."@en ,
+        "Medida procesal anterior que luego fue sustituida."@es ;
+    rdfs:domain uc:Charge ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sourceTier a owl:DatatypeProperty ;
+    rdfs:label "source tier"@en , "nivel de la fuente"@es ;
+    rdfs:comment "How close to the prosecution record the assertion's source is: 'record' (a record page), 'press_linked' (a document with a URL), 'rating_or_official', 'dossier' (third-party compilation without links), 'editorial' (label supplied by the project), 'analysis' (an analyst opinion, not a sourced claim) or 'unlinked'."@en ,
+        "Cercanía de la fuente al acta fiscal: 'record' (página del acta), 'press_linked' (documento con URL), 'rating_or_official' (calificadora u oficial), 'dossier' (compilación de terceros sin enlaces), 'editorial' (etiqueta puesta por el proyecto), 'analysis' (opinión de analista, no una afirmación con fuente) o 'unlinked' (sin enlace)."@es ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:alleged a owl:DatatypeProperty ;
+    rdfs:label "alleged"@en , "alegado"@es ;
+    rdfs:comment "true on a flow or event of the record layer whose text states conduct; it must be presented as 'the prosecution alleges' or 'Rey states'."@en ,
+        "true en un flujo o evento de la capa del acta cuyo texto afirma una conducta; debe presentarse como 'la Fiscalía alega' o 'Rey declara'."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:hidden a owl:DatatypeProperty ;
+    rdfs:label "hidden"@en , "oculto"@es ;
+    rdfs:comment "true on an assertion that stays in the graph but must be left out of visualisations."@en ,
+        "true en una aserción que permanece en el grafo pero debe omitirse en las visualizaciones."@es ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:hiddenReason a owl:DatatypeProperty ;
+    rdfs:label "reason for hiding"@en , "motivo de ocultación"@es ;
+    rdfs:comment "Why the assertion is hidden."@en ,
+        "Por qué se oculta la aserción."@es ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:verified a owl:DatatypeProperty ;
+    rdfs:label "verified"@en , "verificado"@es ;
+    rdfs:comment "true when the data editor checked the row against its source and confirmed it; false when the check did not confirm it."@en ,
+        "true cuando el editor de datos cotejó la fila con su fuente y la confirmó; false cuando el cotejo no la confirmó."@es ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:verifiedMethod a owl:DatatypeProperty ;
+    rdfs:label "verification method"@en , "método de verificación"@es ;
+    rdfs:comment "How the row was checked (page image, OCR text, URL, script)."@en ,
+        "Cómo se cotejó la fila (imagen de página, texto OCR, URL, script)."@es ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:verifiedNote a owl:DatatypeProperty ;
+    rdfs:label "verification note"@en , "nota de verificación"@es ;
+    rdfs:comment "The editor's remark on the check."@en ,
+        "Observación del editor sobre el cotejo."@es ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:correction a owl:ObjectProperty ;
+    rdfs:label "correction"@en , "corrección"@es ;
+    rdfs:comment "A uc:Correction applied to this assertion."@en ,
+        "Una uc:Correction aplicada a esta aserción."@es ;
+    rdfs:range uc:Correction ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:correctsRow a owl:ObjectProperty ;
+    rdfs:label "corrects row"@en , "corrige la fila"@es ;
+    rdfs:comment "The assertion a correction was applied to."@en ,
+        "La aserción a la que se aplicó la corrección."@es ;
+    rdfs:domain uc:Correction ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:correctedField a owl:DatatypeProperty ;
+    rdfs:label "corrected field"@en , "campo corregido"@es ;
+    rdfs:comment "Name of a field changed by an editorial correction (the key used in the JSON-LD output)."@en ,
+        "Nombre de un campo modificado por una corrección editorial (la clave usada en la salida JSON-LD)."@es ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:originalValue a owl:DatatypeProperty ;
+    rdfs:label "original value"@en , "valor original"@es ;
+    rdfs:comment "Value before an editorial correction. On an assertion it is written 'field: value'; on a uc:Correction it is the value alone."@en ,
+        "Valor anterior a una corrección editorial. En una aserción se escribe 'campo: valor'; en una uc:Correction es solo el valor."@es ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:newValue a owl:DatatypeProperty ;
+    rdfs:label "new value"@en , "valor nuevo"@es ;
+    rdfs:comment "Value set by the correction."@en ,
+        "Valor fijado por la corrección."@es ;
+    rdfs:domain uc:Correction ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:editorNote a owl:DatatypeProperty ;
+    rdfs:label "editor note"@en , "nota del editor"@es ;
+    rdfs:comment "The data editor's reason for a correction."@en ,
+        "Motivo del editor de datos para una corrección."@es ;
+    rdfs:range rdf:langString ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:correctionAction a owl:DatatypeProperty ;
+    rdfs:label "correction action"@en , "acción de corrección"@es ;
+    rdfs:comment "'set', 'set_confidence', 'add_note', 'merge_entity' or 'delete_row' (which hides the row; nothing is deleted)."@en ,
+        "'set', 'set_confidence', 'add_note', 'merge_entity' o 'delete_row' (que oculta la fila; nada se borra)."@es ;
+    rdfs:domain uc:Correction ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:correctionStatus a owl:DatatypeProperty ;
+    rdfs:label "correction status"@en , "estado de la corrección"@es ;
+    rdfs:comment "'applied', or 'not applied' followed by the reason."@en ,
+        "'applied' (aplicada) o 'not applied' (no aplicada) seguido del motivo."@es ;
+    rdfs:domain uc:Correction ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:rawField a owl:DatatypeProperty ;
+    rdfs:label "raw field"@en , "campo original"@es ;
+    rdfs:comment "Name of the corrected field in the contributor file."@en ,
+        "Nombre del campo corregido en el archivo del colaborador."@es ;
+    rdfs:domain uc:Correction ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:checkedAgainst a owl:DatatypeProperty ;
+    rdfs:label "checked against"@en , "cotejado con"@es ;
+    rdfs:comment "What the editor compared the row with (page image, URL, script)."@en ,
+        "Con qué cotejó el editor la fila (imagen de página, URL, script)."@es ;
+    rdfs:domain uc:Correction ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:sameOperationKey a owl:DatatypeProperty ;
+    rdfs:label "same-operation key"@en , "clave de misma operación"@es ;
+    rdfs:comment "Shared key of loan or flow records that describe the same operation in different sources. The records stay separate; the key only lets a reader collapse alternative reports."@en ,
+        "Clave compartida por registros de préstamo o flujo que describen la misma operación en fuentes distintas. Los registros siguen separados; la clave solo permite agrupar informes alternativos."@es ;
+    rdfs:domain uc:Assertion ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:restates a owl:ObjectProperty ;
+    rdfs:label "restates"@en , "reformula"@es ;
+    rdfs:comment "The hidden flow that this event restates as a statement by the same voice, with the same provenance."@en ,
+        "El flujo oculto que este evento reformula como declaración de la misma voz, con la misma procedencia."@es ;
+    rdfs:domain uc:CaseEvent ;
+    rdfs:range uc:Flow ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+# -----------------------------------------------------------------------------
+# Terms added in v0.3.0 (20 Nov 2026): analyst opinions and the analysis graph
+# -----------------------------------------------------------------------------
+
+uc:opinionKind a owl:DatatypeProperty ;
+    rdfs:label "opinion kind"@en , "tipo de opinión"@es ;
+    rdfs:comment "Kind of analyst opinion: 'headline' (the main estimate), 'meaning' (what a figure does and does not mean), 'hypothesis' (a possible explanation) or 'recovery_scenario'."@en ,
+        "Tipo de opinión del analista: 'headline' (estimación principal), 'meaning' (qué significa y qué no una cifra), 'hypothesis' (explicación posible) o 'recovery_scenario' (escenario de recuperación)."@es ;
+    rdfs:domain uc:AnalystOpinion ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:estimateLow a owl:DatatypeProperty ;
+    rdfs:label "estimate (low)"@en , "estimación (baja)"@es ;
+    rdfs:comment "Lower bound of an analyst estimate, in the currency given by uc:currency. An opinion, not a sourced figure."@en ,
+        "Límite inferior de una estimación del analista, en la moneda indicada por uc:currency. Es una opinión, no una cifra con fuente."@es ;
+    rdfs:domain uc:AnalystOpinion ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:estimateCentral a owl:DatatypeProperty ;
+    rdfs:label "estimate (central)"@en , "estimación (central)"@es ;
+    rdfs:comment "Central value of an analyst estimate, in the currency given by uc:currency. An opinion, not a sourced figure."@en ,
+        "Valor central de una estimación del analista, en la moneda indicada por uc:currency. Es una opinión, no una cifra con fuente."@es ;
+    rdfs:domain uc:AnalystOpinion ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:estimateHigh a owl:DatatypeProperty ;
+    rdfs:label "estimate (high)"@en , "estimación (alta)"@es ;
+    rdfs:comment "Upper bound of an analyst estimate, in the currency given by uc:currency. An opinion, not a sourced figure."@en ,
+        "Límite superior de una estimación del analista, en la moneda indicada por uc:currency. Es una opinión, no una cifra con fuente."@es ;
+    rdfs:domain uc:AnalystOpinion ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+uc:basedOn a owl:ObjectProperty ;
+    rdfs:label "based on"@en , "basada en"@es ;
+    rdfs:comment "A sourced assertion that an analyst opinion rests on. The assertion keeps its own asserter, source and confidence."@en ,
+        "Aserción con fuente en la que se apoya una opinión del analista. La aserción conserva su propio declarante, fuente y confianza."@es ;
+    rdfs:domain uc:AnalystOpinion ;
+    rdfs:range uc:Assertion ;
+    rdfs:isDefinedBy <https://w3id.org/ueno-case/ont> .
+
+<https://w3id.org/ueno-case/id/graph/analysis> a uc:AssertionGraph ;
+    rdfs:label "Analyst opinions graph"@en , "Grafo de opiniones del analista"@es ;
+    rdfs:comment "Named graph holding only uc:AnalystOpinion resources: estimates and interpretations by the project's analysts, linked by uc:basedOn to the sourced assertions they rest on. Never a finding of the record."@en ,
+        "Grafo con nombre que contiene solo recursos uc:AnalystOpinion: estimaciones e interpretaciones de los analistas del proyecto, vinculadas por uc:basedOn a las aserciones con fuente en que se apoyan. Nunca es una conclusión del acta."@es ;
+    prov:wasAttributedTo uc:Analyst .

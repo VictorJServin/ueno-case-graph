@@ -1,0 +1,1496 @@
+{
+ "intro": [
+  "Companion to `data/ontology.ttl` (namespace `https://w3id.org/ueno-case/ont#`, prefix `uc:`; instances `https://w3id.org/ueno-case/id/`, prefix `ucr:`).",
+  "Instance IRIs follow the SPEC.md IDs with `:` turned into `/`: `org:ueno-bank` becomes `<https://w3id.org/ueno-case/id/org/ueno-bank>`, `src:acta-p05` becomes `<https://w3id.org/ueno-case/id/src/acta-p05>`, `rec:loan:0007` becomes `<https://w3id.org/ueno-case/id/rec/loan/0007>`. Because of the `/`, these cannot be written as plain `ucr:` prefixed names in Turtle or SPARQL: write the full IRI (or escape the slash, `ucr:org\\/ueno-bank`). Named graphs: `<https://w3id.org/ueno-case/id/graph/prosecution>`, `<https://w3id.org/ueno-case/id/graph/rey>`, `<https://w3id.org/ueno-case/id/graph/press>`."
+ ],
+ "result": "Result: 35 concepts. 29 fully verified, 5 partially verified (main class found, one requested facet missing), 1 not found. 164 individual IRIs verified in files.",
+ "prefixes": [
+  {
+   "prefix": "cmns-dt:",
+   "namespace": "https://www.omg.org/spec/Commons/DatesAndTimes/"
+  },
+  {
+   "prefix": "cmns-id:",
+   "namespace": "https://www.omg.org/spec/Commons/Identifiers/"
+  },
+  {
+   "prefix": "cmns-org:",
+   "namespace": "https://www.omg.org/spec/Commons/Organizations/"
+  },
+  {
+   "prefix": "cmns-pts:",
+   "namespace": "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+  },
+  {
+   "prefix": "cmns-qtu:",
+   "namespace": "https://www.omg.org/spec/Commons/QuantitiesAndUnits/"
+  },
+  {
+   "prefix": "cmns-ra:",
+   "namespace": "https://www.omg.org/spec/Commons/RegulatoryAgencies/"
+  },
+  {
+   "prefix": "fibo-be-ge-ge:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/"
+  },
+  {
+   "prefix": "fibo-be-ge-sajur:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/LatinAmericanJurisdiction/SouthAmericanGovernmentEntitiesAndJurisdictions/"
+  },
+  {
+   "prefix": "fibo-be-le-cb:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/"
+  },
+  {
+   "prefix": "fibo-be-le-lei:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/"
+  },
+  {
+   "prefix": "fibo-be-le-lp:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/"
+  },
+  {
+   "prefix": "fibo-be-oac-cctl:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/"
+  },
+  {
+   "prefix": "fibo-be-oac-cown:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/"
+  },
+  {
+   "prefix": "fibo-be-oac-exec:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/"
+  },
+  {
+   "prefix": "fibo-fbc-dae-dbt:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"
+  },
+  {
+   "prefix": "fibo-fbc-dae-gty:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Guaranty/"
+  },
+  {
+   "prefix": "fibo-fbc-fct-fse:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/"
+  },
+  {
+   "prefix": "fibo-fbc-fi-fi:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/"
+  },
+  {
+   "prefix": "fibo-fbc-pas-caa:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/"
+  },
+  {
+   "prefix": "fibo-fbc-pas-fpas:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/"
+  },
+  {
+   "prefix": "fibo-fnd-aap-ppl:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/"
+  },
+  {
+   "prefix": "fibo-fnd-acc-4217:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/"
+  },
+  {
+   "prefix": "fibo-fnd-acc-cur:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/"
+  },
+  {
+   "prefix": "fibo-fnd-agr-ctr:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/"
+  },
+  {
+   "prefix": "fibo-fnd-dt-oc:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/"
+  },
+  {
+   "prefix": "fibo-fnd-law-cor:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCore/"
+  },
+  {
+   "prefix": "fibo-fnd-oac-ctl:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/"
+  },
+  {
+   "prefix": "fibo-fnd-oac-own:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/"
+  },
+  {
+   "prefix": "fibo-fnd-pas-pas:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/"
+  },
+  {
+   "prefix": "fibo-fnd-pas-psch:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/"
+  },
+  {
+   "prefix": "fibo-fnd-pty-pty:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"
+  },
+  {
+   "prefix": "fibo-fnd-rel-rel:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"
+  },
+  {
+   "prefix": "fibo-loan-ln-evt:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoanEvents/"
+  },
+  {
+   "prefix": "fibo-loan-ln-ln:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/Loans/"
+  },
+  {
+   "prefix": "fibo-loan-reln-mtg:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/Mortgages/"
+  },
+  {
+   "prefix": "fibo-loan-spc-prod:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/LoanProducts/"
+  },
+  {
+   "prefix": "fibo-sec-dbt-bnd:",
+   "namespace": "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/"
+  }
+ ],
+ "mapping": [
+  {
+   "n": 1,
+   "concept": "Bank / depository institution",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-fct-fse:Bank",
+     "label": "bank",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-fct-fse:DepositoryInstitution",
+     "label": "depository institution",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-fct-fse:CommercialBank",
+     "label": "commercial bank",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-fct-fse:FinancialInstitution",
+     "label": "financial institution",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/FunctionalEntities/FinancialServicesEntities.rdf"
+   ],
+   "use": "`rdf:type` of the node for `org:ueno-bank` and the other banks (Visión, Zeta, OTP).",
+   "notes": "Bank is a subclass of DepositoryInstitution, which is a subclass of FinancialInstitution."
+  },
+  {
+   "n": 2,
+   "concept": "Central bank",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-fct-fse:CentralBank",
+     "label": "central bank",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/FunctionalEntities/FinancialServicesEntities.rdf"
+   ],
+   "use": "`rdf:type` of the node for `auth:bcp`.",
+   "notes": "Subclass of both Bank and MonetaryAuthority."
+  },
+  {
+   "n": 3,
+   "concept": "Regulatory agency",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "cmns-ra:RegulatoryAgency",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-ra:regulates",
+     "label": "regulates",
+     "kind": "object property"
+    },
+    {
+     "iri": "cmns-ra:isRegulatedBy",
+     "label": "is regulated by",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-ge-ge:GovernmentAgency",
+     "label": "government agency",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/FunctionalEntities/RegulatoryAgencies.rdf",
+    "Commons/RegulatoryAgencies.rdf",
+    "BE/GovernmentEntities/GovernmentEntities.rdf"
+   ],
+   "use": "`rdf:type` of the superintendencies; `uc:Authority` records it as `uc:fiboAnalogue`.",
+   "notes": "MOVED: no `RegulatoryAgency` class in FIBO any more. `FBC/FunctionalEntities/RegulatoryAgencies.rdf` still exists but only re-uses the Commons class (it defines TaxAuthority, Examiner, RegulatoryCapacity...)."
+  },
+  {
+   "n": 4,
+   "concept": "Broker-dealer",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-pas-fpas:BrokerDealer",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-pas-fpas:Broker",
+     "label": "broker",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-pas-fpas:Dealer",
+     "label": "dealer",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/FunctionalEntities/NorthAmericanEntities/USNationalInformationCenterControlledVocabularies.rdf",
+    "FBC/ProductsAndServices/FinancialProductsAndServices.rdf"
+   ],
+   "use": "`rdf:type` of the nodes for `org:ueno-casa-de-bolsa`, `org:cadiem`.",
+   "notes": "Lives in FBC/ProductsAndServices/FinancialProductsAndServices, not in FunctionalEntities/FinancialServicesEntities. It is a FunctionalEntity (a role-like classification), not a legal form."
+  },
+  {
+   "n": 5,
+   "concept": "Legal entity / legal person",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "cmns-org:LegalEntity",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-org:LegalPerson",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-org:Organization",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-org:FormalOrganization",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-le-lp:LegallyCompetentNaturalPerson",
+     "label": "legally competent natural person",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-le-lp:BusinessEntity",
+     "label": "business entity",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/FunctionalEntities/BusinessRegistries.rdf",
+    "BE/LegalEntities/LegalPersons.rdf",
+    "FND/Organizations/FormalOrganizations.rdf"
+   ],
+   "use": "`uc:Organisation` is a subclass of `cmns-org:Organization`; companies with a known legal form are also typed `cmns-org:LegalEntity`.",
+   "notes": "MOVED: `fibo-be-le-lp:LegalEntity` and `fibo-be-le-lp:LegalPerson` no longer exist (0 definitions, 0 references). `FND/Organizations/Organizations.rdf` is gone too. Commons labels use British spelling (\"formal organisation\")."
+  },
+  {
+   "n": 6,
+   "concept": "Stock corporation",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-be-le-cb:StockCorporation",
+     "label": "stock corporation",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-le-cb:Corporation",
+     "label": "corporation",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-le-cb:PrivatelyHeldCompany",
+     "label": "privately held company",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-le-cb:JointStockCompany",
+     "label": "joint stock company",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "BE/LegalEntities/CorporateBodies.rdf"
+   ],
+   "use": "`rdf:type` of the S.A. companies (Ueno Bank S.A., ITTI S.A.E.C.A., ...).",
+   "notes": "No class for S.R.L. in this module; see BE/PrivateLimitedCompanies."
+  },
+  {
+   "n": 7,
+   "concept": "Person",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-aap-ppl:Person",
+     "label": "person",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/AgentsAndPeople/People.rdf"
+   ],
+   "use": "`uc:Person` is a subclass.",
+   "notes": "Still in FIBO (FND/AgentsAndPeople/People), now a subclass of `cmns-pts:Party`. `fibo-fnd-aap-agt:AutonomousAgent` is gone."
+  },
+  {
+   "n": 8,
+   "concept": "Shareholder and shareholding with percentage",
+   "status": "PARTIAL",
+   "terms": [
+    {
+     "iri": "fibo-be-oac-cown:Shareholder",
+     "label": "shareholder",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-cown:Shareholding",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-cown:consistsOfNumberOfUnits",
+     "label": "consists of number of units",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "fibo-fbc-fi-fi:hasShareholder",
+     "label": "has shareholder",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-le-lei:hasOwnershipPercentage",
+     "label": "has ownership percentage",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "cmns-qtu:Percentage",
+     "label": "percentage",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "BE/OwnershipAndControl/CorporateOwnership.rdf",
+    "SEC/Equities/EquityInstruments.rdf",
+    "FBC/FinancialInstruments/FinancialInstruments.rdf",
+    "BE/LegalEntities/LEIEntities.rdf",
+    "Commons/QuantitiesAndUnits.rdf"
+   ],
+   "use": "`uc:role_shareholder skos:closeMatch` Shareholder; `uc:percentage` has `uc:fiboAnalogue` hasOwnershipPercentage.",
+   "notes": "Shareholder and Shareholding VERIFIED. Percentage: Shareholding is a FinancialAsset counted in units (`consistsOfNumberOfUnits`); it has NO percentage property. The only ownership-percentage term is the datatype property `hasOwnershipPercentage` in the LEI module (GLEIF relationship records). `hasShareholder` has domain Issuer and range Shareholder (roles)."
+  },
+  {
+   "n": 9,
+   "concept": "Beneficial owner",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-be-oac-cown:BeneficialOwner",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-cown:BeneficialOwnership",
+     "label": "beneficial ownership",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-cown:hasBeneficialOwner",
+     "label": "has beneficial owner",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-oac-cown:isBeneficialOwnerOf",
+     "label": "is beneficial owner of",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "BE/OwnershipAndControl/Executives.rdf",
+    "BE/OwnershipAndControl/CorporateOwnership.rdf"
+   ],
+   "use": "`uc:role_beneficial_owner skos:closeMatch` BeneficialOwner.",
+   "notes": "hasBeneficialOwner has domain Asset (not the company)."
+  },
+  {
+   "n": 10,
+   "concept": "Control / controlling party",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-oac-ctl:Control",
+     "label": "control",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-oac-ctl:ControllingParty",
+     "label": "controlling party",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-oac-ctl:hasControllingParty",
+     "label": "has controlling party",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-oac-ctl:isControlledPartyOf",
+     "label": "is controlled party of",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-oac-ctl:DeFactoControl",
+     "label": "de facto control",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-oac-ctl:DeJureControl",
+     "label": "de jure control",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/OwnershipAndControl/Control.rdf"
+   ],
+   "use": "`uc:role_controlling_group skos:closeMatch` ControllingParty; `uc:RoleHolding` lists Control as `uc:fiboAnalogue`.",
+   "notes": "Control is a `cmns-pts:Situation`; ControllingParty is a `cmns-pts:Actor` (a role)."
+  },
+  {
+   "n": 11,
+   "concept": "Affiliate / related party",
+   "status": "PARTIAL",
+   "terms": [
+    {
+     "iri": "fibo-be-oac-cctl:Affiliate",
+     "label": "affiliate",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-cctl:Affiliation",
+     "label": "affiliation",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-cctl:isAffiliateOf",
+     "label": "is affiliate of",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-oac-cctl:hasAffiliate",
+     "label": "has affiliate",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-oac-cctl:SignificantShareholder",
+     "label": "significant shareholder",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-pts:hasRelatedPartyRole",
+     "label": "has related party role",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "BE/OwnershipAndControl/CorporateControl.rdf",
+    "Commons/PartiesAndSituations.rdf"
+   ],
+   "use": "`uc:declaredRelatedTo` / `uc:assessedRelatedTo` carry `uc:fiboAnalogue` isAffiliateOf; `uc:role_related_group_member skos:relatedMatch` Affiliate.",
+   "notes": "Affiliate VERIFIED. \"Related party\" in the banking-regulation sense (parte vinculada: includes relatives, directors, common operators) is NOT FOUND as a class. `cmns-pts:hasRelatedPartyRole` is only a generic role-to-role link. FIBO affiliation is defined purely by control."
+  },
+  {
+   "n": 12,
+   "concept": "Board member / director / corporate officer",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-be-oac-exec:BoardMember",
+     "label": "board member",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-exec:BoardMembership",
+     "label": "board membership",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-exec:BoardOfDirectors",
+     "label": "board of directors",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-exec:hasDirector",
+     "label": "has director",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-oac-exec:isDirectorOf",
+     "label": "is director of",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-oac-exec:CorporateOfficer",
+     "label": "corporate officer",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-exec:isOfficerOf",
+     "label": "is officer of",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-oac-exec:Executive",
+     "label": "executive",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-exec:Auditor",
+     "label": "auditor",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-be-oac-exec:Signatory",
+     "label": "signatory",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "BE/OwnershipAndControl/Executives.rdf"
+   ],
+   "use": "Role-type concepts `uc:role_director`, `uc:role_president`, `uc:role_officer`, `uc:role_statutory_auditor`, `uc:role_legal_representative` map here.",
+   "notes": "There is no `Director` class: the class is BoardMember and the properties are hasDirector / isDirectorOf. No class for president, alternate director or síndico. Several Executives terms (AuthorizedParty, Authorization, LegallyDelegatedAuthority, hasResponsibleParty...) are DEPRECATED and moved to Commons BusinessAuthorizations."
+  },
+  {
+   "n": 13,
+   "concept": "Loan",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-loan-ln-ln:Loan",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:CreditAgreement",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-fi-fi:DebtInstrument",
+     "label": null,
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "LOAN/LoansSpecific/LoanProducts.rdf",
+    "FBC/ProductsAndServices/ClientsAndAccounts.rdf",
+    "SEC/Debt/DebtInstruments.rdf"
+   ],
+   "use": "`uc:Loan rdfs:subClassOf` Loan.",
+   "notes": "Loan is a subclass of CreditAgreementRepaidPeriodically and DebtInstrument."
+  },
+  {
+   "n": 14,
+   "concept": "Unsecured loan",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-loan-ln-ln:UnsecuredLoan",
+     "label": "unsecured loan",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:SecuredLoan",
+     "label": "secured loan",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:CollateralizedLoan",
+     "label": "collateralized loan",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:GuaranteedLoan",
+     "label": "guaranteed loan",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "LOAN/LoansGeneral/Loans.rdf"
+   ],
+   "use": "Extra `rdf:type` on a `uc:Loan` whose `uc:collateral` is \"none\" (as asserted).",
+   "notes": ""
+  },
+  {
+   "n": 15,
+   "concept": "Line of credit / overdraft / open-end credit",
+   "status": "PARTIAL",
+   "terms": [
+    {
+     "iri": "fibo-loan-ln-ln:OpenEndCredit",
+     "label": "open-end credit",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:ClosedEndCredit",
+     "label": "closed-end credit",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:RevolvingLineOfCredit",
+     "label": "revolving line of credit",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:CreditFacility",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:UncommittedCreditFacility",
+     "label": "uncommitted credit facility",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasCreditLimit",
+     "label": "has credit limit",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-loan-spc-prod:OverdraftFacilityPurpose",
+     "label": "overdraft facility purpose",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "LOAN/LoansGeneral/Loans.rdf",
+    "FBC/DebtAndEquities/Debt.rdf",
+    "FBC/FinancialInstruments/FinancialInstruments.rdf",
+    "LOAN/LoansSpecific/LoanProducts.rdf"
+   ],
+   "use": "`uc:Overdraft rdfs:subClassOf` OpenEndCredit.",
+   "notes": "OpenEndCredit and RevolvingLineOfCredit VERIFIED. Overdraft: NOT FOUND as a class. It appears only in a `skos:example` of OpenEndCredit and as OverdraftFacilityPurpose (a loan purpose). OpenEndCredit is disjoint with ClosedEndCredit."
+  },
+  {
+   "n": 16,
+   "concept": "Lender",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-dae-dbt:Lender",
+     "label": "lender",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasLender",
+     "label": "has lender",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "FBC/DebtAndEquities/Debt.rdf"
+   ],
+   "use": "`uc:lender` has `uc:fiboAnalogue` hasLender.",
+   "notes": "In FBC/DebtAndEquities/Debt, not in LOAN. hasLender has range Lender (a party role), so `uc:lender` is not a sub-property."
+  },
+  {
+   "n": 17,
+   "concept": "Borrower / debtor / creditor",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-dae-dbt:Borrower",
+     "label": "borrower",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasBorrower",
+     "label": "has borrower",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:Debtor",
+     "label": "debtor",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:Creditor",
+     "label": "creditor",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:Debt",
+     "label": "debt",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/DebtAndEquities/Debt.rdf"
+   ],
+   "use": "`uc:nominalBorrower` has `uc:fiboAnalogue` hasBorrower.",
+   "notes": "Same role pattern: hasBorrower has range Borrower. No notion of a nominal versus real borrower."
+  },
+  {
+   "n": 18,
+   "concept": "Principal amount",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-loan-ln-ln:hasPrincipalAmount",
+     "label": "has principal amount",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasPrincipal",
+     "label": "has principal",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:Principal",
+     "label": "principal",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasOutstandingAmount",
+     "label": "has outstanding amount",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:hasLoanBalance",
+     "label": "has loan balance",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:TotalOutstandingPrincipal",
+     "label": "total outstanding principal",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "LOAN/LoansGeneral/Loans.rdf",
+    "FBC/DebtAndEquities/Debt.rdf"
+   ],
+   "use": "`uc:principal`, `uc:outstanding` (plain decimals) point here via `uc:fiboAnalogue`.",
+   "notes": "hasPrincipalAmount has range MonetaryAmount (an object, not a number)."
+  },
+  {
+   "n": 19,
+   "concept": "Interest rate",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-acc-cur:InterestRate",
+     "label": "interest rate",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasInterestRate",
+     "label": "has interest rate",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-acc-cur:hasRateValue",
+     "label": "has rate value",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:FixedInterestRate",
+     "label": "fixed interest rate",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/Accounting/CurrencyAmount.rdf",
+    "FBC/DebtAndEquities/Debt.rdf"
+   ],
+   "use": "`uc:ratePct` via `uc:fiboAnalogue`.",
+   "notes": "InterestRate class is in FND/Accounting/CurrencyAmount; the property is in FBC Debt."
+  },
+  {
+   "n": 20,
+   "concept": "Maturity / term",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-dae-dbt:hasMaturityDate",
+     "label": "has maturity date",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:hasOriginalTimeToMaturity",
+     "label": "has time to maturity",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:hasTerm",
+     "label": "has term",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:hasEffectiveDate",
+     "label": "has effective date",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "FBC/DebtAndEquities/Debt.rdf",
+    "FND/Agreements/Contracts.rdf"
+   ],
+   "use": "`uc:termYears`, `uc:termDays` via `uc:fiboAnalogue`.",
+   "notes": "`hasOriginalTimeToMaturity` carries the label \"has time to maturity\". hasTerm has range `cmns-dt:Duration`."
+  },
+  {
+   "n": 21,
+   "concept": "Collateral",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-dae-dbt:Collateral",
+     "label": "collateral",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-dbt:isCollateralizedBy",
+     "label": "is collateralized by",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "FBC/DebtAndEquities/Debt.rdf"
+   ],
+   "use": "`uc:collateral` (a short code such as \"none\", \"mortgage_claimed\") via `uc:fiboAnalogue`.",
+   "notes": ""
+  },
+  {
+   "n": 22,
+   "concept": "Mortgage",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-loan-reln-mtg:Mortgage",
+     "label": "mortgage",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-loan-reln-mtg:LoanSecuredByRealEstate",
+     "label": null,
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "LOAN/RealEstateLoans/Mortgages.rdf",
+    "LOAN/RealEstateLoans/MortgageOrigination.rdf"
+   ],
+   "use": "Documentation only; a claimed mortgage is recorded as `uc:collateral \"mortgage_claimed\"`.",
+   "notes": "In FIBO a Mortgage is a SecurityAgreement (the lien on real property), NOT a loan. The loan is LoanSecuredByRealEstate."
+  },
+  {
+   "n": 23,
+   "concept": "Promissory note",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-fi-fi:PromissoryNote",
+     "label": "promissory note",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/FinancialInstruments/FinancialInstruments.rdf"
+   ],
+   "use": "Documentation only (pagarés mentioned in the record).",
+   "notes": "In FBC/FinancialInstruments, a subclass of DebtInstrument."
+  },
+  {
+   "n": 24,
+   "concept": "Bond and issuer",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-sec-dbt-bnd:Bond",
+     "label": "bond",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-fi-fi:Issuer",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-rel-rel:isIssuedBy",
+     "label": "is issued by",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-rel-rel:issues",
+     "label": "issues",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "SEC/Debt/Bonds.rdf",
+    "SEC/Securities/SecuritiesIssuance.rdf",
+    "FND/Relations/Relations.rdf"
+   ],
+   "use": "`uc:instr_bond_purchase skos:relatedMatch` Bond.",
+   "notes": "There is no `hasIssuer` property; the pair is `fibo-fnd-rel-rel:isIssuedBy` / `issues`."
+  },
+  {
+   "n": 25,
+   "concept": "Certificate of deposit",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-pas-caa:CertificateOfDeposit",
+     "label": "certificate of deposit",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/ProductsAndServices/ClientsAndAccounts.rdf"
+   ],
+   "use": "Documentation only (CDAs held by IPS and others).",
+   "notes": "In FBC/ProductsAndServices/ClientsAndAccounts as a CashInstrument, not in SEC."
+  },
+  {
+   "n": 26,
+   "concept": "Deposit account",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-pas-caa:DepositAccount",
+     "label": "deposit account",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-pas-caa:DemandDepositAccount",
+     "label": "demand deposit account",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-pas-caa:Account",
+     "label": "account",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FBC/ProductsAndServices/ClientsAndAccounts.rdf"
+   ],
+   "use": "Documentation only; accounts are not modelled as nodes.",
+   "notes": ""
+  },
+  {
+   "n": 27,
+   "concept": "Payment / funds transfer event",
+   "status": "PARTIAL",
+   "terms": [
+    {
+     "iri": "fibo-fnd-pas-psch:Payment",
+     "label": "payment",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-psch:PaymentEvent",
+     "label": "payment event",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-psch:Payer",
+     "label": "payer",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-psch:Payee",
+     "label": "payee",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-psch:hasPaymentAmount",
+     "label": "has payment amount",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fbc-pas-caa:IndividualTransaction",
+     "label": "individual transaction",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-loan-ln-ln:IndividualPaymentTransaction",
+     "label": "individual payment transaction",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-fct-fse:ElectronicFundsTransferService",
+     "label": "electronic funds transfer service",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/ProductsAndServices/PaymentsAndSchedules.rdf",
+    "FBC/ProductsAndServices/ClientsAndAccounts.rdf",
+    "LOAN/LoansGeneral/Loans.rdf",
+    "FBC/FunctionalEntities/FinancialServicesEntities.rdf"
+   ],
+   "use": "`uc:Flow` lists Payment as `uc:fiboAnalogue`; `uc:fromParty` / `uc:toParty` point to Payer / Payee.",
+   "notes": "Payment VERIFIED (an Occurrence). PaymentEvent is an OccurrenceKind (a classifier), not an individual event. A funds-transfer event between two arbitrary parties is NOT FOUND; only ElectronicFundsTransferService (a service) exists."
+  },
+  {
+   "n": 28,
+   "concept": "Monetary amount with currency",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-acc-cur:MonetaryAmount",
+     "label": "monetary amount",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-acc-cur:AmountOfMoney",
+     "label": "amount of money",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-acc-cur:hasAmount",
+     "label": "has amount",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "fibo-fnd-acc-cur:hasCurrency",
+     "label": "has currency",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-acc-cur:Currency",
+     "label": "currency",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-acc-cur:hasMonetaryAmount",
+     "label": "has monetary amount",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-acc-4217:PYG",
+     "label": "PYG",
+     "kind": "individual"
+    },
+    {
+     "iri": "fibo-fnd-acc-4217:USD",
+     "label": "USD",
+     "kind": "individual"
+    }
+   ],
+   "files": [
+    "FND/Accounting/CurrencyAmount.rdf",
+    "FND/Accounting/ISO4217-CurrencyCodes.rdf"
+   ],
+   "use": "`uc:currency` has range Currency and takes the individuals `fibo-fnd-acc-4217:PYG` / `:USD`; `uc:amount` is a plain decimal.",
+   "notes": "hasAmount is a datatype property (xsd:decimal). The ISO 4217 individuals PYG, Guarani, USD exist."
+  },
+  {
+   "n": 29,
+   "concept": "Contract with buyer and seller",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-agr-ctr:Contract",
+     "label": "contract",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:hasContractParty",
+     "label": "has contract party",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:Counterparty",
+     "label": "counterparty",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-pas:Buyer",
+     "label": "buyer",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-pas:Seller",
+     "label": "seller",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pas-pas:hasBuyer",
+     "label": "has buyer",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-pas-pas:hasSeller",
+     "label": "has seller",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-pas-pas:Sale",
+     "label": "sale",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/Agreements/Contracts.rdf",
+    "FND/ProductsAndServices/ProductsAndServices.rdf"
+   ],
+   "use": "`uc:PortfolioSale` lists Sale as `uc:fiboAnalogue`.",
+   "notes": "Buyer and Seller are in FND/ProductsAndServices, not FND/Agreements/Contracts. Sale is modelled as a subclass of TransactionEvent (an OccurrenceKind) and of Situation, so it is not used as a superclass."
+  },
+  {
+   "n": 30,
+   "concept": "Assignment / sale of a loan",
+   "status": "NOT FOUND",
+   "terms": [
+    {
+     "iri": "fibo-fnd-pas-pas:Sale",
+     "label": "sale",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:AssignableContract",
+     "label": "assignable contract",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:TransferableContract",
+     "label": "transferable contract",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:isAssignable",
+     "label": "is assignable",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "fibo-fnd-oac-own:Portfolio",
+     "label": "portfolio",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/ProductsAndServices/ProductsAndServices.rdf",
+    "FND/Agreements/Contracts.rdf",
+    "FND/OwnershipAndControl/Ownership.rdf"
+   ],
+   "use": "`uc:PortfolioSale`, `uc:instr_portfolio_sale_price`, `uc:instr_portfolio_assignment`.",
+   "notes": "NOT FOUND: no loan sale, loan assignment, assignor or assignee term in LOAN, FBC or SEC. Nearest alternatives listed (generic Sale; contracts that can be assigned; a Portfolio collection)."
+  },
+  {
+   "n": 31,
+   "concept": "Guaranty",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fbc-dae-gty:Guaranty",
+     "label": "guaranty",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-gty:Guarantor",
+     "label": "guarantor",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fbc-dae-gty:hasGuarantor",
+     "label": "has guarantor",
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "FBC/DebtAndEquities/Guaranty.rdf"
+   ],
+   "use": "Documentation only (personal guarantees mentioned by the record).",
+   "notes": "Spelled \"guaranty\"; own module FBC/DebtAndEquities/Guaranty."
+  },
+  {
+   "n": 32,
+   "concept": "Tax identifier",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-pty-pty:TaxIdentifier",
+     "label": "tax identifier",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-pty-pty:TaxIdentificationScheme",
+     "label": "tax identification scheme",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-id:identifies",
+     "label": null,
+     "kind": "object property"
+    }
+   ],
+   "files": [
+    "FND/Parties/Parties.rdf",
+    "Commons/MappingCommonsToBFO.rdf"
+   ],
+   "use": "Company RUC, where a source states it, could be typed TaxIdentifier. Never recorded for persons (SPEC rule 4).",
+   "notes": "No `hasTaxIdentifier` property; link with `cmns-id:identifies` / `isIdentifiedBy`."
+  },
+  {
+   "n": 33,
+   "concept": "Law / jurisdiction",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "fibo-fnd-law-cor:Law",
+     "label": "law",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-law-cor:StatuteLaw",
+     "label": "statute law",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-law-cor:CourtOfLaw",
+     "label": "court of law",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-ra:Jurisdiction",
+     "label": "jurisdiction",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-ra:hasJurisdiction",
+     "label": "has jurisdiction",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-agr-ctr:hasGoverningJurisdiction",
+     "label": "has governing jurisdiction",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-be-ge-sajur:JurisdictionOfParaguay",
+     "label": "jurisdiction of Paraguay",
+     "kind": "individual"
+    },
+    {
+     "iri": "fibo-be-ge-sajur:GovernmentOfTheRepublicOfParaguay",
+     "label": "Government of the Republic of Paraguay",
+     "kind": "individual"
+    }
+   ],
+   "files": [
+    "FND/Law/LegalCore.rdf",
+    "Commons/RegulatoryAgencies.rdf",
+    "FND/Agreements/Contracts.rdf",
+    "BE/GovernmentEntities/LatinAmericanJurisdiction/SouthAmericanGovernmentEntitiesAndJurisdictions.rdf"
+   ],
+   "use": "`uc:allegedOffence` is free text; the jurisdiction individual can be attached to the case node.",
+   "notes": "Law is in FIBO (FND/Law/LegalCore); Jurisdiction MOVED to Commons RegulatoryAgencies (`FND/Law/Jurisdiction.rdf` is gone). FIBO ships a `JurisdictionOfParaguay` individual."
+  },
+  {
+   "n": 34,
+   "concept": "Date and date period",
+   "status": "VERIFIED",
+   "terms": [
+    {
+     "iri": "cmns-dt:Date",
+     "label": "date",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-dt:ExplicitDate",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-dt:DatePeriod",
+     "label": "date period",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-dt:ExplicitDatePeriod",
+     "label": "explicit date period",
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-dt:hasDate",
+     "label": "has date",
+     "kind": "object property"
+    },
+    {
+     "iri": "cmns-dt:hasDateValue",
+     "label": "has date value",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "cmns-dt:hasStartDate",
+     "label": "has start date",
+     "kind": "object property"
+    },
+    {
+     "iri": "cmns-dt:hasEndDate",
+     "label": "has end date",
+     "kind": "object property"
+    },
+    {
+     "iri": "cmns-dt:Duration",
+     "label": null,
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "Commons/DatesAndTimes.rdf",
+    "Commons/MappingDatesAndTimesToOWLTime.rdf"
+   ],
+   "use": "Not instantiated: `uc:onDate`, `uc:startDate`, `uc:endDate` are typed literals with `uc:datePrecision`.",
+   "notes": "MOVED: `fibo-fnd-dt-fd:Date`, `DatePeriod`, `hasDate` no longer exist; FinancialDates.rdf only keeps schedules and business-day terms. Commons dates are objects (a Date node with `hasDateValue`), not literals."
+  },
+  {
+   "n": 35,
+   "concept": "Occurrence / event with participants",
+   "status": "PARTIAL",
+   "terms": [
+    {
+     "iri": "fibo-fnd-dt-oc:Occurrence",
+     "label": "occurrence",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-dt-oc:OccurrenceKind",
+     "label": "occurrence kind",
+     "kind": "class"
+    },
+    {
+     "iri": "fibo-fnd-dt-oc:hasEventDate",
+     "label": "has event date",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-fnd-dt-oc:hasEventDateValue",
+     "label": "has event date value",
+     "kind": "datatype property"
+    },
+    {
+     "iri": "cmns-pts:Situation",
+     "label": null,
+     "kind": "class"
+    },
+    {
+     "iri": "cmns-pts:hasParty",
+     "label": "has party",
+     "kind": "object property"
+    },
+    {
+     "iri": "cmns-pts:hasActor",
+     "label": "has actor",
+     "kind": "object property"
+    },
+    {
+     "iri": "cmns-pts:hasUndergoer",
+     "label": "has undergoer",
+     "kind": "object property"
+    },
+    {
+     "iri": "fibo-loan-ln-evt:LegalProceeding",
+     "label": "legal proceeding",
+     "kind": "class"
+    }
+   ],
+   "files": [
+    "FND/DatesAndTimes/Occurrences.rdf",
+    "Commons/MappingCommonsToBFO.rdf",
+    "Commons/PartiesAndSituations.rdf",
+    "LOAN/LoansGeneral/LoanEvents.rdf"
+   ],
+   "use": "`uc:Flow` and `uc:CaseEvent` are subclasses of Occurrence; `uc:involvesParty rdfs:subPropertyOf cmns-pts:hasParty`.",
+   "notes": "Occurrence VERIFIED. It has NO participant property (only hasEventDate, hasInput/hasOutput, isTriggeredBy). Participants are modelled on `cmns-pts:Situation` (hasParty, hasActor, hasUndergoer)."
+  }
+ ],
+ "differs": [
+  "**`LegalEntity`, `LegalPerson`, `Organization`, `FormalOrganization`, `RegulatoryAgency`, `Jurisdiction`, `Date`, `DatePeriod`, `PartyRole`, `Situation`, `Identifier` are no longer FIBO classes.** They live in the OMG Commons Ontology Library (`https://www.omg.org/spec/Commons/...`). The old IRIs (`fibo-be-le-lp:LegalEntity`, `fibo-fnd-org-org:Organization`, `fibo-fnd-org-fm:FormalOrganization`, `fibo-fbc-fct-rga:RegulatoryAgency`, `fibo-fnd-law-jur:Jurisdiction`, `fibo-fnd-dt-fd:Date`, `fibo-fnd-pty-rl:PartyInRole`, `fibo-fnd-pty-pty:IndependentParty`, `fibo-fnd-aap-agt:AutonomousAgent`, `fibo-fnd-rel-rel:hasIdentity`) are not declared in any file of the current repository. `FND/Parties/Roles.rdf`, `FND/Organizations/Organizations.rdf` and `FND/Law/Jurisdiction.rdf` no longer exist.",
+  "**Lender, Borrower, Debtor, Creditor, Collateral, hasLender, hasBorrower, hasInterestRate, hasMaturityDate are in `FBC/DebtAndEquities/Debt`, not in `LOAN`.** `LOAN/LoansGeneral/Loans` keeps Loan, SecuredLoan, UnsecuredLoan, OpenEndCredit, ClosedEndCredit and `hasPrincipalAmount`.",
+  "**Object properties point at roles, not parties.** `hasBorrower` has range `Borrower`, `hasLender` range `Lender`, `hasBuyer` range `Buyer`, `hasShareholder` domain `Issuer` and range `Shareholder`; all of these are `cmns-pts:PartyRole` subclasses. A faithful FIBO graph needs an extra role node per party per relationship.",
+  "**There is no `Director` class** (use `BoardMember`; properties `hasDirector` / `isDirectorOf`) and **no `hasIssuer`** (use `fibo-fnd-rel-rel:isIssuedBy`).",
+  "**`Mortgage` is the security agreement, not the loan** (`LoanSecuredByRealEstate` is the loan).",
+  "**`PaymentEvent`, `TransactionEvent` and therefore `Sale` are `OccurrenceKind`s**, i.e. classifiers of events, not events. The individual event class is `Payment` (an `Occurrence`).",
+  "**`Shareholding` has no percentage.** The only ownership-percentage property is `fibo-be-le-lei:hasOwnershipPercentage` in the LEI (GLEIF) module.",
+  "**`BrokerDealer` sits in `FBC/ProductsAndServices/FinancialProductsAndServices`**, and `CertificateOfDeposit` in `FBC/ProductsAndServices/ClientsAndAccounts`.",
+  "**Deprecated in `BE/OwnershipAndControl/Executives`**: `AuthorizedParty`, `AuthorizingParty`, `Authorization`, `LegallyDelegatedAuthority`, `hasResponsibleParty`, `hasAuthorizedParty`, `delegatesControlTo` and related properties (replaced by Commons `BusinessAuthorizations`). **Deprecated in `FND/Accounting/AccountingEquity`**: `ShareholdersEquity`, `OwnersEquity`, `RetainedEarnings`, `FinancialAsset`, `PhysicalAsset`, `Income` (moved to `FND/OwnershipAndControl/Ownership`).",
+  "Commons labels use British spelling (\"organisation\", \"formal organisation\") while the IRIs keep the `z`."
+ ],
+ "lacks": [
+  "**Claim-level provenance.** FIBO describes what is the case. It has no way to say who asserts a loan, a shareholding or a flow, from which page, with what reading confidence, or that two voices disagree. Hence `uc:Assertion`, `uc:assertedBy`, `uc:confidence`, `uc:locator`, `uc:quote`, `uc:sameSubjectAs`, `uc:Issue`, plus PROV-O and named graphs.",
+  "**Nominal borrower versus ultimate recipient.** A loan has a borrower role and nothing for the party alleged to have really received the money (`uc:nominalBorrower`, `uc:ultimateRecipient`).",
+  "**Related party in the prudential sense.** Only control-based `Affiliate`. Nothing for \"declared as related by the bank\" versus \"assessed as related by the supervisor\" (`uc:declaredRelatedTo`, `uc:assessedRelatedTo`), nor for the indicators used to argue it: kinship (`uc:relativeOf`, `uc:kinshipDegree`), shared address (`uc:sharesAddressWith`), shared operator (`uc:sharesOperatorWith`). No related-party lending limit or exposure concept.",
+  "**Kinship between persons.** No family-relationship property at all.",
+  "**Overdraft** as a product class, and **sale / assignment of a loan or loan portfolio** (`uc:Overdraft`, `uc:PortfolioSale`).",
+  "**A generic money movement between two arbitrary parties** with an instrument (cash, cheque, transfer, bond purchase): `Payment` assumes an obligation being fulfilled (`uc:Flow`, `uc:instrument`).",
+  "**Ownership percentage on a shareholding**, and time-bounded role holdings with a role type in one node (`uc:RoleHolding`). FIBO needs Shareholder + Shareholding + Ownership situation + date period nodes.",
+  "**Civil-law corporate roles**: síndico (statutory auditor) and suplentes (alternates), president / vice-president of the board, registry agent (gestor).",
+  "**Criminal procedure**: no offence, charge, indictment, suspect or precautionary-measure terms (only `LegalProceeding` / `CourtJudgment` in LOAN, for loan defaults). Hence `uc:Charge`, `uc:allegedOffence`, `uc:proceduralMeasure`.",
+  "**Supervisory actions** (inspection, finding, sanction, intervention) and **depositor events**: nothing beyond `RegulatoryAgency` / `regulates`.",
+  "**Imprecise dates** (month or year only) and **participants on `Occurrence`**.",
+  "**Paraguay-specific reference data**: FIBO has `JurisdictionOfParaguay`, `GovernmentOfTheRepublicOfParaguay` and the `PYG` currency, but no BCP, Superintendencia de Bancos, RUC scheme or Paraguayan legal forms (S.A., S.A.E.C.A., S.R.L., E.A.S.)."
+ ],
+ "query_prefixes": "PREFIX uc:   <https://w3id.org/ueno-case/ont#>\nPREFIX ucr:  <https://w3id.org/ueno-case/id/>\nPREFIX prov: <http://www.w3.org/ns/prov#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>",
+ "query_note": "All queries assume these prefixes and run on the default (union) graph unless a `GRAPH` clause is shown.",
+ "queries": [
+  {
+   "title": "Q1. Loans whose nominal borrower differs from the alleged ultimate recipients",
+   "sparql": "SELECT ?loan ?op ?borrower ?recipient ?principal ?cur ?who ?src ?conf\nWHERE {\n  ?loan a uc:Loan ;\n        uc:nominalBorrower   ?borrower ;\n        uc:ultimateRecipient ?recipient ;\n        uc:assertedBy        ?who ;\n        prov:wasDerivedFrom  ?src ;\n        uc:confidence        ?conf .\n  OPTIONAL { ?loan uc:operationNumber ?op }\n  OPTIONAL { ?loan uc:principal ?principal }\n  OPTIONAL { ?loan uc:currency ?cur }\n  FILTER (?recipient != ?borrower)\n}\nORDER BY DESC(?principal)",
+   "note": "The result is \"X alleges that the proceeds of loan L went to R\", never \"R received\"."
+  },
+  {
+   "title": "Q2. Chains of flows that start and end at the same party within 7 days (2 or 3 hops)",
+   "sparql": "SELECT ?origin ?mid1 ?mid2 ?d1 ?dLast ?f1 ?f2 ?f3\nWHERE {\n  {\n    # 2 hops: origin -> mid1 -> origin\n    ?f1 a uc:Flow ; uc:fromParty ?origin ; uc:toParty ?mid1 ; uc:onDate ?d1 ; uc:assertedBy ?who .\n    ?f2 a uc:Flow ; uc:fromParty ?mid1 ; uc:toParty ?origin ; uc:onDate ?dLast ; uc:assertedBy ?who .\n    FILTER (?mid1 != ?origin)\n  } UNION {\n    # 3 hops: origin -> mid1 -> mid2 -> origin\n    ?f1 a uc:Flow ; uc:fromParty ?origin ; uc:toParty ?mid1 ; uc:onDate ?d1 ; uc:assertedBy ?who .\n    ?f2 a uc:Flow ; uc:fromParty ?mid1 ; uc:toParty ?mid2 ; uc:onDate ?d2 ; uc:assertedBy ?who .\n    ?f3 a uc:Flow ; uc:fromParty ?mid2 ; uc:toParty ?origin ; uc:onDate ?dLast ; uc:assertedBy ?who .\n    FILTER (?mid1 != ?origin && ?mid2 != ?origin && ?mid2 != ?mid1)\n    FILTER (datatype(?d2) = xsd:date && ?d2 >= ?d1 && ?dLast >= ?d2)\n  }\n  FILTER (datatype(?d1) = xsd:date && datatype(?dLast) = xsd:date && ?dLast >= ?d1)\n  FILTER (?dLast <= ?d1 + \"P7D\"^^xsd:dayTimeDuration)\n}\nORDER BY ?d1",
+   "note": "Only day-precision dates take part (month- and year-only literals are typed `xsd:gYearMonth` / `xsd:gYear`). The chain is kept inside one voice (`?who`) so that prosecution and suspect statements are not stitched together. The window test uses date + duration arithmetic (`?d1 + \"P7D\"`), which is an extension to SPARQL 1.1 that rdflib, Jena, GraphDB and Stardog support; the form `?dLast - ?d1 <= \"P7D\"` returns nothing in rdflib, so do not use it there."
+  },
+  {
+   "title": "Q3. People holding roles in two or more borrowers",
+   "sparql": "SELECT ?person (COUNT(DISTINCT ?borrower) AS ?nBorrowers)\n       (GROUP_CONCAT(DISTINCT STR(?borrower); separator=\" | \") AS ?borrowers)\n       (GROUP_CONCAT(DISTINCT STR(?role); separator=\" | \") AS ?roles)\nWHERE {\n  ?loan a uc:Loan ; uc:nominalBorrower ?borrower .\n  ?rh a uc:RoleHolding ;\n      uc:holder ?person ;\n      uc:organisation ?borrower ;\n      uc:roleType ?role .\n  ?person a uc:Person .\n  FILTER (?role NOT IN (uc:role_relative_of, uc:role_charged_person))\n}\nGROUP BY ?person\nHAVING (COUNT(DISTINCT ?borrower) >= 2)\nORDER BY DESC(?nBorrowers)",
+   "note": ""
+  },
+  {
+   "title": "Q4. Assertions made only by the suspect",
+   "sparql": "SELECT ?a ?type ?from ?to ?amount ?src ?locator\nWHERE {\n  GRAPH <https://w3id.org/ueno-case/id/graph/rey> {\n    ?a uc:assertedBy uc:Rey ; a ?type ; prov:wasDerivedFrom ?src .\n    OPTIONAL { ?a uc:locator ?locator }\n    OPTIONAL { ?a uc:fromParty ?from ; uc:toParty ?to }\n    OPTIONAL { ?a uc:amount ?amount }\n  }\n  FILTER (?type IN (uc:Flow, uc:Loan, uc:RoleHolding, uc:CaseEvent, uc:FinancialFact, uc:PortfolioSale))\n  FILTER NOT EXISTS {\n    ?a (uc:sameSubjectAs|^uc:sameSubjectAs) ?other .\n    ?other uc:assertedBy ?v . FILTER (?v != uc:Rey)\n  }\n  FILTER NOT EXISTS {\n    ?a uc:fromParty ?p1 ; uc:toParty ?p2 .\n    ?o a uc:Flow ; uc:fromParty ?p1 ; uc:toParty ?p2 ; uc:assertedBy ?v2 .\n    FILTER (?v2 != uc:Rey)\n  }\n}\nORDER BY ?src",
+   "note": "Statements in the suspect's graph that no other voice corroborates: no `uc:sameSubjectAs` link to an assertion by anyone else and, for flows, no flow between the same two parties asserted by another voice."
+  },
+  {
+   "title": "Q5. Data points with low confidence, with their source and any open data issue",
+   "sparql": "SELECT ?a ?type ?who ?src ?locator ?note ?issue\nWHERE {\n  ?a uc:confidence \"low\" ;\n     a ?type ;\n     uc:assertedBy ?who ;\n     prov:wasDerivedFrom ?src .\n  ?type rdfs:subClassOf uc:Assertion .\n  OPTIONAL { ?a uc:locator ?locator }\n  OPTIONAL { ?a uc:provenanceNote ?note }\n  OPTIONAL { ?issue a uc:Issue ; uc:concerns ?a }\n}\nORDER BY ?type ?src",
+   "note": "Q5 needs `ontology.ttl` loaded alongside the data (for the `rdfs:subClassOf` join); drop that line to run on data alone."
+  },
+  {
+   "title": "Q6. Analyst estimates and the sourced assertions each one rests on",
+   "sparql": "SELECT ?opinion ?kind ?low ?central ?high ?cur ?basis ?who ?tier ?conf ?src\nWHERE {\n  GRAPH <https://w3id.org/ueno-case/id/graph/analysis> {\n    ?opinion a uc:AnalystOpinion ;\n             uc:assertedBy uc:Analyst ;\n             uc:opinionKind ?kind .\n    OPTIONAL { ?opinion uc:estimateLow ?low }\n    OPTIONAL { ?opinion uc:estimateCentral ?central }\n    OPTIONAL { ?opinion uc:estimateHigh ?high }\n    OPTIONAL { ?opinion uc:currency ?cur }\n    OPTIONAL { ?opinion uc:basedOn ?basis }\n  }\n  OPTIONAL {\n    ?basis uc:assertedBy ?who ;\n           uc:sourceTier ?tier ;\n           uc:confidence ?conf ;\n           prov:wasDerivedFrom ?src .\n  }\n}\nORDER BY ?opinion ?basis ?src",
+   "note": "Opinions live in their own named graph (`.../id/graph/analysis`) and are asserted by `uc:Analyst`. Each row pairs one estimate with one of the assertions it cites, showing that assertion's own voice, source tier, confidence and source, so a reader can see what an estimate stands on.\n\n\n\nAn opinion without `uc:basedOn` still appears, with the basis columns empty. A basis assertion that an editor corrected has more than one `prov:wasDerivedFrom` (its own source plus the correction's), so it appears once per source. The estimate is never a sourced figure: read `?low` / `?central` / `?high` as \"the analysts estimate\", and the basis columns as \"X asserts\"."
+  }
+ ]
+}

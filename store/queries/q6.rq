@@ -1,0 +1,27 @@
+# Q6. Analyst estimates and the sourced assertions each one rests on
+PREFIX uc:   <https://w3id.org/ueno-case/ont#>
+PREFIX ucr:  <https://w3id.org/ueno-case/id/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?opinion ?kind ?low ?central ?high ?cur ?basis ?who ?tier ?conf ?src
+WHERE {
+  GRAPH <https://w3id.org/ueno-case/id/graph/analysis> {
+    ?opinion a uc:AnalystOpinion ;
+             uc:assertedBy uc:Analyst ;
+             uc:opinionKind ?kind .
+    OPTIONAL { ?opinion uc:estimateLow ?low }
+    OPTIONAL { ?opinion uc:estimateCentral ?central }
+    OPTIONAL { ?opinion uc:estimateHigh ?high }
+    OPTIONAL { ?opinion uc:currency ?cur }
+    OPTIONAL { ?opinion uc:basedOn ?basis }
+  }
+  OPTIONAL {
+    ?basis uc:assertedBy ?who ;
+           uc:sourceTier ?tier ;
+           uc:confidence ?conf ;
+           prov:wasDerivedFrom ?src .
+  }
+}
+ORDER BY ?opinion ?basis ?src

@@ -1,0 +1,3685 @@
+{
+ "analyst": "flow_of_funds",
+ "disclaimer_en": "Analysis by an AI forensic-accounting and flow-of-funds analyst, not a licensed professional. It reorganises figures alleged in the prosecution record (Case 89/2026) and reported by press; it is not an audit, not a finding that any offence occurred and not legal or financial advice. Everyone named is presumed innocent; conduct is described as alleged. Statements by Julio Rey are his own claims. Arithmetic and opinions are mine and are labelled.",
+ "disclaimer_es": "Análisis elaborado por un analista de IA en contabilidad forense y flujo de fondos, no por un profesional matriculado. Reordena cifras alegadas en el acta fiscal (Causa 89/2026) e informadas por la prensa; no es una auditoría, no afirma que se haya cometido delito alguno y no constituye asesoramiento legal ni financiero. Rige la presunción de inocencia para todas las personas nombradas; las conductas se describen como alegadas. Los dichos de Julio Rey son su propia versión. Los cálculos y las opiniones son propios y están señalados como tales.",
+ "coverage": {
+  "flow_rows": 224,
+  "with_amount": 113,
+  "without_amount": 111,
+  "record_rows": 78,
+  "record_with_amount": 32,
+  "record_without_amount": 46,
+  "press_rows": 146,
+  "press_with_amount": 81,
+  "press_without_amount": 65,
+  "unique_money_legs_after_dedup": 69,
+  "rows_with_day_date": 128,
+  "first_hop_usd_traced": 229840392.23,
+  "first_hop_usd_to_core_five": 211873167.0,
+  "first_hop_usd_share_pct": 92.2,
+  "first_hop_pyg_traced": 733267000000,
+  "first_hop_pyg_to_core_five": 733267000000,
+  "first_hop_pyg_share_pct": 100.0,
+  "six_borrowers_principal_usd": 194545732.16,
+  "six_borrowers_principal_pyg": 1041533958926,
+  "six_borrowers_amount_traced_usd": 31920500,
+  "six_borrowers_amount_traced_pyg": 98500000000,
+  "note_en": "Totals use one representative row per leg after merging repeated reports; non-cash portfolio assignment rows, Rey's USD 900 million aggregate, the property row of uncertain direction and three alternate attributions are excluded.",
+  "note_es": "Los totales usan una fila representativa por tramo tras unir informes repetidos; se excluyen las filas no dinerarias de cesión de cartera, el agregado de USD 900 millones de Rey, la fila del inmueble de dirección incierta y tres atribuciones alternativas."
+ },
+ "chains": [
+  {
+   "id": "vinanzas-june-2026",
+   "title_en": "Vinanzas portfolio purchase, 11-15 June 2026 (USD legs)",
+   "title_es": "Compra de cartera por Vinanzas, 11 al 15 de junio de 2026 (tramos en USD)",
+   "summary_en": "Per the prosecution record and press relaying the supervisor, five new Ueno loans totalling USD 81,841,000 were routed, directly or through bond trades, to Vinanzas, which received USD 76,061,604.13 on 15 June and paid Ueno USD 74,418,418.12 the same day for nine loans of Mowi, Grupo Hendy and Grupo M. Alleged; not established.",
+   "summary_es": "Según el acta fiscal y la prensa que cita al supervisor, cinco préstamos nuevos de Ueno por USD 81.841.000 llegaron, en forma directa o mediante operaciones con bonos, a Vinanzas, que recibió USD 76.061.604,13 el 15 de junio y pagó a Ueno USD 74.418.418,12 ese mismo día por nueve créditos de Mowi, Grupo Hendy y Grupo M. Es una alegación; no está probado.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:technoma",
+     "amount": 10000000,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:flow:0043",
+      "rec:loan:0038",
+      "press:loan:0033"
+     ],
+     "note_en": "New loan; terms not given in the record diagram.",
+     "note_es": "Préstamo nuevo; el diagrama del acta no indica condiciones."
+    },
+    {
+     "step": 2,
+     "from": "org:ueno-bank",
+     "to": "org:la-tropa-fletes",
+     "amount": 10000000,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:flow:0044",
+      "rec:loan:0039",
+      "press:loan:0037"
+     ],
+     "note_en": "New loan; loan number only partly legible.",
+     "note_es": "Préstamo nuevo; número de operación parcialmente legible."
+    },
+    {
+     "step": 3,
+     "from": "org:technoma",
+     "to": "org:itti",
+     "amount": 4230383.21,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "bond_purchase",
+     "refs": [
+      "press:flow:0049",
+      "rec:flow:0048"
+     ],
+     "note_en": "Press prints USD 4,230,383.21 (nominal 4,199,000); the record diagram reads 4,230,000.",
+     "note_es": "La prensa publica USD 4.230.383,21 (nominal 4.199.000); en el diagrama del acta se lee 4.230.000."
+    },
+    {
+     "step": 4,
+     "from": "org:technoma",
+     "to": "org:grupo-vazquez",
+     "amount": 5769861,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "bond_purchase",
+     "refs": [
+      "press:flow:0050",
+      "rec:flow:0049"
+     ],
+     "note_en": "Bonds sold by Grupo Vázquez (issuer described as \"ueno\" by one article); record diagram reads 5,770,000. With the ITTI leg the two purchases total USD 10,000,244.21, USD 244.21 above the loan.",
+     "note_es": "Bonos vendidos por Grupo Vázquez (un artículo describe al emisor como \"ueno\"); en el diagrama se lee 5.770.000. Con el tramo de ITTI las dos compras suman USD 10.000.244,21, USD 244,21 más que el préstamo."
+    },
+    {
+     "step": 5,
+     "from": "org:grupo-vazquez",
+     "to": "org:itti",
+     "amount": 5769861,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0051",
+      "rec:flow:0054"
+     ],
+     "note_en": "Whole bond-sale proceeds passed to ITTI the same day.",
+     "note_es": "El producto íntegro de la venta de bonos pasó a ITTI el mismo día."
+    },
+    {
+     "step": 6,
+     "from": "org:itti",
+     "to": "org:grupo-m",
+     "amount": 6321574,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0052",
+      "press:flow:0037",
+      "rec:flow:0055",
+      "press:loan:0034",
+      "rec:loan:0016"
+     ],
+     "note_en": "Cancels Grupo M USD overdraft (USD 6,321,573.22). Dated 11 June by one article; the record diagram places it on 15 June and reads 6,321,524.",
+     "note_es": "Cancela el sobregiro en USD de Grupo M (USD 6.321.573,22). Un artículo lo fecha el 11 de junio; el diagrama del acta lo ubica el 15 y se lee 6.321.524."
+    },
+    {
+     "step": 7,
+     "from": "org:ueno-bank",
+     "to": "org:satec",
+     "amount": 20000000,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:flow:0041",
+      "rec:loan:0036"
+     ],
+     "note_en": "New loan.",
+     "note_es": "Préstamo nuevo."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:hd-invest",
+     "amount": 35000000,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:flow:0042",
+      "rec:loan:0037"
+     ],
+     "note_en": "New loan.",
+     "note_es": "Préstamo nuevo."
+    },
+    {
+     "step": 9,
+     "from": "org:ueno-bank",
+     "to": "org:factopar",
+     "amount": 6841000,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:flow:0045",
+      "rec:loan:0040",
+      "press:loan:0006"
+     ],
+     "note_en": "New loan; two guaraní loans to the same firm that day are in the PYG chain.",
+     "note_es": "Préstamo nuevo; los dos préstamos en guaraníes a la misma firma ese día figuran en la cadena en PYG."
+    },
+    {
+     "step": 10,
+     "from": "org:la-tropa-fletes",
+     "to": "org:ueno-casa-de-bolsa",
+     "amount": 10000000,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0068"
+     ],
+     "note_en": "Whole loan passed to the group broker-dealer four days after disbursement (date computed by the data contributor).",
+     "note_es": "El préstamo íntegro pasó a la casa de bolsa del grupo cuatro días después del desembolso (fecha calculada por quien cargó el dato)."
+    },
+    {
+     "step": 11,
+     "from": "org:ueno-casa-de-bolsa",
+     "to": "org:grupo-vazquez",
+     "amount": 4215767.91,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "bond_purchase",
+     "refs": [
+      "press:flow:0069",
+      "rec:flow:0050"
+     ],
+     "note_en": "Record diagram reads 4,215,767.91 for La Tropa Fletes buying Grupo Vázquez bonds; press prints 4,215,707. Combined purchases through the broker: USD 9,923,899.99.",
+     "note_es": "En el diagrama se lee 4.215.767,91 por la compra de bonos de Grupo Vázquez por La Tropa Fletes; la prensa publica 4.215.707. Compras totales vía la casa de bolsa: USD 9.923.899,99."
+    },
+    {
+     "step": 12,
+     "from": "org:ueno-casa-de-bolsa",
+     "to": "org:model",
+     "amount": 2117596.26,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "bond_purchase",
+     "refs": [
+      "press:flow:0071",
+      "press:flow:0009",
+      "rec:flow:0053"
+     ],
+     "note_en": "Press prints 2,117,596.26; record diagram reads 2,100,000.",
+     "note_es": "La prensa publica 2.117.596,26; en el diagrama se lee 2.100.000."
+    },
+    {
+     "step": 13,
+     "from": "org:ueno-casa-de-bolsa",
+     "to": "org:kasas-propiedades",
+     "amount": null,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "bond_purchase",
+     "refs": [
+      "press:flow:0070",
+      "rec:flow:0051"
+     ],
+     "note_en": "Amount not given. Arithmetic bound from the press figures: at least USD 3,208,628.97.",
+     "note_es": "Monto no informado. Cota aritmética con las cifras de prensa: al menos USD 3.208.628,97."
+    },
+    {
+     "step": 14,
+     "from": "org:ueno-casa-de-bolsa",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "bond_purchase",
+     "refs": [
+      "press:flow:0072"
+     ],
+     "note_en": "Amount not given. Arithmetic bound from the press figures: at most USD 381,966.85.",
+     "note_es": "Monto no informado. Cota aritmética con las cifras de prensa: como máximo USD 381.966,85."
+    },
+    {
+     "step": 15,
+     "from": "org:factopar",
+     "to": "org:kasas-propiedades",
+     "amount": null,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "bond_purchase",
+     "refs": [
+      "rec:flow:0052",
+      "press:flow:0008"
+     ],
+     "note_en": "Split not given: Kasas sold USD 10,049,628.97 of bonds to Factopar and La Tropa Fletes together.",
+     "note_es": "Reparto no informado: Kasas vendió bonos por USD 10.049.628,97 a Factopar y La Tropa Fletes en conjunto."
+    },
+    {
+     "step": 16,
+     "from": "org:satec",
+     "to": "org:vinanzas",
+     "amount": 20000000,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0046",
+      "press:flow:0059",
+      "press:flow:0115"
+     ],
+     "note_en": "Labelled purchase of Vinanzas portfolio.",
+     "note_es": "Rotulado como compra de cartera de Vinanzas."
+    },
+    {
+     "step": 17,
+     "from": "org:hd-invest",
+     "to": "org:vinanzas",
+     "amount": 35000000,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0047",
+      "press:flow:0060"
+     ],
+     "note_en": "Labelled purchase of Vinanzas portfolio.",
+     "note_es": "Rotulado como compra de cartera de Vinanzas."
+    },
+    {
+     "step": 18,
+     "from": "org:kasas-propiedades",
+     "to": "org:vinanzas",
+     "amount": 10049628.97,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "contract",
+     "refs": [
+      "rec:flow:0058",
+      "press:flow:0061",
+      "press:flow:0044"
+     ],
+     "note_en": "Fixed-income instrument contract; record and press agree to the cent.",
+     "note_es": "Contrato de instrumento de renta fija; acta y prensa coinciden al centavo."
+    },
+    {
+     "step": 19,
+     "from": "org:itti",
+     "to": "org:vinanzas",
+     "amount": 4678670,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "loan",
+     "refs": [
+      "press:flow:0053",
+      "rec:flow:0056",
+      "press:flow:0006"
+     ],
+     "note_en": "Loan under the framework contract of 31 Oct 2025 (13% a year). One article prints 4,678,670.99 and attributes it to Technoma; the record diagram reads 4,474,670.",
+     "note_es": "Préstamo bajo el contrato marco del 31/10/2025 (13% anual). Un artículo publica 4.678.670,99 y lo atribuye a Technoma; en el diagrama del acta se lee 4.474.670."
+    },
+    {
+     "step": 20,
+     "from": "org:grupo-vazquez",
+     "to": "org:vinanzas",
+     "amount": 4215707,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "loan",
+     "refs": [
+      "press:flow:0062",
+      "rec:flow:0057"
+     ],
+     "note_en": "Press 4,215,707 (cents not printed); record diagram reads 4,215,767.91. The stated total is met exactly with 4,215,707.91.",
+     "note_es": "Prensa 4.215.707 (sin centavos); en el diagrama se lee 4.215.767,91. El total declarado cierra exactamente con 4.215.707,91."
+    },
+    {
+     "step": 21,
+     "from": "org:model",
+     "to": "org:vinanzas",
+     "amount": 2117596,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "contract",
+     "refs": [
+      "press:flow:0063",
+      "rec:flow:0059"
+     ],
+     "note_en": "Press 2,117,596 (bond sale 2,117,596.26); record diagram reads 2,100,000.",
+     "note_es": "Prensa 2.117.596 (venta de bonos 2.117.596,26); en el diagrama se lee 2.100.000."
+    },
+    {
+     "step": 22,
+     "from": "org:ueno-bank",
+     "to": "org:vinanzas",
+     "amount": 74418418.12,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "portfolio_assignment",
+     "refs": [
+      "rec:flow:0060",
+      "rec:flow:0062",
+      "rec:flow:0063",
+      "rec:flow:0064",
+      "rec:flow:0065",
+      "rec:flow:0066",
+      "rec:flow:0067",
+      "rec:flow:0068",
+      "rec:flow:0069",
+      "rec:flow:0070"
+     ],
+     "note_en": "Non-cash leg: assignment without recourse of nine loans (principal USD 71,712,884.46; price equals principal plus roughly the accrued interest).",
+     "note_es": "Tramo no dinerario: cesión sin recurso de nueve créditos (capital USD 71.712.884,46; el precio equivale al capital más, aproximadamente, los intereses devengados)."
+    },
+    {
+     "step": 23,
+     "from": "org:vinanzas",
+     "to": "org:ueno-bank",
+     "amount": 74418418.12,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "portfolio_sale_price",
+     "refs": [
+      "rec:flow:0061",
+      "press:flow:0064",
+      "press:flow:0039"
+     ],
+     "note_en": "Cash price paid the day the contract was signed. Vinanzas balance the day before: about USD 93,628 (record scan) or 93,828 (press).",
+     "note_es": "Precio pagado al contado el día de la firma del contrato. Saldo de Vinanzas el día anterior: unos USD 93.628 (lectura del acta) o 93.828 (prensa)."
+    }
+   ],
+   "reconciliation_en": "Record diagram legs into Vinanzas sum to USD 75,840,066.88, which is USD 221,537.25 short of the USD 76,061,604.13 received. The press figures (20,000,000 + 35,000,000 + 10,049,628.97 + 4,678,670.99 + 2,117,596.26 + 4,215,707.91) equal 76,061,604.13 exactly; the gap is explained by three small-print readings (ITTI 204,000.99 low, Model 17,596.26 low, Grupo Vázquez 60.00 high). Received less paid leaves USD 1,643,186.01 in Vinanzas with no use shown. Uses of USD (76,061,604.13 to Vinanzas plus 6,321,574 for the Grupo M overdraft) exceed the five loans by USD 542,178.13, and ITTI paid out USD 1,000,000.78 more than the Technoma money it received; the source of that difference is not in the data. The Factopar and La Tropa Fletes splits between Kasas, Grupo Vázquez, Model and ITTI are not given.",
+   "reconciliation_es": "Los tramos del diagrama del acta hacia Vinanzas suman USD 75.840.066,88, es decir USD 221.537,25 menos que los USD 76.061.604,13 recibidos. Las cifras de prensa (20.000.000 + 35.000.000 + 10.049.628,97 + 4.678.670,99 + 2.117.596,26 + 4.215.707,91) dan exactamente 76.061.604,13; la brecha se explica por tres lecturas de letra chica (ITTI 204.000,99 de menos, Model 17.596,26 de menos, Grupo Vázquez 60,00 de más). Lo recibido menos lo pagado deja USD 1.643.186,01 en Vinanzas sin destino indicado. Los usos en USD (76.061.604,13 a Vinanzas más 6.321.574 para el sobregiro de Grupo M) superan a los cinco préstamos en USD 542.178,13, e ITTI pagó USD 1.000.000,78 más de lo que recibió de Technoma; el origen de esa diferencia no consta en los datos. No se informa cómo se repartieron las compras de Factopar y La Tropa Fletes entre Kasas, Grupo Vázquez, Model e ITTI.",
+   "closes_loop": true,
+   "elapsed_days": 4
+  },
+  {
+   "id": "vinanzas-june-2026-pyg",
+   "title_en": "15 June 2026 guaraní legs reported by press",
+   "title_es": "Tramos en guaraníes del 15 de junio de 2026 según la prensa",
+   "summary_en": "Press relaying the supervisor reports guaraní loans to Sagas, HD Invest and Factopar on 15 June 2026, G. 218,700 million gathered by Vinanzas from those lines, remittances from Vinanzas to Redisa and Redipro, and payments by those two firms that cancelled overdrafts of Grupo Hendy and Mowi at Ueno the same day. None of these legs is in the prosecution record.",
+   "summary_es": "La prensa, citando al supervisor, informa préstamos en guaraníes a Sagas, HD Invest y Factopar el 15 de junio de 2026, G. 218.700 millones reunidos por Vinanzas de esas líneas, remesas de Vinanzas a Redisa y Redipro, y pagos de esas dos firmas que cancelaron sobregiros de Grupo Hendy y Mowi en Ueno el mismo día. Ninguno de estos tramos figura en el acta fiscal.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:sagas",
+     "amount": 86100000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0002"
+     ],
+     "note_en": "Loan passed on labelled as a property purchase.",
+     "note_es": "Préstamo traspasado con el rótulo de compra de inmueble."
+    },
+    {
+     "step": 2,
+     "from": "org:ueno-bank",
+     "to": "org:hd-invest",
+     "amount": 36900000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0004"
+     ],
+     "note_en": "Guaraní loan alongside the USD 35 million.",
+     "note_es": "Préstamo en guaraníes junto con los USD 35 millones."
+    },
+    {
+     "step": 3,
+     "from": "org:ueno-bank",
+     "to": "org:factopar",
+     "amount": 93000000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0007"
+     ],
+     "note_en": "First guaraní loan of the day.",
+     "note_es": "Primer préstamo en guaraníes del día."
+    },
+    {
+     "step": 4,
+     "from": "org:ueno-bank",
+     "to": "org:factopar",
+     "amount": 64500000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0008"
+     ],
+     "note_en": "Second guaraní loan of the day.",
+     "note_es": "Segundo préstamo en guaraníes del día."
+    },
+    {
+     "step": 5,
+     "from": "org:sagas",
+     "to": "org:vinanzas",
+     "amount": 86100000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0001",
+      "press:flow:0048"
+     ],
+     "note_en": "In full.",
+     "note_es": "Íntegro."
+    },
+    {
+     "step": 6,
+     "from": "org:hd-invest",
+     "to": "org:vinanzas",
+     "amount": 36900000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0003"
+     ],
+     "note_en": "In full.",
+     "note_es": "Íntegro."
+    },
+    {
+     "step": 7,
+     "from": "org:factopar",
+     "to": "org:vinanzas",
+     "amount": 95700000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:fact:0038",
+      "press:loan:0007",
+      "press:loan:0008"
+     ],
+     "note_en": "Derived, not a flow row: G. 218,700 million gathered less Sagas and HD Invest. G. 61,800 million of the Factopar guaraní loans is not located.",
+     "note_es": "Derivado, no es una fila de flujo: G. 218.700 millones reunidos menos Sagas y HD Invest. No se ubican G. 61.800 millones de los préstamos en guaraníes de Factopar."
+    },
+    {
+     "step": 8,
+     "from": "org:itti",
+     "to": "org:vinanzas",
+     "amount": 31200000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "loan",
+     "refs": [
+      "press:flow:0054",
+      "press:flow:0007"
+     ],
+     "note_en": "Loan under the framework contract; another article attributes it to Technoma.",
+     "note_es": "Préstamo bajo el contrato marco; otro artículo lo atribuye a Technoma."
+    },
+    {
+     "step": 9,
+     "from": "org:vinanzas",
+     "to": "org:redisa",
+     "amount": 110940000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0040"
+     ],
+     "note_en": "Remittance.",
+     "note_es": "Remesa."
+    },
+    {
+     "step": 10,
+     "from": "org:vinanzas",
+     "to": "org:redipro",
+     "amount": 18770000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0041"
+     ],
+     "note_en": "Remittance; equals what Redipro paid out.",
+     "note_es": "Remesa; igual a lo que Redipro pagó."
+    },
+    {
+     "step": 11,
+     "from": "org:redisa",
+     "to": "org:grupo-hendy",
+     "amount": 110940000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0055"
+     ],
+     "note_en": "Booked as service refunds.",
+     "note_es": "Contabilizado como devoluciones por servicios."
+    },
+    {
+     "step": 12,
+     "from": "org:redipro",
+     "to": "org:grupo-hendy",
+     "amount": 7304000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0056"
+     ],
+     "note_en": "Booked as service refunds.",
+     "note_es": "Contabilizado como devoluciones por servicios."
+    },
+    {
+     "step": 13,
+     "from": "org:redisa",
+     "to": "org:mowi",
+     "amount": 98202000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0057"
+     ],
+     "note_en": "Booked as service refunds; no matching inflow to Redisa is reported.",
+     "note_es": "Contabilizado como devoluciones por servicios; no se informa un ingreso equivalente a Redisa."
+    },
+    {
+     "step": 14,
+     "from": "org:redipro",
+     "to": "org:mowi",
+     "amount": 11466000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0058"
+     ],
+     "note_en": "Booked as service refunds.",
+     "note_es": "Contabilizado como devoluciones por servicios."
+    },
+    {
+     "step": 15,
+     "from": "org:grupo-hendy",
+     "to": "org:ueno-bank",
+     "amount": 118244000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "repayment",
+     "refs": [
+      "press:loan:0029"
+     ],
+     "note_en": "Closing leg taken from the loan row (overdraft cancelled); equals 110,940 + 7,304.",
+     "note_es": "Tramo de cierre tomado de la fila de préstamo (sobregiro cancelado); igual a 110.940 + 7.304."
+    },
+    {
+     "step": 16,
+     "from": "org:mowi",
+     "to": "org:ueno-bank",
+     "amount": 109668000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "repayment",
+     "refs": [
+      "press:loan:0030"
+     ],
+     "note_en": "Closing leg taken from the loan row (overdraft cancelled); equals 98,202 + 11,466.",
+     "note_es": "Tramo de cierre tomado de la fila de préstamo (sobregiro cancelado); igual a 98.202 + 11.466."
+    }
+   ],
+   "reconciliation_en": "Guaraní inflows to Vinanzas: G. 218,700 million from the three lines plus G. 31,200 million from ITTI, G. 249,900 million in all. Reported outflows: G. 129,710 million; G. 120,190 million is not located. Redipro balances (in 18,770, out 18,770). Redisa paid G. 209,142 million against G. 110,940 million received from Vinanzas, a G. 98,202 million gap equal to the Mowi payment. The two overdrafts cancelled total G. 227,912 million. New guaraní lending that day was G. 280,500 million.",
+   "reconciliation_es": "Ingresos en guaraníes a Vinanzas: G. 218.700 millones de las tres líneas más G. 31.200 millones de ITTI, G. 249.900 millones en total. Egresos informados: G. 129.710 millones; no se ubican G. 120.190 millones. Redipro cierra (entran 18.770, salen 18.770). Redisa pagó G. 209.142 millones frente a G. 110.940 millones recibidos de Vinanzas: una brecha de G. 98.202 millones, igual al pago a Mowi. Los dos sobregiros cancelados suman G. 227.912 millones. El crédito nuevo en guaraníes de ese día fue de G. 280.500 millones.",
+   "closes_loop": true,
+   "elapsed_days": 0
+  },
+  {
+   "id": "mowi-pass-through",
+   "title_en": "Mowi: disbursement, forwarding and repayment source",
+   "title_es": "Mowi: desembolso, reenvío y origen del repago",
+   "summary_en": "Record: four loans and two overdrafts on sole signature from 26 Sep 2025, one week after the shares passed to a former Ueno manager; money forwarded to ITTI, Redisa and Redipro. Press adds amounts for three forwardings and for the repayments, all of which came from group companies.",
+   "summary_es": "Acta: cuatro préstamos y dos sobregiros a sola firma desde el 26/09/2025, una semana después de que las acciones pasaran a un exgerente de Ueno; el dinero se reenvió a ITTI, Redisa y Redipro. La prensa aporta montos de tres reenvíos y de los repagos, todos provenientes de empresas del grupo.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:mowi",
+     "amount": 12500000,
+     "currency": "USD",
+     "date": "2025-09-26",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0001",
+      "press:event:0003"
+     ],
+     "note_en": "Loan 612561002344, 10 years, 8%; account opened the same day per press.",
+     "note_es": "Préstamo 612561002344, 10 años, 8%; cuenta abierta el mismo día según la prensa."
+    },
+    {
+     "step": 2,
+     "from": "org:mowi",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-09-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0132",
+      "press:flow:0126",
+      "rec:flow:0001"
+     ],
+     "note_en": "Four days later, to ITTI and Redipro; split not given.",
+     "note_es": "Cuatro días después, a ITTI y Redipro; reparto no informado."
+    },
+    {
+     "step": 3,
+     "from": "org:mowi",
+     "to": "org:redipro",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-09-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0133",
+      "press:flow:0127",
+      "rec:flow:0003"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:ueno-bank",
+     "to": "org:mowi",
+     "amount": 5400000,
+     "currency": "USD",
+     "date": "2025-10-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0002"
+     ],
+     "note_en": "Loan 612561002656.",
+     "note_es": "Préstamo 612561002656."
+    },
+    {
+     "step": 5,
+     "from": "org:mowi",
+     "to": "org:redisa",
+     "amount": 5400000,
+     "currency": "USD",
+     "date": "2025-10-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0121",
+      "rec:flow:0002"
+     ],
+     "note_en": "Same day, in full, to cover Redisa overdrafts (approximate figure).",
+     "note_es": "El mismo día, íntegro, para cubrir sobregiros de Redisa (cifra aproximada)."
+    },
+    {
+     "step": 6,
+     "from": "org:ueno-bank",
+     "to": "org:mowi",
+     "amount": 33500000000,
+     "currency": "PYG",
+     "date": "2025-12-29",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0003"
+     ],
+     "note_en": "Loan 612561002893, later cancelled.",
+     "note_es": "Préstamo 612561002893, luego cancelado."
+    },
+    {
+     "step": 7,
+     "from": "org:mowi",
+     "to": "org:redipro",
+     "amount": 33500000000,
+     "currency": "PYG",
+     "date": "2025-12-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0123"
+     ],
+     "note_en": "Next day, in full.",
+     "note_es": "Al día siguiente, íntegro."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:mowi",
+     "amount": 105090000000,
+     "currency": "PYG",
+     "date": "2026-01-02",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0005"
+     ],
+     "note_en": "Overdraft 614261687.",
+     "note_es": "Sobregiro 614261687."
+    },
+    {
+     "step": 9,
+     "from": "org:itti",
+     "to": "org:mowi",
+     "amount": 105000000000,
+     "currency": "PYG",
+     "date": "2026-01-30",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0024",
+      "press:loan:0018"
+     ],
+     "note_en": "Paid down with funds from ITTI, Redisa and Vinanzas jointly (single figure).",
+     "note_es": "Amortizado con fondos de ITTI, Redisa y Vinanzas en conjunto (cifra única)."
+    },
+    {
+     "step": 10,
+     "from": "org:ueno-bank",
+     "to": "org:mowi",
+     "amount": 100500000000,
+     "currency": "PYG",
+     "date": "2026-02-02",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0006"
+     ],
+     "note_en": "Overdraft redrawn three days after the paydown; outstanding.",
+     "note_es": "Sobregiro nuevamente utilizado tres días después de la amortización; vigente."
+    },
+    {
+     "step": 11,
+     "from": "org:itti",
+     "to": "org:mowi",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-04-24",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0067",
+      "press:flow:0088",
+      "press:loan:0041"
+     ],
+     "note_en": "Partial cancellation of the G. 33,500 million loan with money that started as a La Tropa SAE loan the day before.",
+     "note_es": "Cancelación parcial del préstamo de G. 33.500 millones con dinero originado en un préstamo a La Tropa SAE el día anterior."
+    },
+    {
+     "step": 12,
+     "from": "org:ueno-bank",
+     "to": "org:mowi",
+     "amount": 5366645.18,
+     "currency": "USD",
+     "date": "2026-04-24",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0004"
+     ],
+     "note_en": "Loan 612661003859 the same day; the amount equals G. 33,500 million at 6,242.26 per USD (my arithmetic).",
+     "note_es": "Préstamo 612661003859 el mismo día; el monto equivale a G. 33.500 millones a 6.242,26 por USD (cálculo propio)."
+    },
+    {
+     "step": 13,
+     "from": "org:redisa",
+     "to": "org:mowi",
+     "amount": 98202000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0057",
+      "press:loan:0030"
+     ],
+     "note_en": "Covers the overdraft, with Redipro.",
+     "note_es": "Cubre el sobregiro, junto con Redipro."
+    },
+    {
+     "step": 14,
+     "from": "org:ueno-bank",
+     "to": "org:vinanzas",
+     "amount": 24394551,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "portfolio_assignment",
+     "refs": [
+      "rec:flow:0068",
+      "rec:flow:0069",
+      "rec:flow:0070"
+     ],
+     "note_en": "Three Mowi loans leave the bank's book in the portfolio sale.",
+     "note_es": "Tres créditos de Mowi salen del balance del banco en la venta de cartera."
+    }
+   ],
+   "reconciliation_en": "Amounts are traced for USD 5,400,000 of USD 23,266,645.18 and G. 33,500 million of G. 239,090 million of record principal. No repayment from Mowi's own revenue appears in either source. The record says shares passed on 19 Sep 2025; one outlet says 9 Sep.",
+   "reconciliation_es": "Hay montos trazados por USD 5.400.000 de USD 23.266.645,18 y G. 33.500 millones de G. 239.090 millones de capital según el acta. Ninguna fuente muestra repagos con ingresos propios de Mowi. El acta fecha el traspaso de acciones el 19/09/2025; un medio dice 9 de septiembre.",
+   "closes_loop": true,
+   "elapsed_days": 1
+  },
+  {
+   "id": "grupo-hendy-pass-through",
+   "title_en": "Grupo Hendy: disbursement, forwarding and repayment source",
+   "title_es": "Grupo Hendy: desembolso, reenvío y origen del repago",
+   "summary_en": "Record: four loans and an overdraft; money forwarded to ITTI, Redisa and Redipro; the only cancelled loan was repaid with Redipro money that came from ITTI; overdrafts repaid by SIPAP transfers from Vinanzas, Redipro, Redisa and ITTI.",
+   "summary_es": "Acta: cuatro préstamos y un sobregiro; dinero reenviado a ITTI, Redisa y Redipro; el único préstamo cancelado se pagó con dinero de Redipro proveniente de ITTI; los sobregiros se pagaron con transferencias SIPAP de Vinanzas, Redipro, Redisa e ITTI.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-hendy",
+     "amount": 91334400000,
+     "currency": "PYG",
+     "date": "2025-09-26",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0007"
+     ],
+     "note_en": "Loan 612561002345, granted four days before the shares left ITTI and Grupo Vázquez.",
+     "note_es": "Préstamo 612561002345, otorgado cuatro días antes de que las acciones salieran de ITTI y Grupo Vázquez."
+    },
+    {
+     "step": 2,
+     "from": "org:grupo-hendy",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2025-09-26",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0013",
+      "rec:flow:0006"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 3,
+     "from": "org:grupo-hendy",
+     "to": "org:redisa",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2025-09-26",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0014",
+      "rec:flow:0007"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-hendy",
+     "amount": 5075250,
+     "currency": "USD",
+     "date": "2025-10-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0008"
+     ],
+     "note_en": "Loan 612561002654.",
+     "note_es": "Préstamo 612561002654."
+    },
+    {
+     "step": 5,
+     "from": "org:grupo-hendy",
+     "to": "org:itti",
+     "amount": 5100000,
+     "currency": "USD",
+     "date": "2025-10-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0122"
+     ],
+     "note_en": "Same day (approximate figure).",
+     "note_es": "El mismo día (cifra aproximada)."
+    },
+    {
+     "step": 6,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-hendy",
+     "amount": 5527500,
+     "currency": "USD",
+     "date": "2025-12-29",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0009"
+     ],
+     "note_en": "Loan 612561002900.",
+     "note_es": "Préstamo 612561002900."
+    },
+    {
+     "step": 7,
+     "from": "org:grupo-hendy",
+     "to": "org:itti",
+     "amount": 5527500,
+     "currency": "USD",
+     "date": "2025-12-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0104",
+      "press:flow:0124"
+     ],
+     "note_en": "Next day, in full, concept \"Pago Itti\".",
+     "note_es": "Al día siguiente, íntegro, concepto \"Pago Itti\"."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-hendy",
+     "amount": 99587231967,
+     "currency": "PYG",
+     "date": "2026-02-02",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0010"
+     ],
+     "note_en": "Overdraft 614275822.",
+     "note_es": "Sobregiro 614275822."
+    },
+    {
+     "step": 9,
+     "from": "org:grupo-hendy",
+     "to": "org:redipro",
+     "amount": null,
+     "currency": null,
+     "date": "2026",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0004",
+      "rec:flow:0005"
+     ],
+     "note_en": "Overdraft money forwarded to Redipro and ITTI, then to accounts at other banks via SIPAP.",
+     "note_es": "Dinero del sobregiro reenviado a Redipro e ITTI, luego a cuentas en otros bancos vía SIPAP."
+    },
+    {
+     "step": 10,
+     "from": "org:itti",
+     "to": "org:redipro",
+     "amount": null,
+     "currency": null,
+     "date": null,
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0008"
+     ],
+     "note_en": "ITTI funds reach Redipro (origin: SIPAP transfers from other banks and an overdraft line).",
+     "note_es": "Fondos de ITTI llegan a Redipro (origen: transferencias SIPAP de otros bancos y una línea de sobregiro)."
+    },
+    {
+     "step": 11,
+     "from": "org:redipro",
+     "to": "org:grupo-hendy",
+     "amount": null,
+     "currency": "PYG",
+     "date": null,
+     "instrument": "repayment",
+     "refs": [
+      "rec:flow:0009"
+     ],
+     "note_en": "Source of repayment of loan 612561002345.",
+     "note_es": "Origen del repago del préstamo 612561002345."
+    },
+    {
+     "step": 12,
+     "from": "org:itti",
+     "to": "org:grupo-hendy",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-03-31",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0082",
+      "press:flow:0083",
+      "press:loan:0042"
+     ],
+     "note_en": "Overdrafts of G. 253,699 million amortised with ITTI and Redipro funds.",
+     "note_es": "Sobregiros por G. 253.699 millones amortizados con fondos de ITTI y Redipro."
+    },
+    {
+     "step": 13,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-hendy",
+     "amount": 14627989.28,
+     "currency": "USD",
+     "date": "2026-04-27",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0011"
+     ],
+     "note_en": "Loan 612661003878; the amount equals G. 91,334.4 million at 6,243.81 per USD (my arithmetic).",
+     "note_es": "Préstamo 612661003878; el monto equivale a G. 91.334,4 millones a 6.243,81 por USD (cálculo propio)."
+    },
+    {
+     "step": 14,
+     "from": "org:vinanzas",
+     "to": "org:grupo-hendy",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026",
+     "instrument": "repayment",
+     "refs": [
+      "rec:flow:0010",
+      "rec:flow:0011",
+      "rec:flow:0012",
+      "rec:flow:0013",
+      "press:flow:0089"
+     ],
+     "note_en": "SIPAP transfers from Vinanzas, Redipro, Redisa and ITTI repay overdrafts.",
+     "note_es": "Transferencias SIPAP de Vinanzas, Redipro, Redisa e ITTI pagan sobregiros."
+    },
+    {
+     "step": 15,
+     "from": "org:redisa",
+     "to": "org:grupo-hendy",
+     "amount": 110940000000,
+     "currency": "PYG",
+     "date": "2026-06-15",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0055",
+      "press:loan:0029"
+     ],
+     "note_en": "Covers the overdraft, with Redipro (G. 7,304 million).",
+     "note_es": "Cubre el sobregiro, junto con Redipro (G. 7.304 millones)."
+    },
+    {
+     "step": 16,
+     "from": "org:ueno-bank",
+     "to": "org:vinanzas",
+     "amount": 25815912,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "portfolio_assignment",
+     "refs": [
+      "rec:flow:0062",
+      "rec:flow:0063",
+      "rec:flow:0064"
+     ],
+     "note_en": "Three Hendy loans leave the bank's book.",
+     "note_es": "Tres créditos de Hendy salen del balance del banco."
+    }
+   ],
+   "reconciliation_en": "Amounts are traced for USD 10,627,500 of USD 25,230,739.28 of record principal and for none of the guaraní principal. The dates of the repayment of loan 612561002345 are not given.",
+   "reconciliation_es": "Hay montos trazados por USD 10.627.500 de USD 25.230.739,28 de capital según el acta y por nada del capital en guaraníes. No se informan las fechas del repago del préstamo 612561002345.",
+   "closes_loop": true,
+   "elapsed_days": null
+  },
+  {
+   "id": "grupo-m-pass-through",
+   "title_en": "Grupo M: disbursement, forwarding and repayment source",
+   "title_es": "Grupo M: desembolso, reenvío y origen del repago",
+   "summary_en": "Record: three 2025 loans forwarded in full to ITTI, Redisa and Kaitel; 2026 overdrafts forwarded in full to ITTI, Redipro and Redisa; the first instalment and the USD overdraft paid with ITTI money.",
+   "summary_es": "Acta: tres préstamos de 2025 reenviados íntegramente a ITTI, Redisa y Kaitel; sobregiros de 2026 reenviados íntegramente a ITTI, Redipro y Redisa; la primera cuota y el sobregiro en USD pagados con dinero de ITTI.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-m",
+     "amount": 13567500,
+     "currency": "USD",
+     "date": "2025-09-26",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0012"
+     ],
+     "note_en": "Loan 612561002346.",
+     "note_es": "Préstamo 612561002346."
+    },
+    {
+     "step": 2,
+     "from": "org:grupo-m",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-09-26",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0014",
+      "press:flow:0015"
+     ],
+     "note_en": "In full to ITTI, Redisa and Kaitel; split not given.",
+     "note_es": "Íntegro a ITTI, Redisa y Kaitel; reparto no informado."
+    },
+    {
+     "step": 3,
+     "from": "org:grupo-m",
+     "to": "org:redisa",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-09-26",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0015",
+      "press:flow:0016"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:grupo-m",
+     "to": "org:kaitel",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-09-26",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0016",
+      "press:flow:0017"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 5,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-m",
+     "amount": 4321500,
+     "currency": "USD",
+     "date": "2025-10-31",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0013"
+     ],
+     "note_en": "Loan 612561002664.",
+     "note_es": "Préstamo 612561002664."
+    },
+    {
+     "step": 6,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-m",
+     "amount": 5326500,
+     "currency": "USD",
+     "date": "2025-12-29",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0014"
+     ],
+     "note_en": "Loan 612561002897.",
+     "note_es": "Préstamo 612561002897."
+    },
+    {
+     "step": 7,
+     "from": "org:grupo-m",
+     "to": "org:itti",
+     "amount": 5300000,
+     "currency": "USD",
+     "date": "2025-12-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0125"
+     ],
+     "note_en": "Next day (approximate figure).",
+     "note_es": "Al día siguiente (cifra aproximada)."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-m",
+     "amount": 6305659.87,
+     "currency": "USD",
+     "date": "2026-01-02",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0016",
+      "rec:loan:0015"
+     ],
+     "note_en": "USD overdraft 614261690; a guaraní overdraft of G. 55,970,014,590 the same day.",
+     "note_es": "Sobregiro en USD 614261690; el mismo día un sobregiro de G. 55.970.014.590."
+    },
+    {
+     "step": 9,
+     "from": "org:grupo-m",
+     "to": "org:itti",
+     "amount": null,
+     "currency": null,
+     "date": "2026",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0017",
+      "rec:flow:0018",
+      "rec:flow:0019"
+     ],
+     "note_en": "Overdrafts of Jan-May 2026 forwarded in full to ITTI, Redipro and Redisa.",
+     "note_es": "Sobregiros de enero a mayo de 2026 reenviados íntegramente a ITTI, Redipro y Redisa."
+    },
+    {
+     "step": 10,
+     "from": "org:itti",
+     "to": "org:grupo-m",
+     "amount": 4320000,
+     "currency": "USD",
+     "date": "2026-04-29",
+     "instrument": "repayment",
+     "refs": [
+      "rec:flow:0020",
+      "press:flow:0030",
+      "press:flow:0087"
+     ],
+     "note_en": "First instalment of loan 612561002664 (approximate figure); the money came through Sagas, Kasas and Vinanzas the same day per one outlet.",
+     "note_es": "Primera cuota del préstamo 612561002664 (cifra aproximada); según un medio el dinero llegó ese día a través de Sagas, Kasas y Vinanzas."
+    },
+    {
+     "step": 11,
+     "from": "org:itti",
+     "to": "org:grupo-m",
+     "amount": 6321574,
+     "currency": "USD",
+     "date": "2026-06-11",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0052",
+      "rec:flow:0055"
+     ],
+     "note_en": "Cancels the USD overdraft with Technoma loan money.",
+     "note_es": "Cancela el sobregiro en USD con dinero del préstamo a Technoma."
+    },
+    {
+     "step": 12,
+     "from": "org:ueno-bank",
+     "to": "org:vinanzas",
+     "amount": 24207954,
+     "currency": "USD",
+     "date": "2026-06-15",
+     "instrument": "portfolio_assignment",
+     "refs": [
+      "rec:flow:0065",
+      "rec:flow:0066",
+      "rec:flow:0067"
+     ],
+     "note_en": "Three Grupo M loans leave the bank's book.",
+     "note_es": "Tres créditos de Grupo M salen del balance del banco."
+    }
+   ],
+   "reconciliation_en": "Amounts are traced for USD 5,300,000 of USD 29,521,159.87 of record principal. Press prints three different amounts for the 2025 loans (USD 14.3 million and USD 4 million against the record's 13,567,500 and 4,321,500).",
+   "reconciliation_es": "Hay montos trazados por USD 5.300.000 de USD 29.521.159,87 de capital según el acta. La prensa publica tres montos distintos para los préstamos de 2025 (USD 14,3 millones y USD 4 millones frente a 13.567.500 y 4.321.500 del acta).",
+   "closes_loop": true,
+   "elapsed_days": 4
+  },
+  {
+   "id": "tuiu-pass-through",
+   "title_en": "TUIU: disbursement, forwarding and repayment source",
+   "title_es": "TUIU: desembolso, reenvío y origen del repago",
+   "summary_en": "Record: three loans and three overdrafts from the day after ITTI sold its 50%; money forwarded to ITTI, Redisa and Redipro; the one cancelled overdraft was repaid on 30 Jan 2026 with Redipro money that came from Vinanzas, whose account had been fed with 72-hour cheques of Redisa, Redipro and ITTI.",
+   "summary_es": "Acta: tres préstamos y tres sobregiros desde el día siguiente a que ITTI vendiera su 50%; dinero reenviado a ITTI, Redisa y Redipro; el único sobregiro cancelado se pagó el 30/01/2026 con dinero de Redipro proveniente de Vinanzas, cuya cuenta se había alimentado con cheques a 72 horas de Redisa, Redipro e ITTI.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:tuiu",
+     "amount": 10050000,
+     "currency": "USD",
+     "date": "2025-08-29",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0017",
+      "rec:event:0052"
+     ],
+     "note_en": "Loan 612561002080, the day after the share transfer.",
+     "note_es": "Préstamo 612561002080, al día siguiente del traspaso de acciones."
+    },
+    {
+     "step": 2,
+     "from": "org:ueno-bank",
+     "to": "org:tuiu",
+     "amount": 5376750,
+     "currency": "USD",
+     "date": "2025-10-31",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0018"
+     ],
+     "note_en": "Loan 612561002665.",
+     "note_es": "Préstamo 612561002665."
+    },
+    {
+     "step": 3,
+     "from": "org:ueno-bank",
+     "to": "org:tuiu",
+     "amount": 5226000,
+     "currency": "USD",
+     "date": "2025-12-29",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0019"
+     ],
+     "note_en": "Loan 612561002892.",
+     "note_es": "Préstamo 612561002892."
+    },
+    {
+     "step": 4,
+     "from": "org:tuiu",
+     "to": "org:itti",
+     "amount": null,
+     "currency": null,
+     "date": "2025",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0021",
+      "press:flow:0116"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 5,
+     "from": "org:tuiu",
+     "to": "org:redisa",
+     "amount": null,
+     "currency": null,
+     "date": "2025",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0022",
+      "press:flow:0117"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 6,
+     "from": "org:tuiu",
+     "to": "org:redipro",
+     "amount": null,
+     "currency": null,
+     "date": "2025",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0023",
+      "press:flow:0118"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 7,
+     "from": "org:ueno-bank",
+     "to": "org:tuiu",
+     "amount": 57500000000,
+     "currency": "PYG",
+     "date": "2026-01-02",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0021",
+      "rec:loan:0020"
+     ],
+     "note_en": "Overdraft on account 614194019; a USD 10 million overdraft the same day.",
+     "note_es": "Sobregiro en la cuenta 614194019; el mismo día un sobregiro de USD 10 millones."
+    },
+    {
+     "step": 8,
+     "from": "org:redisa",
+     "to": "org:vinanzas",
+     "amount": null,
+     "currency": null,
+     "date": "2026-01",
+     "instrument": "cheque",
+     "refs": [
+      "rec:flow:0026",
+      "rec:flow:0027",
+      "rec:flow:0028"
+     ],
+     "note_en": "72-hour cheques on other banks from Redisa, Redipro and ITTI fund Vinanzas.",
+     "note_es": "Cheques a 72 horas de otros bancos, de Redisa, Redipro e ITTI, alimentan a Vinanzas."
+    },
+    {
+     "step": 9,
+     "from": "org:vinanzas",
+     "to": "org:redipro",
+     "amount": null,
+     "currency": null,
+     "date": "2026-01",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0025"
+     ],
+     "note_en": "Vinanzas funds Redipro.",
+     "note_es": "Vinanzas fondea a Redipro."
+    },
+    {
+     "step": 10,
+     "from": "org:redipro",
+     "to": "org:tuiu",
+     "amount": 57500000000,
+     "currency": "PYG",
+     "date": "2026-01-30",
+     "instrument": "repayment",
+     "refs": [
+      "rec:flow:0024",
+      "press:flow:0025",
+      "press:loan:0019"
+     ],
+     "note_en": "Overdraft cancelled; the amount comes from press, which names Vinanzas as payer.",
+     "note_es": "Sobregiro cancelado; el monto proviene de la prensa, que nombra a Vinanzas como pagador."
+    },
+    {
+     "step": 11,
+     "from": "org:ueno-bank",
+     "to": "org:tuiu",
+     "amount": 87100000000,
+     "currency": "PYG",
+     "date": "2026-02-03",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0022"
+     ],
+     "note_en": "New overdraft 614261792 four days later; outstanding.",
+     "note_es": "Nuevo sobregiro 614261792 cuatro días después; vigente."
+    }
+   ],
+   "reconciliation_en": "No forwarding amount is given for any TUIU disbursement (USD 30,652,750 and G. 144,600 million of principal). Whether the 72-hour cheques were honoured, and on which banks they were drawn, is not stated.",
+   "reconciliation_es": "No se informa monto de reenvío para ningún desembolso de TUIU (USD 30.652.750 y G. 144.600 millones de capital). No consta si los cheques a 72 horas fueron pagados ni contra qué bancos se libraron.",
+   "closes_loop": true,
+   "elapsed_days": 28
+  },
+  {
+   "id": "franede-pass-through",
+   "title_en": "Franede: disbursement, forwarding and repayment source",
+   "title_es": "Franede: desembolso, reenvío y origen del repago",
+   "summary_en": "Record: six loans and an overdraft from the day the shares passed from Grupo Vázquez; money forwarded to Vinanzas and Grupo Vázquez; amortisations and cancellations funded by Vinanzas and Grupo Vázquez, themselves funded mainly by overdrafts and 72-hour cheques of group companies. Press adds two dated forwardings with amounts.",
+   "summary_es": "Acta: seis préstamos y un sobregiro desde el día en que las acciones salieron de Grupo Vázquez; dinero reenviado a Vinanzas y Grupo Vázquez; amortizaciones y cancelaciones financiadas por Vinanzas y Grupo Vázquez, a su vez fondeadas sobre todo con sobregiros y cheques a 72 horas de empresas del grupo. La prensa agrega dos reenvíos con fecha y monto.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:franede",
+     "amount": 10000000,
+     "currency": "USD",
+     "date": "2025-06-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0023",
+      "rec:loan:0024",
+      "rec:event:0050"
+     ],
+     "note_en": "Loan 612561001554 on the day of the share transfer, with a G. 95,000 million loan; both later cancelled.",
+     "note_es": "Préstamo 612561001554 el día del traspaso de acciones, junto con otro de G. 95.000 millones; ambos luego cancelados."
+    },
+    {
+     "step": 2,
+     "from": "org:ueno-bank",
+     "to": "org:franede",
+     "amount": 24900000,
+     "currency": "USD",
+     "date": "2025-08-28",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0025"
+     ],
+     "note_en": "Loan 612561002073.",
+     "note_es": "Préstamo 612561002073."
+    },
+    {
+     "step": 3,
+     "from": "org:franede",
+     "to": "org:vinanzas",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-08-28",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0010",
+      "press:flow:0011",
+      "press:flow:0012",
+      "rec:flow:0029",
+      "rec:flow:0030"
+     ],
+     "note_en": "Passed at once to Vinanzas, Redisa and Grupo Vázquez; split not given.",
+     "note_es": "Traspasado de inmediato a Vinanzas, Redisa y Grupo Vázquez; reparto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:ueno-bank",
+     "to": "org:franede",
+     "amount": 65000000000,
+     "currency": "PYG",
+     "date": "2025-09-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0026"
+     ],
+     "note_en": "Loan 612561002362, later cancelled.",
+     "note_es": "Préstamo 612561002362, luego cancelado."
+    },
+    {
+     "step": 5,
+     "from": "org:franede",
+     "to": "org:vinanzas",
+     "amount": 65000000000,
+     "currency": "PYG",
+     "date": "2025-09-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0018"
+     ],
+     "note_en": "Same day, in full.",
+     "note_es": "El mismo día, íntegro."
+    },
+    {
+     "step": 6,
+     "from": "org:vinanzas",
+     "to": "org:ueno-bank",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2025-09-30",
+     "instrument": "portfolio_sale_price",
+     "refs": [
+      "press:flow:0019"
+     ],
+     "note_en": "Part paid to Ueno for an alleged portfolio purchase; amount not given.",
+     "note_es": "Una parte pagada a Ueno por una supuesta compra de cartera; monto no informado."
+    },
+    {
+     "step": 7,
+     "from": "org:vinanzas",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2025-09-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0020"
+     ],
+     "note_en": "The rest to ITTI; amount not given.",
+     "note_es": "El resto a ITTI; monto no informado."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:franede",
+     "amount": 10593000,
+     "currency": "USD",
+     "date": "2026-03-27",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0027",
+      "press:loan:0038"
+     ],
+     "note_en": "Loan 612661003607; equals USD 10,000,000 plus 5.93% (my arithmetic: 270 days at 8% is 5.92%).",
+     "note_es": "Préstamo 612661003607; equivale a USD 10.000.000 más 5,93% (cálculo propio: 270 días al 8% dan 5,92%)."
+    },
+    {
+     "step": 9,
+     "from": "org:franede",
+     "to": "org:vinanzas",
+     "amount": 10593000,
+     "currency": "USD",
+     "date": "2026-03-27",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0074"
+     ],
+     "note_en": "Same day.",
+     "note_es": "El mismo día."
+    },
+    {
+     "step": 10,
+     "from": "org:vinanzas",
+     "to": "org:itti",
+     "amount": 10593000,
+     "currency": "USD",
+     "date": "2026-03-27",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0075"
+     ],
+     "note_en": "On to ITTI for various debits; amount implied.",
+     "note_es": "Luego a ITTI para débitos varios; monto implícito."
+    },
+    {
+     "step": 11,
+     "from": "org:ueno-bank",
+     "to": "org:franede",
+     "amount": 15336437.83,
+     "currency": "USD",
+     "date": "2026-04-28",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0028"
+     ],
+     "note_en": "Loan 612661003890.",
+     "note_es": "Préstamo 612661003890."
+    },
+    {
+     "step": 12,
+     "from": "org:vinanzas",
+     "to": "org:franede",
+     "amount": null,
+     "currency": null,
+     "date": "2025",
+     "instrument": "repayment",
+     "refs": [
+      "rec:flow:0031",
+      "rec:flow:0032"
+     ],
+     "note_en": "Vinanzas and Grupo Vázquez fund amortisations and cancellations; dates and amounts not given.",
+     "note_es": "Vinanzas y Grupo Vázquez financian amortizaciones y cancelaciones; sin fechas ni montos."
+    }
+   ],
+   "reconciliation_en": "Amounts are traced for USD 10,593,000 of USD 60,829,437.83 and G. 65,000 million of G. 160,000 million of record principal. Three USD balances exceed principal by exactly 0.5%. One outlet attributes the USD 10,593,000 loan of 27 Mar 2026 to Henrici; the record lists it under Franede.",
+   "reconciliation_es": "Hay montos trazados por USD 10.593.000 de USD 60.829.437,83 y G. 65.000 millones de G. 160.000 millones de capital según el acta. Tres saldos en USD superan el capital en exactamente 0,5%. Un medio atribuye el préstamo de USD 10.593.000 del 27/03/2026 a Henrici; el acta lo registra a nombre de Franede.",
+   "closes_loop": true,
+   "elapsed_days": 0
+  },
+  {
+   "id": "aime-pass-through",
+   "title_en": "AIME: disbursement, forwarding and repayment source",
+   "title_es": "AIME: desembolso, reenvío y origen del repago",
+   "summary_en": "Record: three bullet loans of 30 and 90 days from three days after a share change, forwarded to ITTI, Grupo Vázquez and Redisa and later cancelled with transfers from those same companies; then three overdrafts forwarded in full to ITTI and Redipro, part of which ended in bond purchases and 72-hour cheques at Zeta Banco.",
+   "summary_es": "Acta: tres préstamos a 30 y 90 días con pago único, desde tres días después de un cambio accionario, reenviados a ITTI, Grupo Vázquez y Redisa y luego cancelados con transferencias de esas mismas empresas; después, tres sobregiros reenviados íntegramente a ITTI y Redipro, parte de los cuales terminó en compras de bonos y cheques a 72 horas en Zeta Banco.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:aime",
+     "amount": 6815000,
+     "currency": "USD",
+     "date": "2026-01-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0030",
+      "rec:event:0060"
+     ],
+     "note_en": "Loan 612661003123, 30 days, 7%.",
+     "note_es": "Préstamo 612661003123, 30 días, 7%."
+    },
+    {
+     "step": 2,
+     "from": "org:ueno-bank",
+     "to": "org:aime",
+     "amount": 133665000000,
+     "currency": "PYG",
+     "date": "2026-01-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0031"
+     ],
+     "note_en": "Loan 612661003124, 30 days, 12.5%.",
+     "note_es": "Préstamo 612661003124, 30 días, 12,5%."
+    },
+    {
+     "step": 3,
+     "from": "org:aime",
+     "to": "org:itti",
+     "amount": null,
+     "currency": null,
+     "date": "2026-01",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0033",
+      "press:flow:0026"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:aime",
+     "to": "org:grupo-vazquez",
+     "amount": null,
+     "currency": null,
+     "date": "2026-01",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0035",
+      "press:flow:0027"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 5,
+     "from": "org:aime",
+     "to": "org:redisa",
+     "amount": null,
+     "currency": null,
+     "date": "2026-01",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0037",
+      "press:flow:0028"
+     ],
+     "note_en": "Forwarded at once or almost; amount not stated.",
+     "note_es": "Reenviado de inmediato o casi; monto no informado."
+    },
+    {
+     "step": 6,
+     "from": "org:ueno-bank",
+     "to": "org:aime",
+     "amount": 64923000000,
+     "currency": "PYG",
+     "date": "2026-03-04",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "rec:loan:0032"
+     ],
+     "note_en": "Loan 612661003412, 90 days.",
+     "note_es": "Préstamo 612661003412, 90 días."
+    },
+    {
+     "step": 7,
+     "from": "org:itti",
+     "to": "org:aime",
+     "amount": null,
+     "currency": null,
+     "date": "2026",
+     "instrument": "repayment",
+     "refs": [
+      "rec:flow:0034",
+      "rec:flow:0036",
+      "rec:flow:0038"
+     ],
+     "note_en": "Loans cancelled through transfers by ITTI, Grupo Vázquez and Redisa.",
+     "note_es": "Préstamos cancelados con transferencias de ITTI, Grupo Vázquez y Redisa."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:aime",
+     "amount": 11000000,
+     "currency": "USD",
+     "date": "2026-04-10",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0033"
+     ],
+     "note_en": "Overdraft 614296500, later cancelled.",
+     "note_es": "Sobregiro 614296500, luego cancelado."
+    },
+    {
+     "step": 9,
+     "from": "org:ueno-bank",
+     "to": "org:aime",
+     "amount": 52364312369,
+     "currency": "PYG",
+     "date": "2026-05-04",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0035"
+     ],
+     "note_en": "Overdraft 614296528, outstanding.",
+     "note_es": "Sobregiro 614296528, vigente."
+    },
+    {
+     "step": 10,
+     "from": "org:ueno-bank",
+     "to": "org:aime",
+     "amount": 7230000,
+     "currency": "USD",
+     "date": "2026-05-19",
+     "instrument": "loan",
+     "refs": [
+      "rec:loan:0034"
+     ],
+     "note_en": "Overdraft 614296500, outstanding.",
+     "note_es": "Sobregiro 614296500, vigente."
+    },
+    {
+     "step": 11,
+     "from": "org:aime",
+     "to": "org:itti",
+     "amount": null,
+     "currency": null,
+     "date": "2026",
+     "instrument": "transfer",
+     "refs": [
+      "rec:flow:0039",
+      "rec:flow:0040"
+     ],
+     "note_en": "Overdrafts forwarded in full to ITTI and Redipro.",
+     "note_es": "Sobregiros reenviados íntegramente a ITTI y Redipro."
+    },
+    {
+     "step": 12,
+     "from": "org:aime",
+     "to": "org:zeta-banco",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-05",
+     "instrument": "cheque",
+     "refs": [
+      "press:flow:0029"
+     ],
+     "note_en": "Part ended in 72-hour cheques deposited at Zeta Banco.",
+     "note_es": "Una parte terminó en cheques a 72 horas depositados en Zeta Banco."
+    }
+   ],
+   "reconciliation_en": "No forwarding or repayment amount is given for AIME in either source (USD 25,045,000 and G. 250,952 million of principal). The dates on which the three loans were cancelled are not given.",
+   "reconciliation_es": "Ninguna fuente informa montos de reenvío o repago para AIME (USD 25.045.000 y G. 250.952 millones de capital). No se indican las fechas de cancelación de los tres préstamos.",
+   "closes_loop": true,
+   "elapsed_days": null
+  },
+  {
+   "id": "nubicom-galadriel-infocenter",
+   "title_en": "Nubicom, Galadriel and Infocenter, June-July 2026",
+   "title_es": "Nubicom, Galadriel e Infocenter, junio y julio de 2026",
+   "summary_en": "Press relaying the central bank: a G. 417,075 million sole-signature loan to Nubicom on 1 Jul 2026 was paid almost entirely to ITTI under a services contract dated the day before; on 31 Jul ITTI repaid G. 285,600 million of Nubicom's debt out of a USD 33 million exchange operation said to be funded by new loans to Galadriel and Infocenter.",
+   "summary_es": "Prensa que cita al banco central: un préstamo a sola firma de G. 417.075 millones a Nubicom el 01/07/2026 se pagó casi por completo a ITTI bajo un contrato de servicios fechado el día anterior; el 31 de julio ITTI pagó G. 285.600 millones de la deuda de Nubicom con una operación de cambio de USD 33 millones que se habría fondeado con préstamos nuevos a Galadriel e Infocenter.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:nubicom",
+     "amount": 7500000,
+     "currency": "USD",
+     "date": "2026-06-09",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0044",
+      "press:loan:0069"
+     ],
+     "note_en": "Another outlet prints USD 7.54 million.",
+     "note_es": "Otro medio publica USD 7,54 millones."
+    },
+    {
+     "step": 2,
+     "from": "org:nubicom",
+     "to": "org:nubicom-srl",
+     "amount": 4600000,
+     "currency": "USD",
+     "date": "2026-06",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0090",
+      "press:flow:0134"
+     ],
+     "note_en": "Sent abroad to an account in Argentina.",
+     "note_es": "Enviado al exterior a una cuenta en Argentina."
+    },
+    {
+     "step": 3,
+     "from": "org:nubicom",
+     "to": "org:nokia",
+     "amount": 1200000,
+     "currency": "USD",
+     "date": "2026-06",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0135"
+     ],
+     "note_en": "Supplier payment (approximate).",
+     "note_es": "Pago a proveedor (aproximado)."
+    },
+    {
+     "step": 4,
+     "from": "org:ueno-bank",
+     "to": "org:nubicom",
+     "amount": 417075000000,
+     "currency": "PYG",
+     "date": "2026-07-01",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0045"
+     ],
+     "note_en": "Sole signature; equals G. 415,000 million plus 0.5%.",
+     "note_es": "A sola firma; equivale a G. 415.000 millones más 0,5%."
+    },
+    {
+     "step": 5,
+     "from": "org:nubicom",
+     "to": "org:itti",
+     "amount": 415000000000,
+     "currency": "PYG",
+     "date": "2026-07-01",
+     "instrument": "contract",
+     "refs": [
+      "press:flow:0091"
+     ],
+     "note_en": "Professional-services contract dated 30 Jun 2026 (approximate figure).",
+     "note_es": "Contrato de servicios profesionales fechado el 30/06/2026 (cifra aproximada)."
+    },
+    {
+     "step": 6,
+     "from": "org:itti",
+     "to": "org:redisa",
+     "amount": 329500000000,
+     "currency": "PYG",
+     "date": "2026-07",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0092"
+     ],
+     "note_en": "To cover 72-hour cheques.",
+     "note_es": "Para cubrir cheques a 72 horas."
+    },
+    {
+     "step": 7,
+     "from": "org:ueno-bank",
+     "to": "org:galadriel",
+     "amount": 15070000,
+     "currency": "USD",
+     "date": "2026-07-31",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0058",
+      "press:loan:0046",
+      "press:event:0034"
+     ],
+     "note_en": "Unsecured 720-day bullet loan; 100% of the shares changed hands on 30 and 31 July.",
+     "note_es": "Préstamo sin garantía a 720 días con pago único; el 100% de las acciones cambió de manos el 30 y 31 de julio."
+    },
+    {
+     "step": 8,
+     "from": "org:ueno-bank",
+     "to": "org:infocenter",
+     "amount": 18000000,
+     "currency": "USD",
+     "date": null,
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0047"
+     ],
+     "note_en": "Date and lender not restated by the article.",
+     "note_es": "El artículo no reitera fecha ni acreedor."
+    },
+    {
+     "step": 9,
+     "from": "org:galadriel",
+     "to": "org:itti",
+     "amount": 15000000,
+     "currency": "USD",
+     "date": "2026-07-31",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0095",
+      "press:flow:0119"
+     ],
+     "note_en": "Route partly inferred by the data contributor.",
+     "note_es": "Ruta en parte inferida por quien cargó el dato."
+    },
+    {
+     "step": 10,
+     "from": "org:infocenter",
+     "to": "org:itti",
+     "amount": 18000000,
+     "currency": "USD",
+     "date": "2026-07-31",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0094"
+     ],
+     "note_en": "Low confidence: the central bank says destination data were unavailable.",
+     "note_es": "Confianza baja: el banco central dice que no había información de destino."
+    },
+    {
+     "step": 11,
+     "from": "org:itti",
+     "to": "org:nubicom",
+     "amount": 285600000000,
+     "currency": "PYG",
+     "date": "2026-07-31",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0093",
+      "press:flow:0120"
+     ],
+     "note_en": "Partial payment of Nubicom's debt at Ueno out of the exchange operation.",
+     "note_es": "Pago parcial de la deuda de Nubicom en Ueno con la operación de cambio."
+    },
+    {
+     "step": 12,
+     "from": "org:nubicom",
+     "to": "org:ueno-bank",
+     "amount": 285600000000,
+     "currency": "PYG",
+     "date": "2026-07-31",
+     "instrument": "repayment",
+     "refs": [
+      "press:loan:0045",
+      "press:flow:0093"
+     ],
+     "note_en": "Closing leg implied by the repayment description.",
+     "note_es": "Tramo de cierre implícito en la descripción del pago."
+    }
+   ],
+   "reconciliation_en": "G. 285,600 million divided by USD 33 million is 8,654.5 per USD, against 6,093 to 6,244 implied by other operations in the data; at about 6,100 the USD 33 million would yield about G. 201,000 million, so roughly G. 84,000 million of the repayment is unexplained or one of the figures is wrong. ITTI received G. 415,000 million and passed on G. 329,500 million; the use of G. 85,500 million is not given.",
+   "reconciliation_es": "G. 285.600 millones dividido por USD 33 millones da 8.654,5 por USD, frente a 6.093 a 6.244 implícitos en otras operaciones de los datos; a unos 6.100, los USD 33 millones rendirían unos G. 201.000 millones, de modo que cerca de G. 84.000 millones del pago quedan sin explicar o alguna cifra es errónea. ITTI recibió G. 415.000 millones y traspasó G. 329.500 millones; no se informa el destino de G. 85.500 millones.",
+   "closes_loop": true,
+   "elapsed_days": 30
+  },
+  {
+   "id": "sagas-kasas-april-2026",
+   "title_en": "Sagas, Kasas, Vinanzas, ITTI, Grupo M, 29 April 2026",
+   "title_es": "Sagas, Kasas, Vinanzas, ITTI, Grupo M, 29 de abril de 2026",
+   "summary_en": "One outlet, citing the supervisor, describes a same-day chain in which a new credit to Sagas reached Grupo M through Kasas, Vinanzas and ITTI and paid Grupo M's first instalment to Ueno.",
+   "summary_es": "Un medio, citando al supervisor, describe una cadena del mismo día en la que un crédito nuevo a Sagas llegó a Grupo M a través de Kasas, Vinanzas e ITTI y pagó la primera cuota de Grupo M a Ueno.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:sagas",
+     "amount": null,
+     "currency": null,
+     "date": "2026-04-29",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:flow:0084"
+     ],
+     "note_en": "Sagas obtained a credit the same day; the row gives no amount.",
+     "note_es": "Sagas obtuvo un crédito el mismo día; la fila no trae monto."
+    },
+    {
+     "step": 2,
+     "from": "org:sagas",
+     "to": "org:kasas-propiedades",
+     "amount": null,
+     "currency": null,
+     "date": "2026-04-29",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0084"
+     ],
+     "note_en": "Amount not given.",
+     "note_es": "Monto no informado."
+    },
+    {
+     "step": 3,
+     "from": "org:kasas-propiedades",
+     "to": "org:vinanzas",
+     "amount": null,
+     "currency": null,
+     "date": "2026-04-29",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0085"
+     ],
+     "note_en": "Amount not given.",
+     "note_es": "Monto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:vinanzas",
+     "to": "org:itti",
+     "amount": null,
+     "currency": null,
+     "date": "2026-04-29",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0086"
+     ],
+     "note_en": "Amount not given.",
+     "note_es": "Monto no informado."
+    },
+    {
+     "step": 5,
+     "from": "org:itti",
+     "to": "org:grupo-m",
+     "amount": 4320000,
+     "currency": "USD",
+     "date": "2026-04-29",
+     "instrument": "repayment",
+     "refs": [
+      "press:flow:0087",
+      "press:flow:0030",
+      "rec:flow:0020"
+     ],
+     "note_en": "The record confirms the ITTI leg and the date; amount from press (approximate).",
+     "note_es": "El acta confirma el tramo de ITTI y la fecha; monto según prensa (aproximado)."
+    },
+    {
+     "step": 6,
+     "from": "org:grupo-m",
+     "to": "org:ueno-bank",
+     "amount": null,
+     "currency": "USD",
+     "date": "2026-04-29",
+     "instrument": "repayment",
+     "refs": [
+      "rec:loan:0013",
+      "rec:event:0063"
+     ],
+     "note_en": "First instalment of loan 612561002664.",
+     "note_es": "Primera cuota del préstamo 612561002664."
+    }
+   ],
+   "reconciliation_en": "Only the last two legs are in the record. No amount is given for the Sagas credit or the three intermediate transfers, so the chain cannot be summed.",
+   "reconciliation_es": "Solo los dos últimos tramos figuran en el acta. No hay monto del crédito a Sagas ni de las tres transferencias intermedias, por lo que la cadena no puede sumarse.",
+   "closes_loop": true,
+   "elapsed_days": 0
+  },
+  {
+   "id": "grupo-berilo",
+   "title_en": "Grupo Berilo to Vinanzas, December 2025 and June 2026",
+   "title_es": "Grupo Berilo a Vinanzas, diciembre de 2025 y junio de 2026",
+   "summary_en": "Press relaying the supervisor: two Berilo loans were sent almost in full to Vinanzas on the day of disbursement; the first went on to Redisa a week later, the second to Grupo Vázquez.",
+   "summary_es": "Prensa que cita al supervisor: dos préstamos a Berilo se enviaron casi íntegros a Vinanzas el día del desembolso; el primero siguió a Redisa una semana después, el segundo a Grupo Vázquez.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-berilo",
+     "amount": 30150000,
+     "currency": "USD",
+     "date": "2025-12-23",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0048"
+     ],
+     "note_en": "Stated purpose: land, project, licences and civil works. Equals USD 30,000,000 plus 0.5%.",
+     "note_es": "Destino declarado: terreno, proyecto, licencias y obras civiles. Equivale a USD 30.000.000 más 0,5%."
+    },
+    {
+     "step": 2,
+     "from": "org:grupo-berilo",
+     "to": "org:vinanzas",
+     "amount": 30000000,
+     "currency": "USD",
+     "date": "2025-12-23",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0097"
+     ],
+     "note_en": "Same day.",
+     "note_es": "El mismo día."
+    },
+    {
+     "step": 3,
+     "from": "org:vinanzas",
+     "to": "org:redisa",
+     "amount": 30000000,
+     "currency": "USD",
+     "date": "2025-12-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0098"
+     ],
+     "note_en": "Three transfers of USD 10 million to cover a Redisa current-account overdraft.",
+     "note_es": "Tres transferencias de USD 10 millones para cubrir un sobregiro en cuenta corriente de Redisa."
+    },
+    {
+     "step": 4,
+     "from": "org:ueno-bank",
+     "to": "org:grupo-berilo",
+     "amount": 26400000,
+     "currency": "USD",
+     "date": "2026-06-01",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0024"
+     ],
+     "note_en": "Second loan.",
+     "note_es": "Segundo préstamo."
+    },
+    {
+     "step": 5,
+     "from": "org:grupo-berilo",
+     "to": "org:vinanzas",
+     "amount": 26300000,
+     "currency": "USD",
+     "date": "2026-06-01",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0031"
+     ],
+     "note_en": "Approximate figure.",
+     "note_es": "Cifra aproximada."
+    },
+    {
+     "step": 6,
+     "from": "org:vinanzas",
+     "to": "org:grupo-vazquez",
+     "amount": null,
+     "currency": "USD",
+     "date": "2026-06-01",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0032"
+     ],
+     "note_en": "Passed to Grupo Vázquez to finance ITTI, Redisa and Redipro; amount not given.",
+     "note_es": "Traspasado a Grupo Vázquez para financiar a ITTI, Redisa y Redipro; monto no informado."
+    }
+   ],
+   "reconciliation_en": "USD 56.3 million of USD 56.55 million disbursed is traced to Vinanzas. Where Redisa's overdraft was held is not stated, so the return to Ueno is not shown. Another outlet gives total Berilo loans of USD 69 million.",
+   "reconciliation_es": "Se trazan USD 56,3 millones de USD 56,55 millones desembolsados hasta Vinanzas. No se indica en qué banco estaba el sobregiro de Redisa, por lo que no se muestra el retorno a Ueno. Otro medio da USD 69 millones como total de préstamos a Berilo.",
+   "closes_loop": false,
+   "elapsed_days": 7
+  },
+  {
+   "id": "office-design-nuevo-mundo-match",
+   "title_en": "Office Design, Nuevo Mundo and Match",
+   "title_es": "Office Design, Nuevo Mundo y Match",
+   "summary_en": "Press relaying the supervisor: on 26 May 2026 a Nuevo Mundo loan travelled through Vinanzas and ITTI to cover an Office Design overdraft, while Office Design exchanged a new USD loan for guaraníes and sent them to ITTI, which paid mainly Match S.A.",
+   "summary_es": "Prensa que cita al supervisor: el 26/05/2026 un préstamo a Nuevo Mundo pasó por Vinanzas e ITTI para cubrir un sobregiro de Office Design, mientras Office Design cambió un préstamo nuevo en USD a guaraníes y los envió a ITTI, que pagó sobre todo a Match S.A.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:office-design",
+     "amount": 13700000,
+     "currency": "USD",
+     "date": "2025-09-30",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0015"
+     ],
+     "note_en": "Earlier loan.",
+     "note_es": "Préstamo anterior."
+    },
+    {
+     "step": 2,
+     "from": "org:office-design",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "USD",
+     "date": "2025-09-30",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0021"
+     ],
+     "note_en": "Applied through exchange operations to cover ITTI overdrafts.",
+     "note_es": "Aplicado mediante operaciones de cambio a cubrir sobregiros de ITTI."
+    },
+    {
+     "step": 3,
+     "from": "org:ueno-bank",
+     "to": "org:nuevo-mundo-entertainment",
+     "amount": 100500000000,
+     "currency": "PYG",
+     "date": "2026-05-26",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0049"
+     ],
+     "note_en": "Puerto Madero project loan; equals G. 100,000 million plus 0.5%.",
+     "note_es": "Préstamo del proyecto Puerto Madero; equivale a G. 100.000 millones más 0,5%."
+    },
+    {
+     "step": 4,
+     "from": "org:nuevo-mundo-entertainment",
+     "to": "org:vinanzas",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-05-26",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0099"
+     ],
+     "note_en": "Amount not given.",
+     "note_es": "Monto no informado."
+    },
+    {
+     "step": 5,
+     "from": "org:vinanzas",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-05-26",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0100"
+     ],
+     "note_en": "Amount not given.",
+     "note_es": "Monto no informado."
+    },
+    {
+     "step": 6,
+     "from": "org:itti",
+     "to": "org:office-design",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-05-26",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0101"
+     ],
+     "note_en": "Covers an Office Design overdraft.",
+     "note_es": "Cubre un sobregiro de Office Design."
+    },
+    {
+     "step": 7,
+     "from": "org:ueno-bank",
+     "to": "org:office-design",
+     "amount": 15766440,
+     "currency": "USD",
+     "date": "2026-05-26",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0050"
+     ],
+     "note_en": "Recorded purpose: investment.",
+     "note_es": "Destino registrado: inversión."
+    },
+    {
+     "step": 8,
+     "from": "org:office-design",
+     "to": "org:itti",
+     "amount": 96767000000,
+     "currency": "PYG",
+     "date": "2026-05-26",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0102"
+     ],
+     "note_en": "USD 15.6 million exchanged and sent to ITTI (6,203 per USD).",
+     "note_es": "USD 15,6 millones cambiados y enviados a ITTI (6.203 por USD)."
+    },
+    {
+     "step": 9,
+     "from": "org:itti",
+     "to": "org:match-sa",
+     "amount": 74071000000,
+     "currency": "PYG",
+     "date": "2026-05",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0103"
+     ],
+     "note_en": "Main onward payment.",
+     "note_es": "Principal pago posterior."
+    },
+    {
+     "step": 10,
+     "from": "org:ueno-bank",
+     "to": "org:nuevo-mundo-entertainment",
+     "amount": 198205000000,
+     "currency": "PYG",
+     "date": "2026-06-01",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0026"
+     ],
+     "note_en": "Further loan.",
+     "note_es": "Otro préstamo."
+    },
+    {
+     "step": 11,
+     "from": "org:nuevo-mundo-entertainment",
+     "to": "org:vinanzas",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-06-01",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0035",
+      "press:flow:0036",
+      "press:flow:0078"
+     ],
+     "note_en": "Routed to Vinanzas and ITTI; split not given.",
+     "note_es": "Derivado a Vinanzas e ITTI; reparto no informado."
+    }
+   ],
+   "reconciliation_en": "Only one forwarding carries an amount. G. 198,205 million appears both as a single loan of 1 Jun 2026 and as Nuevo Mundo's whole balance in another article, which also dates a G. 100,500 million loan to 26 May; both cannot be separate disbursements unless something was repaid.",
+   "reconciliation_es": "Solo un reenvío tiene monto. G. 198.205 millones aparece como un único préstamo del 01/06/2026 y también como el saldo total de Nuevo Mundo en otro artículo, que además fecha un préstamo de G. 100.500 millones el 26 de mayo; ambos no pueden ser desembolsos distintos salvo que algo se haya pagado.",
+   "closes_loop": true,
+   "elapsed_days": 0
+  },
+  {
+   "id": "gsr",
+   "title_en": "GSR to Vinanzas and ITTI",
+   "title_es": "GSR a Vinanzas e ITTI",
+   "summary_en": "Press relaying the supervisor: GSR loans of late 2025 were placed with Vinanzas under fixed-income contracts and re-routed to ITTI; 2026 loans were routed to Vinanzas and ITTI.",
+   "summary_es": "Prensa que cita al supervisor: préstamos a GSR de fines de 2025 se colocaron en Vinanzas mediante contratos de renta fija y se redirigieron a ITTI; los de 2026 se derivaron a Vinanzas e ITTI.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:gsr",
+     "amount": 7000000,
+     "currency": "USD",
+     "date": "2025",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0016"
+     ],
+     "note_en": "Oct-Dec 2025, sole signature.",
+     "note_es": "Octubre a diciembre de 2025, a sola firma."
+    },
+    {
+     "step": 2,
+     "from": "org:ueno-bank",
+     "to": "org:gsr",
+     "amount": 8500000,
+     "currency": "USD",
+     "date": "2025",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0017"
+     ],
+     "note_en": "Oct-Dec 2025, sole signature.",
+     "note_es": "Octubre a diciembre de 2025, a sola firma."
+    },
+    {
+     "step": 3,
+     "from": "org:gsr",
+     "to": "org:vinanzas",
+     "amount": 7000000,
+     "currency": "USD",
+     "date": "2025",
+     "instrument": "contract",
+     "refs": [
+      "press:flow:0022"
+     ],
+     "note_en": "Fixed-income instrument contract; then re-routed to ITTI (no separate row).",
+     "note_es": "Contrato de instrumento de renta fija; luego redirigido a ITTI (sin fila propia)."
+    },
+    {
+     "step": 4,
+     "from": "org:gsr",
+     "to": "org:vinanzas",
+     "amount": 8500000,
+     "currency": "USD",
+     "date": "2025",
+     "instrument": "contract",
+     "refs": [
+      "press:flow:0023"
+     ],
+     "note_en": "Fixed-income instrument contract; then re-routed to ITTI (no separate row).",
+     "note_es": "Contrato de instrumento de renta fija; luego redirigido a ITTI (sin fila propia)."
+    },
+    {
+     "step": 5,
+     "from": "org:ueno-bank",
+     "to": "org:gsr",
+     "amount": 132660000000,
+     "currency": "PYG",
+     "date": "2026-06-01",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0025"
+     ],
+     "note_en": "Equals G. 132,000 million plus 0.5%.",
+     "note_es": "Equivale a G. 132.000 millones más 0,5%."
+    },
+    {
+     "step": 6,
+     "from": "org:gsr",
+     "to": "org:vinanzas",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-06-01",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0033"
+     ],
+     "note_en": "Split not given.",
+     "note_es": "Reparto no informado."
+    },
+    {
+     "step": 7,
+     "from": "org:gsr",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-06-01",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0034"
+     ],
+     "note_en": "Split not given.",
+     "note_es": "Reparto no informado."
+    }
+   ],
+   "reconciliation_en": "USD 15.5 million of the roughly USD 72.8 million of financing reported for GSR is traced with amounts. No return leg to Ueno is reported.",
+   "reconciliation_es": "Se trazan con monto USD 15,5 millones de los cerca de USD 72,8 millones de financiamiento informados para GSR. No se informa un tramo de retorno a Ueno.",
+   "closes_loop": false,
+   "elapsed_days": null
+  },
+  {
+   "id": "henrici",
+   "title_en": "Henrici: one reported leg, disputed borrower",
+   "title_es": "Henrici: un tramo informado, prestataria en disputa",
+   "summary_en": "One outlet attributes a USD 10,593,000 loan of 27 Mar 2026 to Henrici and says it went to ITTI; another outlet and the prosecution record place a loan of the same amount and date with Franede.",
+   "summary_es": "Un medio atribuye a Henrici un préstamo de USD 10.593.000 del 27/03/2026 y dice que fue a ITTI; otro medio y el acta fiscal ubican un préstamo del mismo monto y fecha a nombre de Franede.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:henrici",
+     "amount": 10593000,
+     "currency": "USD",
+     "date": "2026-03-27",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0010"
+     ],
+     "note_en": "Borrower disputed; the record lists operation 612661003607 under Franede.",
+     "note_es": "Prestataria en disputa; el acta registra la operación 612661003607 a nombre de Franede."
+    },
+    {
+     "step": 2,
+     "from": "org:henrici",
+     "to": "org:itti",
+     "amount": 10593000,
+     "currency": "USD",
+     "date": "2026-03-27",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0005"
+     ],
+     "note_en": "Excluded from my totals to avoid counting the Franede leg twice.",
+     "note_es": "Excluido de mis totales para no contar dos veces el tramo de Franede."
+    }
+   ],
+   "reconciliation_en": "The record (loan 612661003607) supports the Franede attribution. Henrici appears with a separate debt of G. 345,372 million on an unofficial debtor list, so it may have other loans not described.",
+   "reconciliation_es": "El acta (préstamo 612661003607) respalda la atribución a Franede. Henrici figura con una deuda aparte de G. 345.372 millones en una lista oficiosa de deudores, de modo que puede tener otros préstamos no descritos.",
+   "closes_loop": false,
+   "elapsed_days": 0
+  },
+  {
+   "id": "la-tropa-sae-april-2026",
+   "title_en": "La Tropa SAE to Mowi, 23-24 April 2026",
+   "title_es": "La Tropa SAE a Mowi, 23 y 24 de abril de 2026",
+   "summary_en": "One outlet reports that a loan to La Tropa SAE was passed the same day to Grupo Vázquez, the next day to ITTI and then to Mowi, which used it to cancel part of a G. 33,500 million loan at Ueno. La Tropa Fletes, a sister firm, appears in the June circuit.",
+   "summary_es": "Un medio informa que un préstamo a La Tropa SAE pasó el mismo día a Grupo Vázquez, al día siguiente a ITTI y luego a Mowi, que lo usó para cancelar parte de un préstamo de G. 33.500 millones en Ueno. La Tropa Fletes, firma hermana, aparece en el circuito de junio.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "org:ueno-bank",
+     "to": "org:la-tropa-sae",
+     "amount": 5936654.88,
+     "currency": "USD",
+     "date": "2026-04-23",
+     "instrument": "loan_disbursement",
+     "refs": [
+      "press:loan:0036"
+     ],
+     "note_en": "Equivalent to G. 36,172,717,196; the sentence does not name the lender and the year is assumed.",
+     "note_es": "Equivale a G. 36.172.717.196; la frase no nombra al acreedor y el año es supuesto."
+    },
+    {
+     "step": 2,
+     "from": "org:la-tropa-sae",
+     "to": "org:grupo-vazquez",
+     "amount": 5936654.88,
+     "currency": "USD",
+     "date": "2026-04-23",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0065"
+     ],
+     "note_en": "Same day.",
+     "note_es": "El mismo día."
+    },
+    {
+     "step": 3,
+     "from": "org:grupo-vazquez",
+     "to": "org:itti",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-04-24",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0066"
+     ],
+     "note_en": "Next day; amount not given.",
+     "note_es": "Al día siguiente; monto no informado."
+    },
+    {
+     "step": 4,
+     "from": "org:itti",
+     "to": "org:mowi",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-04-24",
+     "instrument": "transfer",
+     "refs": [
+      "press:flow:0067",
+      "press:flow:0088"
+     ],
+     "note_en": "Amount not given.",
+     "note_es": "Monto no informado."
+    },
+    {
+     "step": 5,
+     "from": "org:mowi",
+     "to": "org:ueno-bank",
+     "amount": null,
+     "currency": "PYG",
+     "date": "2026-04-24",
+     "instrument": "repayment",
+     "refs": [
+      "press:loan:0041",
+      "rec:loan:0003"
+     ],
+     "note_en": "Partial cancellation of loan 612561002893; the record shows it cancelled.",
+     "note_es": "Cancelación parcial del préstamo 612561002893; el acta lo muestra cancelado."
+    }
+   ],
+   "reconciliation_en": "Only the first two legs carry an amount. The record adds that Mowi received a new USD 5,366,645.18 loan on 24 Apr 2026, which a reader should set beside this repayment.",
+   "reconciliation_es": "Solo los dos primeros tramos tienen monto. El acta agrega que Mowi recibió un préstamo nuevo de USD 5.366.645,18 el 24/04/2026, dato que conviene poner junto a este pago.",
+   "closes_loop": true,
+   "elapsed_days": 1
+  },
+  {
+   "id": "rey-cash-cda",
+   "title_en": "Cash and certificates of deposit as described by Julio Rey (his claim)",
+   "title_es": "Efectivo y certificados de depósito según Julio Rey (su versión)",
+   "summary_en": "Rey told prosecutors, on hearsay from a liquidity officer, that about USD 17 million and G. 17,000 million in cash were brought to the bank, booked in a Grupo Vázquez company as collections of unpaid loans supported by consecutively numbered receipts of three firms, and used to buy certificates of deposit in 2025 that were to be used in 2026 to capitalise the bank. These are his statements; nothing in the prosecution section or the press data corroborates the amounts.",
+   "summary_es": "Rey dijo a la fiscalía, por referencia de un funcionario del área de liquidez, que unos USD 17 millones y G. 17.000 millones en efectivo fueron llevados al banco, contabilizados en una empresa de Grupo Vázquez como cobros de créditos impagos con respaldo en recibos de numeración consecutiva de tres firmas, y usados para comprar certificados de depósito en 2025 que en 2026 se pretendía aplicar a capitalizar el banco. Son sus dichos; nada en la parte fiscal del acta ni en la prensa corrobora los montos.",
+   "legs": [
+    {
+     "step": 1,
+     "from": "person:miguel-vazquez",
+     "to": "org:ueno-bank",
+     "amount": 17000000,
+     "currency": "USD",
+     "date": "2025-05",
+     "instrument": "cash_delivery",
+     "refs": [
+      "rec:flow:0071",
+      "rec:event:0047"
+     ],
+     "note_en": "Rey's claim, hearsay; date \"about May 2025\" sits oddly in the passage.",
+     "note_es": "Dicho de Rey, de oídas; la fecha \"aproximadamente mayo de 2025\" no encaja bien en el pasaje."
+    },
+    {
+     "step": 2,
+     "from": "person:miguel-vazquez",
+     "to": "org:ueno-bank",
+     "amount": 17000000000,
+     "currency": "PYG",
+     "date": "2025-05",
+     "instrument": "cash_delivery",
+     "refs": [
+      "rec:flow:0072",
+      "rec:issue:0009"
+     ],
+     "note_en": "Guaraní part of the same claimed delivery.",
+     "note_es": "Parte en guaraníes de la misma entrega alegada."
+    },
+    {
+     "step": 3,
+     "from": "org:grupo-vazquez",
+     "to": "org:ueno-bank",
+     "amount": null,
+     "currency": null,
+     "date": "2025",
+     "instrument": "other",
+     "refs": [
+      "rec:flow:0073"
+     ],
+     "note_en": "Claimed purchase of certificates of deposit by Grupo Vázquez, justified with the receipts; several said to be endorsed to Miguel Vázquez.",
+     "note_es": "Compra alegada de certificados de depósito por Grupo Vázquez, justificada con los recibos; varios habrían sido endosados a Miguel Vázquez."
+    },
+    {
+     "step": 4,
+     "from": "org:grupo-vazquez",
+     "to": "org:ueno-bank",
+     "amount": null,
+     "currency": null,
+     "date": "2026",
+     "instrument": "other",
+     "refs": [
+      "rec:flow:0073",
+      "rec:event:0068"
+     ],
+     "note_en": "Claimed intention to capitalise the bank with those certificates; not shown as executed. The defence filed certificate schedules and three receipts.",
+     "note_es": "Intención alegada de capitalizar el banco con esos certificados; no consta que se haya ejecutado. La defensa presentó planillas de certificados y tres recibos."
+    }
+   ],
+   "reconciliation_en": "No certificate numbers, dates, amounts or holder are in the data. The receipts and schedules filed by the defence were not available to me. Press reports cash leaving the bank in 2026 on group instructions (G. 4,767 million across seven rows), which is a different direction and period.",
+   "reconciliation_es": "Los datos no traen números, fechas, montos ni titular de los certificados. No tuve acceso a los recibos ni a las planillas presentados por la defensa. La prensa informa salidas de efectivo del banco en 2026 por instrucciones del grupo (G. 4.767 millones en siete filas), que es otra dirección y otro período.",
+   "closes_loop": false,
+   "elapsed_days": null
+  }
+ ],
+ "hubs": [
+  {
+   "entity": "org:vinanzas",
+   "in_usd": 158454601,
+   "out_usd": 115011418.12,
+   "in_pyg": 219200000000,
+   "out_pyg": 187210000000,
+   "counterparties": 17,
+   "rows_with_amount": 53,
+   "rows_without_amount": 19,
+   "role_en": "Main collector and redistributor: receives borrower money and bond proceeds and pays Ueno, Redisa, Redipro, ITTI and borrowers; in-and-out within 0 to 4 days on six dated occasions.",
+   "role_es": "Principal recaudador y redistribuidor: recibe dinero de prestatarias y producto de bonos y paga a Ueno, Redisa, Redipro, ITTI y prestatarias; entrada y salida en 0 a 4 días en seis ocasiones fechadas."
+  },
+  {
+   "entity": "org:itti",
+   "in_usd": 69520744.21,
+   "out_usd": 15320244,
+   "in_pyg": 511767000000,
+   "out_pyg": 720371000000,
+   "counterparties": 21,
+   "rows_with_amount": 26,
+   "rows_without_amount": 42,
+   "role_en": "Largest hub by counterparties (21): first destination of most forwardings and payer of borrowers' instalments and overdrafts; in-and-out within 0 to 4 days on seven dated occasions. 42 of its 68 rows have no amount.",
+   "role_es": "Mayor nodo por contrapartes (21): primer destino de la mayoría de los reenvíos y pagador de cuotas y sobregiros de prestatarias; entrada y salida en 0 a 4 días en siete ocasiones fechadas. 42 de sus 68 filas no tienen monto."
+  },
+  {
+   "entity": "org:ueno-bank",
+   "in_usd": 91418418.12,
+   "out_usd": 81841000,
+   "in_pyg": 17000000000,
+   "out_pyg": 4767000000,
+   "counterparties": 10,
+   "rows_with_amount": 31,
+   "rows_without_amount": 3,
+   "role_en": "Origin and end point of the loops. Totals here cover only the five June 2026 USD disbursements, the portfolio price and cash rows; other disbursements are in the loan tables, not in flow rows.",
+   "role_es": "Origen y destino de los circuitos. Los totales solo cubren los cinco desembolsos en USD de junio de 2026, el precio de la cartera y las filas de efectivo; los demás desembolsos están en las tablas de préstamos, no en filas de flujo."
+  },
+  {
+   "entity": "org:grupo-vazquez",
+   "in_usd": 15922283.79,
+   "out_usd": 10719568,
+   "in_pyg": 4767000000,
+   "out_pyg": 1687000000,
+   "counterparties": 13,
+   "rows_with_amount": 20,
+   "rows_without_amount": 12,
+   "role_en": "Pass-through and bond seller: receives from Technoma, La Tropa and AIME/Franede and passes to ITTI and Vinanzas the same or next day; also funds borrower repayments.",
+   "role_es": "Intermediario y vendedor de bonos: recibe de Technoma, La Tropa y AIME/Franede y traspasa a ITTI y Vinanzas el mismo día o el siguiente; también financia repagos de prestatarias."
+  },
+  {
+   "entity": "org:redisa",
+   "in_usd": 35400000,
+   "out_usd": 0,
+   "in_pyg": 440440000000,
+   "out_pyg": 209142000000,
+   "counterparties": 8,
+   "rows_with_amount": 6,
+   "rows_without_amount": 18,
+   "role_en": "Net receiver; payer of Hendy and Mowi overdrafts on 15 Jun 2026. Pays out G. 98,202 million more than its reported inflow that day.",
+   "role_es": "Receptor neto; pagador de los sobregiros de Hendy y Mowi el 15/06/2026. Paga G. 98.202 millones más que el ingreso informado ese día."
+  },
+  {
+   "entity": "org:redipro",
+   "in_usd": 0,
+   "out_usd": 0,
+   "in_pyg": 52270000000,
+   "out_pyg": 18770000000,
+   "counterparties": 7,
+   "rows_with_amount": 4,
+   "rows_without_amount": 18,
+   "role_en": "Receiver and repayment conduit (Hendy loan, TUIU overdraft); balanced on 15 Jun 2026 (in and out G. 18,770 million).",
+   "role_es": "Receptor y canal de repago (préstamo de Hendy, sobregiro de TUIU); cierra el 15/06/2026 (entran y salen G. 18.770 millones)."
+  },
+  {
+   "entity": "org:kasas-propiedades",
+   "in_usd": 10049628.97,
+   "out_usd": 10049628,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 5,
+   "rows_with_amount": 4,
+   "rows_without_amount": 5,
+   "role_en": "Same-day pass-through: bond sale proceeds of USD 10,049,628.97 forwarded to Vinanzas; also a link in the 29 Apr 2026 chain.",
+   "role_es": "Intermediario del mismo día: producto de venta de bonos por USD 10.049.628,97 reenviado a Vinanzas; también eslabón de la cadena del 29/04/2026."
+  },
+  {
+   "entity": "org:model",
+   "in_usd": 2117596.26,
+   "out_usd": 2117596,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 3,
+   "rows_with_amount": 5,
+   "rows_without_amount": 1,
+   "role_en": "Same-day pass-through of USD 2,117,596 of bond proceeds to Vinanzas.",
+   "role_es": "Intermediario del mismo día por USD 2.117.596 de producto de bonos hacia Vinanzas."
+  },
+  {
+   "entity": "org:ueno-casa-de-bolsa",
+   "in_usd": 10000000,
+   "out_usd": 0,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 5,
+   "rows_with_amount": 1,
+   "rows_without_amount": 4,
+   "role_en": "Broker-dealer through which La Tropa Fletes' USD 10 million bought USD 9,923,899.99 of bonds from four group issuers; an agent, so the amount is counted only as its inflow.",
+   "role_es": "Casa de bolsa por la que los USD 10 millones de La Tropa Fletes compraron bonos por USD 9.923.899,99 a cuatro emisores del grupo; es agente, por eso el monto se cuenta solo como su ingreso."
+  },
+  {
+   "entity": "org:technoma",
+   "in_usd": 10000000,
+   "out_usd": 10000244.21,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 4,
+   "rows_with_amount": 7,
+   "rows_without_amount": 0,
+   "role_en": "Borrower that spent the loan the same day on bonds of ITTI and Grupo Vázquez (USD 244.21 more than the loan).",
+   "role_es": "Prestataria que gastó el préstamo el mismo día en bonos de ITTI y Grupo Vázquez (USD 244,21 más que el préstamo)."
+  },
+  {
+   "entity": "org:satec",
+   "in_usd": 20000000,
+   "out_usd": 20000000,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 2,
+   "rows_with_amount": 6,
+   "rows_without_amount": 0,
+   "role_en": "Pure pass-through: USD 20 million in and out on 15 Jun 2026.",
+   "role_es": "Intermediario puro: USD 20 millones entran y salen el 15/06/2026."
+  },
+  {
+   "entity": "org:hd-invest",
+   "in_usd": 35000000,
+   "out_usd": 35000000,
+   "in_pyg": 0,
+   "out_pyg": 36900000000,
+   "counterparties": 2,
+   "rows_with_amount": 6,
+   "rows_without_amount": 0,
+   "role_en": "Pure pass-through: USD 35 million and G. 36,900 million in and out on 15 Jun 2026 (the guaraní disbursement is a loan row, so it shows only as outflow).",
+   "role_es": "Intermediario puro: USD 35 millones y G. 36.900 millones entran y salen el 15/06/2026 (el desembolso en guaraníes es una fila de préstamo, por eso figura solo como egreso)."
+  },
+  {
+   "entity": "org:la-tropa-fletes",
+   "in_usd": 10000000,
+   "out_usd": 6333364.17,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 5,
+   "rows_with_amount": 5,
+   "rows_without_amount": 1,
+   "role_en": "Borrower whose whole loan went to the broker-dealer four days later; outflow shown is the two bond purchases with amounts.",
+   "role_es": "Prestataria cuyo préstamo íntegro fue a la casa de bolsa cuatro días después; el egreso mostrado corresponde a las dos compras de bonos con monto."
+  },
+  {
+   "entity": "org:factopar",
+   "in_usd": 6841000,
+   "out_usd": 0,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 2,
+   "rows_with_amount": 2,
+   "rows_without_amount": 1,
+   "role_en": "Borrower of USD 6,841,000 and G. 157,500 million on 15 Jun 2026; no outflow amount of its own is reported (bond purchase figure is joint with La Tropa Fletes).",
+   "role_es": "Prestataria de USD 6.841.000 y G. 157.500 millones el 15/06/2026; no se informa un egreso propio con monto (la cifra de compra de bonos es conjunta con La Tropa Fletes)."
+  },
+  {
+   "entity": "org:mowi",
+   "in_usd": 0,
+   "out_usd": 5400000,
+   "in_pyg": 214668000000,
+   "out_pyg": 33500000000,
+   "counterparties": 4,
+   "rows_with_amount": 5,
+   "rows_without_amount": 9,
+   "role_en": "Borrower; inflows shown are repayments made for it by group companies, outflows are forwardings.",
+   "role_es": "Prestataria; los ingresos mostrados son pagos hechos a su favor por empresas del grupo, los egresos son reenvíos."
+  },
+  {
+   "entity": "org:grupo-hendy",
+   "in_usd": 0,
+   "out_usd": 10627500,
+   "in_pyg": 118244000000,
+   "out_pyg": 0,
+   "counterparties": 4,
+   "rows_with_amount": 5,
+   "rows_without_amount": 20,
+   "role_en": "Borrower; inflows shown are repayments made for it by Redisa and Redipro, outflows are forwardings to ITTI.",
+   "role_es": "Prestataria; los ingresos mostrados son pagos hechos a su favor por Redisa y Redipro, los egresos son reenvíos a ITTI."
+  },
+  {
+   "entity": "org:grupo-m",
+   "in_usd": 10641574,
+   "out_usd": 5300000,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 4,
+   "rows_with_amount": 5,
+   "rows_without_amount": 21,
+   "role_en": "Borrower; inflows shown are ITTI payments of its instalment and overdraft. 21 of 26 rows have no amount.",
+   "role_es": "Prestataria; los ingresos mostrados son pagos de ITTI de su cuota y su sobregiro. 21 de 26 filas no tienen monto."
+  },
+  {
+   "entity": "org:kaitel",
+   "in_usd": 0,
+   "out_usd": 0,
+   "in_pyg": 0,
+   "out_pyg": 0,
+   "counterparties": 1,
+   "rows_with_amount": 0,
+   "rows_without_amount": 5,
+   "role_en": "Destination of Grupo M 2025 loans; five rows, none with an amount.",
+   "role_es": "Destino de préstamos de Grupo M de 2025; cinco filas, ninguna con monto."
+  }
+ ],
+ "typologies": [
+  {
+   "name_en": "Round-tripping (bank money returning to the bank as an apparent third-party payment)",
+   "name_es": "Ida y vuelta de fondos (dinero del banco que regresa como pago aparente de un tercero)",
+   "indicators_present": [
+    {
+     "text_en": "Five USD loans of 11 and 15 Jun 2026 and the USD 74,418,418.12 price paid to Ueno on 15 Jun are linked by same-day or four-day chains.",
+     "text_es": "Cinco préstamos en USD del 11 y 15/06/2026 y el precio de USD 74.418.418,12 pagado a Ueno el 15 de junio están unidos por cadenas del mismo día o de cuatro días.",
+     "refs": [
+      "rec:flow:0041",
+      "rec:flow:0042",
+      "rec:flow:0043",
+      "rec:flow:0044",
+      "rec:flow:0045",
+      "rec:flow:0046",
+      "rec:flow:0047",
+      "rec:flow:0061"
+     ]
+    },
+    {
+     "text_en": "Buyer balance of about USD 93,628 the day before a USD 74.4 million cash purchase.",
+     "text_es": "Saldo del comprador de unos USD 93.628 el día anterior a una compra al contado de USD 74,4 millones.",
+     "refs": [
+      "rec:event:0064",
+      "press:fact:0036"
+     ]
+    },
+    {
+     "text_en": "Press component figures sum to the cent to the USD 76,061,604.13 received.",
+     "text_es": "Las cifras parciales de prensa suman al centavo los USD 76.061.604,13 recibidos.",
+     "refs": [
+      "press:flow:0059",
+      "press:flow:0060",
+      "press:flow:0061",
+      "press:flow:0062",
+      "press:flow:0063",
+      "press:flow:0053",
+      "press:fact:0045"
+     ]
+    },
+    {
+     "text_en": "Same-day guaraní loop: new loans, Vinanzas, Redisa and Redipro, overdrafts of Hendy and Mowi cancelled.",
+     "text_es": "Circuito en guaraníes del mismo día: préstamos nuevos, Vinanzas, Redisa y Redipro, sobregiros de Hendy y Mowi cancelados.",
+     "refs": [
+      "press:flow:0001",
+      "press:flow:0003",
+      "press:flow:0040",
+      "press:flow:0041",
+      "press:flow:0055",
+      "press:flow:0058",
+      "press:loan:0029",
+      "press:loan:0030"
+     ]
+    },
+    {
+     "text_en": "Franede loan of 30 Sep 2025 sent to Vinanzas, part paid to Ueno the same day.",
+     "text_es": "Préstamo a Franede del 30/09/2025 enviado a Vinanzas, parte pagada a Ueno el mismo día.",
+     "refs": [
+      "press:flow:0018",
+      "press:flow:0019"
+     ]
+    }
+   ],
+   "indicators_absent_en": [
+    "Account statements or SIPAP messages showing each credit and debit with time stamps.",
+    "Any document showing who instructed the transfers out of the five borrowers' accounts.",
+    "The use of the USD 1,643,186.01 left in Vinanzas and of G. 120,190 million of guaraní inflows.",
+    "Evidence on whether the new borrowers have means to repay independently of the group."
+   ],
+   "indicators_absent_es": [
+    "Extractos de cuenta o mensajes SIPAP que muestren cada crédito y débito con hora.",
+    "Algún documento que muestre quién ordenó las transferencias desde las cuentas de las cinco prestatarias.",
+    "El destino de los USD 1.643.186,01 que quedaron en Vinanzas y de G. 120.190 millones de ingresos en guaraníes.",
+    "Prueba sobre si las nuevas prestatarias pueden pagar con independencia del grupo."
+   ]
+  },
+  {
+   "name_en": "Loan-back and funding of related parties through intermediaries",
+   "name_es": "Préstamo de retorno y financiamiento de vinculadas mediante intermediarios",
+   "indicators_present": [
+    {
+     "text_en": "The record states that disbursements to all six borrowers were forwarded at once or almost to ITTI, Redisa, Redipro, Vinanzas, Kaitel or Grupo Vázquez.",
+     "text_es": "El acta afirma que los desembolsos a las seis prestatarias se reenviaron de inmediato o casi a ITTI, Redisa, Redipro, Vinanzas, Kaitel o Grupo Vázquez.",
+     "refs": [
+      "rec:flow:0001",
+      "rec:flow:0006",
+      "rec:flow:0014",
+      "rec:flow:0021",
+      "rec:flow:0029",
+      "rec:flow:0033"
+     ]
+    },
+    {
+     "text_en": "Of first-hop forwardings with amounts, 92.2% in USD and 100% in PYG went to ITTI, Redisa, Redipro, Vinanzas or Grupo Vázquez (my computation on deduplicated rows).",
+     "text_es": "De los reenvíos de primer tramo con monto, el 92,2% en USD y el 100% en PYG fue a ITTI, Redisa, Redipro, Vinanzas o Grupo Vázquez (cálculo propio sobre filas depuradas).",
+     "refs": [
+      "press:flow:0097",
+      "press:flow:0031",
+      "press:flow:0091",
+      "press:flow:0102",
+      "press:flow:0104",
+      "press:flow:0121",
+      "press:flow:0123"
+     ]
+    },
+    {
+     "text_en": "Related-party exposure reported above the regulatory cap.",
+     "text_es": "Exposición con vinculadas informada por encima del tope regulatorio.",
+     "refs": [
+      "press:fact:0081",
+      "press:fact:0083",
+      "press:fact:0085"
+     ]
+    }
+   ],
+   "indicators_absent_en": [
+    "Amounts for any forwarding in the record itself (all 40 record forwarding and repayment rows for the six borrowers are null).",
+    "Service contracts or invoices that could explain payments to ITTI, Redisa and Redipro as ordinary business.",
+    "Credit committee and board minutes approving each loan."
+   ],
+   "indicators_absent_es": [
+    "Montos de algún reenvío en el propio acta (las 40 filas de reenvío y repago del acta para las seis prestatarias no tienen monto).",
+    "Contratos de servicios o facturas que pudieran explicar los pagos a ITTI, Redisa y Redipro como operaciones comerciales ordinarias.",
+    "Actas de comité de créditos y de directorio que aprueben cada préstamo."
+   ]
+  },
+  {
+   "name_en": "Evergreening (new credit used to service or replace old credit)",
+   "name_es": "Refinanciación encubierta (crédito nuevo usado para atender o reemplazar crédito anterior)",
+   "indicators_present": [
+    {
+     "text_en": "Overdrafts of Mowi and TUIU paid down on 30 Jan 2026 and new overdrafts drawn on 2 and 3 Feb 2026.",
+     "text_es": "Sobregiros de Mowi y TUIU amortizados el 30/01/2026 y nuevos sobregiros utilizados el 2 y 3 de febrero de 2026.",
+     "refs": [
+      "rec:loan:0005",
+      "rec:loan:0006",
+      "rec:loan:0021",
+      "rec:loan:0022",
+      "press:flow:0024",
+      "rec:flow:0024"
+     ]
+    },
+    {
+     "text_en": "New USD loans of 24 and 27 Apr 2026 to Mowi and Hendy equal their cancelled guaraní loans at 6,242 to 6,244 per USD (my arithmetic).",
+     "text_es": "Los préstamos nuevos en USD del 24 y 27/04/2026 a Mowi y Hendy equivalen a sus préstamos en guaraníes cancelados, a 6.242 a 6.244 por USD (cálculo propio).",
+     "refs": [
+      "rec:loan:0003",
+      "rec:loan:0004",
+      "rec:loan:0007",
+      "rec:loan:0011"
+     ]
+    },
+    {
+     "text_en": "Franede loan of 27 Mar 2026 equals its cancelled USD 10 million loan plus 5.93%.",
+     "text_es": "El préstamo a Franede del 27/03/2026 equivale a su préstamo cancelado de USD 10 millones más 5,93%.",
+     "refs": [
+      "rec:loan:0023",
+      "rec:loan:0027"
+     ]
+    },
+    {
+     "text_en": "Instalments and overdrafts paid by ITTI, Redipro, Redisa, Vinanzas and Grupo Vázquez, not by the borrowers.",
+     "text_es": "Cuotas y sobregiros pagados por ITTI, Redipro, Redisa, Vinanzas y Grupo Vázquez, no por las prestatarias.",
+     "refs": [
+      "rec:flow:0009",
+      "rec:flow:0020",
+      "rec:flow:0024",
+      "rec:flow:0031",
+      "rec:flow:0034"
+     ]
+    },
+    {
+     "text_en": "31 of 40 record credit operations are dated in the last six or first four days of a month; portfolio sold at principal plus accrued interest.",
+     "text_es": "31 de 40 operaciones de crédito del acta están fechadas en los últimos seis o primeros cuatro días de un mes; cartera vendida a capital más intereses devengados.",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0009",
+      "rec:loan:0015",
+      "rec:flow:0060"
+     ]
+    }
+   ],
+   "indicators_absent_en": [
+    "Dates and amounts of the cancellations of the Franede, Hendy and AIME loans.",
+    "The bank's exchange rates on 24, 27 and 28 Apr 2026, needed to confirm the equivalences.",
+    "Loan classification and provisioning history for each operation."
+   ],
+   "indicators_absent_es": [
+    "Fechas y montos de las cancelaciones de los préstamos de Franede, Hendy y AIME.",
+    "Los tipos de cambio del banco del 24, 27 y 28/04/2026, necesarios para confirmar las equivalencias.",
+    "Historial de calificación y previsiones de cada operación."
+   ]
+  },
+  {
+   "name_en": "Nominee or straw borrowers",
+   "name_es": "Prestatarias interpuestas o testaferros",
+   "indicators_present": [
+    {
+     "text_en": "Shares passed to individuals days before or after first loans (Franede same day, TUIU one day, Mowi seven days, AIME three days; Hendy and Grupo M four days after).",
+     "text_es": "Acciones traspasadas a personas físicas días antes o después de los primeros préstamos (Franede el mismo día, TUIU un día, Mowi siete días, AIME tres días; Hendy y Grupo M cuatro días después).",
+     "refs": [
+      "rec:event:0050",
+      "rec:event:0052",
+      "rec:event:0053",
+      "rec:event:0054",
+      "rec:event:0060"
+     ]
+    },
+    {
+     "text_en": "The same 12 home-banking operators, described as ITTI employees, on all six borrowers' accounts.",
+     "text_es": "Los mismos 12 operadores de banca electrónica, descritos como empleados de ITTI, en las cuentas de las seis prestatarias.",
+     "refs": [
+      "rec:role:0115",
+      "rec:role:0116",
+      "rec:role:0117",
+      "rec:role:0118",
+      "rec:role:0119",
+      "rec:role:0120"
+     ]
+    },
+    {
+     "text_en": "New owners and officers with stated roles in the bank or group.",
+     "text_es": "Nuevos dueños y directivos con funciones declaradas en el banco o el grupo.",
+     "refs": [
+      "rec:role:0035",
+      "rec:role:0057",
+      "rec:role:0095",
+      "rec:role:0080",
+      "rec:role:0090"
+     ]
+    },
+    {
+     "text_en": "Second-ring borrowers with very small paid-in capital or share transfers on the loan date.",
+     "text_es": "Prestatarias del segundo anillo con capital integrado muy bajo o traspasos de acciones en la fecha del préstamo.",
+     "refs": [
+      "press:fact:0047",
+      "press:fact:0097",
+      "press:fact:0060",
+      "press:event:0034"
+     ]
+    }
+   ],
+   "indicators_absent_en": [
+    "Share purchase agreements, prices paid and proof of payment by the new owners.",
+    "Any statement by the new owners; several are not charged and are presumed to have acted lawfully.",
+    "Addresses: the data hold no registered-office or address fields, so shared addresses cannot be tested.",
+    "Ownership of Satec, HD Invest, Factopar and Sagas, which is not in the data."
+   ],
+   "indicators_absent_es": [
+    "Contratos de compraventa de acciones, precios pagados y constancia de pago por los nuevos dueños.",
+    "Declaraciones de los nuevos dueños; varios no están imputados y se presume que actuaron lícitamente.",
+    "Domicilios: los datos no traen sede social ni dirección, por lo que no puede verificarse si comparten domicilio.",
+    "La titularidad de Satec, HD Invest, Factopar y Sagas, que no figura en los datos."
+   ]
+  },
+  {
+   "name_en": "Kiting through 72-hour cheques",
+   "name_es": "Bicicleta financiera con cheques a 72 horas",
+   "indicators_present": [
+    {
+     "text_en": "72-hour cheques on other banks from Redisa, Redipro and ITTI funded the Vinanzas account in January 2026.",
+     "text_es": "Cheques a 72 horas de otros bancos, de Redisa, Redipro e ITTI, alimentaron la cuenta de Vinanzas en enero de 2026.",
+     "refs": [
+      "rec:flow:0026",
+      "rec:flow:0027",
+      "rec:flow:0028"
+     ]
+    },
+    {
+     "text_en": "Franede repayments traced to overdrafts and 72-hour cheque collections of group companies.",
+     "text_es": "Repagos de Franede trazados a sobregiros y cobros de cheques a 72 horas de empresas del grupo.",
+     "refs": [
+      "rec:flow:0031",
+      "rec:flow:0032"
+     ]
+    },
+    {
+     "text_en": "AIME overdraft money ended in 72-hour cheques at Zeta Banco; ITTI passed G. 329,500 million to Redisa to cover 72-hour cheques.",
+     "text_es": "Dinero de sobregiros de AIME terminó en cheques a 72 horas en Zeta Banco; ITTI pasó G. 329.500 millones a Redisa para cubrir cheques a 72 horas.",
+     "refs": [
+      "rec:flow:0039",
+      "press:flow:0029",
+      "press:flow:0092"
+     ]
+    }
+   ],
+   "indicators_absent_en": [
+    "Cheque numbers, drawee banks, amounts and dates.",
+    "Whether funds were drawn against uncollected cheques, which is the defining feature of kiting.",
+    "Any returned or replaced cheques."
+   ],
+   "indicators_absent_es": [
+    "Números de cheque, bancos girados, montos y fechas.",
+    "Si se dispuso de fondos contra cheques aún no acreditados, rasgo que define esta figura.",
+    "Cheques devueltos o reemplazados."
+   ]
+  },
+  {
+   "name_en": "Circular capital creation through certificates of deposit (Rey's claim only)",
+   "name_es": "Creación circular de capital mediante certificados de depósito (solo según Rey)",
+   "indicators_present": [
+    {
+     "text_en": "Rey says cash was booked as collections on written-off loans, supported by consecutively numbered receipts of three firms.",
+     "text_es": "Rey dice que el efectivo se contabilizó como cobros de créditos castigados, con recibos de numeración consecutiva de tres firmas.",
+     "refs": [
+      "rec:flow:0071",
+      "rec:flow:0072"
+     ]
+    },
+    {
+     "text_en": "Rey says certificates of deposit bought in 2025 were to be used in 2026 to capitalise the bank.",
+     "text_es": "Rey dice que certificados de depósito comprados en 2025 se iban a usar en 2026 para capitalizar el banco.",
+     "refs": [
+      "rec:flow:0073"
+     ]
+    },
+    {
+     "text_en": "The defence filed certificate schedules and three receipts with the statement.",
+     "text_es": "La defensa presentó planillas de certificados y tres recibos junto con la declaración.",
+     "refs": [
+      "rec:event:0068"
+     ]
+    },
+    {
+     "text_en": "A central bank board minute, per press, records an undeducted contribution of G. 876,300 million; no link to the certificates is stated.",
+     "text_es": "Un acta del directorio del banco central, según la prensa, registra un aporte no deducido de G. 876.300 millones; no se indica vínculo con los certificados.",
+     "refs": [
+      "press:event:0026"
+     ]
+    }
+   ],
+   "indicators_absent_en": [
+    "Any corroboration outside Rey's statement: he reports what another person told him.",
+    "Certificate numbers, amounts, holder, endorsements and whether any capitalisation was actually booked.",
+    "The origin of the cash.",
+    "A consistent date: about May 2025 inside a passage about enquiries from October 2025."
+   ],
+   "indicators_absent_es": [
+    "Corroboración fuera de la declaración de Rey: él refiere lo que otra persona le contó.",
+    "Números, montos, titular y endosos de los certificados, y si alguna capitalización llegó a contabilizarse.",
+    "El origen del efectivo.",
+    "Una fecha coherente: hacia mayo de 2025 dentro de un pasaje sobre averiguaciones desde octubre de 2025."
+   ]
+  }
+ ],
+ "red_flags": [
+  {
+   "date": "2025-06-30",
+   "text_en": "Franede: shares pass from Grupo Vázquez to an individual (99.62%) and two loans (USD 10 million, G. 95,000 million) are disbursed the same day; officers had changed on 4 June.",
+   "text_es": "Franede: las acciones pasan de Grupo Vázquez a una persona física (99,62%) y el mismo día se desembolsan dos préstamos (USD 10 millones, G. 95.000 millones); los directivos habían cambiado el 4 de junio.",
+   "refs": [
+    "rec:event:0050",
+    "rec:event:0049",
+    "rec:loan:0023",
+    "rec:loan:0024",
+    "rec:role:0093"
+   ]
+  },
+  {
+   "date": "2025-08-28",
+   "text_en": "TUIU: ITTI sells its 50% on 28 Aug; first loan (USD 10,050,000) on 29 Aug.",
+   "text_es": "TUIU: ITTI vende su 50% el 28 de agosto; primer préstamo (USD 10.050.000) el 29.",
+   "refs": [
+    "rec:event:0052",
+    "rec:loan:0017",
+    "rec:role:0089"
+   ]
+  },
+  {
+   "date": "2025-09-19",
+   "text_en": "Mowi: shares pass on 19 Sep (one outlet: 9 Sep), officers on 25 Sep, account opened and USD 12.5 million disbursed on 26 Sep.",
+   "text_es": "Mowi: traspaso de acciones el 19 de septiembre (un medio: 9 de septiembre), directivos el 25, apertura de cuenta y desembolso de USD 12,5 millones el 26.",
+   "refs": [
+    "rec:event:0053",
+    "rec:loan:0001",
+    "press:event:0003",
+    "press:event:0045"
+   ]
+  },
+  {
+   "date": "2025-09-26",
+   "text_en": "Grupo Hendy and Grupo M receive G. 91,334.4 million and USD 13,567,500 while still owned by ITTI and Grupo Vázquez; shares pass to individuals four days later.",
+   "text_es": "Grupo Hendy y Grupo M reciben G. 91.334,4 millones y USD 13.567.500 cuando aún pertenecían a ITTI y Grupo Vázquez; las acciones pasan a personas físicas cuatro días después.",
+   "refs": [
+    "rec:event:0054",
+    "rec:loan:0007",
+    "rec:loan:0012",
+    "rec:role:0047",
+    "rec:role:0066"
+   ]
+  },
+  {
+   "date": "2025-09-30",
+   "text_en": "Franede loan of G. 65,000 million sent to Vinanzas and part paid to Ueno for a portfolio purchase the same day.",
+   "text_es": "Préstamo a Franede de G. 65.000 millones enviado a Vinanzas y parte pagada a Ueno por una compra de cartera el mismo día.",
+   "refs": [
+    "rec:loan:0026",
+    "press:flow:0018",
+    "press:flow:0019"
+   ]
+  },
+  {
+   "date": "2025-10-27",
+   "text_en": "Bank asks the supervisor to de-list Mowi (and, per the record, Hendy and Grupo M) as related parties without documents; four more loans follow on 30 and 31 Oct.",
+   "text_es": "El banco pide al supervisor desvincular a Mowi (y, según el acta, a Hendy y Grupo M) sin documentación; siguen cuatro préstamos el 30 y 31 de octubre.",
+   "refs": [
+    "rec:event:0055",
+    "press:event:0004",
+    "rec:loan:0002",
+    "rec:loan:0008",
+    "rec:loan:0013",
+    "rec:loan:0018"
+   ]
+  },
+  {
+   "date": "2025-10-31",
+   "text_en": "ITTI and Vinanzas sign a framework loan contract (13% a year) on a day of loans to Grupo M and TUIU; it is the contract under which ITTI funded Vinanzas on 15 Jun 2026.",
+   "text_es": "ITTI y Vinanzas firman un contrato marco de préstamo (13% anual) un día de préstamos a Grupo M y TUIU; bajo ese contrato ITTI fondeó a Vinanzas el 15/06/2026.",
+   "refs": [
+    "press:event:0015",
+    "rec:loan:0013",
+    "rec:loan:0018",
+    "press:flow:0053"
+   ]
+  },
+  {
+   "date": "2025-12-29",
+   "text_en": "Four borrowers receive loans the same day (Mowi, Hendy, Grupo M, TUIU); three are forwarded the next day.",
+   "text_es": "Cuatro prestatarias reciben préstamos el mismo día (Mowi, Hendy, Grupo M, TUIU); tres se reenvían al día siguiente.",
+   "refs": [
+    "rec:loan:0003",
+    "rec:loan:0009",
+    "rec:loan:0014",
+    "rec:loan:0019",
+    "press:flow:0104",
+    "press:flow:0123",
+    "press:flow:0125"
+   ]
+  },
+  {
+   "date": "2026-01-02",
+   "text_en": "Five overdrafts opened the same day for Mowi, Grupo M (two) and TUIU (two).",
+   "text_es": "Cinco sobregiros abiertos el mismo día a Mowi, Grupo M (dos) y TUIU (dos).",
+   "refs": [
+    "rec:loan:0005",
+    "rec:loan:0015",
+    "rec:loan:0016",
+    "rec:loan:0020",
+    "rec:loan:0021"
+   ]
+  },
+  {
+   "date": "2026-01-30",
+   "text_en": "AIME shares change on 27 Jan; two AIME loans on 30 Jan, the day group companies pay down Mowi's and TUIU's overdrafts. No row links the two events; the coincidence is mine.",
+   "text_es": "Cambio accionario de AIME el 27 de enero; dos préstamos a AIME el 30, el día en que empresas del grupo amortizan los sobregiros de Mowi y TUIU. Ninguna fila une ambos hechos; la coincidencia la señalo yo.",
+   "refs": [
+    "rec:event:0060",
+    "rec:loan:0030",
+    "rec:loan:0031",
+    "press:flow:0024",
+    "rec:flow:0024"
+   ]
+  },
+  {
+   "date": "2026-02-02",
+   "text_en": "Overdrafts redrawn two to four days after the month-end paydowns (Mowi G. 100,500 million, Hendy G. 99,587 million, TUIU G. 87,100 million on 3 Feb).",
+   "text_es": "Sobregiros utilizados de nuevo dos a cuatro días después de las amortizaciones de fin de mes (Mowi G. 100.500 millones, Hendy G. 99.587 millones, TUIU G. 87.100 millones el 3 de febrero).",
+   "refs": [
+    "rec:loan:0006",
+    "rec:loan:0010",
+    "rec:loan:0022"
+   ]
+  },
+  {
+   "date": "2026-03-27",
+   "text_en": "Franede loan of USD 10,593,000 passes to Vinanzas and ITTI the same day; the amount equals an earlier cancelled USD 10 million loan plus 5.93%.",
+   "text_es": "El préstamo a Franede de USD 10.593.000 pasa a Vinanzas e ITTI el mismo día; el monto equivale a un préstamo anterior cancelado de USD 10 millones más 5,93%.",
+   "refs": [
+    "rec:loan:0027",
+    "rec:loan:0023",
+    "press:flow:0074",
+    "press:flow:0075"
+   ]
+  },
+  {
+   "date": "2026-04-24",
+   "text_en": "Mowi's G. 33,500 million loan is partly cancelled with La Tropa SAE money and Mowi receives a new USD 5,366,645.18 loan the same day; Hendy receives USD 14,627,989.28 on 27 Apr.",
+   "text_es": "El préstamo de G. 33.500 millones de Mowi se cancela en parte con dinero de La Tropa SAE y Mowi recibe el mismo día un préstamo nuevo de USD 5.366.645,18; Hendy recibe USD 14.627.989,28 el 27 de abril.",
+   "refs": [
+    "press:flow:0065",
+    "press:flow:0067",
+    "rec:loan:0003",
+    "rec:loan:0004",
+    "rec:loan:0011",
+    "rec:loan:0007"
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "text_en": "Sagas obtains a credit and, the same day, money reaches Grupo M through Kasas, Vinanzas and ITTI to pay its first instalment.",
+   "text_es": "Sagas obtiene un crédito y, el mismo día, el dinero llega a Grupo M por Kasas, Vinanzas e ITTI para pagar su primera cuota.",
+   "refs": [
+    "press:flow:0084",
+    "press:flow:0085",
+    "press:flow:0086",
+    "press:flow:0087",
+    "rec:flow:0020"
+   ]
+  },
+  {
+   "date": "2026-06-05",
+   "text_en": "Supervisor confirms Mowi and Hendy remain related parties and orders limits recalculated (report of 8 Jun); ten days later their loans are sold to Vinanzas.",
+   "text_es": "El supervisor confirma que Mowi y Hendy siguen siendo vinculadas y ordena recalcular límites (informe del 8 de junio); diez días después sus créditos se venden a Vinanzas.",
+   "refs": [
+    "press:event:0005",
+    "press:event:0006",
+    "rec:event:0065"
+   ]
+  },
+  {
+   "date": "2026-06-15",
+   "text_en": "Portfolio contract, five-company funding and cash payment on one day; buyer held about USD 93,628 the day before.",
+   "text_es": "Contrato de cartera, fondeo por cinco empresas y pago al contado en un solo día; el comprador tenía unos USD 93.628 el día anterior.",
+   "refs": [
+    "rec:flow:0060",
+    "rec:flow:0061",
+    "rec:flow:0041",
+    "rec:flow:0042",
+    "rec:flow:0045",
+    "rec:event:0064"
+   ]
+  },
+  {
+   "date": "2026-07-01",
+   "text_en": "Nubicom: services contract with ITTI dated 30 Jun; G. 417,075 million loan and G. 415,000 million payment to ITTI on 1 Jul.",
+   "text_es": "Nubicom: contrato de servicios con ITTI fechado el 30 de junio; préstamo de G. 417.075 millones y pago de G. 415.000 millones a ITTI el 1 de julio.",
+   "refs": [
+    "press:flow:0091",
+    "press:loan:0045"
+   ]
+  },
+  {
+   "date": "2026-07-31",
+   "text_en": "Galadriel: 90% and 10% of shares transferred on 30 and 31 Jul; USD 15.07 million unsecured loan on 31 Jul.",
+   "text_es": "Galadriel: 90% y 10% de las acciones traspasados el 30 y 31 de julio; préstamo sin garantía de USD 15,07 millones el 31.",
+   "refs": [
+    "press:event:0034",
+    "press:role:0083",
+    "press:role:0084",
+    "press:loan:0058"
+   ]
+  },
+  {
+   "date": "2025",
+   "text_en": "Shared operators: the same 12 home-banking users, described as ITTI employees, operate the accounts of all six record borrowers.",
+   "text_es": "Operadores compartidos: los mismos 12 usuarios de banca electrónica, descritos como empleados de ITTI, operan las cuentas de las seis prestatarias del acta.",
+   "refs": [
+    "rec:role:0115",
+    "rec:role:0116",
+    "rec:role:0117",
+    "rec:role:0118",
+    "rec:role:0119",
+    "rec:role:0120",
+    "press:event:0016"
+   ]
+  },
+  {
+   "date": "2025",
+   "text_en": "Officers in common (stated roles): Urdapilleta owns in Hendy and Grupo M and is director of Redisa and of the broker-dealer; Pizurno in Mowi, Grupo M and Technoma; Ríos in TUIU, Technoma and AIME; Almada is statutory auditor of the bank, TUIU and AIME; Astigarraga in Mowi, Grupo M, TUIU, Nubicom and the bank; Sala Cardozo in Mowi and GSR after leaving the bank; Vera Moreira in Office Design and Technoma.",
+   "text_es": "Directivos en común (cargos declarados): Urdapilleta es dueño en Hendy y Grupo M y director de Redisa y de la casa de bolsa; Pizurno en Mowi, Grupo M y Technoma; Ríos en TUIU, Technoma y AIME; Almada es síndico del banco, de TUIU y de AIME; Astigarraga en Mowi, Grupo M, TUIU, Nubicom y el banco; Sala Cardozo en Mowi y GSR tras dejar el banco; Vera Moreira en Office Design y Technoma.",
+   "refs": [
+    "rec:role:0052",
+    "rec:role:0074",
+    "rec:role:0055",
+    "rec:role:0056",
+    "rec:role:0036",
+    "rec:role:0038",
+    "press:role:0103",
+    "rec:role:0078",
+    "rec:role:0080",
+    "rec:role:0082",
+    "rec:role:0015",
+    "rec:role:0090",
+    "rec:role:0091",
+    "rec:role:0042",
+    "rec:role:0068",
+    "rec:role:0069",
+    "rec:role:0092",
+    "press:role:0034",
+    "rec:role:0033",
+    "rec:role:0035",
+    "press:role:0007",
+    "press:role:0004",
+    "press:role:0005"
+   ]
+  }
+ ],
+ "opinions": [
+  {
+   "text_en": "Opinion: The 15 June 2026 USD figures are internally consistent to the cent once the press numbers are used, which makes it likely that both sources draw on the same supervisory work paper; the record diagram should be re-read for three legs (ITTI, Model, Grupo Vázquez) before it is quoted.",
+   "text_es": "Opinión: las cifras en USD del 15/06/2026 son coherentes al centavo cuando se usan los números de prensa, lo que hace probable que ambas fuentes provengan del mismo papel de trabajo del supervisor; conviene releer tres tramos del diagrama del acta (ITTI, Model, Grupo Vázquez) antes de citarlo.",
+   "basis_refs": [
+    "rec:flow:0056",
+    "rec:flow:0057",
+    "rec:flow:0059",
+    "press:flow:0053",
+    "press:flow:0062",
+    "press:flow:0063",
+    "press:fact:0045"
+   ]
+  },
+  {
+   "text_en": "Opinion: On the data, the five June loans do not fully explain the day: at least USD 542,178.13 of USD uses and USD 1,000,000.78 of ITTI's payments came from sources not identified, and USD 1,643,186.01 stayed in Vinanzas. These are gaps to close, not signs of anything by themselves.",
+   "text_es": "Opinión: según los datos, los cinco préstamos de junio no explican por completo la jornada: al menos USD 542.178,13 de usos en USD y USD 1.000.000,78 de pagos de ITTI provinieron de fuentes no identificadas, y USD 1.643.186,01 quedaron en Vinanzas. Son brechas a cerrar, no indicios por sí mismos.",
+   "basis_refs": [
+    "rec:flow:0041",
+    "rec:flow:0042",
+    "rec:flow:0043",
+    "rec:flow:0044",
+    "rec:flow:0045",
+    "press:flow:0049",
+    "press:flow:0051",
+    "press:flow:0052",
+    "press:flow:0053",
+    "rec:flow:0061"
+   ]
+  },
+  {
+   "text_en": "Opinion: The portfolio was priced at principal plus accrued interest, with no discount, so the sale would have let the bank show full recovery of USD 71.7 million of principal and about USD 2.7 million of interest while its exposure moved to five new borrowers for USD 81.8 million plus G. 280,500 million. Whether that was the purpose is for the court.",
+   "text_es": "Opinión: la cartera se valuó a capital más intereses devengados, sin descuento, de modo que la venta habría permitido al banco mostrar la recuperación total de USD 71,7 millones de capital y unos USD 2,7 millones de intereses mientras su exposición pasaba a cinco prestatarias nuevas por USD 81,8 millones más G. 280.500 millones. Si ese fue el propósito, corresponde determinarlo al tribunal.",
+   "basis_refs": [
+    "rec:flow:0060",
+    "rec:flow:0062",
+    "rec:flow:0068",
+    "rec:loan:0001",
+    "rec:loan:0012",
+    "press:loan:0002",
+    "press:loan:0007",
+    "press:loan:0008"
+   ]
+  },
+  {
+   "text_en": "Opinion: The strongest pattern in the data is not any single chain but the repetition: on seven dated occasions ITTI, and on six Vinanzas, received and paid out within 0 to 4 days, and every repayment with a named source was paid by a group company or passed through one.",
+   "text_es": "Opinión: el patrón más fuerte de los datos no es una cadena en particular sino la repetición: en siete ocasiones fechadas ITTI, y en seis Vinanzas, recibieron y pagaron en 0 a 4 días, y todo repago con origen identificado fue pagado por una empresa del grupo o pasó por una de ellas.",
+   "basis_refs": [
+    "press:flow:0075",
+    "press:flow:0086",
+    "press:flow:0100",
+    "press:flow:0051",
+    "press:flow:0093",
+    "rec:flow:0009",
+    "rec:flow:0020",
+    "rec:flow:0024",
+    "rec:flow:0031",
+    "rec:flow:0034"
+   ]
+  },
+  {
+   "text_en": "Opinion: The amount coincidences of March and April 2026 (Franede USD 10,593,000; Mowi USD 5,366,645.18; Hendy USD 14,627,989.28) look like currency conversions or roll-overs of earlier loans. This rests on my arithmetic alone and needs the bank's exchange rates and the cancellation entries.",
+   "text_es": "Opinión: las coincidencias de montos de marzo y abril de 2026 (Franede USD 10.593.000; Mowi USD 5.366.645,18; Hendy USD 14.627.989,28) parecen conversiones de moneda o renovaciones de préstamos anteriores. Esto se apoya solo en mis cálculos y requiere los tipos de cambio del banco y los asientos de cancelación.",
+   "basis_refs": [
+    "rec:loan:0003",
+    "rec:loan:0004",
+    "rec:loan:0007",
+    "rec:loan:0011",
+    "rec:loan:0023",
+    "rec:loan:0027"
+   ]
+  },
+  {
+   "text_en": "Opinion: Twelve record loans equal a round amount plus exactly 0.5%, and three Franede balances exceed principal by exactly 0.5%. A financed charge of 0.5% would explain both, and would resolve the record's \"balance above principal\" anomaly; what the charge is, I cannot tell.",
+   "text_es": "Opinión: doce préstamos del acta equivalen a un monto redondo más exactamente 0,5%, y tres saldos de Franede superan el capital en exactamente 0,5%. Un cargo financiado de 0,5% explicaría ambas cosas y resolvería la anomalía de \"saldo mayor al capital\" del acta; no puedo decir de qué cargo se trata.",
+   "basis_refs": [
+    "rec:loan:0008",
+    "rec:loan:0012",
+    "rec:loan:0017",
+    "rec:loan:0025",
+    "rec:loan:0027",
+    "rec:loan:0028",
+    "rec:issue:0007"
+   ]
+  },
+  {
+   "text_en": "Opinion: The second-ring chains rest on press alone and several figures do not close (Nubicom's implied exchange rate of 8,654 per USD; Redisa's G. 98,202 million; the Henrici and Franede attribution). They are leads, weaker than the record.",
+   "text_es": "Opinión: las cadenas del segundo anillo se apoyan solo en prensa y varias cifras no cierran (el tipo de cambio implícito de Nubicom de 8.654 por USD; los G. 98.202 millones de Redisa; la atribución entre Henrici y Franede). Son pistas, más débiles que el acta.",
+   "basis_refs": [
+    "press:flow:0093",
+    "press:flow:0094",
+    "press:flow:0095",
+    "press:flow:0057",
+    "press:flow:0040",
+    "press:flow:0005",
+    "press:flow:0074"
+   ]
+  },
+  {
+   "text_en": "Opinion: Rey's cash and certificate account is a single-source, second-hand claim by a charged person seeking a cooperation agreement. It is specific enough to test quickly against the bank's own registers, and should be treated as untested until then.",
+   "text_es": "Opinión: el relato de Rey sobre efectivo y certificados es una versión de fuente única y de oídas, de un imputado que busca un acuerdo de colaboración. Es lo bastante concreto como para contrastarlo pronto con los registros del propio banco, y debe tratarse como no verificado hasta entonces.",
+   "basis_refs": [
+    "rec:flow:0071",
+    "rec:flow:0072",
+    "rec:flow:0073",
+    "rec:issue:0009",
+    "rec:event:0068",
+    "chrono:event:0223"
+   ]
+  }
+ ],
+ "next_tests_en": [
+  "Pull Ueno account statements for Vinanzas (all eight accounts), ITTI, Grupo Vázquez, Redisa, Redipro, Kasas and Model for 10 to 16 June 2026 with time stamps, and rebuild the sources-and-uses table to the cent.",
+  "Request SIPAP message logs for the same days to fix the order of credits and debits and identify the USD 542,178.13 and USD 1,000,000.78 not explained by the five loans.",
+  "Obtain the broker-dealer's trade tickets and settlement records for 11 and 15 June 2026: buyer, seller, security, nominal, price and whether bonds were primary issues or secondary sales.",
+  "Recompute the nine portfolio prices from the loan ledgers (principal, accrued interest, day count) and check the bank's accounting entry and provisions released on 15 June 2026.",
+  "Trace the guaraní side: Factopar's G. 157,500 million, the G. 120,190 million not located in Vinanzas and the G. 98,202 million paid by Redisa.",
+  "For each of the 40 record operations, match disbursement to first outward transfer by date, amount and home-banking user ID; tabulate lag in hours.",
+  "Extract the home-banking access logs (user, IP, device) for the 12 shared operators across the six borrowers and the five June borrowers.",
+  "Get cancellation entries for Franede 612561001554, Hendy 612561002345 and Mowi 612561002893 and the bank's exchange rates for 27 Mar and 24 to 28 Apr 2026 to test the roll-over hypothesis.",
+  "Identify the 0.5% item on the loan settlement sheets.",
+  "List every 72-hour cheque deposited to Vinanzas, Redisa, Redipro and ITTI accounts from December 2025 to July 2026 with drawee bank and clearing result, and test for drawings against uncollected funds.",
+  "From the certificate-of-deposit register, list certificates issued to Grupo Vázquez companies in 2025, their funding entries, endorsements and any 2026 capital application; compare with the schedules the defence filed.",
+  "Contact the three firms named on the consecutive receipts and examine the receipt book, treasury cash-count records and vault logs for the date Rey gives.",
+  "Collect board and credit-committee minutes for each approval date, and share-transfer contracts with proof of payment for the six borrowers and Galadriel.",
+  "Obtain company-registry extracts (owners, officers, registered office) for Satec, HD Invest, Factopar, Sagas, Infocenter and Match, which the data do not cover."
+ ],
+ "next_tests_es": [
+  "Obtener los extractos en Ueno de Vinanzas (las ocho cuentas), ITTI, Grupo Vázquez, Redisa, Redipro, Kasas y Model del 10 al 16 de junio de 2026 con hora, y reconstruir el cuadro de orígenes y aplicaciones al centavo.",
+  "Pedir los registros de mensajes SIPAP de esos días para fijar el orden de créditos y débitos e identificar los USD 542.178,13 y USD 1.000.000,78 no explicados por los cinco préstamos.",
+  "Conseguir las boletas de operación y liquidaciones de la casa de bolsa del 11 y 15 de junio de 2026: comprador, vendedor, título, valor nominal, precio y si los bonos eran emisión primaria o venta secundaria.",
+  "Recalcular los nueve precios de la cartera con los mayores de préstamos (capital, intereses devengados, base de días) y revisar el asiento contable del banco y las previsiones liberadas el 15 de junio de 2026.",
+  "Trazar el lado en guaraníes: los G. 157.500 millones de Factopar, los G. 120.190 millones no ubicados en Vinanzas y los G. 98.202 millones pagados por Redisa.",
+  "Para cada una de las 40 operaciones del acta, emparejar el desembolso con la primera transferencia saliente por fecha, monto y usuario de banca electrónica; tabular la demora en horas.",
+  "Extraer los registros de acceso a banca electrónica (usuario, IP, dispositivo) de los 12 operadores compartidos en las seis prestatarias y en las cinco prestatarias de junio.",
+  "Obtener los asientos de cancelación de Franede 612561001554, Hendy 612561002345 y Mowi 612561002893 y los tipos de cambio del banco del 27 de marzo y del 24 al 28 de abril de 2026 para contrastar la hipótesis de renovación.",
+  "Identificar el concepto de 0,5% en las liquidaciones de los préstamos.",
+  "Listar todos los cheques a 72 horas depositados en cuentas de Vinanzas, Redisa, Redipro e ITTI de diciembre de 2025 a julio de 2026 con banco girado y resultado de compensación, y verificar si se dispuso de fondos no acreditados.",
+  "Del registro de certificados de depósito, listar los emitidos a empresas de Grupo Vázquez en 2025, sus asientos de fondeo, endosos y cualquier aplicación a capital en 2026; comparar con las planillas presentadas por la defensa.",
+  "Contactar a las tres firmas que figuran en los recibos consecutivos y revisar el talonario, las actas de arqueo de Tesorería y los registros de bóveda de la fecha que indica Rey.",
+  "Reunir las actas de directorio y de comité de créditos de cada fecha de aprobación, y los contratos de traspaso de acciones con constancia de pago de las seis prestatarias y de Galadriel.",
+  "Obtener informes del registro de sociedades (dueños, directivos, domicilio) de Satec, HD Invest, Factopar, Sagas, Infocenter y Match, que los datos no cubren."
+ ]
+}

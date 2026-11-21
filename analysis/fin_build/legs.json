@@ -1,0 +1,789 @@
+[
+ {
+  "rep": "rec:flow:0041",
+  "ids": [
+   "rec:flow:0041"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:satec",
+  "amount": 20000000,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "rec:flow:0042",
+  "ids": [
+   "rec:flow:0042"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:hd-invest",
+  "amount": 35000000,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "rec:flow:0043",
+  "ids": [
+   "rec:flow:0043"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:technoma",
+  "amount": 10000000,
+  "currency": "USD",
+  "date": "2026-06-11"
+ },
+ {
+  "rep": "rec:flow:0044",
+  "ids": [
+   "rec:flow:0044"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:la-tropa-fletes",
+  "amount": 10000000,
+  "currency": "USD",
+  "date": "2026-06-11"
+ },
+ {
+  "rep": "rec:flow:0045",
+  "ids": [
+   "rec:flow:0045"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:factopar",
+  "amount": 6841000,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "rec:flow:0046",
+  "ids": [
+   "rec:flow:0046",
+   "press:flow:0004",
+   "press:flow:0042",
+   "press:flow:0059",
+   "press:flow:0115"
+  ],
+  "frm": "org:satec",
+  "to": "org:vinanzas",
+  "amount": 20000000,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "rec:flow:0047",
+  "ids": [
+   "rec:flow:0047",
+   "press:flow:0002",
+   "press:flow:0043",
+   "press:flow:0060"
+  ],
+  "frm": "org:hd-invest",
+  "to": "org:vinanzas",
+  "amount": 35000000,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0049",
+  "ids": [
+   "rec:flow:0048",
+   "press:flow:0049"
+  ],
+  "frm": "org:technoma",
+  "to": "org:itti",
+  "amount": 4230383.21,
+  "currency": "USD",
+  "date": "2026-06-11"
+ },
+ {
+  "rep": "press:flow:0050",
+  "ids": [
+   "rec:flow:0049",
+   "press:flow:0050"
+  ],
+  "frm": "org:technoma",
+  "to": "org:grupo-vazquez",
+  "amount": 5769861,
+  "currency": "USD",
+  "date": "2026-06-11"
+ },
+ {
+  "rep": "rec:flow:0050",
+  "ids": [
+   "rec:flow:0050"
+  ],
+  "frm": "org:la-tropa-fletes",
+  "to": "org:grupo-vazquez",
+  "amount": 4215767.91,
+  "currency": "USD",
+  "date": "2026-06"
+ },
+ {
+  "rep": "press:flow:0009",
+  "ids": [
+   "rec:flow:0053",
+   "press:flow:0009"
+  ],
+  "frm": "org:la-tropa-fletes",
+  "to": "org:model",
+  "amount": 2117596.26,
+  "currency": "USD",
+  "date": "2026-06"
+ },
+ {
+  "rep": "press:flow:0051",
+  "ids": [
+   "rec:flow:0054",
+   "press:flow:0051"
+  ],
+  "frm": "org:grupo-vazquez",
+  "to": "org:itti",
+  "amount": 5769861,
+  "currency": "USD",
+  "date": "2026-06-11"
+ },
+ {
+  "rep": "press:flow:0052",
+  "ids": [
+   "rec:flow:0055",
+   "press:flow:0037",
+   "press:flow:0052"
+  ],
+  "frm": "org:itti",
+  "to": "org:grupo-m",
+  "amount": 6321574,
+  "currency": "USD",
+  "date": "2026-06"
+ },
+ {
+  "rep": "press:flow:0053",
+  "ids": [
+   "rec:flow:0056",
+   "press:flow:0045",
+   "press:flow:0053"
+  ],
+  "frm": "org:itti",
+  "to": "org:vinanzas",
+  "amount": 4678670,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0062",
+  "ids": [
+   "rec:flow:0057",
+   "press:flow:0046",
+   "press:flow:0062"
+  ],
+  "frm": "org:grupo-vazquez",
+  "to": "org:vinanzas",
+  "amount": 4215707,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0061",
+  "ids": [
+   "rec:flow:0058",
+   "press:flow:0044",
+   "press:flow:0061"
+  ],
+  "frm": "org:kasas-propiedades",
+  "to": "org:vinanzas",
+  "amount": 10049628,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0063",
+  "ids": [
+   "rec:flow:0059",
+   "press:flow:0047",
+   "press:flow:0063"
+  ],
+  "frm": "org:model",
+  "to": "org:vinanzas",
+  "amount": 2117596,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "rec:flow:0061",
+  "ids": [
+   "rec:flow:0061",
+   "press:flow:0039",
+   "press:flow:0064",
+   "press:flow:0131"
+  ],
+  "frm": "org:vinanzas",
+  "to": "org:ueno-bank",
+  "amount": 74418418.12,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "rec:flow:0071",
+  "ids": [
+   "rec:flow:0071"
+  ],
+  "frm": "person:miguel-vazquez",
+  "to": "org:ueno-bank",
+  "amount": 17000000,
+  "currency": "USD",
+  "date": "2025-05"
+ },
+ {
+  "rep": "rec:flow:0072",
+  "ids": [
+   "rec:flow:0072"
+  ],
+  "frm": "person:miguel-vazquez",
+  "to": "org:ueno-bank",
+  "amount": 17000000000,
+  "currency": "PYG",
+  "date": "2025-05"
+ },
+ {
+  "rep": "press:flow:0001",
+  "ids": [
+   "press:flow:0001",
+   "press:flow:0048"
+  ],
+  "frm": "org:sagas",
+  "to": "org:vinanzas",
+  "amount": 86100000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0003",
+  "ids": [
+   "press:flow:0003"
+  ],
+  "frm": "org:hd-invest",
+  "to": "org:vinanzas",
+  "amount": 36900000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0008",
+  "ids": [
+   "press:flow:0008"
+  ],
+  "frm": "org:factopar",
+  "to": "org:kasas-propiedades",
+  "amount": 10049628.97,
+  "currency": "USD",
+  "date": "2026-06"
+ },
+ {
+  "rep": "press:flow:0018",
+  "ids": [
+   "press:flow:0018"
+  ],
+  "frm": "org:franede",
+  "to": "org:vinanzas",
+  "amount": 65000000000,
+  "currency": "PYG",
+  "date": "2025-09-30"
+ },
+ {
+  "rep": "press:flow:0022",
+  "ids": [
+   "press:flow:0022"
+  ],
+  "frm": "org:gsr",
+  "to": "org:vinanzas",
+  "amount": 7000000,
+  "currency": "USD",
+  "date": "2025"
+ },
+ {
+  "rep": "press:flow:0023",
+  "ids": [
+   "press:flow:0023"
+  ],
+  "frm": "org:gsr",
+  "to": "org:vinanzas",
+  "amount": 8500000,
+  "currency": "USD",
+  "date": "2025"
+ },
+ {
+  "rep": "press:flow:0024",
+  "ids": [
+   "press:flow:0024"
+  ],
+  "frm": "org:itti",
+  "to": "org:mowi",
+  "amount": 105000000000,
+  "currency": "PYG",
+  "date": "2026-01-30"
+ },
+ {
+  "rep": "press:flow:0025",
+  "ids": [
+   "press:flow:0025"
+  ],
+  "frm": "org:vinanzas",
+  "to": "org:tuiu",
+  "amount": 57500000000,
+  "currency": "PYG",
+  "date": "2026-01-30"
+ },
+ {
+  "rep": "press:flow:0030",
+  "ids": [
+   "press:flow:0030"
+  ],
+  "frm": "org:itti",
+  "to": "org:grupo-m",
+  "amount": 4320000,
+  "currency": "USD",
+  "date": "2026-04"
+ },
+ {
+  "rep": "press:flow:0031",
+  "ids": [
+   "press:flow:0031"
+  ],
+  "frm": "org:grupo-berilo",
+  "to": "org:vinanzas",
+  "amount": 26300000,
+  "currency": "USD",
+  "date": "2026-06-01"
+ },
+ {
+  "rep": "press:flow:0040",
+  "ids": [
+   "press:flow:0040"
+  ],
+  "frm": "org:vinanzas",
+  "to": "org:redisa",
+  "amount": 110940000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0041",
+  "ids": [
+   "press:flow:0041"
+  ],
+  "frm": "org:vinanzas",
+  "to": "org:redipro",
+  "amount": 18770000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0054",
+  "ids": [
+   "press:flow:0054"
+  ],
+  "frm": "org:itti",
+  "to": "org:vinanzas",
+  "amount": 31200000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0055",
+  "ids": [
+   "press:flow:0055"
+  ],
+  "frm": "org:redisa",
+  "to": "org:grupo-hendy",
+  "amount": 110940000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0056",
+  "ids": [
+   "press:flow:0056"
+  ],
+  "frm": "org:redipro",
+  "to": "org:grupo-hendy",
+  "amount": 7304000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0057",
+  "ids": [
+   "press:flow:0057"
+  ],
+  "frm": "org:redisa",
+  "to": "org:mowi",
+  "amount": 98202000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0058",
+  "ids": [
+   "press:flow:0058"
+  ],
+  "frm": "org:redipro",
+  "to": "org:mowi",
+  "amount": 11466000000,
+  "currency": "PYG",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0065",
+  "ids": [
+   "press:flow:0065"
+  ],
+  "frm": "org:la-tropa-sae",
+  "to": "org:grupo-vazquez",
+  "amount": 5936654.88,
+  "currency": "USD",
+  "date": "2026-04-23"
+ },
+ {
+  "rep": "press:flow:0068",
+  "ids": [
+   "press:flow:0068"
+  ],
+  "frm": "org:la-tropa-fletes",
+  "to": "org:ueno-casa-de-bolsa",
+  "amount": 10000000,
+  "currency": "USD",
+  "date": "2026-06-15"
+ },
+ {
+  "rep": "press:flow:0073",
+  "ids": [
+   "press:flow:0073",
+   "press:flow:0130"
+  ],
+  "frm": "org:otp-bank",
+  "to": "org:u-holdings",
+  "amount": 30000000,
+  "currency": "USD",
+  "date": "2025-12"
+ },
+ {
+  "rep": "press:flow:0074",
+  "ids": [
+   "press:flow:0074"
+  ],
+  "frm": "org:franede",
+  "to": "org:vinanzas",
+  "amount": 10593000,
+  "currency": "USD",
+  "date": "2026-03-27"
+ },
+ {
+  "rep": "press:flow:0075",
+  "ids": [
+   "press:flow:0075"
+  ],
+  "frm": "org:vinanzas",
+  "to": "org:itti",
+  "amount": 10593000,
+  "currency": "USD",
+  "date": "2026-03-27"
+ },
+ {
+  "rep": "press:flow:0079",
+  "ids": [
+   "press:flow:0079"
+  ],
+  "frm": "org:grupo-vazquez",
+  "to": "org:criscatt",
+  "amount": 500000,
+  "currency": "USD",
+  "date": "2025-01-31"
+ },
+ {
+  "rep": "press:flow:0080",
+  "ids": [
+   "press:flow:0080"
+  ],
+  "frm": "org:grupo-vazquez",
+  "to": "org:criscatt",
+  "amount": 234000,
+  "currency": "USD",
+  "date": "2026-02-28"
+ },
+ {
+  "rep": "press:flow:0081",
+  "ids": [
+   "press:flow:0081"
+  ],
+  "frm": "org:grupo-vazquez",
+  "to": "org:bau-sa",
+  "amount": 1687000000,
+  "currency": "PYG",
+  "date": "2025"
+ },
+ {
+  "rep": "press:flow:0090",
+  "ids": [
+   "press:flow:0090",
+   "press:flow:0134"
+  ],
+  "frm": "org:nubicom",
+  "to": "org:nubicom-srl",
+  "amount": 4600000,
+  "currency": "USD",
+  "date": "2026-06"
+ },
+ {
+  "rep": "press:flow:0091",
+  "ids": [
+   "press:flow:0091"
+  ],
+  "frm": "org:nubicom",
+  "to": "org:itti",
+  "amount": 415000000000,
+  "currency": "PYG",
+  "date": "2026-07-01"
+ },
+ {
+  "rep": "press:flow:0092",
+  "ids": [
+   "press:flow:0092"
+  ],
+  "frm": "org:itti",
+  "to": "org:redisa",
+  "amount": 329500000000,
+  "currency": "PYG",
+  "date": "2026-07"
+ },
+ {
+  "rep": "press:flow:0093",
+  "ids": [
+   "press:flow:0093"
+  ],
+  "frm": "org:itti",
+  "to": "org:nubicom",
+  "amount": 285600000000,
+  "currency": "PYG",
+  "date": "2026-07-31"
+ },
+ {
+  "rep": "press:flow:0094",
+  "ids": [
+   "press:flow:0094"
+  ],
+  "frm": "org:infocenter",
+  "to": "org:itti",
+  "amount": 18000000,
+  "currency": "USD",
+  "date": "2026-07-31"
+ },
+ {
+  "rep": "press:flow:0095",
+  "ids": [
+   "press:flow:0095"
+  ],
+  "frm": "org:galadriel",
+  "to": "org:itti",
+  "amount": 15000000,
+  "currency": "USD",
+  "date": "2026-07-31"
+ },
+ {
+  "rep": "press:flow:0096",
+  "ids": [
+   "press:flow:0096"
+  ],
+  "frm": "org:nubicom-srl",
+  "to": "org:nubicom",
+  "amount": 14812000000,
+  "currency": "PYG",
+  "date": null
+ },
+ {
+  "rep": "press:flow:0097",
+  "ids": [
+   "press:flow:0097"
+  ],
+  "frm": "org:grupo-berilo",
+  "to": "org:vinanzas",
+  "amount": 30000000,
+  "currency": "USD",
+  "date": "2025-12-23"
+ },
+ {
+  "rep": "press:flow:0098",
+  "ids": [
+   "press:flow:0098"
+  ],
+  "frm": "org:vinanzas",
+  "to": "org:redisa",
+  "amount": 30000000,
+  "currency": "USD",
+  "date": "2025-12-30"
+ },
+ {
+  "rep": "press:flow:0102",
+  "ids": [
+   "press:flow:0102"
+  ],
+  "frm": "org:office-design",
+  "to": "org:itti",
+  "amount": 96767000000,
+  "currency": "PYG",
+  "date": "2026-05-26"
+ },
+ {
+  "rep": "press:flow:0103",
+  "ids": [
+   "press:flow:0103"
+  ],
+  "frm": "org:itti",
+  "to": "org:match-sa",
+  "amount": 74071000000,
+  "currency": "PYG",
+  "date": "2026-05"
+ },
+ {
+  "rep": "press:flow:0104",
+  "ids": [
+   "press:flow:0104",
+   "press:flow:0124"
+  ],
+  "frm": "org:grupo-hendy",
+  "to": "org:itti",
+  "amount": 5527500,
+  "currency": "USD",
+  "date": "2025-12-30"
+ },
+ {
+  "rep": "press:flow:0121",
+  "ids": [
+   "press:flow:0121"
+  ],
+  "frm": "org:mowi",
+  "to": "org:redisa",
+  "amount": 5400000,
+  "currency": "USD",
+  "date": "2025-10-30"
+ },
+ {
+  "rep": "press:flow:0122",
+  "ids": [
+   "press:flow:0122"
+  ],
+  "frm": "org:grupo-hendy",
+  "to": "org:itti",
+  "amount": 5100000,
+  "currency": "USD",
+  "date": "2025-10-30"
+ },
+ {
+  "rep": "press:flow:0123",
+  "ids": [
+   "press:flow:0123"
+  ],
+  "frm": "org:mowi",
+  "to": "org:redipro",
+  "amount": 33500000000,
+  "currency": "PYG",
+  "date": "2025-12-30"
+ },
+ {
+  "rep": "press:flow:0125",
+  "ids": [
+   "press:flow:0125"
+  ],
+  "frm": "org:grupo-m",
+  "to": "org:itti",
+  "amount": 5300000,
+  "currency": "USD",
+  "date": "2025-12-30"
+ },
+ {
+  "rep": "press:flow:0135",
+  "ids": [
+   "press:flow:0135"
+  ],
+  "frm": "org:nubicom",
+  "to": "org:nokia",
+  "amount": 1200000,
+  "currency": "USD",
+  "date": "2026-06"
+ },
+ {
+  "rep": "press:flow:0140",
+  "ids": [
+   "press:flow:0140"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 881000000,
+  "currency": "PYG",
+  "date": "2026-10-02"
+ },
+ {
+  "rep": "press:flow:0141",
+  "ids": [
+   "press:flow:0141"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 500000000,
+  "currency": "PYG",
+  "date": "2026-10-13"
+ },
+ {
+  "rep": "press:flow:0142",
+  "ids": [
+   "press:flow:0142"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 90000000,
+  "currency": "PYG",
+  "date": "2026-10-19"
+ },
+ {
+  "rep": "press:flow:0143",
+  "ids": [
+   "press:flow:0143"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 140000000,
+  "currency": "PYG",
+  "date": "2026-10-19"
+ },
+ {
+  "rep": "press:flow:0144",
+  "ids": [
+   "press:flow:0144"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 480000000,
+  "currency": "PYG",
+  "date": "2026-10-22"
+ },
+ {
+  "rep": "press:flow:0145",
+  "ids": [
+   "press:flow:0145"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 1500000000,
+  "currency": "PYG",
+  "date": "2026-10-22"
+ },
+ {
+  "rep": "press:flow:0146",
+  "ids": [
+   "press:flow:0146"
+  ],
+  "frm": "org:ueno-bank",
+  "to": "org:grupo-vazquez",
+  "amount": 1176000000,
+  "currency": "PYG",
+  "date": "2026-01"
+ }
+]

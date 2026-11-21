@@ -1,0 +1,1163 @@
+{
+ "analyst": "recovery_tracing",
+ "cutoff": "2026-11-20",
+ "fx_note_en": "Guaraní amounts are converted at Gs. 6,500 per USD, the rate implied by the prosecution record (p. 7: Gs. 253,000,000,000 against USD 38,923,077; src:acta-p07). Press figures printed in USD use rates between about Gs. 5,570 and Gs. 6,360, so USD totals are indicative to roughly ±10%.",
+ "fx_note_es": "Los montos en guaraníes se convierten a Gs. 6.500 por dólar, el tipo implícito en el acta fiscal (pág. 7: Gs. 253.000.000.000 frente a USD 38.923.077; src:acta-p07). Las cifras de prensa en dólares usan tipos de entre unos Gs. 5.570 y Gs. 6.360, por lo que los totales en dólares son indicativos, con un margen cercano al ±10 %.",
+ "disclaimer_en": "Analysis by an AI insolvency, asset-recovery and bank-resolution analyst, not a licensed professional. Figures are labelled estimates and scenarios built on public reporting and on the prosecution record of Case 89/2026; they are not predictions, valuations or legal advice. Everything about wrongdoing is alleged and every person and company named is presumed innocent. Statements by Julio Rey are his own claims. The exclusion balance had not been published at the cut-off of 20 November 2026.",
+ "disclaimer_es": "Análisis elaborado por una IA en el papel de analista de insolvencia, recuperación de activos y resolución bancaria; no es un profesional matriculado. Las cifras son estimaciones y escenarios rotulados como tales, construidos con información pública y con el acta fiscal de la Causa 89/2026; no son predicciones, tasaciones ni asesoramiento legal. Todo lo referido a irregularidades es presunto y toda persona o empresa nombrada goza de la presunción de inocencia. Lo dicho por Julio Rey son afirmaciones suyas. Al cierre del 20 de noviembre de 2026 el balance de exclusión no se había publicado.",
+ "claims_stack": [
+  {
+   "rank": 1,
+   "who_en": "Guaranteed deposits of private parties (up to 75 minimum wages, Gs. 228.3 million per depositor), now largely a subrogated claim of the Deposit Guarantee Fund",
+   "who_es": "Depósitos garantizados del sector privado (hasta 75 salarios mínimos, Gs. 228,3 millones por depositante), hoy en gran parte un crédito subrogado del Fondo de Garantía de Depósitos",
+   "amount_low": 740000000,
+   "amount_high": 928000000,
+   "currency": "USD",
+   "basis_en": "First order, first sub-order (Ley 2334/03 art. 20). Press range for what the guarantee is expected to absorb: USD 740 M (AFP) to USD 928 M (Global Finance, preliminary BCP estimate). Gs. 3.9 trillion had been advanced to 1,812,348 people by 11 Nov under Law 7745 (up to 40 minimum wages). Where the fund pays directly it is subrogated and ranks first in the liquidation (art. 18 c). Deposits of related parties are excluded from the guarantee (art. 1 f).",
+   "basis_es": "Primer orden, primer suborden (Ley 2334/03, art. 20). Rango de prensa sobre lo que absorbería la garantía: USD 740 M (AFP) a USD 928 M (Global Finance, estimación preliminar del BCP). Al 11/11 se habían adelantado Gs. 3,9 billones a 1.812.348 personas conforme a la Ley 7745 (hasta 40 salarios mínimos). Cuando el fondo paga en forma directa se subroga y cobra primero en la liquidación (art. 18 c). Los depósitos de vinculados quedan fuera de la garantía (art. 1 f).",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0181",
+    "chrono:event:0179",
+    "chrono:event:0073",
+    "chrono:event:0100"
+   ],
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "rank": 1,
+   "who_en": "Public social-security deposits (IPS, Caja Fiscal and other pension funds)",
+   "who_es": "Depósitos públicos de la seguridad social (IPS, Caja Fiscal y otras cajas)",
+   "amount_low": 388500000,
+   "amount_high": 557000000,
+   "currency": "USD",
+   "basis_en": "Same sub-order as guaranteed private deposits (art. 20). IPS: USD 348.5 M at 30 Sep 2026 per spreadsheets, USD 516-517 M per IPS in November (scope differs; includes Gs. 250 bn of bonds, which are not deposits). Caja Fiscal: Gs. 250 bn, about USD 40 M as printed. Whether the full balance or only a capped amount ranks here is my reading of the article; the BCP president said identified healthy assets exceed the debt to the pension system.",
+   "basis_es": "Mismo suborden que los depósitos privados garantizados (art. 20). IPS: USD 348,5 M al 30/9/2026 según planillas, USD 516-517 M según el IPS en noviembre (distinto alcance; incluye Gs. 250.000 millones en bonos, que no son depósitos). Caja Fiscal: Gs. 250.000 millones, unos USD 40 M según la prensa. Que aquí entre todo el saldo y no un monto topeado es mi lectura del artículo; el presidente del BCP dijo que los activos sanos identificados superan la deuda con el sistema previsional.",
+   "refs": [
+    "press:fact:0106",
+    "chrono:event:0198",
+    "chrono:event:0163",
+    "chrono:event:0091",
+    "chrono:event:0119",
+    "press:fact:0033",
+    "chrono:event:0187"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "rank": 2,
+   "who_en": "Cash mandates, tax collections and withholdings held by the bank",
+   "who_es": "Mandatos en efectivo, recaudaciones y retenciones tributarias en poder del banco",
+   "amount_low": null,
+   "amount_high": null,
+   "currency": "USD",
+   "basis_en": "First order, second sub-order. No amount published. The bank ran collection networks (Wepa, Upay) and paid about 32,000 IPS pensions, so in-transit balances may be material.",
+   "basis_es": "Primer orden, segundo suborden. Sin monto publicado. El banco operaba redes de cobranza (Wepa, Upay) y pagaba a unos 32.000 jubilados del IPS, por lo que los saldos en tránsito pueden ser relevantes.",
+   "refs": [
+    "chrono:event:0092",
+    "src:acta-p01"
+   ],
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "rank": 3,
+   "who_en": "Guaranteed slice of other public entities' deposits",
+   "who_es": "Tramo garantizado de los depósitos de otras entidades públicas",
+   "amount_low": null,
+   "amount_high": null,
+   "currency": "USD",
+   "basis_en": "First order, third sub-order: at most Gs. 228.3 million per entity, so immaterial against public deposits of Gs. 3.6 trillion plus USD 233.4 M (30 Sep 2026).",
+   "basis_es": "Primer orden, tercer suborden: como máximo Gs. 228,3 millones por entidad, monto irrelevante frente a depósitos públicos de Gs. 3,6 billones más USD 233,4 M (30/9/2026).",
+   "refs": [
+    "chrono:event:0052",
+    "chrono:event:0073"
+   ],
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "rank": 4,
+   "who_en": "Banco Central del Paraguay: credit claims (second order) and non-credit claims, taxes (third order)",
+   "who_es": "Banco Central del Paraguay: créditos (segundo orden) y obligaciones no crediticias, tributos (tercer orden)",
+   "amount_low": 0,
+   "amount_high": 70000000,
+   "currency": "USD",
+   "basis_en": "Only known item: about USD 70 M of reserve requirement the bank reportedly said it could not replenish, the same figure as the first leg of the civil embargo. Second and third orders enter the exclusion balance only if securitisation is used.",
+   "basis_es": "Único dato conocido: unos USD 70 M de encaje legal que el banco habría dicho no poder reponer, la misma cifra del primer tramo del embargo civil. El segundo y el tercer orden solo entran al balance de exclusión si se usa la titulización.",
+   "refs": [
+    "chrono:event:0067",
+    "chrono:event:0084"
+   ],
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "rank": 5,
+   "who_en": "Employees not transferred to an acquirer (first claim on the residual balance)",
+   "who_es": "Trabajadores no transferidos a un adquirente (primer crédito sobre el balance residual)",
+   "amount_low": null,
+   "amount_high": null,
+   "currency": "USD",
+   "basis_en": "Art. 26: paid first out of the residual balance, excluding directors and senior managers (art. 17). About 490 to 500 direct employees; amount not published. Workers of group companies (about 6,000 to 7,000) are creditors of those companies, not of the bank.",
+   "basis_es": "Art. 26: cobran primero del balance residual, excluidos directores y alta gerencia (art. 17). Unos 490 a 500 empleados directos; monto no publicado. Los trabajadores de las empresas del grupo (unos 6.000 a 7.000) son acreedores de esas empresas, no del banco.",
+   "refs": [
+    "press:fact:0297",
+    "press:fact:0292"
+   ],
+   "url": "https://www.latintimes.com/ueno-bank-collapse-workers-paraguay-crisis-601301"
+  },
+  {
+   "rank": 6,
+   "who_en": "Private deposits above the guarantee (companies, funds, brokerages, large savers, related parties)",
+   "who_es": "Depósitos privados por encima de la garantía (empresas, fondos, casas de bolsa, grandes ahorristas, vinculados)",
+   "amount_low": 1000000000,
+   "amount_high": 1250000000,
+   "currency": "USD",
+   "basis_en": "Computed: private deposits (71% of about USD 2.8 bn) less the guaranteed amount. The law does not state their rank expressly; art. 20 lets the BCP raise the transferred amount per depositor in equal steps if assets allow, and what is not transferred becomes an ordinary claim on the residual balance. About 69% of deposit value was outside the guarantee in July 2026 (Bloomberg, as relayed).",
+   "basis_es": "Calculado: depósitos privados (71 % de unos USD 2.800 M) menos el monto garantizado. La ley no fija su rango de modo expreso; el art. 20 permite al BCP elevar por escalones iguales el monto transferido por depositante si los activos alcanzan, y lo no transferido pasa a ser un crédito común sobre el balance residual. En julio de 2026 cerca del 69 % del valor de los depósitos estaba fuera de la garantía (Bloomberg, según la prensa).",
+   "refs": [
+    "chrono:event:0165",
+    "chrono:event:0166",
+    "chrono:event:0138",
+    "press:fact:0295"
+   ],
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "rank": 6,
+   "who_en": "Deposits of other public entities above the guarantee (Itaipú, ANDE, Petropar, Conatel, municipalities)",
+   "who_es": "Depósitos de otras entidades públicas por encima de la garantía (Itaipú, ANDE, Petropar, Conatel, municipios)",
+   "amount_low": 330000000,
+   "amount_high": 500000000,
+   "currency": "USD",
+   "basis_en": "Computed: USD 888 M of public funds identified by the Ministry of Economy (USD 687 M without Itaipú and its pension fund) less the social-security row. Itaipú is reported at USD 182 M. Same rank as private uninsured deposits on my reading.",
+   "basis_es": "Calculado: USD 888 M de fondos públicos identificados por el Ministerio de Economía (USD 687 M sin Itaipú y su caja) menos la fila de seguridad social. Itaipú figura con USD 182 M. Mismo rango que los depósitos privados no garantizados, según mi lectura.",
+   "refs": [
+    "chrono:event:0052",
+    "press:fact:0093",
+    "chrono:event:0201"
+   ],
+   "url": "https://www.abc.com.py/economia/2026/11/18/ueno-bank-mef-identifica-us-888-millones-de-fondos-publicos-cuanto-podra-recuperarlos/"
+  },
+  {
+   "rank": 7,
+   "who_en": "Holders of the USD 350 million 6.70% senior notes due 2031 (New York law)",
+   "who_es": "Tenedores de las notas sénior de USD 350 millones al 6,70 % con vencimiento en 2031 (ley de Nueva York)",
+   "amount_low": 350000000,
+   "amount_high": 350000000,
+   "currency": "USD",
+   "basis_en": "Unsecured; outside the exclusion balance; claim only on the residual balance. Quoted at about 5 cents on 14 Nov 2026.",
+   "basis_es": "Sin garantía; fuera del balance de exclusión; solo cobran del balance residual. Cotizaban a unos 5 centavos el 14/11/2026.",
+   "refs": [
+    "press:fact:0298",
+    "chrono:event:0200",
+    "chrono:event:0086"
+   ],
+   "url": ""
+  },
+  {
+   "rank": 7,
+   "who_en": "Holders of local financial and subordinated bonds (including ex-Visión issues)",
+   "who_es": "Tenedores de bonos financieros y subordinados locales (incluye emisiones de la ex-Visión)",
+   "amount_low": 103000000,
+   "amount_high": 103000000,
+   "currency": "USD",
+   "basis_en": "Gs. 668.5 bn at December 2025, converted at Gs. 6,500. The subordinated part ranks after senior creditors; the split is not published. IPS reportedly holds Gs. 250 bn of bonds (issuer split not given).",
+   "basis_es": "Gs. 668.512 millones a diciembre de 2025, convertidos a Gs. 6.500. La parte subordinada cobra después de los acreedores sénior; no se publicó el desglose. El IPS tendría Gs. 250.000 millones en bonos (sin desglose por emisor).",
+   "refs": [
+    "press:fact:0260",
+    "press:fact:0033",
+    "chrono:event:0086"
+   ],
+   "url": ""
+  },
+  {
+   "rank": 7,
+   "who_en": "Development and impact lenders (IDB Invest, Triodos, GAWA) and other financial liabilities",
+   "who_es": "Financiadores de desarrollo e impacto (BID Invest, Triodos, GAWA) y otros pasivos financieros",
+   "amount_low": 40000000,
+   "amount_high": 420000000,
+   "currency": "USD",
+   "basis_en": "Low: IDB Invest Gs. 150 bn (about USD 23 M at 6,500) plus USD 17.5 M from Triodos and GAWA; balances outstanding are not published. High adds the other liabilities of December 2025 (Gs. 2,478.6 bn, computed as total liabilities less deposits and bonds), whose composition and rank are unknown.",
+   "basis_es": "Mínimo: BID Invest Gs. 150.000 millones (unos USD 23 M a 6.500) más USD 17,5 M de Triodos y GAWA; no se publicaron los saldos vigentes. El máximo suma los demás pasivos de diciembre de 2025 (Gs. 2.478.600 millones, calculados como pasivo total menos depósitos y bonos), cuya composición y rango se desconocen.",
+   "refs": [
+    "chrono:event:0020",
+    "chrono:event:0048",
+    "press:fact:0252",
+    "press:fact:0250",
+    "press:fact:0260"
+   ],
+   "url": ""
+  },
+  {
+   "rank": 8,
+   "who_en": "Shareholders (U Paraguay 93.05%, held by U Holdings: Grupo Vázquez 86.73%, OTP Bank 9.99%)",
+   "who_es": "Accionistas (U Paraguay 93,05 %, de U Holdings: Grupo Vázquez 86,73 %, OTP Bank 9,99 %)",
+   "amount_low": 0,
+   "amount_high": 326000000,
+   "currency": "USD",
+   "basis_en": "Last. Book equity Gs. 2,117.7 bn at December 2025 (about USD 326 M at 6,500); rights suspended (art. 16). No recovery in any scenario. OTP has already written down USD 32 M of USD 47 M.",
+   "basis_es": "Últimos. Patrimonio contable de Gs. 2.117.665 millones a diciembre de 2025 (unos USD 326 M a 6.500); derechos suspendidos (art. 16). Sin recuperación en ningún escenario. OTP ya castigó USD 32 M de USD 47 M.",
+   "refs": [
+    "press:fact:0254",
+    "press:fact:0069",
+    "chrono:event:0177",
+    "chrono:event:0089"
+   ],
+   "url": ""
+  }
+ ],
+ "asset_classes": [
+  {
+   "id": "cash_liquid",
+   "title_en": "Cash, BCP reserves, securities, premises and unallocated assets",
+   "title_es": "Efectivo, encajes en el BCP, títulos, inmuebles de uso y activos no asignados",
+   "book_value": 690000000,
+   "book_value_pyg": 4486900000000,
+   "currency": "USD",
+   "recovery_low_pct": 40,
+   "recovery_central_pct": 62,
+   "recovery_high_pct": 85,
+   "reason_en": "Computed residual of the December 2025 balance sheet: total assets less net loans, less 'other investments' (trust plus REDISA/REDIPRO) net of their Gs. 206 bn remainder, less 'other assets'. Composition is not published. Liquidity deteriorated before the resolution (about USD 70 M of reserve requirement reportedly not replenished; the group broker failed repo settlements on 3 Nov), so cash on hand at 2 Nov was probably well below book; securities may include group paper. The BCP's USD 600 M of 'healthy assets' includes bonds and instruments and excludes buildings.",
+   "reason_es": "Residuo calculado del balance de diciembre de 2025: activo total menos préstamos netos, menos 'otras inversiones' (fideicomiso más REDISA/REDIPRO) salvo su remanente de Gs. 206.000 millones, menos 'otros activos'. No se publicó la composición. La liquidez se deterioró antes de la resolución (unos USD 70 M de encaje que no se habrían repuesto; la casa de bolsa del grupo incumplió reportos el 3/11), por lo que el efectivo al 2/11 probablemente era muy inferior al contable; los títulos pueden incluir papeles del grupo. Los USD 600 M de 'activos sanos' del BCP incluyen bonos e instrumentos y excluyen edificios.",
+   "refs": [
+    "press:fact:0246",
+    "press:fact:0248",
+    "press:fact:0264",
+    "press:fact:0266",
+    "chrono:event:0067",
+    "chrono:event:0113",
+    "chrono:event:0187"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional",
+   "kind": "computed"
+  },
+  {
+   "id": "unrelated_loans",
+   "title_en": "Loan book not questioned (retail, SME, corporate)",
+   "title_es": "Cartera de préstamos no cuestionada (consumo, pymes, corporativa)",
+   "book_value": 1302000000,
+   "book_value_pyg": 8462000000000,
+   "currency": "USD",
+   "recovery_low_pct": 55,
+   "recovery_central_pct": 72,
+   "recovery_high_pct": 85,
+   "reason_en": "Assumption: net loans of December 2025 (Gs. 11,111.8 bn) plus about Gs. 3,200 bn of 2026 growth (the 2031 notes plus deposit and equity growth, assumed to have gone into loans; Fitch put loans at 91.9% of deposits in mid-2026), less a questioned book of Gs. 5,850 bn. Transfers are made at book value net of provisions (art. 19) and acquirers pick the best names first; the past-due portfolio covered by the 2024 merger facility was not separated in the accounts, reported non-performing loans of 0.44% against 2.10% for the system are not credible as a guide, and penalty interest is waived until 30 Nov. The BCP's first-pass USD 600 M of healthy assets equals about 46% of this class and is my floor.",
+   "reason_es": "Supuesto: préstamos netos de diciembre de 2025 (Gs. 11.111.835 millones) más unos Gs. 3.200.000 millones de crecimiento en 2026 (las notas 2031 más el aumento de depósitos y patrimonio, que se suponen colocados en créditos; Fitch situó los préstamos en 91,9 % de los depósitos a mediados de 2026), menos una cartera cuestionada de Gs. 5.850.000 millones. Los traspasos se hacen a valor contable neto de previsiones (art. 19) y los adquirentes eligen primero a los mejores deudores; la cartera vencida amparada por la facilidad de la fusión de 2024 no estaba separada en la contabilidad, la morosidad declarada de 0,44 % frente a 2,10 % del sistema no sirve de guía y los intereses punitorios están exonerados hasta el 30/11. Los USD 600 M de activos sanos de la primera revisión del BCP equivalen a cerca del 46 % de esta clase y son mi piso.",
+   "refs": [
+    "press:fact:0248",
+    "press:fact:0262",
+    "chrono:event:0060",
+    "chrono:event:0026",
+    "chrono:event:0187",
+    "chrono:event:0188",
+    "rec:flow:0075"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional",
+   "kind": "assumption"
+  },
+  {
+   "id": "related_book",
+   "title_en": "Questioned book: loans to group-dependent borrowers",
+   "title_es": "Cartera cuestionada: créditos a prestatarias dependientes del grupo",
+   "book_value": 900000000,
+   "book_value_pyg": 5850000000000,
+   "currency": "USD",
+   "recovery_low_pct": 3,
+   "recovery_central_pct": 10,
+   "recovery_high_pct": 25,
+   "reason_en": "Book value is Rey's own figure of about USD 900 M (his claim) at Gs. 6,500; cross-checks: six record borrowers Gs. 1,480.9 bn, unofficial debtor list about Gs. 4,939 bn, supervisor 'more than USD 300 M' and a provisions deficit of Gs. 1,622 bn. All sole-signature. The borrowers have no income to speak of (Hendy: Gs. 73 M a month), so recovery comes only from ITTI, Grupo Vázquez and the payment companies, whose net assets outside the bank are small or negative and are also claimed by USD 341 M of their own creditors, by workers and by the State through forfeiture. Known hard assets: three ranches valued at USD 15.95 M. Baninter's liquidators had recovered 21.7% of central-bank outlays after 20 years.",
+   "reason_es": "El valor contable es la cifra del propio Rey, unos USD 900 M (afirmación suya), a Gs. 6.500; contrastes: seis prestatarias del acta Gs. 1.480.900 millones, lista oficiosa de deudores unos Gs. 4.939.000 millones, 'más de USD 300 M' según el supervisor y un déficit de previsiones de Gs. 1.622.000 millones. Todo a sola firma. Las prestatarias casi no tienen ingresos (Hendy: Gs. 73 millones al mes), de modo que solo puede cobrarse de ITTI, Grupo Vázquez y las procesadoras, cuyo patrimonio fuera del banco es escaso o negativo y sobre el que también reclaman sus propios acreedores por USD 341 M, los trabajadores y el Estado vía comiso. Activos firmes conocidos: tres estancias valuadas en USD 15,95 M. Los liquidadores de Baninter habían recuperado el 21,7 % de los desembolsos del banco central tras 20 años.",
+   "refs": [
+    "rec:flow:0075",
+    "src:acta-p22",
+    "rec:loan:0001",
+    "rec:loan:0035",
+    "press:fact:0321",
+    "chrono:event:0070",
+    "press:fact:0107",
+    "press:fact:0063",
+    "press:fact:0064",
+    "press:fact:0065",
+    "press:fact:0302"
+   ],
+   "url": "https://eldinero.com.do/254232/bc-y-el-clab-detallan-proceso-de-liquidacion-de-baninter/",
+   "kind": "assumption"
+  },
+  {
+   "id": "merger_trust",
+   "title_en": "Merger-expenses trust (deferred charges to 2035)",
+   "title_es": "Fideicomiso de gastos de fusión (cargos diferidos hasta 2035)",
+   "book_value": 324000000,
+   "book_value_pyg": 2105700000000,
+   "currency": "USD",
+   "recovery_low_pct": 0,
+   "recovery_central_pct": 0,
+   "recovery_high_pct": 2,
+   "reason_en": "Reported at Gs. 2,105.7 bn, 99.4% of book equity, administered by another bank. It records expenses already paid (technology, cashback, staff, per Rey's account), not a claim on anyone. Liquidation value is nil; the high case allows 2% for clawing back invoices from group suppliers that the BCP memo of June 2026 called non-permitted (about USD 20 M).",
+   "reason_es": "Declarado en Gs. 2.105.744 millones, 99,4 % del patrimonio contable, administrado por otro banco. Registra gastos ya pagados (tecnología, cashback, personal, según el relato de Rey), no un crédito contra alguien. Su valor de liquidación es nulo; el caso alto admite un 2 % por la restitución de facturas de proveedores del grupo que el memorando del BCP de junio de 2026 consideró no habilitadas (unos USD 20 M).",
+   "refs": [
+    "press:fact:0265",
+    "press:fact:0254",
+    "rec:flow:0074",
+    "press:event:0026",
+    "chrono:event:0017"
+   ],
+   "url": "",
+   "kind": "reported"
+  },
+  {
+   "id": "other_assets",
+   "title_en": "Other assets, including deferred losses of the absorbed bank and intangibles",
+   "title_es": "Otros activos, incluidas pérdidas diferidas del banco absorbido e intangibles",
+   "book_value": 387000000,
+   "book_value_pyg": 2514500000000,
+   "currency": "USD",
+   "recovery_low_pct": 5,
+   "recovery_central_pct": 15,
+   "recovery_high_pct": 30,
+   "reason_en": "Reported at Gs. 2,514.5 bn; the deferred-loss part is undisclosed and worth nothing. The rest would be sundry receivables, repossessed assets and software or real estate that, per Rey, related companies sold to the bank; value depends on an inventory that the intervention team said on 17 Nov was still unreconciled.",
+   "reason_es": "Declarados en Gs. 2.514.476 millones; la parte de pérdidas diferidas no se informó y no vale nada. El resto serían deudores varios, bienes adjudicados y software o inmuebles que, según Rey, empresas vinculadas vendieron al banco; su valor depende de un inventario que el equipo interventor dijo el 17/11 que seguía sin conciliar.",
+   "refs": [
+    "press:fact:0266",
+    "rec:flow:0074",
+    "rec:flow:0076"
+   ],
+   "url": "https://www.abc.com.py/economia/2026/11/18/crisis-ueno-bank-bcp-extiende-plazo-para-pagar-garantias-de-depositos-por-15-dias-mas/",
+   "kind": "reported"
+  },
+  {
+   "id": "redisa_redipro",
+   "title_en": "Placements in REDISA (Wepa) and REDIPRO (Upay), and the stake in REDISA",
+   "title_es": "Colocaciones en REDISA (Wepa) y REDIPRO (Upay), y la participación en REDISA",
+   "book_value": 135000000,
+   "book_value_pyg": 876600000000,
+   "currency": "USD",
+   "recovery_low_pct": 5,
+   "recovery_central_pct": 20,
+   "recovery_high_pct": 45,
+   "reason_en": "Gs. 236.2 bn in REDISA and Gs. 640.4 bn in REDIPRO at December 2025, which a BCP memo said should have been deducted from capital; the bank's stake in REDISA is reported between 49% and 77%. Both are real payment businesses (correspondent network, Visa and Mastercard acquiring) but lived on bank funding, have frozen accounts, are named as recipients and repayment conduits in the record, and a raid on a cash-handling firm found a preliminary shortfall of Gs. 3.09 bn in REDISA funds. No financial statements are public. Value exists only if they are sold quickly as going concerns.",
+   "reason_es": "Gs. 236.231 millones en REDISA y Gs. 640.409 millones en REDIPRO a diciembre de 2025, que según un memorando del BCP debieron deducirse del capital; la participación del banco en REDISA figura entre 49 % y 77 %. Son negocios de pagos reales (red de corresponsales, adquirencia Visa y Mastercard), pero vivían del fondeo del banco, tienen las cuentas bloqueadas, figuran en el acta como receptoras y vehículos de pago, y un allanamiento a una transportadora de caudales halló un faltante preliminar de Gs. 3.090 millones en fondos de REDISA. No hay estados contables públicos. Solo valen si se venden pronto como empresas en marcha.",
+   "refs": [
+    "press:fact:0123",
+    "press:fact:0125",
+    "press:fact:0126",
+    "press:event:0026",
+    "chrono:event:0135",
+    "chrono:event:0216",
+    "rec:flow:0008",
+    "rec:flow:0024"
+   ],
+   "url": "",
+   "kind": "reported"
+  },
+  {
+   "id": "group_businesses",
+   "title_en": "Saleable businesses owned by the group, not by the bank (Ueno Seguros, Ueno Casa de Bolsa, Ueno AFPISA, Bankitti core, Shopping Costanera)",
+   "title_es": "Negocios vendibles que son del grupo y no del banco (Ueno Seguros, Ueno Casa de Bolsa, Ueno AFPISA, core Bankitti, Shopping Costanera)",
+   "book_value": null,
+   "book_value_pyg": null,
+   "currency": "USD",
+   "recovery_low_pct": 0,
+   "recovery_central_pct": 0,
+   "recovery_high_pct": 0,
+   "reason_en": "Not bank assets: the bank reaches them only through its claims on Grupo Vázquez and ITTI, already counted in the questioned book, so nothing is added here. The broker is suspended and its client portfolios were moved; the fund manager is suspended for 180 days and its USD 46 M belongs to investors; the insurer says it operates normally. Terravaz (shopping centre appraised at Gs. 498 bn, quick-sale Gs. 398 bn, liabilities Gs. 205 bn) is the one unit with an independent appraisal.",
+   "reason_es": "No son activos del banco: este solo llega a ellos mediante sus créditos contra Grupo Vázquez e ITTI, ya contados en la cartera cuestionada, por lo que aquí no se suma nada. La casa de bolsa está suspendida y sus carteras de clientes fueron trasladadas; la administradora de fondos está suspendida por 180 días y sus USD 46 M son de los inversores; la aseguradora dice operar con normalidad. Terravaz (shopping tasado en Gs. 498.050 millones, venta rápida Gs. 398.440 millones, pasivo Gs. 205.340 millones) es la única unidad con tasación independiente.",
+   "refs": [
+    "chrono:event:0113",
+    "chrono:event:0176",
+    "chrono:event:0167",
+    "press:fact:0243",
+    "press:fact:0233",
+    "press:fact:0218"
+   ],
+   "url": "",
+   "kind": "assumption"
+  },
+  {
+   "id": "real_estate",
+   "title_en": "Bank premises and real estate in the bank's name",
+   "title_es": "Inmuebles de uso y bienes raíces a nombre del banco",
+   "book_value": null,
+   "book_value_pyg": null,
+   "currency": "USD",
+   "recovery_low_pct": 50,
+   "recovery_central_pct": 70,
+   "recovery_high_pct": 90,
+   "reason_en": "Value not published; 47 properties linked to the bank were identified by the registry and the BCP says buildings are not yet in its USD 600 M. Already inside the first class by construction, so the percentages (of appraised value) are not added to totals. Some properties were, per Rey, bought from related companies, so appraisals need checking against purchase prices.",
+   "reason_es": "Valor no publicado; el registro identificó 47 inmuebles vinculados al banco y el BCP dice que los edificios aún no están en sus USD 600 M. Por construcción ya está dentro de la primera clase, de modo que los porcentajes (sobre tasación) no se suman a los totales. Según Rey, algunos inmuebles se compraron a empresas vinculadas, por lo que hay que contrastar tasaciones con precios de compra.",
+   "refs": [
+    "chrono:event:0085",
+    "chrono:event:0187",
+    "rec:flow:0074"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional",
+   "kind": "assumption"
+  },
+  {
+   "id": "claims_directors",
+   "title_en": "Claims against directors, shareholders and the beneficial owner (civil embargo)",
+   "title_es": "Acciones contra directores, accionistas y el beneficiario final (embargo civil)",
+   "book_value": 316000000,
+   "book_value_pyg": 2055000000000,
+   "currency": "USD",
+   "recovery_low_pct": 0,
+   "recovery_central_pct": 1,
+   "recovery_high_pct": 5,
+   "reason_en": "The civil court attached USD 70 M plus Gs. 1.6 trillion against U Paraguay, U Holdings, Grupo Vázquez, the beneficial owner and six directors. The amount is the claim, not the assets found. The holding companies' main asset is the bank itself; personal assets identified so far are small against the claim (a real-estate surety of Gs. 2.9 bn was offered by one defendant). Director liability is joint and unlimited in principle, but collection depends on a civil judgment or a criminal conviction and on what the individuals own.",
+   "reason_es": "El juzgado civil trabó embargo por USD 70 M más Gs. 1,6 billones contra U Paraguay, U Holdings, Grupo Vázquez, el beneficiario final y seis directores. Ese monto es el reclamo, no los bienes hallados. El principal activo de las sociedades tenedoras es el propio banco; los bienes personales identificados hasta ahora son pequeños frente al reclamo (un imputado ofreció una caución inmobiliaria de Gs. 2.925 millones). La responsabilidad de los directores es en principio solidaria e ilimitada, pero el cobro depende de una sentencia civil o penal y de lo que tengan las personas.",
+   "refs": [
+    "chrono:event:0084",
+    "chrono:event:0085",
+    "chrono:event:0136",
+    "chrono:event:0110"
+   ],
+   "url": "",
+   "kind": "reported"
+  },
+  {
+   "id": "claims_third_parties",
+   "title_en": "Claims against insurers (D&O), auditors and other third parties",
+   "title_es": "Acciones contra aseguradoras (D&O), auditores y otros terceros",
+   "book_value": null,
+   "book_value_pyg": null,
+   "currency": "USD",
+   "recovery_low_pct": 0,
+   "recovery_central_pct": 0,
+   "recovery_high_pct": 0,
+   "reason_en": "No D&O policy has been reported. The external auditor's local firm signed a clean opinion on the 2025 accounts in February 2026, with a reference to special BCP instructions on the merger; any claim would be long, contested and limited by the local firm's resources. Not estimated and not added to totals.",
+   "reason_es": "No se informó de ninguna póliza D&O. La firma local del auditor externo emitió en febrero de 2026 un dictamen sin salvedades sobre los estados de 2025, con referencia a instrucciones especiales del BCP sobre la fusión; cualquier acción sería larga, controvertida y limitada por los recursos de la firma local. No se estima ni se suma a los totales.",
+   "refs": [
+    "press:fact:0265",
+    "chrono:event:0017"
+   ],
+   "url": "https://www.big4news.com/p/pwc-ueno-bank-collapse-audit-accounting",
+   "kind": "assumption"
+  },
+  {
+   "id": "seized_assets",
+   "title_en": "Assets seized or frozen in the criminal cases (ranches, vehicles, aircraft, yacht, accounts)",
+   "title_es": "Bienes incautados o inmovilizados en las causas penales (estancias, vehículos, aeronaves, yate, cuentas)",
+   "book_value": 17000000,
+   "book_value_pyg": 112800000000,
+   "currency": "USD",
+   "recovery_low_pct": 0,
+   "recovery_central_pct": 25,
+   "recovery_high_pct": 60,
+   "reason_en": "Reported values only: three ranches USD 15.95 M and nine vehicles about USD 1.4 M; three aircraft, a yacht, about 30 vehicles, 2,331 registered properties and the frozen accounts of 17 companies have no published value. Seized assets are administered by Senabico under Law 5876/17 and pass to the State only on forfeiture; whether proceeds reach the bank's estate, the guarantee fund or the Treasury is undecided, and Grupo Vázquez S.A.E. has asked the court to lift the measures.",
+   "reason_es": "Solo valores publicados: tres estancias por USD 15,95 M y nueve vehículos por unos USD 1,4 M; tres aeronaves, un yate, unos 30 vehículos, 2.331 inmuebles registrados y las cuentas bloqueadas de 17 empresas no tienen valor publicado. Los bienes incautados los administra la Senabico conforme a la Ley 5876/17 y solo pasan al Estado con el comiso; no está definido si el producido irá a la masa del banco, al fondo de garantía o al Tesoro, y Grupo Vázquez S.A.E. pidió al juzgado levantar las medidas.",
+   "refs": [
+    "press:fact:0063",
+    "press:fact:0064",
+    "press:fact:0065",
+    "chrono:event:0150",
+    "chrono:event:0205",
+    "press:fact:0080",
+    "chrono:event:0110",
+    "chrono:event:0135",
+    "chrono:event:0211",
+    "chrono:event:0212"
+   ],
+   "url": "https://infonegocios.com.py/default/se-subastan-alquilan-o-devuelven-que-puede-hacer-senabico-con-los-autos-y-aeronaves-de-miguel-vazquez-y-la-casa-vinculada-a-pena",
+   "kind": "reported"
+  },
+  {
+   "id": "assets_abroad",
+   "title_en": "Assets abroad",
+   "title_es": "Activos en el exterior",
+   "book_value": null,
+   "book_value_pyg": null,
+   "currency": "USD",
+   "recovery_low_pct": 0,
+   "recovery_central_pct": 0,
+   "recovery_high_pct": 0,
+   "reason_en": "Prosecutors say several unnamed countries confirmed assets and that freeze requests are being prepared; informal cooperation with Luxembourg, Argentina and the United States is reported, plus a request to freeze crypto-assets. No asset, value or freeze has been confirmed. The Luxembourg holding's main asset is the bank. Not estimated and not added to totals.",
+   "reason_es": "La Fiscalía dice que varios países, que no nombra, confirmaron activos y que se preparan pedidos de inmovilización; se informó de cooperación informal con Luxemburgo, Argentina y Estados Unidos y de un pedido para inmovilizar criptoactivos. No se confirmó ningún bien, valor ni congelamiento. El principal activo de la sociedad luxemburguesa es el banco. No se estima ni se suma a los totales.",
+   "refs": [
+    "chrono:event:0196",
+    "chrono:event:0158",
+    "chrono:event:0189",
+    "chrono:event:0215",
+    "chrono:event:0178",
+    "press:fact:0068"
+   ],
+   "url": "",
+   "kind": "assumption"
+  }
+ ],
+ "group_capacity": [
+  {
+   "entity": "org:itti",
+   "text_en": "2025 standalone: revenue Gs. 1,826 bn, EBITDA Gs. 418.8 bn, equity Gs. 460.3 bn, liabilities Gs. 1,793 bn. About 59% of revenue (USD 168 M) came from the bank and related parties and Gs. 341.3 bn of its assets (74% of equity) are intercompany receivables. At June 2026: debt USD 66 M (USD 40 M bonds), cash about USD 35 M, USD 22 M due short term; cut to Cpy on 3 Nov; accounts frozen on 6 Nov; its Argentine branch suspended about 900 staff without pay. It is the main alleged destination of forwarded loan proceeds (USD 69.5 M and Gs. 511.8 bn in the amount-traced subset). Illustration, not a valuation: if the non-related 41% of revenue kept the 2025 margin, EBITDA would be about Gs. 170 bn; at 3 to 5 times that is Gs. 0.5 to 0.9 trillion (USD 80 to 130 M) before its own USD 66 M of debt and labour claims. ITTI can therefore pay a small fraction of what is traced to it, and only if the core-banking business keeps its clients.",
+   "text_es": "Individual 2025: ingresos Gs. 1.825.988 millones, EBITDA Gs. 418.812 millones, patrimonio Gs. 460.276 millones, pasivo Gs. 1.793.370 millones. Cerca del 59 % de los ingresos (USD 168 M) provino del banco y vinculadas y Gs. 341.330 millones de su activo (74 % del patrimonio) son créditos entre compañías. A junio de 2026: deuda USD 66 M (USD 40 M en bonos), caja de unos USD 35 M, USD 22 M a corto plazo; rebajada a Cpy el 3/11; cuentas bloqueadas el 6/11; su sucursal argentina suspendió sin goce a unos 900 trabajadores. Es el principal destino presunto de los desembolsos reenviados (USD 69,5 M y Gs. 511.800 millones en el subconjunto con montos). Ilustración, no tasación: si el 41 % de ingresos no vinculados conservara el margen de 2025, el EBITDA rondaría Gs. 170.000 millones; a 3-5 veces son Gs. 0,5 a 0,9 billones (USD 80 a 130 M) antes de su propia deuda de USD 66 M y de los créditos laborales. ITTI puede pagar, pues, una fracción pequeña de lo que se le atribuye, y solo si el negocio de core bancario conserva sus clientes.",
+   "refs": [
+    "press:fact:0179",
+    "press:fact:0183",
+    "press:fact:0191",
+    "press:fact:0189",
+    "press:fact:0299",
+    "press:fact:0199",
+    "press:fact:0309",
+    "press:fact:0310",
+    "press:fact:0311",
+    "press:fact:0312",
+    "chrono:event:0088",
+    "chrono:event:0135",
+    "chrono:event:0123",
+    "press:fact:0218"
+   ]
+  },
+  {
+   "entity": "org:grupo-vazquez",
+   "text_en": "Holding, individual 2025: assets Gs. 4,579 bn, of which the stake in the bank's parent is Gs. 3,083 bn (67%); equity Gs. 2,103 bn, so about minus Gs. 980 bn once that stake is written off. Financial debt Gs. 1,067 bn; dividends received Gs. 12.1 bn. At June 2026 the group excluding the bank owed USD 341 M (USD 204 M bonds) against cash of about USD 71 M, with USD 54 M due short term and interest due from 19 Nov 2026; cut to Cpy; under general inhibition since 6 Nov. It owes the bank Gs. 295.4 bn on the unofficial list. What it can pay is the sale value of non-bank units (Terravaz, ranches valued at USD 15.95 M, media and sports units, the insurer) shared with its own bondholders. In my opinion the holding does not survive as a going concern; the Executive's bill for a temporary administrator of up to eight months, deciding company by company between sale and bankruptcy, points the same way.",
+   "text_es": "Holding, individual 2025: activo Gs. 4.579.376 millones, de los que la participación en la controlante del banco son Gs. 3.083.405 millones (67 %); patrimonio Gs. 2.103.239 millones, es decir, unos Gs. 980.000 millones negativos una vez castigada esa participación. Deuda financiera Gs. 1.067.176 millones; dividendos cobrados Gs. 12.116 millones. A junio de 2026 el grupo sin el banco debía USD 341 M (USD 204 M en bonos) frente a una caja de unos USD 71 M, con USD 54 M a corto plazo e intereses exigibles desde el 19/11/2026; rebajado a Cpy; con inhibición general desde el 6/11. Debe al banco Gs. 295.381 millones según la lista oficiosa. Lo que puede pagar es el valor de venta de las unidades no bancarias (Terravaz, estancias valuadas en USD 15,95 M, medios y deportes, la aseguradora), a repartir con sus propios bonistas. En mi opinión el holding no sobrevive como empresa en marcha; el proyecto del Ejecutivo de un administrador temporal por hasta ocho meses, que decidiría empresa por empresa entre venta y quiebra, apunta en el mismo sentido.",
+   "refs": [
+    "press:fact:0134",
+    "press:fact:0156",
+    "press:fact:0138",
+    "press:fact:0140",
+    "press:fact:0158",
+    "press:fact:0302",
+    "press:fact:0303",
+    "press:fact:0304",
+    "press:fact:0305",
+    "chrono:event:0087",
+    "chrono:event:0135",
+    "press:fact:0010",
+    "chrono:event:0202",
+    "press:fact:0063"
+   ]
+  },
+  {
+   "entity": "org:redisa",
+   "text_en": "Payments and collections network (brand Wepa) that ran the bank's non-branch channel. The bank placed Gs. 236.2 bn in it and held 49% to 77% of its shares depending on the date. In the amount-traced subset it received USD 35.4 M and Gs. 440 bn and paid Gs. 209 bn of borrowers' overdrafts. No accounts are public; accounts frozen since 6 Nov. Capacity to repay depends on a sale as a going concern.",
+   "text_es": "Red de pagos y cobranzas (marca Wepa) que operaba el canal no presencial del banco. El banco colocó en ella Gs. 236.231 millones y tuvo entre 49 % y 77 % de sus acciones según la fecha. En el subconjunto con montos recibió USD 35,4 M y Gs. 440.000 millones y pagó Gs. 209.000 millones de sobregiros de prestatarias. No hay estados contables públicos; cuentas bloqueadas desde el 6/11. Su capacidad de pago depende de una venta como empresa en marcha.",
+   "refs": [
+    "press:fact:0125",
+    "press:flow:0055",
+    "press:flow:0057",
+    "chrono:event:0135",
+    "rec:flow:0002"
+   ]
+  },
+  {
+   "entity": "org:redipro",
+   "text_en": "Card processor (brand Upay) with Visa and Mastercard acquiring. Bank placements Gs. 640.4 bn at December 2025 and Gs. 115.7 bn on the unofficial debtor list. Named in the record as recipient of loan proceeds and as payer of borrowers' instalments with money that came from ITTI or Vinanzas. No accounts are public; frozen since 6 Nov.",
+   "text_es": "Procesadora de tarjetas (marca Upay) con adquirencia Visa y Mastercard. Colocaciones del banco por Gs. 640.409 millones a diciembre de 2025 y Gs. 115.707 millones en la lista oficiosa de deudores. El acta la nombra como receptora de desembolsos y como pagadora de cuotas de prestatarias con dinero proveniente de ITTI o Vinanzas. No hay estados contables públicos; bloqueada desde el 6/11.",
+   "refs": [
+    "press:fact:0123",
+    "press:fact:0018",
+    "rec:flow:0008",
+    "rec:flow:0009",
+    "rec:flow:0024",
+    "chrono:event:0135"
+   ]
+  },
+  {
+   "entity": "org:vinanzas",
+   "text_en": "Held about USD 93,828 the day before it 'bought' USD 74.4 M of loans; its assets are those nine loans to MOWI, Grupo Hendy and Grupo M, which have no repayment capacity, plus an unexplained residual of USD 1.64 M from 15 June 2026. It owes ITTI and Grupo Vázquez for the funds they advanced. Capacity to pay: nil. A successful simulation action would put the nine loans back on the bank's books; it would not create value.",
+   "text_es": "Tenía unos USD 93.828 la víspera de 'comprar' créditos por USD 74,4 M; su activo son esos nueve créditos de MOWI, Grupo Hendy y Grupo M, sin capacidad de pago, más un remanente sin explicar de USD 1,64 M del 15/6/2026. Debe a ITTI y a Grupo Vázquez los fondos que le adelantaron. Capacidad de pago: nula. Una acción de simulación exitosa devolvería los nueve créditos al balance del banco; no crearía valor.",
+   "refs": [
+    "rec:event:0064",
+    "rec:flow:0061",
+    "press:fact:0037",
+    "rec:flow:0056",
+    "rec:flow:0057",
+    "chrono:event:0110"
+   ]
+  },
+  {
+   "entity": "org:terravaz",
+   "text_en": "Real-estate unit 98.36% owned by Grupo Vázquez: assets Gs. 283.4 bn, liabilities Gs. 205.3 bn, equity Gs. 78.0 bn, bonds USD 16.5 M. Its shopping-centre trust was appraised at Gs. 498 bn (quick-sale Gs. 398 bn) in February 2026. Net of liabilities that is about Gs. 190 to 290 bn (USD 30 to 45 M), the largest independently valued asset in the group, but it secures Terravaz's own creditors first.",
+   "text_es": "Unidad inmobiliaria, 98,36 % de Grupo Vázquez: activo Gs. 283.362 millones, pasivo Gs. 205.340 millones, patrimonio Gs. 78.022 millones, bonos por USD 16,5 M. Su fideicomiso del shopping se tasó en Gs. 498.050 millones (venta rápida Gs. 398.440 millones) en febrero de 2026. Neto de pasivos son unos Gs. 190.000 a 290.000 millones (USD 30 a 45 M), el mayor activo del grupo con tasación independiente, pero responde primero ante los acreedores de Terravaz.",
+   "refs": [
+    "press:fact:0231",
+    "press:fact:0233",
+    "press:fact:0235",
+    "press:fact:0242",
+    "press:fact:0243"
+   ]
+  },
+  {
+   "entity": "org:kasas-propiedades",
+   "text_en": "Kasas, Model and Technoma appear on the unofficial debtor list with Gs. 426 bn, Gs. 300 bn and Gs. 477 bn; Kasas and Model passed June 2026 bond proceeds to Vinanzas the same day. No financial statements were found, so their capacity cannot be assessed; Kasas and Technoma are under inhibition.",
+   "text_es": "Kasas, Model y Technoma figuran en la lista oficiosa de deudores con Gs. 425.957, Gs. 299.993 y Gs. 476.783 millones; Kasas y Model pasaron a Vinanzas el mismo día el producido de bonos de junio de 2026. No se hallaron estados contables, por lo que no puede evaluarse su capacidad; Kasas y Technoma están inhibidas.",
+   "refs": [
+    "press:fact:0008",
+    "press:fact:0009",
+    "press:fact:0007",
+    "rec:flow:0058",
+    "rec:flow:0059",
+    "chrono:event:0135"
+   ]
+  },
+  {
+   "entity": "org:u-holdings",
+   "text_en": "Luxembourg parent (capital reported at USD 221.9 M) and U Paraguay (bank stake carried at Gs. 1,522.7 bn): pure holding companies whose asset is the failed bank. Both are embargo defendants; nothing to collect unless other assets are found in Luxembourg, where the share registers and contribution deeds are kept.",
+   "text_es": "Controlante luxemburguesa (capital declarado de USD 221,9 M) y U Paraguay (participación en el banco contabilizada en Gs. 1.522.707 millones): sociedades tenedoras puras cuyo activo es el banco caído. Ambas son demandadas en el embargo; no hay nada que cobrar salvo que aparezcan otros bienes en Luxemburgo, donde están los registros de acciones y las escrituras de aportes.",
+   "refs": [
+    "press:fact:0068",
+    "press:fact:0069",
+    "chrono:event:0084",
+    "chrono:event:0178"
+   ]
+  },
+  {
+   "entity": "org:kaitel",
+   "text_en": "ITTI's Argentine operation suspended staff without pay from 5 Nov to 4 Dec 2026 and said it was seeking funds for October wages. It is a cost centre, not a source of recovery; labour claims there rank ahead of the bank's.",
+   "text_es": "La operación argentina de ITTI suspendió personal sin goce del 5/11 al 4/12/2026 y dijo buscar fondos para los salarios de octubre. Es un centro de costos, no una fuente de recupero; allí los créditos laborales cobran antes que el banco.",
+   "refs": [
+    "chrono:event:0123"
+   ]
+  },
+  {
+   "entity": "org:grupo-vazquez",
+   "text_en": "Ranking. The bank's loans to group companies are unsecured, so the estate ranks equally with the group's own bondholders (about USD 204 M at the holding and USD 40 M at ITTI), banks and suppliers, and behind workers. Two things could change that: a finding of simulation (Civil Code arts. 305-310), which lets the bank's estate attack transfers and, for earlier claims, rank ahead of the apparent buyer's unsecured creditors; and criminal forfeiture, which takes assets for the State ahead of everyone. Part of the demand for group bonds in June 2026 was financed by the bank itself (about USD 26.8 M of loans), which those bondholders' own advisers will note.",
+   "text_es": "Prelación. Los créditos del banco contra las empresas del grupo no tienen garantía, de modo que la masa cobra a la par de los bonistas del grupo (unos USD 204 M en el holding y USD 40 M en ITTI), bancos y proveedores, y después de los trabajadores. Dos cosas pueden cambiarlo: que se declare la simulación (Código Civil, arts. 305-310), lo que permite a la masa del banco impugnar transferencias y, por créditos anteriores, cobrar antes que los quirografarios del comprador aparente; y el comiso penal, que se lleva bienes para el Estado antes que nadie. Parte de la demanda de bonos del grupo en junio de 2026 fue financiada por el propio banco (unos USD 26,8 M en préstamos), algo que los asesores de esos bonistas no pasarán por alto.",
+   "refs": [
+    "press:fact:0303",
+    "press:fact:0310",
+    "rec:loan:0038",
+    "rec:loan:0039",
+    "rec:loan:0040",
+    "rec:flow:0050",
+    "rec:flow:0051"
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "low",
+   "assets_realised": 1045000000,
+   "assets_realised_pyg": 6793915000000,
+   "assets_realised_pct_of_book": 28.0,
+   "guarantee_fund_cost": 762000000,
+   "uninsured_recovery_pct": 43,
+   "pension_deposits_recovery_pct": 100,
+   "bondholder_recovery_pct": 0,
+   "variant_fund_first": {
+    "guarantee_fund_cost": 112000000,
+    "uninsured_recovery_pct": 0,
+    "pension_deposits_recovery_pct": 85,
+    "bondholder_recovery_pct": 0
+   },
+   "currency": "USD",
+   "assumptions_en": "Recoveries at the low end of each class (see asset_classes); resolution and labour costs of Gs. 300 bn; nothing from directors, seized assets or abroad. Primary figures assume the fund absorbs the gap, as the BCP president described (assets go to pension deposits, then to other deposits; the fund recovers only from the residual). Variant 'fund first' (the fund's director's reading): the fund ranks with pension deposits on the transferable assets.",
+   "assumptions_es": "Recuperos en el extremo bajo de cada clase (ver asset_classes); costos de resolución y laborales de Gs. 300.000 millones; nada de directores, bienes incautados ni exterior. Las cifras principales suponen que el fondo absorbe la brecha, como describió el presidente del BCP (los activos van a los depósitos previsionales y luego a los demás depósitos; el fondo solo recupera del residual). Variante 'fondo primero' (lectura del director del fondo): el fondo cobra junto con los depósitos previsionales sobre los activos transferibles."
+  },
+  {
+   "name": "central",
+   "assets_realised": 1548000000,
+   "assets_realised_pyg": 10060763000000,
+   "assets_realised_pct_of_book": 41.4,
+   "guarantee_fund_cost": 633000000,
+   "uninsured_recovery_pct": 71,
+   "pension_deposits_recovery_pct": 100,
+   "bondholder_recovery_pct": 0,
+   "variant_fund_first": {
+    "guarantee_fund_cost": 0,
+    "uninsured_recovery_pct": 20,
+    "pension_deposits_recovery_pct": 100,
+    "bondholder_recovery_pct": 7
+   },
+   "currency": "USD",
+   "assumptions_en": "Central recoveries: 62% on cash and securities, 72% on the unquestioned loans, 10% on the questioned book, nothing on the trust, 15% on other assets, 20% on REDISA/REDIPRO, 1% of the embargo claim and a quarter of reported seized values; costs Gs. 300 bn. Same two readings of the fund's rank as in the low case.",
+   "assumptions_es": "Recuperos centrales: 62 % en efectivo y títulos, 72 % en la cartera no cuestionada, 10 % en la cuestionada, nada en el fideicomiso, 15 % en otros activos, 20 % en REDISA/REDIPRO, 1 % del reclamo del embargo y una cuarta parte del valor publicado de los bienes incautados; costos de Gs. 300.000 millones. Las mismas dos lecturas sobre el rango del fondo que en el caso bajo."
+  },
+  {
+   "name": "high",
+   "assets_realised": 2128000000,
+   "assets_realised_pyg": 13830429000000,
+   "assets_realised_pct_of_book": 56.9,
+   "guarantee_fund_cost": 381000000,
+   "uninsured_recovery_pct": 94,
+   "pension_deposits_recovery_pct": 100,
+   "bondholder_recovery_pct": 0,
+   "variant_fund_first": {
+    "guarantee_fund_cost": 0,
+    "uninsured_recovery_pct": 52,
+    "pension_deposits_recovery_pct": 100,
+    "bondholder_recovery_pct": 23
+   },
+   "currency": "USD",
+   "assumptions_en": "High recoveries: 85% on cash, securities and unquestioned loans, 25% on the questioned book, 2% on the trust, 30% on other assets, 45% on REDISA/REDIPRO, 5% of the embargo claim and 60% of seized values; costs Gs. 300 bn. Even here assets alone do not cover all deposits; assets plus the fund do.",
+   "assumptions_es": "Recuperos altos: 85 % en efectivo, títulos y cartera no cuestionada, 25 % en la cuestionada, 2 % en el fideicomiso, 30 % en otros activos, 45 % en REDISA/REDIPRO, 5 % del reclamo del embargo y 60 % de los bienes incautados; costos de Gs. 300.000 millones. Aun así los activos solos no cubren todos los depósitos; los activos más el fondo, sí."
+  }
+ ],
+ "scenario_inputs": {
+  "fx_pyg_per_usd": 6500.0,
+  "book_pyg_bn": {
+   "cash_liquid": 4486.9,
+   "unrelated_loans": 8462.0,
+   "related_book": 5850.0,
+   "merger_trust": 2105.7,
+   "other_assets": 2514.5,
+   "redisa_redipro": 876.6
+  },
+  "liabilities_pyg_bn": {
+   "guaranteed_private_deposits_fund": 5000.0,
+   "social_security_deposits": 2600.0,
+   "uninsured_private_and_other_public_deposits": 8900.0,
+   "bonds_lenders_other": 5685.9
+  },
+  "costs_pyg_bn": 300.0,
+  "note_en": "Deposits are taken at Gs. 16,500 bn, between the December 2025 book (Gs. 15,831 bn) and the mid-2026 level implied by Bloomberg (Gs. 5 trillion public = 29%). Guaranteed share 30% (Moody's). All inputs are assumptions built on reported figures.",
+  "note_es": "Los depósitos se toman en Gs. 16,5 billones, entre el saldo contable de diciembre de 2025 (Gs. 15,83 billones) y el nivel de mediados de 2026 que se desprende de Bloomberg (Gs. 5 billones públicos = 29 %). Proporción garantizada del 30 % (Moody's). Todos los insumos son supuestos construidos sobre cifras publicadas."
+ },
+ "tracing_plan": [
+  {
+   "record_en": "Loan-by-loan schedule of the questioned book with disbursement entries and first outward transfer",
+   "record_es": "Planilla crédito por crédito de la cartera cuestionada, con asientos de desembolso y primera transferencia saliente",
+   "held_by_en": "Bank core system (Bankitti), now under the BCP intervention team; ITTI as system operator",
+   "held_by_es": "Core del banco (Bankitti), hoy en manos del equipo interventor del BCP; ITTI como operadora del sistema",
+   "would_show_en": "The true size of the questioned book (Rey's USD 900 M against the supervisor's Gs. 1.62 trillion) and who received each disbursement: the single figure that moves the estimate most",
+   "would_show_es": "El tamaño real de la cartera cuestionada (los USD 900 M de Rey frente a los Gs. 1,62 billones del supervisor) y quién recibió cada desembolso: el dato que más mueve la estimación",
+   "tool_en": "Intervention powers (Ley 2334/03 arts. 15 and 17); no court order needed",
+   "tool_es": "Facultades de intervención (Ley 2334/03, arts. 15 y 17); no requiere orden judicial",
+   "timeframe_en": "Weeks: it is the input to the exclusion balance now due around 2-3 December",
+   "timeframe_es": "Semanas: es el insumo del balance de exclusión, previsto hacia el 2-3 de diciembre"
+  },
+  {
+   "record_en": "Account statements, by entity, of ITTI, Grupo Vázquez, REDISA, REDIPRO, Vinanzas (eight accounts), Kasas, Model and the borrowers, 2024-2026",
+   "record_es": "Extractos por entidad de ITTI, Grupo Vázquez, REDISA, REDIPRO, Vinanzas (ocho cuentas), Kasas, Model y las prestatarias, 2024-2026",
+   "held_by_en": "The bank (most accounts were at Ueno); other banks for outside accounts, including the bank where group cheques were deposited",
+   "held_by_es": "El banco (la mayoría de las cuentas estaba en Ueno); otros bancos por las cuentas externas, incluido aquel donde se depositaron cheques del grupo",
+   "would_show_en": "Where the money stopped: operating costs, bond service, real estate, cash withdrawals or transfers abroad; closes the gaps of USD 1.64 M at Vinanzas and USD 1.0 M at ITTI on 15 June 2026",
+   "would_show_es": "Dónde se detuvo el dinero: gastos operativos, servicio de bonos, inmuebles, retiros en efectivo o giros al exterior; cierra las brechas de USD 1,64 M en Vinanzas y USD 1,0 M en ITTI del 15/6/2026",
+   "tool_en": "Bank secrecy does not apply to prosecutors or the BCP (Ley 861/96 art. 86); account freeze already ordered",
+   "tool_es": "El secreto bancario no rige para la Fiscalía ni el BCP (Ley 861/96, art. 86); bloqueo de cuentas ya dispuesto",
+   "timeframe_en": "1 to 3 months for in-house accounts; 3 to 6 months for other banks",
+   "timeframe_es": "1 a 3 meses para cuentas propias; 3 a 6 meses para otros bancos"
+  },
+  {
+   "record_en": "SIPAP interbank transfer logs with time stamps",
+   "record_es": "Registros de transferencias interbancarias del SIPAP con hora",
+   "held_by_en": "Banco Central del Paraguay, as system operator",
+   "held_by_es": "Banco Central del Paraguay, como operador del sistema",
+   "would_show_en": "Order of credits and debits within the same day, which proves or disproves that repayments were funded by fresh bank loans; destination banks for money leaving the group",
+   "would_show_es": "El orden de créditos y débitos dentro del mismo día, que prueba o descarta que los pagos se financiaran con préstamos nuevos del banco; los bancos de destino del dinero que salió del grupo",
+   "tool_en": "Prosecutor's request to the BCP",
+   "tool_es": "Requerimiento fiscal al BCP",
+   "timeframe_en": "Days to weeks",
+   "timeframe_es": "Días a semanas"
+  },
+  {
+   "record_en": "Trade tickets and settlement records for group bonds, 11-15 June 2026 and earlier placements",
+   "record_es": "Boletas de operación y liquidaciones de bonos del grupo, 11-15 de junio de 2026 y colocaciones previas",
+   "held_by_en": "Ueno Casa de Bolsa (raided 9 Nov), the stock exchange and the securities depository (Cavapy)",
+   "held_by_es": "Ueno Casa de Bolsa (allanada el 9/11), la bolsa y la caja de valores (Cavapy)",
+   "would_show_en": "Whether the bonds were new issues or resales, at what price, and who ended up holding them; whether bank-financed buyers supported the price of group paper",
+   "would_show_es": "Si los bonos fueron emisiones nuevas o reventas, a qué precio y quién los tiene hoy; si compradores financiados por el banco sostuvieron el precio de los papeles del grupo",
+   "tool_en": "Securities regulator's powers; seizure already carried out",
+   "tool_es": "Facultades de la Superintendencia de Valores; incautación ya realizada",
+   "timeframe_en": "Weeks; depository records are electronic",
+   "timeframe_es": "Semanas; los registros de la caja de valores son electrónicos"
+  },
+  {
+   "record_en": "Board and credit-committee minutes for each approval; the October 2025 de-listing request and replies",
+   "record_es": "Actas de directorio y de comité de créditos de cada aprobación; el pedido de desvinculación de octubre de 2025 y sus respuestas",
+   "held_by_en": "The bank (books taken by the intervention team); the Superintendency of Banks for the correspondence",
+   "held_by_es": "El banco (libros en poder del equipo interventor); la Superintendencia de Bancos por la correspondencia",
+   "would_show_en": "Who voted, who dissented in writing and what information was in front of them: the basis for joint civil liability of each director and for any exemption",
+   "would_show_es": "Quién votó, quién dejó constancia de su disidencia y con qué información: la base de la responsabilidad civil solidaria de cada director y de cualquier eximente",
+   "tool_en": "Intervention powers; liquidator's action against directors (Ley 861/96 art. 138 a)",
+   "tool_es": "Facultades de intervención; acción del liquidador contra los directores (Ley 861/96, art. 138 a)",
+   "timeframe_en": "Weeks to obtain; 3 to 8 years to judgment",
+   "timeframe_es": "Semanas para obtenerlas; 3 a 8 años hasta la sentencia"
+  },
+  {
+   "record_en": "Certificate-of-deposit register: issue, holder, funding entry, endorsements and redemption",
+   "record_es": "Registro de CDA: emisión, titular, asiento de fondeo, endosos y cancelación",
+   "held_by_en": "The bank's treasury and securities custody; the schedules Rey's defence filed",
+   "held_by_es": "Tesorería y custodia de títulos del banco; las planillas presentadas por la defensa de Rey",
+   "would_show_en": "Whether certificates bought by group companies in 2025 were funded with the cash Rey describes, who holds them now and whether related holders are trying to collect under the guarantee (excluded by art. 1 f)",
+   "would_show_es": "Si los CDA comprados por empresas del grupo en 2025 se fondearon con el efectivo que describe Rey, quién los tiene hoy y si tenedores vinculados intentan cobrar la garantía (excluidos por el art. 1 f)",
+   "tool_en": "Intervention powers; exclusion from the guarantee; simulation action",
+   "tool_es": "Facultades de intervención; exclusión de la garantía; acción de simulación",
+   "timeframe_en": "Weeks",
+   "timeframe_es": "Semanas"
+  },
+  {
+   "record_en": "Cash-vault logs, count sheets and security video for the night Rey describes; the cash-in-transit firm's records",
+   "record_es": "Planillas de bóveda, actas de recuento y video de seguridad de la noche que describe Rey; registros de la transportadora de caudales",
+   "held_by_en": "The bank's treasury; the cash-handling company raided on 17 Nov",
+   "held_by_es": "Tesorería del banco; la empresa de caudales allanada el 17/11",
+   "would_show_en": "Whether about USD 17 M and Gs. 17 bn in cash entered the bank, when, and under whose name it was booked; tests a second-hand claim that currently rests on Rey alone",
+   "would_show_es": "Si ingresaron al banco unos USD 17 M y Gs. 17.000 millones en efectivo, cuándo y a nombre de quién se registraron; pone a prueba un dicho de oídas que hoy descansa solo en Rey",
+   "tool_en": "Prosecutor's seizure; financial-intelligence cash reports",
+   "tool_es": "Incautación fiscal; reportes de operaciones en efectivo ante la Seprelad",
+   "timeframe_en": "Weeks, if video retention has not lapsed",
+   "timeframe_es": "Semanas, si no venció la conservación del video"
+  },
+  {
+   "record_en": "The three consecutive receipts Rey filed and the receipt book of the collecting company",
+   "record_es": "Los tres recibos correlativos que presentó Rey y el talonario de la empresa cobradora",
+   "held_by_en": "Prosecution file (filed 4 Nov per the record); the Grupo Vázquez company that issued them; the three 'dead portfolio' firms",
+   "held_by_es": "Carpeta fiscal (presentados el 4/11 según el acta); la empresa del Grupo Vázquez que los emitió; las tres firmas de 'cartera muerta'",
+   "would_show_en": "Whether written-off debtors really paid: if they deny it, the booked origin of the cash fails and the certificates bought with it become traceable proceeds",
+   "would_show_es": "Si los deudores castigados pagaron de verdad: si lo niegan, cae el origen declarado del efectivo y los CDA comprados con él pasan a ser producto rastreable",
+   "tool_en": "Witness statements; laundering forfeiture if a predicate offence is established (Penal Code art. 196)",
+   "tool_es": "Testimoniales; comiso por lavado si se acredita el hecho precedente (Código Penal, art. 196)",
+   "timeframe_en": "1 to 2 months to test; years to forfeit",
+   "timeframe_es": "1 a 2 meses para verificarlo; años para el comiso"
+  },
+  {
+   "record_en": "The 'Delirio Colectivo' email of 13 October 2025 and its 20-page attachment",
+   "record_es": "El correo 'Delirio Colectivo' del 13 de octubre de 2025 y su adjunto de 20 páginas",
+   "held_by_en": "Prosecution file; the bank's mail server; sender and recipients",
+   "held_by_es": "Carpeta fiscal; servidor de correo del banco; remitente y destinatarios",
+   "would_show_en": "An insider map of the bank's real liquidity channels a year before the failure: which entities fed liquidity and which drained it, and who knew",
+   "would_show_es": "Un mapa interno de los canales reales de liquidez del banco un año antes de la caída: qué entidades aportaban liquidez, cuáles la drenaban y quién lo sabía",
+   "tool_en": "Forensic extraction; cooperation agreement sought by Rey's defence",
+   "tool_es": "Extracción forense; acuerdo de colaboración que busca la defensa de Rey",
+   "timeframe_en": "Already in the file; authentication in weeks",
+   "timeframe_es": "Ya está en la carpeta; autenticación en semanas"
+  },
+  {
+   "record_en": "Intercompany ledgers of ITTI and Grupo Vázquez (sundry debtors, framework loans to Vinanzas, service contracts with borrowers)",
+   "record_es": "Mayores entre compañías de ITTI y Grupo Vázquez (deudores varios, préstamos marco a Vinanzas, contratos de servicios con prestatarias)",
+   "held_by_en": "ITTI and Grupo Vázquez (servers seized 5 Nov); their external auditors; the rating agencies' files",
+   "held_by_es": "ITTI y Grupo Vázquez (servidores incautados el 5/11); sus auditores externos; legajos de las calificadoras",
+   "would_show_en": "What the group booked the incoming money as (revenue, loans or capital) and where it was spent; whether ITTI's Gs. 341 bn of intercompany receivables are collectable",
+   "would_show_es": "Cómo registró el grupo el dinero recibido (ingresos, préstamos o capital) y en qué se gastó; si los Gs. 341.330 millones de créditos entre compañías de ITTI son cobrables",
+   "tool_en": "Seizure already made; temporary administrator if the bill passes",
+   "tool_es": "Incautación ya realizada; administrador temporal si se aprueba el proyecto",
+   "timeframe_en": "2 to 6 months of forensic accounting",
+   "timeframe_es": "2 a 6 meses de pericia contable"
+  },
+  {
+   "record_en": "Trust ledger of merger expenses and supplier invoices",
+   "record_es": "Mayor del fideicomiso de gastos de fusión y facturas de proveedores",
+   "held_by_en": "The trustee bank; the bank; BCP file on Resolution 32 of 2024",
+   "held_by_es": "El banco fiduciario; el banco; expediente del BCP sobre la Resolución 32 de 2024",
+   "would_show_en": "How much of Gs. 2.1 trillion was paid to group suppliers and for what; which payments fell outside the authorised facility and can be claimed back",
+   "would_show_es": "Cuánto de los Gs. 2,1 billones se pagó a proveedores del grupo y por qué concepto; qué pagos quedaron fuera de la facilidad autorizada y pueden reclamarse",
+   "tool_en": "Intervention powers; nullity and unjust-enrichment actions",
+   "tool_es": "Facultades de intervención; acciones de nulidad y de enriquecimiento sin causa",
+   "timeframe_en": "1 to 3 months",
+   "timeframe_es": "1 a 3 meses"
+  },
+  {
+   "record_en": "Tax filings (VAT ledgers, income tax returns, electronic invoices) of group companies and borrowers",
+   "record_es": "Declaraciones tributarias (libros de IVA, renta, facturas electrónicas) de las empresas del grupo y de las prestatarias",
+   "held_by_en": "National tax directorate (DNIT)",
+   "held_by_es": "Dirección Nacional de Ingresos Tributarios (DNIT)",
+   "would_show_en": "Whether 'service contracts' behind the transfers were invoiced and declared; real revenue of the shells; beneficial-owner filings",
+   "would_show_es": "Si los 'contratos de servicios' detrás de las transferencias se facturaron y declararon; los ingresos reales de las sociedades pantalla; declaraciones de beneficiarios finales",
+   "tool_en": "Court or prosecutor's request; Law 6446/19 beneficial-owner register",
+   "tool_es": "Requerimiento judicial o fiscal; registro de beneficiarios finales de la Ley 6446/19",
+   "timeframe_en": "Weeks",
+   "timeframe_es": "Semanas"
+  },
+  {
+   "record_en": "Property, vehicle, aircraft and vessel registries; livestock records",
+   "record_es": "Registros de inmuebles, automotores, aeronaves y embarcaciones; registros de ganado",
+   "held_by_en": "Public registries; civil-aviation authority; animal-health service; Senabico for seized items",
+   "held_by_es": "Registros públicos; autoridad aeronáutica; servicio de sanidad animal; Senabico por lo incautado",
+   "would_show_en": "Values and encumbrances of the 2,331 properties and 160 vehicles identified; transfers made after June 2026 that could be reversed",
+   "would_show_es": "Valores y gravámenes de los 2.331 inmuebles y 160 vehículos identificados; transferencias posteriores a junio de 2026 que podrían revertirse",
+   "tool_en": "General inhibition already in force; simulation action (Civil Code arts. 305-310) against transfers; early sale by Senabico (Law 5876/17)",
+   "tool_es": "Inhibición general ya vigente; acción de simulación (Código Civil, arts. 305-310) contra transferencias; venta anticipada por la Senabico (Ley 5876/17)",
+   "timeframe_en": "Appraisals in 1 to 3 months; sales 1 to 3 years; final forfeiture only after conviction",
+   "timeframe_es": "Tasaciones en 1 a 3 meses; ventas en 1 a 3 años; comiso definitivo solo tras condena"
+  },
+  {
+   "record_en": "Foreign bank records and company registers (Luxembourg, Argentina, United States, others unnamed); crypto wallets",
+   "record_es": "Registros bancarios y societarios en el exterior (Luxemburgo, Argentina, Estados Unidos y otros no nombrados); billeteras de criptoactivos",
+   "held_by_en": "Foreign banks and registries; the Luxembourg trade register; exchanges",
+   "held_by_es": "Bancos y registros extranjeros; el registro mercantil de Luxemburgo; plataformas de criptoactivos",
+   "would_show_en": "Whether money left Paraguay, how much, and in whose name; payments for the capital contributions of the Luxembourg holding",
+   "would_show_es": "Si salió dinero del Paraguay, cuánto y a nombre de quién; los pagos de los aportes de capital de la sociedad luxemburguesa",
+   "tool_en": "Mutual legal assistance; informal channels between prosecutors and financial-intelligence units for a first freeze",
+   "tool_es": "Asistencia jurídica internacional; canales informales entre fiscalías y unidades de inteligencia financiera para una primera inmovilización",
+   "timeframe_en": "Freeze: weeks to months. Evidence: 6 to 18 months. Repatriation: years, normally after a final judgment",
+   "timeframe_es": "Inmovilización: semanas a meses. Prueba: 6 a 18 meses. Repatriación: años, normalmente tras sentencia firme"
+  },
+  {
+   "record_en": "Home-banking access logs for the 12 shared operators",
+   "record_es": "Registros de acceso de banca digital de los 12 operadores compartidos",
+   "held_by_en": "The bank; ITTI as platform provider",
+   "held_by_es": "El banco; ITTI como proveedora de la plataforma",
+   "would_show_en": "That the same people moved the money of nominally separate borrowers: supports treating them as one obligor and reaching ITTI's assets",
+   "would_show_es": "Que las mismas personas movían el dinero de prestatarias formalmente separadas: sustenta tratarlas como un solo obligado y alcanzar los bienes de ITTI",
+   "tool_en": "Forensic extraction under the existing seizure",
+   "tool_es": "Extracción forense al amparo de la incautación vigente",
+   "timeframe_en": "Weeks",
+   "timeframe_es": "Semanas"
+  }
+ ],
+ "watch_list": [
+  {
+   "date": "2026-11-19",
+   "text_en": "First interest payments on Grupo Vázquez bonds fell due from this date; whether they were paid is not reported. A missed coupon takes the issuer to Dpy and starts acceleration by bondholders, who then compete with the bank's estate for group assets. With accounts frozen, payment needs court leave.",
+   "text_es": "Desde esta fecha vencen los primeros intereses de los bonos de Grupo Vázquez; no se informó si se pagaron. Un cupón impago lleva al emisor a Dpy y abre la aceleración por parte de los bonistas, que pasan a competir con la masa del banco por los bienes del grupo. Con las cuentas bloqueadas, pagar exige autorización judicial.",
+   "refs": [
+    "chrono:event:0087",
+    "press:fact:0303",
+    "chrono:event:0135"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-11-30",
+   "text_en": "End of the waiver of default and penalty interest on Ueno loans. Collections in December are the first hard reading of the retail book's quality; the BCP president also set late November as the target for transfers.",
+   "text_es": "Fin de la exoneración de intereses moratorios y punitorios sobre los créditos de Ueno. La cobranza de diciembre será la primera medición firme de la calidad de la cartera minorista; el presidente del BCP también fijó fines de noviembre como meta para los traspasos.",
+   "refs": [
+    "chrono:event:0188",
+    "chrono:event:0187"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "date": "2026-12-02",
+   "text_en": "Extended deadline to pay the guarantee (BCP Resolution 14 of 17 Nov) and, about the same date, the postponed exclusion balance. Watch: total assets included, the provisions applied to the questioned book, and whether deposits above the guarantee are in the packages.",
+   "text_es": "Vence la prórroga para pagar la garantía (Resolución 14 del BCP del 17/11) y, hacia la misma fecha, el balance de exclusión postergado. A mirar: el total de activos incluidos, las previsiones aplicadas a la cartera cuestionada y si los depósitos por encima de la garantía entran en los paquetes.",
+   "refs": [
+    "chrono:event:0226",
+    "chrono:event:0232"
+   ],
+   "url": "https://www.abc.com.py/economia/2026/11/18/crisis-ueno-bank-bcp-extiende-plazo-para-pagar-garantias-de-depositos-por-15-dias-mas/"
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Tender of asset-and-deposit lots: number of bidders, share of deposits taken, and whether the guarantee fund tops up the packages in cash or in bonds. A top-up near the guaranteed amount means the fund is absorbing the loss; a payment from acquirers to the fund means the opposite.",
+   "text_es": "Licitación de los lotes de activos y depósitos: cantidad de oferentes, proporción de depósitos asumida y si el fondo de garantía completa los paquetes en efectivo o con bonos. Un complemento cercano al monto garantizado indica que el fondo absorbe la pérdida; un pago de los adquirentes al fondo indica lo contrario.",
+   "refs": [
+    "chrono:event:0232",
+    "chrono:event:0181"
+   ],
+   "url": "https://infonegocios.com.py/plus/del-rescate-a-la-recuperacion-evaluan-transferir-activos-y-pasivos-a-otra-entidad-o-bien-convocar-a-acreedores-y-liquidar-activos"
+  },
+  {
+   "date": "2026-12-04",
+   "text_en": "End of the unpaid suspension of ITTI's Argentine staff. Dismissals or a restart show whether ITTI is being kept alive as a business that can be sold.",
+   "text_es": "Termina la suspensión sin goce del personal argentino de ITTI. Despidos o reanudación mostrarán si se mantiene a ITTI como negocio vendible.",
+   "refs": [
+    "chrono:event:0123"
+   ],
+   "url": "https://perfil.com/economia/el-colapso-de-ueno-bank-golpea-a-900-trabajadores-en-la-argentina-con-suspensiones-y-falta-de-pago-de-salarios-a2zPM2o4E66V"
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Congress vote on the bill for temporary administration of Grupo Vázquez companies (up to eight months). It decides who controls the obligor's assets and whether units are sold as going concerns or sent to bankruptcy.",
+   "text_es": "Votación en el Congreso del proyecto de administración temporal de las empresas del Grupo Vázquez (hasta ocho meses). Define quién controla los bienes del obligado y si las unidades se venden en marcha o van a la quiebra.",
+   "refs": [
+    "chrono:event:0202"
+   ],
+   "url": "https://www.abc.com.py/politica/2026/11/19/ejecutivo-impulsa-administracion-temporal-de-empresas-del-grupo-vazquez-y-refinanciacion-de-deudas/"
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Court ruling on Grupo Vázquez S.A.E.'s request to lift the inhibition and account freeze and return vehicles, and on its challenge to the Senabico law. If granted, group assets can move again.",
+   "text_es": "Resolución judicial sobre el pedido de Grupo Vázquez S.A.E. de levantar la inhibición y el bloqueo de cuentas y devolver vehículos, y sobre su planteo contra la ley de la Senabico. Si prospera, los bienes del grupo vuelven a poder moverse.",
+   "refs": [
+    "chrono:event:0211",
+    "chrono:event:0212"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Supreme Court decision on the challenge to the appeals ruling that added money laundering and criminal association. Laundering is the legal basis for wide forfeiture; if the added charges fall, forfeiture narrows to the proceeds of the original counts.",
+   "text_es": "Decisión de la Corte Suprema sobre la impugnación del fallo de apelación que sumó lavado de activos y asociación criminal. El lavado es la base legal de un comiso amplio; si caen los cargos añadidos, el comiso se limita al producto de los hechos originales.",
+   "refs": [
+    "chrono:event:0160",
+    "chrono:event:0170"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-12",
+   "text_en": "First foreign freeze, if any: country, asset type and value. Until one is confirmed, assets abroad stay at zero in every scenario.",
+   "text_es": "Primera inmovilización en el exterior, si la hay: país, tipo de bien y valor. Mientras no se confirme ninguna, los activos en el exterior quedan en cero en todos los escenarios.",
+   "refs": [
+    "chrono:event:0196",
+    "chrono:event:0215"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-12-17",
+   "text_en": "About 30 days after the memorandum for the sale of a local broker and fund manager: a closed deal would show there are buyers for Paraguayan financial businesses, which bears on the value of the group's insurer, broker and fund manager.",
+   "text_es": "Unos 30 días después del memorando para la venta de una casa de bolsa y administradora de fondos local: un cierre mostraría que hay compradores para negocios financieros paraguayos, lo que incide en el valor de la aseguradora, la casa de bolsa y la administradora del grupo.",
+   "refs": [
+    "chrono:event:0213"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2027-05-04",
+   "text_en": "End of the six-month preparatory stage requested in Case 89/2026: indictment or extension. The same month the 180-day suspension of Ueno AFPISA expires (about 9 May 2027).",
+   "text_es": "Fin de la etapa preparatoria de seis meses pedida en la Causa 89/2026: acusación o prórroga. Ese mismo mes vence la suspensión de 180 días de Ueno AFPISA (hacia el 9/5/2027).",
+   "refs": [
+    "chrono:event:0098",
+    "chrono:event:0167"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2027",
+   "text_en": "ITTI bond service of about USD 10 M and Grupo Vázquez principal of USD 0.3 M (September) and USD 4 M (December) fall due.",
+   "text_es": "Vencen servicios de bonos de ITTI por unos USD 10 M y capital de Grupo Vázquez por USD 0,3 M (septiembre) y USD 4 M (diciembre).",
+   "refs": [
+    "press:fact:0313",
+    "press:fact:0306",
+    "press:fact:0307"
+   ],
+   "url": ""
+  }
+ ],
+ "precedents": [
+  {
+   "case_en": "Ára S.A. de Finanzas (Paraguay, 2015), resolved under Ley 2334/03",
+   "case_es": "Ára S.A. de Finanzas (Paraguay, 2015), resuelta conforme a la Ley 2334/03",
+   "outcome_en": "Resolution opened 29 April 2015; by 4 June assets and deposits of about 2,600 savers (roughly Gs. 310 bn, including IPS, Conatel and pension funds) had gone to three institutions whose bids exceeded the deposits. Five weeks, full coverage. A small finance company with a cash shortfall of Gs. 72 bn, not a bank with a questioned book in the trillions.",
+   "outcome_es": "Resolución abierta el 29/4/2015; al 4/6 los activos y depósitos de unos 2.600 ahorristas (cerca de Gs. 310.000 millones, incluidos IPS, Conatel y cajas) habían pasado a tres entidades cuyas ofertas superaron los depósitos. Cinco semanas, cobertura total. Era una financiera pequeña con un faltante de caja de Gs. 72.000 millones, no un banco con una cartera cuestionada de billones.",
+   "url": "https://www.lanacion.com.py/2015/06/06/bcp-logro-cubrir-al-100-de-los-depositantes-de-ara-sa/?outputType=amp"
+  },
+  {
+   "case_en": "Ára, residual balance",
+   "case_es": "Ára, balance residual",
+   "outcome_en": "The residual balance went to the bankruptcy trustee; in April 2022, seven years on, the sanctions proceedings against its directors were still described as in their final stage.",
+   "outcome_es": "El balance residual pasó a la Sindicatura de Quiebras; en abril de 2022, siete años después, el sumario contra sus directores seguía, según el BCP, en etapa final.",
+   "url": "https://www.lanacion.com.py/negocios/2022/04/08/bcp-revela-informe-sobre-liquidacion-de-ara-sa-de-finanzas-remitido-en-el-2016/"
+  },
+  {
+   "case_en": "Agrofinanciera Chaco S.A. (Paraguay)",
+   "case_es": "Agrofinanciera Chaco S.A. (Paraguay)",
+   "outcome_en": "Exclusion balance transferred to another finance company in a process that took six months; the entity had enough assets for all depositors. By 2017 fewer than three such processes had been completed, so the law has never been tested on a bank of Ueno's size.",
+   "outcome_es": "Balance de exclusión transferido a otra financiera en un proceso de seis meses; la entidad tenía activos para todos los depositantes. A 2017 se habían completado menos de tres procesos de este tipo, de modo que la ley nunca se probó con un banco del tamaño de Ueno.",
+   "url": "https://www.clearygottlieb.com/-/media/organize-archive/cgsh/files/2017/publications/emrj-spring-2017/insolvency-of-financial-institutions-under-the-laws-of-paraguay.pdf"
+  },
+  {
+   "case_en": "Paraguayan bank failures of 1995-2003 (Banco Nacional de Trabajadores, Banco Paraguayo Oriental and others)",
+   "case_es": "Quiebras bancarias paraguayas de 1995-2003 (Banco Nacional de Trabajadores, Banco Paraguayo Oriental y otros)",
+   "outcome_en": "Recovery rates were described by the local press in 2015 as very low (La Nación). In the BNT case the Supreme Court confirmed convictions in 2010, more than a decade after the failure, over losses of about Gs. 120 bn; in the BPO case (losses about Gs. 135 bn from loans to relatives and friends, as alleged) the criminal action was declared time-barred in 2007.",
+   "outcome_es": "La prensa local calificó en 2015 de muy bajas las tasas de recupero (La Nación). En el caso BNT la Corte confirmó condenas en 2010, más de una década después de la caída, por pérdidas de unos Gs. 120.000 millones; en el caso BPO (pérdidas de unos Gs. 135.000 millones por créditos a parientes y amigos, según la acusación) la acción penal se declaró prescripta en 2007.",
+   "url": "https://www.pj.gov.py/notas/4794-confirman-condenas-en-caso-por-vaciamiento-del-bnt"
+  },
+  {
+   "case_en": "Baninter (Dominican Republic, 2003), concealed lending to the owners' own companies",
+   "case_es": "Baninter (República Dominicana, 2003), créditos ocultos a empresas de los propios dueños",
+   "outcome_en": "Central-bank outlays of RD$ 74.5 bn; the liquidation commission had recovered RD$ 16.2 bn by April 2023: 21.7% in 20 years. Civil damages of RD$ 44.6 bn awarded to the central bank against the main owner were unpaid.",
+   "outcome_es": "Desembolsos del banco central por RD$ 74.494 millones; la comisión liquidadora había recuperado RD$ 16.164 millones a abril de 2023: 21,7 % en 20 años. La indemnización civil de RD$ 44.553 millones a favor del banco central contra el principal dueño seguía impaga.",
+   "url": "https://eldinero.com.do/254232/bc-y-el-clab-detallan-proceso-de-liquidacion-de-baninter/"
+  },
+  {
+   "case_en": "Banco Fassil (Bolivia, 2023), unsecured loans to the shareholders' conglomerate",
+   "case_es": "Banco Fassil (Bolivia, 2023), créditos sin garantía al conglomerado de los accionistas",
+   "outcome_en": "About 1.3 million savers were moved to other institutions quickly; no recovery percentage on the related book is given in the source read. Shows the pattern: fast transfer of retail deposits, slow and uncertain recovery of the related book.",
+   "outcome_es": "Cerca de 1,3 millones de ahorristas pasaron rápido a otras entidades; la fuente leída no da porcentaje de recupero de la cartera vinculada. Muestra el patrón: traspaso veloz de los depósitos minoristas y recupero lento e incierto de la cartera vinculada.",
+   "url": "https://www.primicias.ec/internacional/ueno-bank-quiebras-bancos-filanbanco-america-latina-136640/"
+  },
+  {
+   "case_en": "Senabico asset administration (Paraguay, Law 5876/17)",
+   "case_es": "Administración de bienes por la Senabico (Paraguay, Ley 5876/17)",
+   "outcome_en": "Seized assets can be rented or sold early if they depreciate, with proceeds held in separate accounts; ownership passes to the State only on forfeiture, and on acquittal the asset or its price is returned with interest. Seizure is therefore not recovery.",
+   "outcome_es": "Los bienes incautados pueden alquilarse o venderse en forma anticipada si se deprecian, con el producido en cuentas separadas; la propiedad pasa al Estado solo con el comiso y, si hay absolución, se devuelve el bien o su precio con intereses. Incautar, por tanto, no es recuperar.",
+   "url": "https://infonegocios.com.py/default/se-subastan-alquilan-o-devuelven-que-puede-hacer-senabico-con-los-autos-y-aeronaves-de-miguel-vazquez-y-la-casa-vinculada-a-pena"
+  }
+ ],
+ "new_sources": [
+  {
+   "outlet": "BACN (Biblioteca y Archivo del Congreso)",
+   "title": "Ley N.º 2334/03 de Garantía de Depósitos y Resolución de Entidades de Intermediación Financiera (arts. 16-26 read)",
+   "date": "2003-12-12",
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Ueno Bank: MEF identifica US$ 888 millones de fondos públicos; cuánto podrá recuperarlos",
+   "date": "2026-11-18",
+   "url": "https://www.abc.com.py/economia/2026/11/18/ueno-bank-mef-identifica-us-888-millones-de-fondos-publicos-cuanto-podra-recuperarlos/"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Crisis Ueno Bank: BCP extiende plazo para pagar garantías de depósitos por 15 días más",
+   "date": "2026-11-18",
+   "url": "https://www.abc.com.py/economia/2026/11/18/crisis-ueno-bank-bcp-extiende-plazo-para-pagar-garantias-de-depositos-por-15-dias-mas/"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Ejecutivo impulsa administración temporal de empresas del Grupo Vázquez y refinanciación de deudas",
+   "date": "2026-11-19",
+   "url": "https://www.abc.com.py/politica/2026/11/19/ejecutivo-impulsa-administracion-temporal-de-empresas-del-grupo-vazquez-y-refinanciacion-de-deudas/"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Resolución de Ueno Bank: el BCP prepara paquetes de activos y depósitos para traspasar a otras entidades",
+   "date": "2026-11-19",
+   "url": "https://www.abc.com.py/nacionales/2026/11/19/resolucion-de-ueno-bank-el-bcp-prepara-paquetes-de-activos-y-depositos-para-traspasar-a-otras-entidades/"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "Jorge Schreiner: analizando las carteras de clientes y sin incluir activos, el monto supera el conjunto de la deuda de ueno con el sistema previsional",
+   "date": "2026-11-13",
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "Del rescate a la recuperación: evalúan transferir activos y pasivos a otra entidad o bien convocar a acreedores y liquidar activos",
+   "date": "2026-11-11",
+   "url": "https://infonegocios.com.py/plus/del-rescate-a-la-recuperacion-evaluan-transferir-activos-y-pasivos-a-otra-entidad-o-bien-convocar-a-acreedores-y-liquidar-activos"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "¿Se subastan, alquilan o devuelven? Qué puede hacer Senabico con los autos y aeronaves de Miguel Vázquez y la casa vinculada a Peña",
+   "date": "2026-11-17",
+   "url": "https://infonegocios.com.py/default/se-subastan-alquilan-o-devuelven-que-puede-hacer-senabico-con-los-autos-y-aeronaves-de-miguel-vazquez-y-la-casa-vinculada-a-pena"
+  },
+  {
+   "outlet": "Perfil",
+   "title": "El Banco Central de Paraguay informó que encontró activos de Ueno Bank y detalló a quiénes se le devolverá ese dinero",
+   "date": "2026-11-13",
+   "url": "https://perfil.com/internacional/el-banco-central-de-paraguay-informo-que-encontro-activos-de-ueno-bank-y-detallo-a-quienes-se-le-devolvera-ese-dinero-aYk6R4M1Ioff"
+  },
+  {
+   "outlet": "Perfil",
+   "title": "El colapso de Ueno Bank golpea a 900 trabajadores en la Argentina con suspensiones y falta de pago de salarios",
+   "date": "2026-11",
+   "url": "https://perfil.com/economia/el-colapso-de-ueno-bank-golpea-a-900-trabajadores-en-la-argentina-con-suspensiones-y-falta-de-pago-de-salarios-a2zPM2o4E66V"
+  },
+  {
+   "outlet": "Latin Times",
+   "title": "Report on Grupo Vázquez workers after the Ueno collapse, citing EFE (headline not captured)",
+   "date": "2026-11-13",
+   "url": "https://www.latintimes.com/ueno-bank-collapse-workers-paraguay-crisis-601301"
+  },
+  {
+   "outlet": "5Días",
+   "title": "Ueno: anatomía de una crisis (timeline entries of 12-18 November)",
+   "date": "2026-11-18",
+   "url": "https://5dias.com.py/especiales/ueno"
+  },
+  {
+   "outlet": "La Nación (Paraguay)",
+   "title": "BCP logró cubrir al 100% de los depositantes de Ára SA",
+   "date": "2015-06-05",
+   "url": "https://www.lanacion.com.py/2015/06/06/bcp-logro-cubrir-al-100-de-los-depositantes-de-ara-sa/?outputType=amp"
+  },
+  {
+   "outlet": "La Nación (Paraguay)",
+   "title": "BCP revela informe sobre liquidación de Ara SA de Finanzas remitido en el 2016",
+   "date": "2022-04-08",
+   "url": "https://www.lanacion.com.py/negocios/2022/04/08/bcp-revela-informe-sobre-liquidacion-de-ara-sa-de-finanzas-remitido-en-el-2016/"
+  },
+  {
+   "outlet": "Cleary Gottlieb, Emerging Markets Restructuring Journal",
+   "title": "Insolvency of Financial Institutions under the Laws of Paraguay",
+   "date": "2017",
+   "url": "https://www.clearygottlieb.com/-/media/organize-archive/cgsh/files/2017/publications/emrj-spring-2017/insolvency-of-financial-institutions-under-the-laws-of-paraguay.pdf"
+  },
+  {
+   "outlet": "elDinero (Dominican Republic)",
+   "title": "BC y el CLAB detallan proceso de liquidación de Baninter",
+   "date": "2023-11",
+   "url": "https://eldinero.com.do/254232/bc-y-el-clab-detallan-proceso-de-liquidacion-de-baninter/"
+  },
+  {
+   "outlet": "Primicias (Ecuador)",
+   "title": "De Banco Latino a Ueno Bank: las crisis bancarias que han sacudido el poder político",
+   "date": "2026-11-07",
+   "url": "https://www.primicias.ec/internacional/ueno-bank-quiebras-bancos-filanbanco-america-latina-136640/"
+  }
+ ]
+}

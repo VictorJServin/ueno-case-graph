@@ -1,0 +1,2580 @@
+{
+ "version": "1",
+ "as_of": "2026-11-20",
+ "disclaimer_en": "Analysis by AI analysts, reviewed by an AI reviewer; none is a licensed professional. Figures are reported facts, computations from reported facts, or estimates with stated assumptions, and each is labelled. Nothing here is a finding, a valuation or legal advice. All conduct is alleged and every person named in the case is presumed innocent. The prosecution record (Case 89/2026) is authoritative only for what the prosecution alleges; Julio Rey's statements are his own claims. Cut-off: 20 November 2026, before the Central Bank's exclusion balance.",
+ "disclaimer_es": "Análisis elaborado por analistas de IA y revisado por un revisor de IA; ninguno es un profesional matriculado. Las cifras son hechos publicados, cálculos a partir de hechos publicados o estimaciones con supuestos explícitos, y cada una está rotulada. Nada de lo aquí expuesto es una conclusión, una tasación ni asesoramiento jurídico. Todas las conductas son presuntas y toda persona mencionada en la causa goza de la presunción de inocencia. El acta fiscal (Causa 89/2026) solo hace fe de lo que la fiscalía sostiene; las declaraciones de Julio Rey son afirmaciones propias. Fecha de corte: 20 de noviembre de 2026, antes del balance de exclusión del BCP.",
+ "fx": {
+  "rate": 6500,
+  "basis_en": "Gs. 6,500 per USD is the rate the prosecution record itself uses (page 7: Gs. 253,000,000,000 shown as about USD 38,923,077). Market rates printed in the sources during 2026 run from about Gs. 5,750 to Gs. 6,590, so dollar figures here are indicative. In the sensitivity, guaraní amounts stay fixed and only the dollar-denominated loans of the six record borrowers are re-converted; the bank's own foreign-currency position is not published and is ignored.",
+  "basis_es": "Gs. 6.500 por dólar es el tipo de cambio que usa la propia acta fiscal (página 7: Gs. 253.000.000.000 equivalen a unos USD 38.923.077). Las cotizaciones que aparecen en las fuentes durante 2026 van de unos Gs. 5.750 a Gs. 6.590, por lo que las cifras en dólares son indicativas. En la sensibilidad, los montos en guaraníes quedan fijos y solo se reconvierten los créditos en dólares de las seis prestatarias del acta; la posición en moneda extranjera del banco no está publicada y no se considera.",
+  "refs": [
+   "src:acta-p07",
+   "press:fact:0114",
+   "chrono:event:0122",
+   "press:fact:0219",
+   "chrono:event:0035"
+  ],
+  "sensitivity": [
+   {
+    "rate": 6100,
+    "headline_central": 1014000000,
+    "currency": "USD",
+    "kind": "computed"
+   },
+   {
+    "rate": 6600,
+    "headline_central": 942000000,
+    "currency": "USD",
+    "kind": "computed"
+   }
+  ]
+ },
+ "headline": {
+  "measure_en": "Estimated shortfall of the bank's assets against everything it owes (deposits, bonds, loans and other liabilities), after the shareholders' USD 375 million of book equity is wiped out. It starts from the bank's own balance sheet of 30 June 2026 and writes down the items that are questioned. It is the loss creditors as a group would bear before any payment by the Deposit Guarantee Fund. It is not the amount stolen, not the amount lent to related companies, and not a prediction of what any one depositor will lose.",
+  "measure_es": "Faltante estimado del activo del banco frente a todo lo que debe (depósitos, bonos, préstamos y demás pasivos), una vez consumido el patrimonio contable de USD 375 millones de los accionistas. Parte del balance del propio banco al 30 de junio de 2026 y castiga las partidas cuestionadas. Es la pérdida que soportarían los acreedores en conjunto antes de cualquier pago del Fondo de Garantía de Depósitos. No es el monto sustraído, ni el monto prestado a vinculadas, ni un pronóstico de lo que perderá un depositante en particular.",
+  "low": 392900000,
+  "central": 955600000,
+  "high": 1374200000,
+  "currency": "USD",
+  "as_of": "2026-11-20",
+  "kind": "estimate",
+  "fx_rate": 6500.0,
+  "refs": [
+   "src:analysis-missing-money-2026-11-20",
+   "press:fact:0265",
+   "press:fact:0126",
+   "chrono:event:0070",
+   "rec:loan:0001",
+   "press:fact:0001"
+  ],
+  "drivers_en": [
+   "How much of the questioned loan book is lost: each 10 points is about USD 88 million. The central case assumes 80%.",
+   "Whether the unofficial debtor list is right: without it the questioned book falls from USD 879 million to about USD 461 million and the central headline to about USD 642 million.",
+   "The merger-expenses trust (USD 324 million) and deferred charges (USD 127 million) are written off in full in every case.",
+   "The quality of the rest of the loan book, including the unpublished past-due portfolio from the 2024 merger: each 5 points is about USD 69 million.",
+   "The June 2026 balance sheet is five months old; the Central Bank's exclusion balance, postponed to early December, will replace it."
+  ],
+  "drivers_es": [
+   "Cuánto se pierde de la cartera cuestionada: cada 10 puntos equivalen a unos USD 88 millones. El escenario central supone 80%.",
+   "Si la lista oficiosa de deudores es correcta: sin ella la cartera cuestionada baja de USD 879 millones a unos USD 461 millones y la cifra central a unos USD 642 millones.",
+   "El fideicomiso de gastos de fusión (USD 324 millones) y los cargos diferidos (USD 127 millones) se castigan por completo en todos los escenarios.",
+   "La calidad del resto de la cartera, incluida la cartera vencida de la fusión de 2024, cuyo saldo no se publicó: cada 5 puntos son unos USD 69 millones.",
+   "El balance de junio de 2026 tiene cinco meses; el balance de exclusión del BCP, postergado a inicios de diciembre, lo reemplazará."
+  ],
+  "confidence": "low",
+  "plain_en": "On published numbers, Ueno Bank's assets are probably worth about USD 950 million less than what it owes, with a plausible range from about USD 390 million to about USD 1.4 billion. This is an estimate by an AI analyst from a five-month-old balance sheet and an unofficial debtor list, not an audited figure or a finding.",
+  "plain_es": "Con las cifras publicadas, el activo de Ueno Bank valdría unos USD 950 millones menos que lo que el banco debe, dentro de un rango razonable de unos USD 390 millones a unos USD 1.400 millones. Es una estimación de un analista de IA basada en un balance de hace cinco meses y en una lista oficiosa de deudores; no es una cifra auditada ni una conclusión.",
+  "without_unofficial_list": {
+   "questioned_book": 460900000,
+   "headline_central": 642000000,
+   "currency": "USD",
+   "kind": "computed",
+   "as_of": "2026-11-20",
+   "note_en": "Same model with the questioned book limited to the prosecution record and loan figures attributed to the supervisor in the press.",
+   "note_es": "El mismo modelo con la cartera cuestionada limitada al acta fiscal y a los créditos que la prensa atribuye a la supervisión."
+  }
+ },
+ "meanings_note_en": "These seven figures answer different questions and overlap heavily. They must not be added together.",
+ "meanings_note_es": "Estas siete cifras responden a preguntas distintas y se superponen en gran medida. No deben sumarse entre sí.",
+ "meanings": [
+  {
+   "id": "capital_hole_supervisor",
+   "title_en": "Capital hole as stated by the supervisor",
+   "title_es": "Déficit de capital según la supervisión",
+   "explain_en": "The supervisor is reported to have found that the bank needed Gs. 1.62 trillion more in loan-loss provisions, which cuts its capital ratio from 13.85% to 5.56% against a 12% minimum. Low is the capital needed to get back to 12% (reviewer's arithmetic), central is the deficit itself, high adds the USD 70 million also claimed in the civil embargo. It covers only what the supervisor had formally reviewed by 2 November.",
+   "explain_es": "Según lo publicado, la supervisión determinó que al banco le faltaban Gs. 1,62 billones de previsiones, lo que reduce su índice de solvencia de 13,85% a 5,56% frente a un mínimo de 12%. El valor bajo es el capital necesario para volver al 12% (cálculo del revisor), el central es el déficit mismo y el alto suma los USD 70 millones reclamados además en el embargo civil. Solo abarca lo que la supervisión había revisado formalmente al 2 de noviembre.",
+   "low": 167000000,
+   "central": 249500000,
+   "high": 319500000,
+   "currency": "USD",
+   "as_of": "2026-11-02",
+   "kind": "reported",
+   "asserted_by": "regulator",
+   "overlaps": [
+    "capital_hole_extended",
+    "questioned_credit",
+    "creditor_shortfall",
+    "prosecution_damage"
+   ],
+   "inputs": [
+    {
+     "label_en": "Provisions deficit (figure printed by one outlet; others print 'Gs. 1.62 trillion')",
+     "label_es": "Déficit de previsiones (cifra exacta publicada por un medio; otros publican «Gs. 1,62 billones»)",
+     "value": 1621853458972,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-11-02",
+     "refs": [
+      "chrono:event:0070",
+      "press:fact:0105"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Civil embargo sought by the Central Bank: USD part",
+     "label_es": "Embargo civil pedido por el BCP: parte en dólares",
+     "value": 70000000,
+     "currency": "USD",
+     "kind": "reported",
+     "as_of": "2026-11-03",
+     "refs": [
+      "chrono:event:0084",
+      "chrono:event:0085"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Capital needed to return to 12% (two-equation solution)",
+     "label_es": "Capital necesario para volver al 12% (sistema de dos ecuaciones)",
+     "value": 1085421025523,
+     "currency": "PYG",
+     "kind": "computed",
+     "as_of": "2026-11-20",
+     "refs": [
+      "chrono:event:0070"
+     ],
+     "url": ""
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "capital_hole_extended",
+   "title_en": "Capital hole if questioned balance-sheet items are also deducted",
+   "title_es": "Déficit de capital si además se deducen las partidas cuestionadas del balance",
+   "explain_en": "The supervisor's deficit plus three assets that cannot absorb losses: the placements in REDISA and REDIPRO (low), the merger-expenses trust (central) and intangibles (high). The reviewer's arithmetic shows the reported 5.56% is reproduced by the provisions deficit alone, so these items do not appear to be in the official figure. A scenario, not an official number.",
+   "explain_es": "El déficit de la supervisión más tres activos que no pueden absorber pérdidas: las colocaciones en REDISA y REDIPRO (bajo), el fideicomiso de gastos de fusión (central) y los intangibles (alto). El cálculo del revisor muestra que el 5,56% publicado se reproduce solo con el déficit de previsiones, por lo que estas partidas no parecen estar en la cifra oficial. Es un escenario, no un número oficial.",
+   "low": 384400000,
+   "central": 708300000,
+   "high": 847000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "computed",
+   "asserted_by": "analyst",
+   "overlaps": [
+    "capital_hole_supervisor",
+    "creditor_shortfall",
+    "rey_900"
+   ],
+   "inputs": [
+    {
+     "label_en": "Provisions deficit",
+     "label_es": "Déficit de previsiones",
+     "value": 1621853458972,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-11-02",
+     "refs": [
+      "chrono:event:0070"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Placements in REDISA and REDIPRO",
+     "label_es": "Colocaciones en REDISA y REDIPRO",
+     "value": 876640000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2025-12-31",
+     "refs": [
+      "press:fact:0126",
+      "press:event:0041"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Merger-expenses trust",
+     "label_es": "Fideicomiso de gastos de fusión",
+     "value": 2105744000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2025-12-31",
+     "refs": [
+      "press:fact:0265"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Other intangible assets (rating report, re-read by the reviewer)",
+     "label_es": "Otros activos intangibles (informe de calificación, releído por el revisor)",
+     "value": 900995000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2025-12-31",
+     "refs": [
+      "src:analysis-missing-money-2026-11-20"
+     ],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/04/UENO-Bank-S.A.-_FIX.pdf"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "rey_900",
+   "title_en": "Rey's 'about USD 900 million'",
+   "title_es": "Los «unos novecientos millones de dólares» de Rey",
+   "explain_en": "Julio Rey, a charged former director, told prosecutors that expenses were deferred through loans to related and unrelated firms worth about USD 900 million: about 300 cashback, about 300 technology and other, the rest not explained. It is his own claim, approximate and unaudited. Only the central value is given; the review does not use it as an input or as proof of any other figure.",
+   "explain_es": "Julio Rey, exdirector imputado, declaró ante la fiscalía que se difirieron gastos mediante créditos a empresas vinculadas y no vinculadas por unos USD 900 millones: unos 300 en reintegros (cashback), unos 300 en tecnología y otros, y el resto sin explicar. Es una afirmación suya, aproximada y no auditada. Solo se consigna el valor central; la revisión no lo usa como dato de entrada ni como prueba de ninguna otra cifra.",
+   "low": null,
+   "central": 900000000,
+   "high": null,
+   "currency": "USD",
+   "as_of": "2026-11-18",
+   "kind": "reported",
+   "asserted_by": "rey",
+   "overlaps": [
+    "questioned_credit",
+    "capital_hole_extended",
+    "creditor_shortfall"
+   ],
+   "inputs": [
+    {
+     "label_en": "Loans said to stand in for deferred expenses",
+     "label_es": "Créditos que, según Rey, sustituían gastos diferidos",
+     "value": 900000000,
+     "currency": "USD",
+     "kind": "reported",
+     "as_of": "2026-11-18",
+     "refs": [
+      "rec:flow:0075",
+      "src:acta-p22"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Part he itemises (cashback plus technology and other)",
+     "label_es": "Parte que desglosa (reintegros más tecnología y otros)",
+     "value": 600000000,
+     "currency": "USD",
+     "kind": "reported",
+     "as_of": "2026-11-18",
+     "refs": [
+      "rec:flow:0075"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Questioned loans to the firms he names, where a figure exists (42% of 900)",
+     "label_es": "Créditos cuestionados a las firmas que nombra, cuando hay cifra (42% de 900)",
+     "value": 382000000,
+     "currency": "USD",
+     "kind": "computed",
+     "as_of": "2026-11-20",
+     "refs": [
+      "rec:flow:0075",
+      "press:fact:0003",
+      "press:fact:0016",
+      "press:fact:0009"
+     ],
+     "url": ""
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "prosecution_damage",
+   "title_en": "Damage figure attributed to the prosecution",
+   "title_es": "Perjuicio atribuido a la fiscalía",
+   "explain_en": "Press reports say the prosecution puts total damage in the case at USD 809.5 million. The 24-page record in this project does not print that total; the six borrowers it details owed USD 228 million. How the figure is built is not published, so no range is given.",
+   "explain_es": "Según la prensa, la fiscalía estima el perjuicio total de la causa en USD 809,5 millones. El acta de 24 páginas de este proyecto no consigna ese total; las seis prestatarias que detalla debían USD 228 millones. No se publicó cómo se compone la cifra, por lo que no se da rango.",
+   "low": null,
+   "central": 809500000,
+   "high": null,
+   "currency": "USD",
+   "as_of": "2026-11-08",
+   "kind": "reported",
+   "asserted_by": "prosecution",
+   "overlaps": [
+    "questioned_credit",
+    "creditor_shortfall",
+    "capital_hole_supervisor"
+   ],
+   "inputs": [
+    {
+     "label_en": "Total damage as reported",
+     "label_es": "Perjuicio total según lo publicado",
+     "value": 809500000,
+     "currency": "USD",
+     "kind": "reported",
+     "as_of": "2026-11-08",
+     "refs": [
+      "chrono:event:0148"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Six record borrowers: balance in the record tables (USD 166.98 M plus Gs. 395.5 bn)",
+     "label_es": "Seis prestatarias del acta: saldo en las tablas (USD 166,98 millones más Gs. 395,5 mil millones)",
+     "value": 227800000,
+     "currency": "USD",
+     "kind": "computed",
+     "as_of": "2026-11-04",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0035",
+      "press:fact:0103"
+     ],
+     "url": ""
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "questioned_credit",
+   "title_en": "Questioned credit still owed to the bank (exposure, not loss)",
+   "title_es": "Crédito cuestionado que aún se debe al banco (exposición, no pérdida)",
+   "explain_en": "Loans outstanding to borrowers that the prosecution, the supervisor as relayed by the press, or an unofficial debtor list link to the group, counted once. It is the size of the book in question, before asking how much can be collected. 86% of the central figure rests on the unofficial, undated list.",
+   "explain_es": "Créditos vigentes a prestatarias que la fiscalía, la supervisión según la prensa o una lista oficiosa de deudores vinculan al grupo, contados una sola vez. Es el tamaño de la cartera en cuestión, antes de preguntar cuánto puede cobrarse. El 86% de la cifra central depende de la lista oficiosa y sin fecha.",
+   "low": 593600000,
+   "central": 878900000,
+   "high": 946200000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "computed",
+   "asserted_by": "analyst",
+   "overlaps": [
+    "rey_900",
+    "prosecution_damage",
+    "capital_hole_supervisor",
+    "creditor_shortfall"
+   ],
+   "inputs": [
+    {
+     "label_en": "Six record borrowers after the June 2026 refinancing (USD 88.97 M plus Gs. 195.4 bn)",
+     "label_es": "Seis prestatarias del acta tras la refinanciación de junio de 2026 (USD 88,97 millones más Gs. 195,4 mil millones)",
+     "value": 119000000,
+     "currency": "USD",
+     "kind": "computed",
+     "as_of": "2026-11-20",
+     "refs": [
+      "rec:loan:0001",
+      "rec:loan:0035",
+      "rec:flow:0060",
+      "press:loan:0029",
+      "press:loan:0030",
+      "press:loan:0034"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Twenty group-linked names on the unofficial debtor list",
+     "label_es": "Veinte nombres vinculados al grupo en la lista oficiosa de deudores",
+     "value": 4938847000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-11-07",
+     "refs": [
+      "press:fact:0001",
+      "press:fact:0021"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Off-list borrowers added only in the high case (La Tropa SAE, Infocenter, Dobrestec, TSV)",
+     "label_es": "Prestatarias fuera de la lista, sumadas solo en el escenario alto (La Tropa SAE, Infocenter, Dobrestec, TSV)",
+     "value": 67400000,
+     "currency": "USD",
+     "kind": "computed",
+     "as_of": "2026-11-20",
+     "refs": [
+      "press:fact:0090",
+      "press:loan:0047",
+      "press:fact:0050",
+      "press:fact:0052"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Same book without the unofficial list",
+     "label_es": "La misma cartera sin la lista oficiosa",
+     "value": 460900000,
+     "currency": "USD",
+     "kind": "computed",
+     "as_of": "2026-11-20",
+     "refs": [
+      "rec:loan:0036",
+      "press:loan:0002",
+      "press:loan:0024",
+      "press:loan:0045",
+      "press:fact:0030",
+      "press:loan:0058"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Related exposure as the complaint is relayed: 'more than USD 300 million'",
+     "label_es": "Exposición vinculada según la denuncia difundida: «más de USD 300 millones»",
+     "value": 300000000,
+     "currency": "USD",
+     "kind": "reported",
+     "as_of": "2026-11-05",
+     "refs": [
+      "press:fact:0321"
+     ],
+     "url": ""
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "creditor_shortfall",
+   "title_en": "Shortfall of assets against all liabilities (the headline)",
+   "title_es": "Faltante del activo frente a todo el pasivo (la cifra principal)",
+   "explain_en": "What is left after writing down the June 2026 balance sheet for the trust, deferred charges, the placements in group payment companies and the expected loss on the questioned book, compared with everything the bank owes. This is the only measure here that nets what can still be collected.",
+   "explain_es": "Lo que queda después de castigar en el balance de junio de 2026 el fideicomiso, los cargos diferidos, las colocaciones en las procesadoras del grupo y la pérdida esperada de la cartera cuestionada, comparado con todo lo que el banco debe. Es la única medida de esta lista que descuenta lo que todavía puede cobrarse.",
+   "low": 392900000,
+   "central": 955600000,
+   "high": 1374200000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "estimate",
+   "asserted_by": "analyst",
+   "overlaps": [
+    "capital_hole_supervisor",
+    "capital_hole_extended",
+    "questioned_credit",
+    "rey_900",
+    "prosecution_damage"
+   ],
+   "inputs": [
+    {
+     "label_en": "Total assets, 30 June 2026",
+     "label_es": "Activo total al 30 de junio de 2026",
+     "value": 25641756262733,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-06-30",
+     "refs": [
+      "src:analysis-missing-money-2026-11-20"
+     ],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Total liabilities, 30 June 2026",
+     "label_es": "Pasivo total al 30 de junio de 2026",
+     "value": 23205211051347,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-06-30",
+     "refs": [
+      "src:analysis-missing-money-2026-11-20"
+     ],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Book equity, 30 June 2026",
+     "label_es": "Patrimonio neto al 30 de junio de 2026",
+     "value": 2436545211386,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-06-30",
+     "refs": [
+      "src:analysis-missing-money-2026-11-20"
+     ],
+     "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+    },
+    {
+     "label_en": "Loss on the questioned book, central case (80% of USD 879 M)",
+     "label_es": "Pérdida en la cartera cuestionada, escenario central (80% de USD 879 millones)",
+     "value": 703100000,
+     "currency": "USD",
+     "kind": "assumption",
+     "as_of": "2026-11-20",
+     "refs": [
+      "press:fact:0302",
+      "press:fact:0304",
+      "press:fact:0311",
+      "press:fact:0063"
+     ],
+     "url": ""
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "cash_outside_system",
+   "title_en": "Cash handled outside normal channels",
+   "title_es": "Efectivo manejado fuera de los canales normales",
+   "explain_en": "Rey says, repeating a colleague, that about USD 17 million and Gs. 17,000 million in cash was brought into the bank at night and booked as collections of written-off loans. That is cash coming in, of unknown origin, not money leaving. Separately, one newspaper reports internal orders to prepare about USD 0.7 million in cash for the group. Both are small beside the other measures and neither is confirmed.",
+   "explain_es": "Rey afirma, repitiendo lo que le dijo un colega, que unos USD 17 millones y Gs. 17.000 millones en efectivo ingresaron al banco de noche y se registraron como cobro de cartera castigada. Es efectivo que entra, de origen desconocido, no dinero que sale. Aparte, un diario publicó órdenes internas para preparar unos USD 0,7 millones en efectivo para el grupo. Ambos montos son pequeños frente a las demás medidas y ninguno está confirmado.",
+   "low": null,
+   "central": 19600000,
+   "high": null,
+   "currency": "USD",
+   "as_of": "2026-11-18",
+   "kind": "reported",
+   "asserted_by": "rey",
+   "overlaps": [],
+   "inputs": [
+    {
+     "label_en": "Cash delivery, dollar part (hearsay)",
+     "label_es": "Entrega de efectivo, parte en dólares (de oídas)",
+     "value": 17000000,
+     "currency": "USD",
+     "kind": "reported",
+     "as_of": "2025-05",
+     "refs": [
+      "rec:flow:0071",
+      "rec:issue:0009"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Cash delivery, guaraní part (hearsay)",
+     "label_es": "Entrega de efectivo, parte en guaraníes (de oídas)",
+     "value": 17000000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2025-05",
+     "refs": [
+      "rec:flow:0072"
+     ],
+     "url": ""
+    },
+    {
+     "label_en": "Seven cash requests in leaked internal messages",
+     "label_es": "Siete pedidos de efectivo en mensajes internos filtrados",
+     "value": 4767000000,
+     "currency": "PYG",
+     "kind": "reported",
+     "as_of": "2026-10",
+     "refs": [
+      "press:flow:0140",
+      "press:flow:0141",
+      "press:flow:0142",
+      "press:flow:0143",
+      "press:flow:0144",
+      "press:flow:0145",
+      "press:flow:0146"
+     ],
+     "url": ""
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "waterfall": {
+  "title_en": "From the June 2026 balance sheet to the creditor shortfall",
+  "title_es": "Del balance de junio de 2026 al faltante para los acreedores",
+  "currency": "USD",
+  "as_of": "2026-11-20",
+  "fx_rate": 6500.0,
+  "scenarios": [
+   "low",
+   "central",
+   "high"
+  ],
+  "sign_note_en": "Start plus all deductions equals the end value. Subtotal rows are running totals and are not added. 'Low' is the smallest shortfall, 'high' the largest.",
+  "sign_note_es": "El valor inicial más todas las deducciones da el valor final. Los subtotales son sumas acumuladas y no se suman. «Bajo» es el menor faltante y «alto» el mayor.",
+  "steps": [
+   {
+    "label_en": "Assets at book value, 30 June 2026",
+    "label_es": "Activo a valor contable al 30 de junio de 2026",
+    "values": {
+     "low": 3944900000,
+     "central": 3944900000,
+     "high": 3944900000
+    },
+    "type": "start",
+    "kind": "reported",
+    "as_of": "2026-06-30",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20"
+    ],
+    "note_en": "Total assets Gs. 25,641.8 bn in the bank's published notice; the nine asset lines add up to the total. Opened and re-read by the reviewer.",
+    "note_es": "Activo total de Gs. 25,64 billones según el aviso de balance publicado por el banco; las nueve líneas del activo suman el total. Abierto y releído por el revisor."
+   },
+   {
+    "label_en": "Merger-expenses trust (spent money carried as an asset)",
+    "label_es": "Fideicomiso de gastos de fusión (gasto ya realizado, registrado como activo)",
+    "values": {
+     "low": -324000000,
+     "central": -324000000,
+     "high": -324000000
+    },
+    "type": "deduction",
+    "kind": "reported",
+    "as_of": "2026-11-20",
+    "refs": [
+     "press:fact:0265",
+     "chrono:event:0017",
+     "chrono:event:0044"
+    ],
+    "note_en": "Gs. 2,105.7 bn at December 2025; the investments line barely moved by June 2026. Authorised by the Central Bank in 2024, so lawful to carry, but it cannot be sold. Written off in full in all three cases (assumption).",
+    "note_es": "Gs. 2,11 billones a diciembre de 2025; el rubro inversiones casi no varió a junio de 2026. Autorizado por el BCP en 2024, por lo que su registro es lícito, pero no es vendible. Se castiga al 100% en los tres escenarios (supuesto)."
+   },
+   {
+    "label_en": "Deferred charges and intangibles",
+    "label_es": "Cargos diferidos e intangibles",
+    "values": {
+     "low": -126900000,
+     "central": -126900000,
+     "high": -126900000
+    },
+    "type": "deduction",
+    "kind": "reported",
+    "as_of": "2026-11-20",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "press:fact:0266"
+    ],
+    "note_en": "Gs. 825.2 bn on the June 2026 balance sheet. No sale value assumed.",
+    "note_es": "Gs. 825,2 mil millones en el balance de junio de 2026. Se supone sin valor de venta."
+   },
+   {
+    "label_en": "Placements in REDISA and REDIPRO: loss of 50% / 80% / 95%",
+    "label_es": "Colocaciones en REDISA y REDIPRO: pérdida de 50% / 80% / 95%",
+    "values": {
+     "low": -67400000,
+     "central": -107900000,
+     "high": -128100000
+    },
+    "type": "deduction",
+    "kind": "assumption",
+    "as_of": "2026-11-20",
+    "refs": [
+     "press:fact:0126",
+     "press:event:0041",
+     "press:event:0026"
+    ],
+    "note_en": "Gs. 876.6 bn at December 2025. Real payment businesses, but funded by the bank, frozen and named as conduits in the record.",
+    "note_es": "Gs. 876,6 mil millones a diciembre de 2025. Son negocios de pagos reales, pero fondeados por el banco, con cuentas bloqueadas y señalados en el acta como vehículos de paso."
+   },
+   {
+    "label_en": "Loss on the questioned loan book",
+    "label_es": "Pérdida en la cartera cuestionada",
+    "values": {
+     "low": -249500000,
+     "central": -703100000,
+     "high": -898900000
+    },
+    "type": "deduction",
+    "kind": "assumption",
+    "as_of": "2026-11-20",
+    "refs": [
+     "chrono:event:0070",
+     "press:fact:0105",
+     "rec:loan:0001",
+     "press:fact:0001",
+     "press:fact:0021"
+    ],
+    "note_en": "Low: only the supervisor's stated provisions deficit, Gs. 1,621.9 bn. Central: 80% of the USD 879 M book. High: 95% of the USD 946 M book. See the recovery section for the reasons.",
+    "note_es": "Bajo: solo el déficit de previsiones informado por la supervisión, Gs. 1,62 billones. Central: 80% de la cartera de USD 879 millones. Alto: 95% de la cartera de USD 946 millones. Las razones figuran en la sección de recuperación."
+   },
+   {
+    "label_en": "Discount on the rest of the loan book: 0% / 5% / 15%",
+    "label_es": "Descuento sobre el resto de la cartera: 0% / 5% / 15%",
+    "values": {
+     "low": 0,
+     "central": -68600000,
+     "high": -195700000
+    },
+    "type": "deduction",
+    "kind": "assumption",
+    "as_of": "2026-11-20",
+    "refs": [
+     "chrono:event:0017",
+     "chrono:event:0026",
+     "press:fact:0262"
+    ],
+    "note_en": "Applied to loans to non-financial borrowers outside the questioned book (about Gs. 8.9 trillion). The reason is the past-due portfolio of the 2024 merger (facility of up to Gs. 2.6 trillion, not separated in the accounts) and the discount an acquirer will ask. No balance is published.",
+    "note_es": "Se aplica a los créditos al sector no financiero fuera de la cartera cuestionada (unos Gs. 8,9 billones). Responde a la cartera vencida de la fusión de 2024 (facilidad de hasta Gs. 2,6 billones, sin separación contable) y al descuento que pedirá un adquirente. No hay saldo publicado."
+   },
+   {
+    "label_en": "Sundry receivables: loss of 0% / 0% / 50%",
+    "label_es": "Créditos diversos: pérdida de 0% / 0% / 50%",
+    "values": {
+     "low": 0,
+     "central": 0,
+     "high": -75500000
+    },
+    "type": "deduction",
+    "kind": "assumption",
+    "as_of": "2026-11-20",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "rec:flow:0074"
+    ],
+    "note_en": "Gs. 981.4 bn of unexplained composition. Rey says expenses were first deferred through asset sales between the bank and related companies; if such receivables sit here they are worth little. Counted only in the high case.",
+    "note_es": "Gs. 981,4 mil millones de composición no explicada. Rey afirma que los gastos se difirieron primero con ventas de activos entre el banco y vinculadas; si esas cuentas por cobrar están aquí, valen poco. Solo se computa en el escenario alto."
+   },
+   {
+    "label_en": "Assets left for depositors and other creditors",
+    "label_es": "Activo disponible para depositantes y demás acreedores",
+    "values": {
+     "low": 3177100000,
+     "central": 2614400000,
+     "high": 2195800000
+    },
+    "type": "subtotal",
+    "kind": "computed",
+    "as_of": "2026-11-20",
+    "refs": [],
+    "note_en": "Running total of the steps above. Not added again when footing.",
+    "note_es": "Suma acumulada de los pasos anteriores. No se vuelve a sumar al verificar el total."
+   },
+   {
+    "label_en": "Less liabilities at book value, 30 June 2026",
+    "label_es": "Menos pasivo a valor contable al 30 de junio de 2026",
+    "values": {
+     "low": -3570000000,
+     "central": -3570000000,
+     "high": -3570000000
+    },
+    "type": "deduction",
+    "kind": "reported",
+    "as_of": "2026-06-30",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "chrono:event:0035"
+    ],
+    "note_en": "Total liabilities Gs. 23,205.2 bn. Deposits that left after June reduce assets and liabilities by the same amount, so the result does not change.",
+    "note_es": "Pasivo total de Gs. 23,21 billones. Los depósitos retirados después de junio reducen activo y pasivo en el mismo monto, por lo que el resultado no cambia."
+   },
+   {
+    "label_en": "Result: assets minus liabilities (negative = shortfall borne by creditors)",
+    "label_es": "Resultado: activo menos pasivo (negativo = faltante que soportan los acreedores)",
+    "values": {
+     "low": -392900000,
+     "central": -955600000,
+     "high": -1374200000
+    },
+    "type": "end",
+    "kind": "computed",
+    "as_of": "2026-11-20",
+    "refs": [],
+    "note_en": "The headline is this number with the sign reversed. Book equity of USD 374.9 M is already used up before any creditor loses.",
+    "note_es": "La cifra principal es este número con el signo invertido. El patrimonio contable de USD 374,9 millones se consume antes de que pierda cualquier acreedor."
+   }
+  ]
+ },
+ "uses": {
+  "total": {
+   "value": 878900000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "computed",
+   "low": 593600000,
+   "high": 946200000,
+   "refs": [
+    "rec:loan:0001",
+    "rec:loan:0035",
+    "rec:flow:0060",
+    "press:fact:0001",
+    "press:fact:0021",
+    "press:loan:0029",
+    "press:loan:0030",
+    "press:loan:0034"
+   ],
+   "scope_en": "Questioned credit still owed to the bank, counted once: principal outstanding to borrowers linked to the group by the prosecution record or by the unofficial debtor list, after removing the loans that the June 2026 operation retired. Guaraní amounts at Gs. 6,500.",
+   "scope_es": "Crédito cuestionado que aún se debe al banco, contado una sola vez: capital vigente de prestatarias vinculadas al grupo según el acta fiscal o la lista oficiosa de deudores, una vez descontados los créditos que la operación de junio de 2026 canceló. Guaraníes convertidos a Gs. 6.500.",
+   "in_scope_en": [
+    "Six borrowers in the prosecution record (Mowi, Grupo Hendy, Grupo M, TUIU, FRANEDE, AIME) at what they still owed after 15 June 2026: USD 119.0 million.",
+    "Twenty group-linked names on the unofficial debtor list, Gs. 4,938.8 bn or USD 759.8 million. They include the six companies that borrowed on 11 to 15 June 2026 (Satec, HD Invest, Technoma, La Tropa Fletes, Factopar, Sagas), eight other firms the supervisor describes as conduits, and group companies (Kasas, Model, Grupo Vázquez, ITTI, Redipro, Discover, Muar)."
+   ],
+   "out_of_scope_en": [
+    "The nine loans sold to Vinanzas and the three overdrafts paid down on 15 June 2026 (USD 108.8 million): the June loans that funded them are already in the list, so counting both would double count.",
+    "La Tropa SAE (USD 32.5 to 33.9 million): an operating cattle company with its own bond programme; only USD 5.9 million of its borrowing is described as passed to the group. High case only.",
+    "Infocenter (USD 18 million): one article, no date and not on the list, although the amount fits the supervisor's account of a USD 33 million operation. High case only.",
+    "Dobrestec and TSV del Paraguay (USD 16.9 million together): press only. High case only.",
+    "Valores Casa de Bolsa (Gs. 405.5 bn) and the social-security institute (Gs. 88.7 bn), which appear on the list but are not group borrowers.",
+    "The merger-expenses trust (USD 324 million) and the placements in REDISA and REDIPRO (USD 135 million): bank assets of another kind, shown in the waterfall.",
+    "Accrued unpaid interest, and any loan the sources do not name."
+   ],
+   "in_scope_es": [
+    "Seis prestatarias del acta fiscal (Mowi, Grupo Hendy, Grupo M, TUIU, FRANEDE, AIME) por lo que aún debían después del 15 de junio de 2026: USD 119,0 millones.",
+    "Veinte nombres vinculados al grupo en la lista oficiosa de deudores, Gs. 4,94 billones o USD 759,8 millones. Incluyen las seis empresas que recibieron créditos del 11 al 15 de junio de 2026 (Satec, HD Invest, Technoma, La Tropa Fletes, Factopar, Sagas), otras ocho firmas que la supervisión describe como vehículos de paso y empresas del grupo (Kasas, Model, Grupo Vázquez, ITTI, Redipro, Discover, Muar)."
+   ],
+   "out_of_scope_es": [
+    "Los nueve créditos vendidos a Vinanzas y los tres sobregiros cancelados el 15 de junio de 2026 (USD 108,8 millones): los créditos de junio que los financiaron ya están en la lista, por lo que sumar ambos duplicaría.",
+    "La Tropa SAE (USD 32,5 a 33,9 millones): empresa ganadera en actividad, con programa de bonos propio; solo USD 5,9 millones de su deuda se describen como transferidos al grupo. Solo en el escenario alto.",
+    "Infocenter (USD 18 millones): un solo artículo, sin fecha y fuera de la lista, aunque el monto encaja con el relato de la supervisión sobre una operación de USD 33 millones. Solo en el escenario alto.",
+    "Dobrestec y TSV del Paraguay (USD 16,9 millones en conjunto): solo prensa. Solo en el escenario alto.",
+    "Valores Casa de Bolsa (Gs. 405,5 mil millones) y el instituto de previsión social (Gs. 88,7 mil millones), que figuran en la lista pero no son prestatarias del grupo.",
+    "El fideicomiso de gastos de fusión (USD 324 millones) y las colocaciones en REDISA y REDIPRO (USD 135 millones): activos del banco de otra naturaleza, que figuran en la cascada.",
+    "Intereses devengados e impagos, y cualquier crédito que las fuentes no nombren."
+   ]
+  },
+  "hypotheses": [
+   {
+    "id": "operating_burn",
+    "rank": 1,
+    "title_en": "Running costs of the digital-bank model paid outside the bank",
+    "title_es": "Gastos corrientes del modelo de banco digital pagados fuera del banco",
+    "summary_en": "Hypothesis: the largest single use was paying technology, staff, branch-network and card-processing costs at ITTI, REDISA and REDIPRO, and possibly customer cashback, that the bank's own income statement did not carry. The loans reached those companies; what the companies then spent the money on is not in any source.",
+    "summary_es": "Hipótesis: el mayor destino individual habría sido el pago de costos de tecnología, personal, red de sucursales y procesamiento de tarjetas en ITTI, REDISA y REDIPRO, y posiblemente de reintegros a clientes, que el estado de resultados del banco no reflejaba. Los créditos llegaron a esas empresas; en qué gastaron luego el dinero no consta en ninguna fuente.",
+    "low": 150000000,
+    "central": 350000000,
+    "high": 600000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 39.8,
+    "fate": "spent",
+    "evidence_for": [
+     {
+      "text_en": "Rey states that technology, product and cashback expenses were deferred and then moved into loans; he puts cashback at about USD 300 million and technology and other at about USD 300 million.",
+      "text_es": "Rey afirma que los gastos de tecnología, productos y reintegros se difirieron y luego se trasladaron a créditos; estima unos USD 300 millones en reintegros y unos USD 300 millones en tecnología y otros.",
+      "refs": [
+       "rec:flow:0074",
+       "rec:flow:0075",
+       "src:acta-p22"
+      ],
+      "url": "",
+      "asserted_by": "rey"
+     },
+     {
+      "text_en": "The prosecution alleges that all six record borrowers forwarded their loans almost at once to ITTI, REDISA, REDIPRO, Vinanzas or Grupo Vázquez to cover overdrafts, invoices and cheques.",
+      "text_es": "La fiscalía sostiene que las seis prestatarias del acta habrían remitido casi de inmediato sus créditos a ITTI, REDISA, REDIPRO, Vinanzas o Grupo Vázquez para cubrir sobregiros, facturas y cheques.",
+      "refs": [
+       "rec:flow:0001",
+       "rec:flow:0016",
+       "rec:flow:0040",
+       "src:acta-p07"
+      ],
+      "url": "",
+      "asserted_by": "prosecution"
+     },
+     {
+      "text_en": "ITTI billed related parties about USD 168 million in 2025, 59% of its revenue; its revenue rose from Gs. 1,012 bn to Gs. 1,826 bn in one year.",
+      "text_es": "ITTI facturó a partes relacionadas unos USD 168 millones en 2025, el 59% de sus ingresos; sus ingresos pasaron de Gs. 1,01 billones a Gs. 1,83 billones en un año.",
+      "refs": [
+       "press:fact:0299",
+       "press:fact:0178",
+       "press:fact:0179"
+      ],
+      "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf",
+      "asserted_by": "rating_agency"
+     },
+     {
+      "text_en": "Nubicom, with Gs. 200,000 of paid-in capital, paid ITTI Gs. 415,000 million under a services contract one day after receiving a Gs. 417,075 million loan.",
+      "text_es": "Nubicom, con Gs. 200.000 de capital integrado, pagó a ITTI Gs. 415.000 millones por un contrato de servicios un día después de recibir un crédito de Gs. 417.075 millones.",
+      "refs": [
+       "press:flow:0091",
+       "press:loan:0045",
+       "press:fact:0097"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     },
+     {
+      "text_en": "Where a first transfer carries an amount, it is described as covering overdrafts of ITTI, REDISA or REDIPRO; one Mowi transfer to REDIPRO is labelled as a Upay credit.",
+      "text_es": "Cuando la primera transferencia tiene monto, se la describe como cobertura de sobregiros de ITTI, REDISA o REDIPRO; una transferencia de Mowi a REDIPRO figura como acreditación Upay.",
+      "refs": [
+       "press:flow:0121",
+       "press:flow:0122",
+       "press:flow:0123",
+       "press:flow:0124",
+       "press:flow:0125"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     },
+     {
+      "text_en": "Grupo M's loans were passed to ITTI, Red Digital and Kaitel; Kaitel's Argentine branch employed some 900 people working for the group.",
+      "text_es": "Los créditos de Grupo M pasaron a ITTI, Red Digital y Kaitel; la sucursal argentina de Kaitel empleaba a unas 900 personas que trabajaban para el grupo.",
+      "refs": [
+       "press:flow:0017",
+       "rec:flow:0016",
+       "chrono:event:0123"
+      ],
+      "url": "https://chequeado.com/el-explicador/del-ueno-bank-a-buenos-aires-asi-operaba-el-grupo-vazquez-con-sus-trabajadores-en-argentina/",
+      "asserted_by": "press"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "The bank's own promotion rules say the bank credits the cashback to the customer. No source shows cashback re-invoiced to a group company, and no document sizes it.",
+      "text_es": "Las bases y condiciones del propio banco dicen que es el banco quien acredita el reintegro al cliente. Ninguna fuente muestra que el reintegro se refacturara a una empresa del grupo, y ningún documento lo cuantifica.",
+      "refs": [],
+      "url": "https://www.ueno.com.py/wp-content/uploads/2025/12/Promocion-Reintegro-30-de-reintegro-en-comercios-adheridos_-DIC-2025v3.docx-1.pdf"
+     },
+     {
+      "text_en": "ITTI reported a profit of Gs. 170 bn and positive EBITDA in 2025. The money may have been ITTI's income and margin, not a pass-through of the bank's costs.",
+      "text_es": "ITTI declaró una utilidad de Gs. 170 mil millones y EBITDA positivo en 2025. El dinero pudo ser ingreso y margen de ITTI, no un traslado de costos del banco.",
+      "refs": [
+       "press:fact:0185",
+       "press:fact:0183"
+      ],
+      "url": ""
+     },
+     {
+      "text_en": "The bank had three other ways to pay the group that sit outside the questioned loans: its own expense lines, the merger trust (USD 324 million, with ITTI among its suppliers) and the placements in REDISA and REDIPRO (USD 135 million). The same costs may have been paid through those.",
+      "text_es": "El banco tenía otras tres vías para pagar al grupo, ajenas a los créditos cuestionados: sus propios gastos, el fideicomiso de fusión (USD 324 millones, con ITTI entre sus proveedores) y las colocaciones en REDISA y REDIPRO (USD 135 millones). Los mismos costos pudieron pagarse por esas vías.",
+      "refs": [
+       "press:fact:0265",
+       "chrono:event:0044",
+       "press:fact:0126"
+      ],
+      "url": ""
+     },
+     {
+      "text_en": "Rey is a charged person whose defence is seeking a cooperation agreement; his split is round, approximate and unaudited.",
+      "text_es": "Rey es un imputado cuya defensa busca un acuerdo de colaboración; su desglose es redondo, aproximado y no auditado.",
+      "refs": [
+       "chrono:event:0223",
+       "rec:event:0068"
+      ],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "Ledgers and bank statements of ITTI, REDISA and REDIPRO for 2024 to 2026 matched to payroll, suppliers and merchant settlement; the bank's cashback ledger showing which entity bore the cost.",
+    "would_confirm_es": "Libros mayores y extractos de ITTI, REDISA y REDIPRO de 2024 a 2026 cruzados con salarios, proveedores y liquidaciones a comercios; el mayor de reintegros del banco con la entidad que soportó el costo.",
+    "confidence": "low",
+    "reviewer_note_en": "Cut from USD 440 million (medium confidence) to USD 350 million (low). The analyst's figure leaned on Rey's 300 + 300 split and then cited closeness to Rey's 900 as support, which is circular. Only the technology half has an outside scale check, and that check (ITTI's billing) measures what ITTI charged, not what the questioned loans paid for. The cashback half has no document behind it.",
+    "reviewer_note_es": "Se redujo de USD 440 millones (confianza media) a USD 350 millones (baja). La cifra del analista se apoyaba en el desglose 300 + 300 de Rey y luego citaba la cercanía con los 900 de Rey como respaldo, lo cual es circular. Solo la mitad tecnológica tiene una verificación externa de escala, y esa verificación (la facturación de ITTI) mide lo que ITTI cobró, no lo que pagaron los créditos cuestionados. La mitad de reintegros no tiene ningún documento que la respalde."
+   },
+   {
+    "id": "debt_service",
+    "rank": 2,
+    "title_en": "Servicing the group's own debt, including interest on the questioned loans",
+    "title_es": "Servicio de la deuda del propio grupo, incluidos los intereses de los créditos cuestionados",
+    "summary_en": "Hypothesis: part of the money paid coupons and maturities on Grupo Vázquez and ITTI bonds, bank debt and 72-hour cheques at other banks (about USD 75 million), and part paid interest on the questioned loans themselves through new loans (about USD 50 million). The second part went back to the bank as income.",
+    "summary_es": "Hipótesis: una parte pagó cupones y vencimientos de bonos de Grupo Vázquez e ITTI, deuda bancaria y cheques a 72 horas en otros bancos (unos USD 75 millones), y otra pagó los intereses de los propios créditos cuestionados con nuevos créditos (unos USD 50 millones). Esta segunda parte volvió al banco como ingreso.",
+    "low": 60000000,
+    "central": 125000000,
+    "high": 200000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 14.2,
+    "fate": "spent",
+    "evidence_for": [
+     {
+      "text_en": "The group's gross financial interest outside the bank was about Gs. 251 bn in 2025 (USD 39 million) and Gs. 67 bn in the first quarter of 2026, while the holding company received Gs. 12 bn of dividends in 2025.",
+      "text_es": "Los intereses financieros brutos del grupo fuera del banco fueron de unos Gs. 251 mil millones en 2025 (USD 39 millones) y Gs. 67 mil millones en el primer trimestre de 2026, mientras la holding cobró Gs. 12 mil millones de dividendos en 2025.",
+      "refs": [
+       "press:fact:0158",
+       "src:fixscr-2026-07-02-grupo-vazquez"
+      ],
+      "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf",
+      "asserted_by": "rating_agency"
+     },
+     {
+      "text_en": "About USD 26.8 million of the June 2026 loans bought bonds of ITTI, Grupo Vázquez, Kasas and Model through the group's broker.",
+      "text_es": "Unos USD 26,8 millones de los créditos de junio de 2026 compraron bonos de ITTI, Grupo Vázquez, Kasas y Model a través de la casa de bolsa del grupo.",
+      "refs": [
+       "rec:flow:0048",
+       "rec:flow:0049",
+       "rec:flow:0050",
+       "rec:flow:0053",
+       "rec:flow:0058",
+       "press:fact:0062"
+      ],
+      "url": "",
+      "asserted_by": "prosecution"
+     },
+     {
+      "text_en": "ITTI passed Gs. 329,500 million to Red Digital to cover 72-hour cheques; Vinanzas's account was fed with 72-hour cheques drawn on other banks.",
+      "text_es": "ITTI pasó Gs. 329.500 millones a Red Digital para cubrir cheques a 72 horas; la cuenta de Vinanzas se habría alimentado con cheques a 72 horas girados contra otros bancos.",
+      "refs": [
+       "press:flow:0092",
+       "rec:flow:0026",
+       "rec:event:0061"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     },
+     {
+      "text_en": "No interest or instalment is shown as paid from a borrower's own income; the one instalment in the record is said to have been paid with ITTI money. Interest accrued on the six borrowers' balances to 2 November 2026 is about USD 23 million at contract rates (reviewer's recomputation agrees).",
+      "text_es": "No consta ningún interés ni cuota pagados con ingresos propios de una prestataria; la única cuota que figura en el acta se habría pagado con dinero de ITTI. Los intereses devengados sobre los saldos de las seis prestatarias al 2 de noviembre de 2026 rondan USD 23 millones a las tasas contractuales (el recálculo del revisor coincide).",
+      "refs": [
+       "rec:flow:0020",
+       "rec:event:0063",
+       "rec:loan:0006",
+       "rec:loan:0010",
+       "rec:loan:0022"
+      ],
+      "url": "",
+      "asserted_by": "analyst"
+     },
+     {
+      "text_en": "At June 2026 Grupo Vázquez had USD 54 million and ITTI USD 22 million of short-term maturities.",
+      "text_es": "A junio de 2026 Grupo Vázquez tenía USD 54 millones e ITTI USD 22 millones de vencimientos de corto plazo.",
+      "refs": [
+       "press:fact:0305",
+       "press:fact:0312"
+      ],
+      "url": "",
+      "asserted_by": "rating_agency"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "Group debt outside the bank grew in 2025, so part of the debt service was refinanced in the bond market and not with bank loans.",
+      "text_es": "La deuda del grupo fuera del banco creció en 2025, de modo que parte del servicio se refinanció en el mercado de bonos y no con créditos del banco.",
+      "refs": [
+       "press:fact:0277",
+       "press:fact:0278"
+      ],
+      "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+     },
+     {
+      "text_en": "No source traces a specific loan to a specific coupon or maturity.",
+      "text_es": "Ninguna fuente rastrea un crédito concreto hasta el pago de un cupón o vencimiento concreto.",
+      "refs": [],
+      "url": ""
+     },
+     {
+      "text_en": "Interest that was accrued but never paid is not part of the outstanding principal, so only interest paid with new loans belongs here; the second-ring rates are assumed.",
+      "text_es": "Los intereses devengados y no pagados no forman parte del capital vigente, por lo que aquí solo corresponde el interés pagado con nuevos créditos; las tasas del segundo anillo son supuestas.",
+      "refs": [],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "Paying-agent records for each coupon and maturity of Grupo Vázquez, ITTI, Kasas and Model, matched to the credit that funded the issuer's account; the bank's interest-income ledger for the questioned loans with the paying account.",
+    "would_confirm_es": "Registros del agente de pago de cada cupón y vencimiento de Grupo Vázquez, ITTI, Kasas y Model, cruzados con el crédito que fondeó la cuenta del emisor; el mayor de intereses cobrados por el banco en los créditos cuestionados, con la cuenta pagadora.",
+    "confidence": "medium",
+    "reviewer_note_en": "Trimmed from USD 140 million to USD 125 million: the own-loan interest part was lowered from 65 to 50 because unpaid accrued interest is not in the principal being explained. The unit check on the rating agency's annex passed: figures are in thousands of guaraníes throughout and the interest totals convert as the analyst stated.",
+    "reviewer_note_es": "Se ajustó de USD 140 millones a USD 125 millones: la parte de intereses propios bajó de 65 a 50 porque el interés devengado e impago no integra el capital que se busca explicar. La verificación de unidades del anexo de la calificadora fue satisfactoria: las cifras están en miles de guaraníes en todo el cuadro y los totales de intereses se convierten como indicó el analista."
+   },
+   {
+    "id": "circular_support",
+    "rank": 3,
+    "title_en": "Money that came back to support the bank's own capital and income",
+    "title_es": "Dinero que volvió para sostener el capital y los resultados del propio banco",
+    "summary_en": "Hypothesis: part of the outstanding stock came back to the bank as paid-in capital, purchases of bank or holding-company paper and interest collected in the June 2026 portfolio sale. This is separate from the much larger gross circulation shown below, where loans were repaid with new loans.",
+    "summary_es": "Hipótesis: parte del saldo vigente volvió al banco como capital integrado, compras de títulos del banco o de la holding e intereses cobrados en la venta de cartera de junio de 2026. Es distinto de la circulación bruta, mucho mayor, que se muestra más abajo, donde los créditos se pagaron con créditos nuevos.",
+    "low": 10000000,
+    "central": 45000000,
+    "high": 135000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 5.1,
+    "fate": "circulated",
+    "evidence_for": [
+     {
+      "text_en": "A rating agency reports USD 77 million of capital committed to the bank in 2025, of which USD 50 million paid in, while the holding company received only Gs. 12 bn of dividends.",
+      "text_es": "Una calificadora informa USD 77 millones de capital comprometido con el banco en 2025, de los cuales USD 50 millones integrados, mientras la holding cobró apenas Gs. 12 mil millones de dividendos.",
+      "refs": [
+       "press:fact:0158",
+       "press:fact:0255",
+       "press:fact:0256"
+      ],
+      "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf",
+      "asserted_by": "rating_agency"
+     },
+     {
+      "text_en": "The nine loans were sold at 103.8% of principal, so about USD 2.7 million of accrued interest was collected with money the bank had itself lent that week.",
+      "text_es": "Los nueve créditos se vendieron al 103,8% del capital, de modo que unos USD 2,7 millones de intereses devengados se cobraron con dinero que el propio banco había prestado esa semana.",
+      "refs": [
+       "rec:flow:0060",
+       "rec:flow:0061",
+       "rec:flow:0041",
+       "rec:flow:0042"
+      ],
+      "url": "",
+      "asserted_by": "prosecution"
+     },
+     {
+      "text_en": "One June 2026 borrower used USD 5.77 million to buy paper described in one article as 'ueno' bonds sold by Grupo Vázquez.",
+      "text_es": "Una prestataria de junio de 2026 usó USD 5,77 millones para comprar títulos que un artículo describe como bonos «ueno» vendidos por Grupo Vázquez.",
+      "refs": [
+       "press:flow:0050",
+       "rec:flow:0049"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     },
+     {
+      "text_en": "Rey says certificates of deposit bought with cash in 2025 were meant to capitalise the bank in 2026.",
+      "text_es": "Rey dice que los certificados de depósito comprados con efectivo en 2025 estaban destinados a capitalizar el banco en 2026.",
+      "refs": [
+       "rec:flow:0073",
+       "rec:event:0047",
+       "src:acta-p22"
+      ],
+      "url": "",
+      "asserted_by": "rey"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "The cash-and-certificates account is hearsay from a single source, its date does not fit its context, and nothing links that cash to loan proceeds.",
+      "text_es": "El relato del efectivo y los certificados es de oídas y de fuente única, su fecha no encaja en el contexto y nada vincula ese efectivo con el producto de los créditos.",
+      "refs": [
+       "rec:issue:0009",
+       "rec:flow:0071"
+      ],
+      "url": ""
+     },
+     {
+      "text_en": "An outside investor put in USD 30 million in December 2025, so part of the 2025 capital was outside money.",
+      "text_es": "Un inversor externo aportó USD 30 millones en diciembre de 2025, por lo que parte del capital de 2025 fue dinero externo.",
+      "refs": [
+       "chrono:event:0029",
+       "press:flow:0073"
+      ],
+      "url": ""
+     },
+     {
+      "text_en": "The bank's then president denied indirect financing of the portfolio sale.",
+      "text_es": "El entonces presidente del banco negó la financiación indirecta de la venta de cartera.",
+      "refs": [
+       "chrono:event:0063"
+      ],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "The bank's capital account with the origin of each payment, the certificate-of-deposit register with endorsements, and payment-system logs for the shareholders on capital dates.",
+    "would_confirm_es": "La cuenta de capital del banco con el origen de cada integración, el registro de certificados de depósito con sus endosos y los registros del sistema de pagos de los accionistas en las fechas de integración.",
+    "confidence": "low",
+    "reviewer_note_en": "Cut from USD 65 million (medium) to USD 45 million (low). The USD 20 million of certificates bought with cash was removed from the central case: Rey describes cash coming into the bank, of unknown origin, and no source says it came from the questioned loans. It stays in the high bound.",
+    "reviewer_note_es": "Se redujo de USD 65 millones (media) a USD 45 millones (baja). Se retiraron del escenario central los USD 20 millones de certificados comprados con efectivo: Rey describe efectivo que ingresa al banco, de origen desconocido, y ninguna fuente dice que proviniera de los créditos cuestionados. Se mantiene en el límite alto."
+   },
+   {
+    "id": "asset_acquisition",
+    "rank": 4,
+    "title_en": "Assets that may still exist",
+    "title_es": "Activos que podrían seguir existiendo",
+    "summary_en": "Hypothesis: a small share became property, hotel works, land, equipment or capitalised software. Documented payments are modest and the supervisor, as relayed, says the hotel and real-estate loans did not go to the works.",
+    "summary_es": "Hipótesis: una parte menor se convirtió en inmuebles, obras hoteleras, terrenos, equipos o software activado. Los pagos documentados son modestos y la supervisión, según lo difundido, sostiene que los créditos hoteleros e inmobiliarios no fueron a las obras.",
+    "low": 15000000,
+    "central": 30000000,
+    "high": 120000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 3.4,
+    "fate": "held_as_assets",
+    "evidence_for": [
+     {
+      "text_en": "Internal documents cited by one newspaper list 71 property payments totalling Gs. 61,140 million and 15 dollar payments totalling USD 6.23 million between April 2024 and August 2026, about USD 15.6 million in all.",
+      "text_es": "Documentos internos citados por un diario registran 71 pagos por inmuebles por Gs. 61.140 millones y 15 pagos en dólares por USD 6,23 millones entre abril de 2024 y agosto de 2026, unos USD 15,6 millones en total.",
+      "refs": [
+       "press:fact:0076",
+       "press:fact:0077",
+       "press:flow:0079",
+       "press:flow:0080",
+       "press:flow:0081"
+      ],
+      "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/",
+      "asserted_by": "press"
+     },
+     {
+      "text_en": "Nubicom paid an equipment supplier USD 1.2 million; one borrower's first loan was for land, licences and civil works.",
+      "text_es": "Nubicom pagó USD 1,2 millones a un proveedor de equipos; el primer crédito de una prestataria era para terreno, licencias y obras civiles.",
+      "refs": [
+       "press:flow:0135",
+       "press:loan:0048"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     },
+     {
+      "text_en": "Seized: three ranches valued at USD 15.95 million, vehicles valued by local media at about USD 1.4 million, a yacht and aircraft.",
+      "text_es": "Incautaciones: tres estancias valuadas en USD 15,95 millones, vehículos valuados por la prensa local en unos USD 1,4 millones, un yate y aeronaves.",
+      "refs": [
+       "press:fact:0063",
+       "press:fact:0064",
+       "press:fact:0065",
+       "chrono:event:0150",
+       "chrono:event:0121"
+      ],
+      "url": "",
+      "asserted_by": "prosecution"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "The supervisor, as relayed, says the hotel loan went the same day to Vinanzas and on to ITTI to cover debits, and that the port-project disbursements covered overdrafts and cheques.",
+      "text_es": "La supervisión, según lo difundido, sostiene que el crédito hotelero pasó el mismo día a Vinanzas y luego a ITTI para cubrir débitos, y que los desembolsos del proyecto portuario cubrieron sobregiros y cheques.",
+      "refs": [
+       "press:flow:0074",
+       "press:flow:0075",
+       "press:flow:0076"
+      ],
+      "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/"
+     },
+     {
+      "text_en": "No source dates the purchase of the ranches, vehicles, yacht or aircraft inside the lending period or ties any of them to a loan. The property documents were supplied by group staff and not independently verified.",
+      "text_es": "Ninguna fuente sitúa la compra de las estancias, vehículos, yate o aeronaves dentro del período de los créditos ni vincula alguno de ellos con un crédito. Los documentos sobre inmuebles fueron aportados por personal del grupo y no se verificaron de forma independiente.",
+      "refs": [
+       "chrono:event:0205",
+       "press:fact:0076"
+      ],
+      "url": ""
+     },
+     {
+      "text_en": "ITTI's capitalised software is the same spending as the technology costs in the first hypothesis and is not counted again here.",
+      "text_es": "El software activado por ITTI es el mismo gasto que los costos de tecnología de la primera hipótesis y no se vuelve a contar aquí.",
+      "refs": [],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "Asset registers with supplier invoices and proof of payment; property-registry entries with dates and prices.",
+    "would_confirm_es": "Registros de bienes con facturas de proveedores y comprobantes de pago; asientos del registro de inmuebles con fechas y precios.",
+    "confidence": "low",
+    "reviewer_note_en": "Cut from USD 50 million to USD 30 million: documented payments are about USD 17 million, and the analyst's central value was three times that without a source for the difference.",
+    "reviewer_note_es": "Se redujo de USD 50 millones a USD 30 millones: los pagos documentados rondan USD 17 millones, y el valor central del analista los triplicaba sin fuente que explicara la diferencia."
+   },
+   {
+    "id": "sponsorship_marketing",
+    "rank": 5,
+    "title_en": "Sponsorship and brand spending",
+    "title_es": "Patrocinios y gasto de marca",
+    "summary_en": "Hypothesis: sports and entertainment sponsorships explain a few per cent at most. Priced contracts total under USD 14 million over several years and no source says which company paid them.",
+    "summary_es": "Hipótesis: los patrocinios deportivos y de espectáculos explican a lo sumo un porcentaje bajo. Los contratos con precio publicado suman menos de USD 14 millones en varios años y ninguna fuente indica qué empresa los pagó.",
+    "low": 0,
+    "central": 15000000,
+    "high": 70000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 1.7,
+    "fate": "spent",
+    "evidence_for": [
+     {
+      "text_en": "Reported contracts: football association USD 12 million over four years, a rally USD 1 million, the Olympic committee USD 300,000; club and stadium deals are unpriced.",
+      "text_es": "Contratos informados: asociación de fútbol USD 12 millones en cuatro años, un rally USD 1 millón, comité olímpico USD 300.000; los contratos con clubes y de estadio no tienen precio publicado.",
+      "refs": [],
+      "url": "https://infonegocios.com.py/default/que-compromisos-estan-en-juego-y-quienes-podrian-verse-afectados",
+      "asserted_by": "press"
+     },
+     {
+      "text_en": "ITTI passed Gs. 74,071 million to a company called Match S.A. after receiving a borrower's funds; an entertainment company owed the bank Gs. 199 bn.",
+      "text_es": "ITTI transfirió Gs. 74.071 millones a una empresa llamada Match S.A. tras recibir fondos de una prestataria; una empresa de espectáculos debía al banco Gs. 199 mil millones.",
+      "refs": [
+       "press:flow:0103",
+       "press:fact:0030"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "If the bank paid the sponsorships from its own income statement they are outside the questioned credit altogether.",
+      "text_es": "Si el banco pagó los patrocinios desde su propio estado de resultados, quedan totalmente fuera del crédito cuestionado.",
+      "refs": [],
+      "url": ""
+     },
+     {
+      "text_en": "Match S.A. is not described in any source, and the entertainment company's disbursements are said to have gone to ITTI, Grupo Vázquez and Vinanzas.",
+      "text_es": "Match S.A. no está descrita en ninguna fuente, y los desembolsos de la empresa de espectáculos habrían ido a ITTI, Grupo Vázquez y Vinanzas.",
+      "refs": [
+       "press:flow:0076",
+       "press:flow:0077",
+       "press:flow:0078"
+      ],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "The sponsorship contracts with their payment records, showing the paying entity and account.",
+    "would_confirm_es": "Los contratos de patrocinio con sus constancias de pago, que muestren la entidad y la cuenta pagadoras.",
+    "confidence": "low",
+    "reviewer_note_en": "Cut from USD 35 million to USD 15 million and the low bound set to zero. The analyst's main scale evidence, ITTI's selling expenses, is already inside ITTI's cost base in the first hypothesis, so it was counted twice.",
+    "reviewer_note_es": "Se redujo de USD 35 millones a USD 15 millones y el límite bajo se fijó en cero. La principal evidencia de escala del analista, los gastos de ventas de ITTI, ya está dentro de la base de costos de ITTI de la primera hipótesis, por lo que se contaba dos veces."
+   },
+   {
+    "id": "transfers_abroad",
+    "rank": 6,
+    "title_en": "Transfers abroad",
+    "title_es": "Transferencias al exterior",
+    "summary_en": "Only USD 5.8 million is reported as sent abroad with an amount: USD 4.6 million to an account of an Argentine company and USD 1.2 million to an equipment supplier. Prosecutors say several countries have confirmed assets, but no country, asset or value is public.",
+    "summary_es": "Solo USD 5,8 millones figuran como enviados al exterior con monto: USD 4,6 millones a una cuenta de una empresa argentina y USD 1,2 millones a un proveedor de equipos. La fiscalía afirma que varios países confirmaron la existencia de bienes, pero no se conoce país, bien ni valor.",
+    "low": 6000000,
+    "central": 6000000,
+    "high": 40000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 0.7,
+    "fate": "unknown",
+    "evidence_for": [
+     {
+      "text_en": "Nubicom sent USD 4.6 million to an account in Argentina out of a USD 7.5 million loan, and USD 1.2 million to an equipment supplier.",
+      "text_es": "Nubicom envió USD 4,6 millones a una cuenta en Argentina con fondos de un crédito de USD 7,5 millones, y USD 1,2 millones a un proveedor de equipos.",
+      "refs": [
+       "press:flow:0090",
+       "press:flow:0135",
+       "press:loan:0044"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     },
+     {
+      "text_en": "Prosecutors announced cooperation with Luxembourg, Argentina and the United States and say several countries confirmed assets.",
+      "text_es": "La fiscalía anunció cooperación con Luxemburgo, Argentina y Estados Unidos y afirma que varios países confirmaron bienes.",
+      "refs": [
+       "chrono:event:0158",
+       "chrono:event:0196",
+       "chrono:event:0215"
+      ],
+      "url": "",
+      "asserted_by": "prosecution"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "The Argentine company says it had sold its shares and never managed the Paraguayan company's funds.",
+      "text_es": "La empresa argentina afirma que había vendido sus acciones y que nunca administró los fondos de la sociedad paraguaya.",
+      "refs": [
+       "press:event:0030"
+      ],
+      "url": ""
+     },
+     {
+      "text_en": "The Luxembourg holding company was set up with shares, not cash, and no foreign freeze has been confirmed.",
+      "text_es": "La holding de Luxemburgo se constituyó con aportes en acciones, no en efectivo, y no se confirmó ninguna inmovilización en el exterior.",
+      "refs": [
+       "chrono:event:0010",
+       "chrono:event:0196"
+      ],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "The bank's international-transfer log and foreign-exchange tickets; replies to the requests for mutual legal assistance.",
+    "would_confirm_es": "El registro de transferencias internacionales y las boletas de cambio del banco; las respuestas a los pedidos de asistencia jurídica internacional.",
+    "confidence": "low",
+    "reviewer_note_en": "Central set to the traced USD 6 million (the analyst had 8). The absence of evidence here is not evidence that little went abroad: nobody has published the bank's international-transfer log.",
+    "reviewer_note_es": "El valor central se fijó en los USD 6 millones rastreados (el analista tenía 8). La falta de evidencia no prueba que haya salido poco al exterior: nadie publicó el registro de transferencias internacionales del banco."
+   },
+   {
+    "id": "fees_retained",
+    "rank": 7,
+    "title_en": "A 0.5% charge financed inside the loans",
+    "title_es": "Un cargo de 0,5% financiado dentro de los propios créditos",
+    "summary_en": "Twelve loans in the record have a principal equal to a round amount plus exactly 0.5%, and three further balances exceed principal by exactly 0.5%. The simplest reading is an up-front charge added to the loan, which would mean the borrowers did not fund even that. No source names the item.",
+    "summary_es": "Doce créditos del acta tienen un capital igual a un monto redondo más exactamente 0,5%, y otros tres saldos superan el capital en exactamente 0,5%. La lectura más simple es un cargo inicial sumado al crédito, lo que implicaría que las prestatarias ni siquiera financiaron ese cargo. Ninguna fuente identifica el concepto.",
+    "low": 1000000,
+    "central": 4000000,
+    "high": 6000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 0.5,
+    "fate": "circulated",
+    "evidence_for": [
+     {
+      "text_en": "Twelve principals divide by 1.005 into a round amount: ten at a strict test (at least USD 50,000 or Gs. 1,000 million), plus Gs. 64,923 million (64,600 x 1.005) and Gs. 91,334.4 million (90,880 x 1.005). The uplifts total about USD 0.57 million.",
+      "text_es": "Doce capitales divididos por 1,005 dan un monto redondo: diez con un criterio estricto (al menos USD 50.000 o Gs. 1.000 millones), más Gs. 64.923 millones (64.600 x 1,005) y Gs. 91.334,4 millones (90.880 x 1,005). Los recargos suman unos USD 0,57 millones.",
+      "refs": [
+       "rec:loan:0006",
+       "rec:loan:0007",
+       "rec:loan:0008",
+       "rec:loan:0009",
+       "rec:loan:0012",
+       "rec:loan:0013",
+       "rec:loan:0014",
+       "rec:loan:0017",
+       "rec:loan:0018",
+       "rec:loan:0019",
+       "rec:loan:0031",
+       "rec:loan:0032"
+      ],
+      "url": "",
+      "asserted_by": "analyst"
+     },
+     {
+      "text_en": "Three FRANEDE balances equal principal times 1.005 exactly (about USD 0.25 million); the editor confirmed them on the page image.",
+      "text_es": "Tres saldos de FRANEDE equivalen exactamente al capital por 1,005 (unos USD 0,25 millones); el editor los confirmó en la imagen de la página.",
+      "refs": [
+       "rec:loan:0025",
+       "rec:loan:0027",
+       "rec:loan:0028",
+       "rec:issue:0007"
+      ],
+      "url": "",
+      "asserted_by": "prosecution"
+     },
+     {
+      "text_en": "The same arithmetic appears outside the record: a Gs. 417,075 million loan against Gs. 415,000 million paid on.",
+      "text_es": "La misma aritmética aparece fuera del acta: un crédito de Gs. 417.075 millones frente a Gs. 415.000 millones transferidos.",
+      "refs": [
+       "press:loan:0045",
+       "press:flow:0091"
+      ],
+      "url": "",
+      "asserted_by": "regulator"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "It could be a tax, stamp or insurance charge passed on to the borrower. The extrapolation to the whole book assumes the pattern holds for loans whose terms are not published.",
+      "text_es": "Podría ser un impuesto, sellado o seguro trasladado al prestatario. La extrapolación a toda la cartera supone que el patrón se repite en créditos cuyas condiciones no se publicaron.",
+      "refs": [],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "Settlement sheets of the loans showing the charge, its name and the account credited.",
+    "would_confirm_es": "Las liquidaciones de los créditos, con el cargo, su denominación y la cuenta acreditada.",
+    "confidence": "medium",
+    "reviewer_note_en": "Count settled from the data: twelve principals (ten on the strictest test) plus three balances, fifteen operations in all. The three analysts' ten, eleven and twelve were all defensible readings of the same pattern. Observed uplifts total USD 0.82 million; the USD 4 million is an extrapolation.",
+    "reviewer_note_es": "El conteo se resolvió con los datos: doce capitales (diez con el criterio más estricto) más tres saldos, quince operaciones en total. Los diez, once y doce de los tres analistas eran lecturas defendibles del mismo patrón. Los recargos observados suman USD 0,82 millones; los USD 4 millones son una extrapolación."
+   },
+   {
+    "id": "cash_extraction",
+    "rank": 8,
+    "title_en": "Cash taken out",
+    "title_es": "Retiros en efectivo",
+    "summary_en": "One newspaper reports seven internal requests to prepare cash at the bank on the group's instructions, about USD 0.7 million in all. Nothing shows who received it or why. The much larger cash amount Rey mentions is cash coming into the bank and is not counted here.",
+    "summary_es": "Un diario publicó siete pedidos internos para preparar efectivo en el banco por instrucción del grupo, unos USD 0,7 millones en total. Nada indica quién lo recibió ni para qué. El monto mucho mayor que menciona Rey es efectivo que ingresa al banco y no se computa aquí.",
+    "low": 700000,
+    "central": 1000000,
+    "high": 25000000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "share_central_pct": 0.1,
+    "fate": "extracted",
+    "evidence_for": [
+     {
+      "text_en": "Seven cash requests in January and October 2026 totalling Gs. 4,767 million, some described as packed in bags, a box and envelopes.",
+      "text_es": "Siete pedidos de efectivo en enero y octubre de 2026 por Gs. 4.767 millones, algunos descritos como entregados en bolsos, una caja y sobres.",
+      "refs": [
+       "press:flow:0140",
+       "press:flow:0141",
+       "press:flow:0142",
+       "press:flow:0143",
+       "press:flow:0144",
+       "press:flow:0145",
+       "press:flow:0146"
+      ],
+      "url": "",
+      "asserted_by": "press"
+     },
+     {
+      "text_en": "Rey says instalments on a land sale were taken over by the group through a supposed fodder payment.",
+      "text_es": "Rey dice que el grupo asumió cuotas de una venta de tierras mediante un supuesto pago de forraje.",
+      "refs": [
+       "rec:flow:0076",
+       "rec:flow:0077"
+      ],
+      "url": "",
+      "asserted_by": "rey"
+     }
+    ],
+    "evidence_against": [
+     {
+      "text_en": "The documents are leaked messages from a single outlet and describe orders, not confirmed deliveries; the amount is under 0.1% of the questioned book.",
+      "text_es": "Los documentos son mensajes filtrados publicados por un solo medio y describen órdenes, no entregas confirmadas; el monto es inferior al 0,1% de la cartera cuestionada.",
+      "refs": [
+       "chrono:event:0031",
+       "chrono:event:0053"
+      ],
+      "url": ""
+     }
+    ],
+    "would_confirm_en": "The bank's vault log and cash-withdrawal vouchers; cash-carrier records.",
+    "would_confirm_es": "El libro de bóveda y los comprobantes de retiro de efectivo del banco; los registros de la transportadora de caudales.",
+    "confidence": "low",
+    "reviewer_note_en": "Central set to the reported USD 1 million. The high bound of USD 25 million assumes the cash Rey describes had first been taken out of the circuit, which no source says.",
+    "reviewer_note_es": "El valor central se fijó en el USD 1 millón publicado. El límite alto de USD 25 millones supone que el efectivo que describe Rey había salido antes del circuito, algo que ninguna fuente afirma."
+   }
+  ],
+  "unexplained": {
+   "low": 0,
+   "central": 302900000,
+   "high": 636200000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "computed",
+   "share_central_pct": 34.5,
+   "note_en": "About a third of the questioned book has no evidenced destination. It sits mainly in second-ring borrowers with no traced first transfer and in whatever the first overdrafts of ITTI, REDISA and REDIPRO were drawn for, which no source states. The review does not fill this gap. The high value pairs with the low bounds of the hypotheses; the high bounds of the hypotheses add up to more than the total, so they cannot all hold together.",
+   "note_es": "Cerca de un tercio de la cartera cuestionada no tiene destino acreditado. Corresponde sobre todo a prestatarias del segundo anillo sin primera transferencia rastreada y a aquello para lo que se giraron los primeros sobregiros de ITTI, REDISA y REDIPRO, que ninguna fuente indica. La revisión no rellena ese vacío. El valor alto va con los límites bajos de las hipótesis; los límites altos de las hipótesis suman más que el total, por lo que no pueden cumplirse todos a la vez."
+  },
+  "circulation": {
+   "disbursed_with_amount": 749400000,
+   "returned_to_bank": 286900000,
+   "share_pct": 38.3,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "computed",
+   "note_en": "Of the loan disbursements that carry an amount in the sources, at least 38% came back to the bank as repayments of earlier questioned loans or as the price of the June 2026 portfolio sale, in every case, as alleged, with money from group companies or from the bank's own new loans. That money circulated; it is not missing and it is not in the outstanding total. It is a floor, because most repayment legs carry no amount.",
+   "note_es": "De los desembolsos que tienen monto en las fuentes, al menos el 38% volvió al banco como pago de créditos cuestionados anteriores o como precio de la venta de cartera de junio de 2026, en todos los casos, según se alega, con dinero de empresas del grupo o de nuevos créditos del propio banco. Ese dinero circuló: no falta y no está en el saldo vigente. Es un piso, porque la mayoría de los tramos de pago no tiene monto.",
+   "refs": [
+    "rec:loan:0003",
+    "rec:loan:0005",
+    "rec:loan:0007",
+    "rec:loan:0021",
+    "rec:loan:0023",
+    "rec:loan:0024",
+    "rec:loan:0026",
+    "rec:loan:0030",
+    "rec:loan:0031",
+    "rec:loan:0032",
+    "rec:loan:0033",
+    "rec:flow:0061",
+    "rec:flow:0055",
+    "press:loan:0029",
+    "press:loan:0030",
+    "press:flow:0093"
+   ]
+  }
+ },
+ "stakeholders_note_en": "Rows overlap and must not be added.",
+ "stakeholders_note_es": "Las filas se superponen y no deben sumarse.",
+ "stakeholders": [
+  {
+   "who_en": "Deposit Guarantee Fund",
+   "who_es": "Fondo de Garantía de Depósitos (FGD)",
+   "exposure_low": 740000000,
+   "exposure_high": 928000000,
+   "expected_loss_low": 0,
+   "expected_loss_high": 503000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Exposure is the reported payout. Loss is nil if the fund is repaid ahead of other depositors or if assets cover deposits; about USD 84 million in the central case and USD 503 million in the high case if the fund instead tops up the packages and recovers last. The fund held about USD 1.6 billion.",
+   "assumption_es": "La exposición es el desembolso informado. La pérdida es nula si el fondo cobra antes que los demás depositantes o si el activo cubre los depósitos; unos USD 84 millones en el escenario central y USD 503 millones en el alto si, en cambio, el fondo completa los paquetes y cobra al final. El fondo tenía unos USD 1.600 millones.",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0181",
+    "chrono:event:0138",
+    "chrono:event:0179"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Private depositors above the guarantee",
+   "who_es": "Depositantes privados por encima de la garantía",
+   "exposure_low": 1060000000,
+   "exposure_high": 1248000000,
+   "expected_loss_low": 0,
+   "expected_loss_high": 423000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "computed",
+   "loss_kind": "estimate",
+   "assumption_en": "Exposure computed from total deposits of about USD 2.8 billion less the guaranteed part and public funds. Loss is nil where assets cover deposits or the fund absorbs the gap; up to 34% in the high case if the fund is repaid first.",
+   "assumption_es": "Exposición calculada a partir de depósitos totales de unos USD 2.800 millones menos la parte garantizada y los fondos públicos. La pérdida es nula si el activo cubre los depósitos o si el fondo absorbe la brecha; hasta 34% en el escenario alto si el fondo cobra primero.",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0035"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Social-security institute (IPS)",
+   "who_es": "Instituto de Previsión Social (IPS)",
+   "exposure_low": 345000000,
+   "exposure_high": 517000000,
+   "expected_loss_low": 18000000,
+   "expected_loss_high": 92000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Pension deposits are treated as first-rank and paid in full in every case (the reviewer's reading of the law, not a ruling). Loss falls on Gs. 250 bn of bank bonds and, in the worst case, on operating funds if they are treated as ordinary deposits.",
+   "assumption_es": "Los depósitos previsionales se consideran de primer orden y se pagan íntegramente en todos los escenarios (lectura del revisor sobre la ley, no una resolución). La pérdida recae sobre Gs. 250 mil millones en bonos del banco y, en el peor caso, sobre fondos operativos si se los trata como depósitos comunes.",
+   "refs": [
+    "chrono:event:0091",
+    "chrono:event:0163",
+    "chrono:event:0198",
+    "press:fact:0033",
+    "press:fact:0106"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "All public entities, the institute included",
+   "who_es": "Todas las entidades públicas, incluido el IPS",
+   "exposure_low": 787000000,
+   "exposure_high": 888000000,
+   "expected_loss_low": 18000000,
+   "expected_loss_high": 164000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Gs. 3.6 trillion plus USD 233.4 million at 30 September 2026. Public deposits that are not pension funds are treated like private deposits above the guarantee. Overlaps the row above.",
+   "assumption_es": "Gs. 3,6 billones más USD 233,4 millones al 30 de septiembre de 2026. Los depósitos públicos que no son previsionales se tratan como depósitos privados por encima de la garantía. Se superpone con la fila anterior.",
+   "refs": [
+    "chrono:event:0052",
+    "chrono:event:0035",
+    "dos:fact:0002",
+    "dos:fact:0003"
+   ],
+   "url": "https://www.abc.com.py/economia/2026/11/18/ueno-bank-mef-identifica-us-888-millones-de-fondos-publicos-cuanto-podra-recuperarlos/"
+  },
+  {
+   "who_en": "Holders of the international senior notes",
+   "who_es": "Tenedores de los bonos sénior internacionales",
+   "exposure_low": 350000000,
+   "exposure_high": 350000000,
+   "expected_loss_low": 168000000,
+   "expected_loss_high": 350000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Unsecured and behind all deposits. Recovery about 52% in the low case and nil in the central and high cases. The notes were quoted near 5 cents on the dollar.",
+   "assumption_es": "Sin garantía y por detrás de todos los depósitos. Recuperación de alrededor de 52% en el escenario bajo y nula en el central y el alto. Los bonos cotizaban cerca de 5 centavos por dólar.",
+   "refs": [
+    "chrono:event:0032",
+    "press:fact:0298",
+    "chrono:event:0200"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Holders of the bank's local bonds",
+   "who_es": "Tenedores de bonos locales del banco",
+   "exposure_low": 103000000,
+   "exposure_high": 103000000,
+   "expected_loss_low": 49000000,
+   "expected_loss_high": 103000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Gs. 668.5 bn at December 2025, including a subordinated issue. Same treatment as the international notes; funds were told to value them at zero.",
+   "assumption_es": "Gs. 668,5 mil millones a diciembre de 2025, incluida una emisión subordinada. Mismo tratamiento que los bonos internacionales; se instruyó a los fondos a valuarlos en cero.",
+   "refs": [
+    "press:fact:0260",
+    "chrono:event:0114"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Development lenders (IDB Invest, Triodos, GAWA)",
+   "who_es": "Financiadores de desarrollo (BID Invest, Triodos, GAWA)",
+   "exposure_low": 41000000,
+   "exposure_high": 41000000,
+   "expected_loss_low": 20000000,
+   "expected_loss_high": 41000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Original amounts; balances are not published. Treated as ordinary unsecured creditors.",
+   "assumption_es": "Montos originales; los saldos no están publicados. Se los trata como acreedores quirografarios.",
+   "refs": [
+    "chrono:event:0020",
+    "chrono:event:0048"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "OTP Bank (minority shareholder of the parent)",
+   "who_es": "OTP Bank (accionista minoritario de la controlante)",
+   "exposure_low": 47000000,
+   "exposure_high": 47000000,
+   "expected_loss_low": 32000000,
+   "expected_loss_high": 47000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "USD 32 million already written down by the investor; the rest is at risk as equity.",
+   "assumption_es": "USD 32 millones ya castigados por el inversor; el resto está en riesgo por ser capital.",
+   "refs": [
+    "chrono:event:0036",
+    "chrono:event:0177"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Shareholders of the bank",
+   "who_es": "Accionistas del banco",
+   "exposure_low": 375000000,
+   "exposure_high": 375000000,
+   "expected_loss_low": 375000000,
+   "expected_loss_high": 375000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Book equity at 30 June 2026. Lost in every case. The row above is inside this one.",
+   "assumption_es": "Patrimonio contable al 30 de junio de 2026. Se pierde en todos los escenarios. La fila anterior está incluida en esta.",
+   "refs": [
+    "src:analysis-missing-money-2026-11-20"
+   ],
+   "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+  },
+  {
+   "who_en": "Holders of Grupo Vázquez bonds",
+   "who_es": "Tenedores de bonos de Grupo Vázquez",
+   "exposure_low": 204000000,
+   "exposure_high": 204000000,
+   "expected_loss_low": 122000000,
+   "expected_loss_high": 184000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Recovery of 10% to 40% (judgement): cash of about USD 71 million against debt of USD 341 million, with the bank's estate competing for the same assets.",
+   "assumption_es": "Recuperación de 10% a 40% (criterio del analista): caja de unos USD 71 millones frente a una deuda de USD 341 millones, y la masa del banco compite por los mismos bienes.",
+   "refs": [
+    "press:fact:0302",
+    "press:fact:0303",
+    "press:fact:0304",
+    "chrono:event:0087"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Holders of ITTI bonds",
+   "who_es": "Tenedores de bonos de ITTI",
+   "exposure_low": 40000000,
+   "exposure_high": 40000000,
+   "expected_loss_low": 16000000,
+   "expected_loss_high": 32000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Recovery of 20% to 60% (judgement): cash of about USD 35 million against debt of USD 66 million; 59% of revenue came from related parties.",
+   "assumption_es": "Recuperación de 20% a 60% (criterio del analista): caja de unos USD 35 millones frente a una deuda de USD 66 millones; el 59% de los ingresos provenía de vinculadas.",
+   "refs": [
+    "press:fact:0309",
+    "press:fact:0310",
+    "press:fact:0311",
+    "press:fact:0308"
+   ],
+   "url": ""
+  },
+  {
+   "who_en": "Investors in local funds holding bank or group paper",
+   "who_es": "Inversores de fondos locales con títulos del banco o del grupo",
+   "exposure_low": null,
+   "exposure_high": null,
+   "expected_loss_low": 0,
+   "expected_loss_high": 47000000,
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "exposure_kind": "reported",
+   "loss_kind": "estimate",
+   "assumption_en": "Holdings are not published. The upper bound applies one fund's 11.73% exposure to the whole USD 400 million managed by one house. About USD 46 million at the group's own fund manager is blocked, which is not the same as lost.",
+   "assumption_es": "Las tenencias no están publicadas. El límite superior aplica la exposición de 11,73% de un fondo a los USD 400 millones que administra una casa. Unos USD 46 millones en la administradora del grupo están bloqueados, lo que no equivale a una pérdida.",
+   "refs": [
+    "chrono:event:0114",
+    "chrono:event:0142",
+    "chrono:event:0167"
+   ],
+   "url": ""
+  }
+ ],
+ "recovery": {
+  "note_en": "Recovery scenarios are named by how much is recovered: 'high' recovery pairs with the 'low' shortfall in the headline, and 'low' recovery with the 'high' shortfall. Scenarios, not predictions.",
+  "note_es": "Los escenarios de recuperación se nombran según cuánto se recupera: la recuperación «alta» corresponde al faltante «bajo» de la cifra principal, y la «baja» al faltante «alto». Son escenarios, no pronósticos.",
+  "scenarios": [
+   {
+    "name": "low",
+    "assets_realised": 2195800000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "pairs_with_headline": "high",
+    "assumptions_en": "Questioned book of USD 946 million recovers 5%; placements 5%; the rest of the loan book 85%; sundry receivables 50%; trust and deferred charges nil. Assets equal about 83% of deposits.",
+    "assumptions_es": "La cartera cuestionada de USD 946 millones recupera 5%; las colocaciones, 5%; el resto de la cartera, 85%; los créditos diversos, 50%; el fideicomiso y los cargos diferidos, nada. El activo equivale a cerca del 83% de los depósitos."
+   },
+   {
+    "name": "central",
+    "assets_realised": 2614400000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "pairs_with_headline": "central",
+    "assumptions_en": "Questioned book of USD 879 million recovers 20%; placements 20%; the rest of the loan book 95%; other assets at book; trust and deferred charges nil. Assets equal about 99% of deposits, which is level with the Central Bank's statement once the uncertainty in the deposit figure is allowed for.",
+    "assumptions_es": "La cartera cuestionada de USD 879 millones recupera 20%; las colocaciones, 20%; el resto de la cartera, 95%; los demás activos a valor contable; el fideicomiso y los cargos diferidos, nada. El activo equivale a cerca del 99% de los depósitos, en línea con lo dicho por el BCP si se considera la incertidumbre sobre el monto de depósitos."
+   },
+   {
+    "name": "high",
+    "assets_realised": 3177100000,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "pairs_with_headline": "low",
+    "assumptions_en": "The only credit loss is the supervisor's stated provisions deficit of Gs. 1.62 trillion; placements recover 50%; everything else at book except the trust and deferred charges. Assets equal about 120% of deposits and non-deposit creditors recover about half.",
+    "assumptions_es": "La única pérdida crediticia es el déficit de previsiones de Gs. 1,62 billones informado por la supervisión; las colocaciones recuperan 50%; todo lo demás a valor contable salvo el fideicomiso y los cargos diferidos. El activo equivale a cerca del 120% de los depósitos y los acreedores no depositantes recuperan alrededor de la mitad."
+   }
+  ],
+  "fund_rank_fork": {
+   "explain_en": "Two officials have described the guarantee fund's position differently, and the law supports both. If the fund tops up the packages and recovers last ('fund absorbs'), other depositors are paid first and the fund carries any gap. If the fund is repaid first alongside pension deposits ('fund first'), the gap falls on deposits above the guarantee. On the reviewed numbers the choice moves about USD 84 million in the central case and about USD 503 million in the high case; in the low case assets cover all deposits and it makes no difference. The recovery analyst's larger swing of about USD 630 million came from heavier discounts on cash and ordinary loans, which the review did not keep. Figures shown are the central case; the other cases are in by_scenario. Assumed: deposits Gs. 17.2 trillion, of which guaranteed Gs. 5.0 trillion and pension funds Gs. 2.6 trillion; resolution costs Gs. 300 bn.",
+   "explain_es": "Dos funcionarios describieron de manera distinta la posición del fondo de garantía, y la ley admite ambas lecturas. Si el fondo completa los paquetes y cobra al final («el fondo absorbe»), los demás depositantes cobran primero y el fondo carga con la brecha. Si el fondo cobra primero junto con los depósitos previsionales («el fondo primero»), la brecha recae sobre los depósitos por encima de la garantía. Con las cifras revisadas, la elección mueve unos USD 84 millones en el escenario central y unos USD 503 millones en el alto; en el bajo, el activo cubre todos los depósitos y no hay diferencia. La diferencia mayor que calculó el analista de recuperación, de unos USD 630 millones, provenía de descuentos más fuertes sobre el disponible y la cartera normal, que la revisión no mantuvo. Las cifras mostradas corresponden al escenario central; los demás figuran en by_scenario. Supuestos: depósitos por Gs. 17,2 billones, de los cuales Gs. 5,0 billones garantizados y Gs. 2,6 billones previsionales; costos de resolución de Gs. 300 mil millones.",
+   "if_fund_absorbs": {
+    "fund_cost": 84300000,
+    "uninsured_recovery_pct": 100.0,
+    "bondholder_recovery_pct": 0.0
+   },
+   "if_fund_first": {
+    "fund_cost": 0,
+    "uninsured_recovery_pct": 94.3,
+    "bondholder_recovery_pct": 0.0
+   },
+   "by_scenario": {
+    "low_shortfall": {
+     "if_fund_absorbs": {
+      "fund_cost": 0,
+      "uninsured_recovery_pct": 100.0,
+      "bondholder_recovery_pct": 52.1
+     },
+     "if_fund_first": {
+      "fund_cost": 0,
+      "uninsured_recovery_pct": 100.0,
+      "bondholder_recovery_pct": 52.1
+     }
+    },
+    "central": {
+     "if_fund_absorbs": {
+      "fund_cost": 84300000,
+      "uninsured_recovery_pct": 100.0,
+      "bondholder_recovery_pct": 0.0
+     },
+     "if_fund_first": {
+      "fund_cost": 0,
+      "uninsured_recovery_pct": 94.3,
+      "bondholder_recovery_pct": 0.0
+     }
+    },
+    "high_shortfall": {
+     "if_fund_absorbs": {
+      "fund_cost": 503000000,
+      "uninsured_recovery_pct": 100.0,
+      "bondholder_recovery_pct": 0.0
+     },
+     "if_fund_first": {
+      "fund_cost": 0,
+      "uninsured_recovery_pct": 66.1,
+      "bondholder_recovery_pct": 0.0
+     }
+    }
+   },
+   "currency": "USD",
+   "as_of": "2026-11-20",
+   "kind": "estimate",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0181",
+    "chrono:event:0187",
+    "chrono:event:0035",
+    "chrono:event:0138"
+   ],
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  "asset_classes": [
+   {
+    "title_en": "Cash and reserves at the Central Bank",
+    "title_es": "Disponible y encaje en el BCP",
+    "book_value": 543600000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 100,
+    "recovery_central_pct": 100,
+    "recovery_high_pct": 100,
+    "reason_en": "Cash is worth its face value. Withdrawals before the resolution reduced cash and deposits by the same amount, so they do not change the shortfall.",
+    "reason_es": "El efectivo vale su valor nominal. Los retiros previos a la resolución redujeron el disponible y los depósitos en el mismo monto, por lo que no alteran el faltante.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "chrono:event:0067"
+    ]
+   },
+   {
+    "title_en": "Securities",
+    "title_es": "Valores públicos y privados",
+    "book_value": 131100000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 100,
+    "recovery_central_pct": 100,
+    "recovery_high_pct": 100,
+    "reason_en": "Taken at book value. The list of holdings is not published; any group paper inside would be worth much less.",
+    "reason_es": "Se toman a valor contable. La composición no está publicada; si incluye títulos del grupo, valdrían mucho menos.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "chrono:event:0113"
+    ]
+   },
+   {
+    "title_en": "Loans to financial institutions",
+    "title_es": "Créditos vigentes al sector financiero",
+    "book_value": 163200000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 100,
+    "recovery_central_pct": 100,
+    "recovery_high_pct": 100,
+    "reason_en": "Taken at book value.",
+    "reason_es": "Se toman a valor contable.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20"
+    ]
+   },
+   {
+    "title_en": "Loans to non-financial borrowers outside the questioned book",
+    "title_es": "Créditos al sector no financiero fuera de la cartera cuestionada",
+    "book_value": 1372200000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 85,
+    "recovery_central_pct": 95,
+    "recovery_high_pct": 100,
+    "reason_en": "Retail and business loans that acquirers are expected to take at or near book. The discount reflects the past-due portfolio of the 2024 merger, which was not separated in the accounts, and the discount buyers ask in a tender.",
+    "reason_es": "Créditos minoristas y empresariales que los adquirentes tomarían a valor contable o cercano. El descuento refleja la cartera vencida de la fusión de 2024, sin separación contable, y la rebaja que piden los compradores en una licitación.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "chrono:event:0026",
+     "chrono:event:0017",
+     "chrono:event:0232"
+    ]
+   },
+   {
+    "title_en": "Questioned loan book",
+    "title_es": "Cartera cuestionada",
+    "book_value": 878900000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 5,
+    "recovery_central_pct": 20,
+    "recovery_high_pct": 71.6,
+    "reason_en": "Unsecured; where sources describe the use, the money went on to group companies, so repayment depends on the group. The group's published cash (about USD 106 million at June 2026), three seized ranches (USD 16 million), a shopping-centre stake and a possible sale of ITTI add up to roughly USD 165 to 230 million, to be shared with USD 341 million of other group debt and with workers: about 14% to 19% of the book. The high figure is not a view on collectability; it is what is left if the loss is only the supervisor's stated provisions deficit.",
+    "reason_es": "Sin garantías reales; cuando las fuentes describen el destino, el dinero pasó a empresas del grupo, de modo que el cobro depende del grupo. La caja publicada del grupo (unos USD 106 millones a junio de 2026), tres estancias incautadas (USD 16 millones), una participación en un centro comercial y una eventual venta de ITTI suman entre USD 165 y 230 millones, a repartir con USD 341 millones de otra deuda del grupo y con los trabajadores: entre 14% y 19% de la cartera. El valor alto no es una opinión sobre la cobrabilidad: es lo que queda si la pérdida se limita al déficit de previsiones informado por la supervisión.",
+    "refs": [
+     "press:fact:0304",
+     "press:fact:0311",
+     "press:fact:0302",
+     "press:fact:0063",
+     "press:fact:0243",
+     "press:fact:0233",
+     "chrono:event:0070",
+     "chrono:event:0077"
+    ]
+   },
+   {
+    "title_en": "Merger-expenses trust",
+    "title_es": "Fideicomiso de gastos de fusión",
+    "book_value": 324000000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 0,
+    "recovery_central_pct": 0,
+    "recovery_high_pct": 0,
+    "reason_en": "Money already spent, carried as an asset with the Central Bank's 2024 authorisation. Nothing to sell. A clawback of invoices outside the authorised purposes is possible but unsized.",
+    "reason_es": "Dinero ya gastado, registrado como activo con autorización del BCP de 2024. No hay nada que vender. Es posible repetir facturas ajenas a los fines autorizados, pero no hay monto.",
+    "refs": [
+     "press:fact:0265",
+     "chrono:event:0017",
+     "chrono:event:0044"
+    ]
+   },
+   {
+    "title_en": "Deferred charges and intangibles",
+    "title_es": "Cargos diferidos e intangibles",
+    "book_value": 126900000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 0,
+    "recovery_central_pct": 0,
+    "recovery_high_pct": 0,
+    "reason_en": "Deferred costs and software with no market outside the bank.",
+    "reason_es": "Costos diferidos y software sin mercado fuera del banco.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "press:fact:0266"
+    ]
+   },
+   {
+    "title_en": "Placements in REDISA and REDIPRO",
+    "title_es": "Colocaciones en REDISA y REDIPRO",
+    "book_value": 134900000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 5,
+    "recovery_central_pct": 20,
+    "recovery_high_pct": 50,
+    "reason_en": "Working payment businesses, but bank-funded, with frozen accounts and no published accounts. Value only in a quick sale as going concerns.",
+    "reason_es": "Negocios de pagos en funcionamiento, pero fondeados por el banco, con cuentas bloqueadas y sin estados contables publicados. Solo valen en una venta rápida como empresas en marcha.",
+    "refs": [
+     "press:fact:0126",
+     "press:event:0041",
+     "chrono:event:0110"
+    ]
+   },
+   {
+    "title_en": "Sundry receivables",
+    "title_es": "Créditos diversos",
+    "book_value": 151000000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 50,
+    "recovery_central_pct": 100,
+    "recovery_high_pct": 100,
+    "reason_en": "Composition not published. May include amounts due from related companies for assets sold to them.",
+    "reason_es": "Composición no publicada. Podría incluir saldos a cobrar de vinculadas por activos vendidos.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "rec:flow:0074"
+    ]
+   },
+   {
+    "title_en": "Premises, equipment and other investments",
+    "title_es": "Bienes de uso y otras inversiones",
+    "book_value": 119200000,
+    "currency": "USD",
+    "as_of": "2026-06-30",
+    "kind": "reported",
+    "recovery_low_pct": 100,
+    "recovery_central_pct": 100,
+    "recovery_high_pct": 100,
+    "reason_en": "Taken at book value; 47 properties in the bank's name have been identified.",
+    "reason_es": "Se toman a valor contable; se identificaron 47 inmuebles a nombre del banco.",
+    "refs": [
+     "src:analysis-missing-money-2026-11-20",
+     "chrono:event:0085"
+    ]
+   },
+   {
+    "title_en": "Claims on directors, shareholders and the beneficial owner (not counted)",
+    "title_es": "Acciones contra directores, accionistas y beneficiario final (no computadas)",
+    "book_value": null,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "recovery_low_pct": 0,
+    "recovery_central_pct": 0,
+    "recovery_high_pct": 0,
+    "reason_en": "The embargo of USD 70 million plus Gs. 1.6 trillion is the amount claimed, not assets found. The holding companies' main asset was the bank itself.",
+    "reason_es": "El embargo de USD 70 millones más Gs. 1,6 billones es el monto reclamado, no bienes hallados. El principal activo de las sociedades controlantes era el propio banco.",
+    "refs": [
+     "chrono:event:0084",
+     "press:fact:0156"
+    ]
+   },
+   {
+    "title_en": "Seized and frozen assets (not counted)",
+    "title_es": "Bienes incautados e inmovilizados (no computados)",
+    "book_value": null,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "recovery_low_pct": 0,
+    "recovery_central_pct": 0,
+    "recovery_high_pct": 0,
+    "reason_en": "Reported values are about USD 17 million. Seized assets go to the State only on forfeiture after conviction and must be returned on acquittal, so seizure is not recovery for depositors.",
+    "reason_es": "Los valores publicados rondan USD 17 millones. Los bienes incautados pasan al Estado solo con comiso tras una condena y deben devolverse en caso de absolución, de modo que la incautación no es recuperación para los depositantes.",
+    "refs": [
+     "press:fact:0063",
+     "press:fact:0064",
+     "press:fact:0065",
+     "chrono:event:0150",
+     "chrono:event:0205"
+    ]
+   },
+   {
+    "title_en": "Assets abroad (not counted)",
+    "title_es": "Bienes en el exterior (no computados)",
+    "book_value": null,
+    "currency": "USD",
+    "as_of": "2026-11-20",
+    "kind": "estimate",
+    "recovery_low_pct": 0,
+    "recovery_central_pct": 0,
+    "recovery_high_pct": 0,
+    "reason_en": "Prosecutors say several countries confirmed assets; no country, asset, value or freeze is public.",
+    "reason_es": "La fiscalía afirma que varios países confirmaron bienes; no se conoce país, bien, valor ni inmovilización.",
+    "refs": [
+     "chrono:event:0196",
+     "chrono:event:0158"
+    ]
+   }
+  ]
+ },
+ "tracing_plan": [
+  {
+   "record_en": "Loan-by-loan schedule of every questioned loan, with balance, date, guarantee and first outward transfer",
+   "record_es": "Planilla crédito por crédito de toda la cartera cuestionada, con saldo, fecha, garantía y primera transferencia de salida",
+   "held_by_en": "The bank's core system, now under the intervention team; ITTI as operator",
+   "held_by_es": "El sistema central del banco, hoy a cargo de los interventores; ITTI como operador",
+   "would_show_en": "The true size of the questioned book, replacing the unofficial list behind 86% of the estimate, and the first recipient of each loan",
+   "would_show_es": "El tamaño real de la cartera cuestionada, en reemplazo de la lista oficiosa que sostiene el 86% de la estimación, y el primer receptor de cada crédito",
+   "priority": 1
+  },
+  {
+   "record_en": "The exclusion balance with the valuation of each asset lot",
+   "record_es": "El balance de exclusión con la valuación de cada lote de activos",
+   "held_by_en": "Central Bank",
+   "held_by_es": "Banco Central del Paraguay",
+   "would_show_en": "The official count of sound assets against liabilities, the provisions applied to the questioned book and whether deposits above the guarantee are in the packages",
+   "would_show_es": "El cómputo oficial de activos sanos frente a pasivos, las previsiones aplicadas a la cartera cuestionada y si los depósitos por encima de la garantía entran en los paquetes",
+   "priority": 2
+  },
+  {
+   "record_en": "Time-stamped account statements of ITTI, REDISA, REDIPRO, Vinanzas and Grupo Vázquez, January 2024 to November 2026, with the payment-system log",
+   "record_es": "Extractos con hora de las cuentas de ITTI, REDISA, REDIPRO, Vinanzas y Grupo Vázquez, de enero de 2024 a noviembre de 2026, con el registro del sistema de pagos (SIPAP)",
+   "held_by_en": "The bank, other banks and the Central Bank",
+   "held_by_es": "El banco, otros bancos y el BCP",
+   "would_show_en": "Where the money stopped: costs, bond service, property, cash or abroad; and what the first overdrafts of those companies paid for",
+   "would_show_es": "Dónde se detuvo el dinero: gastos, servicio de bonos, inmuebles, efectivo o exterior; y qué pagaron los primeros sobregiros de esas empresas",
+   "priority": 3
+  },
+  {
+   "record_en": "General ledgers and financial statements of REDISA, REDIPRO and Vinanzas, and ITTI's related-party revenue by contract",
+   "record_es": "Libros mayores y estados contables de REDISA, REDIPRO y Vinanzas, y los ingresos de ITTI con vinculadas por contrato",
+   "held_by_en": "Seized servers, auditors, rating agencies",
+   "held_by_es": "Servidores incautados, auditores, calificadoras",
+   "would_show_en": "Whether the money paid running costs, as Rey says, or was income and margin of group companies",
+   "would_show_es": "Si el dinero pagó gastos corrientes, como afirma Rey, o fue ingreso y margen de empresas del grupo",
+   "priority": 4
+  },
+  {
+   "record_en": "The bank's cashback ledger: monthly amounts, account debited, any re-invoicing",
+   "record_es": "El mayor de reintegros (cashback) del banco: montos mensuales, cuenta debitada y eventual refacturación",
+   "held_by_en": "The bank",
+   "held_by_es": "El banco",
+   "would_show_en": "Whether Rey's 'about USD 300 million' of cashback exists and who bore it",
+   "would_show_es": "Si existen los «unos USD 300 millones» de reintegros que menciona Rey y quién los soportó",
+   "priority": 5
+  },
+  {
+   "record_en": "Merger-trust ledger with supplier invoices, and the Central Bank resolution with its feasibility plan",
+   "record_es": "Mayor del fideicomiso de fusión con las facturas de proveedores, y la resolución del BCP con su plan de factibilidad",
+   "held_by_en": "Trustee, Central Bank file",
+   "held_by_es": "Fiduciario, expediente del BCP",
+   "would_show_en": "How much of the USD 324 million went to group suppliers and whether it overlaps Rey's figure",
+   "would_show_es": "Cuánto de los USD 324 millones fue a proveedores del grupo y si se superpone con la cifra de Rey",
+   "priority": 6
+  },
+  {
+   "record_en": "Certificate-of-deposit register with endorsements, the capital account with origin of funds, and the receipts and schedules filed by Rey's defence",
+   "record_es": "Registro de certificados de depósito con endosos, cuenta de capital con origen de los fondos, y los recibos y planillas presentados por la defensa de Rey",
+   "held_by_en": "Bank treasury; prosecution file",
+   "held_by_es": "Tesorería del banco; carpeta fiscal",
+   "would_show_en": "Whether capital was paid with circulated money and whether the cash delivery happened",
+   "would_show_es": "Si el capital se integró con dinero circulado y si la entrega de efectivo ocurrió",
+   "priority": 7
+  },
+  {
+   "record_en": "Broker trade tickets and paying-agent records for group bonds",
+   "record_es": "Boletas de operación de la casa de bolsa y registros del agente de pago de los bonos del grupo",
+   "held_by_en": "The group's broker (raided), the stock exchange, the depository",
+   "held_by_es": "La casa de bolsa del grupo (allanada), la bolsa, la caja de valores",
+   "would_show_en": "How much bank credit bought group paper and who holds it now",
+   "would_show_es": "Cuánto crédito del banco compró títulos del grupo y quién los tiene hoy",
+   "priority": 8
+  },
+  {
+   "record_en": "Vault log, cash-withdrawal vouchers and cash-carrier records",
+   "record_es": "Libro de bóveda, comprobantes de retiro de efectivo y registros de la transportadora de caudales",
+   "held_by_en": "Bank treasury; the cash-handling firm raided on 17 November",
+   "held_by_es": "Tesorería del banco; la empresa de caudales allanada el 17 de noviembre",
+   "would_show_en": "Cash in and cash out, with dates and counterparties",
+   "would_show_es": "Entradas y salidas de efectivo, con fechas y contrapartes",
+   "priority": 9
+  },
+  {
+   "record_en": "The 'Delirio Colectivo' email of 13 October 2025 with its 20-page attachment",
+   "record_es": "El correo «Delirio Colectivo» del 13 de octubre de 2025 con su anexo de 20 páginas",
+   "held_by_en": "Prosecution file; mail server",
+   "held_by_es": "Carpeta fiscal; servidor de correo",
+   "would_show_en": "An insider's map of the bank's real liquidity channels and who knew",
+   "would_show_es": "Un mapa interno de los canales reales de liquidez del banco y de quiénes lo conocían",
+   "priority": 10
+  },
+  {
+   "record_en": "The bank's international-transfer log and foreign-exchange tickets; replies from foreign authorities",
+   "record_es": "Registro de transferencias internacionales y boletas de cambio del banco; respuestas de autoridades extranjeras",
+   "held_by_en": "The bank; Luxembourg, Argentina, United States and others",
+   "held_by_es": "El banco; Luxemburgo, Argentina, Estados Unidos y otros",
+   "would_show_en": "Whether and how much left the country",
+   "would_show_es": "Si salió dinero del país y cuánto",
+   "priority": 11
+  },
+  {
+   "record_en": "Property, vehicle, aircraft, vessel and livestock registries with purchase dates and prices",
+   "record_es": "Registros de inmuebles, automotores, aeronaves, embarcaciones y ganado, con fechas y precios de compra",
+   "held_by_en": "Public registries; the seized-assets agency",
+   "held_by_es": "Registros públicos; la Senabico",
+   "would_show_en": "Which assets were bought during the lending period and what they are worth",
+   "would_show_es": "Qué bienes se compraron durante el período de los créditos y cuánto valen",
+   "priority": 12
+  }
+ ],
+ "watch_list": [
+  {
+   "date": "2026-11-19",
+   "text_en": "First interest payments on Grupo Vázquez bonds fell due from this date; whether they were paid is not reported. A missed coupon lets bondholders accelerate and compete with the bank's estate for group assets.",
+   "text_es": "Desde esta fecha vencen los primeros intereses de los bonos de Grupo Vázquez; no se informó si se pagaron. Un cupón impago permite a los bonistas acelerar la deuda y competir con la masa del banco por los bienes del grupo.",
+   "refs": [
+    "chrono:event:0087",
+    "press:fact:0303"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-11-30",
+   "text_en": "End of the waiver of penalty interest on the bank's loans and target date for transfers. December collections are the first hard reading of the ordinary loan book.",
+   "text_es": "Fin de la exoneración de intereses moratorios y punitorios sobre los créditos del banco y fecha prevista para los traspasos. La cobranza de diciembre será la primera medición firme de la cartera normal.",
+   "refs": [
+    "chrono:event:0188",
+    "chrono:event:0187"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "date": "2026-12-02",
+   "text_en": "Extended deadline for guarantee payments and, about the same date, the postponed exclusion balance. This is the document that replaces the headline estimate: watch total sound assets, the provisions on the questioned book and the treatment of deposits above the guarantee.",
+   "text_es": "Vence la prórroga para el pago de la garantía y, hacia la misma fecha, se espera el balance de exclusión postergado. Es el documento que reemplaza la estimación principal: mirar el total de activos sanos, las previsiones sobre la cartera cuestionada y el tratamiento de los depósitos por encima de la garantía.",
+   "refs": [
+    "chrono:event:0226",
+    "chrono:event:0232"
+   ],
+   "url": "https://www.abc.com.py/economia/2026/11/18/crisis-ueno-bank-bcp-extiende-plazo-para-pagar-garantias-de-depositos-por-15-dias-mas/"
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Tender of asset-and-deposit lots: number of bidders, share of deposits taken, and whether the guarantee fund tops up the packages or is repaid by the acquirers. That answers the fund-rank question.",
+   "text_es": "Licitación de los lotes de activos y depósitos: cantidad de oferentes, proporción de depósitos asumida y si el fondo de garantía completa los paquetes o cobra de los adquirentes. Eso responde la cuestión del rango del fondo.",
+   "refs": [
+    "chrono:event:0232",
+    "chrono:event:0181"
+   ],
+   "url": "https://infonegocios.com.py/plus/del-rescate-a-la-recuperacion-evaluan-transferir-activos-y-pasivos-a-otra-entidad-o-bien-convocar-a-acreedores-y-liquidar-activos"
+  },
+  {
+   "date": "2026-12-04",
+   "text_en": "End of the unpaid suspension of ITTI's staff in Argentina. Dismissals or a restart show whether ITTI is being kept as a business that can be sold.",
+   "text_es": "Termina la suspensión sin goce de sueldo del personal de ITTI en Argentina. Los despidos o la reanudación mostrarán si se mantiene a ITTI como negocio vendible.",
+   "refs": [
+    "chrono:event:0123"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Congress vote on temporary administration of Grupo Vázquez companies, and the court's ruling on the group's request to lift the asset freeze. Both decide who controls the assets behind the questioned loans.",
+   "text_es": "Votación en el Congreso de la administración temporal de las empresas del Grupo Vázquez y resolución judicial sobre el pedido del grupo de levantar la inhibición. Ambas definen quién controla los bienes que respaldan los créditos cuestionados.",
+   "refs": [
+    "chrono:event:0202",
+    "chrono:event:0211",
+    "chrono:event:0212"
+   ],
+   "url": "https://www.abc.com.py/politica/2026/11/19/ejecutivo-impulsa-administracion-temporal-de-empresas-del-grupo-vazquez-y-refinanciacion-de-deudas/"
+  },
+  {
+   "date": "2026-12",
+   "text_en": "Supreme Court decision on the challenge to the added money-laundering charge, which is the legal basis for wide forfeiture.",
+   "text_es": "Decisión de la Corte Suprema sobre la impugnación de la imputación añadida por lavado de activos, base legal de un comiso amplio.",
+   "refs": [
+    "chrono:event:0160",
+    "chrono:event:0170"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2026-12",
+   "text_en": "First confirmed freeze abroad, if any: country, asset and value. Until then assets abroad count as zero.",
+   "text_es": "Primera inmovilización confirmada en el exterior, si la hay: país, bien y valor. Hasta entonces los bienes en el exterior se computan en cero.",
+   "refs": [
+    "chrono:event:0196",
+    "chrono:event:0215"
+   ],
+   "url": ""
+  },
+  {
+   "date": "2027-05-04",
+   "text_en": "End of the six-month preparatory stage requested in Case 89/2026: indictment or extension.",
+   "text_es": "Fin de la etapa preparatoria de seis meses solicitada en la Causa 89/2026: acusación o prórroga.",
+   "refs": [
+    "chrono:event:0098"
+   ],
+   "url": ""
+  }
+ ],
+ "does_not_reconcile": [
+  {
+   "text_en": "The Central Bank's 'about USD 600 million of sound assets' (12 November) and its statement that assets suffice to cover deposits (18 November) cannot both describe the whole bank: deposits are about USD 2.7 billion and the June balance sheet shows USD 544 million of cash alone. The first figure reads as a partial count: the Central Bank president said the evaluation was still being completed, that buildings were excluded and that the amount exceeded the debt to the pension system. What reconciles: USD 600 million exceeds the institute's USD 517 million. What does not: no published figure shows how the Central Bank gets from USD 600 million to full cover of deposits.",
+   "text_es": "Los «unos USD 600 millones en activos sanos» del BCP (12 de noviembre) y su afirmación de que el activo alcanza para cubrir los depósitos (18 de noviembre) no pueden describir a la vez todo el banco: los depósitos rondan USD 2.700 millones y el balance de junio muestra USD 544 millones solo de disponible. La primera cifra se lee como un cómputo parcial: el presidente del BCP dijo que la evaluación seguía en curso, que no incluía edificios y que el monto superaba la deuda con el sistema previsional. Lo que cierra: USD 600 millones superan los USD 517 millones del IPS. Lo que no cierra: ninguna cifra publicada muestra cómo llega el BCP de USD 600 millones a la cobertura total de los depósitos.",
+   "refs": [
+    "chrono:event:0187",
+    "chrono:event:0226",
+    "chrono:event:0198"
+   ],
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "text_en": "Two foreign outlets reported the USD 600 million as assets exceeding liabilities. That cannot be squared with a capital ratio of 5.56% after adjustments or with the local report of the same statement, and is not used.",
+   "text_es": "Dos medios extranjeros informaron los USD 600 millones como excedente del activo sobre el pasivo. Eso no es compatible con un índice de solvencia de 5,56% tras los ajustes ni con la versión local de la misma declaración, y no se utiliza.",
+   "refs": [
+    "chrono:event:0187",
+    "chrono:event:0070"
+   ],
+   "url": "https://www.perfil.com/noticias/amp/internacional/el-banco-central-de-paraguay-informo-que-encontro-activos-de-ueno-bank-y-detallo-a-quienes-se-le-devolvera-ese-dinero-aYk6R4M1Ioff.phtml"
+  },
+  {
+   "text_en": "'Assets cover deposits' holds in the low and central cases only approximately: about 120% and 99% of an estimated Gs. 17.2 trillion of deposits. It fails in the high case (83%). The two analysts read it differently because one left ordinary assets at book value and the other discounted cash to 62% and ordinary loans to 72%; on the second set no reading of the statement can hold.",
+   "text_es": "«El activo cubre los depósitos» se cumple en los escenarios bajo y central solo de manera aproximada: cerca de 120% y 99% de depósitos estimados en Gs. 17,2 billones. No se cumple en el escenario alto (83%). Los dos analistas lo leyeron distinto porque uno dejó los activos normales a valor contable y el otro descontó el disponible al 62% y la cartera normal al 72%; con el segundo criterio ninguna lectura de la declaración se sostiene.",
+   "refs": [
+    "chrono:event:0226",
+    "chrono:event:0035"
+   ],
+   "url": "https://5dias.com.py/especiales/ueno"
+  },
+  {
+   "text_en": "The supervisor's provisions deficit (Gs. 1.62 trillion, USD 250 million), the related exposure in the complaint ('more than USD 300 million'), the damage attributed to the prosecution (USD 809.5 million), Rey's figure (about USD 900 million) and the questioned book computed here (USD 879 million) are five different numbers with no published bridge between them.",
+   "text_es": "El déficit de previsiones de la supervisión (Gs. 1,62 billones, USD 250 millones), la exposición vinculada de la denuncia («más de USD 300 millones»), el perjuicio atribuido a la fiscalía (USD 809,5 millones), la cifra de Rey (unos USD 900 millones) y la cartera cuestionada calculada aquí (USD 879 millones) son cinco números distintos, sin conciliación publicada entre ellos.",
+   "refs": [
+    "chrono:event:0070",
+    "press:fact:0321",
+    "chrono:event:0148",
+    "rec:flow:0075"
+   ],
+   "url": ""
+  },
+  {
+   "text_en": "The unofficial debtor list is undated, prints guaraníes only and does not say whether figures are balances or cumulative lending. It carries two different figures for one borrower in the same article, lists the social-security institute as a debtor, omits two record borrowers that still owed more than USD 40 million each, and three entries match supervisor-attributed dollar loans only at about Gs. 5,880 per dollar, which suggests the list was drawn up at a lower exchange rate than the one used here.",
+   "text_es": "La lista oficiosa de deudores no tiene fecha, está solo en guaraníes y no aclara si las cifras son saldos o montos acumulados. Trae dos cifras distintas para una misma prestataria en el mismo artículo, incluye al instituto de previsión social como deudor, omite a dos prestatarias del acta que aún debían más de USD 40 millones cada una, y tres de sus cifras coinciden con créditos en dólares atribuidos a la supervisión solo a unos Gs. 5.880 por dólar, lo que sugiere que la lista se elaboró con un tipo de cambio menor que el usado aquí.",
+   "refs": [
+    "press:fact:0001",
+    "press:fact:0003",
+    "press:fact:0026",
+    "press:fact:0022",
+    "press:fact:0005",
+    "press:loan:0058"
+   ],
+   "url": ""
+  },
+  {
+   "text_en": "The guarantee fund's outlay is reported as about USD 740 million and as up to USD 928 million; Gs. 3.9 trillion had been paid by 11 November.",
+   "text_es": "El desembolso del fondo de garantía se informa en unos USD 740 millones y en hasta USD 928 millones; al 11 de noviembre se habían pagado Gs. 3,9 billones.",
+   "refs": [
+    "chrono:event:0166",
+    "chrono:event:0181",
+    "chrono:event:0179"
+   ],
+   "url": ""
+  },
+  {
+   "text_en": "The social-security institute's exposure is reported between USD 345 million and USD 517 million, depending on date and on whether bonds are included.",
+   "text_es": "La exposición del IPS se informa entre USD 345 millones y USD 517 millones, según la fecha y según se incluyan o no los bonos.",
+   "refs": [
+    "chrono:event:0091",
+    "chrono:event:0163",
+    "chrono:event:0198",
+    "press:fact:0106"
+   ],
+   "url": ""
+  },
+  {
+   "text_en": "Total deposits are not published for any date after December 2025. The estimate of Gs. 17.2 trillion comes from one press ratio; the June balance sheet shows Gs. 19.4 trillion owed to the non-financial sector, which also contains bonds. Two rating reports give December 2025 deposits as Gs. 15.8 trillion and Gs. 14.7 trillion.",
+   "text_es": "No hay depósitos totales publicados para ninguna fecha posterior a diciembre de 2025. La estimación de Gs. 17,2 billones surge de una proporción publicada por la prensa; el balance de junio muestra Gs. 19,4 billones de obligaciones con el sector no financiero, que también incluyen bonos. Dos informes de calificación dan depósitos a diciembre de 2025 por Gs. 15,8 billones y Gs. 14,7 billones.",
+   "refs": [
+    "chrono:event:0035",
+    "press:fact:0250"
+   ],
+   "url": "https://www.ueno.com.py/wp-content/uploads/2026/04/UENO-Bank-S.A.-_FIX.pdf"
+  },
+  {
+   "text_en": "Exchange rates differ by source: the record uses Gs. 6,500; press conversions imply about Gs. 5,750 to 6,360; a rating report uses Gs. 6,585.55. Dollar figures for the same guaraní amount differ by up to 13%.",
+   "text_es": "Los tipos de cambio difieren según la fuente: el acta usa Gs. 6.500; las conversiones de prensa implican entre Gs. 5.750 y 6.360; un informe de calificación usa Gs. 6.585,55. Las cifras en dólares de un mismo monto en guaraníes difieren hasta en 13%.",
+   "refs": [
+    "src:acta-p07",
+    "chrono:event:0035",
+    "chrono:event:0122",
+    "press:fact:0219"
+   ],
+   "url": ""
+  },
+  {
+   "text_en": "The capital the group paid into the bank in 2025 is given as USD 50 million of USD 77 million committed by one source, while another says an outside investor's USD 30 million completed a USD 85 million plan.",
+   "text_es": "El capital que el grupo integró en el banco en 2025 figura como USD 50 millones de USD 77 millones comprometidos según una fuente, mientras otra dice que los USD 30 millones de un inversor externo completaron un plan de USD 85 millones.",
+   "refs": [
+    "chrono:event:0029",
+    "press:flow:0073"
+   ],
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "text_en": "The holding company is reported to have received Gs. 12 bn of dividends in 2025, while the cash-flow annex of another rating report, as read by an automated tool, shows a dividends line of about Gs. 111 bn with a negative sign for the consolidated group. Whether that is money paid out to owners is not established.",
+   "text_es": "Se informa que la holding cobró Gs. 12 mil millones de dividendos en 2025, mientras el anexo de flujo de caja de otro informe de calificación, según lectura automatizada, muestra una línea de dividendos de unos Gs. 111 mil millones con signo negativo para el grupo consolidado. No está establecido si se trata de dinero pagado a los propietarios.",
+   "refs": [
+    "press:fact:0158",
+    "src:fixscr-2026-07-02-grupo-vazquez"
+   ],
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "text_en": "The trust was authorised for Gs. 2.5 trillion and is carried at Gs. 2.1 trillion; the placements in REDISA and REDIPRO are printed as Gs. 876,640 million and Gs. 876,300 million.",
+   "text_es": "El fideicomiso se autorizó por Gs. 2,5 billones y figura por Gs. 2,1 billones; las colocaciones en REDISA y REDIPRO se publican como Gs. 876.640 millones y Gs. 876.300 millones.",
+   "refs": [
+    "chrono:event:0017",
+    "press:fact:0265",
+    "press:fact:0126",
+    "press:event:0026"
+   ],
+   "url": ""
+  }
+ ],
+ "cannot_determine_en": [
+  "How much of the questioned book is real loss: no loan-by-loan schedule, collateral list or borrower accounts are public.",
+  "Whether the unofficial debtor list shows balances or cumulative lending, and at what date.",
+  "Which items the Central Bank deducted to reach 5.56%, and whether the Gs. 1.62 trillion already covers loans outside the six record borrowers.",
+  "Whether Rey's USD 900 million overlaps the merger trust, and what the unexplained third was.",
+  "The total cashback paid and which company bore it.",
+  "What ITTI, REDISA and REDIPRO spent the money on: there are no accounts for REDISA, REDIPRO, Vinanzas or the borrowing companies.",
+  "The bank's balance sheet at the resolution date, its deposits by type and its liquidity on 2 November 2026.",
+  "The balance of the past-due portfolio from the 2024 merger and the quality of the ordinary loan book.",
+  "How the guarantee fund will rank against deposits above the guarantee.",
+  "The origin of the cash Rey describes, and whether any capital was paid with certificates of deposit.",
+  "The value of the 2,331 properties identified and of any assets abroad.",
+  "Whether any questioned money reached a public official: the related case rests on other facts not sized here."
+ ],
+ "cannot_determine_es": [
+  "Cuánto de la cartera cuestionada es pérdida real: no se publicó una planilla crédito por crédito, ni la lista de garantías, ni los balances de las prestatarias.",
+  "Si la lista oficiosa de deudores muestra saldos o montos acumulados, y a qué fecha.",
+  "Qué partidas dedujo el BCP para llegar al 5,56%, y si los Gs. 1,62 billones ya cubren créditos fuera de las seis prestatarias del acta.",
+  "Si los USD 900 millones de Rey se superponen con el fideicomiso de fusión, y a qué correspondía el tercio sin explicar.",
+  "El total de reintegros (cashback) pagados y qué empresa los soportó.",
+  "En qué gastaron el dinero ITTI, REDISA y REDIPRO: no hay estados contables de REDISA, REDIPRO, Vinanzas ni de las empresas prestatarias.",
+  "El balance del banco a la fecha de la resolución, sus depósitos por tipo y su liquidez al 2 de noviembre de 2026.",
+  "El saldo de la cartera vencida de la fusión de 2024 y la calidad de la cartera normal.",
+  "Qué rango tendrá el fondo de garantía frente a los depósitos por encima de la garantía.",
+  "El origen del efectivo que describe Rey, y si se integró capital con certificados de depósito.",
+  "El valor de los 2.331 inmuebles identificados y de eventuales bienes en el exterior.",
+  "Si algún dinero cuestionado llegó a un funcionario público: la causa conexa se basa en otros hechos que aquí no se cuantifican."
+ ],
+ "review": {
+  "changed_en": [
+   "Balance-sheet base: the bank's own notice for 30 June 2026 was opened and confirmed (assets Gs. 25,641.8 bn, liabilities Gs. 23,205.2 bn, equity Gs. 2,436.5 bn; the nine asset lines add up to the total). The recovery analyst's statement that no figures existed after December 2025, and its rolled-forward Gs. 24.3 trillion, were dropped. Both models now run on the June base.",
+   "Questioned book: one figure of USD 879 million (range 594 to 946). The uses analyst's USD 915 million was not kept: it subtracted the June 2026 loans granted (USD 125.0 million) where it should have subtracted the loans those funds retired (USD 108.8 million), and it added two off-list borrowers that are now in the high case only.",
+   "Loss on the questioned book: central set at 80% (recovery 20%), between the size analyst's 60% and the recovery analyst's 90%. A bottom-up count of what the group can pay supports 12% to 19% recovery, depending on the method; 40% had no identified asset behind it. The size analyst's low case is kept as an amount (the supervisor's deficit) but is no longer described as a 28% loss rate, because that deficit was measured on a smaller reviewed exposure.",
+   "Ordinary assets: the recovery analyst's discounts on cash (to 62%) and ordinary loans (to 72%) were not kept. Cash is cash, and a run reduces deposits and assets equally. They are replaced by a 0% / 5% / 15% discount on ordinary loans and, in the high case only, 50% on sundry receivables.",
+   "Headline: USD 956 million (393 to 1,374), against the size analyst's USD 738 million (393 to 1,263). The rise comes from the higher central loss rate (+176) and the discount on ordinary loans (+69), partly offset by a lower loss on the payment-company placements (-27).",
+   "Fund-rank fork: on the reviewed base the choice moves about USD 84 million in the central case and about USD 503 million in the high case, not USD 630 million.",
+   "Rey's USD 900 million is no longer an input (the recovery analyst used it as the size of the book) and no longer cited as validation (the other two analysts did). The match with USD 879 million depends on scope choices that could have given anything from 594 to 946.",
+   "Uses: operating costs cut from USD 440 to 350 million and to low confidence; assets from 50 to 30; sponsorship from 35 to 15 (its main evidence was already counted under operating costs); circular support from 65 to 45 (cash-funded certificates removed). Unexplained rises from USD 170 million (19%) to USD 303 million (34.5%).",
+   "Circulation: USD 4.3 million counted as returned was removed because the record gives no amount for that instalment. The share is 38%, not 39%.",
+   "The 0.5% pattern: twelve principals (ten on the strictest test) plus three balances.",
+   "Unit checks: the rating agency's cash-flow annex is in thousands of guaraníes throughout and the analyst's conversions hold; the bank report's tables are in millions of guaraníes; the June notice is in guaraníes. No unit error was found. The 2024 debt line in the annex belongs to a year when the bank was consolidated and is not comparable."
+  ],
+  "changed_es": [
+   "Base contable: se abrió y confirmó el aviso de balance del propio banco al 30 de junio de 2026 (activo Gs. 25,64 billones, pasivo Gs. 23,21 billones, patrimonio Gs. 2,44 billones; las nueve líneas del activo suman el total). Se descartó la afirmación del analista de recuperación de que no había cifras posteriores a diciembre de 2025, así como su proyección de Gs. 24,3 billones. Ambos modelos se calculan ahora sobre la base de junio.",
+   "Cartera cuestionada: una sola cifra de USD 879 millones (rango de 594 a 946). No se mantuvieron los USD 915 millones del analista de destinos: restaba los créditos otorgados en junio de 2026 (USD 125,0 millones) cuando correspondía restar los créditos que esos fondos cancelaron (USD 108,8 millones), y sumaba dos prestatarias fuera de la lista que ahora quedan solo en el escenario alto.",
+   "Pérdida en la cartera cuestionada: el valor central se fijó en 80% (recuperación de 20%), entre el 60% del analista de magnitud y el 90% del analista de recuperación. Un cómputo de lo que el grupo puede pagar respalda una recuperación de 12% a 19%, según el método; el 40% no tenía ningún activo identificado detrás. El escenario bajo del analista de magnitud se mantiene como monto (el déficit de la supervisión), pero ya no se describe como una tasa de pérdida de 28%, porque ese déficit se midió sobre una exposición revisada menor.",
+   "Activos normales: no se mantuvieron los descuentos del analista de recuperación sobre el disponible (al 62%) y la cartera normal (al 72%). El efectivo es efectivo, y una corrida reduce depósitos y activo por igual. Se reemplazan por un descuento de 0% / 5% / 15% sobre la cartera normal y, solo en el escenario alto, de 50% sobre los créditos diversos.",
+   "Cifra principal: USD 956 millones (de 393 a 1.374), frente a los USD 738 millones (de 393 a 1.263) del analista de magnitud. El aumento proviene de la mayor tasa central de pérdida (+176) y del descuento sobre la cartera normal (+69), compensado en parte por una menor pérdida en las colocaciones en las procesadoras (-27).",
+   "Rango del fondo de garantía: con la base revisada, la elección mueve unos USD 84 millones en el escenario central y unos USD 503 millones en el alto, no USD 630 millones.",
+   "Los USD 900 millones de Rey ya no son un dato de entrada (el analista de recuperación los usaba como tamaño de la cartera) ni se citan como validación (lo hacían los otros dos analistas). La coincidencia con USD 879 millones depende de decisiones de alcance que podían dar cualquier valor entre 594 y 946.",
+   "Destinos: los gastos operativos bajan de USD 440 a 350 millones y a confianza baja; los activos, de 50 a 30; los patrocinios, de 35 a 15 (su principal evidencia ya estaba contada en gastos operativos); el sostén circular, de 65 a 45 (se retiraron los certificados comprados con efectivo). Lo no explicado sube de USD 170 millones (19%) a USD 303 millones (34,5%).",
+   "Circulación: se retiraron USD 4,3 millones computados como devueltos, porque el acta no da monto para esa cuota. La proporción es 38%, no 39%.",
+   "El patrón de 0,5%: doce capitales (diez con el criterio más estricto) más tres saldos.",
+   "Verificación de unidades: el anexo de flujo de caja de la calificadora está en miles de guaraníes en todo el cuadro y las conversiones del analista son correctas; los cuadros del informe del banco están en millones de guaraníes; el aviso de junio está en guaraníes. No se halló ningún error de unidades. La línea de deuda de 2024 del anexo corresponde a un año en que el banco se consolidaba y no es comparable."
+  ],
+  "residual_disagreements_en": [
+   "Loss rate on the questioned book. The size analyst's 60% and the recovery analyst's 90% are both defensible; on the reviewed base they give a headline of about USD 780 million and USD 1,040 million. The review's 80% is a judgement.",
+   "Whether ordinary assets should be discounted for a forced sale. With the recovery analyst's discounts on the June base the shortfall would be about USD 1.9 billion and the fund-rank choice would move about USD 770 million. The review treats that as outside the central range because no source supports discounting cash, but a disorderly tender could bring it closer.",
+   "Whether La Tropa SAE and Infocenter belong in the questioned book. Including both adds about USD 50 million to the book and about USD 40 million to the headline.",
+   "The debtor list. Without it the questioned book is about USD 461 million and the central headline about USD 642 million. The reviewer keeps the list in the central case because for five borrowers its figures agree within about 2% with loan data attributed to the supervisor, but it remains a single unofficial source.",
+   "The split of uses. The allocation is a constrained guess and the three largest items are the least documented; a third is unexplained.",
+   "Total deposits and their split by type, which drive the cover ratio and the fund-rank results but not the headline."
+  ],
+  "residual_disagreements_es": [
+   "Tasa de pérdida de la cartera cuestionada. El 60% del analista de magnitud y el 90% del analista de recuperación son ambos defendibles; sobre la base revisada dan una cifra principal de unos USD 780 millones y USD 1.040 millones. El 80% de la revisión es un criterio.",
+   "Si corresponde descontar los activos normales por venta forzada. Con los descuentos del analista de recuperación sobre la base de junio, el faltante sería de unos USD 1.900 millones y la elección sobre el rango del fondo movería unos USD 770 millones. La revisión lo deja fuera del rango central porque ninguna fuente respalda descontar el efectivo, pero una licitación desordenada podría acercarse a ese resultado.",
+   "Si La Tropa SAE e Infocenter pertenecen a la cartera cuestionada. Incluirlas suma unos USD 50 millones a la cartera y unos USD 40 millones a la cifra principal.",
+   "La lista de deudores. Sin ella, la cartera cuestionada ronda USD 461 millones y la cifra principal central, USD 642 millones. El revisor mantiene la lista en el escenario central porque en cinco prestatarias sus cifras coinciden, con una diferencia de alrededor de 2%, con los datos de créditos atribuidos a la supervisión, pero sigue siendo una fuente única y oficiosa.",
+   "La distribución de los destinos. La asignación es una conjetura acotada y los tres rubros mayores son los menos documentados; un tercio queda sin explicar.",
+   "Los depósitos totales y su composición por tipo, que determinan el índice de cobertura y los resultados según el rango del fondo, pero no la cifra principal."
+  ]
+ },
+ "sources_added": [
+  {
+   "outlet": "ueno bank S.A.",
+   "title": "Aviso de balance al 30 de junio de 2026",
+   "date": "2026-07",
+   "url": "https://www.ueno.com.py/wp-content/uploads/2026/07/Aviso-Balance-255x35cm_jun2026-1.pdf"
+  },
+  {
+   "outlet": "FIX SCR",
+   "title": "UENO Bank S.A., informe de revisión integral (cifras a diciembre de 2025)",
+   "date": "2026-03-31",
+   "url": "https://www.ueno.com.py/wp-content/uploads/2026/04/UENO-Bank-S.A.-_FIX.pdf"
+  },
+  {
+   "outlet": "FIX SCR",
+   "title": "Grupo Vázquez S.A.E., informe de calificación (anexo de flujo de caja)",
+   "date": "2026-07-02",
+   "url": "https://www.grupovazquez.com/wp-content/uploads/sites/2/2026/08/Grupo-Vazquez-S.A.E._compressed.pdf"
+  },
+  {
+   "outlet": "Solventa&Riskmétrica",
+   "title": "Informe de calificación PEG G1 ITTI, corte diciembre 2025",
+   "date": "2026-05-12",
+   "url": "https://syr.com.py/wp-content/uploads/2025/09/Informe-de-Calificacion-PEG-G1-ITTI-Dic25.pdf"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "Jorge Schreiner: analizando las carteras de clientes y sin incluir activos, el monto supera el conjunto de la deuda de ueno con el sistema previsional",
+   "date": "2026-11-13",
+   "url": "https://infonegocios.com.py/nota-principal/jorge-schreiner-analizando-las-carteras-de-clientes-y-sin-incluir-activos-el-monto-supera-el-conjunto-de-la-deuda-de-ueno-con-el-sistema-previsional"
+  },
+  {
+   "outlet": "Perfil (Argentina)",
+   "title": "El Banco Central de Paraguay informó que encontró activos de Ueno Bank y detalló a quiénes se les devolverá ese dinero",
+   "date": "2026-11-13",
+   "url": "https://www.perfil.com/noticias/amp/internacional/el-banco-central-de-paraguay-informo-que-encontro-activos-de-ueno-bank-y-detallo-a-quienes-se-le-devolvera-ese-dinero-aYk6R4M1Ioff.phtml"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "Del rescate a la recuperación: evalúan transferir activos y pasivos a otra entidad o bien convocar a acreedores y liquidar activos",
+   "date": "2026-11-11",
+   "url": "https://infonegocios.com.py/plus/del-rescate-a-la-recuperacion-evaluan-transferir-activos-y-pasivos-a-otra-entidad-o-bien-convocar-a-acreedores-y-liquidar-activos"
+  },
+  {
+   "outlet": "BACN (Biblioteca y Archivo del Congreso)",
+   "title": "Ley N.º 2334/03 de Garantía de Depósitos y Resolución de Entidades de Intermediación Financiera",
+   "date": "2003-12-12",
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/2513/ley-no-2334-garantia-de-depositos-y-resolucion-de-entidades-de-intermediacion-fi"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Ueno Bank: MEF identifica US$ 888 millones de fondos públicos; cuánto podrá recuperarlos",
+   "date": "2026-11-18",
+   "url": "https://www.abc.com.py/economia/2026/11/18/ueno-bank-mef-identifica-us-888-millones-de-fondos-publicos-cuanto-podra-recuperarlos/"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Crisis Ueno Bank: BCP extiende plazo para pagar garantías de depósitos por 15 días más",
+   "date": "2026-11-18",
+   "url": "https://www.abc.com.py/economia/2026/11/18/crisis-ueno-bank-bcp-extiende-plazo-para-pagar-garantias-de-depositos-por-15-dias-mas/"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Ejecutivo impulsa administración temporal de empresas del Grupo Vázquez y refinanciación de deudas",
+   "date": "2026-11-19",
+   "url": "https://www.abc.com.py/politica/2026/11/19/ejecutivo-impulsa-administracion-temporal-de-empresas-del-grupo-vazquez-y-refinanciacion-de-deudas/"
+  },
+  {
+   "outlet": "ABC Color",
+   "title": "Costosos inmuebles, parte del esquema de triangulación de Ueno",
+   "date": "2026-11-19",
+   "url": "https://www.abc.com.py/politica/2026/11/19/costosos-inmuebles-parte-del-esquema-de-triangulacion-de-ueno/"
+  },
+  {
+   "outlet": "ueno bank",
+   "title": "Bases y condiciones: promoción 30% de reintegro en comercios adheridos, diciembre 2025",
+   "date": "2025-12",
+   "url": "https://www.ueno.com.py/wp-content/uploads/2025/12/Promocion-Reintegro-30-de-reintegro-en-comercios-adheridos_-DIC-2025v3.docx-1.pdf"
+  },
+  {
+   "outlet": "Chequeado",
+   "title": "Del Ueno Bank a Buenos Aires: así operaba el Grupo Vázquez con sus trabajadores en Argentina",
+   "date": "2026-11-11",
+   "url": "https://chequeado.com/el-explicador/del-ueno-bank-a-buenos-aires-asi-operaba-el-grupo-vazquez-con-sus-trabajadores-en-argentina/"
+  },
+  {
+   "outlet": "InfoNegocios Paraguay",
+   "title": "¿Qué compromisos están en juego y quiénes podrían verse afectados?",
+   "date": "2026-11-04",
+   "url": "https://infonegocios.com.py/default/que-compromisos-estan-en-juego-y-quienes-podrian-verse-afectados"
+  },
+  {
+   "outlet": "5Días",
+   "title": "Ueno: anatomía de una crisis",
+   "date": "2026-11-18",
+   "url": "https://5dias.com.py/especiales/ueno"
+  }
+ ]
+}

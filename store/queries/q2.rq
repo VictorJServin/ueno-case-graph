@@ -1,0 +1,26 @@
+# Q2. Chains of flows that start and end at the same party within 7 days (2 or 3 hops)
+PREFIX uc:   <https://w3id.org/ueno-case/ont#>
+PREFIX ucr:  <https://w3id.org/ueno-case/id/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?origin ?mid1 ?mid2 ?d1 ?dLast ?f1 ?f2 ?f3
+WHERE {
+  {
+    # 2 hops: origin -> mid1 -> origin
+    ?f1 a uc:Flow ; uc:fromParty ?origin ; uc:toParty ?mid1 ; uc:onDate ?d1 ; uc:assertedBy ?who .
+    ?f2 a uc:Flow ; uc:fromParty ?mid1 ; uc:toParty ?origin ; uc:onDate ?dLast ; uc:assertedBy ?who .
+    FILTER (?mid1 != ?origin)
+  } UNION {
+    # 3 hops: origin -> mid1 -> mid2 -> origin
+    ?f1 a uc:Flow ; uc:fromParty ?origin ; uc:toParty ?mid1 ; uc:onDate ?d1 ; uc:assertedBy ?who .
+    ?f2 a uc:Flow ; uc:fromParty ?mid1 ; uc:toParty ?mid2 ; uc:onDate ?d2 ; uc:assertedBy ?who .
+    ?f3 a uc:Flow ; uc:fromParty ?mid2 ; uc:toParty ?origin ; uc:onDate ?dLast ; uc:assertedBy ?who .
+    FILTER (?mid1 != ?origin && ?mid2 != ?origin && ?mid2 != ?mid1)
+    FILTER (datatype(?d2) = xsd:date && ?d2 >= ?d1 && ?dLast >= ?d2)
+  }
+  FILTER (datatype(?d1) = xsd:date && datatype(?dLast) = xsd:date && ?dLast >= ?d1)
+  FILTER (?dLast <= ?d1 + "P7D"^^xsd:dayTimeDuration)
+}
+ORDER BY ?d1
