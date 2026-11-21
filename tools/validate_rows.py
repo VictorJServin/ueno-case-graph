@@ -93,7 +93,7 @@ def main():
             if kind == "sources":
                 if r.get("kind") in ("press", "official", "rating") and not str(r.get("url", "")).startswith("http"):
                     (errors if tag in strict else warns).append(f"{where} source '{rid}' of kind {r.get('kind')} has no http(s) link")
-                if tag in strict and str(r.get("url", "")).endswith("..."): errors.append(f"{where} link is truncated")
+                if tag in strict and re.search(r"(\.\.\.|…|-)$", str(r.get("url", ""))): errors.append(f"{where} link is truncated")
             text = json.dumps(r, ensure_ascii=False)
             if kind not in ("loans",):
                 for rx, what in PII:
