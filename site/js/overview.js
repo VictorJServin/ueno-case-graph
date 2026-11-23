@@ -95,12 +95,48 @@
     return box;
   }
 
+
+  /** "What's new": the latest entry of data/updates.json, with when the update ran; earlier runs fold away. */
+  function when(iso) {
+    var d = new Date(iso);
+    if (isNaN(d)) return iso;
+    try { return d.toLocaleString(UC.lang === "es" ? "es" : "en-GB", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit", timeZoneName: "short" }); } catch (e) { return iso; }
+  }
+  function updItems(u) {
+    var ul = h("ul", { class: "upd-list" });
+    (u.items || []).forEach(function (it) {
+      var li = h("li", null, h("span", null, it[UC.lang] || it.en));
+      if (it.go) li.appendChild(h("a", { href: "#" + it.go, class: "small" }, " " + L("Open", "Abrir")));
+      if (it.refs && it.refs.length) li.appendChild(h("span", { class: "small upd-refs" }, UC.prov.chips(it.refs, 3)));
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+  function updMeta(u) {
+    var c = u.counts || {};
+    return h("p", { class: "small muted", style: "margin:0" }, (u.input ? (u.input[UC.lang] || u.input.en) + " · " : "") +
+      L("added ", "se agregaron ") + (c.events || 0) + L(" events, ", " hechos, ") + (c.figures || 0) + L(" figures, ", " cifras, ") + (c.sources || 0) + L(" sources", " fuentes"));
+  }
+  function whatsNew(list) {
+    var u = list[0], box = h("section", { class: "card stack upd", "aria-label": L("What's new", "Novedades") },
+      h("div", { class: "upd-head" }, h("h2", null, L("What's new since the last update", "Novedades desde la última actualización")),
+        h("span", { class: "upd-when" }, L("Updated ", "Actualizado ") + when(u.executed_at))),
+      updMeta(u), updItems(u));
+    if (u.not_done) box.appendChild(h("p", { class: "small muted", style: "margin:0" }, u.not_done[UC.lang] || u.not_done.en));
+    if (list.length > 1) {
+      var d = h("details", { class: "small" }, h("summary", null, L("Earlier updates", "Actualizaciones anteriores") + " (" + (list.length - 1) + ")"));
+      list.slice(1).forEach(function (p) { d.appendChild(h("div", { class: "stack upd-old" }, h("b", null, when(p.executed_at)), updMeta(p), updItems(p))); });
+      box.appendChild(d);
+    }
+    return box;
+  }
+
   UC.views.overview = {
     render: function (root) {
       var db = UC.db, st = db.stats;
       var hero = h("div", { class: "hero" },
         h("div", { class: "stack" },
-          h("div", { class: "eyebrow" }, L("Case 89/2026 · Public Prosecutor's Office of Paraguay · data to 20 November 2026", "Causa 89/2026 · Ministerio Público del Paraguay · datos al 20 de noviembre de 2026")),
+          h("div", { class: "eyebrow" }, L("Case 89/2026 · Public Prosecutor's Office of Paraguay · data to 23 November 2026", "Causa 89/2026 · Ministerio Público del Paraguay · datos al 23 de noviembre de 2026")),
           h("h1", null, L("Ueno Bank: what the record alleges, what the suspect says, what the press adds", "Ueno Bank: qué sostiene el acta, qué dice el imputado, qué agrega la prensa")),
           h("p", { class: "lead" }, L("A provenance-first map of the loans, companies, people and money movements described in the investigative statement of former director Julio Rey and in public reporting on the bank's resolution.", "Un mapa, con procedencia en cada dato, de los créditos, empresas, personas y movimientos de dinero descritos en la declaración indagatoria del exdirector Julio Rey y en la información pública sobre la resolución del banco."))),
         h("div", { class: "card stack v-prosecution" },
@@ -110,6 +146,8 @@
             h("li", null, L("That six borrowers passed the money on to group companies and repaid with money from those same companies. ", "Que seis prestatarias traspasaron los fondos a sociedades del grupo y repagaron con dinero de esas mismas sociedades. "), prov.chip("src:acta-p02", L("Record p. 2", "Acta p. 2")), prov.chip("src:acta-p10", L("Record p. 10", "Acta p. 10"))),
             h("li", null, L("That in June 2026 the bank sold part of those loans to a related company which paid with money the bank itself had just lent. ", "Que en junio de 2026 el banco vendió parte de esos créditos a una vinculada que pagó con dinero que el propio banco acababa de prestar. "), prov.chip("src:acta-p17", L("Record p. 17", "Acta p. 17")))),
           h("p", { class: "small muted", style: "margin:0" }, L("These are allegations put to a suspect. The record also contains his reply (pages 19 to 24), shown separately throughout.", "Son imputaciones formuladas a un imputado. El acta contiene también su respuesta (páginas 19 a 24), que se muestra siempre por separado."))));
+      var up = db.extra.updates;
+      if (up) root.appendChild(whatsNew(up));
       root.appendChild(hero);
 
       root.appendChild(h("section", { class: "sec" }, h("h2", null, L("Key figures", "Cifras clave")),

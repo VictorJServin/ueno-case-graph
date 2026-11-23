@@ -1,0 +1,22 @@
+[
+ {"executed_at": "2026-11-23T10:35:00-08:00", "data_to": "2026-11-23",
+  "input": {"en": "Monitoring dossier v1.6, generated 23 Nov 2026 06:19 PT", "es": "Dossier de monitoreo v1.6, generado el 23 nov 2026 06:19 PT"},
+  "counts": {"events": 53, "figures": 9, "sources": 53},
+  "items": [
+   {"en": "New tab: Depositor payouts. Coverage tiers, schedule, conditions, who is still waiting.", "es": "Nueva pestaña: Pagos a ahorristas. Tramos de cobertura, calendario, condiciones y quién sigue esperando.", "go": "payouts"},
+   {"en": "BCP director puts the hole at more than USD 1,500 million, against USD 1,400 to 1,500 million of sound assets.", "es": "Un director del BCP cifra el agujero en más de USD 1.500 millones, frente a USD 1.400 a 1.500 millones de activos sanos.", "refs": ["dos5:fact:0001", "dos5:fact:0002"]},
+   {"en": "The 2024 Ueno-Visión merger plan asked the BCP for about G. 5.2 trillion of deferrals and a trust.", "es": "El plan de fusión Ueno-Visión de 2024 pidió al BCP diferimientos y un fideicomiso por unos G. 5,2 billones.", "refs": ["dos5:fact:0004"]},
+   {"en": "Prosecutors search the registered address of Pear S.R.L.; a G. 3,090.6 million shortfall is reported in a security firm's vault.", "es": "La Fiscalía allana el domicilio fiscal de Pear S.R.L.; se informa un faltante de G. 3.090,6 millones en la bóveda de una empresa de seguridad.", "refs": ["dos5:event:0001", "dos5:fact:0009"]},
+   {"en": "Creditors ask a court to declare Grupo Vázquez S.A.E. bankrupt; a former statutory auditor's charge stands.", "es": "Acreedores piden la quiebra de Grupo Vázquez S.A.E.; queda firme la imputación de un exsíndico.", "refs": ["dos5:event:0035", "dos5:event:0038"]},
+   {"en": "Public money: IPS pension-fund investments of about USD 350 million; Itaipú now reported at USD 163.8 million plus G. 115,200 million.", "es": "Dinero público: inversiones del fondo jubilatorio del IPS por unos USD 350 millones; Itaipú ahora informado en USD 163,8 millones más G. 115.200 millones.", "refs": ["dos5:fact:0005", "dos5:fact:0006"]}
+  ],
+  "not_done": {"en": "Not updated in this run: the missing-money estimate and the written reports. Ten dossier claims were left out on purpose (social posts only, low confidence, or no new fact).", "es": "No actualizado en esta corrida: la estimación del dinero faltante y los informes escritos. Diez afirmaciones del dossier se dejaron fuera a propósito (solo redes sociales, baja confianza o sin hechos nuevos)."}},
+ {"executed_at": "2026-11-21T13:38:00-08:00", "data_to": "2026-11-21",
+  "input": {"en": "Monitoring dossier v1.2, generated 21 Nov 2026 06:10 PT", "es": "Dossier de monitoreo v1.2, generado el 21 nov 2026 06:10 PT"},
+  "counts": {"events": 21, "figures": 8, "sources": 21},
+  "items": [
+   {"en": "Press accounts of Rey's statement: the 'Delirio colectivo' report, the Pear S.R.L. land deal, Comitia and ITTI (with the electoral court's denial).", "es": "Versiones de prensa de la declaración de Rey: el informe 'Delirio colectivo', la venta de tierras a Pear S.R.L., Comitia e ITTI (con la negativa del TSJE).", "refs": ["dos4:event:0001", "dos4:event:0002", "dos4:event:0003", "dos4:event:0004"]},
+   {"en": "Guarantee fund at 88% paid; 3,975 certificates of deposit pending.", "es": "Fondo de garantía con 88% pagado; 3.975 CDA pendientes.", "refs": ["dos4:event:0009"]},
+   {"en": "IPS reports more than USD 516 million stuck; Itaipú, CONMEBOL and the city of Asunción disclose exposure.", "es": "El IPS informa más de USD 516 millones atrapados; Itaipú, la CONMEBOL y la Municipalidad de Asunción informan su exposición.", "refs": ["dos4:fact:0003", "dos4:fact:0004", "dos4:fact:0005", "dos4:fact:0008"]}
+  ]}
+]

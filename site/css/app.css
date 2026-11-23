@@ -514,3 +514,12 @@ svg [data-prov]:focus-visible{outline:2px solid var(--focus)}
 .pay-cov{padding:8px 0;border-top:1px solid var(--rule)}
 .pay-cov:first-of-type{border-top:0}
 @media (max-width:640px){.pay-ladder{flex-direction:column}.pay-step{grid-template-columns:minmax(0,1fr);gap:2px}.pay-tiers{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- what's new (overview) ---------- */
+.upd{border-left:4px solid var(--out,var(--warn));gap:8px;margin-bottom:6px}
+.upd-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.upd-head h2{font-size:17px;margin:0}
+.upd-when{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.upd-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.upd-refs{margin-left:6px}
+.upd-old{padding:10px 0 0;gap:6px}

@@ -24,6 +24,10 @@ Source of truth for the Ueno Bank S.A. (Paraguay) case file: claim-level rows wi
 | `make test` | end-to-end tests with good and deliberately bad rows | ~1 min |
 | `make pub` | build `pub/`, the public copy of the site (three private individuals removed) | |
 
+## Every update
+
+Add one entry at the top of `data/updates.json` (when it ran, what changed, which rows) for every run that changes the published data. It is shown as "What's new" at the top of the overview, and `make check` fails if an entry cites a row that does not exist.
+
 ## Layout
 
 | Path | Contents |
