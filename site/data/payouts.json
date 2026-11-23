@@ -524,6 +524,119 @@
   }
  ],
  "coverage": {
+  "explainer": {
+   "title": {
+    "en": "Did the bank have enough assets?",
+    "es": "¿Tenía el banco activos suficientes?"
+   },
+   "answer": {
+    "en": "Enough for depositors, by the central bank's account, if other banks buy them. Not enough for all of the bank's debts.",
+    "es": "Suficientes para los depositantes, según el BCP, si otros bancos los compran. No alcanzan para todas las deudas del banco."
+   },
+   "points": [
+    {
+     "t": {
+      "en": "The '100% covered' headlines of 18 Nov come from a legislator describing a meeting with the central bank, not from a central bank statement.",
+      "es": "Los titulares de 'cobertura del 100%' del 18 nov provienen de un legislador que relató una reunión con el BCP, no de un comunicado del BCP."
+     },
+     "refs": [
+      "web:event:0001"
+     ]
+    },
+    {
+     "t": {
+      "en": "The central bank president qualified it the same day: depositors would be covered, international and local bonds would not, and the assets show a deficit of USD 1,500 million.",
+      "es": "El presidente del BCP lo matizó el mismo día: se cubriría a los depositantes, no los bonos internacionales y locales, y los activos muestran un déficit de USD 1.500 millones."
+     },
+     "refs": [
+      "web:event:0002",
+      "web:fact:0002"
+     ]
+    },
+    {
+     "t": {
+      "en": "The verified assets, about G. 9.25 trillion, are loans, certificates and property, not cash. What they are worth is what banks bid in the tender, and the figure is preliminary.",
+      "es": "Los activos verificados, unos G. 9,25 billones, son carteras, certificados y bienes, no efectivo. Valen lo que los bancos ofrezcan en la licitación, y la cifra es preliminar."
+     },
+     "refs": [
+      "web:event:0003",
+      "web:fact:0001"
+     ]
+    },
+    {
+     "t": {
+      "en": "They would not repay the guarantee fund's advance either. The central bank puts the shortfall at USD 1,000 to 1,500 million including that advance.",
+      "es": "Tampoco alcanzarían para reponer el adelanto del fondo de garantía. El BCP estima el faltante en USD 1.000 a 1.500 millones, incluido ese adelanto."
+     },
+     "refs": [
+      "web:event:0003"
+     ]
+    }
+   ],
+   "math_title": {
+    "en": "Why both statements can be true (our reading, not a source's)",
+    "es": "Por qué ambas afirmaciones pueden ser ciertas (lectura nuestra, no de una fuente)"
+   },
+   "math": [
+    {
+     "k": {
+      "en": "Assets the bank declared",
+      "es": "Activos que declaraba el banco"
+     },
+     "v": {
+      "en": "about USD 4,400 million",
+      "es": "unos USD 4.400 millones"
+     },
+     "refs": [
+      "web:fact:0003"
+     ]
+    },
+    {
+     "k": {
+      "en": "Assets verified so far",
+      "es": "Activos verificados hasta ahora"
+     },
+     "v": {
+      "en": "about USD 1,450 to 1,500 million",
+      "es": "unos USD 1.450 a 1.500 millones"
+     },
+     "refs": [
+      "web:fact:0001",
+      "web:fact:0006"
+     ]
+    },
+    {
+     "k": {
+      "en": "Deposits",
+      "es": "Depósitos"
+     },
+     "v": {
+      "en": "about USD 2,800 million",
+      "es": "unos USD 2.800 millones"
+     },
+     "refs": [
+      "chrono:event:0166"
+     ]
+    },
+    {
+     "k": {
+      "en": "Already paid to depositors by the guarantee fund",
+      "es": "Ya pagado a depositantes por el fondo de garantía"
+     },
+     "v": {
+      "en": "about USD 644 million",
+      "es": "unos USD 644 millones"
+     },
+     "refs": [
+      "dos4:fact:0007"
+     ]
+    }
+   ],
+   "math_note": {
+    "en": "About USD 1,500 million of assets can cover what depositors are still owed only if the guarantee fund absorbs what it has already paid and bondholders and other creditors take the loss. That is a loss being shared out, not a bank that had enough. These figures come from different sources and dates and are indicative only.",
+    "es": "Unos USD 1.500 millones de activos pueden cubrir lo que aún se debe a los depositantes solo si el fondo de garantía absorbe lo que ya pagó y los bonistas y demás acreedores asumen la pérdida. Eso es repartir una pérdida, no un banco al que le alcanzaba. Las cifras provienen de fuentes y fechas distintas y son solo indicativas."
+   }
+  },
   "intro": {
    "en": "Whether the plan can pay everyone turns on two numbers that officials have not reconciled: what the sound assets are worth, and how much is owed above the guarantee. The figures below were given on different dates and measure different things; they are not added up.",
    "es": "Que el plan alcance para todos depende de dos números que las autoridades no han conciliado: cuánto valen los activos sanos y cuánto se debe por encima de la garantía. Las cifras de abajo se dieron en fechas distintas y miden cosas distintas; no se suman."
@@ -576,17 +689,48 @@
    },
    {
     "k": {
-     "en": "BCP statement that assets suffice to cover deposits",
-     "es": "Declaración del BCP de que los activos alcanzan para cubrir los depósitos"
+     "en": "Assets verified by the interveners, BCP",
+     "es": "Activos verificados por los interventores, BCP"
     },
     "v": {
-     "en": "stated, not quantified",
-     "es": "afirmado, sin cifra"
+     "en": "about G. 9.25 trillion",
+     "es": "unos G. 9,25 billones"
     },
     "d": "2026-11-18",
     "side": "have",
     "refs": [
+     "web:fact:0001",
      "chrono:event:0226"
+    ]
+   },
+   {
+    "k": {
+     "en": "Deficit, BCP president",
+     "es": "Déficit, presidente del BCP"
+    },
+    "v": {
+     "en": "USD 1,500 million",
+     "es": "USD 1.500 millones"
+    },
+    "d": "2026-11-18",
+    "side": "owe",
+    "refs": [
+     "web:fact:0002"
+    ]
+   },
+   {
+    "k": {
+     "en": "Bonds outside the guarantee",
+     "es": "Bonos fuera de la garantía"
+    },
+    "v": {
+     "en": "USD 350 million abroad, plus local bonds",
+     "es": "USD 350 millones en el exterior, más bonos locales"
+    },
+    "d": "2026-11-18",
+    "side": "owe",
+    "refs": [
+     "web:fact:0005"
     ]
    },
    {

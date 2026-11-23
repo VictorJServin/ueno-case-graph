@@ -78,7 +78,16 @@
       });
       var unk = h("ul", { class: "small" });
       (d.unknown || []).forEach(function (x) { unk.appendChild(h("li", null, t(x))); });
-      root.appendChild(sec(L("Can the plan cover it?", "¿Alcanza el plan?"), t(cv.intro), h("div", { class: "grid g2" }, have, owe),
+      var ex = cv.explainer, exBox = null;
+      if (ex) {
+        var pts = h("ul", { class: "pay-list" });
+        (ex.points || []).forEach(function (x) { pts.appendChild(h("li", null, h("span", null, t(x.t)), chips(x.refs))); });
+        var mt = h("div", null);
+        (ex.math || []).forEach(function (x) { mt.appendChild(h("div", { class: "pay-cov" }, h("div", { class: "pay-row" }, h("span", null, t(x.k)), h("b", { class: "num" }, t(x.v))), chips(x.refs))); });
+        exBox = h("div", { class: "card stack pay-explain", id: "enough-assets" }, h("h3", null, t(ex.title)), h("p", { class: "pay-amt" }, t(ex.answer)), pts,
+          h("h4", null, t(ex.math_title)), mt, h("p", { class: "small" }, t(ex.math_note)));
+      }
+      root.appendChild(sec(L("Can the plan cover it?", "¿Alcanza el plan?"), t(cv.intro), exBox, h("div", { class: "grid g2" }, have, owe),
         h("div", { class: "card stack", style: "border-top:4px solid var(--warn)" }, h("h3", null, L("Not known yet", "Aún no se sabe")), unk)));
     }
   };

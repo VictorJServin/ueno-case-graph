@@ -1,5 +1,52 @@
 [
  {
+  "executed_at": "2026-11-23T13:45:00-08:00",
+  "data_to": "2026-11-23",
+  "input": {
+   "en": "Own web research on the 'enough assets' claim; five articles, four opened and read",
+   "es": "Investigación propia sobre la afirmación de 'activos suficientes'; cinco artículos, cuatro abiertos y leídos"
+  },
+  "counts": {
+   "events": 4,
+   "figures": 6,
+   "sources": 5
+  },
+  "items": [
+   {
+    "en": "New explainer: did the bank have enough assets? Enough for depositors if banks buy them, per the central bank; not enough for all debts.",
+    "es": "Nueva explicación: ¿tenía el banco activos suficientes? Suficientes para los depositantes si los bancos los compran, según el BCP; no para todas las deudas.",
+    "go": "payouts"
+   },
+   {
+    "en": "Central bank president: depositors covered, bonds not; a deficit of USD 1,500 million.",
+    "es": "Presidente del BCP: depositantes cubiertos, bonos no; un déficit de USD 1.500 millones.",
+    "refs": [
+     "web:event:0002",
+     "web:fact:0002"
+    ]
+   },
+   {
+    "en": "Verified assets of about G. 9.25 trillion are loans and property, not cash; the tender sets their value.",
+    "es": "Los activos verificados por unos G. 9,25 billones son carteras y bienes, no efectivo; la licitación fijará su valor.",
+    "refs": [
+     "web:event:0003",
+     "web:fact:0001"
+    ]
+   },
+   {
+    "en": "Banking association: about USD 4,400 million of declared assets, some USD 1,500 million recoverable.",
+    "es": "Asoban: unos USD 4.400 millones de activos declarados, unos USD 1.500 millones recuperables.",
+    "refs": [
+     "web:event:0004"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Not updated in this run: the missing-money estimate and the written reports.",
+   "es": "No actualizado en esta corrida: la estimación del dinero faltante y los informes escritos."
+  }
+ },
+ {
   "executed_at": "2026-11-23T10:35:00-08:00",
   "data_to": "2026-11-23",
   "input": {

@@ -523,3 +523,6 @@ svg [data-prov]:focus-visible{outline:2px solid var(--focus)}
 .upd-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
 .upd-refs{margin-left:6px}
 .upd-old{padding:10px 0 0;gap:6px}
+
+.pay-explain{border-left:4px solid var(--warn)}
+.pay-explain h4{margin:6px 0 0;font-size:14px}

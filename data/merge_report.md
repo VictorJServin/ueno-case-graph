@@ -53,6 +53,10 @@ Things a human should review. The builder never merges two different ids on its 
 | rec.loans.jsonl | 40 | 0 |
 | rec.roles.jsonl | 120 | 0 |
 | rec.sources.jsonl | 24 | 0 |
+| web.entities.jsonl | 3 | 0 |
+| web.events.jsonl | 4 | 0 |
+| web.facts.jsonl | 6 | 0 |
+| web.sources.jsonl | 5 | 0 |
 
 ## Editor corrections (edit.corrections.jsonl)
 
@@ -313,6 +317,7 @@ None.
 - src:latribuna-2026-11-21-marcha-extrabajadores: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:radio1000-2026-11-23-rasmussen-vazquez: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:rcc-2026-11-23-itaipu-mendoza: source date 2026-11-23 is after the 2026-11-20 cutoff
+- src:rdn-2026-11-23-cramer-vaciamiento: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-21-calificadoras: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-21-preda: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-21-solventa: source date 2026-11-21 is after the 2026-11-20 cutoff
@@ -362,6 +367,7 @@ None.
 - dos5:event:0051: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0052: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0053: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- web:event:0004: date 2026-11-23 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0001: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0002: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0003: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
@@ -377,6 +383,7 @@ None.
 - press:fact:0306: date 2027-09 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - press:fact:0307: date 2027-12 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - press:fact:0313: date 2027 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- web:fact:0004: date 2026-11-23 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - flows press:flow:0001, press:flow:0048 describe the same movement (org:sagas -> org:vinanzas, PYG 86100000000, 2026-06-15) in the regulator voice: do not add them up
 - flows press:flow:0002, press:flow:0043, press:flow:0060 describe the same movement (org:hd-invest -> org:vinanzas, USD 35000000, 2026-06-15) in the regulator voice: do not add them up
 - flows press:flow:0004, press:flow:0042, press:flow:0059, press:flow:0115 describe the same movement (org:satec -> org:vinanzas, USD 20000000, 2026-06-15) in the regulator voice: do not add them up
