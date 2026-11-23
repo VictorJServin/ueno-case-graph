@@ -76,7 +76,7 @@
       optional("data/legal_prosecution.json"), optional("data/legal_defence.json"),
       optional("data/fin_credit.json"), optional("data/fin_flows.json"),
       optional("data/fibo_mapping.json"), optional("data/verified.json"),
-      optional("data/editor_report.md", true), optional("data/missing_money.json")
+      optional("data/editor_report.md", true), optional("data/missing_money.json"), optional("data/payouts.json")
     ]).then(function (r) {
       if (!r[0] || !Array.isArray(r[0]["@graph"])) throw new Error("data/graph.jsonld: no @graph array");
       index(r[0], r[1]);
@@ -90,6 +90,7 @@
       if (Array.isArray(r[7])) r[7].forEach(function (id) { if (typeof id === "string") x.verified[id] = true; });
       x.editorMd = typeof r[8] === "string" && r[8].trim() && !/^\s*<!doctype/i.test(r[8]) ? r[8] : null;
       x.missing = isObj(r[9]) && isObj(r[9].headline) && r[9].headline.central != null ? r[9] : null;
+      x.payouts = isObj(r[10]) && Array.isArray(r[10].tiers) ? r[10] : null;
       return UC.db;
     });
   };

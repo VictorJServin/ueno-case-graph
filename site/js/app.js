@@ -5,9 +5,9 @@
   UC.views = UC.views || {};
   UC.state = UC.state || {};
 
-  var ORDER = ["overview", "missing", "network", "flows", "timeline", "people", "analysis", "data"];
+  var ORDER = ["overview", "payouts", "missing", "network", "flows", "timeline", "people", "analysis", "data"];
   var NAV = {
-    overview: ["Overview", "Resumen"], missing: ["Missing money", "El dinero faltante"], network: ["Network", "Red"], flows: ["Money flows", "Flujos de dinero"], timeline: ["Timelines", "Cronologías"],
+    overview: ["Overview", "Resumen"], payouts: ["Depositor payouts", "Pagos a ahorristas"], missing: ["Missing money", "El dinero faltante"], network: ["Network", "Red"], flows: ["Money flows", "Flujos de dinero"], timeline: ["Timelines", "Cronologías"],
     people: ["People and companies", "Personas y empresas"], analysis: ["Analysis", "Análisis"], data: ["Data and ontology", "Datos y ontología"]
   };
   var loaded = false, cur = { view: null, sub: null };
@@ -38,7 +38,8 @@
     nav.innerHTML = "";
     nav.setAttribute("aria-label", L("Views", "Vistas"));
     ORDER.forEach(function (v) {
-      if (v === "missing" && loaded && !(UC.db && UC.db.extra.missing)) return; // optional view: no data, no nav entry
+      if (v === "missing" && loaded && !(UC.db && UC.db.extra.missing)) return;
+      if (v === "payouts" && loaded && !(UC.db && UC.db.extra.payouts)) return; // optional view: no data, no nav entry
       nav.appendChild(h("a", { href: "#" + v, "aria-current": cur.view === v ? "page" : null }, L(NAV[v][0], NAV[v][1])));
     });
     Array.prototype.forEach.call(document.querySelectorAll("#lang button"), function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === UC.lang)); });
@@ -66,8 +67,8 @@
     ].forEach(function (t) { full.appendChild(h("p", null, t)); });
     document.getElementById("foot").innerHTML = "";
     document.getElementById("foot").appendChild(h("p", null, L(
-      "Sources: Acta de Declaración Indagatoria of Julio Daniel Rey Fernández, Case 89/2026 (24 pages, 4 November 2026), and public reporting up to 20 November 2026, each cited on the item it supports. Personal identifiers that appear in the original record (ID numbers, addresses, dates of birth) are not part of the data. The scanned pages are not published.",
-      "Fuentes: Acta de Declaración Indagatoria de Julio Daniel Rey Fernández, Causa 89/2026 (24 páginas, 4 de noviembre de 2026), e información pública hasta el 20 de noviembre de 2026, citada en cada dato. Los datos personales del acta original (cédulas, domicilios, fechas de nacimiento) no forman parte de los datos. Las páginas escaneadas no se publican.")));
+      "Sources: Acta de Declaración Indagatoria of Julio Daniel Rey Fernández, Case 89/2026 (24 pages, 4 November 2026), and public reporting up to 23 November 2026, each cited on the item it supports. Personal identifiers that appear in the original record (ID numbers, addresses, dates of birth) are not part of the data. The scanned pages are not published.",
+      "Fuentes: Acta de Declaración Indagatoria de Julio Daniel Rey Fernández, Causa 89/2026 (24 páginas, 4 de noviembre de 2026), e información pública hasta el 23 de noviembre de 2026, citada en cada dato. Los datos personales del acta original (cédulas, domicilios, fechas de nacimiento) no forman parte de los datos. Las páginas escaneadas no se publican.")));
   }
 
   function render(force) {

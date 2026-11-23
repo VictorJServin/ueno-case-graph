@@ -487,3 +487,30 @@ svg [data-prov]:focus-visible{outline:2px solid var(--focus)}
   @keyframes slide{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
 }
 @media print{.top,.drawer,.foot{position:static}}
+
+/* ---------- depositor payouts ---------- */
+.pay-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.pay-kpi{gap:4px}
+.pay-v{font-family:var(--display);font-size:24px;line-height:1.15;white-space:normal}
+.pay-refs{margin-top:2px}
+.pay-row{display:flex;gap:10px;justify-content:space-between;align-items:baseline;flex-wrap:wrap}
+.pay-amt{font-weight:600;margin:0}
+.pay-state{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap;border:1px solid currentColor}
+.pay-done{--pc:var(--good)} .pay-pend{--pc:var(--warn)} .pay-unk{--pc:var(--muted)}
+.pay-state.pay-done,.pay-state.pay-pend,.pay-state.pay-unk{color:var(--pc)}
+.pay-ladder{display:flex;gap:3px;border-radius:8px;overflow:hidden;min-height:58px}
+.pay-seg{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:8px 10px;font-size:12.5px;min-width:0;background:var(--soft);border-top:5px solid var(--pc)}
+.pay-seg.pay-unk{background:repeating-linear-gradient(135deg,var(--soft),var(--soft) 6px,transparent 6px,transparent 12px)}
+.pay-seg b{font-size:13px}
+.pay-sched{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.pay-step{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;padding:10px 0 10px 14px;border-left:3px solid var(--pc);position:relative}
+.pay-step::before{content:"";position:absolute;left:-7px;top:15px;width:11px;height:11px;border-radius:50%;background:var(--pc)}
+.pay-step.pay-unk{border-left-style:dashed}
+.pay-step.pay-unk::before,.pay-step.pay-pend::before{background:var(--card);border:2px solid var(--pc)}
+.pay-date{color:var(--muted);font-size:13px;padding-top:1px}
+.pay-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:10px}
+.pay-tbl th[scope=row]{font-weight:600;text-align:left}
+.pay-tbl td,.pay-tbl th{vertical-align:top}
+.pay-cov{padding:8px 0;border-top:1px solid var(--rule)}
+.pay-cov:first-of-type{border-top:0}
+@media (max-width:640px){.pay-ladder{flex-direction:column}.pay-step{grid-template-columns:minmax(0,1fr);gap:2px}.pay-tiers{grid-template-columns:minmax(0,1fr)}}

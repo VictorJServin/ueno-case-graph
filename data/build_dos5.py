@@ -112,6 +112,25 @@ for cid, (cat, who, ten, tes, parties, amt, cur, over) in M.items():
     events.append({"id": "dos5:event:%04d" % (len(events) + 1), "date": c["event_date"], "date_precision": {4: "year", 7: "month"}.get(len(c["event_date"]), "day"), "category": cat,
                    "title_en": ten, "title_es": tes, "detail_en": over or cut(c["statement"]), "detail_es": tes + ". (Detalle completo solo en inglés.)", "parties": parties, "amount": amt, "currency": cur,
                    "prov": prov(cid, who, s, "" if over else quote(c.get("quote", "")))})
+# Points that sit late in long dossier statements and would be lost by the 700-character cut. (claim, dossier source id, ...)
+EXTRA = [
+ ("C-CB-09", "ln_rivarola_activos", "2026-11-22", "depositor", "regulator", "BCP director Rivarola: bondholders are last in the order of payment; the guarantee fund recovers first",
+  "Director del BCP Rivarola: los bonistas son los últimos en el orden de pago; el Fondo de Garantía recupera primero", ["person:fernando-rivarola", BCP, "auth:fgd", UB],
+  "Per the dossier's summary of Rivarola's 22 Nov interview: bondholders are last in the priority order and the deposit guarantee fund recovers first; the sound assets are mainly vault and ATM cash, properties and performing loans, and property titles are still being verified."),
+ ("C-PUB-09", "adn_workers22", "2026-11-22", "depositor", "press", "A savers' spokesman says he represents about 1,800 depositors above the guarantee cap",
+  "Un vocero de ahorristas dice representar a unos 1.800 depositantes por encima del tope de garantía", [UB],
+  "Per the dossier, savers' spokesman Nicolás Posse represents about 1,800 depositors with balances above the cap of 75 minimum wages. Which of the claim's articles carries the figure was not confirmed."),
+ ("C-COL-15", "ln_mipymes_puente", "2026-11-22", "depositor", "regulator", "Vice-minister: a BCP transitional rule lets banks give bridge loans to small firms with money trapped above the cap",
+  "Viceministro: una norma transitoria del BCP permite créditos puente a mipymes con dinero atrapado por encima del tope", [BCP, UB],
+  "Per the dossier, the vice-minister for small business said the BCP's transitional rule lets financial institutions grant bridge loans to small firms whose funds above the guarantee cap remain trapped, without hurting their credit rating, ahead of year-end obligations."),
+]
+for cid, dsid, date, cat, who, ten, tes, parties, det in EXTRA:
+    s = next(x for x in CL[cid]["sources"] if x["id"] == dsid)
+    assert s["link_status"] == "ok" and s["kind"] == "article", dsid
+    srcs[sid(s)] = {"id": sid(s), "kind": "press", "outlet": re.sub(r"\s*\(PY\)", "", s["outlet"]), "title": s["title"], "date": s["pub_date"], "url": s["url"], "page": "dossier v1.6 source id %s" % s["id"]}
+    pr = prov(cid, who, s); pr["confidence"] = "low" if cid == "C-PUB-09" else "medium"
+    events.append({"id": "dos5:event:%04d" % (len(events) + 1), "date": date, "date_precision": "day", "category": cat, "title_en": ten, "title_es": tes, "detail_en": det,
+                   "detail_es": tes + ". (Detalle completo solo en inglés.)", "parties": parties, "amount": None, "currency": None, "prov": pr})
 for i, (cid, ent, metric, val, cur, note, period) in enumerate(FACTS, 1):
     s = pick(CL[cid]); who = M[cid][1]
     facts.append({"id": "dos5:fact:%04d" % i, "entity": ent, "metric": metric, "value": val, "currency": cur, "unit_note": note, "period": period, "prov": prov(cid, who, s)})

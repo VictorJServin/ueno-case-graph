@@ -31,9 +31,9 @@ Things a human should review. The builder never merges two different ids on its 
 | dos4.events.jsonl | 21 | 0 |
 | dos4.facts.jsonl | 8 | 0 |
 | dos4.sources.jsonl | 21 | 0 |
-| dos5.events.jsonl | 50 | 0 |
+| dos5.events.jsonl | 53 | 0 |
 | dos5.facts.jsonl | 9 | 0 |
-| dos5.sources.jsonl | 50 | 0 |
+| dos5.sources.jsonl | 53 | 0 |
 | edit.corrections.jsonl | 126 | 0 |
 | edit.entity_merges.jsonl | 6 | 0 |
 | edit.verified.jsonl | 360 | 0 |
@@ -284,6 +284,7 @@ None.
 - src:abc-2026-11-23-pena-preso: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:abc-2026-11-23-quiniela: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-cardenal: source date 2026-11-22 is after the 2026-11-20 cutoff
+- src:adn-2026-11-22-workers22: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:asuncion-gov-2026-11-22-balance-pdf: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:dossier-v2-2026-11-21: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:elindependiente-2026-11-23-ips-delirio: source date 2026-11-23 is after the 2026-11-20 cutoff
@@ -305,7 +306,9 @@ None.
 - src:lanacion-2026-11-22-agujero1362: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-22-bcp-8meses: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-22-dobretec: source date 2026-11-22 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-22-mipymes-puente: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-22-pagos-migracion: source date 2026-11-22 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-22-rivarola-activos: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-23-recalde: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:latribuna-2026-11-21-marcha-extrabajadores: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:radio1000-2026-11-23-rasmussen-vazquez: source date 2026-11-23 is after the 2026-11-20 cutoff
@@ -356,6 +359,9 @@ None.
 - dos5:event:0048: date 2026-11-23 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0049: date 2026-11-23 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0050: date 2026-11-23 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- dos5:event:0051: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- dos5:event:0052: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- dos5:event:0053: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0001: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0002: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0003: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
