@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-23",
+ "as_of": "2026-11-24",
  "disclaimer": {
   "en": "This view explains what has been reported about repayments. It is not advice and it is not an official notice: confirm your own case with the BCP or the deposit guarantee fund. Figures come from officials' statements as reported by the press and are shown as each source gave them.",
   "es": "Esta vista explica lo que se ha informado sobre los pagos. No es asesoramiento ni un aviso oficial: confirme su caso con el BCP o el Fondo de Garantía de Depósitos. Las cifras provienen de declaraciones de autoridades según la prensa y se muestran tal como las dio cada fuente."
@@ -193,13 +193,14 @@
     "es": "Fondos mutuos (Ueno AFPISA)"
    },
    "t": {
-    "en": "Not deposits, so not guaranteed. Each fund's assets are separate from the bank. Authorisation suspended for 180 days; about 30,000 investors and USD 46 million; the regulator is seeking a new manager. No redemption date.",
-    "es": "No son depósitos, por lo que no tienen garantía. El patrimonio de cada fondo está separado del banco. Autorización suspendida por 180 días; unos 30.000 inversores y USD 46 millones; el regulador busca un nuevo administrador. Sin fecha de rescates."
+    "en": "Not deposits, so not guaranteed. Each fund's assets are separate from the bank. Authorisation suspended for 180 days; about 30,000 investors and USD 46 million; the regulator is seeking a new manager. Each fund's securities remain in custody at the securities depository, and on 24 Nov the manager began asking unitholders whether they want to redeem once a procedure exists. No redemption date or cash value yet.",
+    "es": "No son depósitos, por lo que no tienen garantía. El patrimonio de cada fondo está separado del banco. Autorización suspendida por 180 días; unos 30.000 inversores y USD 46 millones; el regulador busca un nuevo administrador. Los títulos de cada fondo siguen en custodia en la Caja de Valores, y el 24 nov la administradora empezó a consultar a los cuotapartistas si quieren rescatar cuando exista un procedimiento. Aún sin fecha ni valor de rescate."
    },
    "refs": [
+    "dos6:event:0019",
+    "dos6:event:0025",
     "chrono:event:0167",
-    "chrono:event:0141",
-    "chrono:event:0206"
+    "chrono:event:0141"
    ]
   },
   {
@@ -208,10 +209,11 @@
     "es": "Cuentas bursátiles (Ueno Casa de Bolsa)"
    },
    "t": {
-    "en": "Suspended but not in resolution; clients can move their investments to other brokers.",
-    "es": "Suspendida pero no en resolución; los clientes pueden trasladar sus inversiones a otras casas de bolsa."
+    "en": "Suspended but not in resolution; since 24 Nov the depository must transfer a client's account to another depositary on the client's request, without the suspended broker.",
+    "es": "Suspendida pero no en resolución; desde el 24 nov la Caja de Valores debe traspasar la cuenta de un cliente a otro depositario a su pedido, sin la casa de bolsa suspendida."
    },
    "refs": [
+    "dos6:event:0025",
     "dos4:event:0010",
     "chrono:event:0176"
    ]
@@ -227,7 +229,8 @@
    },
    "refs": [
     "dos5:event:0051",
-    "dos5:event:0020"
+    "dos5:event:0020",
+    "dos6:event:0026"
    ]
   }
  ],
@@ -405,6 +408,15 @@
   },
   {
    "t": {
+    "en": "If you owe the bank: the interveners say no payment channel exists yet, and default and penalty interest is waived until 30 Nov 2026.",
+    "es": "Si usted le debe al banco: los interventores informan que aún no hay canal de pago y que los intereses moratorios y punitorios no se cobran hasta el 30 nov 2026."
+   },
+   "refs": [
+    "dos6:event:0025"
+   ]
+  },
+  {
+   "t": {
     "en": "Small firms with money trapped above the cap: the BCP allows bridge loans and refinancing without a rating penalty, and the public lender AFD announced a G. 50,000 million programme, still pending.",
     "es": "Mipymes con dinero atrapado por encima del tope: el BCP permite créditos puente y refinanciación sin castigo de calificación, y la AFD anunció un programa de G. 50.000 millones, aún pendiente."
    },
@@ -480,12 +492,13 @@
     "es": "USD 163,8 millones más G. 115.200 millones"
    },
    "n": {
-    "en": "an earlier report gave USD 182 million",
-    "es": "un informe previo daba USD 182 millones"
+    "en": "an earlier report gave USD 182 million; on 24 Nov a board member said 'above USD 200 million'",
+    "es": "un informe previo daba USD 182 millones; el 24 nov un consejero dijo 'más de USD 200 millones'"
    },
    "refs": [
     "dos5:fact:0006",
-    "dos4:fact:0004"
+    "dos4:fact:0004",
+    "dos6:fact:0003"
    ]
   },
   {

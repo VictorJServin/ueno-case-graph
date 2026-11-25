@@ -1,5 +1,71 @@
 [
  {
+  "executed_at": "2026-11-25T05:25:00-08:00",
+  "data_to": "2026-11-24",
+  "input": {
+   "en": "Monitoring dossiers v1.8 and v1.9, generated 24 Nov 2026 06:15 and 18:12 PT",
+   "es": "Dossiers de monitoreo v1.8 y v1.9, generados el 24 nov 2026 06:15 y 18:12 PT"
+  },
+  "counts": {
+   "events": 29,
+   "figures": 4,
+   "sources": 29
+  },
+  "items": [
+   {
+    "en": "New charges: the former President is also charged with money laundering and aggravated passive bribery; his brother and sister-in-law are charged over the Pear S.R.L. land deal. All presumed innocent.",
+    "es": "Nuevas imputaciones: el expresidente también es imputado por lavado de activos y cohecho pasivo agravado; su hermano y su cuñada son imputados por la operación de tierras de Pear S.R.L. Todos se presumen inocentes.",
+    "refs": [
+     "dos6:event:0005",
+     "dos6:event:0001",
+     "dos6:event:0006"
+    ]
+   },
+   {
+    "en": "Former Economy Minister: home searched on 10 Nov over a G. 250,000 million placement; a deputy reads an alleged 2026 consulting contract with Grupo Vázquez. Not charged.",
+    "es": "Exministro de Economía: vivienda allanada el 10 nov por una colocación de G. 250.000 millones; una diputada lee un supuesto contrato de consultoría de 2026 con Grupo Vázquez. No imputado.",
+    "refs": [
+     "dos6:event:0009",
+     "dos6:event:0023"
+    ]
+   },
+   {
+    "en": "Savers outside the guarantee: brokerage accounts can now be transferred on request; the mutual-fund manager starts asking unitholders about redemption; loan penalties waived to 30 Nov.",
+    "es": "Ahorristas fuera de la garantía: las cuentas bursátiles ya pueden traspasarse a pedido; la administradora de fondos mutuos empieza a consultar por rescates; multas de préstamos suspendidas hasta el 30 nov.",
+    "refs": [
+     "dos6:event:0025",
+     "dos6:event:0019"
+    ]
+   },
+   {
+    "en": "2024 merger: the central bank's file shows supervisors judged the plan viable and the board approved the absorption on 21 Jun 2024.",
+    "es": "Fusión de 2024: el expediente del BCP muestra que los supervisores consideraron viable el plan y el directorio aprobó la absorción el 21 jun 2024.",
+    "refs": [
+     "dos6:event:0029"
+    ]
+   },
+   {
+    "en": "Asset tracing abroad: requests to Brazil and others; Luxembourg has sent documents. A bondholders' group counts about USD 365 million of bonds.",
+    "es": "Rastreo de bienes en el exterior: pedidos a Brasil y otros; Luxemburgo ya remitió documentos. Un grupo de bonistas calcula unos USD 365 millones en bonos.",
+    "refs": [
+     "dos6:event:0020",
+     "dos6:event:0026"
+    ]
+   },
+   {
+    "en": "Workers: the President announces a bill to advance up to five minimum wages each.",
+    "es": "Trabajadores: el Presidente anuncia un proyecto para adelantar hasta cinco salarios mínimos a cada uno.",
+    "refs": [
+     "dos6:event:0022"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Not updated in this run: the charges table on the Legal analysis tab, the missing-money estimate and the written reports. Six dossier claims were left out on purpose (no article source, commentary, or not about the case).",
+   "es": "No actualizado en esta corrida: la tabla de imputaciones de la pestaña de análisis legal, la estimación del dinero faltante y los informes escritos. Seis afirmaciones del dossier se dejaron fuera a propósito (sin artículo fuente, comentario o ajenas al caso)."
+  }
+ },
+ {
   "executed_at": "2026-11-23T13:45:00-08:00",
   "data_to": "2026-11-23",
   "input": {
