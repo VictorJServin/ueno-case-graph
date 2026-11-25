@@ -6,8 +6,10 @@ Things a human should review. The builder never merges two different ids on its 
 
 | file | rows read | malformed lines |
 |---|---|---|
-| bot.events.jsonl | 12 | 0 |
-| bot.sources.jsonl | 12 | 0 |
+| bot.entities.jsonl | 1 | 0 |
+| bot.events.jsonl | 23 | 0 |
+| bot.facts.jsonl | 7 | 0 |
+| bot.sources.jsonl | 25 | 0 |
 | chrono.accused.jsonl | 35 | 0 |
 | chrono.entities.jsonl | 81 | 0 |
 | chrono.events.jsonl | 233 | 0 |
@@ -281,7 +283,10 @@ None.
 ## Things in the raw data that look wrong or need a second look
 
 - src:1000noticias-2026-11-25-39-empresas: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:1000noticias-2026-11-25-fondos-dos-semanas: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:5dias-2026-11-21-cpm: source date 2026-11-21 is after the 2026-11-20 cutoff
+- src:5dias-2026-11-25-afpisa-plan: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:5dias-2026-11-25-liquidacion-fondos: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-21-cramer: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:abc-2026-11-21-ejercito-itti: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:abc-2026-11-21-gsr-family: source date 2026-11-21 is after the 2026-11-20 cutoff
@@ -307,16 +312,22 @@ None.
 - src:abc-2026-11-24-renuncia-juridico: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:abc-2026-11-24-vallejo-fv: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-bachi-anticipo: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-canciller-itaipu: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-consumo-cip: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-dominguez-750: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-fpena-prision: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-nubicom-vox: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-ueno-seguros: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-vallejo-mef: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-viajes-pena: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-cardenal: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-workers22: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:adn-2026-11-24-bienes-exterior: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:adn-2026-11-25-audiencia-fpena: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:adn-2026-11-25-cronograma-bcp: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:adn-2026-11-25-fpena-prision: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:adn-2026-11-25-itaipu-vieira: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:adn-2026-11-25-trabajadores-total: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:asuncion-gov-2026-11-22-balance-pdf: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:dossier-v2-2026-11-21: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:elindependiente-2026-11-23-ips-delirio: source date 2026-11-23 is after the 2026-11-20 cutoff
@@ -352,9 +363,11 @@ None.
 - src:lanacion-2026-11-24-fpena-declara: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:latribuna-2026-11-21-marcha-extrabajadores: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:lt-2026-11-24-interior: source date 2026-11-24 is after the 2026-11-20 cutoff
+- src:ministerio-publico-2026-11-25-mitic: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:mp-2026-11-23-coord: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:mp-2026-11-23-fpena: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:mp-2026-11-24-acta11: source date 2026-11-24 is after the 2026-11-20 cutoff
+- src:npy-2026-11-25-anticipo: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:radio1000-2026-11-23-rasmussen-vazquez: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:rcc-2026-11-23-itaipu-mendoza: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:rdn-2026-11-23-barrio-ueno: source date 2026-11-23 is after the 2026-11-20 cutoff
@@ -374,6 +387,8 @@ None.
 - src:ultimahora-2026-11-24-dip-bloquean: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-24-fusion-hora: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-24-imputan-coima: source date 2026-11-24 is after the 2026-11-20 cutoff
+- src:ultimahora-2026-11-25-blindaje-fondos: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:ultimahora-2026-11-25-cbi-flotando: source date 2026-11-25 is after the 2026-11-20 cutoff
 - press:loan:0034: status 'cancelled' but outstanding is 6321573.22
 - rec:loan:0025: outstanding 25024500 exceeds principal 24900000
 - rec:loan:0027: outstanding 10645965 exceeds principal 10593000
@@ -389,6 +404,16 @@ None.
 - bot:event:0010: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:event:0011: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:event:0012: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0013: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0014: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0015: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0017: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0018: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0019: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0020: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0021: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0022: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0023: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos4:event:0013: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0001: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0002: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
@@ -451,6 +476,13 @@ None.
 - dos6:event:0026: date 2026-11-24 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos6:event:0027: date 2026-11-24 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - web:event:0004: date 2026-11-23 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0001: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0002: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0003: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0004: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0005: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0006: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0007: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0001: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0002: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0003: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)

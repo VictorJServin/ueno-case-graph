@@ -16,7 +16,7 @@
 
 `prosecution`, `rey`, `defence`, `regulator`, `rating_agency`, `company`, `press`, `analyst`
 
-## Party ids already in the graph (245)
+## Party ids already in the graph (246)
 
 Reuse one of these before minting a new id.
 
@@ -244,6 +244,7 @@ Reuse one of these before minting a new id.
 | `person:raul-vera-bogado` | Raúl Vera Bogado |
 | `person:rebeca-villasanti` | Rebeca Villasanti |
 | `person:ricardo-preda` | Ricardo Preda |
+| `person:rocio-caballero-bosch` | Rocío Caballero Bosch |
 | `person:rocio-vallejo` | Rocío Vallejo |
 | `person:rodrigo-estigarribia` | Rodrigo Estigarribia |
 | `person:rodrigo-franco` | Rodrigo Franco |

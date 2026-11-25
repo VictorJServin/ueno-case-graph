@@ -1,5 +1,70 @@
 [
  {
+  "executed_at": "2026-11-25T13:14:23-08:00",
+  "run": "2026-11-25_1244",
+  "data_to": "2026-11-25",
+  "input": {
+   "en": "Monitoring dossier v2.1, generated 25 Nov 2026 12:44 PT",
+   "es": "Dossier de monitoreo v2.1, generado el 25 Nov 2026 12:44 PT"
+  },
+  "counts": {
+   "events": 11,
+   "figures": 7,
+   "sources": 13
+  },
+  "items": [
+   {
+    "en": "A judge ordered pre-trial detention for Francisco Peña Palacios, the former President's brother, and froze the couple's assets; he is presumed innocent.",
+    "es": "Un juez dictó prisión preventiva para Francisco Peña Palacios, hermano del expresidente, e inhibió los bienes de la pareja; se presume inocente.",
+    "refs": [
+     "bot:event:0013"
+    ]
+   },
+   {
+    "en": "His wife, Rocío Caballero Bosch, was placed under house arrest without an ankle monitor on a G. 13 billion property bond; she is presumed innocent.",
+    "es": "Su esposa, Rocío Caballero Bosch, quedó con arresto domiciliario sin tobillera y una fianza real de G. 13.000 millones; se presume inocente.",
+    "refs": [
+     "bot:event:0014"
+    ]
+   },
+   {
+    "en": "Ueno mutual funds: investors say they were told the funds will be liquidated, while the securities depository speaks of a transfer of management within two weeks.",
+    "es": "Fondos mutuos de Ueno: los inversionistas dicen que se les anunció la liquidación, mientras la Caja de Valores habla de un traspaso de la administración en dos semanas.",
+    "refs": [
+     "bot:event:0021",
+     "bot:event:0022",
+     "bot:event:0020"
+    ]
+   },
+   {
+    "en": "The Foreign Minister told Brazil that Paraguay will restore Itaipú funds, without amounts or a mechanism.",
+    "es": "El canciller aseguró a Brasil que Paraguay restituirá los fondos de Itaipú, sin montos ni mecanismo.",
+    "refs": [
+     "bot:event:0019"
+    ]
+   },
+   {
+    "en": "The Senate lacked quorum, so the proposals for a Ueno investigative commission remain pending; the opposition amended its bill to ring-fence confiscated assets for workers and savers.",
+    "es": "El Senado no tuvo cuórum y siguen pendientes las propuestas de comisión investigadora sobre Ueno; la oposición modificó su proyecto para blindar lo comisado a favor de trabajadores y ahorristas.",
+    "refs": [
+     "bot:event:0017",
+     "bot:event:0018"
+    ]
+   },
+   {
+    "en": "Prosecutors and the ICT ministry agreed technical cooperation on digital evidence.",
+    "es": "La Fiscalía y el MITIC acordaron cooperación técnica sobre evidencia digital.",
+    "refs": [
+     "bot:event:0015"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Automatic refresh from the monitoring bot's delivery. Not updated in this run: the missing-money estimate, the charges table and the written reports. 6 point(s) were flagged for a person to check.",
+   "es": "Actualización automática a partir de la entrega del bot de monitoreo. No actualizado en esta corrida: la estimación del dinero faltante, la tabla de imputaciones y los informes escritos. Se marcaron 6 punto(s) para revisión humana."
+  }
+ },
+ {
   "executed_at": "2026-11-25T10:45:00-08:00",
   "run": "2026-11-25_0611",
   "data_to": "2026-11-25",

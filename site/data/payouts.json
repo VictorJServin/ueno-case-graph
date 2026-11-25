@@ -193,14 +193,17 @@
     "es": "Fondos mutuos (Ueno AFPISA)"
    },
    "t": {
-    "en": "Not deposits, so not guaranteed. Each fund's assets are separate from the bank. Authorisation suspended for 180 days; about 30,000 investors and USD 46 million; the regulator is seeking a new manager. Each fund's securities remain in custody at the securities depository, and on 24 Nov the manager began asking unitholders whether they want to redeem once a procedure exists. No redemption date or cash value yet.",
-    "es": "No son depósitos, por lo que no tienen garantía. El patrimonio de cada fondo está separado del banco. Autorización suspendida por 180 días; unos 30.000 inversores y USD 46 millones; el regulador busca un nuevo administrador. Los títulos de cada fondo siguen en custodia en la Caja de Valores, y el 24 nov la administradora empezó a consultar a los cuotapartistas si quieren rescatar cuando exista un procedimiento. Aún sin fecha ni valor de rescate."
+    "en": "Not deposits, so not guaranteed. Each fund's assets are separate from the bank. Authorisation suspended for 180 days; about 30,000 investors and USD 46 million; the regulator is seeking a new manager. Each fund's securities remain in custody at the securities depository, and on 24 Nov the manager began asking unitholders whether they want to redeem once a procedure exists. On 25 Nov the central bank said, per 5Días, that Ueno AFPISA itself must set the redemption mechanism using the funds' own assets; investors' spokespeople said they were told the funds would be liquidated because no manager would take them, while the depository's manager spoke of a transfer of management and expected a definition within two weeks. These accounts conflict. No redemption date or cash value yet.",
+    "es": "No son depósitos, por lo que no tienen garantía. El patrimonio de cada fondo está separado del banco. Autorización suspendida por 180 días; unos 30.000 inversores y USD 46 millones; el regulador busca un nuevo administrador. Los títulos de cada fondo siguen en custodia en la Caja de Valores, y el 24 nov la administradora empezó a consultar a los cuotapartistas si quieren rescatar cuando exista un procedimiento. El 25 nov el BCP señaló, según 5Días, que la propia Ueno AFPISA debe fijar el mecanismo de rescate con los activos de los fondos; voceros de los inversionistas dijeron que se les informó que los fondos serían liquidados porque ninguna administradora los asumió, mientras el gerente de la Caja de Valores habló de un traspaso de la administración y espera una definición en dos semanas. Estas versiones no coinciden. Aún sin fecha ni valor de rescate."
    },
    "refs": [
     "dos6:event:0019",
     "dos6:event:0025",
     "chrono:event:0167",
-    "chrono:event:0141"
+    "chrono:event:0141",
+    "bot:event:0020",
+    "bot:event:0021",
+    "bot:event:0022"
    ]
   },
   {
@@ -443,6 +446,8 @@
    },
    "refs": [
     "bot:event:0008",
+    "bot:fact:0003",
+    "bot:fact:0004",
     "dos5:event:0052",
     "dos5:event:0019"
    ]
@@ -534,6 +539,8 @@
    },
    "refs": [
     "bot:event:0009",
+    "bot:fact:0005",
+    "bot:fact:0006",
     "chrono:event:0167"
    ]
   }
