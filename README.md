@@ -39,7 +39,10 @@ Add one entry at the top of `data/updates.json` (when it ran, what changed, whic
 | `shapes/ueno-shapes.ttl` | SHACL: no assertion without source, asserter and confidence |
 | `tools/` | `validate_rows.py`, `validate_graph.py` |
 | `store/` | Oxigraph loader, `queries/q1..q6.rq`, optional Fuseki compose file |
-| `docs/BOT_CONTRACT.md` | what the monitoring bot may write and how it is checked |
+| `docs/BOT_HANDOFF.md` | the full instructions handed to the monitoring bot: schedule, files, row format, editorial rules |
+| `docs/BOT_CONTRACT.md` | short version of the rules the validator enforces |
+| `docs/VOCAB.md` | generated list of allowed values and existing party ids |
+| `inbox/` | what the bot delivers each run: dossier JSON and run manifest |
 | `analysis/`, `reports/`, `research_notes/` | memos and reports built on the graph |
 | `site/` | the interactive case file (static; open `site/index.html` through any web server) |
 

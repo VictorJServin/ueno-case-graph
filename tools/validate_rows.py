@@ -77,7 +77,13 @@ def main():
                     if p.get("asserted_by") not in ASSERTERS: errors.append(f"{where} prov.asserted_by '{p.get('asserted_by')}' not allowed")
                     if p.get("confidence") not in CONF: errors.append(f"{where} prov.confidence '{p.get('confidence')}' not allowed")
                     if p.get("source") not in sources: errors.append(f"{where} prov.source '{p.get('source')}' is not in any sources file")
+                    if tag in strict and kind != "entities" and p.get("confidence") == "high" and "opened" not in (p.get("note") or "").lower():
+                        errors.append(f"{where} confidence 'high' needs a prov.note saying the page was opened and the quote found")
                     if len((p.get("quote") or "").split()) > 12: errors.append(f"{where} quote longer than 12 words")
+            if tag in strict and rid and kind in ("events", "facts", "roles", "loans", "flows") and not re.match(r"^%s:(event|fact|role|loan|flow):\d{4,}$" % re.escape(tag), rid):
+                errors.append(f"{where} id '{rid}' must look like {tag}:event:0001")
+            if tag in strict and kind == "events" and not (r.get("detail_en") and r.get("detail_es")):
+                errors.append(f"{where} needs detail_en and detail_es")
             for f in ENTITY_FIELDS.get(kind, []):
                 v = r.get(f)
                 if v and not ID.match(str(v)): errors.append(f"{where} {f} '{v}' is not a valid entity id")
@@ -93,6 +99,8 @@ def main():
             if kind == "sources":
                 if r.get("kind") in ("press", "official", "rating") and not str(r.get("url", "")).startswith("http"):
                     (errors if tag in strict else warns).append(f"{where} source '{rid}' of kind {r.get('kind')} has no http(s) link")
+                if tag in strict and re.search(r"^https?://([a-z0-9-]+\.)*(x\.com|twitter\.com|instagram\.com|facebook\.com|tiktok\.com|t\.me|youtube\.com|youtu\.be)/", str(r.get("url", ""))):
+                    errors.append(f"{where} source '{rid}' is a social-media link; cite the news article or official page that reports it")
                 if tag in strict and re.search(r"(\.\.\.|…|-)$", str(r.get("url", ""))): errors.append(f"{where} link is truncated")
             text = json.dumps(r, ensure_ascii=False)
             if kind not in ("loans",):

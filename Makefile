@@ -4,7 +4,7 @@ rows:   ; python3 tools/validate_rows.py --strict bot
 graph:  ; python3 data/build_graph.py --quiet > build.log 2>&1 && grep -q "all checks passed" build.log && tail -1 build.log || (tail -40 build.log; exit 1)
 shapes: ; python3 tools/validate_graph.py
 js: ; for f in site/js/*.js; do node --check $$f || exit 1; done
-payouts: ; python3 data/build_payouts.py && python3 data/build_updates.py
+payouts: ; python3 tools/vocab.py && python3 data/build_payouts.py && python3 data/build_updates.py
 store:  ; python3 store/load.py
 queries: store ; python3 store/load.py --all
 test:   ; python3 tests/test_pipeline.py

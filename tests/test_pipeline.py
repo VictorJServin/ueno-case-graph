@@ -45,5 +45,8 @@ bad_case("rejects a quote over 12 words", SRC, {**EVT, "prov": {**EVT["prov"], "
 bad_case("rejects an unknown confidence", SRC, {**EVT, "prov": {**EVT["prov"], "confidence": "certain"}}, "confidence")
 bad_case("rejects an unknown asserter", SRC, {**EVT, "prov": {**EVT["prov"], "asserted_by": "twitter"}}, "asserted_by")
 bad_case("rejects a category that is not in the ontology", SRC, {**EVT, "category": "regulatory"}, "not in the ontology")
+bad_case("rejects a social-media link as a source", {**SRC, "url": "https://x.com/someone/status/123"}, EVT, "social-media link")
+bad_case("rejects 'high' confidence without a note that the page was opened", SRC, {**EVT, "prov": {**EVT["prov"], "confidence": "high"}}, "needs a prov.note")
+bad_case("rejects an id outside the bot's own series", SRC, {**EVT, "id": "chrono:event:9999"}, "must look like bot:event:0001")
 bad_case("rejects a row with no provenance", SRC, {k: v for k, v in EVT.items() if k != "prov"}, "no prov block")
 print("\n%d failed" % len(fails)); sys.exit(1 if fails else 0)
