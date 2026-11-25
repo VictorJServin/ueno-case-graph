@@ -1,0 +1,233 @@
+{
+ "generated_at": "2026-11-25T06:11:09-08:00",
+ "dossier_version": "v2.0",
+ "dossier_file": "inbox/dossiers/Ueno_Dossier_2026-11-25_0611.json",
+ "previous_run": "2026-11-24_1812",
+ "rows_added": {
+  "sources": [
+   "src:1000noticias-2026-11-25-39-empresas",
+   "src:adn-2026-11-25-audiencia-fpena",
+   "src:abc-2026-11-25-vallejo-mef",
+   "src:abc-2026-11-25-dominguez-750",
+   "src:abc-2026-11-25-ueno-seguros",
+   "src:abc-2026-11-25-bachi-anticipo",
+   "src:hoy-2026-11-25-anticipo",
+   "src:adn-2026-11-25-cronograma-bcp",
+   "src:hoy-2026-11-25-30000-mutuos",
+   "src:adn-2026-11-25-itaipu-vieira",
+   "src:hoy-2026-11-25-apoat",
+   "src:abc-2026-11-25-nubicom-vox"
+  ],
+  "events": [
+   "bot:event:0001",
+   "bot:event:0002",
+   "bot:event:0003",
+   "bot:event:0004",
+   "bot:event:0005",
+   "bot:event:0006",
+   "bot:event:0007",
+   "bot:event:0008",
+   "bot:event:0009",
+   "bot:event:0010",
+   "bot:event:0011",
+   "bot:event:0012"
+  ],
+  "facts": [],
+  "entities": []
+ },
+ "claims_delivered": {
+  "C-LEG-38": [
+   "bot:event:0001"
+  ],
+  "C-PEN-34": [
+   "bot:event:0002"
+  ],
+  "C-OTH-23": [
+   "bot:event:0003"
+  ],
+  "C-OWN-05": [
+   "bot:event:0004"
+  ],
+  "C-CB-13": [
+   "bot:event:0005"
+  ],
+  "C-PUB-22": [
+   "bot:event:0006",
+   "bot:event:0007"
+  ],
+  "C-COL-30": [
+   "bot:event:0008",
+   "bot:event:0009"
+  ],
+  "C-PUB-23": [
+   "bot:event:0010"
+  ],
+  "C-OTH-25": [
+   "bot:event:0011",
+   "bot:event:0012"
+  ]
+ },
+ "skipped": [
+  {
+   "claim": "C-PEN-35",
+   "reason": "opinion: a lawyer's commentary on Peña's Supreme Court action"
+  },
+  {
+   "claim": "C-OTH-24",
+   "reason": "political statements and unverified accusations against named people (Sen. Leite presented no documents; other senators' demands are opinion)"
+  },
+  {
+   "claim": "C-DIR-13",
+   "reason": "single uncorroborated outlet (Última Hora, from notarial deeds); would be Low"
+  },
+  {
+   "claim": "C-OTH-26",
+   "reason": "no development: Senate agenda only, votes not reported at cut-off; the Latorre statement rests on a social post only"
+  },
+  {
+   "claim": "C-MUN-21",
+   "reason": "no development on the municipality's Ueno funds or Barrio Ueno; the bond-debt item is not linked to Ueno by its source"
+  },
+  {
+   "claim": "C-MED-01",
+   "reason": "no development: only a link-check field changed; Instagram profile (social)"
+  },
+  {
+   "claim": "C-PEN-29",
+   "reason": "change is only a cross-reference to C-PEN-35 (opinion, skipped)"
+  },
+  {
+   "claim": "C-PEN-27",
+   "reason": "no material change (link-check fields only); already delivered as dos6:event:0001"
+  },
+  {
+   "claim": "C-PEN-32",
+   "reason": "only new corroborating sources; already delivered as dos6:event:0005"
+  },
+  {
+   "claim": "C-OTH-19",
+   "reason": "update rests on a social post only (La Nación on X)"
+  },
+  {
+   "claim": "C-OTH-20",
+   "reason": "update delivered through C-OTH-23 (bot row on Vallejo's request); the 2 Nov loan/withdrawal allegation left out as an unverified accusation; the El Nacional contract value comes from an analysis piece"
+  },
+  {
+   "claim": "C-OTH-22",
+   "reason": "no case development: date of Milei's visit and Argentine media speculation"
+  },
+  {
+   "claim": "C-PUB-18",
+   "reason": "only new sources; content delivered through C-PUB-23"
+  },
+  {
+   "claim": "C-PUB-20",
+   "reason": "update delivered through C-PUB-22"
+  },
+  {
+   "claim": "C-COL-26",
+   "reason": "only a new source; content delivered through C-COL-30"
+  },
+  {
+   "claim": "C-COL-28",
+   "reason": "only new sources; content delivered through C-COL-30"
+  },
+  {
+   "claim": "C-CB-12",
+   "reason": "only a new source (bankers' opinions)"
+  },
+  {
+   "claim": "C-OTH-25 (part)",
+   "reason": "Black Friday consumption drop and ex-WEPA workers' protest rest on social posts only; CIP consumption outlook is opinion"
+  },
+  {
+   "claim": "C-PUB-22 (part)",
+   "reason": "3,610 workers and '20 of 22 firms closed' rest on ABC TV social posts only"
+  },
+  {
+   "claim": "C-PEN-34 (part)",
+   "reason": "defence lawyers' statements and the hearing start time rest on social posts only"
+  },
+  {
+   "claim": "C-LEG-38 (part)",
+   "reason": "Terravaz and Nubicom as named firms rest on social posts only (5Días, Ñandutí on X)"
+  },
+  {
+   "claim": "C-OTH-23 (part)",
+   "reason": "alleged 2 Nov loan attempt / withdrawals by unnamed people close to Fernández Valdovinos: unverified, documents unpublished"
+  }
+ ],
+ "whats_new": [
+  {
+   "en": "A judge froze the accounts and assets of 39 more companies linked to Grupo Vázquez, including Ueno Holding, Ueno Casa de Bolsa and Ueno AFPISA; he stressed this is not a finding of guilt.",
+   "es": "Un juez bloqueó cuentas y bienes de otras 39 empresas vinculadas al Grupo Vázquez, entre ellas Ueno Holding, Ueno Casa de Bolsa y Ueno AFPISA; aclaró que no es una declaración de culpabilidad.",
+   "refs": [
+    "bot:event:0001"
+   ]
+  },
+  {
+   "en": "The former President's brother and sister-in-law, both charged, faced hearings on pre-trial detention and house arrest; no ruling by the cut-off. Both presumed innocent.",
+   "es": "El hermano y la cuñada del expresidente, ambos imputados, enfrentaron audiencias sobre prisión preventiva y arresto domiciliario; sin resolución al cierre. Ambos se presumen inocentes.",
+   "refs": [
+    "bot:event:0002"
+   ]
+  },
+  {
+   "en": "Savers above the guarantee cap ask for a repayment timetable; their lawyer estimates 80,000 to 90,000 people and about USD 1.2 billion. Mutual-fund investors (about USD 46 million, outside the guarantee) awaited a meeting with the central bank.",
+   "es": "Ahorristas por encima de la cobertura piden un cronograma de devolución; su abogado estima entre 80.000 y 90.000 personas y unos USD 1.200 millones. Inversionistas de fondos mutuos (unos USD 46 millones, sin cobertura) esperaban una reunión con el BCP.",
+   "refs": [
+    "bot:event:0008",
+    "bot:event:0009"
+   ]
+  },
+  {
+   "en": "The workers' advance bill had not reached Congress; the labour minister says it is an advance the State will recover from the companies.",
+   "es": "El proyecto de adelanto a los trabajadores no había llegado al Congreso; la ministra de Trabajo dice que es un anticipo que el Estado recuperará de las empresas.",
+   "refs": [
+    "bot:event:0006",
+    "bot:event:0007"
+   ]
+  },
+  {
+   "en": "CONMEBOL's president sued to undo a 2024 deal with Grupo Vázquez over Jet Par LLC and offers to return USD 750,000. Not charged; presumed innocent.",
+   "es": "El presidente de la Conmebol demandó deshacer un acuerdo de 2024 con el Grupo Vázquez sobre Jet Par LLC y ofrece devolver USD 750.000. No imputado; se presume inocente.",
+   "refs": [
+    "bot:event:0004"
+   ]
+  },
+  {
+   "en": "Ueno Seguros keeps operating: the insurance supervisor says it fully provisioned its Ueno Bank investments and has a solvency margin of 2.20.",
+   "es": "Ueno Seguros sigue operando: la Superintendencia de Seguros dice que previsionó sus inversiones en Ueno Bank y tiene un margen de solvencia de 2,20.",
+   "refs": [
+    "bot:event:0005"
+   ]
+  }
+ ],
+ "payouts": [
+  {
+   "en": "No timetable yet for deposits above the guarantee; a savers' lawyer estimates 80,000 to 90,000 depositors and about USD 1.2 billion uncovered.",
+   "es": "Aún no hay cronograma para los depósitos por encima de la garantía; un abogado de ahorristas estima entre 80.000 y 90.000 depositantes y unos USD 1.200 millones sin cobertura.",
+   "refs": [
+    "bot:event:0008"
+   ]
+  },
+  {
+   "en": "Ueno mutual funds (about USD 46 million, 29,000 to 30,000 investors) are outside the guarantee and redemptions remain suspended; investors were to meet the central bank on 25 Nov.",
+   "es": "Los fondos mutuos de Ueno (unos USD 46 millones, entre 29.000 y 30.000 inversionistas) no tienen cobertura de garantía y los rescates siguen suspendidos; los inversionistas tenían una reunión con el BCP el 25 de noviembre.",
+   "refs": [
+    "bot:event:0009"
+   ]
+  }
+ ],
+ "needs_human": [
+  "After the dossier's cut-off, Hoy and 1000 Noticias report that Judge Osmar Legal ordered pre-trial detention for Francisco Peña Palacios and froze the couple's assets. This is not in dossier v2.0, so it is not delivered here; the 12:15 PT run should pick it up.",
+  "Worker count for the advance bill is unreconciled: about 6,500 (NPY, delivered as a figure), 3,610 in 22 firms (the labour minister via an ABC TV post on X, not delivered because it is social-only) and 5,000 to 6,000 in earlier reports.",
+  "Policy applied for 'single uncorroborated outlet': on-record statements by a named official or body to one outlet (insurance superintendent, Apoat, Copaco via ABC) were kept at medium or high; an outlet's own single-source investigation (Última Hora on powers of attorney granted to José Sala Cardozo, C-DIR-13) was treated as Low and skipped. Please confirm or adjust.",
+  "Vallejo row (C-OTH-23): kept only her request to examine Economy Ministry placements and left out her claim that people close to Fernández Valdovinos withdrew or tried to borrow large sums on 2 Nov. Please check this cut is right.",
+  "Domínguez row (C-OWN-05) rests on ABC's reading of the court filing; RDN only relays ABC. The filing itself is not online. ABC's statements about bank records and flight logs are attributed to ABC.",
+  "Rocío Caballero Bosch is named in the hearing row because the charging document names her; she has no entity id in the graph, so she is not listed under parties (same as dos6).",
+  "Itaipú/Vieira and mutual-fund meetings: outcomes were not reported by the dossier's cut-off.",
+  "The two CIP / central-bank payout figures (USD 650 million to more than 95,000 small savers vs G. 3.9 trillion to more than 1.8 million depositors) differ in scope and are not reconciled.",
+  "Figures and entity rows held back because tests/test_pipeline.py replaces bot.sources.jsonl and bot.events.jsonl in its temp copy but keeps bot.facts/bot.entities, so any real bot fact or entity row makes `make test` fail (sources go missing). Suggested fix: have raw_with() also remove the other data/raw/bot.*.jsonl files. Held rows (in the bot's draft, ready to deliver once fixed): org:ueno-seguros solvency_margin = 2.2  (ratio; regulatory minimum 1; after provisions for Ueno Bank and related companies; still under verification; src:abc-2026-11-25-ueno-seguros; claim C-CB-13); org:grupo-vazquez affected_workers = 6500  (about; in 22 companies; conflicts with 3,610 workers in 22 firms (labour minister via an ABC TV post, social only, not delivered) and 5,000 to 6,000 in earlier reports; https://www.npy.com.py/noticias/nacionales/politica/ejecutivo-presentara-proyecto-de-ley-para-adelantar-liquidaciones-a-trabajadores-del-grupo-vazquez; claim C-PUB-22); org:ueno-bank depositors_above_guarantee = 80000  (80,000 to 90,000 (lower bound stored); estimate by a lawyer for a savers' group, from public figures; src:adn-2026-11-25-cronograma-bcp; claim C-COL-30); org:ueno-bank deposits_above_guarantee = 1200000000 USD (about; estimate by a lawyer for a savers' group, from public figures; src:adn-2026-11-25-cronograma-bcp; claim C-COL-30); org:ueno-afpisa mutual_funds_value = 46000000 USD (about; total of the Ueno mutual funds, outside the deposit guarantee; figure given by the investors' spokesperson; src:hoy-2026-11-25-30000-mutuos; claim C-COL-30); org:ueno-afpisa mutual_fund_investors = 30000  (29,000 to 30,000 (upper bound stored); investors' spokesperson's estimate; src:hoy-2026-11-25-30000-mutuos; claim C-COL-30); auth:fgd guarantee_paid_small_savers = 650000000 USD (about; to more than 95,000 small savers; importers' chamber (CIP) president's figure; different scope from the central bank's G. 3.9 trillion advance to more than 1.8 million depositors, not reconciled; https://www.abc.com.py/economia/2026/11/25/crisis-de-ueno-bank-persiste-la-incertidumbre-por-posible-impacto-en-el-consumo-y-la-economia/; claim C-COL-30); entity org:jet-par-llc (Jet Par LLC)"
+ ]
+}
