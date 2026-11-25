@@ -1,0 +1,210 @@
+{
+ "generated_at": "2026-11-25T12:44:17-08:00",
+ "dossier_version": "v2.1",
+ "dossier_file": "inbox/dossiers/Ueno_Dossier_2026-11-25_1244.json",
+ "previous_run": "2026-11-25_0611",
+ "rows_added": {
+  "sources": [
+   "src:adn-2026-11-25-fpena-prision",
+   "src:abc-2026-11-25-fpena-prision",
+   "src:ministerio-publico-2026-11-25-mitic",
+   "src:abc-2026-11-25-viajes-pena",
+   "src:ultimahora-2026-11-25-cbi-flotando",
+   "src:ultimahora-2026-11-25-blindaje-fondos",
+   "src:abc-2026-11-25-canciller-itaipu",
+   "src:5dias-2026-11-25-afpisa-plan",
+   "src:5dias-2026-11-25-liquidacion-fondos",
+   "src:1000noticias-2026-11-25-fondos-dos-semanas",
+   "src:adn-2026-11-25-trabajadores-total",
+   "src:npy-2026-11-25-anticipo",
+   "src:abc-2026-11-25-consumo-cip"
+  ],
+  "events": [
+   "bot:event:0013",
+   "bot:event:0014",
+   "bot:event:0015",
+   "bot:event:0016",
+   "bot:event:0017",
+   "bot:event:0018",
+   "bot:event:0019",
+   "bot:event:0020",
+   "bot:event:0021",
+   "bot:event:0022",
+   "bot:event:0023"
+  ],
+  "facts": [
+   "bot:fact:0001",
+   "bot:fact:0002",
+   "bot:fact:0003",
+   "bot:fact:0004",
+   "bot:fact:0005",
+   "bot:fact:0006",
+   "bot:fact:0007"
+  ],
+  "entities": [
+   "person:rocio-caballero-bosch"
+  ]
+ },
+ "claims_delivered": {
+  "C-PEN-34": [
+   "bot:event:0013",
+   "bot:event:0014"
+  ],
+  "C-LEG-39": [
+   "bot:event:0015"
+  ],
+  "C-PEN-37": [
+   "bot:event:0016"
+  ],
+  "C-OTH-26": [
+   "bot:event:0017"
+  ],
+  "C-OTH-27": [
+   "bot:event:0018"
+  ],
+  "C-PUB-23": [
+   "bot:event:0019"
+  ],
+  "C-COL-31": [
+   "bot:event:0020",
+   "bot:event:0021",
+   "bot:event:0022"
+  ],
+  "C-PUB-22": [
+   "bot:event:0023",
+   "bot:fact:0002"
+  ],
+  "C-CB-13": [
+   "bot:fact:0001"
+  ],
+  "C-COL-30": [
+   "bot:fact:0003",
+   "bot:fact:0004",
+   "bot:fact:0005",
+   "bot:fact:0006",
+   "bot:fact:0007"
+  ]
+ },
+ "skipped": [
+  {
+   "claim": "C-PEN-36",
+   "reason": "opinion: a lawyer's legal analysis of the detention limit, not a court act"
+  },
+  {
+   "claim": "C-PUB-25",
+   "reason": "social posts only (Ñandutí X posts of the Itaipú director-general interview; no article located)"
+  },
+  {
+   "claim": "C-PUB-26",
+   "reason": "estimates by an ex-official and an expert in a single outlet; would be Low"
+  },
+  {
+   "claim": "C-OTH-28",
+   "reason": "political demands and accusations against named people on the Senate floor (opinion; not charged)"
+  },
+  {
+   "claim": "C-OTH-25",
+   "reason": "trade associations' sector estimates (travel agencies, events), single outlet each; context only"
+  },
+  {
+   "claim": "C-COL-30",
+   "reason": "no development: savers' rally and repeated claimant estimate (figures already delivered as held facts)"
+  },
+  {
+   "claim": "C-OWN-05",
+   "reason": "only an aside in an article about a senator's comments (offer to return US$750k); single outlet"
+  },
+  {
+   "claim": "C-OTH-20",
+   "reason": "opinion: senators' comments on the alleged contract; no new fact"
+  },
+  {
+   "claim": "C-LEG-38",
+   "reason": "only extra sources"
+  },
+  {
+   "claim": "C-CB-12",
+   "reason": "only extra sources"
+  },
+  {
+   "claim": "C-PEN-32",
+   "reason": "only a citation removed (deleted X post); no change of fact"
+  }
+ ],
+ "whats_new": [
+  {
+   "en": "A judge ordered pre-trial detention for Francisco Peña Palacios, the former President's brother, and froze the couple's assets; he is presumed innocent.",
+   "es": "Un juez dictó prisión preventiva para Francisco Peña Palacios, hermano del expresidente, e inhibió los bienes de la pareja; se presume inocente.",
+   "refs": [
+    "bot:event:0013"
+   ]
+  },
+  {
+   "en": "His wife, Rocío Caballero Bosch, was placed under house arrest without an ankle monitor on a G. 13 billion property bond; she is presumed innocent.",
+   "es": "Su esposa, Rocío Caballero Bosch, quedó con arresto domiciliario sin tobillera y una fianza real de G. 13.000 millones; se presume inocente.",
+   "refs": [
+    "bot:event:0014"
+   ]
+  },
+  {
+   "en": "Ueno mutual funds: investors say they were told the funds will be liquidated, while the securities depository speaks of a transfer of management within two weeks.",
+   "es": "Fondos mutuos de Ueno: los inversionistas dicen que se les anunció la liquidación, mientras la Caja de Valores habla de un traspaso de la administración en dos semanas.",
+   "refs": [
+    "bot:event:0021",
+    "bot:event:0022",
+    "bot:event:0020"
+   ]
+  },
+  {
+   "en": "The Foreign Minister told Brazil that Paraguay will restore Itaipú funds, without amounts or a mechanism.",
+   "es": "El canciller aseguró a Brasil que Paraguay restituirá los fondos de Itaipú, sin montos ni mecanismo.",
+   "refs": [
+    "bot:event:0019"
+   ]
+  },
+  {
+   "en": "The Senate lacked quorum, so the proposals for a Ueno investigative commission remain pending; the opposition amended its bill to ring-fence confiscated assets for workers and savers.",
+   "es": "El Senado no tuvo cuórum y siguen pendientes las propuestas de comisión investigadora sobre Ueno; la oposición modificó su proyecto para blindar lo comisado a favor de trabajadores y ahorristas.",
+   "refs": [
+    "bot:event:0017",
+    "bot:event:0018"
+   ]
+  },
+  {
+   "en": "Prosecutors and the ICT ministry agreed technical cooperation on digital evidence.",
+   "es": "La Fiscalía y el MITIC acordaron cooperación técnica sobre evidencia digital.",
+   "refs": [
+    "bot:event:0015"
+   ]
+  }
+ ],
+ "payouts": [
+  {
+   "en": "Ueno mutual funds remain without a repayment calendar: the central bank says Ueno AFPISA must design the plan; investors report a move to liquidation; the depository expects a definition within two weeks.",
+   "es": "Los fondos mutuos de Ueno siguen sin calendario de devolución: el BCP dice que Ueno AFPISA debe diseñar el plan; los inversionistas informan de una liquidación; la Caja de Valores espera una definición en dos semanas.",
+   "refs": [
+    "bot:event:0020",
+    "bot:event:0021",
+    "bot:event:0022"
+   ]
+  },
+  {
+   "en": "Held from the morning run: a savers' lawyer estimates 80,000 to 90,000 depositors and about USD 1.2 billion above the guarantee; mutual funds total about USD 46 million for 29,000 to 30,000 investors.",
+   "es": "Retenido de la corrida de la mañana: un abogado de ahorristas estima entre 80.000 y 90.000 depositantes y unos USD 1.200 millones por encima de la garantía; los fondos mutuos suman unos USD 46 millones de 29.000 a 30.000 inversionistas.",
+   "refs": [
+    "bot:fact:0003",
+    "bot:fact:0004",
+    "bot:fact:0005",
+    "bot:fact:0006"
+   ]
+  }
+ ],
+ "needs_human": [
+  "Held rows from run 2026-11-25_0611 (7 figures: F_SEG, F_WORK, F_UNCOVN, F_UNCOVA, F_MUTA, F_MUTN, F_CIP) are delivered now because main commit 2ea99d7 changed tests/test_pipeline.py to append to the bot files. The held entity N_JETPAR is NOT re-delivered: org:jet-par-llc was already added on main (data/raw/fix.entities.jsonl). deliver.py's hold detector was updated locally to recognise the new test.",
+  "New entity person:rocio-caballero-bosch is added because the 25 Nov house-arrest order (A.I. 428) names her as a party and the validator now requires entity rows for event parties. Please confirm this is acceptable under the relatives rule.",
+  "Bond for Rocío Caballero Bosch: G. 13,000 million (ABC, Última Hora, Ñandutí) vs G. 13,284 million (Cuarto Poder, X only). Only the first is delivered.",
+  "Mutual funds: two accounts conflict (liquidation per investors' spokespeople after the BCP meeting vs transfer of management per the depository's manager). Both delivered as separate rows; no BCP communiqué on the meeting outcome was found.",
+  "Itaipú director-general's new figure (about USD 228 million including about USD 42 million of the Itaipú Technology Park; 183 + 42 = 225) is known only from Ñandutí X posts, so it is skipped; it conflicts with USD 163.8 million + G. 115,200 million, about USD 181-182 million and more than USD 200 million.",
+  "Ministerio Público note (MITIC cooperation) is delivered with an empty quote because the site's incomplete TLS chain makes the automated quote check fail; content was read with curl -k at 12:3x PT."
+ ]
+}
