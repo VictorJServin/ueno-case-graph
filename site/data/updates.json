@@ -1,5 +1,69 @@
 [
  {
+  "executed_at": "2026-11-25T10:45:00-08:00",
+  "run": "2026-11-25_0611",
+  "data_to": "2026-11-25",
+  "input": {
+   "en": "Monitoring dossier v2.0, generated 25 Nov 2026 06:11 PT",
+   "es": "Dossier de monitoreo v2.0, generado el 25 Nov 2026 06:11 PT"
+  },
+  "counts": {
+   "events": 12,
+   "figures": 0,
+   "sources": 12
+  },
+  "items": [
+   {
+    "en": "A judge froze the accounts and assets of 39 more companies linked to Grupo Vázquez, including Ueno Holding, Ueno Casa de Bolsa and Ueno AFPISA; he stressed this is not a finding of guilt.",
+    "es": "Un juez bloqueó cuentas y bienes de otras 39 empresas vinculadas al Grupo Vázquez, entre ellas Ueno Holding, Ueno Casa de Bolsa y Ueno AFPISA; aclaró que no es una declaración de culpabilidad.",
+    "refs": [
+     "bot:event:0001"
+    ]
+   },
+   {
+    "en": "The former President's brother and sister-in-law, both charged, faced hearings on pre-trial detention and house arrest; no ruling by the cut-off. Both presumed innocent.",
+    "es": "El hermano y la cuñada del expresidente, ambos imputados, enfrentaron audiencias sobre prisión preventiva y arresto domiciliario; sin resolución al cierre. Ambos se presumen inocentes.",
+    "refs": [
+     "bot:event:0002"
+    ]
+   },
+   {
+    "en": "Savers above the guarantee cap ask for a repayment timetable; their lawyer estimates 80,000 to 90,000 people and about USD 1.2 billion. Mutual-fund investors (about USD 46 million, outside the guarantee) awaited a meeting with the central bank.",
+    "es": "Ahorristas por encima de la cobertura piden un cronograma de devolución; su abogado estima entre 80.000 y 90.000 personas y unos USD 1.200 millones. Inversionistas de fondos mutuos (unos USD 46 millones, sin cobertura) esperaban una reunión con el BCP.",
+    "refs": [
+     "bot:event:0008",
+     "bot:event:0009"
+    ]
+   },
+   {
+    "en": "The workers' advance bill had not reached Congress; the labour minister says it is an advance the State will recover from the companies.",
+    "es": "El proyecto de adelanto a los trabajadores no había llegado al Congreso; la ministra de Trabajo dice que es un anticipo que el Estado recuperará de las empresas.",
+    "refs": [
+     "bot:event:0006",
+     "bot:event:0007"
+    ]
+   },
+   {
+    "en": "CONMEBOL's president sued to undo a 2024 deal with Grupo Vázquez over Jet Par LLC and offers to return USD 750,000. Not charged; presumed innocent.",
+    "es": "El presidente de la Conmebol demandó deshacer un acuerdo de 2024 con el Grupo Vázquez sobre Jet Par LLC y ofrece devolver USD 750.000. No imputado; se presume inocente.",
+    "refs": [
+     "bot:event:0004"
+    ]
+   },
+   {
+    "en": "Ueno Seguros keeps operating: the insurance supervisor says it fully provisioned its Ueno Bank investments and has a solvency margin of 2.20.",
+    "es": "Ueno Seguros sigue operando: la Superintendencia de Seguros dice que previsionó sus inversiones en Ueno Bank y tiene un margen de solvencia de 2,20.",
+    "refs": [
+     "bot:event:0005"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Automatic refresh from the monitoring bot's delivery. Not updated in this run: the missing-money estimate, the charges table and the written reports. 9 point(s) were flagged for a person to check.",
+   "es": "Actualización automática a partir de la entrega del bot de monitoreo. No actualizado en esta corrida: la estimación del dinero faltante, la tabla de imputaciones y los informes escritos. Se marcaron 9 punto(s) para revisión humana."
+  }
+ },
+ {
   "executed_at": "2026-11-25T05:25:00-08:00",
   "data_to": "2026-11-24",
   "input": {

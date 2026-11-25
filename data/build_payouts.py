@@ -13,7 +13,7 @@ for f in glob.glob(os.path.join(HERE, "raw", "*.jsonl")):
 def T(en, es): return {"en": en, "es": es}
 C = "chrono:event:%04d"; D4 = "dos4:event:%04d"; D5 = "dos5:event:%04d"
 P = {
- "as_of": "2026-11-24",
+ "as_of": "2026-11-25",
  "disclaimer": T("This view explains what has been reported about repayments. It is not advice and it is not an official notice: confirm your own case with the BCP or the deposit guarantee fund. Figures come from officials' statements as reported by the press and are shown as each source gave them.",
                  "Esta vista explica lo que se ha informado sobre los pagos. No es asesoramiento ni un aviso oficial: confirme su caso con el BCP o el Fondo de Garantía de Depósitos. Las cifras provienen de declaraciones de autoridades según la prensa y se muestran tal como las dio cada fuente."),
  "status": [
@@ -63,12 +63,12 @@ P = {
   {"t": T("Small firms with money trapped above the cap: the BCP allows bridge loans and refinancing without a rating penalty, and the public lender AFD announced a G. 50,000 million programme, still pending.", "Mipymes con dinero atrapado por encima del tope: el BCP permite créditos puente y refinanciación sin castigo de calificación, y la AFD anunció un programa de G. 50.000 millones, aún pendiente."), "refs": [D5 % 53, C % 214, D4 % 13]},
  ],
  "waiting": [
-  {"who": T("Depositors above the cap", "Depositantes por encima del tope"), "amt": T("not published", "no publicado"), "n": T("a spokesman says he represents about 1,800 of them", "un vocero dice representar a unos 1.800"), "refs": [D5 % 52, D5 % 19]},
+  {"who": T("Depositors above the cap", "Depositantes por encima del tope"), "amt": T("not published", "no publicado"), "n": T("no official figure; a savers' lawyer estimates 80,000 to 90,000 depositors and about USD 1,200 million above the cover, and has asked the central bank for a dated timetable", "sin cifra oficial; un abogado de ahorristas estima entre 80.000 y 90.000 depositantes y unos USD 1.200 millones por encima de la cobertura, y pidió al BCP un cronograma con fechas"), "refs": ["bot:event:0008", D5 % 52, D5 % 19]},
   {"who": T("Holders of unvalidated certificates of deposit", "Titulares de CDA sin validar"), "amt": T("about G. 221,000 million", "unos G. 221.000 millones"), "n": T("3,975 certificates at 20 Nov", "3.975 certificados al 20 nov"), "refs": ["dos4:fact:0006"]},
   {"who": T("Social security institute (IPS)", "Instituto de Previsión Social (IPS)"), "amt": T("more than USD 516 million", "más de USD 516 millones"), "n": T("about USD 350 million of pension-fund investments; the 32,000 pensioners paid through Ueno were moved to other banks", "unos USD 350 millones de inversiones del fondo jubilatorio; los 32.000 jubilados que cobraban por Ueno pasaron a otros bancos"), "refs": ["dos4:fact:0003", "dos5:fact:0005", D5 % 33]},
   {"who": T("Itaipú", "Itaipú"), "amt": T("USD 163.8 million plus G. 115,200 million", "USD 163,8 millones más G. 115.200 millones"), "n": T("an earlier report gave USD 182 million; on 24 Nov a board member said 'above USD 200 million'", "un informe previo daba USD 182 millones; el 24 nov un consejero dijo 'más de USD 200 millones'"), "refs": ["dos5:fact:0006", "dos4:fact:0004", "dos6:fact:0003"]},
   {"who": T("City of Asunción", "Municipalidad de Asunción"), "amt": T("G. 1,792.6 million", "G. 1.792,6 millones"), "n": T("three accounts in the official balance at 31 Oct", "tres cuentas en el balance oficial al 31 oct"), "refs": ["dos5:fact:0007"]},
-  {"who": T("Mutual-fund investors (Ueno AFPISA)", "Inversores de fondos mutuos (Ueno AFPISA)"), "amt": T("about USD 46 million", "unos USD 46 millones"), "n": T("about 30,000 investors; outside the guarantee", "unos 30.000 inversores; fuera de la garantía"), "refs": [C % 167]},
+  {"who": T("Mutual-fund investors (Ueno AFPISA)", "Inversores de fondos mutuos (Ueno AFPISA)"), "amt": T("about USD 46 million", "unos USD 46 millones"), "n": T("about 30,000 investors; outside the guarantee; they ask for the funds to move to another manager", "unos 30.000 inversores; fuera de la garantía; piden pasar los fondos a otra administradora"), "refs": ["bot:event:0009", C % 167]},
  ],
  "coverage": {
   "explainer": {

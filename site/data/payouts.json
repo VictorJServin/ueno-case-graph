@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-24",
+ "as_of": "2026-11-25",
  "disclaimer": {
   "en": "This view explains what has been reported about repayments. It is not advice and it is not an official notice: confirm your own case with the BCP or the deposit guarantee fund. Figures come from officials' statements as reported by the press and are shown as each source gave them.",
   "es": "Esta vista explica lo que se ha informado sobre los pagos. No es asesoramiento ni un aviso oficial: confirme su caso con el BCP o el Fondo de Garantía de Depósitos. Las cifras provienen de declaraciones de autoridades según la prensa y se muestran tal como las dio cada fuente."
@@ -438,10 +438,11 @@
     "es": "no publicado"
    },
    "n": {
-    "en": "a spokesman says he represents about 1,800 of them",
-    "es": "un vocero dice representar a unos 1.800"
+    "en": "no official figure; a savers' lawyer estimates 80,000 to 90,000 depositors and about USD 1,200 million above the cover, and has asked the central bank for a dated timetable",
+    "es": "sin cifra oficial; un abogado de ahorristas estima entre 80.000 y 90.000 depositantes y unos USD 1.200 millones por encima de la cobertura, y pidió al BCP un cronograma con fechas"
    },
    "refs": [
+    "bot:event:0008",
     "dos5:event:0052",
     "dos5:event:0019"
    ]
@@ -528,10 +529,11 @@
     "es": "unos USD 46 millones"
    },
    "n": {
-    "en": "about 30,000 investors; outside the guarantee",
-    "es": "unos 30.000 inversores; fuera de la garantía"
+    "en": "about 30,000 investors; outside the guarantee; they ask for the funds to move to another manager",
+    "es": "unos 30.000 inversores; fuera de la garantía; piden pasar los fondos a otra administradora"
    },
    "refs": [
+    "bot:event:0009",
     "chrono:event:0167"
    ]
   }

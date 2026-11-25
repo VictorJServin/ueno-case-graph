@@ -16,7 +16,7 @@
 
 `prosecution`, `rey`, `defence`, `regulator`, `rating_agency`, `company`, `press`, `analyst`
 
-## Party ids already in the graph (244)
+## Party ids already in the graph (245)
 
 Reuse one of these before minting a new id.
 
@@ -87,6 +87,7 @@ Reuse one of these before minting a new id.
 | `org:ips` | Instituto de Previsión Social (IPS) |
 | `org:itaipu` | Itaipú Binacional |
 | `org:itti` | ITTI S.A.E.C.A. |
+| `org:jet-par-llc` | Jet Par LLC |
 | `org:kaitel` | Kaitel S.A. |
 | `org:kasas-propiedades` | Kasas Propiedades S.A.E. |
 | `org:kesingtong` | Kesingtong (as spelled in the record) |

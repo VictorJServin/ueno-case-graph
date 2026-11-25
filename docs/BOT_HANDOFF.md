@@ -64,6 +64,7 @@ Rules the validator enforces on your rows:
 - `quote` is at most 12 words, in the original language, copied exactly. Leave it empty if you have no exact words.
 - `confidence` is `medium` by default. Use `high` only if you opened the page in this run and found the quote on it, and then say so in `prov.note` with the word "opened" and the time, for example `Page opened 2026-11-25 06:10 PT; quote found.` Use `low` for a single uncorroborated outlet or an unreconciled figure.
 - `category` is one of the values in `docs/VOCAB.md`. Party ids are `org:`, `person:` or `auth:` plus a lowercase slug; reuse an existing id before minting one, and add an entity row (with `label`, `desc_en`, `desc_es`, `prov`) for each new one.
+- Every id in an event's `parties` must have an entity row, either existing or added by you in the same delivery.
 - Amounts are plain numbers. `currency` is `PYG` or `USD`. Guaraní figures in full: G. 221,000 million is `221000000000`.
 - Both `title_en` and `title_es`, and both `detail_en` and `detail_es`, are required. Write the Spanish yourself; do not leave English in a Spanish field.
 

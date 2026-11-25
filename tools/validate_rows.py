@@ -82,6 +82,9 @@ def main():
                     if len((p.get("quote") or "").split()) > 12: errors.append(f"{where} quote longer than 12 words")
             if tag in strict and rid and kind in ("events", "facts", "roles", "loans", "flows") and not re.match(r"^%s:(event|fact|role|loan|flow):\d{4,}$" % re.escape(tag), rid):
                 errors.append(f"{where} id '{rid}' must look like {tag}:event:0001")
+            if tag in strict and kind == "events":
+                for pid in r.get("parties") or []:
+                    if pid not in entities: errors.append(f"{where} party '{pid}' has no entity row; add one to {tag}.entities.jsonl or reuse an id from docs/VOCAB.md")
             if tag in strict and kind == "events" and not (r.get("detail_en") and r.get("detail_es")):
                 errors.append(f"{where} needs detail_en and detail_es")
             for f in ENTITY_FIELDS.get(kind, []):

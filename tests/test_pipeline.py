@@ -9,14 +9,16 @@ def sh(args, env=None):
     return r.returncode, r.stdout + r.stderr
 SRC = {"id": "src:test-2026-11-20-example", "kind": "press", "outlet": "Test outlet", "title": "Example headline",
        "date": "2026-11-20", "url": "https://example.org/news/2026/11/20/example-headline"}
-EVT = {"id": "bot:event:0001", "date": "2026-11-20", "date_precision": "day", "category": "supervisory",
+EVT = {"id": "bot:event:900001", "date": "2026-11-20", "date_precision": "day", "category": "supervisory",
        "title_en": "Test event", "title_es": "Evento de prueba", "detail_en": "A test.", "detail_es": "Una prueba.",
        "parties": ["org:ueno-bank"], "amount": None, "currency": None,
        "prov": {"asserted_by": "press", "source": SRC["id"], "locator": "para. 2", "quote": "short quote here", "confidence": "medium", "note": ""}}
 def raw_with(tmp, sources, events):
+    """Copy of data/raw with the test's rows APPENDED to the bot's files, as a real delivery would be."""
     raw = os.path.join(tmp, "raw"); shutil.copytree(os.path.join(ROOT, "data", "raw"), raw)
-    open(os.path.join(raw, "bot.sources.jsonl"), "w").write("".join(json.dumps(x) + "\n" for x in sources))
-    open(os.path.join(raw, "bot.events.jsonl"), "w").write("".join(json.dumps(x) + "\n" for x in events))
+    for name, rows in (("bot.sources.jsonl", sources), ("bot.events.jsonl", events)):
+        with open(os.path.join(raw, name), "a", encoding="utf-8") as f:
+            f.write("".join(json.dumps(x) + "\n" for x in rows))
     return raw
 fails = []
 def check(name, cond, out=""):
