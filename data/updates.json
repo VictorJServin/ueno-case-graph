@@ -1,5 +1,71 @@
 [
  {
+  "executed_at": "2026-11-25T19:14:22-08:00",
+  "run": "2026-11-25_1844",
+  "data_to": "2026-11-25",
+  "input": {
+   "en": "Monitoring dossier v2.2, generated 25 Nov 2026 18:44 PT",
+   "es": "Dossier de monitoreo v2.2, generado el 25 Nov 2026 18:44 PT"
+  },
+  "counts": {
+   "events": 7,
+   "figures": 4,
+   "sources": 9
+  },
+  "items": [
+   {
+    "en": "Ueno mutual-fund investors can redeem up to G. 30 million a week from next week through Investor Casa de Bolsa; an assembly will decide on liquidation.",
+    "es": "Los inversionistas de los fondos mutuos de Ueno podrán rescatar hasta G. 30 millones por semana desde la próxima semana a través de Investor Casa de Bolsa; una asamblea decidirá sobre la liquidación.",
+    "refs": [
+     "bot:event:0024"
+    ]
+   },
+   {
+    "en": "The President sent Congress an urgent bill to advance up to five minimum wages to more than 4,000 workers of companies linked to Ueno, with a fund of up to G. 62,000 million.",
+    "es": "El Presidente envió al Congreso un proyecto urgente para adelantar hasta cinco salarios mínimos a más de 4.000 trabajadores de empresas vinculadas a Ueno, con un fondo de hasta G. 62.000 millones.",
+    "refs": [
+     "bot:event:0025",
+     "bot:fact:0011"
+    ]
+   },
+   {
+    "en": "A judge barred any sale or change of 27 seized assets in the directors' case, including luxury cars, three aircraft and a yacht.",
+    "es": "Un juez prohibió vender o modificar 27 bienes incautados en la causa de los directivos, entre ellos autos de lujo, tres aeronaves y un yate.",
+    "refs": [
+     "bot:event:0026"
+    ]
+   },
+   {
+    "en": "Judge Legal also attached a PEAR S.R.L. property in the case of Francisco Peña Palacios and Rocío Caballero Bosch, who are presumed innocent.",
+    "es": "El juez Legal también embargó un inmueble de PEAR S.R.L. en la causa de Francisco Peña Palacios y Rocío Caballero Bosch, que se presumen inocentes.",
+    "refs": [
+     "bot:event:0027"
+    ]
+   },
+   {
+    "en": "Central bank director Rivarola said the banking superintendency did not act in time; Itaipú board members put its funds in Ueno at USD 220 to 222 million.",
+    "es": "El director del BCP Rivarola dijo que la Superintendencia de Bancos no actuó a tiempo; consejeros de Itaipú cifran sus fondos en Ueno entre USD 220 y 222 millones.",
+    "refs": [
+     "bot:event:0029",
+     "bot:fact:0008",
+     "bot:event:0030"
+    ]
+   },
+   {
+    "en": "Added from 17 Nov: the Economy Ministry put public money caught in Ueno at USD 888 million at 31 October, including Itaipú.",
+    "es": "Agregado del 17 de noviembre: el MEF cifró en USD 888 millones el dinero público atrapado en Ueno al 31 de octubre, incluida Itaipú.",
+    "refs": [
+     "bot:fact:0009",
+     "bot:fact:0010"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Automatic refresh from the monitoring bot's delivery. Not updated in this run: the missing-money estimate, the charges table and the written reports. 5 point(s) were flagged for a person to check.",
+   "es": "Actualización automática a partir de la entrega del bot de monitoreo. No actualizado en esta corrida: la estimación del dinero faltante, la tabla de imputaciones y los informes escritos. Se marcaron 5 punto(s) para revisión humana."
+  }
+ },
+ {
   "executed_at": "2026-11-25T13:14:23-08:00",
   "run": "2026-11-25_1244",
   "data_to": "2026-11-25",

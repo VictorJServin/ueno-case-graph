@@ -16,7 +16,7 @@
 
 `prosecution`, `rey`, `defence`, `regulator`, `rating_agency`, `company`, `press`, `analyst`
 
-## Party ids already in the graph (246)
+## Party ids already in the graph (247)
 
 Reuse one of these before minting a new id.
 
@@ -196,6 +196,7 @@ Reuse one of these before minting a new id.
 | `person:jose-augusto-sala-cardozo` | José Augusto Sala Cardozo |
 | `person:jose-maciel` | José Maciel |
 | `person:jose-miguel-fernandez-zacur` | José Miguel Fernández Zacur |
+| `person:joshua-abreu` | Joshua Abreu |
 | `person:juan-carlos-lopez-moreira` | Juan Carlos Lopez Moreira |
 | `person:juan-manuel-gustale` | Juan Manuel Gustale |
 | `person:julio-rey` | Julio Daniel Rey Fernández |

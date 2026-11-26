@@ -6,10 +6,10 @@ Things a human should review. The builder never merges two different ids on its 
 
 | file | rows read | malformed lines |
 |---|---|---|
-| bot.entities.jsonl | 1 | 0 |
-| bot.events.jsonl | 23 | 0 |
-| bot.facts.jsonl | 7 | 0 |
-| bot.sources.jsonl | 25 | 0 |
+| bot.entities.jsonl | 2 | 0 |
+| bot.events.jsonl | 30 | 0 |
+| bot.facts.jsonl | 11 | 0 |
+| bot.sources.jsonl | 34 | 0 |
 | chrono.accused.jsonl | 35 | 0 |
 | chrono.entities.jsonl | 81 | 0 |
 | chrono.events.jsonl | 233 | 0 |
@@ -284,6 +284,7 @@ None.
 
 - src:1000noticias-2026-11-25-39-empresas: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:1000noticias-2026-11-25-fondos-dos-semanas: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:1000noticias-2026-11-25-siv-afpisa-pagos-semanales: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:5dias-2026-11-21-cpm: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:5dias-2026-11-25-afpisa-plan: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:5dias-2026-11-25-liquidacion-fondos: source date 2026-11-25 is after the 2026-11-20 cutoff
@@ -312,14 +313,20 @@ None.
 - src:abc-2026-11-24-renuncia-juridico: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:abc-2026-11-24-vallejo-fv: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-bachi-anticipo: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-bloqueo-bienes-francisco-pena: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-canciller-itaipu: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-consumo-cip: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-dominguez-750: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-fpena-prision: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-itaipu-220-millones: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-joshua-abreu-fiscalia: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-nubicom-vox: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-proyecto-trabajadores-grupo-vazquez: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-rivarola-fallas: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-ueno-seguros: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-vallejo-mef: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:abc-2026-11-25-viajes-pena: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:abc-2026-11-25-zarate-regla-cinco-anos: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-cardenal: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-workers22: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:adn-2026-11-24-bienes-exterior: source date 2026-11-24 is after the 2026-11-20 cutoff
@@ -361,6 +368,7 @@ None.
 - src:lanacion-2026-11-23-recalde: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-24-afpisa24: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-24-fpena-declara: source date 2026-11-24 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-25-27-bienes-incautados: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:latribuna-2026-11-21-marcha-extrabajadores: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:lt-2026-11-24-interior: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:ministerio-publico-2026-11-25-mitic: source date 2026-11-25 is after the 2026-11-20 cutoff
@@ -414,6 +422,12 @@ None.
 - bot:event:0021: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:event:0022: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:event:0023: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0024: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0025: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0026: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0027: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0029: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0030: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos4:event:0013: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0001: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0002: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
@@ -483,6 +497,8 @@ None.
 - bot:fact:0005: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:fact:0006: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:fact:0007: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0008: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:fact:0011: date 2026-11-25 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0001: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0002: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:fact:0003: date 2026-11-22 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
