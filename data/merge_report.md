@@ -7,9 +7,9 @@ Things a human should review. The builder never merges two different ids on its 
 | file | rows read | malformed lines |
 |---|---|---|
 | bot.entities.jsonl | 3 | 0 |
-| bot.events.jsonl | 44 | 0 |
+| bot.events.jsonl | 53 | 0 |
 | bot.facts.jsonl | 20 | 0 |
-| bot.sources.jsonl | 50 | 0 |
+| bot.sources.jsonl | 59 | 0 |
 | chrono.accused.jsonl | 35 | 0 |
 | chrono.entities.jsonl | 81 | 0 |
 | chrono.events.jsonl | 233 | 0 |
@@ -332,6 +332,8 @@ None.
 - src:abc-2026-11-26-fiscalia-sistema-financiero-eeuu: source date 2026-11-26 is after the 2026-11-20 cutoff
 - src:abc-2026-11-26-rescate-ahorristas-mipymes: source date 2026-11-26 is after the 2026-11-20 cutoff
 - src:abc-2026-11-26-senado-aplaza-anticipo-trabajadores: source date 2026-11-26 is after the 2026-11-20 cutoff
+- src:abc-2026-11-27-abreu-entrega-vehiculo: source date 2026-11-27 is after the 2026-11-20 cutoff
+- src:abc-2026-11-27-nuevo-presidente-conatel: source date 2026-11-27 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-cardenal: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:adn-2026-11-22-workers22: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:adn-2026-11-24-bienes-exterior: source date 2026-11-24 is after the 2026-11-20 cutoff
@@ -340,6 +342,7 @@ None.
 - src:adn-2026-11-25-fpena-prision: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:adn-2026-11-25-itaipu-vieira: source date 2026-11-25 is after the 2026-11-20 cutoff
 - src:adn-2026-11-25-trabajadores-total: source date 2026-11-25 is after the 2026-11-20 cutoff
+- src:adn-2026-11-27-eeuu-cooperante: source date 2026-11-27 is after the 2026-11-20 cutoff
 - src:asuncion-gov-2026-11-22-balance-pdf: source date 2026-11-22 is after the 2026-11-20 cutoff
 - src:dossier-v2-2026-11-21: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:elindependiente-2026-11-23-ips-delirio: source date 2026-11-23 is after the 2026-11-20 cutoff
@@ -378,6 +381,8 @@ None.
 - src:lanacion-2026-11-26-bienes-decomisados-ahorristas: source date 2026-11-26 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-26-clausura-vinanzas-15-dias: source date 2026-11-26 is after the 2026-11-20 cutoff
 - src:lanacion-2026-11-26-transferencia-depositos-5000: source date 2026-11-26 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-27-detencion-fernandez-valdovinos: source date 2026-11-27 is after the 2026-11-20 cutoff
+- src:lanacion-2026-11-27-mora-vazquez-prision: source date 2026-11-27 is after the 2026-11-20 cutoff
 - src:latribuna-2026-11-21-marcha-extrabajadores: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:lt-2026-11-24-interior: source date 2026-11-24 is after the 2026-11-20 cutoff
 - src:ministerio-publico-2026-11-25-mitic: source date 2026-11-25 is after the 2026-11-20 cutoff
@@ -390,6 +395,8 @@ None.
 - src:rcc-2026-11-23-itaipu-mendoza: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:rdn-2026-11-23-barrio-ueno: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:rdn-2026-11-23-cramer-vaciamiento: source date 2026-11-23 is after the 2026-11-20 cutoff
+- src:rdn-2026-11-27-barrios-fernandez-valdovinos-basa: source date 2026-11-27 is after the 2026-11-20 cutoff
+- src:rdn-2026-11-27-senabico-subasta-bienes: source date 2026-11-27 is after the 2026-11-20 cutoff
 - src:senado-2026-11-23-unificar: source date 2026-11-23 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-21-calificadoras: source date 2026-11-21 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-21-preda: source date 2026-11-21 is after the 2026-11-20 cutoff
@@ -413,6 +420,8 @@ None.
 - src:ultimahora-2026-11-26-ley-especial-liquidacion: source date 2026-11-26 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-26-technoma-datos-tsje: source date 2026-11-26 is after the 2026-11-20 cutoff
 - src:ultimahora-2026-11-26-traspaso-1000-depositantes: source date 2026-11-26 is after the 2026-11-20 cutoff
+- src:ultimahora-2026-11-27-alliana-activos-ueno: source date 2026-11-27 is after the 2026-11-20 cutoff
+- src:ultimahora-2026-11-27-camioneta-tsv-deposito-gsr: source date 2026-11-27 is after the 2026-11-20 cutoff
 - press:loan:0034: status 'cancelled' but outstanding is 6321573.22
 - rec:loan:0025: outstanding 25024500 exceeds principal 24900000
 - rec:loan:0027: outstanding 10645965 exceeds principal 10593000
@@ -458,6 +467,15 @@ None.
 - bot:event:0042: date 2026-11-26 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:event:0043: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - bot:event:0044: date 2026-11-26 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0045: date 2026-11-27 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0046: date 2026-11-26 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0047: date 2026-11-26 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0048: date 2026-11-27 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0049: date 2026-11-27 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0050: date 2026-11-27 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0051: date 2026-11-27 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0052: date 2026-11-27 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
+- bot:event:0053: date 2026-11-26 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos4:event:0013: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0001: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)
 - dos5:event:0002: date 2026-11-21 is after the 2026-11-20 cutoff (fine if it is a maturity or a projection)

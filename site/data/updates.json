@@ -1,5 +1,60 @@
 [
  {
+  "executed_at": "2026-11-27T07:10:29-08:00",
+  "run": "2026-11-27_0638",
+  "data_to": "2026-11-27",
+  "input": {
+   "en": "Monitoring dossier v2.4, generated 27 Nov 2026 06:38 PT",
+   "es": "Dossier de monitoreo v2.4, generado el 27 Nov 2026 06:38 PT"
+  },
+  "counts": {
+   "events": 9,
+   "figures": 0,
+   "sources": 9
+  },
+  "items": [
+   {
+    "en": "Prosecutors ordered the detention of former economy minister Carlos Fernández Valdovinos over the placement of G. 250,000 million of pension funds in Ueno and a later consulting contract with Grupo Vázquez; at the time of writing he had not been reported detained. He is not charged and is presumed innocent.",
+    "es": "La Fiscalía ordenó la detención del exministro de Economía Carlos Fernández Valdovinos por la colocación de G. 250.000 millones de fondos jubilatorios en Ueno y un posterior contrato de consultoría con el Grupo Vázquez; al cierre no se informó que haya sido detenido. No está imputado y se presume inocente.",
+    "refs": [
+     "bot:event:0045"
+    ]
+   },
+   {
+    "en": "Miguel Vázquez's pre-trial detention became final after his defence withdrew its appeal, and a judge kept former central-bank director Miguel Ángel Mora in detention despite prosecutors agreeing to house arrest. Both are presumed innocent.",
+    "es": "La prisión preventiva de Miguel Vázquez quedó firme tras el desistimiento de su defensa, y un juez mantuvo detenido al exdirector del Banco Central Miguel Ángel Mora pese a que la Fiscalía aceptó el arresto domiciliario. Ambos se presumen inocentes.",
+    "refs": [
+     "bot:event:0046"
+    ]
+   },
+   {
+    "en": "President Alliana's updated asset declaration lists a G. 1,500 million Ueno certificate of deposit (his share) and Ueno loans; the figure differs from the G. 4,500 million he mentioned earlier. No wrongdoing is alleged.",
+    "es": "La declaración jurada actualizada del presidente Alliana incluye un certificado de depósito en Ueno de G. 1.500 millones (su parte) y préstamos en Ueno; la cifra difiere de los G. 4.500 millones que mencionó antes. No se le atribuye irregularidad.",
+    "refs": [
+     "bot:event:0047"
+    ]
+   },
+   {
+    "en": "A new head was appointed at the telecoms regulator CONATEL, which has funds trapped in Ueno and a pending file on a failed 5G award to a Grupo Vázquez-linked firm.",
+    "es": "Se designó un nuevo titular en la CONATEL, que tiene fondos atrapados en Ueno y un expediente pendiente sobre una fallida adjudicación 5G a una firma vinculada al Grupo Vázquez.",
+    "refs": [
+     "bot:event:0049"
+    ]
+   },
+   {
+    "en": "A deputy prosecutor clarified that the United States is cooperating with Paraguay but has filed no request of its own.",
+    "es": "Un fiscal adjunto aclaró que Estados Unidos coopera con Paraguay pero no presentó ningún requerimiento propio.",
+    "refs": [
+     "bot:event:0052"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Automatic refresh from the monitoring bot's delivery. Not updated in this run: the missing-money estimate, the charges table and the written reports. 6 point(s) were flagged for a person to check.",
+   "es": "Actualización automática a partir de la entrega del bot de monitoreo. No actualizado en esta corrida: la estimación del dinero faltante, la tabla de imputaciones y los informes escritos. Se marcaron 6 punto(s) para revisión humana."
+  }
+ },
+ {
   "executed_at": "2026-11-26T18:54:02-08:00",
   "run": "2026-11-26_1821",
   "data_to": "2026-11-26",
