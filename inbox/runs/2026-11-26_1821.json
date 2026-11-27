@@ -1,0 +1,215 @@
+{
+ "generated_at": "2026-11-26T18:21:27-08:00",
+ "dossier_version": "v2.3",
+ "dossier_file": "inbox/dossiers/Ueno_Dossier_2026-11-26_1821.json",
+ "previous_run": "2026-11-25_1844",
+ "rows_added": {
+  "sources": [
+   "src:ultimahora-2026-11-26-traspaso-1000-depositantes",
+   "src:abc-2026-11-26-rescate-ahorristas-mipymes",
+   "src:lanacion-2026-11-26-transferencia-depositos-5000",
+   "src:ultimahora-2026-11-26-ley-especial-liquidacion",
+   "src:ultimahora-2026-11-26-fondos-mutuos-rescates",
+   "src:abc-2026-11-26-argentina-apoyo-activos",
+   "src:abc-2026-11-26-fiscalia-sistema-financiero-eeuu",
+   "src:lanacion-2026-11-26-bienes-decomisados-ahorristas",
+   "src:lanacion-2026-11-26-clausura-vinanzas-15-dias",
+   "src:ultimahora-2026-11-26-allanamiento-gsr-lambare",
+   "src:lanacion-2026-11-26-ahorristas-totalidad-fgd",
+   "src:ultimahora-2026-11-26-itaipu-obras-fondos-retenidos",
+   "src:abc-2026-11-26-senado-aplaza-anticipo-trabajadores",
+   "src:1000noticias-2026-11-26-fiscalia-escrito-joshua-abreu",
+   "src:npy-2026-11-23-pena-flexibilizan-vinas-cue",
+   "src:ultimahora-2026-11-26-technoma-datos-tsje"
+  ],
+  "events": [
+   "bot:event:0031",
+   "bot:event:0032",
+   "bot:event:0033",
+   "bot:event:0034",
+   "bot:event:0035",
+   "bot:event:0036",
+   "bot:event:0037",
+   "bot:event:0038",
+   "bot:event:0039",
+   "bot:event:0040",
+   "bot:event:0041",
+   "bot:event:0042",
+   "bot:event:0043",
+   "bot:event:0044"
+  ],
+  "facts": [
+   "bot:fact:0012",
+   "bot:fact:0013",
+   "bot:fact:0014",
+   "bot:fact:0015",
+   "bot:fact:0016",
+   "bot:fact:0017",
+   "bot:fact:0018",
+   "bot:fact:0019",
+   "bot:fact:0020"
+  ],
+  "entities": [
+   "person:ruben-ramirez-lezcano"
+  ]
+ },
+ "claims_delivered": {
+  "C-COL-33": [
+   "bot:event:0031",
+   "bot:fact:0012",
+   "bot:fact:0013",
+   "bot:fact:0014",
+   "bot:fact:0015",
+   "bot:fact:0016",
+   "bot:fact:0017"
+  ],
+  "C-COL-34": [
+   "bot:event:0032"
+  ],
+  "C-COL-32": [
+   "bot:event:0033",
+   "bot:fact:0018"
+  ],
+  "C-LEG-42": [
+   "bot:event:0034",
+   "bot:event:0035"
+  ],
+  "C-LEG-43": [
+   "bot:event:0036"
+  ],
+  "C-LEG-44": [
+   "bot:event:0037",
+   "bot:fact:0019"
+  ],
+  "C-LEG-45": [
+   "bot:event:0038"
+  ],
+  "C-COL-36": [
+   "bot:event:0039"
+  ],
+  "C-PUB-25": [
+   "bot:event:0040",
+   "bot:fact:0020"
+  ],
+  "C-PUB-27": [
+   "bot:event:0041"
+  ],
+  "C-DIR-14": [
+   "bot:event:0042"
+  ],
+  "C-PEN-19": [
+   "bot:event:0043"
+  ],
+  "C-OTH-04": [
+   "bot:event:0044"
+  ]
+ },
+ "skipped": [
+  {
+   "claim": "C-CB-15",
+   "reason": "single-outlet Última Hora investigation of BCP merger deferrals (file not independently reviewed); policy: skip and flag"
+  },
+  {
+   "claim": "C-IPS-09",
+   "reason": "single-outlet ABC report citing a Contraloría document that was not located or opened this run; names a former official's CDA and debt"
+  },
+  {
+   "claim": "C-OTH-30",
+   "reason": "single-outlet 5Días market analysis (country risk up ~18%); opinion/analyst commentary, Medium 0.62"
+  },
+  {
+   "claim": "C-OTH-32",
+   "reason": "political accusations by Sen. Leite against a named minister (Óscar Lovera) and a process complaint; not findings of wrongdoing"
+  },
+  {
+   "claim": "C-MED-01",
+   "reason": "no development: Instagram profile still behind a login wall"
+  },
+  {
+   "claim": "C-MUN-21",
+   "reason": "no development (Asunción: frozen accounts, 13 Nov complaint, Barrio Ueno / La Piedad / Mbocayaty — nothing new)"
+  },
+  {
+   "claim": "C-COL-06",
+   "reason": "material update (USD 75 million vs 74.4 million; second raid) delivered under C-LEG-44 / E_VIN and F_VIN75"
+  }
+ ],
+ "whats_new": [
+  {
+   "en": "The central bank agreed with other banks to start, next week, a transfer of Ueno assets and liabilities, without new guarantee-fund payouts, at a cap of up to G. 2,000 million or G. 5,000 million per client.",
+   "es": "El Banco Central acordó con otros bancos iniciar la próxima semana una transferencia de activos y pasivos de Ueno, sin nuevos desembolsos del fondo de garantía, con un tope de hasta G. 2.000 millones o G. 5.000 millones por cliente.",
+   "refs": [
+    "bot:event:0031",
+    "bot:fact:0012",
+    "bot:fact:0015",
+    "bot:fact:0017"
+   ]
+  },
+  {
+   "en": "It also sent the Executive an urgent bill for an extrajudicial liquidation of Ueno, and the president of the bank will ask for a veto of any use of the guarantee fund for anyone other than depositors.",
+   "es": "También envió al Ejecutivo un proyecto urgente de liquidación extrajudicial de Ueno, y el presidente del banco pedirá vetar cualquier uso del fondo de garantía para alguien que no sea depositante.",
+   "refs": [
+    "bot:event:0032"
+   ]
+  },
+  {
+   "en": "Mutual-fund investors may request a second weekly redemption of up to G. 30 million (up to G. 60 million in two weeks), covering an estimated 98 to 99 percent of about 30,000 unit-holders.",
+   "es": "Los inversionistas de los fondos mutuos podrán pedir un segundo rescate semanal de hasta G. 30 millones (hasta G. 60 millones en dos semanas), que cubriría entre el 98% y el 99% de unos 30.000 cuotapartistas.",
+   "refs": [
+    "bot:event:0033",
+    "bot:fact:0018"
+   ]
+  },
+  {
+   "en": "Argentina offered help to recover assets; a deputy prosecutor said some funds were found in Argentina and that use of the US financial system had been detected. No extradition request is reported as filed.",
+   "es": "Argentina ofreció ayuda para recuperar activos; un fiscal adjunto dijo que se hallaron algunos fondos en Argentina y que se detectó el uso del sistema financiero de Estados Unidos. No se informa de un pedido de extradición presentado.",
+   "refs": [
+    "bot:event:0034",
+    "bot:event:0035"
+   ]
+  },
+  {
+   "en": "Prosecutors raided Vinanzas a second time and asked for a 15-day closure; they cite a USD 75 million credit portfolio, which conflicts with the earlier USD 74.4 million figure.",
+   "es": "La Fiscalía allanó Vinanzas por segunda vez y pidió una clausura de 15 días; cita una cartera de créditos de USD 75 millones, que entra en conflicto con los USD 74,4 millones anteriores.",
+   "refs": [
+    "bot:event:0037",
+    "bot:fact:0019"
+   ]
+  },
+  {
+   "en": "Itaipú's acting Paraguayan director put retained Itaipú and technology-park funds at about USD 220 million and said the dam had filed a criminal complaint against the bank and its directors, who are presumed innocent.",
+   "es": "El director paraguayo interino de Itaipú cifró en unos USD 220 millones los fondos retenidos de Itaipú y del parque tecnológico, y dijo que la entidad presentó una denuncia penal contra el banco y sus directivos, que se presumen inocentes.",
+   "refs": [
+    "bot:event:0040",
+    "bot:fact:0020"
+   ]
+  }
+ ],
+ "payouts": [
+  {
+   "en": "Deposit transfer to other banks expected next week (Monday to Wednesday), without new guarantee-fund payouts, at a cap of up to G. 2,000 million or G. 5,000 million per client; about 1,000 remaining depositors could leave.",
+   "es": "Transferencia de depósitos a otros bancos prevista para la próxima semana (lunes a miércoles), sin nuevos desembolsos del fondo de garantía, con un tope de hasta G. 2.000 millones o G. 5.000 millones por cliente; unos 1.000 depositantes restantes podrían salir.",
+   "refs": [
+    "bot:event:0031"
+   ]
+  },
+  {
+   "en": "Ueno mutual funds: a second weekly redemption window of up to G. 30 million per investor (up to G. 60 million in two weeks), estimated to cover 98 to 99 percent of about 30,000 unit-holders, through Investor Casa de Bolsa at nominal value; the assembly date is still pending.",
+   "es": "Fondos mutuos de Ueno: una segunda ventana semanal de rescate de hasta G. 30 millones por inversor (hasta G. 60 millones en dos semanas), que se estima cubriría entre el 98% y el 99% de unos 30.000 cuotapartistas, a través de Investor Casa de Bolsa a valor nominal; la fecha de la asamblea sigue pendiente.",
+   "refs": [
+    "bot:event:0033",
+    "bot:fact:0018"
+   ]
+  }
+ ],
+ "needs_human": [
+  "New entity person:ruben-ramirez-lezcano (Foreign Minister) added as a party of E_ARG. Please confirm the slug.",
+  "New fact metrics remaining_large_depositors (three conflicting residual counts: 150-160 vs 100-160 vs a little more than 100) and fund_remaining (about USD 900 million still in the FGD). Please confirm or rename.",
+  "ABC puts the guarantee-fund disbursement at US$ 634 million; Última Hora and La Nación put it at about USD 644 million (already in dos4:fact:0007). Both delivered.",
+  "El Nacional wrote that the special-law bill had already been sent to Congress; ABC, Última Hora and ADN say it was sent to the Executive and is still under review. The delivered row follows the latter.",
+  "C-PEN-19 (lifting of Peña's isolation restrictions) rests on a single outlet (NPY, 23 Nov) and is delivered as medium. Please confirm.",
+  "Skipped as single-outlet or political/opinion: C-CB-15 (ÚH investigation of merger deferrals), C-IPS-09 (ABC on Carlos Pereira / Contraloría CDA, document not opened), C-OTH-30 (country-risk analysis), C-OTH-32 (Sen. Leite's accusations against Minister Lovera).",
+  "C-OTH-04 (Technoma / TSJE backup) is delivered as a press allegation, not a charge; the electoral court has denied contractual ties with itti.",
+  "ministeriopublico.gov.py official notes fail Python SSL verification in quotecheck; press rows (La Nación) are used for the Vinanzas raid and the Senabico table. bcp.gov.py communiqués remain Cloudflare 403."
+ ]
+}
