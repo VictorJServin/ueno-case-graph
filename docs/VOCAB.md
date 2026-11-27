@@ -16,7 +16,7 @@
 
 `prosecution`, `rey`, `defence`, `regulator`, `rating_agency`, `company`, `press`, `analyst`
 
-## Party ids already in the graph (247)
+## Party ids already in the graph (248)
 
 Reuse one of these before minting a new id.
 
@@ -251,6 +251,7 @@ Reuse one of these before minting a new id.
 | `person:rodrigo-franco` | Rodrigo Franco |
 | `person:rodrigo-nogues-bazan` | Rodrigo Nogues Bazan |
 | `person:ruben-gonzalez` | Rubén González |
+| `person:ruben-ramirez-lezcano` | Rubén Ramírez Lezcano |
 | `person:rudolph-goetz` | Rudolph F. Goetz González |
 | `person:ruth-benitez` | Ruth Karina Benítez |
 | `person:santiago-pena` | Santiago Peña |

@@ -67,8 +67,8 @@
     ].forEach(function (t) { full.appendChild(h("p", null, t)); });
     document.getElementById("foot").innerHTML = "";
     document.getElementById("foot").appendChild(h("p", null, L(
-      "Sources: Acta de Declaración Indagatoria of Julio Daniel Rey Fernández, Case 89/2026 (24 pages, 4 November 2026), and public reporting up to 25 November 2026, each cited on the item it supports. Personal identifiers that appear in the original record (ID numbers, addresses, dates of birth) are not part of the data. The scanned pages are not published.",
-      "Fuentes: Acta de Declaración Indagatoria de Julio Daniel Rey Fernández, Causa 89/2026 (24 páginas, 4 de noviembre de 2026), e información pública hasta el 25 de noviembre de 2026, citada en cada dato. Los datos personales del acta original (cédulas, domicilios, fechas de nacimiento) no forman parte de los datos. Las páginas escaneadas no se publican.")));
+      "Sources: Acta de Declaración Indagatoria of Julio Daniel Rey Fernández, Case 89/2026 (24 pages, 4 November 2026), and public reporting up to 26 November 2026, each cited on the item it supports. Personal identifiers that appear in the original record (ID numbers, addresses, dates of birth) are not part of the data. The scanned pages are not published.",
+      "Fuentes: Acta de Declaración Indagatoria de Julio Daniel Rey Fernández, Causa 89/2026 (24 páginas, 4 de noviembre de 2026), e información pública hasta el 26 de noviembre de 2026, citada en cada dato. Los datos personales del acta original (cédulas, domicilios, fechas de nacimiento) no forman parte de los datos. Las páginas escaneadas no se publican.")));
   }
 
   function render(force) {

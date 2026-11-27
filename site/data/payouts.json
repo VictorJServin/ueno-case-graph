@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-25",
+ "as_of": "2026-11-26",
  "disclaimer": {
   "en": "This view explains what has been reported about repayments. It is not advice and it is not an official notice: confirm your own case with the BCP or the deposit guarantee fund. Figures come from officials' statements as reported by the press and are shown as each source gave them.",
   "es": "Esta vista explica lo que se ha informado sobre los pagos. No es asesoramiento ni un aviso oficial: confirme su caso con el BCP o el Fondo de Garantía de Depósitos. Las cifras provienen de declaraciones de autoridades según la prensa y se muestran tal como las dio cada fuente."
@@ -148,12 +148,13 @@
    },
    "state": "pending",
    "state_t": {
-    "en": "Pending the tender. No payment date has been reported.",
-    "es": "Pendiente de la licitación. No se informó fecha de pago."
+    "en": "Pending. On 26 Nov the central bank said, per Última Hora, that a transfer of assets and deposits to other banks is expected to start the following week, without new guarantee-fund payouts, and that this balance would be absorbed in the transfer.",
+    "es": "Pendiente. El 26 nov el BCP dijo, según Última Hora, que la transferencia de activos y depósitos a otros bancos comenzaría la semana siguiente, sin nuevos desembolsos del Fondo de Garantía, y que este saldo quedaría absorbido en la transferencia."
    },
    "refs": [
     "dos5:event:0013",
-    "chrono:event:0232"
+    "chrono:event:0232",
+    "bot:event:0031"
    ]
   },
   {
@@ -176,13 +177,17 @@
    },
    "state": "unknown",
    "state_t": {
-    "en": "Uncertain. About 3% of depositors, including institutions.",
-    "es": "Incierto. Cerca del 3% de los depositantes, incluidas instituciones."
+    "en": "Uncertain. About 3% of depositors, including institutions. On 26 Nov the central bank said, per Última Hora, that the planned transfer would move deposits up to a cap of G. 5,000 million per client, or G. 2,000 million depending on the valuation of the assets; about 1,000 remaining depositors could move, and large depositors above that cap would remain (reports give between a little more than 100 and 160).",
+    "es": "Incierto. Cerca del 3% de los depositantes, incluidas instituciones. El 26 nov el BCP dijo, según Última Hora, que la transferencia prevista trasladaría depósitos hasta un tope de G. 5.000 millones por cliente, o de G. 2.000 millones según la valoración de los activos; unos 1.000 depositantes restantes podrían salir, y quedarían los grandes depositantes por encima de ese tope (los medios dan entre poco más de 100 y 160)."
    },
    "refs": [
     "dos5:event:0013",
     "dos5:event:0019",
-    "dos5:event:0052"
+    "dos5:event:0052",
+    "bot:event:0031",
+    "bot:fact:0012",
+    "bot:fact:0013",
+    "bot:fact:0014"
    ]
   }
  ],
@@ -193,8 +198,8 @@
     "es": "Fondos mutuos (Ueno AFPISA)"
    },
    "t": {
-    "en": "Not deposits, so not guaranteed. Each fund's assets are separate from the bank. Authorisation suspended for 180 days; about 30,000 investors and USD 46 million; the regulator is seeking a new manager. Each fund's securities remain in custody at the securities depository, and on 24 Nov the manager began asking unitholders whether they want to redeem once a procedure exists. On 25 Nov the central bank said, per 5Días, that Ueno AFPISA itself must set the redemption mechanism using the funds' own assets; investors' spokespeople said they were told the funds would be liquidated because no manager would take them, while the depository's manager spoke of a transfer of management and expected a definition within two weeks. These accounts conflict. Later on 25 Nov the securities regulator temporarily lifted the suspension, per 1000 Noticias: unit-holders of Ueno Cash Guaraníes and Ueno Cash Dólares may redeem up to G. 30 million per investor per week, with Investor Casa de Bolsa selling the funds' securities and acting as paying agent; payments are expected to start the following week, with no need to open an account at the broker. The regulator also called an assembly of unit-holders to decide whether the funds are liquidated.",
-    "es": "No son depósitos, por lo que no tienen garantía. El patrimonio de cada fondo está separado del banco. Autorización suspendida por 180 días; unos 30.000 inversores y USD 46 millones; el regulador busca un nuevo administrador. Los títulos de cada fondo siguen en custodia en la Caja de Valores, y el 24 nov la administradora empezó a consultar a los cuotapartistas si quieren rescatar cuando exista un procedimiento. El 25 nov el BCP señaló, según 5Días, que la propia Ueno AFPISA debe fijar el mecanismo de rescate con los activos de los fondos; voceros de los inversionistas dijeron que se les informó que los fondos serían liquidados porque ninguna administradora los asumió, mientras el gerente de la Caja de Valores habló de un traspaso de la administración y espera una definición en dos semanas. Estas versiones no coinciden. Más tarde el 25 nov la Superintendencia de Valores levantó temporalmente la suspensión, según 1000 Noticias: los cuotapartistas de Ueno Cash Guaraníes y Ueno Cash Dólares podrán rescatar hasta G. 30 millones por inversor por semana, con Investor Casa de Bolsa a cargo de vender los títulos de los fondos y actuar como agente de pago; los pagos comenzarían la semana siguiente, sin necesidad de abrir cuenta en la casa de bolsa. La Superintendencia también convocó una asamblea de cuotapartistas para decidir si los fondos se liquidan."
+    "en": "Not deposits, so not guaranteed. Each fund's assets are separate from the bank. Authorisation suspended for 180 days; about 30,000 investors and USD 46 million; the regulator is seeking a new manager. Each fund's securities remain in custody at the securities depository, and on 24 Nov the manager began asking unitholders whether they want to redeem once a procedure exists. On 25 Nov the central bank said, per 5Días, that Ueno AFPISA itself must set the redemption mechanism using the funds' own assets; investors' spokespeople said they were told the funds would be liquidated because no manager would take them, while the depository's manager spoke of a transfer of management and expected a definition within two weeks. These accounts conflict. Later on 25 Nov the securities regulator temporarily lifted the suspension, per 1000 Noticias: unit-holders of Ueno Cash Guaraníes and Ueno Cash Dólares may redeem up to G. 30 million per investor per week, with Investor Casa de Bolsa selling the funds' securities and acting as paying agent; payments are expected to start the following week, with no need to open an account at the broker. The regulator also called an assembly of unit-holders to decide whether the funds are liquidated. On 26 Nov the central bank said, per Última Hora, that unit-holders may request up to G. 30 million the following week and another G. 30 million the week after (up to G. 60 million in two weeks), which it estimates would cover 98 to 99 percent of about 30,000 unit-holders; Investor Casa de Bolsa is to sell the funds' securities to banks at nominal value, and the date of the assembly has not been announced.",
+    "es": "No son depósitos, por lo que no tienen garantía. El patrimonio de cada fondo está separado del banco. Autorización suspendida por 180 días; unos 30.000 inversores y USD 46 millones; el regulador busca un nuevo administrador. Los títulos de cada fondo siguen en custodia en la Caja de Valores, y el 24 nov la administradora empezó a consultar a los cuotapartistas si quieren rescatar cuando exista un procedimiento. El 25 nov el BCP señaló, según 5Días, que la propia Ueno AFPISA debe fijar el mecanismo de rescate con los activos de los fondos; voceros de los inversionistas dijeron que se les informó que los fondos serían liquidados porque ninguna administradora los asumió, mientras el gerente de la Caja de Valores habló de un traspaso de la administración y espera una definición en dos semanas. Estas versiones no coinciden. Más tarde el 25 nov la Superintendencia de Valores levantó temporalmente la suspensión, según 1000 Noticias: los cuotapartistas de Ueno Cash Guaraníes y Ueno Cash Dólares podrán rescatar hasta G. 30 millones por inversor por semana, con Investor Casa de Bolsa a cargo de vender los títulos de los fondos y actuar como agente de pago; los pagos comenzarían la semana siguiente, sin necesidad de abrir cuenta en la casa de bolsa. La Superintendencia también convocó una asamblea de cuotapartistas para decidir si los fondos se liquidan. El 26 nov el BCP dijo, según Última Hora, que los cuotapartistas podrán pedir hasta G. 30 millones la semana siguiente y otros G. 30 millones la posterior (hasta G. 60 millones en dos semanas), lo que estima cubriría entre el 98% y el 99% de unos 30.000 cuotapartistas; Investor Casa de Bolsa venderá los títulos de los fondos a los bancos a valor nominal, y la fecha de la asamblea aún no se anunció."
    },
    "refs": [
     "dos6:event:0019",
@@ -204,7 +209,9 @@
     "bot:event:0020",
     "bot:event:0021",
     "bot:event:0022",
-    "bot:event:0024"
+    "bot:event:0024",
+    "bot:event:0033",
+    "bot:fact:0018"
    ]
   },
   {
@@ -337,6 +344,17 @@
    },
    "refs": [
     "dos5:event:0019"
+   ]
+  },
+  {
+   "d": "2026-11-26",
+   "s": "done",
+   "t": {
+    "en": "BCP announces a transfer of assets and deposits to other banks, expected to start the following week, capped at up to G. 2,000 or 5,000 million per client, without new guarantee-fund payouts",
+    "es": "El BCP anuncia una transferencia de activos y depósitos a otros bancos, prevista para la semana siguiente, con tope de hasta G. 2.000 o 5.000 millones por cliente, sin nuevos desembolsos del Fondo de Garantía"
+   },
+   "refs": [
+    "bot:event:0031"
    ]
   },
   {
@@ -499,13 +517,14 @@
     "es": "USD 163,8 millones más G. 115.200 millones"
    },
    "n": {
-    "en": "an earlier report gave USD 182 million; on 24 Nov a board member said 'above USD 200 million'",
-    "es": "un informe previo daba USD 182 millones; el 24 nov un consejero dijo 'más de USD 200 millones'"
+    "en": "an earlier report gave USD 182 million; on 24 Nov a board member said 'above USD 200 million'; on 26 Nov the acting Paraguayan director put Itaipú plus its technology park at about USD 220 million",
+    "es": "un informe previo daba USD 182 millones; el 24 nov un consejero dijo 'más de USD 200 millones'; el 26 nov el director paraguayo interino cifró en unos USD 220 millones lo de Itaipú más su parque tecnológico"
    },
    "refs": [
     "dos5:fact:0006",
     "dos4:fact:0004",
-    "dos6:fact:0003"
+    "dos6:fact:0003",
+    "bot:fact:0020"
    ]
   },
   {
@@ -678,6 +697,21 @@
     "side": "have",
     "refs": [
      "dos4:fact:0007"
+    ]
+   },
+   {
+    "k": {
+     "en": "Guarantee fund still available, 26 Nov conference",
+     "es": "Fondo de garantía aún disponible, conferencia del 26 nov"
+    },
+    "v": {
+     "en": "about USD 900 million",
+     "es": "unos USD 900 millones"
+    },
+    "d": "2026-11-26",
+    "side": "have",
+    "refs": [
+     "bot:fact:0017"
     ]
    },
    {

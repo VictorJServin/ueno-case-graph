@@ -1,5 +1,74 @@
 [
  {
+  "executed_at": "2026-11-26T18:54:02-08:00",
+  "run": "2026-11-26_1821",
+  "data_to": "2026-11-26",
+  "input": {
+   "en": "Monitoring dossier v2.3, generated 26 Nov 2026 18:21 PT",
+   "es": "Dossier de monitoreo v2.3, generado el 26 Nov 2026 18:21 PT"
+  },
+  "counts": {
+   "events": 14,
+   "figures": 9,
+   "sources": 16
+  },
+  "items": [
+   {
+    "en": "The central bank agreed with other banks to start, next week, a transfer of Ueno assets and liabilities, without new guarantee-fund payouts, at a cap of up to G. 2,000 million or G. 5,000 million per client.",
+    "es": "El Banco Central acordó con otros bancos iniciar la próxima semana una transferencia de activos y pasivos de Ueno, sin nuevos desembolsos del fondo de garantía, con un tope de hasta G. 2.000 millones o G. 5.000 millones por cliente.",
+    "refs": [
+     "bot:event:0031",
+     "bot:fact:0012",
+     "bot:fact:0015",
+     "bot:fact:0017"
+    ]
+   },
+   {
+    "en": "It also sent the Executive an urgent bill for an extrajudicial liquidation of Ueno, and the president of the bank will ask for a veto of any use of the guarantee fund for anyone other than depositors.",
+    "es": "También envió al Ejecutivo un proyecto urgente de liquidación extrajudicial de Ueno, y el presidente del banco pedirá vetar cualquier uso del fondo de garantía para alguien que no sea depositante.",
+    "refs": [
+     "bot:event:0032"
+    ]
+   },
+   {
+    "en": "Mutual-fund investors may request a second weekly redemption of up to G. 30 million (up to G. 60 million in two weeks), covering an estimated 98 to 99 percent of about 30,000 unit-holders.",
+    "es": "Los inversionistas de los fondos mutuos podrán pedir un segundo rescate semanal de hasta G. 30 millones (hasta G. 60 millones en dos semanas), que cubriría entre el 98% y el 99% de unos 30.000 cuotapartistas.",
+    "refs": [
+     "bot:event:0033",
+     "bot:fact:0018"
+    ]
+   },
+   {
+    "en": "Argentina offered help to recover assets; a deputy prosecutor said some funds were found in Argentina and that use of the US financial system had been detected. No extradition request is reported as filed.",
+    "es": "Argentina ofreció ayuda para recuperar activos; un fiscal adjunto dijo que se hallaron algunos fondos en Argentina y que se detectó el uso del sistema financiero de Estados Unidos. No se informa de un pedido de extradición presentado.",
+    "refs": [
+     "bot:event:0034",
+     "bot:event:0035"
+    ]
+   },
+   {
+    "en": "Prosecutors raided Vinanzas a second time and asked for a 15-day closure; they cite a USD 75 million credit portfolio, which conflicts with the earlier USD 74.4 million figure.",
+    "es": "La Fiscalía allanó Vinanzas por segunda vez y pidió una clausura de 15 días; cita una cartera de créditos de USD 75 millones, que entra en conflicto con los USD 74,4 millones anteriores.",
+    "refs": [
+     "bot:event:0037",
+     "bot:fact:0019"
+    ]
+   },
+   {
+    "en": "Itaipú's acting Paraguayan director put retained Itaipú and technology-park funds at about USD 220 million and said the dam had filed a criminal complaint against the bank and its directors, who are presumed innocent.",
+    "es": "El director paraguayo interino de Itaipú cifró en unos USD 220 millones los fondos retenidos de Itaipú y del parque tecnológico, y dijo que la entidad presentó una denuncia penal contra el banco y sus directivos, que se presumen inocentes.",
+    "refs": [
+     "bot:event:0040",
+     "bot:fact:0020"
+    ]
+   }
+  ],
+  "not_done": {
+   "en": "Automatic refresh from the monitoring bot's delivery. Not updated in this run: the missing-money estimate, the charges table and the written reports. 8 point(s) were flagged for a person to check.",
+   "es": "Actualización automática a partir de la entrega del bot de monitoreo. No actualizado en esta corrida: la estimación del dinero faltante, la tabla de imputaciones y los informes escritos. Se marcaron 8 punto(s) para revisión humana."
+  }
+ },
+ {
   "executed_at": "2026-11-25T19:14:22-08:00",
   "run": "2026-11-25_1844",
   "data_to": "2026-11-25",

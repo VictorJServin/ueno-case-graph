@@ -136,7 +136,7 @@
       var db = UC.db, st = db.stats;
       var hero = h("div", { class: "hero" },
         h("div", { class: "stack" },
-          h("div", { class: "eyebrow" }, L("Case 89/2026 · Public Prosecutor's Office of Paraguay · data to 25 November 2026", "Causa 89/2026 · Ministerio Público del Paraguay · datos al 25 de noviembre de 2026")),
+          h("div", { class: "eyebrow" }, L("Case 89/2026 · Public Prosecutor's Office of Paraguay · data to 26 November 2026", "Causa 89/2026 · Ministerio Público del Paraguay · datos al 26 de noviembre de 2026")),
           h("h1", null, L("Ueno Bank: what the record alleges, what the suspect says, what the press adds", "Ueno Bank: qué sostiene el acta, qué dice el imputado, qué agrega la prensa")),
           h("p", { class: "lead" }, L("A provenance-first map of the loans, companies, people and money movements described in the investigative statement of former director Julio Rey and in public reporting on the bank's resolution.", "Un mapa, con procedencia en cada dato, de los créditos, empresas, personas y movimientos de dinero descritos en la declaración indagatoria del exdirector Julio Rey y en la información pública sobre la resolución del banco."))),
         h("div", { class: "card stack v-prosecution" },
