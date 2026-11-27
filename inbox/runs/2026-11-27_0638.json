@@ -1,0 +1,153 @@
+{
+ "generated_at": "2026-11-27T06:38:57-08:00",
+ "dossier_version": "v2.4",
+ "dossier_file": "inbox/dossiers/Ueno_Dossier_2026-11-27_0638.json",
+ "previous_run": "2026-11-26_1821",
+ "rows_added": {
+  "sources": [
+   "src:lanacion-2026-11-27-detencion-fernandez-valdovinos",
+   "src:lanacion-2026-11-27-mora-vazquez-prision",
+   "src:ultimahora-2026-11-27-alliana-activos-ueno",
+   "src:rdn-2026-11-27-barrios-fernandez-valdovinos-basa",
+   "src:abc-2026-11-27-nuevo-presidente-conatel",
+   "src:rdn-2026-11-27-senabico-subasta-bienes",
+   "src:abc-2026-11-27-abreu-entrega-vehiculo",
+   "src:adn-2026-11-27-eeuu-cooperante",
+   "src:ultimahora-2026-11-27-camioneta-tsv-deposito-gsr"
+  ],
+  "events": [
+   "bot:event:0045",
+   "bot:event:0046",
+   "bot:event:0047",
+   "bot:event:0048",
+   "bot:event:0049",
+   "bot:event:0050",
+   "bot:event:0051",
+   "bot:event:0052",
+   "bot:event:0053"
+  ],
+  "facts": [],
+  "entities": []
+ },
+ "claims_delivered": {
+  "C-LEG-46": [
+   "bot:event:0045"
+  ],
+  "C-LEG-47": [
+   "bot:event:0046"
+  ],
+  "C-PEN-38": [
+   "bot:event:0047"
+  ],
+  "C-OTH-34": [
+   "bot:event:0048"
+  ],
+  "C-PUB-29": [
+   "bot:event:0049"
+  ],
+  "C-LEG-48": [
+   "bot:event:0050"
+  ],
+  "C-DIR-14": [
+   "bot:event:0051"
+  ],
+  "C-LEG-42": [
+   "bot:event:0052"
+  ],
+  "C-LEG-45": [
+   "bot:event:0053"
+  ]
+ },
+ "skipped": [
+  {
+   "claim": "C-OTH-33",
+   "reason": "single-outlet ABC report on prosecutors' oficios (not published) about payments to Alejandro Domínguez; policy: skip single-outlet document reports and flag"
+  },
+  {
+   "claim": "C-OTH-35",
+   "reason": "commentary/opinion (Cramer, Pettengill) and an undocumented allegation by an ex-Itaipú director"
+  },
+  {
+   "claim": "C-OTH-20",
+   "reason": "material update delivered within E_FV (contract now described in the prosecutors' detention order)"
+  },
+  {
+   "claim": "C-LEG-32",
+   "reason": "update delivered within E_FV"
+  },
+  {
+   "claim": "C-OTH-01",
+   "reason": "update rests on the skipped single-outlet C-OTH-33"
+  },
+  {
+   "claim": "C-COL-33",
+   "reason": "no development: 27 Nov reports restate the 26 Nov conference figures"
+  },
+  {
+   "claim": "C-COL-34",
+   "reason": "no development: ABC restates that the bill went to the Executive; no transmittal to Congress reported"
+  },
+  {
+   "claim": "C-PUB-25",
+   "reason": "no new figure (Zárate restates USD 183M + ~USD 40M PTI); the ex-director's 'political order' claim is an undocumented allegation"
+  },
+  {
+   "claim": "C-PUB-27",
+   "reason": "no development: another workers' march; Senate still to take the bill next week"
+  },
+  {
+   "claim": "C-MUN-21",
+   "reason": "no development (Asunción: frozen accounts, 13 Nov complaint, Barrio Ueno / La Piedad / Mbocayaty — nothing new)"
+  },
+  {
+   "claim": "C-MED-01",
+   "reason": "no development: Instagram profile still behind a login wall"
+  }
+ ],
+ "whats_new": [
+  {
+   "en": "Prosecutors ordered the detention of former economy minister Carlos Fernández Valdovinos over the placement of G. 250,000 million of pension funds in Ueno and a later consulting contract with Grupo Vázquez; at the time of writing he had not been reported detained. He is not charged and is presumed innocent.",
+   "es": "La Fiscalía ordenó la detención del exministro de Economía Carlos Fernández Valdovinos por la colocación de G. 250.000 millones de fondos jubilatorios en Ueno y un posterior contrato de consultoría con el Grupo Vázquez; al cierre no se informó que haya sido detenido. No está imputado y se presume inocente.",
+   "refs": [
+    "bot:event:0045"
+   ]
+  },
+  {
+   "en": "Miguel Vázquez's pre-trial detention became final after his defence withdrew its appeal, and a judge kept former central-bank director Miguel Ángel Mora in detention despite prosecutors agreeing to house arrest. Both are presumed innocent.",
+   "es": "La prisión preventiva de Miguel Vázquez quedó firme tras el desistimiento de su defensa, y un juez mantuvo detenido al exdirector del Banco Central Miguel Ángel Mora pese a que la Fiscalía aceptó el arresto domiciliario. Ambos se presumen inocentes.",
+   "refs": [
+    "bot:event:0046"
+   ]
+  },
+  {
+   "en": "President Alliana's updated asset declaration lists a G. 1,500 million Ueno certificate of deposit (his share) and Ueno loans; the figure differs from the G. 4,500 million he mentioned earlier. No wrongdoing is alleged.",
+   "es": "La declaración jurada actualizada del presidente Alliana incluye un certificado de depósito en Ueno de G. 1.500 millones (su parte) y préstamos en Ueno; la cifra difiere de los G. 4.500 millones que mencionó antes. No se le atribuye irregularidad.",
+   "refs": [
+    "bot:event:0047"
+   ]
+  },
+  {
+   "en": "A new head was appointed at the telecoms regulator CONATEL, which has funds trapped in Ueno and a pending file on a failed 5G award to a Grupo Vázquez-linked firm.",
+   "es": "Se designó un nuevo titular en la CONATEL, que tiene fondos atrapados en Ueno y un expediente pendiente sobre una fallida adjudicación 5G a una firma vinculada al Grupo Vázquez.",
+   "refs": [
+    "bot:event:0049"
+   ]
+  },
+  {
+   "en": "A deputy prosecutor clarified that the United States is cooperating with Paraguay but has filed no request of its own.",
+   "es": "Un fiscal adjunto aclaró que Estados Unidos coopera con Paraguay pero no presentó ningún requerimiento propio.",
+   "refs": [
+    "bot:event:0052"
+   ]
+  }
+ ],
+ "payouts": [],
+ "needs_human": [
+  "E_FV uses La Nación as row source; the official MP note (https://www.ministeriopublico.gov.py/nota/caso-ueno-bank-ministerio-publico-ordeno-detencion-del-exministro-de-economia-y-finanzas-19206) was opened but fails Python TLS verification in quotecheck. The MP note gives the contract terms (USD 20,000/month, USD 60,000/yr, 1% of profits; USD 600,000 fixed over two years) — consider adding a fact row with an agreed metric.",
+  "Status of the detention order was still open at cut-off (police guarding the home; one unverified X account said he was a fugitive — not used). Next run should report execution, indagatoria and any imputation.",
+  "Skipped single-outlet: C-OTH-33 (ABC on prosecutors' oficios to the tax agency and the central-bank interveners about Grupo Vázquez payments to Alejandro Domínguez: USD 3.525 million plus USD 750,000). Please decide whether to accept it.",
+  "E_ALL (Alliana's asset declaration) is not an allegation; included because the President's own Ueno holdings are public-interest. His wife is not named. Please confirm it belongs in the graph.",
+  "E_BAR uses asserted_by 'regulator' for the Vice-President's on-record account (government voice). Please confirm.",
+  "E_SEN rests on RDN relaying an interview in Extra (original not located); delivered as medium."
+ ]
+}
